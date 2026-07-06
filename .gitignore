@@ -1,0 +1,30 @@
+node_modules
+build
+dist
+.react-router
+*.tsbuildinfo
+
+# env
+.env/.env.*.local
+.env/.env.local
+
+# editor / OS
+.DS_Store
+.idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# logs
+*.log
+npm-debug.log*
+
+# coverage
+coverage
+.sonar
+
+# agents
+.agents/local.*
+.agents/runs/
+.claude/settings.local.json
+CLAUDE.local.md
