@@ -1,7 +1,9 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Button } from '@chakra-ui/react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import type { HomeCopy, Locale, PlantCategory } from '../../model/homeModel';
 import { RoomAmbientInfo } from '../RoomAmbientInfo/RoomAmbientInfo';
+import { RoomPlantLayer } from '../RoomPlantLayer/RoomPlantLayer';
 import { RoomSidebar } from '../RoomSidebar/RoomSidebar';
 import { RoomToolbar } from '../RoomToolbar/RoomToolbar';
 
@@ -24,19 +26,74 @@ export function RoomScene({
   query,
   text,
 }: RoomSceneProps) {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const updateScrollHints = useCallback(() => {
+    const element = scrollRef.current;
+
+    if (!element) {
+      return;
+    }
+
+    setCanScrollLeft(element.scrollLeft > 8);
+    setCanScrollRight(element.scrollLeft + element.clientWidth < element.scrollWidth - 8);
+  }, []);
+
+  useEffect(() => {
+    updateScrollHints();
+    const animationFrame = window.requestAnimationFrame(updateScrollHints);
+    window.addEventListener('resize', updateScrollHints);
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener('resize', updateScrollHints);
+    };
+  }, [updateScrollHints]);
+
+  const scrollRoom = (direction: 'left' | 'right') => {
+    scrollRef.current?.scrollBy({
+      behavior: 'smooth',
+      left: direction === 'left' ? -420 : 420,
+    });
+  };
+
   return (
     <Box
       as="section"
       aria-label={text.sceneLabel}
-      backgroundImage="linear-gradient(90deg, rgba(30, 26, 13, 0.82), rgba(30, 26, 13, 0.3) 24%, rgba(30, 26, 13, 0) 58%), linear-gradient(180deg, rgba(20, 26, 13, 0.02), rgba(20, 26, 13, 0.34)), url('/greenhouse-room-empty.png')"
-      backgroundPosition="center"
-      backgroundSize="cover"
+      background="#211b0f"
       borderRadius={{ base: '0 0 22px 22px', md: '18px' }}
       boxShadow="0 24px 80px rgba(52, 43, 28, 0.2)"
-      minHeight={{ base: '100vh', md: 'calc(100vh - clamp(20px, 3.6vw, 36px))' }}
+      height={{
+        base: 'min(100vh, 941px)',
+        md: 'min(calc(100vh - clamp(20px, 3.6vw, 36px)), 941px)',
+      }}
       overflow="hidden"
       position="relative"
     >
+      <Box
+        ref={scrollRef}
+        height="100%"
+        overflow="auto"
+        overscrollBehavior="contain"
+        onScroll={updateScrollHints}
+      >
+        <Box
+          backgroundImage="linear-gradient(90deg, rgba(30, 26, 13, 0.82), rgba(30, 26, 13, 0.3) 24%, rgba(30, 26, 13, 0) 58%), linear-gradient(180deg, rgba(20, 26, 13, 0.02), rgba(20, 26, 13, 0.34)), url('/greenhouse-room-empty.png')"
+          backgroundPosition="center"
+          backgroundRepeat="no-repeat"
+          backgroundSize="100% 100%"
+          height="941px"
+          overflow="hidden"
+          position="relative"
+          width="1672px"
+        >
+          <RoomPlantLayer activeCategory={activeCategory} locale={locale} query={query} />
+        </Box>
+      </Box>
+
       <RoomSidebar
         activeCategory={activeCategory}
         locale={locale}
@@ -51,6 +108,66 @@ export function RoomScene({
         text={text}
       />
       <RoomAmbientInfo text={text} />
+
+      {canScrollLeft ? (
+        <Button
+          aria-label={text.scrollLeftLabel}
+          background="rgba(255, 248, 233, 0.7)"
+          border="1px solid rgba(255, 248, 233, 0.65)"
+          borderRadius="999px"
+          height="44px"
+          left="16px"
+          position="absolute"
+          top="50%"
+          transform="translateY(-50%)"
+          type="button"
+          variant="plain"
+          width="44px"
+          zIndex={10}
+          onClick={() => {
+            scrollRoom('left');
+          }}
+        >
+          <Box
+            borderBottom="7px solid transparent"
+            borderRight="10px solid #416d3c"
+            borderTop="7px solid transparent"
+            height={0}
+            margin="0 auto"
+            width={0}
+          />
+        </Button>
+      ) : null}
+
+      {canScrollRight ? (
+        <Button
+          aria-label={text.scrollRightLabel}
+          background="rgba(255, 248, 233, 0.7)"
+          border="1px solid rgba(255, 248, 233, 0.65)"
+          borderRadius="999px"
+          height="44px"
+          position="absolute"
+          right="16px"
+          top="50%"
+          transform="translateY(-50%)"
+          type="button"
+          variant="plain"
+          width="44px"
+          zIndex={10}
+          onClick={() => {
+            scrollRoom('right');
+          }}
+        >
+          <Box
+            borderBottom="7px solid transparent"
+            borderLeft="10px solid #416d3c"
+            borderTop="7px solid transparent"
+            height={0}
+            margin="0 auto"
+            width={0}
+          />
+        </Button>
+      ) : null}
     </Box>
   );
 }

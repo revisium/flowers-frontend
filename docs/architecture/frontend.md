@@ -1,8 +1,9 @@
 # Frontend Architecture
 
-This is a structural skeleton. No product concept, ViewModels, or DataSources
-exist yet — this document records the target shape so future work lands in
-the right place from day one.
+This repository has moved past the pure structural skeleton. The current
+product surface is an exploratory home greenhouse prototype: `src/pages/Home`
+renders a room canvas with fixed-position plant assets, category/search
+filtering, locale-aware labels, and hover-only plant captions.
 
 ## FSD Layer Hierarchy
 
@@ -23,7 +24,26 @@ when the first entity or feature slice lands, instead of adding an empty
 placeholder now, to avoid tripping Steiger's structure checks on a layer with
 no slices.
 
-## Target MVVM Contract (Not Yet Implemented)
+## Home Prototype Contract
+
+`src/pages/Home` is still a client-side prototype, not an API-backed product
+flow. Its data is local mock content in the page slice model, and the UI uses a
+fixed room coordinate system so plants stay anchored to shelves, the
+windowsill, and floor areas while the room scrolls.
+
+- `model/homeModel.ts` owns the local room facts: plants, categories, labels,
+  locale copy, and count helpers.
+- `model/plantItemViewModel.ts` derives repeated plant item view data:
+  localized names, filter results, image paths, and fixed positioning.
+- `ui/RoomPlantLayer` renders those view models as non-interactive plant
+  figures. Hover captions are visual labels only; plant details or edit actions
+  should introduce an explicit interaction contract before making items
+  keyboard-focusable controls.
+- The room background remains a fixed-size canvas matching the source asset
+  dimensions. Viewport overflow is handled by scrolling the room, not by
+  resizing individual plant positions.
+
+## Target MVVM Contract
 
 Once product work starts, pages should follow this contract:
 
@@ -31,10 +51,10 @@ Once product work starts, pages should follow this contract:
 - ViewModels own state, actions, derived values, and validation.
 - React views render observable state and forward events only.
 
-**Current stage: plain presentational components only.** `src/pages/Home` has
-no ViewModel or DataSource — it is a static placeholder proving the SSR/build
-pipeline works end to end. Do not add MobX observer wiring until product work
-starts.
+MobX is still not wired for `src/pages/Home`; the current plant item view model
+is a small pure derivation helper, not an observable ViewModel. Do not add MobX
+observer wiring, DataSources, or DI composition until the prototype needs real
+state ownership or external data.
 
 ## Styling
 

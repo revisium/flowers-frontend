@@ -4,14 +4,15 @@ export type Locale = 'ru' | 'en';
 
 export interface Plant {
   readonly id: string;
+  readonly image: string;
   readonly name: string;
   readonly nameEn: string;
   readonly latinName: string;
   readonly category: Exclude<PlantCategory, 'all'>;
   readonly zone: RoomZone;
+  readonly width: number;
   readonly x: number;
   readonly y: number;
-  readonly size: 'sm' | 'md' | 'lg';
 }
 
 export interface HomeCopy {
@@ -24,6 +25,8 @@ export interface HomeCopy {
   readonly searchPlaceholder: string;
   readonly show: string;
   readonly sidebarLabel: string;
+  readonly scrollLeftLabel: string;
+  readonly scrollRightLabel: string;
   readonly quote: string;
   readonly weatherLabel: string;
   readonly sunny: string;
@@ -31,92 +34,64 @@ export interface HomeCopy {
 
 export const plants: readonly Plant[] = [
   {
-    id: '8a9m6r',
-    name: 'Монстера Адансона',
-    nameEn: 'Adanson’s Monstera',
-    latinName: 'Monstera adansonii',
-    category: 'aroid',
-    zone: 'window',
-    x: 43,
-    y: 55,
-    size: 'lg',
-  },
-  {
-    id: 'cth-orn',
-    name: 'Калатея Орната',
-    nameEn: 'Pinstripe Calathea',
-    latinName: 'Calathea ornata',
-    category: 'foliage',
-    zone: 'window',
-    x: 54,
-    y: 60,
-    size: 'md',
-  },
-  {
-    id: 'epi-gld',
-    name: 'Эпипремнум Золотистый',
-    nameEn: 'Golden Pothos',
-    latinName: 'Epipremnum aureum',
+    id: 'trd-zbr',
+    image: '/plants/tradescantia.png',
+    name: 'Традесканция',
+    nameEn: 'Tradescantia',
+    latinName: 'Tradescantia zebrina',
     category: 'foliage',
     zone: 'shelf',
-    x: 55,
-    y: 25,
-    size: 'sm',
+    width: 187,
+    x: 1207,
+    y: 174,
   },
   {
-    id: 'chl-bon',
-    name: "Хлорофитум 'Bonnie'",
-    nameEn: "Spider Plant 'Bonnie'",
+    id: 'mon-del',
+    image: '/plants/monstera-basket.png',
+    name: 'Монстера',
+    nameEn: 'Monstera',
+    latinName: 'Monstera deliciosa',
+    category: 'aroid',
+    zone: 'shelf',
+    width: 450,
+    x: 1255,
+    y: 250,
+  },
+  {
+    id: 'chl-com',
+    image: '/plants/chlorophytum.png',
+    name: 'Хлорофитум',
+    nameEn: 'Spider Plant',
     latinName: 'Chlorophytum comosum',
     category: 'foliage',
-    zone: 'shelf',
-    x: 78,
-    y: 30,
-    size: 'md',
+    zone: 'window',
+    width: 280,
+    x: 1014,
+    y: 432,
   },
   {
-    id: 'spa-wal',
-    name: 'Спатифиллум',
-    nameEn: 'Peace Lily',
-    latinName: 'Spathiphyllum wallisii',
+    id: 'glo-vel',
+    image: '/plants/gloxinia.png',
+    name: 'Глоксиния',
+    nameEn: 'Gloxinia',
+    latinName: 'Sinningia speciosa',
     category: 'flowering',
     zone: 'window',
-    x: 62,
-    y: 62,
-    size: 'md',
+    width: 150,
+    x: 800,
+    y: 489,
   },
   {
-    id: 'agl-val',
-    name: 'Аглаонема Red Valentine',
-    nameEn: 'Aglaonema Red Valentine',
-    latinName: 'Aglaonema commutatum',
-    category: 'aroid',
-    zone: 'shelf',
-    x: 86,
-    y: 62,
-    size: 'lg',
-  },
-  {
-    id: 'ech-elg',
-    name: 'Эхеверия Элеганс',
-    nameEn: 'Echeveria Elegans',
-    latinName: 'Echeveria elegans',
-    category: 'succulent',
-    zone: 'sunny',
-    x: 69,
-    y: 57,
-    size: 'sm',
-  },
-  {
-    id: 'ham-elg',
-    name: 'Хамедорея',
-    nameEn: 'Parlor Palm',
-    latinName: 'Chamaedorea elegans',
-    category: 'palm',
-    zone: 'table',
-    x: 30,
-    y: 70,
-    size: 'md',
+    id: 'pha-whi',
+    image: '/plants/phalaenopsis.png',
+    name: 'Орхидея фаленопсис',
+    nameEn: 'Phalaenopsis Orchid',
+    latinName: 'Phalaenopsis',
+    category: 'flowering',
+    zone: 'window',
+    width: 255,
+    x: 535,
+    y: 322,
   },
 ];
 
@@ -158,6 +133,8 @@ export const copy: Record<Locale, HomeCopy> = {
     searchPlaceholder: 'Найти растение...',
     show: 'Показать',
     sidebarLabel: 'Разделы оранжереи',
+    scrollLeftLabel: 'Прокрутить комнату влево',
+    scrollRightLabel: 'Прокрутить комнату вправо',
     quote: 'Растения не просто украшают дом, они делают его живым',
     weatherLabel: 'Погода и время',
     sunny: 'Солнечно',
@@ -172,6 +149,8 @@ export const copy: Record<Locale, HomeCopy> = {
     searchPlaceholder: 'Search plants...',
     show: 'Show',
     sidebarLabel: 'Greenhouse sections',
+    scrollLeftLabel: 'Scroll room left',
+    scrollRightLabel: 'Scroll room right',
     quote: 'Plants do not just decorate a home, they make it feel alive',
     weatherLabel: 'Weather and time',
     sunny: 'Sunny',
