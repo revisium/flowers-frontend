@@ -161,8 +161,10 @@ const copyKeys = [
   'sunny',
 ] satisfies readonly (keyof HomeCopy)[];
 
-function createHomeCopy(values: readonly string[]): HomeCopy {
-  return Object.fromEntries(copyKeys.map((key, index) => [key, values[index] ?? ''])) as unknown as HomeCopy;
+type HomeCopyValues = readonly string[] & { readonly length: (typeof copyKeys)['length'] };
+
+function createHomeCopy(values: HomeCopyValues): HomeCopy {
+  return Object.fromEntries(copyKeys.map((key, index) => [key, values[index]!])) as unknown as HomeCopy;
 }
 
 export const copy: Record<Locale, HomeCopy> = {
@@ -192,7 +194,7 @@ export const copy: Record<Locale, HomeCopy> = {
     'Растения не просто украшают дом, они делают его живым',
     'Погода и время',
     'Солнечно',
-  ]),
+  ] as const),
   en: createHomeCopy([
     'my plant collection',
     'Greenhouse, home',
@@ -219,7 +221,7 @@ export const copy: Record<Locale, HomeCopy> = {
     'Plants do not just decorate a home, they make it feel alive',
     'Weather and time',
     'Sunny',
-  ]),
+  ] as const),
 };
 
 export function countPlantsByCategory(category: PlantCategory) {
