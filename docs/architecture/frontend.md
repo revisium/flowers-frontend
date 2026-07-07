@@ -3,7 +3,8 @@
 This repository has moved past the pure structural skeleton. The current
 product surface is an exploratory home greenhouse prototype: `src/pages/Home`
 renders a room canvas with fixed-position plant assets, category/search
-filtering, locale-aware labels, and hover-only plant captions.
+filtering, locale-aware labels, hover plant plates, and an opened plant folio
+card overlay.
 
 ## FSD Layer Hierarchy
 
@@ -33,12 +34,18 @@ windowsill, and floor areas while the room scrolls.
 
 - `model/homeModel.ts` owns the local room facts: plants, categories, labels,
   locale copy, and count helpers.
+- `model/homeViewModel.ts` owns the prototype interaction state and actions:
+  category, search query, locale, selected plant id, and the card reset rules
+  used when filters change.
 - `model/plantItemViewModel.ts` derives repeated plant item view data:
   localized names, filter results, image paths, and fixed positioning.
-- `ui/RoomPlantLayer` renders those view models as non-interactive plant
-  figures. Hover captions are visual labels only; plant details or edit actions
-  should introduce an explicit interaction contract before making items
-  keyboard-focusable controls.
+- `model/plantCardViewModel.ts` derives the selected plant folio data from the
+  local plant record and card content map.
+- `ui/RoomPlantLayer` renders plant figures with hover/focus plates. The plate
+  includes the plant name, category, and an explicit card-action button.
+- `ui/PlantFolioCard` renders the modal plant card overlay with focus entering
+  the dialog, Escape dismissal, tab containment, and focus restoration to the
+  trigger.
 - The room background remains a fixed-size canvas matching the source asset
   dimensions. Viewport overflow is handled by scrolling the room, not by
   resizing individual plant positions.
@@ -51,10 +58,11 @@ Once product work starts, pages should follow this contract:
 - ViewModels own state, actions, derived values, and validation.
 - React views render observable state and forward events only.
 
-MobX is still not wired for `src/pages/Home`; the current plant item view model
-is a small pure derivation helper, not an observable ViewModel. Do not add MobX
-observer wiring, DataSources, or DI composition until the prototype needs real
-state ownership or external data.
+MobX is still not wired for `src/pages/Home`; the current home view model is a
+small React-state prototype boundary, and plant item/card view models are pure
+derivation helpers. Do not add MobX observer wiring, DataSources, or DI
+composition until the prototype needs real state ownership beyond the route
+prototype or external data.
 
 ## Styling
 

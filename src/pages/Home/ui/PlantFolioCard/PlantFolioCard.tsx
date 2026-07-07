@@ -8,7 +8,7 @@ import {
   Table,
   Text,
 } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
+import { type KeyboardEvent, useEffect, useRef, useState } from 'react';
 
 import type { HomeCopy } from '../../model/homeModel';
 import type { PlantCardViewModel } from '../../model/plantCardViewModel';
@@ -21,20 +21,62 @@ interface PlantFolioCardProps {
 
 export function PlantFolioCard({ onClose, plant, text }: PlantFolioCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const cardRef = useRef<HTMLDivElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    previousFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const animationFrame = window.requestAnimationFrame(() => {
       setIsOpen(true);
+      closeButtonRef.current?.focus();
     });
 
     return () => {
       window.cancelAnimationFrame(animationFrame);
+      previousFocusRef.current?.focus();
     };
   }, [plant.id]);
+
+  const handleDialogKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Escape') {
+      event.stopPropagation();
+      onClose();
+      return;
+    }
+
+    if (event.key !== 'Tab') {
+      return;
+    }
+
+    const focusableElements = cardRef.current?.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])',
+    );
+    const focusable = Array.from(focusableElements ?? []).filter((element) => element.offsetParent);
+    const firstElement = focusable.at(0);
+    const lastElement = focusable.at(-1);
+
+    if (!firstElement || !lastElement) {
+      event.preventDefault();
+      return;
+    }
+
+    if (event.shiftKey && document.activeElement === firstElement) {
+      event.preventDefault();
+      lastElement.focus();
+      return;
+    }
+
+    if (!event.shiftKey && document.activeElement === lastElement) {
+      event.preventDefault();
+      firstElement.focus();
+    }
+  };
 
   return (
     <Flex
       alignItems="center"
+      aria-modal="true"
       aria-label={text.cardOpenLabel}
       background="rgba(24, 20, 12, 0.34)"
       inset={0}
@@ -42,9 +84,12 @@ export function PlantFolioCard({ onClose, plant, text }: PlantFolioCardProps) {
       padding={{ base: '18px', md: '34px' }}
       position="absolute"
       role="dialog"
+      tabIndex={-1}
       zIndex={30}
+      onKeyDown={handleDialogKeyDown}
     >
       <Box
+        ref={cardRef}
         background="linear-gradient(135deg, rgba(255, 252, 241, 0.98), rgba(247, 238, 218, 0.96))"
         border="1px solid rgba(224, 205, 170, 0.95)"
         borderRadius="20px"
@@ -61,6 +106,7 @@ export function PlantFolioCard({ onClose, plant, text }: PlantFolioCardProps) {
         width="min(100%, 1040px)"
       >
         <Button
+          ref={closeButtonRef}
           aria-label={text.cardCloseLabel}
           background="rgba(239, 226, 198, 0.9)"
           borderRadius="999px"
@@ -116,7 +162,7 @@ export function PlantFolioCard({ onClose, plant, text }: PlantFolioCardProps) {
                 justifyContent="center"
                 padding="22px"
               >
-                <Image alt="" draggable={false} maxHeight="100%" objectFit="contain" src={plant.image} />
+                <Image alt={plant.name} draggable={false} maxHeight="100%" objectFit="contain" src={plant.image} />
               </Flex>
               <Box padding="16px">
                 <Text color="#2f3d28" fontSize="0.96rem">

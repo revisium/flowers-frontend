@@ -31,7 +31,6 @@ export function RoomPlantLayer({
           margin={0}
           position="absolute"
           left={plant.position.left}
-          role="img"
           top={plant.position.top}
           width={plant.position.width}
           zIndex={4}

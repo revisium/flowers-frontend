@@ -1,4 +1,5 @@
 import { categoryLabels, plants, type Locale, type Plant, type PlantCategory } from './homeModel';
+import { getPlantName } from './plantName';
 
 export interface PlantItemViewModel {
   readonly id: string;
@@ -17,10 +18,6 @@ interface CreatePlantItemViewModelsOptions {
   readonly activeCategory: PlantCategory;
   readonly locale: Locale;
   readonly query: string;
-}
-
-function getPlantName(plant: Plant, locale: Locale) {
-  return locale === 'ru' ? plant.name : plant.nameEn;
 }
 
 function matchesQuery(plant: Plant, locale: Locale, query: string) {
