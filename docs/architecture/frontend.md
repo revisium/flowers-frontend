@@ -85,11 +85,12 @@ Once product work starts, pages should follow this contract:
 - ViewModels own state, actions, derived values, and validation.
 - React views render observable state and forward events only.
 
-MobX is still not wired for `src/pages/Home`; the current home view model is a
-small React-state prototype boundary, and plant item/card view models are pure
-derivation helpers. Do not add MobX observer wiring, DataSources, or DI
-composition until the prototype needs real state ownership beyond the route
-prototype or external data.
+MobX is still not wired for the current prototype pages. `src/pages/Home` is a
+presentational composition backed by typed local mock data, while
+`src/pages/Collection` uses a small React-state prototype boundary plus pure
+plant item/card derivation helpers. Do not add MobX observer wiring,
+DataSources, or DI composition until the prototype needs real state ownership
+beyond the route prototype or external data.
 
 ## Styling
 
