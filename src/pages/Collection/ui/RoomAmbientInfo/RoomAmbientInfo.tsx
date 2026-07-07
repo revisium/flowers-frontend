@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Grid, Text } from '@chakra-ui/react';
 
 import type { CollectionCopy } from '../../model/collectionModel';
 
@@ -39,7 +39,7 @@ export function RoomAmbientInfo({ text }: RoomAmbientInfoProps) {
         </Text>
       </Flex>
 
-      <Box
+      <Grid
         as="article"
         alignItems="baseline"
         aria-label={text.weatherLabel}
@@ -47,7 +47,6 @@ export function RoomAmbientInfo({ text }: RoomAmbientInfoProps) {
         borderRadius="16px"
         bottom={{ base: '20px', md: '24px' }}
         color="#fff8e9"
-        display="grid"
         gap="0 12px"
         gridTemplateColumns="auto auto"
         left="auto"
@@ -66,7 +65,7 @@ export function RoomAmbientInfo({ text }: RoomAmbientInfoProps) {
         <Text as="time" fontSize="1.28rem" fontWeight={800}>
           09:45
         </Text>
-      </Box>
+      </Grid>
     </>
   );
 }

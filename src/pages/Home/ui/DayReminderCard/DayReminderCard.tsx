@@ -1,0 +1,38 @@
+import { Box, Button, Link, Text } from '@chakra-ui/react';
+
+export function DayReminderCard() {
+  return (
+    <Box
+      background="rgba(255, 252, 246, 0.78)"
+      border="1px solid rgba(126, 104, 69, 0.16)"
+      borderRadius="8px"
+      boxShadow="0 18px 46px rgba(92, 77, 46, 0.18)"
+      color="#344134"
+      display={{ base: 'none', md: 'block' }}
+      marginLeft={{ md: 'clamp(8px, 4vw, 84px)', xl: 0 }}
+      marginTop={{ md: '38px', xl: 0 }}
+      maxWidth="390px"
+      padding="28px"
+      position={{ md: 'relative', xl: 'absolute' }}
+      right={{ xl: 'clamp(18px, 4vw, 58px)' }}
+      top={{ xl: 'clamp(122px, 13vw, 166px)' }}
+      zIndex={2}
+    >
+      <Button aria-label="Скрыть напоминание" height="28px" minWidth="28px" position="absolute" right="18px" top="18px" type="button" variant="plain" width="28px">
+        x
+      </Button>
+      <Text as="strong" display="block" fontSize="1.05rem" marginBottom="14px" paddingRight="34px">
+        Сегодня особенный день
+      </Text>
+      <Text color="#6f6b5d" lineHeight={1.55} margin="0 0 18px">
+        Лучшее время подарить растениям свое внимание
+      </Text>
+      <Link alignItems="center" border="1px solid rgba(126, 104, 69, 0.22)" borderRadius="8px" display="inline-flex" fontWeight={760} gap="12px" href="/collection" minHeight="44px" padding="0 18px">
+        Смотреть список
+        <Text as="span" aria-hidden="true">
+          »
+        </Text>
+      </Link>
+    </Box>
+  );
+}

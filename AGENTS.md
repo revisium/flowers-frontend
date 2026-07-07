@@ -72,6 +72,20 @@ replace these templates when they already contain the repo-specific truth.
   product need; see `REVIEW.md` and
   `../../agent-playbook/references/quality/minimal-sufficient-code.md`.
 
+## Component Decomposition
+
+- Do not let page files grow into large one-file UI implementations. Keep page
+  components as composition shells and split meaningful sections, repeated
+  elements, controls, and decorative primitives into same-named component
+  folders under the page `ui/` directory.
+- When implementing Chakra UI screens, prefer idiomatic Chakra primitives
+  (`Flex`, `Grid`, `Stack`, `Link`, `Image`, `Button`, `Text`) over generic
+  `Box` when the element has a clearer semantic layout role. Reserve `Box` for
+  neutral wrappers, absolute layers, and small decorative shapes.
+- If a screen needs local static data for presentation, keep that data near the
+  page in a focused model/helper file instead of embedding large arrays inside
+  the page component.
+
 ## Required Workflow
 
 - Inspect existing structure before editing.

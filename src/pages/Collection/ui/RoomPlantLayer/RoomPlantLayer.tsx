@@ -35,17 +35,17 @@ export function RoomPlantLayer({
           width={plant.position.width}
           zIndex={4}
           _hover={{
-            '& .room-plant__image': {
+            '& [data-plant-image]': {
               filter: 'drop-shadow(0 18px 28px rgba(20, 18, 12, 0.26))',
             },
-            '& .room-plant__plate': {
+            '& [data-plant-plate]': {
               opacity: 0.82,
               pointerEvents: 'auto',
               transform: 'translate(-50%, -50%)',
             },
           }}
           _focusWithin={{
-            '& .room-plant__plate': {
+            '& [data-plant-plate]': {
               opacity: 0.82,
               pointerEvents: 'auto',
               transform: 'translate(-50%, -50%)',
@@ -54,7 +54,7 @@ export function RoomPlantLayer({
         >
           <Image
             alt=""
-            className="room-plant__image"
+            data-plant-image=""
             draggable={false}
             pointerEvents="none"
             src={plant.image}
@@ -63,7 +63,7 @@ export function RoomPlantLayer({
           />
           <Box
             as="figcaption"
-            className="room-plant__plate"
+            data-plant-plate=""
             background="rgba(255, 249, 236, 0.74)"
             border="1px solid rgba(235, 220, 190, 0.48)"
             borderRadius="14px"
