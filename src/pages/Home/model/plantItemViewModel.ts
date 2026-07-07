@@ -22,14 +22,14 @@ function getPlantName(plant: Plant, locale: Locale) {
 }
 
 function matchesQuery(plant: Plant, locale: Locale, query: string) {
-  const normalizedQuery = query.trim().toLocaleLowerCase();
+  const normalizedQuery = query.trim().toLocaleLowerCase(locale);
 
   if (!normalizedQuery) {
     return true;
   }
 
   return [plant.name, plant.nameEn, plant.latinName, getPlantName(plant, locale)].some((value) =>
-    value.toLocaleLowerCase().includes(normalizedQuery),
+    value.toLocaleLowerCase(locale).includes(normalizedQuery),
   );
 }
 
