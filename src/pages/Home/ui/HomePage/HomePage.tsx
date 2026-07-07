@@ -1,31 +1,19 @@
 import { Box } from '@chakra-ui/react';
 
-import { useHomeViewModel } from '../../model/homeViewModel';
-import { RoomScene } from '../RoomScene/RoomScene';
+import { HomeCategoriesSection } from '../HomeCategoriesSection/HomeCategoriesSection';
+import { HomeHero } from '../HomeHero/HomeHero';
 
 export function HomePage() {
-  const viewModel = useHomeViewModel();
-
   return (
     <Box
       as="main"
-      height="100vh"
+      background="linear-gradient(180deg, #f7f0e4 0%, #f2eadb 56%, #efe4d2 100%)"
+      color="#2d3c2d"
       minHeight="100vh"
-      overflowX="hidden"
-      padding={{ base: 0, md: 'clamp(10px, 1.8vw, 18px)' }}
+      overflow="hidden"
     >
-      <RoomScene
-        activeCategory={viewModel.activeCategory}
-        locale={viewModel.locale}
-        onCategoryChange={viewModel.changeCategory}
-        onLocaleChange={viewModel.changeLocale}
-        onPlantClose={viewModel.closePlantCard}
-        onPlantSelect={viewModel.selectPlant}
-        onQueryChange={viewModel.changeQuery}
-        query={viewModel.query}
-        selectedPlantId={viewModel.selectedPlantId}
-        text={viewModel.text}
-      />
+      <HomeHero />
+      <HomeCategoriesSection />
     </Box>
   );
 }
