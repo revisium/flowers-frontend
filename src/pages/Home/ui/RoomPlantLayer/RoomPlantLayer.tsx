@@ -1,15 +1,23 @@
-import { Box, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Image, Text } from '@chakra-ui/react';
 
-import type { Locale, PlantCategory } from '../../model/homeModel';
+import type { HomeCopy, Locale, PlantCategory } from '../../model/homeModel';
 import { createPlantItemViewModels } from '../../model/plantItemViewModel';
 
 interface RoomPlantLayerProps {
   readonly activeCategory: PlantCategory;
   readonly locale: Locale;
   readonly query: string;
+  readonly text: HomeCopy;
+  readonly onPlantSelect: (plantId: string) => void;
 }
 
-export function RoomPlantLayer({ activeCategory, locale, query }: RoomPlantLayerProps) {
+export function RoomPlantLayer({
+  activeCategory,
+  locale,
+  onPlantSelect,
+  query,
+  text,
+}: RoomPlantLayerProps) {
   const plantItems = createPlantItemViewModels({ activeCategory, locale, query });
 
   return (
@@ -23,17 +31,24 @@ export function RoomPlantLayer({ activeCategory, locale, query }: RoomPlantLayer
           margin={0}
           position="absolute"
           left={plant.position.left}
-          role="img"
           top={plant.position.top}
           width={plant.position.width}
           zIndex={4}
           _hover={{
-            '& .room-plant__label': {
-              opacity: 1,
-              transform: 'translate(-50%, -10px)',
-            },
             '& .room-plant__image': {
               filter: 'drop-shadow(0 18px 28px rgba(20, 18, 12, 0.26))',
+            },
+            '& .room-plant__plate': {
+              opacity: 0.82,
+              pointerEvents: 'auto',
+              transform: 'translate(-50%, -50%)',
+            },
+          }}
+          _focusWithin={{
+            '& .room-plant__plate': {
+              opacity: 0.82,
+              pointerEvents: 'auto',
+              transform: 'translate(-50%, -50%)',
             },
           }}
         >
@@ -43,29 +58,56 @@ export function RoomPlantLayer({ activeCategory, locale, query }: RoomPlantLayer
             draggable={false}
             pointerEvents="none"
             src={plant.image}
+            transition="filter 160ms ease, transform 160ms ease"
             width="100%"
           />
-          <Text
+          <Box
             as="figcaption"
-            className="room-plant__label"
-            background="rgba(255, 248, 233, 0.9)"
-            borderRadius="999px"
-            bottom="100%"
-            boxShadow="0 12px 26px rgba(42, 34, 17, 0.18)"
+            className="room-plant__plate"
+            background="rgba(255, 249, 236, 0.74)"
+            border="1px solid rgba(235, 220, 190, 0.48)"
+            borderRadius="14px"
+            boxShadow="0 12px 26px rgba(42, 34, 17, 0.12)"
             color="#32432d"
-            fontSize="0.78rem"
-            fontWeight={700}
             left="50%"
+            lineHeight={1.3}
+            minWidth="190px"
             opacity={0}
-            padding="7px 10px"
+            padding="10px 12px"
             pointerEvents="none"
             position="absolute"
-            transform="translate(-50%, 0)"
+            top="42%"
+            transform="translate(-50%, -42%)"
             transition="opacity 160ms ease, transform 160ms ease"
-            whiteSpace="nowrap"
+            width="max-content"
+            zIndex={6}
           >
-            {plant.name}
-          </Text>
+            <Text fontFamily="Georgia, serif" fontSize="1rem" fontWeight={700}>
+              {plant.name}
+            </Text>
+            <Text color="#6f755f" fontSize="0.7rem" fontWeight={700} letterSpacing="0.08em" textTransform="uppercase">
+              {plant.category}
+            </Text>
+            <Button
+              alignSelf="flex-start"
+              background="#496f3f"
+              borderRadius="999px"
+              color="#fff8ec"
+              fontSize="0.72rem"
+              height="26px"
+              marginTop="8px"
+              minWidth="auto"
+              paddingInline="11px"
+              type="button"
+              variant="plain"
+              _hover={{ background: '#365d32' }}
+              onClick={() => {
+                onPlantSelect(plant.id);
+              }}
+            >
+              {text.cardAction}
+            </Button>
+          </Box>
         </Box>
       ))}
     </Box>

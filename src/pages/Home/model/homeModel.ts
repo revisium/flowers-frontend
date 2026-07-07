@@ -18,6 +18,17 @@ export interface Plant {
 export interface HomeCopy {
   readonly brandSubtitle: string;
   readonly brandHomeLabel: string;
+  readonly cardAction: string;
+  readonly cardCategoryLabel: string;
+  readonly cardCloseLabel: string;
+  readonly cardDifficultyLabel: string;
+  readonly cardFactsTitle: string;
+  readonly cardOpenLabel: string;
+  readonly cardOriginLabel: string;
+  readonly cardProblemColumn: string;
+  readonly cardProblemsTitle: string;
+  readonly cardReasonColumn: string;
+  readonly cardSolutionColumn: string;
   readonly collection: string;
   readonly languageLabel: string;
   readonly sceneLabel: string;
@@ -53,9 +64,9 @@ export const plants: readonly Plant[] = [
     latinName: 'Monstera deliciosa',
     category: 'aroid',
     zone: 'shelf',
-    width: 450,
+    width: 400,
     x: 1255,
-    y: 250,
+    y: 350,
   },
   {
     id: 'chl-com',
@@ -122,39 +133,95 @@ export const categoryLabels: Record<Locale, Record<PlantCategory, string>> = {
   },
 };
 
+const copyKeys = [
+  'brandSubtitle',
+  'brandHomeLabel',
+  'cardAction',
+  'cardCategoryLabel',
+  'cardCloseLabel',
+  'cardDifficultyLabel',
+  'cardFactsTitle',
+  'cardOpenLabel',
+  'cardOriginLabel',
+  'cardProblemColumn',
+  'cardProblemsTitle',
+  'cardReasonColumn',
+  'cardSolutionColumn',
+  'collection',
+  'languageLabel',
+  'sceneLabel',
+  'searchLabel',
+  'searchPlaceholder',
+  'show',
+  'sidebarLabel',
+  'scrollLeftLabel',
+  'scrollRightLabel',
+  'quote',
+  'weatherLabel',
+  'sunny',
+] satisfies readonly (keyof HomeCopy)[];
+
+type HomeCopyValues = readonly string[] & { readonly length: (typeof copyKeys)['length'] };
+
+function createHomeCopy(values: HomeCopyValues): HomeCopy {
+  return Object.fromEntries(copyKeys.map((key, index) => [key, values[index]!])) as unknown as HomeCopy;
+}
+
 export const copy: Record<Locale, HomeCopy> = {
-  ru: {
-    brandSubtitle: 'моя коллекция растений',
-    brandHomeLabel: 'Оранжерея, главная',
-    collection: 'Моя коллекция',
-    languageLabel: 'Язык интерфейса',
-    sceneLabel: 'Домашняя оранжерея',
-    searchLabel: 'Поиск растения',
-    searchPlaceholder: 'Найти растение...',
-    show: 'Показать',
-    sidebarLabel: 'Разделы оранжереи',
-    scrollLeftLabel: 'Прокрутить комнату влево',
-    scrollRightLabel: 'Прокрутить комнату вправо',
-    quote: 'Растения не просто украшают дом, они делают его живым',
-    weatherLabel: 'Погода и время',
-    sunny: 'Солнечно',
-  },
-  en: {
-    brandSubtitle: 'my plant collection',
-    brandHomeLabel: 'Greenhouse, home',
-    collection: 'My collection',
-    languageLabel: 'Interface language',
-    sceneLabel: 'Home greenhouse',
-    searchLabel: 'Search plants',
-    searchPlaceholder: 'Search plants...',
-    show: 'Show',
-    sidebarLabel: 'Greenhouse sections',
-    scrollLeftLabel: 'Scroll room left',
-    scrollRightLabel: 'Scroll room right',
-    quote: 'Plants do not just decorate a home, they make it feel alive',
-    weatherLabel: 'Weather and time',
-    sunny: 'Sunny',
-  },
+  ru: createHomeCopy([
+    'моя коллекция растений',
+    'Оранжерея, главная',
+    'Открыть карточку',
+    'Категория',
+    'Закрыть карточку растения',
+    'Уровень сложности',
+    'Интересные факты',
+    'Карточка растения',
+    'Происхождение',
+    'Проблема',
+    'Проблемы и решения',
+    'Причина',
+    'Решение',
+    'Моя коллекция',
+    'Язык интерфейса',
+    'Домашняя оранжерея',
+    'Поиск растения',
+    'Найти растение...',
+    'Показать',
+    'Разделы оранжереи',
+    'Прокрутить комнату влево',
+    'Прокрутить комнату вправо',
+    'Растения не просто украшают дом, они делают его живым',
+    'Погода и время',
+    'Солнечно',
+  ] as const),
+  en: createHomeCopy([
+    'my plant collection',
+    'Greenhouse, home',
+    'Open card',
+    'Category',
+    'Close plant card',
+    'Difficulty level',
+    'Interesting facts',
+    'Plant card',
+    'Origin',
+    'Problem',
+    'Problems and solutions',
+    'Reason',
+    'Solution',
+    'My collection',
+    'Interface language',
+    'Home greenhouse',
+    'Search plants',
+    'Search plants...',
+    'Show',
+    'Greenhouse sections',
+    'Scroll room left',
+    'Scroll room right',
+    'Plants do not just decorate a home, they make it feel alive',
+    'Weather and time',
+    'Sunny',
+  ] as const),
 };
 
 export function countPlantsByCategory(category: PlantCategory) {

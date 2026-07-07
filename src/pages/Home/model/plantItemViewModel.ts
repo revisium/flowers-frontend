@@ -1,8 +1,11 @@
-import { plants, type Locale, type Plant, type PlantCategory } from './homeModel';
+import { categoryLabels, plants, type Locale, type Plant, type PlantCategory } from './homeModel';
+import { getPlantName } from './plantName';
 
 export interface PlantItemViewModel {
   readonly id: string;
+  readonly category: string;
   readonly image: string;
+  readonly latinName: string;
   readonly name: string;
   readonly position: {
     readonly left: string;
@@ -15,10 +18,6 @@ interface CreatePlantItemViewModelsOptions {
   readonly activeCategory: PlantCategory;
   readonly locale: Locale;
   readonly query: string;
-}
-
-function getPlantName(plant: Plant, locale: Locale) {
-  return locale === 'ru' ? plant.name : plant.nameEn;
 }
 
 function matchesQuery(plant: Plant, locale: Locale, query: string) {
@@ -46,7 +45,9 @@ export function createPlantItemViewModels({
     })
     .map((plant) => ({
       id: plant.id,
+      category: categoryLabels[locale][plant.category],
       image: plant.image,
+      latinName: plant.latinName,
       name: getPlantName(plant, locale),
       position: {
         left: `${plant.x}px`,

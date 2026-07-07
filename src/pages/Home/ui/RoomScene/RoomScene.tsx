@@ -2,6 +2,8 @@ import { Box, Button } from '@chakra-ui/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import type { HomeCopy, Locale, PlantCategory } from '../../model/homeModel';
+import { createPlantCardViewModel } from '../../model/plantCardViewModel';
+import { PlantFolioCard } from '../PlantFolioCard/PlantFolioCard';
 import { RoomAmbientInfo } from '../RoomAmbientInfo/RoomAmbientInfo';
 import { RoomPlantLayer } from '../RoomPlantLayer/RoomPlantLayer';
 import { RoomSidebar } from '../RoomSidebar/RoomSidebar';
@@ -11,9 +13,12 @@ interface RoomSceneProps {
   readonly activeCategory: PlantCategory;
   readonly locale: Locale;
   readonly query: string;
+  readonly selectedPlantId: string | null;
   readonly text: HomeCopy;
   readonly onCategoryChange: (category: PlantCategory) => void;
   readonly onLocaleChange: (locale: Locale) => void;
+  readonly onPlantClose: () => void;
+  readonly onPlantSelect: (plantId: string) => void;
   readonly onQueryChange: (query: string) => void;
 }
 
@@ -22,13 +27,17 @@ export function RoomScene({
   locale,
   onCategoryChange,
   onLocaleChange,
+  onPlantClose,
+  onPlantSelect,
   onQueryChange,
   query,
+  selectedPlantId,
   text,
 }: RoomSceneProps) {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const selectedPlant = createPlantCardViewModel(selectedPlantId, locale);
 
   const updateScrollHints = useCallback(() => {
     const element = scrollRef.current;
@@ -90,7 +99,13 @@ export function RoomScene({
           position="relative"
           width="1672px"
         >
-          <RoomPlantLayer activeCategory={activeCategory} locale={locale} query={query} />
+          <RoomPlantLayer
+            activeCategory={activeCategory}
+            locale={locale}
+            onPlantSelect={onPlantSelect}
+            query={query}
+            text={text}
+          />
         </Box>
       </Box>
 
@@ -108,6 +123,10 @@ export function RoomScene({
         text={text}
       />
       <RoomAmbientInfo text={text} />
+
+      {selectedPlant ? (
+        <PlantFolioCard onClose={onPlantClose} plant={selectedPlant} text={text} />
+      ) : null}
 
       {canScrollLeft ? (
         <Button
