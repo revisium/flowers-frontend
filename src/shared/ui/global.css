@@ -34,30 +34,6 @@ a {
   text-decoration: none;
 }
 
-.room-page {
-  height: 100vh;
-  min-height: 100vh;
-  overflow-x: hidden;
-  padding: clamp(10px, 1.8vw, 18px);
-}
-
-.room-scene {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(30, 26, 13, 0.82),
-      rgba(30, 26, 13, 0.3) 24%,
-      rgba(30, 26, 13, 0) 58%
-    ),
-    linear-gradient(180deg, rgba(20, 26, 13, 0.02), rgba(20, 26, 13, 0.34)),
-    url('/greenhouse-room-empty.png') center / cover;
-  border-radius: 18px;
-  box-shadow: 0 24px 80px rgba(52, 43, 28, 0.2);
-  min-height: calc(100vh - clamp(20px, 3.6vw, 36px));
-  overflow: hidden;
-  position: relative;
-}
-
 .room-nav {
   display: flex;
   flex-direction: column;
@@ -460,76 +436,9 @@ a {
   color: #fffaf0;
 }
 
-.room-quote {
-  align-items: center;
-  background: rgba(55, 54, 28, 0.74);
-  border-radius: 16px;
-  bottom: 28px;
-  color: #fff8e9;
-  display: flex;
-  gap: 12px;
-  left: 50%;
-  max-width: 410px;
-  padding: 14px 18px;
-  position: absolute;
-  transform: translateX(-50%);
-  z-index: 7;
-}
-
-.room-quote p {
-  font-size: 0.92rem;
-  line-height: 1.35;
-  margin: 0;
-}
-
-.room-quote__spark {
-  border: 2px solid rgba(255, 248, 233, 0.78);
-  border-radius: 999px;
-  display: inline-block;
-  height: 14px;
-  width: 14px;
-}
-
-.room-weather {
-  align-items: baseline;
-  background: rgba(42, 34, 17, 0.68);
-  border-radius: 16px;
-  bottom: 24px;
-  color: #fff8e9;
-  display: grid;
-  gap: 0 12px;
-  grid-template-columns: auto auto;
-  padding: 16px 20px;
-  position: absolute;
-  right: 28px;
-  z-index: 7;
-}
-
-.room-weather strong,
-.room-weather time {
-  font-size: 1.28rem;
-  font-weight: 800;
-}
-
-.room-weather span {
-  color: rgba(255, 248, 233, 0.74);
-  font-size: 0.76rem;
-}
-
 @media (max-width: 900px) {
-  .room-page {
-    padding: 0;
-  }
-
-  .room-scene {
-    border-radius: 0 0 22px 22px;
-    min-height: 100vh;
-  }
-
   .room-nav,
-  .room-tools,
-  .room-quote,
-  .room-weather {
+  .room-tools {
     left: 20px;
     max-width: none;
     right: 20px;
@@ -561,16 +470,6 @@ a {
 
   .room-menu {
     max-width: min(280px, calc(100vw - 40px));
-  }
-
-  .room-quote {
-    bottom: 92px;
-  }
-
-  .room-weather {
-    bottom: 20px;
-    left: auto;
-    width: max-content;
   }
 }
 
