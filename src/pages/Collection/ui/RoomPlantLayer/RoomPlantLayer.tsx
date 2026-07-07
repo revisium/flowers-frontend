@@ -1,13 +1,13 @@
 import { Box, Button, Image, Text } from '@chakra-ui/react';
 
-import type { HomeCopy, Locale, PlantCategory } from '../../model/homeModel';
+import type { CollectionCopy, Locale, PlantCategory } from '../../model/collectionModel';
 import { createPlantItemViewModels } from '../../model/plantItemViewModel';
 
 interface RoomPlantLayerProps {
   readonly activeCategory: PlantCategory;
   readonly locale: Locale;
   readonly query: string;
-  readonly text: HomeCopy;
+  readonly text: CollectionCopy;
   readonly onPlantSelect: (plantId: string) => void;
 }
 

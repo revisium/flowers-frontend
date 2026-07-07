@@ -15,7 +15,8 @@ export interface Plant {
   readonly y: number;
 }
 
-export interface HomeCopy {
+export interface CollectionCopy {
+  readonly backToHome: string;
   readonly brandSubtitle: string;
   readonly brandHomeLabel: string;
   readonly cardAction: string;
@@ -134,6 +135,7 @@ export const categoryLabels: Record<Locale, Record<PlantCategory, string>> = {
 };
 
 const copyKeys = [
+  'backToHome',
   'brandSubtitle',
   'brandHomeLabel',
   'cardAction',
@@ -159,16 +161,17 @@ const copyKeys = [
   'quote',
   'weatherLabel',
   'sunny',
-] satisfies readonly (keyof HomeCopy)[];
+] satisfies readonly (keyof CollectionCopy)[];
 
-type HomeCopyValues = readonly string[] & { readonly length: (typeof copyKeys)['length'] };
+type CollectionCopyValues = readonly string[] & { readonly length: (typeof copyKeys)['length'] };
 
-function createHomeCopy(values: HomeCopyValues): HomeCopy {
-  return Object.fromEntries(copyKeys.map((key, index) => [key, values[index]!])) as unknown as HomeCopy;
+function createCollectionCopy(values: CollectionCopyValues): CollectionCopy {
+  return Object.fromEntries(copyKeys.map((key, index) => [key, values[index]!])) as unknown as CollectionCopy;
 }
 
-export const copy: Record<Locale, HomeCopy> = {
-  ru: createHomeCopy([
+export const copy: Record<Locale, CollectionCopy> = {
+  ru: createCollectionCopy([
+    'На главную',
     'моя коллекция растений',
     'Оранжерея, главная',
     'Открыть карточку',
@@ -195,7 +198,8 @@ export const copy: Record<Locale, HomeCopy> = {
     'Погода и время',
     'Солнечно',
   ] as const),
-  en: createHomeCopy([
+  en: createCollectionCopy([
+    'Back home',
     'my plant collection',
     'Greenhouse, home',
     'Open card',

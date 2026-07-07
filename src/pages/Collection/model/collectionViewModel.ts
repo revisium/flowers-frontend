@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react';
 
-import { copy, type Locale, type PlantCategory } from './homeModel';
+import { copy, type Locale, type PlantCategory } from './collectionModel';
 
-export function useHomeViewModel() {
+export function useCollectionViewModel() {
   const [category, setCategory] = useState<PlantCategory>('all');
   const [locale, setLocale] = useState<Locale>('ru');
   const [query, setQuery] = useState('');

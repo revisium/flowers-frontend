@@ -1,11 +1,11 @@
 import { Box, Button, Flex, Input } from '@chakra-ui/react';
 
-import type { HomeCopy, Locale } from '../../model/homeModel';
+import type { CollectionCopy, Locale } from '../../model/collectionModel';
 
 interface RoomToolbarProps {
   readonly locale: Locale;
   readonly query: string;
-  readonly text: HomeCopy;
+  readonly text: CollectionCopy;
   readonly onLocaleChange: (locale: Locale) => void;
   readonly onQueryChange: (query: string) => void;
 }

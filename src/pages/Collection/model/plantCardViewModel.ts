@@ -5,7 +5,7 @@ import {
   type Locale,
   type Plant,
   type PlantCategory,
-} from './homeModel';
+} from './collectionModel';
 import { getPlantName } from './plantName';
 
 interface LocalizedText {

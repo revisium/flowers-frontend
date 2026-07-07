@@ -1,9 +1,9 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 
-import type { HomeCopy } from '../../model/homeModel';
+import type { CollectionCopy } from '../../model/collectionModel';
 
 interface RoomAmbientInfoProps {
-  readonly text: HomeCopy;
+  readonly text: CollectionCopy;
 }
 
 export function RoomAmbientInfo({ text }: RoomAmbientInfoProps) {

@@ -10,12 +10,12 @@ import {
 } from '@chakra-ui/react';
 import { type KeyboardEvent, useEffect, useRef, useState } from 'react';
 
-import type { HomeCopy } from '../../model/homeModel';
+import type { CollectionCopy } from '../../model/collectionModel';
 import type { PlantCardViewModel } from '../../model/plantCardViewModel';
 
 interface PlantFolioCardProps {
   readonly plant: PlantCardViewModel;
-  readonly text: HomeCopy;
+  readonly text: CollectionCopy;
   readonly onClose: () => void;
 }
 

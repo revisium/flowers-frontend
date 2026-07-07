@@ -1,4 +1,4 @@
-import { categoryLabels, plants, type Locale, type Plant, type PlantCategory } from './homeModel';
+import { categoryLabels, plants, type Locale, type Plant, type PlantCategory } from './collectionModel';
 import { getPlantName } from './plantName';
 
 export interface PlantItemViewModel {

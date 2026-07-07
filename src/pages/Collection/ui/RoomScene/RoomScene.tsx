@@ -1,7 +1,7 @@
 import { Box, Button } from '@chakra-ui/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-import type { HomeCopy, Locale, PlantCategory } from '../../model/homeModel';
+import type { CollectionCopy, Locale, PlantCategory } from '../../model/collectionModel';
 import { createPlantCardViewModel } from '../../model/plantCardViewModel';
 import { PlantFolioCard } from '../PlantFolioCard/PlantFolioCard';
 import { RoomAmbientInfo } from '../RoomAmbientInfo/RoomAmbientInfo';
@@ -14,7 +14,7 @@ interface RoomSceneProps {
   readonly locale: Locale;
   readonly query: string;
   readonly selectedPlantId: string | null;
-  readonly text: HomeCopy;
+  readonly text: CollectionCopy;
   readonly onCategoryChange: (category: PlantCategory) => void;
   readonly onLocaleChange: (locale: Locale) => void;
   readonly onPlantClose: () => void;

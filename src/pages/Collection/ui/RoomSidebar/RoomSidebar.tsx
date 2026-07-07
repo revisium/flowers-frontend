@@ -5,16 +5,16 @@ import {
   countPlantsByCategory,
   plantCategories,
   plants,
-  type HomeCopy,
+  type CollectionCopy,
   type Locale,
   type PlantCategory,
-} from '../../model/homeModel';
+} from '../../model/collectionModel';
 import { RoomCategoryIcon } from '../RoomCategoryIcon/RoomCategoryIcon';
 
 interface RoomSidebarProps {
   readonly activeCategory: PlantCategory;
   readonly locale: Locale;
-  readonly text: HomeCopy;
+  readonly text: CollectionCopy;
   readonly onCategoryChange: (category: PlantCategory) => void;
 }
 

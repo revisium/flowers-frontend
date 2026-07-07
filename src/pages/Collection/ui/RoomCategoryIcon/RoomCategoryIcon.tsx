@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 
-import type { PlantCategory } from '../../model/homeModel';
+import type { PlantCategory } from '../../model/collectionModel';
 
 interface RoomCategoryIconProps {
   readonly category: Exclude<PlantCategory, 'all'>;
