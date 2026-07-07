@@ -153,8 +153,13 @@ const plantContent = (options: PlantCardContentOptions): PlantCardContent => ({
   problems: options.problems ?? fallbackContent.problems,
 });
 
-const plantCardContent: Record<Plant['id'], PlantCardContent> = {
-  'trd-zbr': plantContent({
+const plantContentEntry = (
+  id: Plant['id'],
+  options: PlantCardContentOptions,
+): readonly [Plant['id'], PlantCardContent] => [id, plantContent(options)];
+
+const plantCardContent = Object.fromEntries([
+  plantContentEntry('trd-zbr', {
     origin: localized('Центральная Америка', 'Central America'),
     family: localized('Коммелиновые', 'Commelinaceae'),
     description: localized(
@@ -211,7 +216,7 @@ const plantCardContent: Record<Plant['id'], PlantCardContent> = {
       ['На полке она особенно красиво работает как живой каскад.', 'On a shelf it reads especially well as a living cascade.'],
     ),
   }),
-  'mon-del': plantContent({
+  plantContentEntry('mon-del', {
     origin: localized('Центральная и Южная Америка', 'Central and South America'),
     family: localized('Ароидные', 'Araceae'),
     description: localized(
@@ -234,7 +239,7 @@ const plantCardContent: Record<Plant['id'], PlantCardContent> = {
       ['Чем старше растение и лучше условия, тем выразительнее листовая пластина.', 'The older the plant and the better the conditions, the more dramatic the leaves.'],
     ),
   }),
-  'chl-com': plantContent({
+  plantContentEntry('chl-com', {
     origin: localized('Южная Африка', 'South Africa'),
     family: localized('Спаржевые', 'Asparagaceae'),
     description: localized(
@@ -254,7 +259,7 @@ const plantCardContent: Record<Plant['id'], PlantCardContent> = {
     ],
     facts: factList(['Хлорофитум легко прощает ошибки и быстро восстанавливается.', 'Spider plant forgives mistakes and recovers quickly.']),
   }),
-  'glo-vel': plantContent({
+  plantContentEntry('glo-vel', {
     origin: localized('Бразилия', 'Brazil'),
     family: localized('Геснериевые', 'Gesneriaceae'),
     description: localized(
@@ -273,7 +278,7 @@ const plantCardContent: Record<Plant['id'], PlantCardContent> = {
     ],
     facts: factList(['Глоксинии часто выращивают как сезонное цветущее украшение подоконника.', 'Gloxinias are often grown as seasonal blooming windowsill accents.']),
   }),
-  'pha-whi': plantContent({
+  plantContentEntry('pha-whi', {
     origin: localized('Юго-Восточная Азия', 'Southeast Asia'),
     family: localized('Орхидные', 'Orchidaceae'),
     description: localized(
@@ -292,7 +297,7 @@ const plantCardContent: Record<Plant['id'], PlantCardContent> = {
     ],
     facts: factList(['Фаленопсисы в природе растут не в земле, а закрепляются корнями на деревьях.', 'In nature phalaenopsis orchids attach to trees rather than growing in soil.']),
   }),
-};
+]) as Record<Plant['id'], PlantCardContent>;
 
 function localize(text: LocalizedText, locale: Locale) {
   return text[locale];
