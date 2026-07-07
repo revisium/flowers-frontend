@@ -1,4 +1,4 @@
-import { Box, Button, Link, Text } from '@chakra-ui/react';
+import { Box, Link, Text } from '@chakra-ui/react';
 
 export function DayReminderCard() {
   return (
@@ -18,10 +18,7 @@ export function DayReminderCard() {
       top={{ xl: 'clamp(122px, 13vw, 166px)' }}
       zIndex={2}
     >
-      <Button aria-label="Скрыть напоминание" height="28px" minWidth="28px" position="absolute" right="18px" top="18px" type="button" variant="plain" width="28px">
-        x
-      </Button>
-      <Text as="strong" display="block" fontSize="1.05rem" marginBottom="14px" paddingRight="34px">
+      <Text as="strong" display="block" fontSize="1.05rem" marginBottom="14px">
         Сегодня особенный день
       </Text>
       <Text color="#6f6b5d" lineHeight={1.55} margin="0 0 18px">

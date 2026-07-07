@@ -14,7 +14,7 @@ export function HomeHeroIntro() {
         fontSize={{ base: 'clamp(2.8rem, 14vw, 4rem)', md: 'clamp(3rem, 5.4vw, 5rem)' }}
         fontWeight={400}
         letterSpacing={0}
-        lineHeight={0.98}
+        lineHeight={1.15}
         margin={0}
         maxWidth="500px"
       >

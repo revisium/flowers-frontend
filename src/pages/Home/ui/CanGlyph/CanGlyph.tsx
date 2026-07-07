@@ -6,7 +6,7 @@ interface CanGlyphProps {
 
 export function CanGlyph({ responsive = false }: CanGlyphProps) {
   return (
-    <>
+    <Box aria-hidden="true" height="100%" inset={0} position="absolute" width="100%">
       <Box
         border="2px solid currentColor"
         borderRadius="4px 4px 9px 9px"
@@ -27,6 +27,6 @@ export function CanGlyph({ responsive = false }: CanGlyphProps) {
         transform="rotate(16deg)"
         width={responsive ? { base: '10px', sm: '13px' } : '9px'}
       />
-    </>
+    </Box>
   );
 }

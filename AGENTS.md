@@ -62,29 +62,14 @@ replace these templates when they already contain the repo-specific truth.
 
 ## Product Status
 
-- The product concept for this repository is not decided yet. This is
-  currently a pure structural/tooling bootstrap: config, CI, and a plain
-  presentational Feature-Sliced Design skeleton (for example `src/app`,
-  `src/pages/Home`, `src/shared`) only.
+- The product concept for this repository is still exploratory. The current UI
+  prototype has a presentation-focused greenhouse home page and an interactive
+  collection room page, with local mock data only.
 - MobX and the MVVM/DataSource layering described by the stack references
   above are available in the dependency tree but not yet wired to any page.
   Do not scaffold ViewModels, DataSources, or DI composition ahead of a real
   product need; see `REVIEW.md` and
   `../../agent-playbook/references/quality/minimal-sufficient-code.md`.
-
-## Component Decomposition
-
-- Do not let page files grow into large one-file UI implementations. Keep page
-  components as composition shells and split meaningful sections, repeated
-  elements, controls, and decorative primitives into same-named component
-  folders under the page `ui/` directory.
-- When implementing Chakra UI screens, prefer idiomatic Chakra primitives
-  (`Flex`, `Grid`, `Stack`, `Link`, `Image`, `Button`, `Text`) over generic
-  `Box` when the element has a clearer semantic layout role. Reserve `Box` for
-  neutral wrappers, absolute layers, and small decorative shapes.
-- If a screen needs local static data for presentation, keep that data near the
-  page in a focused model/helper file instead of embedding large arrays inside
-  the page component.
 
 ## Required Workflow
 

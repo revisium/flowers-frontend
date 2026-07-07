@@ -1,5 +1,6 @@
 import { Button, Grid, Input, Link, Text } from '@chakra-ui/react';
 
+import { homeTotalPlantsCount } from '../../model/homePageData';
 import { BellIcon } from '../BellIcon/BellIcon';
 import { LeafMark } from '../LeafMark/LeafMark';
 import { SearchIcon } from '../SearchIcon/SearchIcon';
@@ -33,7 +34,7 @@ export function HomeHeader() {
         padding={{ base: '9px 12px', sm: '10px 16px' }}
         whiteSpace="nowrap"
       >
-        Коллекция · 16
+        Коллекция · {homeTotalPlantsCount}
       </Link>
 
       <Grid
@@ -60,6 +61,7 @@ export function HomeHeader() {
           outline={0}
           padding={0}
           placeholder="Поиск по названию растения..."
+          _focusVisible={{ boxShadow: '0 0 0 2px #6c923e' }}
           _placeholder={{ color: '#776f63' }}
         />
       </Grid>
