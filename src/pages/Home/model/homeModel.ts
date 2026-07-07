@@ -18,6 +18,17 @@ export interface Plant {
 export interface HomeCopy {
   readonly brandSubtitle: string;
   readonly brandHomeLabel: string;
+  readonly cardAction: string;
+  readonly cardCategoryLabel: string;
+  readonly cardCloseLabel: string;
+  readonly cardDifficultyLabel: string;
+  readonly cardFactsTitle: string;
+  readonly cardOpenLabel: string;
+  readonly cardOriginLabel: string;
+  readonly cardProblemColumn: string;
+  readonly cardProblemsTitle: string;
+  readonly cardReasonColumn: string;
+  readonly cardSolutionColumn: string;
   readonly collection: string;
   readonly languageLabel: string;
   readonly sceneLabel: string;
@@ -53,9 +64,9 @@ export const plants: readonly Plant[] = [
     latinName: 'Monstera deliciosa',
     category: 'aroid',
     zone: 'shelf',
-    width: 450,
+    width: 400,
     x: 1255,
-    y: 250,
+    y: 350,
   },
   {
     id: 'chl-com',
@@ -126,6 +137,17 @@ export const copy: Record<Locale, HomeCopy> = {
   ru: {
     brandSubtitle: 'моя коллекция растений',
     brandHomeLabel: 'Оранжерея, главная',
+    cardAction: 'Открыть карточку',
+    cardCategoryLabel: 'Категория',
+    cardCloseLabel: 'Закрыть карточку растения',
+    cardDifficultyLabel: 'Уровень сложности',
+    cardFactsTitle: 'Интересные факты',
+    cardOpenLabel: 'Карточка растения',
+    cardOriginLabel: 'Происхождение',
+    cardProblemColumn: 'Проблема',
+    cardProblemsTitle: 'Проблемы и решения',
+    cardReasonColumn: 'Причина',
+    cardSolutionColumn: 'Решение',
     collection: 'Моя коллекция',
     languageLabel: 'Язык интерфейса',
     sceneLabel: 'Домашняя оранжерея',
@@ -142,6 +164,17 @@ export const copy: Record<Locale, HomeCopy> = {
   en: {
     brandSubtitle: 'my plant collection',
     brandHomeLabel: 'Greenhouse, home',
+    cardAction: 'Open card',
+    cardCategoryLabel: 'Category',
+    cardCloseLabel: 'Close plant card',
+    cardDifficultyLabel: 'Difficulty level',
+    cardFactsTitle: 'Interesting facts',
+    cardOpenLabel: 'Plant card',
+    cardOriginLabel: 'Origin',
+    cardProblemColumn: 'Problem',
+    cardProblemsTitle: 'Problems and solutions',
+    cardReasonColumn: 'Reason',
+    cardSolutionColumn: 'Solution',
     collection: 'My collection',
     languageLabel: 'Interface language',
     sceneLabel: 'Home greenhouse',

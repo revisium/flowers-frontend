@@ -1,8 +1,10 @@
-import { plants, type Locale, type Plant, type PlantCategory } from './homeModel';
+import { categoryLabels, plants, type Locale, type Plant, type PlantCategory } from './homeModel';
 
 export interface PlantItemViewModel {
   readonly id: string;
+  readonly category: string;
   readonly image: string;
+  readonly latinName: string;
   readonly name: string;
   readonly position: {
     readonly left: string;
@@ -46,7 +48,9 @@ export function createPlantItemViewModels({
     })
     .map((plant) => ({
       id: plant.id,
+      category: categoryLabels[locale][plant.category],
       image: plant.image,
+      latinName: plant.latinName,
       name: getPlantName(plant, locale),
       position: {
         left: `${plant.x}px`,

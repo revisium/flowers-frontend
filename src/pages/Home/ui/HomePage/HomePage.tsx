@@ -8,7 +8,18 @@ export function HomePage() {
   const [category, setCategory] = useState<PlantCategory>('all');
   const [query, setQuery] = useState('');
   const [locale, setLocale] = useState<Locale>('ru');
+  const [selectedPlantId, setSelectedPlantId] = useState<string | null>(null);
   const text = copy[locale];
+
+  const changeCategory = (nextCategory: PlantCategory) => {
+    setCategory(nextCategory);
+    setSelectedPlantId(null);
+  };
+
+  const changeQuery = (nextQuery: string) => {
+    setQuery(nextQuery);
+    setSelectedPlantId(null);
+  };
 
   return (
     <Box
@@ -21,10 +32,15 @@ export function HomePage() {
       <RoomScene
         activeCategory={category}
         locale={locale}
-        onCategoryChange={setCategory}
+        onCategoryChange={changeCategory}
         onLocaleChange={setLocale}
-        onQueryChange={setQuery}
+        onPlantClose={() => {
+          setSelectedPlantId(null);
+        }}
+        onPlantSelect={setSelectedPlantId}
+        onQueryChange={changeQuery}
         query={query}
+        selectedPlantId={selectedPlantId}
         text={text}
       />
     </Box>
