@@ -20,8 +20,8 @@ interface RoomSidebarProps {
 
 export function RoomSidebar({ activeCategory, locale, onCategoryChange, text }: RoomSidebarProps) {
   return (
-    <Flex as="aside" aria-label="Разделы оранжереи" className="room-nav">
-      <Link aria-label="Оранжерея, главная" className="room-brand" href="/">
+    <Flex as="aside" aria-label={text.sidebarLabel} className="room-nav">
+      <Link aria-label={text.brandHomeLabel} className="room-brand" href="/">
         <Box as="span" className="room-brand__leaf" />
         <Box as="span">
           <Text as="strong">Оранжерея</Text>

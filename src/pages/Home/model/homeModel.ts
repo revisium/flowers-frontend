@@ -14,16 +14,16 @@ export interface Plant {
   readonly size: 'sm' | 'md' | 'lg';
 }
 
-export interface CategoryOption {
-  readonly key: PlantCategory;
-}
-
 export interface HomeCopy {
   readonly brandSubtitle: string;
+  readonly brandHomeLabel: string;
   readonly collection: string;
+  readonly languageLabel: string;
+  readonly sceneLabel: string;
   readonly searchLabel: string;
   readonly searchPlaceholder: string;
   readonly show: string;
+  readonly sidebarLabel: string;
   readonly quote: string;
   readonly weatherLabel: string;
   readonly sunny: string;
@@ -120,15 +120,6 @@ export const plants: readonly Plant[] = [
   },
 ];
 
-export const categories: readonly CategoryOption[] = [
-  { key: 'all' },
-  { key: 'foliage' },
-  { key: 'aroid' },
-  { key: 'flowering' },
-  { key: 'succulent' },
-  { key: 'palm' },
-];
-
 export const plantCategories = [
   { key: 'foliage' },
   { key: 'aroid' },
@@ -159,20 +150,28 @@ export const categoryLabels: Record<Locale, Record<PlantCategory, string>> = {
 export const copy: Record<Locale, HomeCopy> = {
   ru: {
     brandSubtitle: 'моя коллекция растений',
+    brandHomeLabel: 'Оранжерея, главная',
     collection: 'Моя коллекция',
+    languageLabel: 'Язык интерфейса',
+    sceneLabel: 'Домашняя оранжерея',
     searchLabel: 'Поиск растения',
     searchPlaceholder: 'Найти растение...',
     show: 'Показать',
+    sidebarLabel: 'Разделы оранжереи',
     quote: 'Растения не просто украшают дом, они делают его живым',
     weatherLabel: 'Погода и время',
     sunny: 'Солнечно',
   },
   en: {
     brandSubtitle: 'my plant collection',
+    brandHomeLabel: 'Greenhouse, home',
     collection: 'My collection',
+    languageLabel: 'Interface language',
+    sceneLabel: 'Home greenhouse',
     searchLabel: 'Search plants',
     searchPlaceholder: 'Search plants...',
     show: 'Show',
+    sidebarLabel: 'Greenhouse sections',
     quote: 'Plants do not just decorate a home, they make it feel alive',
     weatherLabel: 'Weather and time',
     sunny: 'Sunny',

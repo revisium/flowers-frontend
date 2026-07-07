@@ -32,7 +32,7 @@ export function RoomToolbar({
         />
       </Flex>
 
-      <Flex className="language-switch" aria-label="Language">
+      <Flex className="language-switch" aria-label={text.languageLabel} role="group">
         <Button
           aria-pressed={locale === 'ru'}
           className={

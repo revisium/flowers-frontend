@@ -7,5 +7,7 @@ interface RoomCategoryIconProps {
 }
 
 export function RoomCategoryIcon({ category }: RoomCategoryIconProps) {
-  return <Box as="span" className={`room-category__dot room-category__dot--${category}`} />;
+  const modifier = category === 'foliage' ? '' : ` room-category__dot--${category}`;
+
+  return <Box as="span" className={`room-category__dot${modifier}`} />;
 }

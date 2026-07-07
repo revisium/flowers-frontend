@@ -11,7 +11,13 @@ export function HomePage() {
   const text = copy[locale];
 
   return (
-    <Box as="main" className="room-page">
+    <Box
+      as="main"
+      height="100vh"
+      minHeight="100vh"
+      overflowX="hidden"
+      padding={{ base: 0, md: 'clamp(10px, 1.8vw, 18px)' }}
+    >
       <RoomScene
         activeCategory={category}
         locale={locale}
