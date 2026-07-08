@@ -10,6 +10,7 @@ export type PlantCategory =
   | 'cactaceae'
   | 'commelinaceae'
   | 'cycadaceae'
+  | 'gesneriaceae'
   | 'marantaceae'
   | 'nephrolepidaceae'
   | 'orchidaceae'
@@ -100,7 +101,7 @@ export const plants: readonly Plant[] = [
     name: 'Глоксиния',
     nameEn: 'Gloxinia',
     latinName: 'Sinningia speciosa',
-    category: 'amaryllidaceae',
+    category: 'gesneriaceae',
     zone: 'window',
     width: 150,
     x: 800,
@@ -123,6 +124,7 @@ export const plants: readonly Plant[] = [
 export const plantCategories = [
   { key: 'araceae' },
   { key: 'amaryllidaceae' },
+  { key: 'gesneriaceae' },
   { key: 'marantaceae' },
   { key: 'orchidaceae' },
   { key: 'asparagaceae' },
@@ -147,6 +149,7 @@ const categoryCounts: Record<Exclude<PlantCategory, 'all'>, number> = {
   cactaceae: 1,
   commelinaceae: 1,
   cycadaceae: 1,
+  gesneriaceae: 8,
   marantaceae: 3,
   nephrolepidaceae: 1,
   orchidaceae: 3,
@@ -166,6 +169,7 @@ export const categoryLabels: Record<Locale, Record<PlantCategory, string>> = {
     cactaceae: 'Кактусовые',
     commelinaceae: 'Коммелиновые',
     cycadaceae: 'Саговниковые',
+    gesneriaceae: 'Геснериевые',
     marantaceae: 'Марантовые',
     nephrolepidaceae: 'Папоротники',
     orchidaceae: 'Орхидные',
@@ -183,6 +187,7 @@ export const categoryLabels: Record<Locale, Record<PlantCategory, string>> = {
     cactaceae: 'Cacti',
     commelinaceae: 'Spiderwort family',
     cycadaceae: 'Cycads',
+    gesneriaceae: 'Gesneriad family',
     marantaceae: 'Prayer plant family',
     nephrolepidaceae: 'Ferns',
     orchidaceae: 'Orchids',

@@ -11,7 +11,7 @@ export const HomeHero = () => {
       backgroundPosition="top center"
       backgroundRepeat="no-repeat"
       backgroundSize="contain"
-      aspectRatio={{ base: 'auto', md: '1535 / 1024' }}
+      aspectRatio={{ base: 'auto', md: '1535 / 924' }}
       backgroundColor="#f2eadb"
       minHeight={{ base: 'min(70vh, 760px)', md: 'auto' }}
       position="relative"

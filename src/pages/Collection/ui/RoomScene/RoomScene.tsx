@@ -1,4 +1,4 @@
-import { Box, Button } from '@chakra-ui/react';
+import { Box, Button, Link } from '@chakra-ui/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { GreenhouseMenu, type GreenhouseMenuLocale } from 'src/widgets/GreenhouseMenu';
 
@@ -110,6 +110,35 @@ export const RoomScene = ({
         onCategoryChange={onCategoryChange}
         text={text}
       />
+      <Link
+        alignItems="center"
+        backdropFilter="blur(14px)"
+        background="rgba(255, 248, 233, 0.78)"
+        border="1px solid rgba(255, 248, 233, 0.42)"
+        borderRadius="999px"
+        color="#365e35"
+        display="inline-flex"
+        fontSize="0.92rem"
+        fontWeight={760}
+        gap="8px"
+        href="/"
+        left={{ base: '24px', md: '28px' }}
+        minHeight="40px"
+        padding="0 14px"
+        position="absolute"
+        textDecoration="none"
+        top={{ base: '96px', md: '100px' }}
+        width="fit-content"
+        zIndex={8}
+        _active={{ textDecoration: 'none' }}
+        _focus={{ textDecoration: 'none' }}
+        _hover={{ background: 'rgba(255, 248, 233, 0.88)', textDecoration: 'none' }}
+      >
+        <Box as="span" aria-hidden="true" fontSize="1.05rem" lineHeight={1}>
+          ←
+        </Box>
+        {text.backToHome}
+      </Link>
       <Box left={0} position="absolute" right={0} top={0} zIndex={7}>
         <GreenhouseMenu
           languageLabel={text.languageLabel}

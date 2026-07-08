@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Grid, Text } from '@chakra-ui/react';
+import { Button, Flex, Grid, Text } from '@chakra-ui/react';
 
 import {
   categoryLabels,
@@ -25,12 +25,19 @@ export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: 
       flexDirection={{ base: 'row', md: 'column' }}
       gap="12px"
       left={{ base: '12px', md: '28px' }}
-      overflowX={{ base: 'auto', md: 'visible' }}
+      maxHeight={{ base: 'none', md: 'calc(100% - 176px)' }}
+      overflowX={{ base: 'auto', md: 'hidden' }}
+      overflowY={{ base: 'hidden', md: 'auto' }}
+      paddingRight={{ base: 0, md: '8px' }}
       position="absolute"
       right={{ base: '12px', md: 'auto' }}
-      top={{ base: '142px', md: '126px' }}
+      top={{ base: '148px', md: '154px' }}
       width={{ base: 'auto', md: '260px' }}
       zIndex={6}
+      css={{
+        scrollbarColor: 'rgba(255, 248, 233, 0.32) transparent',
+        scrollbarWidth: 'thin',
+      }}
     >
       <Flex as="nav" aria-label={text.collection} flexDirection={{ base: 'row', md: 'column' }} gap="12px">
         <Button
@@ -44,7 +51,7 @@ export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: 
           fontSize="0.95rem"
           fontWeight={700}
           gap="10px"
-          gridTemplateColumns="18px minmax(170px, 1fr) 34px"
+          gridTemplateColumns="32px minmax(154px, 1fr) 34px"
           minHeight="46px"
           padding="9px 12px"
           textAlign="left"
@@ -58,10 +65,7 @@ export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: 
           type="button"
           variant="plain"
         >
-          <Box as="span" border="2px solid currentColor" borderRadius="999px" height="18px" position="relative" width="18px">
-            <Box background="currentColor" borderRadius="999px 999px 999px 0" height="9px" left="1px" position="absolute" rotate="-45deg" top="4px" width="9px" />
-            <Box background="currentColor" borderRadius="999px 999px 999px 0" height="9px" left="7px" position="absolute" rotate="135deg" top="4px" width="9px" />
-          </Box>
+          <RoomCategoryIcon category="all" />
           {text.collection}
           <Text as="b" alignItems="center" borderRadius="999px" color="currentColor" display="inline-flex" fontSize="0.7rem" height="19px" justifyContent="center" marginLeft="4px" minWidth="19px">
             {countPlantsByCategory('all')}
@@ -85,7 +89,7 @@ export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: 
                 fontSize="0.95rem"
                 fontWeight={650}
                 gap="11px"
-                gridTemplateColumns="20px minmax(152px, 1fr) 34px"
+                gridTemplateColumns="32px minmax(140px, 1fr) 34px"
                 minHeight="36px"
                 padding="6px 10px"
                 textAlign="left"
