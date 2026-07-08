@@ -23,14 +23,23 @@ export const useCollectionSearchRouteSync = ({
   useEffect(() => {
     if (routeSearchPlantId) {
       onSearchPlantSelect(routeSearchPlantId);
-      void navigate(location.pathname, { replace: true, state: null });
+      void navigate(`${location.pathname}${location.search}${location.hash}`, { replace: true, state: null });
       return;
     }
 
     if (!selectedSearchPlantId) {
       closePlantCard();
     }
-  }, [closePlantCard, location.pathname, navigate, onSearchPlantSelect, routeSearchPlantId, selectedSearchPlantId]);
+  }, [
+    closePlantCard,
+    location.hash,
+    location.pathname,
+    location.search,
+    navigate,
+    onSearchPlantSelect,
+    routeSearchPlantId,
+    selectedSearchPlantId,
+  ]);
 
   useEffect(() => {
     if (selectedSearchPlantId) {

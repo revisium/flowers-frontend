@@ -32,11 +32,14 @@ const readStoredLocale = () => {
 };
 
 export const usePreferredLocale = () => {
-  const [locale, setLocale] = useState<Locale>(readStoredLocale);
+  const [locale, setLocale] = useState<Locale>(defaultLocale);
 
   useEffect(() => {
-    applyDocumentLocale(locale);
-  }, [locale]);
+    const storedLocale = readStoredLocale();
+
+    setLocale(storedLocale);
+    applyDocumentLocale(storedLocale);
+  }, []);
 
   const changeLocale = useCallback((nextLocale: Locale) => {
     setLocale(nextLocale);
