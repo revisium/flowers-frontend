@@ -11,13 +11,13 @@ interface RoomPlantLayerProps {
   readonly onPlantSelect: (plantId: string) => void;
 }
 
-export function RoomPlantLayer({
+export const RoomPlantLayer = ({
   activeCategory,
   locale,
   onPlantSelect,
   query,
   text,
-}: RoomPlantLayerProps) {
+}: RoomPlantLayerProps) => {
   const plantItems = createPlantItemViewModels({ activeCategory, locale, query });
 
   return (
@@ -112,4 +112,4 @@ export function RoomPlantLayer({
       ))}
     </Box>
   );
-}
+};

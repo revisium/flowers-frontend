@@ -17,9 +17,10 @@ Layers, from top to bottom, each depending only downward:
 
 - `app` — routes, layouts, providers, and app-wide composition.
 - `pages` — route-level page slices.
-- `widgets` — reusable composed UI blocks shared by page slices. The current
-  widget slice is `GreenhouseMenu`, used by Home and Collection so the brand
-  mark, search, and language controls stay visually consistent across routes.
+- `widgets` — reusable composed UI blocks shared by page slices. Current widget
+  slices are `Layout`, which owns the shared inner-screen frame, and
+  `GreenhouseMenu`, which keeps the brand mark, search, and language controls
+  visually consistent across routes.
 - `features` — cross-page reusable behavior (none yet).
 - `entities` — domain types and mock/data records (none yet).
 - `shared` — cross-cutting UI, API/transport, config, and infrastructure
@@ -34,11 +35,15 @@ no slices.
 
 ## App Layout Contract
 
-`src/app/layouts/AppLayout` owns the persistent viewport frame for all routes.
-It renders the app background, applies the fixed `18px` viewport padding, and
-places route content inside a rounded inner screen that fills the remaining
-viewport width and height. Page slices should fill that inner screen instead of
-adding their own outer viewport padding or top-level rounded frame.
+`src/app/layouts/AppLayout` is only a React Router outlet boundary. Shared app
+chrome lives in `src/widgets/Layout`, following the widget layout pattern used
+by sibling projects.
+
+`src/widgets/Layout` owns the persistent viewport frame. It renders the app
+background, applies the fixed `18px` viewport padding, and places page content
+inside a rounded inner screen that fills the remaining viewport width and
+height. `HomePage` and `CollectionPage` wrap their route content in this widget
+instead of adding their own outer viewport padding or top-level rounded frame.
 
 ## Home Prototype Contract
 

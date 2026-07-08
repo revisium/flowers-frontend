@@ -5,7 +5,7 @@ import { homeCategories } from '../../model/homePageData';
 import { HomeCategoryCard } from '../HomeCategoryCard/HomeCategoryCard';
 import { HomeNote } from '../HomeNote/HomeNote';
 
-export function HomeCategoriesSection() {
+export const HomeCategoriesSection = () => {
   const categoryListRef = useRef<HTMLDivElement | null>(null);
 
   const scrollCategories = (direction: 'left' | 'right') => {
@@ -81,4 +81,4 @@ export function HomeCategoriesSection() {
       <HomeNote />
     </Box>
   );
-}
+};

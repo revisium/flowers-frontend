@@ -4,7 +4,7 @@ interface CanGlyphProps {
   readonly responsive?: boolean;
 }
 
-export function CanGlyph({ responsive = false }: CanGlyphProps) {
+export const CanGlyph = ({ responsive = false }: CanGlyphProps) => {
   return (
     <Box aria-hidden="true" height="100%" inset={0} position="absolute" width="100%">
       <Box
@@ -29,4 +29,4 @@ export function CanGlyph({ responsive = false }: CanGlyphProps) {
       />
     </Box>
   );
-}
+};

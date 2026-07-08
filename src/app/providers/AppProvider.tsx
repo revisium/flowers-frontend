@@ -5,6 +5,6 @@ interface AppProviderProps {
   readonly children: React.ReactNode;
 }
 
-export function AppProvider({ children }: AppProviderProps) {
+export const AppProvider = ({ children }: AppProviderProps) => {
   return <ChakraProvider value={chakraSystem}>{children}</ChakraProvider>;
-}
+};

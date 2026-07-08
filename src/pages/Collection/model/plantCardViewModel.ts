@@ -68,6 +68,44 @@ export interface PlantCardViewModel {
 
 const localized = (ru: string, en: string): LocalizedText => ({ en, ru });
 
+const createLocalizedPair = (
+  value: readonly string[] | undefined,
+  fallback = localized('', ''),
+): LocalizedText => {
+  return localized(value?.[0] ?? fallback.ru, value?.[1] ?? fallback.en);
+};
+
+const createCareSection = (value: readonly string[]): CareSection => {
+  return {
+    body: createLocalizedPair([value[2] ?? '', value[3] ?? '']),
+    title: createLocalizedPair(value),
+  };
+};
+
+const createProblemRow = (value: readonly string[]): ProblemRow => {
+  return {
+    problem: createLocalizedPair(value),
+    reason: createLocalizedPair([value[2] ?? '', value[3] ?? '']),
+    solution: createLocalizedPair([value[4] ?? '', value[5] ?? '']),
+  };
+};
+
+const createPlantCardContent = (content: RawPlantCardContent): PlantCardContent => {
+  return {
+    care: content.care?.map(createCareSection) ?? fallbackContent.care,
+    description: createLocalizedPair(content.description, fallbackContent.description),
+    difficulty: content.difficulty ?? fallbackContent.difficulty,
+    facts: content.facts?.map((fact) => createLocalizedPair(fact)) ?? fallbackContent.facts,
+    family: createLocalizedPair(content.family, fallbackContent.family),
+    origin: createLocalizedPair(content.origin, fallbackContent.origin),
+    problems: content.problems?.map(createProblemRow) ?? fallbackContent.problems,
+  };
+};
+
+const localize = (text: LocalizedText, locale: Locale) => {
+  return text[locale];
+};
+
 const fallbackContent: PlantCardContent = {
   origin: localized('Домашняя коллекция', 'Home collection'),
   family: localized('Комнатные растения', 'Houseplants'),
@@ -126,52 +164,14 @@ const plantCardContent = Object.fromEntries(
   ),
 ) as Record<Plant['id'], PlantCardContent>;
 
-function createPlantCardContent(content: RawPlantCardContent): PlantCardContent {
-  return {
-    care: content.care?.map(createCareSection) ?? fallbackContent.care,
-    description: createLocalizedPair(content.description, fallbackContent.description),
-    difficulty: content.difficulty ?? fallbackContent.difficulty,
-    facts: content.facts?.map((fact) => createLocalizedPair(fact)) ?? fallbackContent.facts,
-    family: createLocalizedPair(content.family, fallbackContent.family),
-    origin: createLocalizedPair(content.origin, fallbackContent.origin),
-    problems: content.problems?.map(createProblemRow) ?? fallbackContent.problems,
-  };
-}
-
-function createCareSection(value: readonly string[]): CareSection {
-  return {
-    body: createLocalizedPair([value[2] ?? '', value[3] ?? '']),
-    title: createLocalizedPair(value),
-  };
-}
-
-function createProblemRow(value: readonly string[]): ProblemRow {
-  return {
-    problem: createLocalizedPair(value),
-    reason: createLocalizedPair([value[2] ?? '', value[3] ?? '']),
-    solution: createLocalizedPair([value[4] ?? '', value[5] ?? '']),
-  };
-}
-
-function createLocalizedPair(
-  value: readonly string[] | undefined,
-  fallback = localized('', ''),
-): LocalizedText {
-  return localized(value?.[0] ?? fallback.ru, value?.[1] ?? fallback.en);
-}
-
-function localize(text: LocalizedText, locale: Locale) {
-  return text[locale];
-}
-
-export function getPlantById(plantId: string) {
+export const getPlantById = (plantId: string) => {
   return plants.find((plant) => plant.id === plantId);
-}
+};
 
-export function createPlantCardViewModel(
+export const createPlantCardViewModel = (
   plantId: string | null,
   locale: Locale,
-): PlantCardViewModel | null {
+): PlantCardViewModel | null => {
   if (!plantId) {
     return null;
   }
@@ -205,4 +205,4 @@ export function createPlantCardViewModel(
       solution: localize(row.solution, locale),
     })),
   };
-}
+};

@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 
-export function BellIcon() {
+export const BellIcon = () => {
   return (
     <Box
       as="span"
@@ -35,4 +35,4 @@ export function BellIcon() {
       }}
     />
   );
-}
+};

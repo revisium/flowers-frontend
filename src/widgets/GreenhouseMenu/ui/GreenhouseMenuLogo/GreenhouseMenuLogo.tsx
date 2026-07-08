@@ -4,7 +4,7 @@ interface GreenhouseMenuLogoProps {
   readonly tone: 'dark' | 'light';
 }
 
-export function GreenhouseMenuLogo({ tone }: GreenhouseMenuLogoProps) {
+export const GreenhouseMenuLogo = ({ tone }: GreenhouseMenuLogoProps) => {
   const titleColor = tone === 'dark' ? '#263729' : '#fff8e9';
   const subtitleColor = tone === 'dark' ? 'rgba(91, 76, 54, 0.78)' : 'rgba(255, 248, 233, 0.78)';
 
@@ -19,7 +19,7 @@ export function GreenhouseMenuLogo({ tone }: GreenhouseMenuLogoProps) {
         href="/"
         lineHeight={1}
         maxWidth="100%"
-        minHeight={{ base: '50px', md: '62px' }}
+        minHeight={{ base: '44px', md: '52px' }}
         textDecoration="none"
         width="fit-content"
         _active={{ textDecoration: 'none' }}
@@ -31,10 +31,10 @@ export function GreenhouseMenuLogo({ tone }: GreenhouseMenuLogoProps) {
           alt=""
           aria-hidden="true"
           flex="0 0 auto"
-          height={{ base: '50px', md: '62px' }}
+          height={{ base: '44px', md: '52px' }}
           objectFit="contain"
           src="/greenhouse-leaf-logo.png"
-          width={{ base: '34px', md: '42px' }}
+          width={{ base: '30px', md: '36px' }}
         />
         <Flex direction="column" minWidth={0}>
           <Text
@@ -42,7 +42,7 @@ export function GreenhouseMenuLogo({ tone }: GreenhouseMenuLogoProps) {
             display="block"
             letterSpacing={0}
             textDecoration="none"
-            textStyle={{ base: 'bold-lg', md: 'bold-xxl' }}
+            textStyle={{ base: 'bold-md', md: 'bold-xl' }}
             whiteSpace="nowrap"
           >
             Оранжерея
@@ -54,4 +54,4 @@ export function GreenhouseMenuLogo({ tone }: GreenhouseMenuLogoProps) {
       </Link>
     </Flex>
   );
-}
+};

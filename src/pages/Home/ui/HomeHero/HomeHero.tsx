@@ -4,7 +4,7 @@ import { DayReminderCard } from '../DayReminderCard/DayReminderCard';
 import { HomeHeader } from '../HomeHeader/HomeHeader';
 import { HomeHeroIntro } from '../HomeHeroIntro/HomeHeroIntro';
 
-export function HomeHero() {
+export const HomeHero = () => {
   return (
     <Box
       backgroundImage=" url('/greenhouse-home-hero.png')"
@@ -25,4 +25,4 @@ export function HomeHero() {
       </Box>
     </Box>
   );
-}
+};

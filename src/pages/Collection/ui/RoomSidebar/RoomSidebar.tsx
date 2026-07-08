@@ -18,7 +18,7 @@ interface RoomSidebarProps {
   readonly onCategoryChange: (category: PlantCategory) => void;
 }
 
-export function RoomSidebar({ activeCategory, locale, onCategoryChange, text }: RoomSidebarProps) {
+export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: RoomSidebarProps) => {
   return (
     <Flex
       as="aside"
@@ -113,4 +113,4 @@ export function RoomSidebar({ activeCategory, locale, onCategoryChange, text }: 
       </Flex>
     </Flex>
   );
-}
+};

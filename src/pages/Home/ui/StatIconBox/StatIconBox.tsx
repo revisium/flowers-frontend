@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 import type { HomeStatIcon } from '../../model/homePageData';
 import { CanGlyph } from '../CanGlyph/CanGlyph';
 
-export function StatIconBox({ icon }: { readonly icon: HomeStatIcon }) {
+export const StatIconBox = ({ icon }: { readonly icon: HomeStatIcon }) => {
   const color = icon === 'can' ? '#c96f38' : '#6b9147';
 
   if (icon === 'grid') {
@@ -83,9 +83,9 @@ export function StatIconBox({ icon }: { readonly icon: HomeStatIcon }) {
       />
     </IconShell>
   );
-}
+};
 
-function IconShell({ children, color }: { readonly children: ReactNode; readonly color: string }) {
+const IconShell = ({ children, color }: { readonly children: ReactNode; readonly color: string }) => {
   return (
     <Box
       aria-hidden="true"
@@ -100,4 +100,4 @@ function IconShell({ children, color }: { readonly children: ReactNode; readonly
       {children}
     </Box>
   );
-}
+};

@@ -7,7 +7,7 @@ interface LayoutProps {
   readonly children: React.ReactNode;
 }
 
-export function Layout({ children }: LayoutProps) {
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="ru">
       <head>
@@ -24,17 +24,19 @@ export function Layout({ children }: LayoutProps) {
       </body>
     </html>
   );
-}
+};
 
-export default function App() {
+const App = () => {
   return (
     <AppProvider>
       <Outlet />
     </AppProvider>
   );
-}
+};
 
-export function ErrorBoundary({ error }: { readonly error: unknown }) {
+export default App;
+
+export const ErrorBoundary = ({ error }: { readonly error: unknown }) => {
   let title = 'Something went wrong';
   let details = 'An unexpected error occurred.';
 
@@ -51,4 +53,4 @@ export function ErrorBoundary({ error }: { readonly error: unknown }) {
       <p>{details}</p>
     </main>
   );
-}
+};

@@ -6,7 +6,7 @@ interface RoomAmbientInfoProps {
   readonly text: CollectionCopy;
 }
 
-export function RoomAmbientInfo({ text }: RoomAmbientInfoProps) {
+export const RoomAmbientInfo = ({ text }: RoomAmbientInfoProps) => {
   return (
     <>
       <Flex
@@ -68,4 +68,4 @@ export function RoomAmbientInfo({ text }: RoomAmbientInfoProps) {
       </Grid>
     </>
   );
-}
+};

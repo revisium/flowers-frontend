@@ -1,6 +1,6 @@
 import { Box, Link, Text } from '@chakra-ui/react';
 
-export function DayReminderCard() {
+export const DayReminderCard = () => {
   return (
     <Box
       background="rgba(255, 252, 246, 0.78)"
@@ -32,4 +32,4 @@ export function DayReminderCard() {
       </Link>
     </Box>
   );
-}
+};

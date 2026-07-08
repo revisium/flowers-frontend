@@ -1,6 +1,6 @@
 import { GreenhouseMenu } from 'src/widgets/GreenhouseMenu';
 
-export function HomeHeader() {
+export const HomeHeader = () => {
   return (
     <GreenhouseMenu
       languageLabel="Выбор языка"
@@ -10,4 +10,4 @@ export function HomeHeader() {
       searchPlaceholder="Найти растение..."
     />
   );
-}
+};

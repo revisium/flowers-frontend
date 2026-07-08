@@ -3,7 +3,7 @@ import { Button, Grid } from '@chakra-ui/react';
 import { BookIcon } from '../BookIcon/BookIcon';
 import { SmallCanIcon } from '../SmallCanIcon/SmallCanIcon';
 
-export function HomeActions() {
+export const HomeActions = () => {
   return (
     <Grid gap="12px" gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', sm: 'repeat(2, max-content)' }} marginTop="28px">
       <Button
@@ -36,4 +36,4 @@ export function HomeActions() {
       </Button>
     </Grid>
   );
-}
+};

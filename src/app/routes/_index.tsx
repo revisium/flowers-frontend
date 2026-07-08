@@ -1,5 +1,7 @@
 import { HomePage } from 'src/pages/Home';
 
-export default function HomeRoute() {
+const HomeRoute = () => {
   return <HomePage />;
-}
+};
+
+export default HomeRoute;

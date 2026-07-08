@@ -4,7 +4,7 @@ import { homeStatCards } from '../../model/homePageData';
 import { HomeActions } from '../HomeActions/HomeActions';
 import { HomeStats } from '../HomeStats/HomeStats';
 
-export function HomeHeroIntro() {
+export const HomeHeroIntro = () => {
   return (
     <Box marginLeft={{ base: 0, md: 'clamp(8px, 4vw, 84px)' }} marginTop={{ base: '34px', md: 'clamp(52px, 8vw, 92px)' }} maxWidth={{ base: '358px', md: '600px' }} position="relative" zIndex={1}>
       <Text
@@ -25,4 +25,4 @@ export function HomeHeroIntro() {
       <HomeActions />
     </Box>
   );
-}
+};

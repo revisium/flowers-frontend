@@ -20,7 +20,7 @@ interface CreatePlantItemViewModelsOptions {
   readonly query: string;
 }
 
-function matchesQuery(plant: Plant, locale: Locale, query: string) {
+const matchesQuery = (plant: Plant, locale: Locale, query: string) => {
   const normalizedQuery = query.trim().toLocaleLowerCase(locale);
 
   if (!normalizedQuery) {
@@ -30,13 +30,13 @@ function matchesQuery(plant: Plant, locale: Locale, query: string) {
   return [plant.name, plant.nameEn, plant.latinName, getPlantName(plant, locale)].some((value) =>
     value.toLocaleLowerCase(locale).includes(normalizedQuery),
   );
-}
+};
 
-export function createPlantItemViewModels({
+export const createPlantItemViewModels = ({
   activeCategory,
   locale,
   query,
-}: CreatePlantItemViewModelsOptions): readonly PlantItemViewModel[] {
+}: CreatePlantItemViewModelsOptions): readonly PlantItemViewModel[] => {
   return plants
     .filter((plant) => {
       const categoryMatches = activeCategory === 'all' || plant.category === activeCategory;
@@ -55,4 +55,4 @@ export function createPlantItemViewModels({
         width: `${plant.width}px`,
       },
     }));
-}
+};

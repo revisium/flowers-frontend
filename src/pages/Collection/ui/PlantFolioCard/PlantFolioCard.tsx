@@ -19,7 +19,7 @@ interface PlantFolioCardProps {
   readonly onClose: () => void;
 }
 
-export function PlantFolioCard({ onClose, plant, text }: PlantFolioCardProps) {
+export const PlantFolioCard = ({ onClose, plant, text }: PlantFolioCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const cardRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
@@ -272,9 +272,9 @@ export function PlantFolioCard({ onClose, plant, text }: PlantFolioCardProps) {
       </Box>
     </Flex>
   );
-}
+};
 
-function FactBox({ label, value }: { readonly label: string; readonly value: string }) {
+const FactBox = ({ label, value }: { readonly label: string; readonly value: string }) => {
   return (
     <Box
       background="rgba(239, 226, 198, 0.58)"
@@ -290,4 +290,4 @@ function FactBox({ label, value }: { readonly label: string; readonly value: str
       </Text>
     </Box>
   );
-}
+};

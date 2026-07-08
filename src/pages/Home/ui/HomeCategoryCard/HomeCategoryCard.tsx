@@ -6,7 +6,7 @@ interface HomeCategoryCardProps {
   readonly category: HomeCategory;
 }
 
-export function HomeCategoryCard({ category }: HomeCategoryCardProps) {
+export const HomeCategoryCard = ({ category }: HomeCategoryCardProps) => {
   return (
     <Link
       alignItems="center"
@@ -34,4 +34,4 @@ export function HomeCategoryCard({ category }: HomeCategoryCardProps) {
       </Text>
     </Link>
   );
-}
+};

@@ -17,7 +17,7 @@ interface GreenhouseMenuProps {
   readonly onQueryChange?: (query: string) => void;
 }
 
-export function GreenhouseMenu({
+export const GreenhouseMenu = ({
   languageLabel,
   locale,
   logoTone,
@@ -26,24 +26,24 @@ export function GreenhouseMenu({
   query,
   searchLabel,
   searchPlaceholder,
-}: GreenhouseMenuProps) {
+}: GreenhouseMenuProps) => {
   return (
     <Flex
       as="header"
       alignItems="center"
-      backdropFilter="blur(8px) saturate(1.04)"
-      background="linear-gradient(90deg, rgba(255, 248, 233, 0.26), rgba(255, 255, 255, 0.12))"
-      borderBottom="1px solid rgba(93, 112, 71, 0.14)"
-      boxShadow="0 14px 34px rgba(56, 48, 31, 0.035)"
+      backdropFilter="blur(5px) saturate(1.02)"
+      background="linear-gradient(90deg, rgba(255, 248, 233, 0.14), rgba(255, 255, 255, 0.06))"
+      borderBottom="1px solid rgba(93, 112, 71, 0.1)"
+      boxShadow="0 10px 24px rgba(56, 48, 31, 0.02)"
       flexWrap={{ base: 'wrap', md: 'nowrap' }}
-      gap={{ base: '14px', lg: '28px' }}
+      gap={{ base: '10px', lg: '24px' }}
       justifyContent="space-between"
-      padding={{ base: '14px 16px 16px', md: '22px clamp(24px, 4vw, 46px)' }}
+      padding={{ base: '10px 14px 12px', md: '14px clamp(24px, 4vw, 46px)' }}
       position="relative"
       width="100%"
       zIndex={7}
       _after={{
-        background: 'linear-gradient(90deg, rgba(95, 127, 57, 0), rgba(95, 127, 57, 0.26), rgba(95, 127, 57, 0))',
+        background: 'linear-gradient(90deg, rgba(95, 127, 57, 0), rgba(95, 127, 57, 0.18), rgba(95, 127, 57, 0))',
         bottom: 0,
         content: '""',
         height: '1px',
@@ -69,4 +69,4 @@ export function GreenhouseMenu({
       </Flex>
     </Flex>
   );
-}
+};

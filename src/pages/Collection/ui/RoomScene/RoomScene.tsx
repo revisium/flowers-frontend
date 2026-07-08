@@ -22,7 +22,7 @@ interface RoomSceneProps {
   readonly onQueryChange: (query: string) => void;
 }
 
-export function RoomScene({
+export const RoomScene = ({
   activeCategory,
   locale,
   onCategoryChange,
@@ -33,7 +33,7 @@ export function RoomScene({
   query,
   selectedPlantId,
   text,
-}: RoomSceneProps) {
+}: RoomSceneProps) => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
@@ -191,4 +191,4 @@ export function RoomScene({
       ) : null}
     </Box>
   );
-}
+};

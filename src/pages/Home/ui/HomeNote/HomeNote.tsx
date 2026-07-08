@@ -2,7 +2,7 @@ import { Grid, Image, Link, Text } from '@chakra-ui/react';
 
 import { NoteLeafIcon } from '../NoteLeafIcon/NoteLeafIcon';
 
-export function HomeNote() {
+export const HomeNote = () => {
   return (
     <Grid
       alignItems="center"
@@ -29,4 +29,4 @@ export function HomeNote() {
       <Image alignSelf="end" alt="" display={{ base: 'none', md: 'block' }} height="92px" marginBottom="-22px" objectFit="contain" src="/plants/chlorophytum.png" width="92px" />
     </Grid>
   );
-}
+};

@@ -161,9 +161,9 @@ const copyKeys = [
 
 type CollectionCopyValues = readonly string[] & { readonly length: (typeof copyKeys)['length'] };
 
-function createCollectionCopy(values: CollectionCopyValues): CollectionCopy {
+const createCollectionCopy = (values: CollectionCopyValues): CollectionCopy => {
   return Object.fromEntries(copyKeys.map((key, index) => [key, values[index]!])) as unknown as CollectionCopy;
-}
+};
 
 export const copy: Record<Locale, CollectionCopy> = {
   ru: createCollectionCopy([
@@ -220,10 +220,10 @@ export const copy: Record<Locale, CollectionCopy> = {
   ] as const),
 };
 
-export function countPlantsByCategory(category: PlantCategory) {
+export const countPlantsByCategory = (category: PlantCategory) => {
   if (category === 'all') {
     return plants.length;
   }
 
   return plants.filter((plant) => plant.category === category).length;
-}
+};

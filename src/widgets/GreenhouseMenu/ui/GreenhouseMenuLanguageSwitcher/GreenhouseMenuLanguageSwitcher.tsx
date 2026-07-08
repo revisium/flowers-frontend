@@ -8,18 +8,18 @@ interface GreenhouseMenuLanguageSwitcherProps {
   readonly onLocaleChange?: (locale: GreenhouseMenuLocale) => void;
 }
 
-export function GreenhouseMenuLanguageSwitcher({
+export const GreenhouseMenuLanguageSwitcher = ({
   label,
   locale,
   onLocaleChange,
-}: GreenhouseMenuLanguageSwitcherProps) {
+}: GreenhouseMenuLanguageSwitcherProps) => {
   return (
     <Flex
       aria-label={label}
-      background="rgba(255, 248, 233, 0.52)"
-      border="1px solid rgba(255, 248, 233, 0.4)"
+      background="rgba(255, 248, 233, 0.42)"
+      border="1px solid rgba(255, 248, 233, 0.3)"
       borderRadius="999px"
-      boxShadow="0 12px 30px rgba(21, 18, 10, 0.055)"
+      boxShadow="0 10px 24px rgba(21, 18, 10, 0.035)"
       flex="0 0 auto"
       gap="4px"
       padding="4px"
@@ -32,8 +32,8 @@ export function GreenhouseMenuLanguageSwitcher({
         color={locale === 'ru' ? '#fff8e9' : '#516344'}
         fontSize="0.78rem"
         fontWeight={800}
-        height="36px"
-        minWidth="46px"
+        height="32px"
+        minWidth="42px"
         type="button"
         variant="plain"
         onClick={() => {
@@ -49,8 +49,8 @@ export function GreenhouseMenuLanguageSwitcher({
         color={locale === 'en' ? '#fff8e9' : '#516344'}
         fontSize="0.78rem"
         fontWeight={800}
-        height="36px"
-        minWidth="46px"
+        height="32px"
+        minWidth="42px"
         type="button"
         variant="plain"
         onClick={() => {
@@ -61,4 +61,4 @@ export function GreenhouseMenuLanguageSwitcher({
       </Button>
     </Flex>
   );
-}
+};
