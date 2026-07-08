@@ -52,9 +52,9 @@ export const HeaderSearchSuggestions = ({ emptyLabel, onSelect, suggestions }: H
           >
             <Text
               as="span"
-              fontWeight={760}
               lineHeight={1.15}
               overflow="hidden"
+              textStyle="bold-md"
               textOverflow="ellipsis"
               whiteSpace="nowrap"
               width="100%"

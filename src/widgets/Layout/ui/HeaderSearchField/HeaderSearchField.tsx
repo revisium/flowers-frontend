@@ -37,7 +37,6 @@ export const HeaderSearchField = ({
 
   return (
     <Flex
-      as="label"
       alignItems="center"
       background="rgba(255, 248, 233, 0.46)"
       border="1px solid rgba(255, 248, 233, 0.32)"

@@ -1,14 +1,15 @@
 import { Box } from '@chakra-ui/react';
 import { useCallback, useEffect } from 'react';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { Layout, useLayoutContext } from 'src/widgets/Layout';
 
 import { useCollectionViewModel } from '../../model/collectionViewModel';
 import { RoomScene } from '../RoomScene/RoomScene';
 
 export const CollectionPage = () => {
-  const { locale, onSearchPlantClear, query, selectedSearchPlantId, selectedSearchPlantRequest } = useLayoutContext();
+  const { locale, onSearchPlantClear, onSearchPlantSelect, query, selectedSearchPlantId, selectedSearchPlantRequest } = useLayoutContext();
   const location = useLocation();
+  const navigate = useNavigate();
   const viewModel = useCollectionViewModel();
   const { closePlantCard, selectPlant } = viewModel;
   const routeSearchPlantId = isSearchPlantLocationState(location.state) ? location.state.searchPlantId : null;
@@ -31,6 +32,15 @@ export const CollectionPage = () => {
       selectPlant(plantId);
     }
   }, [routeSearchPlantId, selectPlant, selectedSearchPlantId, selectedSearchPlantRequest]);
+
+  useEffect(() => {
+    if (!routeSearchPlantId) {
+      return;
+    }
+
+    onSearchPlantSelect(routeSearchPlantId);
+    void navigate(location.pathname, { replace: true, state: null });
+  }, [location.pathname, navigate, onSearchPlantSelect, routeSearchPlantId]);
 
   return (
     <Layout>
