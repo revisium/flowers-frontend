@@ -9,16 +9,8 @@ interface HomeHeroIntroProps {
 
 export const HomeHeroIntro = ({ text }: HomeHeroIntroProps) => {
   return (
-    <Flex
-      border="3px solid green"
-      direction="column"
-      justify="center"
-      align="start"
-      gap="20px"
-      p="18px"
-    >
+    <Flex direction="column" justify="center" align="start" gap="20px" p="18px">
       <Text
-        border="3px solid green"
         w={{ base: '290px', md: '370px', lg: '470px' }}
         color="#5b4c36"
         textStyle={{ base: 'bold-lg', md: 'bold-xl', lg: 'bold-xxl' }}
