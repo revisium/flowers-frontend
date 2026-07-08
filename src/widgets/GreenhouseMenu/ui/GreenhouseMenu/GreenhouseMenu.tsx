@@ -1,19 +1,18 @@
 import { Flex } from '@chakra-ui/react';
+import type { Locale } from 'src/shared/config';
 
 import { GreenhouseMenuLanguageSwitcher } from '../GreenhouseMenuLanguageSwitcher/GreenhouseMenuLanguageSwitcher';
 import { GreenhouseMenuLogo } from '../GreenhouseMenuLogo/GreenhouseMenuLogo';
 import { GreenhouseMenuSearch } from '../GreenhouseMenuSearch/GreenhouseMenuSearch';
 
-export type GreenhouseMenuLocale = 'ru' | 'en';
-
 interface GreenhouseMenuProps {
   readonly languageLabel: string;
-  readonly locale: GreenhouseMenuLocale;
+  readonly locale: Locale;
   readonly logoTone: 'dark' | 'light';
   readonly searchLabel: string;
   readonly searchPlaceholder: string;
   readonly query?: string;
-  readonly onLocaleChange?: (locale: GreenhouseMenuLocale) => void;
+  readonly onLocaleChange?: (locale: Locale) => void;
   readonly onQueryChange?: (query: string) => void;
 }
 

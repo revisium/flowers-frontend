@@ -1,3 +1,7 @@
+import type { Locale } from 'src/shared/config';
+
+export type { Locale } from 'src/shared/config';
+
 export type RoomZone = 'window' | 'shelf' | 'sunny' | 'table';
 export type PlantCategory =
   | 'all'
@@ -16,7 +20,6 @@ export type PlantCategory =
   | 'orchidaceae'
   | 'piperaceae'
   | 'vitaceae';
-export type Locale = 'ru' | 'en';
 
 export interface Plant {
   readonly id: string;

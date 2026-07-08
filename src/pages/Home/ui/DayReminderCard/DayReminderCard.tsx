@@ -1,6 +1,12 @@
 import { Box, Link, Text } from '@chakra-ui/react';
 
-export const DayReminderCard = () => {
+import type { HomeCopy } from '../../model/homePageData';
+
+interface DayReminderCardProps {
+  readonly text: HomeCopy;
+}
+
+export const DayReminderCard = ({ text }: DayReminderCardProps) => {
   return (
     <Box
       background="rgba(255, 252, 246, 0.78)"
@@ -19,10 +25,10 @@ export const DayReminderCard = () => {
       zIndex={2}
     >
       <Text as="strong" display="block" fontSize="1.05rem" marginBottom="14px">
-        Сегодня особенный день
+        {text.reminderTitle}
       </Text>
       <Text color="#6f6b5d" lineHeight={1.55} margin="0 0 18px">
-        Лучшее время подарить растениям свое внимание
+        {text.reminderText}
       </Text>
       <Link
         alignItems="center"
@@ -39,7 +45,7 @@ export const DayReminderCard = () => {
         _focus={{ textDecoration: 'none' }}
         _hover={{ textDecoration: 'none' }}
       >
-        Смотреть список
+        {text.reminderActionLabel}
         <Text as="span" aria-hidden="true">
           »
         </Text>

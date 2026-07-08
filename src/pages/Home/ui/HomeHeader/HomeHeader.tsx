@@ -1,13 +1,23 @@
+import type { Locale } from 'src/shared/config';
 import { GreenhouseMenu } from 'src/widgets/GreenhouseMenu';
 
-export const HomeHeader = () => {
+import type { HomeCopy } from '../../model/homePageData';
+
+interface HomeHeaderProps {
+  readonly locale: Locale;
+  readonly text: HomeCopy;
+  readonly onLocaleChange: (locale: Locale) => void;
+}
+
+export const HomeHeader = ({ locale, onLocaleChange, text }: HomeHeaderProps) => {
   return (
     <GreenhouseMenu
-      languageLabel="Выбор языка"
-      locale="ru"
+      languageLabel={text.languageLabel}
+      locale={locale}
       logoTone="dark"
-      searchLabel="Поиск по названию растения"
-      searchPlaceholder="Найти растение..."
+      searchLabel={text.searchLabel}
+      searchPlaceholder={text.searchPlaceholder}
+      onLocaleChange={onLocaleChange}
     />
   );
 };

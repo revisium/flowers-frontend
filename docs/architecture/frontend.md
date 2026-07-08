@@ -26,6 +26,11 @@ Layers, from top to bottom, each depending only downward:
 - `shared` — cross-cutting UI, API/transport, config, and infrastructure
   helpers with no product-domain knowledge.
 
+`src/shared/config/locale.ts` owns the prototype locale type and persistence
+hook. Route pages call it locally and pass the selected locale into
+`GreenhouseMenu`, so the visible RU/EN control is one shared widget component
+while page-local copy remains in each page slice model.
+
 `entities/` and `features/` do not exist as directories in the repo yet. An
 FSD layer should contain only slice folders, and there is no real slice to
 put in either layer until the product domain is decided. Create the directory
@@ -49,14 +54,16 @@ instead of adding their own outer viewport padding or top-level rounded frame.
 
 `src/pages/Home` is a client-side presentation prototype, not an API-backed
 product flow. Its local mock data lives in `model/homePageData.ts`, including
-the headline collection count, statistic cards, and category card metadata.
+the headline collection count, locale copy, statistic cards, and category card
+metadata.
 
 - `ui/HomePage` is a composition shell only.
 - `ui/HomeHero` composes the generated hero background, top header,
   greeting/statistics/action content, and desktop reminder card.
 - `ui/HomeHeader` is a thin route wrapper around `widgets/GreenhouseMenu`.
   Search is presentational for now and keeps a visible keyboard focus ring on
-  the surrounding glass pill via `:focus-within`.
+  the surrounding glass pill via `:focus-within`; the language control is wired
+  to the shared locale hook instead of being a placeholder.
 - `ui/HomeCategoriesSection` owns the category strip, arrow scroll controls,
   and the notes callout.
 - Repeated or decorative pieces live in same-named component folders, such as
@@ -75,8 +82,8 @@ windowsill, and floor areas while the room scrolls.
 - `model/collectionModel.ts` owns the local room facts: plants, categories,
   labels, locale copy, and count helpers.
 - `model/collectionViewModel.ts` owns the prototype interaction state and
-  actions: category, search query, locale, selected plant id, and the card reset
-  rules used when filters change.
+  actions: category, search query, shared locale, selected plant id, and the
+  card reset rules used when filters change.
 - `model/plantItemViewModel.ts` derives repeated plant item view data:
   localized names, filter results, image paths, and fixed positioning.
 - `model/plantCardViewModel.ts` derives the selected plant folio data from the

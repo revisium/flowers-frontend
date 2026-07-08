@@ -1,8 +1,13 @@
 import { Grid, Image, Link, Text } from '@chakra-ui/react';
 
+import type { HomeCopy } from '../../model/homePageData';
 import { NoteLeafIcon } from '../NoteLeafIcon/NoteLeafIcon';
 
-export const HomeNote = () => {
+interface HomeNoteProps {
+  readonly text: HomeCopy;
+}
+
+export const HomeNote = ({ text }: HomeNoteProps) => {
   return (
     <Grid
       alignItems="center"
@@ -19,9 +24,9 @@ export const HomeNote = () => {
     >
       <NoteLeafIcon />
       <Text color="#394438" lineHeight={1.55} margin={0}>
-        Каждое растение - это маленькая история.
+        {text.noteText[0]}
         <br />
-        Продолжайте заботиться, наблюдать и наслаждаться!
+        {text.noteText[1]}
       </Text>
       <Link
         background="rgba(255, 248, 239, 0.84)"
@@ -37,7 +42,7 @@ export const HomeNote = () => {
         _focus={{ textDecoration: 'none' }}
         _hover={{ textDecoration: 'none' }}
       >
-        Мои заметки
+        {text.noteActionLabel}
       </Link>
       <Image alignSelf="end" alt="" display={{ base: 'none', md: 'block' }} height="92px" marginBottom="-22px" objectFit="contain" src="/plants/chlorophytum.png" width="92px" />
     </Grid>

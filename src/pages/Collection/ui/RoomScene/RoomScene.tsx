@@ -1,8 +1,9 @@
 import { Box, Button, Link } from '@chakra-ui/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { GreenhouseMenu, type GreenhouseMenuLocale } from 'src/widgets/GreenhouseMenu';
+import type { Locale } from 'src/shared/config';
+import { GreenhouseMenu } from 'src/widgets/GreenhouseMenu';
 
-import type { CollectionCopy, Locale, PlantCategory } from '../../model/collectionModel';
+import type { CollectionCopy, PlantCategory } from '../../model/collectionModel';
 import { createPlantCardViewModel } from '../../model/plantCardViewModel';
 import { PlantFolioCard } from '../PlantFolioCard/PlantFolioCard';
 import { RoomAmbientInfo } from '../RoomAmbientInfo/RoomAmbientInfo';
@@ -147,9 +148,7 @@ export const RoomScene = ({
           query={query}
           searchLabel={text.searchLabel}
           searchPlaceholder={text.searchPlaceholder}
-          onLocaleChange={(nextLocale: GreenhouseMenuLocale) => {
-            onLocaleChange(nextLocale);
-          }}
+          onLocaleChange={onLocaleChange}
           onQueryChange={onQueryChange}
         />
       </Box>

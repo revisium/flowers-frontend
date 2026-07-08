@@ -1,10 +1,11 @@
 import { useCallback, useState } from 'react';
+import { usePreferredLocale } from 'src/shared/config';
 
-import { copy, type Locale, type PlantCategory } from './collectionModel';
+import { copy, type PlantCategory } from './collectionModel';
 
 export const useCollectionViewModel = () => {
   const [category, setCategory] = useState<PlantCategory>('all');
-  const [locale, setLocale] = useState<Locale>('ru');
+  const [locale, setLocale] = usePreferredLocale();
   const [query, setQuery] = useState('');
   const [selectedPlantId, setSelectedPlantId] = useState<string | null>(null);
 

@@ -1,10 +1,18 @@
 import { Box } from '@chakra-ui/react';
+import type { Locale } from 'src/shared/config';
 
+import type { HomeCopy } from '../../model/homePageData';
 import { DayReminderCard } from '../DayReminderCard/DayReminderCard';
 import { HomeHeader } from '../HomeHeader/HomeHeader';
 import { HomeHeroIntro } from '../HomeHeroIntro/HomeHeroIntro';
 
-export const HomeHero = () => {
+interface HomeHeroProps {
+  readonly locale: Locale;
+  readonly text: HomeCopy;
+  readonly onLocaleChange: (locale: Locale) => void;
+}
+
+export const HomeHero = ({ locale, onLocaleChange, text }: HomeHeroProps) => {
   return (
     <Box
       backgroundImage=" url('/greenhouse-home-hero.png')"
@@ -18,10 +26,10 @@ export const HomeHero = () => {
     >
       <Box bottom={0} height="28%" left={0} pointerEvents="none" position="absolute" right={0} />
 
-      <HomeHeader />
+      <HomeHeader locale={locale} text={text} onLocaleChange={onLocaleChange} />
       <Box padding="clamp(22px, 4vw, 56px) clamp(16px, 3.2vw, 44px) clamp(28px, 4vw, 44px)">
-        <HomeHeroIntro />
-        <DayReminderCard />
+        <HomeHeroIntro locale={locale} text={text} />
+        <DayReminderCard text={text} />
       </Box>
     </Box>
   );

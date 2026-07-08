@@ -1,7 +1,11 @@
 import { Button, Flex } from '@chakra-ui/react';
 import { SmallCanIcon } from '../SmallCanIcon/SmallCanIcon';
 
-export const HomeActions = () => {
+interface HomeActionsProps {
+  readonly label: string;
+}
+
+export const HomeActions = ({ label }: HomeActionsProps) => {
   return (
     <Flex marginTop="28px">
       <Button
@@ -15,7 +19,7 @@ export const HomeActions = () => {
         type="button"
       >
         <SmallCanIcon />
-        Уход и советы
+        {label}
       </Button>
     </Flex>
   );

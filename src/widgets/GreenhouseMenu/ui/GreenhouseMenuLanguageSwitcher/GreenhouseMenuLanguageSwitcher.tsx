@@ -1,11 +1,10 @@
 import { Button, Flex } from '@chakra-ui/react';
-
-import type { GreenhouseMenuLocale } from '../GreenhouseMenu/GreenhouseMenu';
+import type { Locale } from 'src/shared/config';
 
 interface GreenhouseMenuLanguageSwitcherProps {
   readonly label: string;
-  readonly locale: GreenhouseMenuLocale;
-  readonly onLocaleChange?: (locale: GreenhouseMenuLocale) => void;
+  readonly locale: Locale;
+  readonly onLocaleChange?: (locale: Locale) => void;
 }
 
 export const GreenhouseMenuLanguageSwitcher = ({
@@ -13,11 +12,7 @@ export const GreenhouseMenuLanguageSwitcher = ({
   locale,
   onLocaleChange,
 }: GreenhouseMenuLanguageSwitcherProps) => {
-  const changeLocale = (nextLocale: GreenhouseMenuLocale) => {
-    if (typeof document !== 'undefined') {
-      document.documentElement.lang = nextLocale;
-    }
-
+  const changeLocale = (nextLocale: Locale) => {
     onLocaleChange?.(nextLocale);
   };
 

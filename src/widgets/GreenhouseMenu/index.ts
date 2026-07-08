@@ -1,1 +1,1 @@
-export { GreenhouseMenu, type GreenhouseMenuLocale } from './ui/GreenhouseMenu/GreenhouseMenu';
+export { GreenhouseMenu } from './ui/GreenhouseMenu/GreenhouseMenu';
