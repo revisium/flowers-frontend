@@ -9,20 +9,24 @@ interface HomeCategoryCardProps {
 export const HomeCategoryCard = ({ category }: HomeCategoryCardProps) => {
   return (
     <Flex
-      alignItems="center"
-      aspectRatio="1.05 / 1"
+      width="100%"
+      minHeight="118px"
+      direction="column"
+      // justify="center"
+      align="center"
+      // alignItems="center"
+      aspectRatio="1 / 1"
       background="rgba(255, 249, 239, 0.62)"
       border="1px solid rgba(126, 104, 69, 0.2)"
       borderRadius="8px"
-      display="flex"
-      flexDirection="column"
-      justifyContent="center"
-      minHeight="142px"
-      padding="14px 12px"
+      // justifyItems="center"
+
+      padding="10px"
       scrollSnapAlign={{ base: 'start', xl: 'none' }}
       textAlign="center"
       textDecoration="none"
       transition="border-color 180ms ease, transform 180ms ease"
+
       _active={{ textDecoration: 'none' }}
       _focus={{ textDecoration: 'none' }}
       _hover={{
@@ -31,18 +35,29 @@ export const HomeCategoryCard = ({ category }: HomeCategoryCardProps) => {
         transform: 'translateY(-2px)',
       }}
     >
-      <Image alt="" height="74px" objectFit="contain" src={category.image} width="98px" />
+      <Image
+        alt=""
+        alignSelf="center"
+        height="68px"
+        objectFit="contain"
+        src={category.image}
+        width="78px"
+      />
       <Text
+        w="100%"
         as="strong"
         color="#314034"
-        fontSize="0.98rem"
+        display="flex"
+        fontSize="0.86rem"
+        justifyContent="center"
+        lineClamp={2}
         lineHeight={1.18}
-        marginTop="10px"
         maxWidth="132px"
+        minHeight="2.03rem"
       >
         {category.name}
       </Text>
-      <Text as="span" color="#6b7064" fontSize="0.88rem" marginTop="8px">
+      <Text w="100%" as="span" color="#6b7064" fontSize="0.78rem" lineHeight="20px">
         {category.count}
       </Text>
     </Flex>

@@ -229,7 +229,9 @@ const copyKeys = [
 type CollectionCopyValues = readonly string[] & { readonly length: (typeof copyKeys)['length'] };
 
 const createCollectionCopy = (values: CollectionCopyValues): CollectionCopy => {
-  return Object.fromEntries(copyKeys.map((key, index) => [key, values[index]!])) as unknown as CollectionCopy;
+  return Object.fromEntries(
+    copyKeys.map((key, index) => [key, values[index]!]),
+  ) as unknown as CollectionCopy;
 };
 
 export const copy: Record<Locale, CollectionCopy> = {

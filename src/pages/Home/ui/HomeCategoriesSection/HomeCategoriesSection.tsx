@@ -1,5 +1,4 @@
-import { Flex, Link, Text } from '@chakra-ui/react';
-import { useRef } from 'react';
+import { Flex, Grid, Link, Text } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
 
 import { homeCategories, type HomeCopy } from '../../model/homePageData';
@@ -12,8 +11,6 @@ interface HomeCategoriesSectionProps {
 }
 
 export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionProps) => {
-  const categoryListRef = useRef<HTMLDivElement | null>(null);
-
   return (
     <Flex direction="column">
       <Flex alignItems="center" justifyContent="space-between" p="18px">
@@ -40,24 +37,15 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
       </Flex>
 
       <Flex p="18px">
-        <Flex
-          ref={categoryListRef}
-          wrap="wrap"
+        <Grid
           gap="14px"
-          pt="2px"
-          overflowX="auto"
-          css={{
-            msOverflowStyle: 'none',
-            scrollbarWidth: 'none',
-            '&::-webkit-scrollbar': {
-              display: 'none',
-            },
-          }}
+          gridTemplateColumns="repeat(auto-fit, minmax(min(140px, 100%), 1fr))"
+          width="100%"
         >
           {homeCategories[locale].map((category) => (
             <HomeCategoryCard category={category} key={category.name} />
           ))}
-        </Flex>
+        </Grid>
       </Flex>
 
       <HomeNote text={text} />
