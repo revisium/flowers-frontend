@@ -1,11 +1,9 @@
 import { Flex } from '@chakra-ui/react';
-import type { Locale } from 'src/shared/config';
 
 import { type HomeCopy } from '../../model/homePageData';
 import { HomeHeroIntro } from '../HomeHeroIntro/HomeHeroIntro';
 
 interface HomeHeroProps {
-  readonly locale: Locale;
   readonly text: HomeCopy;
 }
 

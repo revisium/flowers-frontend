@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react';
 import type { Locale } from 'src/shared/config';
 import { usePreferredLocale } from 'src/shared/config';
 
@@ -26,40 +26,53 @@ export const LayoutProvider = ({ children }: LayoutProviderProps) => {
   const [selectedSearchPlantId, setSelectedSearchPlantId] = useState<string | null>(null);
   const [selectedSearchPlantRequest, setSelectedSearchPlantRequest] = useState(0);
 
-  const changeSearchQuery = (nextQuery: string) => {
+  const changeSearchQuery = useCallback((nextQuery: string) => {
     setQuery(nextQuery);
     setSelectedSearchPlantId(null);
-  };
+  }, []);
 
-  const selectSearchPlant = (plantId: string) => {
+  const selectSearchPlant = useCallback((plantId: string) => {
     setSelectedSearchPlantId(plantId);
     setSelectedSearchPlantRequest((request) => request + 1);
-  };
+  }, []);
 
-  const selectSearchSuggestion = (nextQuery: string, plantId: string) => {
+  const selectSearchSuggestion = useCallback((nextQuery: string, plantId: string) => {
     setQuery(nextQuery);
     setSelectedSearchPlantId(plantId);
     setSelectedSearchPlantRequest((request) => request + 1);
-  };
+  }, []);
 
-  const clearSearchPlant = () => {
+  const clearSearchPlant = useCallback(() => {
     setSelectedSearchPlantId(null);
-  };
+  }, []);
+
+  const contextValue = useMemo(
+    () => ({
+      locale,
+      onLocaleChange: changeLocale,
+      onQueryChange: changeSearchQuery,
+      onSearchPlantClear: clearSearchPlant,
+      onSearchPlantSelect: selectSearchPlant,
+      onSearchSuggestionSelect: selectSearchSuggestion,
+      query,
+      selectedSearchPlantId,
+      selectedSearchPlantRequest,
+    }),
+    [
+      changeLocale,
+      changeSearchQuery,
+      clearSearchPlant,
+      locale,
+      query,
+      selectSearchPlant,
+      selectSearchSuggestion,
+      selectedSearchPlantId,
+      selectedSearchPlantRequest,
+    ],
+  );
 
   return (
-    <LayoutContext.Provider
-      value={{
-        locale,
-        onLocaleChange: changeLocale,
-        onQueryChange: changeSearchQuery,
-        onSearchPlantClear: clearSearchPlant,
-        onSearchPlantSelect: selectSearchPlant,
-        onSearchSuggestionSelect: selectSearchSuggestion,
-        query,
-        selectedSearchPlantId,
-        selectedSearchPlantRequest,
-      }}
-    >
+    <LayoutContext.Provider value={contextValue}>
       {children}
     </LayoutContext.Provider>
   );
