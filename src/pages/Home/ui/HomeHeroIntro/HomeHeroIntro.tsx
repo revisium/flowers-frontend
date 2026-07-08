@@ -9,11 +9,18 @@ interface HomeHeroIntroProps {
 
 export const HomeHeroIntro = ({ text }: HomeHeroIntroProps) => {
   return (
-    <Flex direction="column" justify="center" align="start" gap="20px" p="18px">
+    <Flex
+      direction="column"
+      gap={{ base: '16px', md: '20px' }}
+      justify="center"
+      align="flex-start"
+      p={{ base: '16px', md: '18px', xl: '18px' }}
+    >
       <Text
-        w={{ base: '290px', md: '370px', lg: '470px' }}
         color="#5b4c36"
-        textStyle={{ base: 'bold-lg', md: 'bold-xl', lg: 'bold-xxl' }}
+        maxWidth={{ base: '310px', sm: '430px', md: '560px', xl: 'none' }}
+        textStyle={{ base: 'bold-md', md: 'bold-xl', xl: 'bold-xxl' }}
+        w={{ base: '300px', md: '470px' }}
       >
         {text.tagline}
       </Text>

@@ -44,11 +44,11 @@ export const Header = ({ locale, onLocaleChange, onQueryChange, query }: HeaderP
       backdropFilter="blur(5px) saturate(1.02)"
       borderBottom="1px solid rgba(93, 112, 71, 0.1)"
       boxShadow="0 10px 24px rgba(56, 48, 31, 0.02)"
-      flexWrap={{ base: 'wrap', md: 'nowrap' }}
-      gap={{ base: '10px', lg: '24px' }}
+      flexWrap="nowrap"
+      gap={{ base: '8px', md: '12px', lg: '24px' }}
       justifyContent="space-between"
       left={0}
-      marginBottom={{ base: '-116px', md: '-80px' }}
+      marginBottom={{ base: '-66px', md: '-80px' }}
       padding={{ base: '10px 14px 12px', md: '14px clamp(24px, 4vw, 46px)' }}
       position="sticky"
       right={0}
@@ -67,7 +67,7 @@ export const Header = ({ locale, onLocaleChange, onQueryChange, query }: HeaderP
     >
       <HeaderLogo homeLabel={text.homeLabel} subtitle={text.subtitle} title={text.title} tone={logoTone} />
 
-      <Flex alignItems="center" flex={{ base: '1 1 100%', md: '1 1 auto' }} gap="12px" justifyContent={{ base: 'stretch', md: 'flex-end' }} minWidth={0}>
+      <Flex alignItems="center" flex="0 0 auto" gap={{ base: '8px', md: '12px' }} justifyContent="flex-end" minWidth={0}>
         <HeaderSearch label={text.searchLabel} onChange={onQueryChange} placeholder={text.searchPlaceholder} value={query} />
         <HeaderLanguageSwitcher label={text.languageLabel} locale={locale} onLocaleChange={onLocaleChange} />
       </Flex>

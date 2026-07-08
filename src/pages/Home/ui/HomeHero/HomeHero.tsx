@@ -19,9 +19,18 @@ export const HomeHero = ({ locale, text }: HomeHeroProps) => {
       backgroundSize="contain"
       aspectRatio={{ base: 'auto', md: '1535 / 924' }}
       backgroundColor="#f2eadb"
-      minHeight={{ base: 'min(70vh, 760px)', md: 'auto' }}
+      // minHeight={{ base: 'min(70vh, 760px)', md: 'auto' }}
     >
-      <Flex width="100%" h="100%" justify="space-between" gap="20px">
+      <Flex
+        // border="1px solid red"
+        // alignItems={{ base: 'stretch', xl: 'stretch' }}
+        direction={{ base: 'column', md: 'row' }}
+        gap={{ base: '18px', md: '20px' }}
+        h="100%"
+        justify={{ base: 'flex-start', md: 'space-between' }}
+        paddingTop={{ base: '94px', md: 0 }}
+        width="100%"
+      >
         <HomeHeroIntro text={text} />
         <HomeStats cards={homeStatCards[locale]} />
       </Flex>

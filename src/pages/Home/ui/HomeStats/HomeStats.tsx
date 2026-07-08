@@ -9,12 +9,17 @@ interface HomeStatsProps {
 
 export const HomeStats = ({ cards }: HomeStatsProps) => {
   return (
-    <Flex gap="12px" p="100px 40px 18px">
+    <Flex
+      display={{ base: 'none', md: 'flex' }}
+      gap="12px"
+      justifyContent={{ base: 'flex-start', md: 'flex-end', xl: 'flex-start' }}
+      p={{ base: '0 16px', md: '0 18px', xl: '100px 40px 18px' }}
+    >
       {cards.map((card) => (
         <Flex
           key={card.label}
-          w="100px"
-          h="100px"
+          w={{ base: '82px', sm: '92px', xl: '100px' }}
+          h={{ base: '82px', sm: '92px', xl: '100px' }}
           flexDirection="column"
           justifyContent="center"
           alignItems="center"

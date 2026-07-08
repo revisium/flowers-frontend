@@ -13,13 +13,13 @@ export const HeaderLogo = ({ homeLabel, subtitle, title, tone }: HeaderLogoProps
   const focusColor = tone === 'dark' ? 'rgba(94, 127, 57, 0.62)' : 'rgba(255, 248, 233, 0.72)';
 
   return (
-    <Flex alignItems="center" flex={{ base: '0 0 220px', md: '0 0 304px' }} minWidth={0} width={{ base: '220px', md: '304px' }}>
+    <Flex alignItems="center" flex={{ base: '1 1 auto', md: '0 0 304px' }} minWidth={0} width={{ base: 'auto', md: '304px' }}>
       <Link
         alignItems="center"
         aria-label={homeLabel}
         color={titleColor}
         display="inline-flex"
-        gap="12px"
+        gap={{ base: '8px', md: '12px' }}
         href="/"
         lineHeight={1}
         maxWidth="100%"
@@ -36,9 +36,9 @@ export const HeaderLogo = ({ homeLabel, subtitle, title, tone }: HeaderLogoProps
         }}
         _hover={{ textDecoration: 'none' }}
       >
-        <Image alt="" aria-hidden="true" flex="0 0 auto" height={{ base: '44px', md: '52px' }} objectFit="contain" src="/greenhouse-leaf-logo.png" width={{ base: '30px', md: '36px' }} />
-        <Flex direction="column" flex="0 0 auto" minWidth={0} overflow="hidden" width={{ base: '166px', md: '232px' }}>
-          <Text as="strong" display="block" letterSpacing={0} overflow="hidden" textDecoration="none" textOverflow="ellipsis" textStyle={{ base: 'bold-md', md: 'bold-xl' }} whiteSpace="nowrap">
+        <Image alt="" aria-hidden="true" flex="0 0 auto" height={{ base: '38px', md: '52px' }} objectFit="contain" src="/greenhouse-leaf-logo.png" width={{ base: '26px', md: '36px' }} />
+        <Flex direction="column" flex="1 1 auto" minWidth={0} overflow="hidden" width={{ base: 'auto', md: '232px' }}>
+          <Text as="strong" display="block" letterSpacing={0} overflow="hidden" textDecoration="none" textOverflow="ellipsis" textStyle={{ base: 'bold-sm', md: 'bold-xl' }} whiteSpace="nowrap">
             {title}
           </Text>
           <Text as="small" color={subtitleColor} overflow="hidden" textDecoration="none" textOverflow="ellipsis" textStyle="medium-xs" whiteSpace="nowrap">
