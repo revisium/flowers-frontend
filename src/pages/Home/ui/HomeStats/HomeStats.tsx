@@ -9,7 +9,12 @@ interface HomeStatsProps {
 
 export const HomeStats = ({ cards }: HomeStatsProps) => {
   return (
-    <Grid gap={{ base: '10px', sm: '12px' }} gridTemplateColumns="repeat(4, minmax(118px, 1fr))" marginTop="28px" overflowX={{ base: 'auto', md: 'visible' }}>
+    <Grid
+      gap={{ base: '10px', sm: '12px' }}
+      gridTemplateColumns="repeat(4, minmax(118px, 1fr))"
+      marginTop="28px"
+      overflowX={{ base: 'auto', md: 'visible' }}
+    >
       {cards.map((card) => (
         <Flex
           alignItems="center"
@@ -27,10 +32,20 @@ export const HomeStats = ({ cards }: HomeStatsProps) => {
           textAlign="center"
         >
           <StatIconBox icon={card.icon} />
-          <Text as="strong" color="#2d3c2d" fontSize={{ base: '1.55rem', sm: '2rem' }} lineHeight={1}>
+          <Text
+            as="strong"
+            color="#2d3c2d"
+            fontSize={{ base: '1.55rem', sm: '2rem' }}
+            lineHeight={1}
+          >
             {card.value}
           </Text>
-          <Text as="span" color="#4d5548" fontSize={{ base: '0.78rem', sm: '0.9rem' }} marginTop={{ base: '5px', sm: '8px' }}>
+          <Text
+            as="span"
+            color="#4d5548"
+            fontSize={{ base: '0.78rem', sm: '0.9rem' }}
+            marginTop={{ base: '5px', sm: '8px' }}
+          >
             {card.label}
           </Text>
         </Flex>

@@ -13,18 +13,8 @@ export const HomeHeroIntro = () => {
       position="relative"
       zIndex={1}
     >
-      <Text
-        as="h1"
-        color="#263a2c"
-        letterSpacing={0}
-        margin={0}
-        maxWidth="500px"
-        textStyle={{ base: 'regular-h1', md: 'regular-dp' }}
-      >
-        Доброе утро, Наташа!
-      </Text>
       <Text color="#314235" marginTop="24px" textStyle={{ base: 'regular-md', md: 'regular-xl' }}>
-        Ваша оранжерея цветет и растет
+        Моя оранжерея цветет и растет
       </Text>
 
       <HomeStats cards={homeStatCards} />

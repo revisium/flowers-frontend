@@ -17,12 +17,10 @@ export const homeTotalPlantsCount = '16';
 export const homeStatCards: readonly HomeStatCard[] = [
   { icon: 'leaf', label: 'всего растений', value: homeTotalPlantsCount },
   { icon: 'grid', label: 'категорий', value: '8' },
-  { icon: 'can', label: 'полить сегодня', value: '4' },
+
   { icon: 'heart', label: 'легких в уходе', value: '12' },
 ];
 
-// Category thumbnails are temporary representative plant images until distinct
-// category artwork lands with the product content model.
 export const homeCategories: readonly HomeCategory[] = [
   { count: '4 растения', image: '/plants/monstera-basket.png', name: 'Декоративно-лиственные' },
   { count: '2 растения', image: '/plants/chlorophytum.png', name: 'Ароидные' },
