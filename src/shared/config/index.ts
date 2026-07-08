@@ -1,3 +1,1 @@
-// Placeholder for environment/config reading.
-// Populate once environment configuration is needed.
-export {};
+export { usePreferredLocale, type Locale } from './locale';

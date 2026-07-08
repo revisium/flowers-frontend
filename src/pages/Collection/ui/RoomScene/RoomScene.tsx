@@ -1,8 +1,8 @@
-import { Box, Button } from '@chakra-ui/react';
+import { Box, Button, Link } from '@chakra-ui/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { GreenhouseMenu, type GreenhouseMenuLocale } from 'src/widgets/GreenhouseMenu';
+import type { Locale } from 'src/shared/config';
 
-import type { CollectionCopy, Locale, PlantCategory } from '../../model/collectionModel';
+import type { CollectionCopy, PlantCategory } from '../../model/collectionModel';
 import { createPlantCardViewModel } from '../../model/plantCardViewModel';
 import { PlantFolioCard } from '../PlantFolioCard/PlantFolioCard';
 import { RoomAmbientInfo } from '../RoomAmbientInfo/RoomAmbientInfo';
@@ -16,20 +16,16 @@ interface RoomSceneProps {
   readonly selectedPlantId: string | null;
   readonly text: CollectionCopy;
   readonly onCategoryChange: (category: PlantCategory) => void;
-  readonly onLocaleChange: (locale: Locale) => void;
   readonly onPlantClose: () => void;
   readonly onPlantSelect: (plantId: string) => void;
-  readonly onQueryChange: (query: string) => void;
 }
 
 export const RoomScene = ({
   activeCategory,
   locale,
   onCategoryChange,
-  onLocaleChange,
   onPlantClose,
   onPlantSelect,
-  onQueryChange,
   query,
   selectedPlantId,
   text,
@@ -110,85 +106,106 @@ export const RoomScene = ({
         onCategoryChange={onCategoryChange}
         text={text}
       />
-      <Box left={0} position="absolute" right={0} top={0} zIndex={7}>
-        <GreenhouseMenu
-          languageLabel={text.languageLabel}
-          locale={locale}
-          logoTone="light"
-          query={query}
-          searchLabel={text.searchLabel}
-          searchPlaceholder={text.searchPlaceholder}
-          onLocaleChange={(nextLocale: GreenhouseMenuLocale) => {
-            onLocaleChange(nextLocale);
-          }}
-          onQueryChange={onQueryChange}
-        />
-      </Box>
+      <Link
+        alignItems="center"
+        backdropFilter="blur(14px)"
+        background="rgba(255, 248, 233, 0.78)"
+        border="1px solid rgba(255, 248, 233, 0.42)"
+        borderRadius="999px"
+        color="#365e35"
+        display="inline-flex"
+        fontSize="0.92rem"
+        fontWeight={760}
+        gap="8px"
+        href="/"
+        left={{ base: '24px', md: '28px' }}
+        minHeight="40px"
+        padding="0 14px"
+        position="absolute"
+        textDecoration="none"
+        top={{ base: '96px', md: '100px' }}
+        width="fit-content"
+        zIndex={8}
+        _active={{ textDecoration: 'none' }}
+        _focus={{ textDecoration: 'none' }}
+        _hover={{ background: 'rgba(255, 248, 233, 0.88)', textDecoration: 'none' }}
+      >
+        <Box as="span" aria-hidden="true" fontSize="1.05rem" lineHeight={1}>
+          ←
+        </Box>
+        {text.backToHome}
+      </Link>
       <RoomAmbientInfo text={text} />
 
       {selectedPlant ? (
         <PlantFolioCard onClose={onPlantClose} plant={selectedPlant} text={text} />
       ) : null}
 
-      {canScrollLeft ? (
-        <Button
-          aria-label={text.scrollLeftLabel}
-          background="rgba(255, 248, 233, 0.7)"
-          border="1px solid rgba(255, 248, 233, 0.65)"
-          borderRadius="999px"
-          height="44px"
-          left="16px"
-          position="absolute"
-          top="50%"
-          transform="translateY(-50%)"
-          type="button"
-          variant="plain"
-          width="44px"
-          zIndex={10}
-          onClick={() => {
-            scrollRoom('left');
-          }}
-        >
-          <Box
-            borderBottom="7px solid transparent"
-            borderRight="10px solid #416d3c"
-            borderTop="7px solid transparent"
-            height={0}
-            margin="0 auto"
-            width={0}
-          />
-        </Button>
-      ) : null}
+      <Button
+        aria-hidden={!canScrollLeft}
+        aria-label={text.scrollLeftLabel}
+        background="rgba(255, 248, 233, 0.7)"
+        border="1px solid rgba(255, 248, 233, 0.65)"
+        borderRadius="999px"
+        height="44px"
+        left="16px"
+        opacity={canScrollLeft ? 1 : 0}
+        pointerEvents={canScrollLeft ? 'auto' : 'none'}
+        position="absolute"
+        tabIndex={canScrollLeft ? 0 : -1}
+        top="50%"
+        transform="translateY(-50%)"
+        transition="opacity 120ms ease"
+        type="button"
+        variant="plain"
+        width="44px"
+        zIndex={10}
+        onClick={() => {
+          scrollRoom('left');
+        }}
+      >
+        <Box
+          borderBottom="7px solid transparent"
+          borderRight="10px solid #416d3c"
+          borderTop="7px solid transparent"
+          height={0}
+          margin="0 auto"
+          width={0}
+        />
+      </Button>
 
-      {canScrollRight ? (
-        <Button
-          aria-label={text.scrollRightLabel}
-          background="rgba(255, 248, 233, 0.7)"
-          border="1px solid rgba(255, 248, 233, 0.65)"
-          borderRadius="999px"
-          height="44px"
-          position="absolute"
-          right="16px"
-          top="50%"
-          transform="translateY(-50%)"
-          type="button"
-          variant="plain"
-          width="44px"
-          zIndex={10}
-          onClick={() => {
-            scrollRoom('right');
-          }}
-        >
-          <Box
-            borderBottom="7px solid transparent"
-            borderLeft="10px solid #416d3c"
-            borderTop="7px solid transparent"
-            height={0}
-            margin="0 auto"
-            width={0}
-          />
-        </Button>
-      ) : null}
+      <Button
+        aria-hidden={!canScrollRight}
+        aria-label={text.scrollRightLabel}
+        background="rgba(255, 248, 233, 0.7)"
+        border="1px solid rgba(255, 248, 233, 0.65)"
+        borderRadius="999px"
+        height="44px"
+        opacity={canScrollRight ? 1 : 0}
+        pointerEvents={canScrollRight ? 'auto' : 'none'}
+        position="absolute"
+        right="16px"
+        tabIndex={canScrollRight ? 0 : -1}
+        top="50%"
+        transform="translateY(-50%)"
+        transition="opacity 120ms ease"
+        type="button"
+        variant="plain"
+        width="44px"
+        zIndex={10}
+        onClick={() => {
+          scrollRoom('right');
+        }}
+      >
+        <Box
+          borderBottom="7px solid transparent"
+          borderLeft="10px solid #416d3c"
+          borderTop="7px solid transparent"
+          height={0}
+          margin="0 auto"
+          width={0}
+        />
+      </Button>
     </Box>
   );
 };

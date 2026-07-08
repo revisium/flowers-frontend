@@ -1,34 +1,31 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 
-import { homeStatCards } from '../../model/homePageData';
-import { HomeActions } from '../HomeActions/HomeActions';
-import { HomeStats } from '../HomeStats/HomeStats';
+import type { HomeCopy } from '../../model/homePageData';
+import { DayReminderCard } from '../DayReminderCard/DayReminderCard';
 
-export const HomeHeroIntro = () => {
+interface HomeHeroIntroProps {
+  readonly text: HomeCopy;
+}
+
+export const HomeHeroIntro = ({ text }: HomeHeroIntroProps) => {
   return (
-    <Box
-      marginLeft={{ base: 0, md: 'clamp(8px, 4vw, 84px)' }}
-      marginTop={{ base: '34px', md: 'clamp(52px, 8vw, 92px)' }}
-      maxWidth={{ base: '358px', md: '600px' }}
-      position="relative"
-      zIndex={1}
+    <Flex
+      direction="column"
+      gap={{ base: '16px', md: '20px' }}
+      justify="center"
+      align="flex-start"
+      p={{ base: '16px', md: '18px', xl: '18px' }}
+      h={{ base: '40%', md: '90%' }}
     >
       <Text
-        as="h1"
-        color="#263a2c"
-        letterSpacing={0}
-        margin={0}
-        maxWidth="500px"
-        textStyle={{ base: 'regular-h1', md: 'regular-dp' }}
+        color="#5b4c36"
+        textStyle={{ base: 'bold-md', md: 'bold-xl', xl: 'bold-xxl' }}
+        w={{ base: '43%', md: '70%', xl: '470px' }}
       >
-        Доброе утро, Наташа!
-      </Text>
-      <Text color="#314235" marginTop="24px" textStyle={{ base: 'regular-md', md: 'regular-xl' }}>
-        Ваша оранжерея цветет и растет
+        {text.tagline}
       </Text>
 
-      <HomeStats cards={homeStatCards} />
-      <HomeActions />
-    </Box>
+      <DayReminderCard text={text} />
+    </Flex>
   );
 };

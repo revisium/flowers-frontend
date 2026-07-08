@@ -1,3 +1,5 @@
+import type { Locale } from 'src/shared/config';
+
 export type HomeStatIcon = 'leaf' | 'grid' | 'can' | 'heart';
 
 export interface HomeStatCard {
@@ -12,24 +14,109 @@ export interface HomeCategory {
   readonly name: string;
 }
 
-export const homeTotalPlantsCount = '16';
+export interface HomeCopy {
+  readonly actionLabel: string;
+  readonly categoriesTitle: string;
+  readonly languageLabel: string;
+  readonly noteActionLabel: string;
+  readonly noteText: readonly string[];
+  readonly reminderActionLabel: string;
+  readonly reminderText: string;
+  readonly reminderTitle: string;
+  readonly scrollLeftLabel: string;
+  readonly scrollRightLabel: string;
+  readonly searchLabel: string;
+  readonly searchPlaceholder: string;
+  readonly showAllLabel: string;
+  readonly tagline: string;
+}
 
-export const homeStatCards: readonly HomeStatCard[] = [
-  { icon: 'leaf', label: 'всего растений', value: homeTotalPlantsCount },
-  { icon: 'grid', label: 'категорий', value: '8' },
-  { icon: 'can', label: 'полить сегодня', value: '4' },
-  { icon: 'heart', label: 'легких в уходе', value: '12' },
-];
+export const homeTotalPlantsCount = '39';
 
-// Category thumbnails are temporary representative plant images until distinct
-// category artwork lands with the product content model.
-export const homeCategories: readonly HomeCategory[] = [
-  { count: '4 растения', image: '/plants/monstera-basket.png', name: 'Декоративно-лиственные' },
-  { count: '2 растения', image: '/plants/chlorophytum.png', name: 'Ароидные' },
-  { count: '2 растения', image: '/plants/gloxinia.png', name: 'Цветущие' },
-  { count: '2 растения', image: '/plants/tradescantia.png', name: 'Лианы и ампельные' },
-  { count: '3 растения', image: '/plants/phalaenopsis.png', name: 'Суккуленты' },
-  { count: '1 растение', image: '/plants/monstera-basket.png', name: 'Пальмы' },
-  { count: '1 растение', image: '/plants/chlorophytum.png', name: 'Папоротники' },
-  { count: '1 растение', image: '/plants/gloxinia.png', name: 'Кактусы' },
-];
+export const homeCopy: Record<Locale, HomeCopy> = {
+  ru: {
+    actionLabel: 'Уход и советы',
+    categoriesTitle: 'Категории',
+    languageLabel: 'Выбор языка',
+    noteActionLabel: 'Мои заметки',
+    noteText: [
+      'Каждое растение - это маленькая история.',
+      'Продолжайте заботиться, наблюдать и наслаждаться!',
+    ],
+    reminderActionLabel: 'Смотреть список',
+    reminderText: 'Лучшее время подарить растениям свое внимание',
+    reminderTitle: 'Сегодня особенный день',
+    scrollLeftLabel: 'Предыдущие категории',
+    scrollRightLabel: 'Следующие категории',
+    searchLabel: 'Поиск по названию растения',
+    searchPlaceholder: 'Найти растение...',
+    showAllLabel: 'Показать все',
+    tagline: 'Дом, где каждое растение часть истории.',
+  },
+  en: {
+    actionLabel: 'Care and tips',
+    categoriesTitle: 'Categories',
+    languageLabel: 'Language selector',
+    noteActionLabel: 'My notes',
+    noteText: ['Every plant is a small story.', 'Keep caring, watching, and enjoying the growth.'],
+    reminderActionLabel: 'View list',
+    reminderText: 'A good moment to give your plants a little attention',
+    reminderTitle: 'A special day',
+    scrollLeftLabel: 'Previous categories',
+    scrollRightLabel: 'Next categories',
+    searchLabel: 'Search plants by name',
+    searchPlaceholder: 'Find a plant...',
+    showAllLabel: 'Show all',
+    tagline: 'My greenhouse is blooming and growing',
+  },
+};
+
+export const homeStatCards: Record<Locale, readonly HomeStatCard[]> = {
+  ru: [
+    { icon: 'leaf', label: 'всего растений', value: homeTotalPlantsCount },
+    { icon: 'grid', label: 'категорий', value: '15' },
+    { icon: 'heart', label: 'легких в уходе', value: '12' },
+  ],
+  en: [
+    { icon: 'leaf', label: 'total plants', value: homeTotalPlantsCount },
+    { icon: 'grid', label: 'categories', value: '15' },
+    { icon: 'heart', label: 'easy-care picks', value: '12' },
+  ],
+};
+
+export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
+  ru: [
+    { count: '9 растений', image: '/plants/categories/araceae.png', name: 'Ароидные' },
+    { count: '5 растений', image: '/plants/categories/amaryllidaceae.png', name: 'Амариллисовые' },
+    { count: '8 растений', image: '/plants/categories/gesneriaceae.png', name: 'Геснериевые' },
+    { count: '3 растения', image: '/plants/categories/marantaceae.png', name: 'Марантовые' },
+    { count: '3 растения', image: '/plants/categories/orchidaceae.png', name: 'Орхидные' },
+    { count: '1 растение', image: '/plants/categories/asparagaceae.png', name: 'Спаржевые' },
+    { count: '2 растения', image: '/plants/categories/apocynaceae.png', name: 'Кутровые' },
+    { count: '1 растение', image: '/plants/categories/asphodelaceae.png', name: 'Асфоделовые' },
+    { count: '1 растение', image: '/plants/categories/cactaceae.png', name: 'Кактусовые' },
+    { count: '1 растение', image: '/plants/categories/commelinaceae.png', name: 'Коммелиновые' },
+    { count: '1 растение', image: '/plants/categories/piperaceae.png', name: 'Перцевые' },
+    { count: '1 растение', image: '/plants/categories/vitaceae.png', name: 'Виноградовые' },
+    { count: '1 растение', image: '/plants/categories/nephrolepidaceae.png', name: 'Папоротники' },
+    { count: '1 растение', image: '/plants/categories/arecaceae.png', name: 'Пальмовые' },
+    { count: '1 растение', image: '/plants/categories/cycadaceae.png', name: 'Саговниковые' },
+  ],
+  en: [
+    { count: '9 plants', image: '/plants/categories/araceae.png', name: 'Aroids' },
+    { count: '5 plants', image: '/plants/categories/amaryllidaceae.png', name: 'Amaryllis family' },
+    { count: '8 plants', image: '/plants/categories/gesneriaceae.png', name: 'Gesneriad family' },
+    { count: '3 plants', image: '/plants/categories/marantaceae.png', name: 'Prayer plant family' },
+    { count: '3 plants', image: '/plants/categories/orchidaceae.png', name: 'Orchids' },
+    { count: '1 plant', image: '/plants/categories/asparagaceae.png', name: 'Asparagus family' },
+    { count: '2 plants', image: '/plants/categories/apocynaceae.png', name: 'Dogbane family' },
+    { count: '1 plant', image: '/plants/categories/asphodelaceae.png', name: 'Asphodel family' },
+    { count: '1 plant', image: '/plants/categories/cactaceae.png', name: 'Cacti' },
+    { count: '1 plant', image: '/plants/categories/commelinaceae.png', name: 'Spiderwort family' },
+    { count: '1 plant', image: '/plants/categories/piperaceae.png', name: 'Pepper family' },
+    { count: '1 plant', image: '/plants/categories/vitaceae.png', name: 'Grape family' },
+    { count: '1 plant', image: '/plants/categories/nephrolepidaceae.png', name: 'Ferns' },
+    { count: '1 plant', image: '/plants/categories/arecaceae.png', name: 'Palms' },
+    { count: '1 plant', image: '/plants/categories/cycadaceae.png', name: 'Cycads' },
+  ],
+};

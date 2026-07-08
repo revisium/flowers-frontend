@@ -1,11 +1,28 @@
-import { Box, Link } from '@chakra-ui/react';
-import { Layout } from 'src/widgets/Layout';
+import { Box } from '@chakra-ui/react';
+import { useCallback } from 'react';
+import { Layout, useLayoutContext } from 'src/widgets/Layout';
 
 import { useCollectionViewModel } from '../../model/collectionViewModel';
+import { useCollectionSearchRouteSync } from '../../model/useCollectionSearchRouteSync';
 import { RoomScene } from '../RoomScene/RoomScene';
 
 export const CollectionPage = () => {
+  const { locale, onSearchPlantClear, onSearchPlantSelect, query, selectedSearchPlantId, selectedSearchPlantRequest } = useLayoutContext();
   const viewModel = useCollectionViewModel();
+  const { closePlantCard, selectPlant } = viewModel;
+
+  const closeSelectedPlantCard = useCallback(() => {
+    onSearchPlantClear();
+    closePlantCard();
+  }, [closePlantCard, onSearchPlantClear]);
+
+  useCollectionSearchRouteSync({
+    closePlantCard,
+    onSearchPlantSelect,
+    selectPlant,
+    selectedSearchPlantId,
+    selectedSearchPlantRequest,
+  });
 
   return (
     <Layout>
@@ -18,41 +35,14 @@ export const CollectionPage = () => {
       >
         <RoomScene
           activeCategory={viewModel.activeCategory}
-          locale={viewModel.locale}
+          locale={locale}
           onCategoryChange={viewModel.changeCategory}
-          onLocaleChange={viewModel.changeLocale}
-          onPlantClose={viewModel.closePlantCard}
+          onPlantClose={closeSelectedPlantCard}
           onPlantSelect={viewModel.selectPlant}
-          onQueryChange={viewModel.changeQuery}
-          query={viewModel.query}
+          query={query}
           selectedPlantId={viewModel.selectedPlantId}
-          text={viewModel.text}
+          text={viewModel.text[locale]}
         />
-        <Link
-          alignItems="center"
-          backdropFilter="blur(14px)"
-          background="rgba(255, 248, 233, 0.76)"
-          border="1px solid rgba(255, 248, 233, 0.36)"
-          borderRadius="999px"
-          bottom="clamp(18px, 3vw, 44px)"
-          color="#365e35"
-          display="inline-flex"
-          fontSize="0.92rem"
-          fontWeight={760}
-          gap="8px"
-          left="clamp(18px, 3vw, 46px)"
-          minHeight="40px"
-          padding="0 14px"
-          position="absolute"
-          width="fit-content"
-          zIndex={20}
-          href="/"
-        >
-          <Box as="span" aria-hidden="true" fontSize="1.05rem" lineHeight={1}>
-            ←
-          </Box>
-          {viewModel.text.backToHome}
-        </Link>
       </Box>
     </Layout>
   );

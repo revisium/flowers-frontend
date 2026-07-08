@@ -1,4 +1,5 @@
 import { Box, Flex, Grid, Text } from '@chakra-ui/react';
+import { memo } from 'react';
 
 import type { CollectionCopy } from '../../model/collectionModel';
 
@@ -6,7 +7,7 @@ interface RoomAmbientInfoProps {
   readonly text: CollectionCopy;
 }
 
-export const RoomAmbientInfo = ({ text }: RoomAmbientInfoProps) => {
+export const RoomAmbientInfo = memo(({ text }: RoomAmbientInfoProps) => {
   return (
     <>
       <Flex
@@ -48,24 +49,29 @@ export const RoomAmbientInfo = ({ text }: RoomAmbientInfoProps) => {
         bottom={{ base: '20px', md: '24px' }}
         color="#fff8e9"
         gap="0 12px"
-        gridTemplateColumns="auto auto"
+        gridTemplateColumns="64px 86px"
         left="auto"
+        minHeight="88px"
         padding="16px 20px"
         position="absolute"
         right={{ base: '20px', md: '28px' }}
-        width="max-content"
+        transform="translateZ(0)"
+        width="190px"
+        willChange="transform"
         zIndex={7}
       >
-        <Text as="strong" fontSize="1.28rem" fontWeight={800}>
+        <Text as="strong" fontSize="1.28rem" fontWeight={700} lineHeight="32px">
           24°
         </Text>
-        <Text as="span" color="rgba(255, 248, 233, 0.74)" fontSize="0.76rem">
+        <Text as="span" color="rgba(255, 248, 233, 0.74)" fontSize="0.76rem" lineHeight="32px" whiteSpace="nowrap">
           {text.sunny}
         </Text>
-        <Text as="time" fontSize="1.28rem" fontWeight={800}>
+        <Text as="time" fontSize="1.28rem" fontWeight={700} lineHeight="32px">
           09:45
         </Text>
       </Grid>
     </>
   );
-};
+});
+
+RoomAmbientInfo.displayName = 'RoomAmbientInfo';

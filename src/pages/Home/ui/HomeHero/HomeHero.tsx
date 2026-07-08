@@ -1,28 +1,32 @@
-import { Box } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
-import { DayReminderCard } from '../DayReminderCard/DayReminderCard';
-import { HomeHeader } from '../HomeHeader/HomeHeader';
+import { type HomeCopy } from '../../model/homePageData';
 import { HomeHeroIntro } from '../HomeHeroIntro/HomeHeroIntro';
 
-export const HomeHero = () => {
+interface HomeHeroProps {
+  readonly text: HomeCopy;
+}
+
+export const HomeHero = ({ text }: HomeHeroProps) => {
   return (
-    <Box
+    <Flex
       backgroundImage=" url('/greenhouse-home-hero.png')"
       backgroundPosition="top center"
       backgroundRepeat="no-repeat"
       backgroundSize="contain"
-      aspectRatio={{ base: 'auto', md: '1535 / 1024' }}
+      aspectRatio="1535 / 924"
       backgroundColor="#f2eadb"
-      minHeight={{ base: 'min(70vh, 760px)', md: 'auto' }}
-      position="relative"
     >
-      <Box bottom={0} height="28%" left={0} pointerEvents="none" position="absolute" right={0} />
-
-      <HomeHeader />
-      <Box padding="clamp(22px, 4vw, 56px) clamp(16px, 3.2vw, 44px) clamp(28px, 4vw, 44px)">
-        <HomeHeroIntro />
-        <DayReminderCard />
-      </Box>
-    </Box>
+      <Flex
+        direction={{ base: 'column', md: 'row' }}
+        gap={{ base: '18px', md: '20px' }}
+        h="100%"
+        justify={{ base: 'flex-start', md: 'space-between' }}
+        paddingTop={{ base: '94px', md: 0 }}
+        width="100%"
+      >
+        <HomeHeroIntro text={text} />
+      </Flex>
+    </Flex>
   );
 };

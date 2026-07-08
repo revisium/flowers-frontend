@@ -1,6 +1,25 @@
+import type { Locale } from 'src/shared/config';
+
+export type { Locale } from 'src/shared/config';
+
 export type RoomZone = 'window' | 'shelf' | 'sunny' | 'table';
-export type PlantCategory = 'all' | 'foliage' | 'aroid' | 'flowering' | 'succulent' | 'palm';
-export type Locale = 'ru' | 'en';
+export type PlantCategory =
+  | 'all'
+  | 'amaryllidaceae'
+  | 'apocynaceae'
+  | 'araceae'
+  | 'arecaceae'
+  | 'asparagaceae'
+  | 'asphodelaceae'
+  | 'cactaceae'
+  | 'commelinaceae'
+  | 'cycadaceae'
+  | 'gesneriaceae'
+  | 'marantaceae'
+  | 'nephrolepidaceae'
+  | 'orchidaceae'
+  | 'piperaceae'
+  | 'vitaceae';
 
 export interface Plant {
   readonly id: string;
@@ -49,7 +68,7 @@ export const plants: readonly Plant[] = [
     name: 'Традесканция',
     nameEn: 'Tradescantia',
     latinName: 'Tradescantia zebrina',
-    category: 'foliage',
+    category: 'commelinaceae',
     zone: 'shelf',
     width: 187,
     x: 1207,
@@ -61,7 +80,7 @@ export const plants: readonly Plant[] = [
     name: 'Монстера',
     nameEn: 'Monstera',
     latinName: 'Monstera deliciosa',
-    category: 'aroid',
+    category: 'araceae',
     zone: 'shelf',
     width: 400,
     x: 1255,
@@ -73,7 +92,7 @@ export const plants: readonly Plant[] = [
     name: 'Хлорофитум',
     nameEn: 'Spider Plant',
     latinName: 'Chlorophytum comosum',
-    category: 'foliage',
+    category: 'asparagaceae',
     zone: 'window',
     width: 280,
     x: 1014,
@@ -85,7 +104,7 @@ export const plants: readonly Plant[] = [
     name: 'Глоксиния',
     nameEn: 'Gloxinia',
     latinName: 'Sinningia speciosa',
-    category: 'flowering',
+    category: 'gesneriaceae',
     zone: 'window',
     width: 150,
     x: 800,
@@ -97,7 +116,7 @@ export const plants: readonly Plant[] = [
     name: 'Орхидея фаленопсис',
     nameEn: 'Phalaenopsis Orchid',
     latinName: 'Phalaenopsis',
-    category: 'flowering',
+    category: 'orchidaceae',
     zone: 'window',
     width: 255,
     x: 535,
@@ -106,29 +125,77 @@ export const plants: readonly Plant[] = [
 ];
 
 export const plantCategories = [
-  { key: 'foliage' },
-  { key: 'aroid' },
-  { key: 'flowering' },
-  { key: 'succulent' },
-  { key: 'palm' },
+  { key: 'araceae' },
+  { key: 'amaryllidaceae' },
+  { key: 'gesneriaceae' },
+  { key: 'marantaceae' },
+  { key: 'orchidaceae' },
+  { key: 'asparagaceae' },
+  { key: 'apocynaceae' },
+  { key: 'asphodelaceae' },
+  { key: 'cactaceae' },
+  { key: 'commelinaceae' },
+  { key: 'piperaceae' },
+  { key: 'vitaceae' },
+  { key: 'nephrolepidaceae' },
+  { key: 'arecaceae' },
+  { key: 'cycadaceae' },
 ] satisfies readonly { readonly key: Exclude<PlantCategory, 'all'> }[];
+
+const categoryCounts: Record<Exclude<PlantCategory, 'all'>, number> = {
+  amaryllidaceae: 5,
+  apocynaceae: 2,
+  araceae: 9,
+  arecaceae: 1,
+  asparagaceae: 1,
+  asphodelaceae: 1,
+  cactaceae: 1,
+  commelinaceae: 1,
+  cycadaceae: 1,
+  gesneriaceae: 8,
+  marantaceae: 3,
+  nephrolepidaceae: 1,
+  orchidaceae: 3,
+  piperaceae: 1,
+  vitaceae: 1,
+};
 
 export const categoryLabels: Record<Locale, Record<PlantCategory, string>> = {
   ru: {
     all: 'Все растения',
-    foliage: 'Лиственные',
-    aroid: 'Ароидные',
-    flowering: 'Цветущие',
-    succulent: 'Суккуленты',
-    palm: 'Пальмы',
+    amaryllidaceae: 'Амариллисовые',
+    apocynaceae: 'Кутровые',
+    araceae: 'Ароидные',
+    arecaceae: 'Пальмовые',
+    asparagaceae: 'Спаржевые',
+    asphodelaceae: 'Асфоделовые',
+    cactaceae: 'Кактусовые',
+    commelinaceae: 'Коммелиновые',
+    cycadaceae: 'Саговниковые',
+    gesneriaceae: 'Геснериевые',
+    marantaceae: 'Марантовые',
+    nephrolepidaceae: 'Папоротники',
+    orchidaceae: 'Орхидные',
+    piperaceae: 'Перцевые',
+    vitaceae: 'Виноградовые',
   },
   en: {
     all: 'All plants',
-    foliage: 'Foliage',
-    aroid: 'Aroids',
-    flowering: 'Blooming',
-    succulent: 'Succulents',
-    palm: 'Palms',
+    amaryllidaceae: 'Amaryllis family',
+    apocynaceae: 'Dogbane family',
+    araceae: 'Aroids',
+    arecaceae: 'Palms',
+    asparagaceae: 'Asparagus family',
+    asphodelaceae: 'Asphodel family',
+    cactaceae: 'Cacti',
+    commelinaceae: 'Spiderwort family',
+    cycadaceae: 'Cycads',
+    gesneriaceae: 'Gesneriad family',
+    marantaceae: 'Prayer plant family',
+    nephrolepidaceae: 'Ferns',
+    orchidaceae: 'Orchids',
+    piperaceae: 'Pepper family',
+    vitaceae: 'Grape family',
   },
 };
 
@@ -162,7 +229,9 @@ const copyKeys = [
 type CollectionCopyValues = readonly string[] & { readonly length: (typeof copyKeys)['length'] };
 
 const createCollectionCopy = (values: CollectionCopyValues): CollectionCopy => {
-  return Object.fromEntries(copyKeys.map((key, index) => [key, values[index]!])) as unknown as CollectionCopy;
+  return Object.fromEntries(
+    copyKeys.map((key, index) => [key, values[index]!]),
+  ) as unknown as CollectionCopy;
 };
 
 export const copy: Record<Locale, CollectionCopy> = {
@@ -222,8 +291,8 @@ export const copy: Record<Locale, CollectionCopy> = {
 
 export const countPlantsByCategory = (category: PlantCategory) => {
   if (category === 'all') {
-    return plants.length;
+    return Object.values(categoryCounts).reduce((total, count) => total + count, 0);
   }
 
-  return plants.filter((plant) => plant.category === category).length;
+  return categoryCounts[category];
 };
