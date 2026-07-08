@@ -51,7 +51,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     searchLabel: 'Поиск по названию растения',
     searchPlaceholder: 'Найти растение...',
     showAllLabel: 'Показать все',
-    tagline: 'Дом, где каждое растение — часть истории.',
+    tagline: 'Дом, где каждое растение часть истории.',
   },
   en: {
     actionLabel: 'Care and tips',

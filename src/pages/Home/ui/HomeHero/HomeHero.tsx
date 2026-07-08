@@ -17,13 +17,10 @@ export const HomeHero = ({ locale, text }: HomeHeroProps) => {
       backgroundPosition="top center"
       backgroundRepeat="no-repeat"
       backgroundSize="contain"
-      aspectRatio={{ base: 'auto', md: '1535 / 924' }}
+      aspectRatio="1535 / 924"
       backgroundColor="#f2eadb"
-      // minHeight={{ base: 'min(70vh, 760px)', md: 'auto' }}
     >
       <Flex
-        // border="1px solid red"
-        // alignItems={{ base: 'stretch', xl: 'stretch' }}
         direction={{ base: 'column', md: 'row' }}
         gap={{ base: '18px', md: '20px' }}
         h="100%"

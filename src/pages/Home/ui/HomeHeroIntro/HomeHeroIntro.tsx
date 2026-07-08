@@ -20,7 +20,7 @@ export const HomeHeroIntro = ({ text }: HomeHeroIntroProps) => {
         color="#5b4c36"
         maxWidth={{ base: '310px', sm: '430px', md: '560px', xl: 'none' }}
         textStyle={{ base: 'bold-md', md: 'bold-xl', xl: 'bold-xxl' }}
-        w={{ base: '300px', md: '470px' }}
+        w={{ base: '43%', md: '70%', xl: '470px' }}
       >
         {text.tagline}
       </Text>

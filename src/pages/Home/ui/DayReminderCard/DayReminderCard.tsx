@@ -19,17 +19,18 @@ export const DayReminderCard = ({ text }: DayReminderCardProps) => {
       borderRadius="18px"
       boxShadow="0 18px 46px rgba(92, 77, 46, 0.18)"
     >
-      <Text textStyle="semibold-md">{text.reminderTitle}</Text>
-      <Text color="#6f6b5d">{text.reminderText}</Text>
+      <Text textStyle={{ md: 'semibold-sm', xl: 'semibold-md' }}>{text.reminderTitle}</Text>
+      <Text color="#6f6b5d" textStyle={{ md: 'regular-xs', xl: 'regular-sm' }}>
+        {text.reminderText}
+      </Text>
       <Flex direction={{ base: 'column', sm: 'row' }} gap="10px">
         <Button
           variant="subtle"
           background="#5c8a54"
           borderRadius="8px"
           color="#fffaf1"
-          fontSize={{ base: '0.85rem', sm: '1rem' }}
-          fontWeight={760}
-          minHeight={{ base: '44px', md: '48px' }}
+          textStyle={{ md: 'semibold-xs', xl: 'semibold-md' }}
+          minHeight={{ md: '34px', xl: '44px' }}
           p="10px"
           width={{ base: '100%', sm: 'auto' }}
         >
@@ -41,8 +42,8 @@ export const DayReminderCard = ({ text }: DayReminderCardProps) => {
           variant="outline"
           borderRadius="8px"
           p="10px"
-          fontSize={{ base: '0.85rem', sm: '1rem' }}
-          minHeight={{ base: '44px', md: '48px' }}
+          textStyle={{ md: 'semibold-xs', xl: 'semibold-md' }}
+          minHeight={{ md: '34px', xl: '44px' }}
           width={{ base: '100%', sm: 'auto' }}
         >
           Смотреть список »

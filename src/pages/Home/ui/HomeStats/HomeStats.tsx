@@ -10,10 +10,10 @@ interface HomeStatsProps {
 export const HomeStats = ({ cards }: HomeStatsProps) => {
   return (
     <Flex
-      display={{ base: 'none', md: 'flex' }}
+      display={{ base: 'none', xl: 'flex' }}
       gap="12px"
       justifyContent={{ base: 'flex-start', md: 'flex-end', xl: 'flex-start' }}
-      p={{ base: '0 16px', md: '0 18px', xl: '100px 40px 18px' }}
+      p={{ base: '0 16px', md: '0 18px', xl: '100px 60px 18px' }}
     >
       {cards.map((card) => (
         <Flex

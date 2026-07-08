@@ -16,8 +16,8 @@ export const HeaderLanguageSwitcher = ({ label, locale, onLocaleChange }: Header
       borderRadius="999px"
       boxShadow="0 10px 24px rgba(21, 18, 10, 0.035)"
       flex="0 0 auto"
-      gap="4px"
-      padding="4px"
+      gap={{ base: '1px', md: '2px', xl: '3px' }}
+      padding={{ base: '2px', xl: '3px' }}
       role="group"
     >
       <Button
@@ -25,10 +25,12 @@ export const HeaderLanguageSwitcher = ({ label, locale, onLocaleChange }: Header
         background={locale === 'ru' ? '#5e7f39' : 'transparent'}
         borderRadius="999px"
         color={locale === 'ru' ? '#fff8e9' : '#516344'}
-        fontSize="0.78rem"
+        fontSize={{ base: '0.68rem', md: '0.72rem', xl: '0.74rem' }}
         fontWeight={800}
-        height="32px"
-        minWidth="42px"
+        height={{ base: '30px', md: '32px' }}
+        minWidth={{ base: '30px', md: '32px' }}
+        padding={0}
+        width={{ base: '30px', md: '32px' }}
         type="button"
         variant="plain"
         onClick={() => {
@@ -42,10 +44,12 @@ export const HeaderLanguageSwitcher = ({ label, locale, onLocaleChange }: Header
         background={locale === 'en' ? '#5e7f39' : 'transparent'}
         borderRadius="999px"
         color={locale === 'en' ? '#fff8e9' : '#516344'}
-        fontSize="0.78rem"
+        fontSize={{ base: '0.68rem', md: '0.72rem', xl: '0.74rem' }}
         fontWeight={800}
-        height="32px"
-        minWidth="42px"
+        height={{ base: '30px', md: '32px' }}
+        minWidth={{ base: '30px', md: '32px' }}
+        padding={0}
+        width={{ base: '30px', md: '32px' }}
         type="button"
         variant="plain"
         onClick={() => {
