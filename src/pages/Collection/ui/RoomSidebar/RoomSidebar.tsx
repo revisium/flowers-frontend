@@ -4,7 +4,6 @@ import {
   categoryLabels,
   countPlantsByCategory,
   plantCategories,
-  plants,
   type CollectionCopy,
   type Locale,
   type PlantCategory,
@@ -30,7 +29,7 @@ export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: 
       position="absolute"
       right={{ base: '12px', md: 'auto' }}
       top={{ base: '142px', md: '126px' }}
-      width={{ base: 'auto', md: '220px' }}
+      width={{ base: 'auto', md: '260px' }}
       zIndex={6}
     >
       <Flex as="nav" aria-label={text.collection} flexDirection={{ base: 'row', md: 'column' }} gap="12px">
@@ -45,7 +44,7 @@ export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: 
           fontSize="0.95rem"
           fontWeight={700}
           gap="10px"
-          gridTemplateColumns="18px minmax(150px, 1fr) 28px"
+          gridTemplateColumns="18px minmax(170px, 1fr) 34px"
           minHeight="46px"
           padding="9px 12px"
           textAlign="left"
@@ -65,7 +64,7 @@ export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: 
           </Box>
           {text.collection}
           <Text as="b" alignItems="center" borderRadius="999px" color="currentColor" display="inline-flex" fontSize="0.7rem" height="19px" justifyContent="center" marginLeft="4px" minWidth="19px">
-            {plants.length}
+            {countPlantsByCategory('all')}
           </Text>
         </Button>
 
@@ -86,7 +85,7 @@ export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: 
                 fontSize="0.95rem"
                 fontWeight={650}
                 gap="11px"
-                gridTemplateColumns="20px minmax(136px, 1fr) 28px"
+                gridTemplateColumns="20px minmax(152px, 1fr) 34px"
                 minHeight="36px"
                 padding="6px 10px"
                 textAlign="left"

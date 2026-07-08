@@ -7,7 +7,7 @@ interface RoomCategoryIconProps {
 }
 
 export const RoomCategoryIcon = ({ category }: RoomCategoryIconProps) => {
-  if (category === 'aroid') {
+  if (category === 'araceae') {
     return (
       <Box aria-hidden="true" color="#cfe4b7" display="inline-block" height="20px" opacity={0.82} position="relative" width="20px">
         <Box background="currentColor" borderRadius="70% 70% 70% 12%" height="15px" left="2px" position="absolute" rotate="-45deg" top="2px" width="15px" />
@@ -16,7 +16,7 @@ export const RoomCategoryIcon = ({ category }: RoomCategoryIconProps) => {
     );
   }
 
-  if (category === 'flowering') {
+  if (category === 'amaryllidaceae' || category === 'apocynaceae' || category === 'orchidaceae') {
     return (
       <Box aria-hidden="true" color="#f4c09c" display="inline-block" height="20px" opacity={0.82} position="relative" width="20px">
         <Box
@@ -34,7 +34,7 @@ export const RoomCategoryIcon = ({ category }: RoomCategoryIconProps) => {
     );
   }
 
-  if (category === 'succulent') {
+  if (category === 'asphodelaceae' || category === 'cactaceae') {
     return (
       <Box aria-hidden="true" color="#bed09d" display="inline-block" height="20px" opacity={0.82} position="relative" width="20px">
         <Box
@@ -62,7 +62,7 @@ export const RoomCategoryIcon = ({ category }: RoomCategoryIconProps) => {
     );
   }
 
-  if (category === 'palm') {
+  if (category === 'arecaceae' || category === 'cycadaceae') {
     return (
       <Box aria-hidden="true" color="#d8d29a" display="inline-block" height="20px" opacity={0.82} position="relative" width="20px">
         <Box background="currentColor" height="15px" left="9px" position="absolute" top="4px" width="2px" />
