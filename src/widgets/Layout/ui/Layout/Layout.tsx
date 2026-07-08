@@ -1,28 +1,32 @@
-import { Box } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
+
+import { useLayoutContext } from '../../model/layoutContext';
+import { Header } from '../Header/Header';
 
 interface LayoutProps {
   readonly children: React.ReactNode;
 }
 
 export const Layout = ({ children }: LayoutProps) => {
+  const { locale, onLocaleChange, onQueryChange, query } = useLayoutContext();
+
   return (
-    <Box
+    <Flex
       background="linear-gradient(180deg, #f4edde 0%, #ebe0cd 100%)"
       height="100dvh"
-      overflow="hidden"
+      justify="center"
       padding="18px"
-      width="100%"
     >
-      <Box
+      <Flex
         background="#f2eadb"
-        borderRadius="18px"
+        borderRadius="20px"
         boxShadow="0 24px 80px rgba(52, 43, 28, 0.16)"
-        height="calc(100dvh - 36px)"
-        margin="0 auto"
+        direction="column"
+        h="100%"
         maxWidth="1920px"
         overflow="auto"
         position="relative"
-        width="100%"
+        w="100%"
         css={{
           msOverflowStyle: 'none',
           scrollbarWidth: 'none',
@@ -31,8 +35,14 @@ export const Layout = ({ children }: LayoutProps) => {
           },
         }}
       >
+        <Header
+          locale={locale}
+          onLocaleChange={onLocaleChange}
+          onQueryChange={onQueryChange}
+          query={query}
+        />
         {children}
-      </Box>
-    </Box>
+      </Flex>
+    </Flex>
   );
 };

@@ -1,11 +1,18 @@
 import { Box } from '@chakra-ui/react';
-import { Layout } from 'src/widgets/Layout';
+import { useEffect } from 'react';
+import { Layout, useLayoutContext } from 'src/widgets/Layout';
 
 import { useCollectionViewModel } from '../../model/collectionViewModel';
 import { RoomScene } from '../RoomScene/RoomScene';
 
 export const CollectionPage = () => {
+  const { locale, query } = useLayoutContext();
   const viewModel = useCollectionViewModel();
+  const { closePlantCard } = viewModel;
+
+  useEffect(() => {
+    closePlantCard();
+  }, [closePlantCard, query]);
 
   return (
     <Layout>
@@ -18,15 +25,13 @@ export const CollectionPage = () => {
       >
         <RoomScene
           activeCategory={viewModel.activeCategory}
-          locale={viewModel.locale}
+          locale={locale}
           onCategoryChange={viewModel.changeCategory}
-          onLocaleChange={viewModel.changeLocale}
           onPlantClose={viewModel.closePlantCard}
           onPlantSelect={viewModel.selectPlant}
-          onQueryChange={viewModel.changeQuery}
-          query={viewModel.query}
+          query={query}
           selectedPlantId={viewModel.selectedPlantId}
-          text={viewModel.text}
+          text={viewModel.text[locale]}
         />
       </Box>
     </Layout>

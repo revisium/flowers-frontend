@@ -1,7 +1,6 @@
 import { Box, Button, Link } from '@chakra-ui/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Locale } from 'src/shared/config';
-import { GreenhouseMenu } from 'src/widgets/GreenhouseMenu';
 
 import type { CollectionCopy, PlantCategory } from '../../model/collectionModel';
 import { createPlantCardViewModel } from '../../model/plantCardViewModel';
@@ -17,20 +16,16 @@ interface RoomSceneProps {
   readonly selectedPlantId: string | null;
   readonly text: CollectionCopy;
   readonly onCategoryChange: (category: PlantCategory) => void;
-  readonly onLocaleChange: (locale: Locale) => void;
   readonly onPlantClose: () => void;
   readonly onPlantSelect: (plantId: string) => void;
-  readonly onQueryChange: (query: string) => void;
 }
 
 export const RoomScene = ({
   activeCategory,
   locale,
   onCategoryChange,
-  onLocaleChange,
   onPlantClose,
   onPlantSelect,
-  onQueryChange,
   query,
   selectedPlantId,
   text,
@@ -140,18 +135,6 @@ export const RoomScene = ({
         </Box>
         {text.backToHome}
       </Link>
-      <Box left={0} position="absolute" right={0} top={0} zIndex={7}>
-        <GreenhouseMenu
-          languageLabel={text.languageLabel}
-          locale={locale}
-          logoTone="light"
-          query={query}
-          searchLabel={text.searchLabel}
-          searchPlaceholder={text.searchPlaceholder}
-          onLocaleChange={onLocaleChange}
-          onQueryChange={onQueryChange}
-        />
-      </Box>
       <RoomAmbientInfo text={text} />
 
       {selectedPlant ? (

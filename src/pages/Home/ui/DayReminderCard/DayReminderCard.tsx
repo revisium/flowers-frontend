@@ -20,8 +20,8 @@ export const DayReminderCard = ({ text }: DayReminderCardProps) => {
       maxWidth="390px"
       padding="28px"
       position={{ md: 'relative', xl: 'absolute' }}
-      right={{ xl: 'clamp(18px, 4vw, 58px)' }}
-      top={{ xl: 'clamp(122px, 13vw, 166px)' }}
+      right={{ xl: '77px' }}
+      top={{ xl: ' 100px' }}
       zIndex={2}
     >
       <Text as="strong" display="block" fontSize="1.05rem" marginBottom="14px">

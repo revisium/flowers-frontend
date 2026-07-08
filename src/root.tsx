@@ -9,6 +9,7 @@ import {
 } from 'react-router';
 
 import { AppProvider } from './app/providers/AppProvider';
+import { LayoutProvider } from './widgets/Layout';
 
 export const links: LinksFunction = () => [
   {
@@ -65,7 +66,9 @@ export const Layout = ({ children }: LayoutProps) => {
         <Links />
       </head>
       <body>
-        <AppProvider>{children}</AppProvider>
+        <AppProvider>
+          <LayoutProvider>{children}</LayoutProvider>
+        </AppProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
