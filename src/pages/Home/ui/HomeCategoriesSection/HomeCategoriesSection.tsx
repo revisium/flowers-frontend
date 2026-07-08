@@ -5,7 +5,7 @@ import { homeCategories } from '../../model/homePageData';
 import { HomeCategoryCard } from '../HomeCategoryCard/HomeCategoryCard';
 import { HomeNote } from '../HomeNote/HomeNote';
 
-export function HomeCategoriesSection() {
+export const HomeCategoriesSection = () => {
   const categoryListRef = useRef<HTMLDivElement | null>(null);
 
   const scrollCategories = (direction: 'left' | 'right') => {
@@ -26,7 +26,7 @@ export function HomeCategoriesSection() {
   return (
     <Box as="section" aria-labelledby="greenhouse-categories-title" margin="-28px auto 0" maxWidth="1600px" padding="0 clamp(16px, 3.2vw, 44px) 28px" position="relative" zIndex={4}>
       <HStack alignItems="center" justifyContent="space-between" marginBottom="18px" paddingInline={{ base: 0, md: 'clamp(0px, 4vw, 76px)' }}>
-        <Text as="h2" color="#263729" fontFamily="Georgia, 'Times New Roman', serif" fontSize="1.45rem" id="greenhouse-categories-title" margin={0}>
+        <Text as="h2" color="#263729" id="greenhouse-categories-title" margin={0} textStyle="bold-xl">
           Категории
         </Text>
         <Link color="#526246" fontWeight={720} href="/collection">
@@ -81,4 +81,4 @@ export function HomeCategoriesSection() {
       <HomeNote />
     </Box>
   );
-}
+};

@@ -1,15 +1,14 @@
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
 
 import { AppProvider } from './app/providers/AppProvider';
-import './shared/ui/global.css';
 
 interface LayoutProps {
   readonly children: React.ReactNode;
 }
 
-export function Layout({ children }: LayoutProps) {
+export const Layout = ({ children }: LayoutProps) => {
   return (
-    <html lang="en">
+    <html lang="ru">
       <head>
         <meta charSet="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -18,29 +17,29 @@ export function Layout({ children }: LayoutProps) {
         <Links />
       </head>
       <body>
-        {children}
+        <AppProvider>
+          {children}
+        </AppProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
     </html>
   );
-}
+};
 
-export default function App() {
-  return (
-    <AppProvider>
-      <Outlet />
-    </AppProvider>
-  );
-}
+const App = () => {
+  return <Outlet />;
+};
 
-export function ErrorBoundary({ error }: { readonly error: unknown }) {
-  let title = 'Something went wrong';
-  let details = 'An unexpected error occurred.';
+export default App;
+
+export const ErrorBoundary = ({ error }: { readonly error: unknown }) => {
+  let title = 'Что-то пошло не так';
+  let details = 'Произошла неожиданная ошибка.';
 
   if (isRouteErrorResponse(error)) {
-    title = error.status === 404 ? 'Page not found' : `Error ${error.status}`;
-    details = error.status === 404 ? 'The requested page does not exist.' : error.statusText || details;
+    title = error.status === 404 ? 'Страница не найдена' : `Ошибка ${error.status}`;
+    details = error.status === 404 ? 'Такой страницы не существует.' : error.statusText || details;
   } else if (error instanceof Error) {
     details = error.message;
   }
@@ -51,4 +50,4 @@ export function ErrorBoundary({ error }: { readonly error: unknown }) {
       <p>{details}</p>
     </main>
   );
-}
+};

@@ -7,7 +7,7 @@ interface HomeStatsProps {
   readonly cards: readonly HomeStatCard[];
 }
 
-export function HomeStats({ cards }: HomeStatsProps) {
+export const HomeStats = ({ cards }: HomeStatsProps) => {
   return (
     <Grid gap={{ base: '10px', sm: '12px' }} gridTemplateColumns="repeat(4, minmax(118px, 1fr))" marginTop="28px" overflowX={{ base: 'auto', md: 'visible' }}>
       {cards.map((card) => (
@@ -37,4 +37,4 @@ export function HomeStats({ cards }: HomeStatsProps) {
       ))}
     </Grid>
   );
-}
+};

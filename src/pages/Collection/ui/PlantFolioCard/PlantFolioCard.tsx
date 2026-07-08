@@ -19,7 +19,7 @@ interface PlantFolioCardProps {
   readonly onClose: () => void;
 }
 
-export function PlantFolioCard({ onClose, plant, text }: PlantFolioCardProps) {
+export const PlantFolioCard = ({ onClose, plant, text }: PlantFolioCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const cardRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
@@ -176,20 +176,16 @@ export function PlantFolioCard({ onClose, plant, text }: PlantFolioCardProps) {
             <Text
               as="h2"
               color="#173f24"
-              fontFamily="Georgia, serif"
-              fontSize={{ base: '2.1rem', md: '3rem' }}
-              fontWeight={600}
-              lineHeight={1.05}
               marginBottom="4px"
+              textStyle={{ base: 'semibold-h2', md: 'semibold-h1' }}
             >
               {plant.name}
             </Text>
             <Text
               color="#647250"
-              fontFamily="Georgia, serif"
-              fontSize={{ base: '1.2rem', md: '1.6rem' }}
               fontStyle="italic"
               marginBottom="18px"
+              textStyle={{ base: 'regular-lg', md: 'regular-xxl' }}
             >
               {plant.latinName}
             </Text>
@@ -276,9 +272,9 @@ export function PlantFolioCard({ onClose, plant, text }: PlantFolioCardProps) {
       </Box>
     </Flex>
   );
-}
+};
 
-function FactBox({ label, value }: { readonly label: string; readonly value: string }) {
+const FactBox = ({ label, value }: { readonly label: string; readonly value: string }) => {
   return (
     <Box
       background="rgba(239, 226, 198, 0.58)"
@@ -294,4 +290,4 @@ function FactBox({ label, value }: { readonly label: string; readonly value: str
       </Text>
     </Box>
   );
-}
+};

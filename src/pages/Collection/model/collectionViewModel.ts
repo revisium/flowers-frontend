@@ -2,7 +2,7 @@ import { useCallback, useState } from 'react';
 
 import { copy, type Locale, type PlantCategory } from './collectionModel';
 
-export function useCollectionViewModel() {
+export const useCollectionViewModel = () => {
   const [category, setCategory] = useState<PlantCategory>('all');
   const [locale, setLocale] = useState<Locale>('ru');
   const [query, setQuery] = useState('');
@@ -40,4 +40,4 @@ export function useCollectionViewModel() {
     closePlantCard,
     selectPlant: setSelectedPlantId,
   };
-}
+};

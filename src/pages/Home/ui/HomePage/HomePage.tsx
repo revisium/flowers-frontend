@@ -1,19 +1,16 @@
 import { Box } from '@chakra-ui/react';
+import { Layout } from 'src/widgets/Layout';
 
 import { HomeCategoriesSection } from '../HomeCategoriesSection/HomeCategoriesSection';
 import { HomeHero } from '../HomeHero/HomeHero';
 
-export function HomePage() {
+export const HomePage = () => {
   return (
-    <Box
-      as="main"
-      background="linear-gradient(180deg, #f7f0e4 0%, #f2eadb 56%, #efe4d2 100%)"
-      color="#2d3c2d"
-      minHeight="100vh"
-      overflow="hidden"
-    >
-      <HomeHero />
-      <HomeCategoriesSection />
-    </Box>
+    <Layout>
+      <Box as="main" color="#2d3c2d" minHeight="100%" overflow="hidden">
+        <HomeHero />
+        <HomeCategoriesSection />
+      </Box>
+    </Layout>
   );
-}
+};

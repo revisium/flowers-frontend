@@ -1,5 +1,7 @@
 import { CollectionPage } from 'src/pages/Collection';
 
-export default function CollectionRoute() {
+const CollectionRoute = () => {
   return <CollectionPage />;
-}
+};
+
+export default CollectionRoute;

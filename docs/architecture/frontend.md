@@ -17,7 +17,10 @@ Layers, from top to bottom, each depending only downward:
 
 - `app` — routes, layouts, providers, and app-wide composition.
 - `pages` — route-level page slices.
-- `widgets` — reusable composed UI blocks (none yet).
+- `widgets` — reusable composed UI blocks shared by page slices. Current widget
+  slices are `Layout`, which owns the shared inner-screen frame, and
+  `GreenhouseMenu`, which keeps the brand mark, search, and language controls
+  visually consistent across routes.
 - `features` — cross-page reusable behavior (none yet).
 - `entities` — domain types and mock/data records (none yet).
 - `shared` — cross-cutting UI, API/transport, config, and infrastructure
@@ -30,6 +33,18 @@ when the first entity or feature slice lands, instead of adding an empty
 placeholder now, to avoid tripping Steiger's structure checks on a layer with
 no slices.
 
+## App Layout Contract
+
+`src/app/layouts/AppLayout` is only a React Router outlet boundary. Shared app
+chrome lives in `src/widgets/Layout`, following the widget layout pattern used
+by sibling projects.
+
+`src/widgets/Layout` owns the persistent viewport frame. It renders the app
+background, applies the fixed `18px` viewport padding, and places page content
+inside a rounded inner screen that fills the remaining viewport width and
+height. `HomePage` and `CollectionPage` wrap their route content in this widget
+instead of adding their own outer viewport padding or top-level rounded frame.
+
 ## Home Prototype Contract
 
 `src/pages/Home` is a client-side presentation prototype, not an API-backed
@@ -39,14 +54,13 @@ the headline collection count, statistic cards, and category card metadata.
 - `ui/HomePage` is a composition shell only.
 - `ui/HomeHero` composes the generated hero background, top header,
   greeting/statistics/action content, and desktop reminder card.
-- `ui/HomeHeader` owns the brand link, collection link, search input, and
-  notification affordance. Search is presentational for now and must keep a
-  visible keyboard focus ring.
+- `ui/HomeHeader` is a thin route wrapper around `widgets/GreenhouseMenu`.
+  Search is presentational for now and keeps a visible keyboard focus ring on
+  the surrounding glass pill via `:focus-within`.
 - `ui/HomeCategoriesSection` owns the category strip, arrow scroll controls,
   and the notes callout.
 - Repeated or decorative pieces live in same-named component folders, such as
-  `HomeCategoryCard`, `HomeStats`, `LeafMark`, `SearchIcon`, and
-  `StatIconBox`.
+  `HomeCategoryCard`, `HomeStats`, and `StatIconBox`.
 
 The home category thumbnails intentionally use temporary representative plant
 images until distinct category artwork lands with the product content model.
@@ -67,6 +81,9 @@ windowsill, and floor areas while the room scrolls.
   localized names, filter results, image paths, and fixed positioning.
 - `model/plantCardViewModel.ts` derives the selected plant folio data from the
   local plant record and card content map.
+- `ui/RoomScene` composes the shared `widgets/GreenhouseMenu` above the room
+  canvas and wires collection search and locale changes into it.
+- `ui/RoomSidebar` owns only collection category navigation.
 - `ui/RoomPlantLayer` renders plant figures with hover/focus plates. The plate
   includes the plant name, category, and an explicit card-action button.
 - `ui/PlantFolioCard` renders the modal plant card overlay with focus entering
@@ -94,9 +111,9 @@ beyond the route prototype or external data.
 
 ## Styling
 
-Chakra UI is the only styling system. Do not add raw CSS beyond the reset in
-`src/shared/ui/global.css`. Theme/system setup lives in
-`src/app/providers/chakraTheme.ts`.
+Chakra UI is the styling system. Theme/system setup lives in
+`src/shared/ui/theme/`, including `theme.ts`, `globalCss.ts`, `textStyles.ts`,
+and `fonts.css`. The global font is loaded from `public/fonts`.
 
 ## Component Folder Convention
 

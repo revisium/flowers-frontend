@@ -6,7 +6,7 @@ interface RoomCategoryIconProps {
   readonly category: Exclude<PlantCategory, 'all'>;
 }
 
-export function RoomCategoryIcon({ category }: RoomCategoryIconProps) {
+export const RoomCategoryIcon = ({ category }: RoomCategoryIconProps) => {
   if (category === 'aroid') {
     return (
       <Box aria-hidden="true" color="#cfe4b7" display="inline-block" height="20px" opacity={0.82} position="relative" width="20px">
@@ -98,4 +98,4 @@ export function RoomCategoryIcon({ category }: RoomCategoryIconProps) {
       <Box background="rgba(255, 248, 233, 0.48)" borderRadius="999px" height="8px" left="11px" position="absolute" top="5px" width="2px" />
     </Box>
   );
-}
+};

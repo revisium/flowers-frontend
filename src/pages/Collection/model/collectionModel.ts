@@ -17,8 +17,6 @@ export interface Plant {
 
 export interface CollectionCopy {
   readonly backToHome: string;
-  readonly brandSubtitle: string;
-  readonly brandHomeLabel: string;
   readonly cardAction: string;
   readonly cardCategoryLabel: string;
   readonly cardCloseLabel: string;
@@ -136,8 +134,6 @@ export const categoryLabels: Record<Locale, Record<PlantCategory, string>> = {
 
 const copyKeys = [
   'backToHome',
-  'brandSubtitle',
-  'brandHomeLabel',
   'cardAction',
   'cardCategoryLabel',
   'cardCloseLabel',
@@ -165,15 +161,13 @@ const copyKeys = [
 
 type CollectionCopyValues = readonly string[] & { readonly length: (typeof copyKeys)['length'] };
 
-function createCollectionCopy(values: CollectionCopyValues): CollectionCopy {
+const createCollectionCopy = (values: CollectionCopyValues): CollectionCopy => {
   return Object.fromEntries(copyKeys.map((key, index) => [key, values[index]!])) as unknown as CollectionCopy;
-}
+};
 
 export const copy: Record<Locale, CollectionCopy> = {
   ru: createCollectionCopy([
     'На главную',
-    'моя коллекция растений',
-    'Оранжерея, главная',
     'Открыть карточку',
     'Категория',
     'Закрыть карточку растения',
@@ -200,8 +194,6 @@ export const copy: Record<Locale, CollectionCopy> = {
   ] as const),
   en: createCollectionCopy([
     'Back home',
-    'my plant collection',
-    'Greenhouse, home',
     'Open card',
     'Category',
     'Close plant card',
@@ -228,10 +220,10 @@ export const copy: Record<Locale, CollectionCopy> = {
   ] as const),
 };
 
-export function countPlantsByCategory(category: PlantCategory) {
+export const countPlantsByCategory = (category: PlantCategory) => {
   if (category === 'all') {
     return plants.length;
   }
 
   return plants.filter((plant) => plant.category === category).length;
-}
+};
