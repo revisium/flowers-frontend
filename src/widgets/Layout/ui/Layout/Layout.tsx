@@ -18,9 +18,18 @@ export const Layout = ({ children }: LayoutProps) => {
         borderRadius="18px"
         boxShadow="0 24px 80px rgba(52, 43, 28, 0.16)"
         height="calc(100dvh - 36px)"
+        margin="0 auto"
+        maxWidth="1920px"
         overflow="auto"
         position="relative"
         width="100%"
+        css={{
+          msOverflowStyle: 'none',
+          scrollbarWidth: 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+        }}
       >
         {children}
       </Box>

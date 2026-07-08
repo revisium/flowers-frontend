@@ -67,7 +67,24 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
         >
           ‹
         </Button>
-        <Grid ref={categoryListRef} gap="14px" gridAutoColumns={{ base: 'minmax(152px, 176px)', xl: 'auto' }} gridAutoFlow={{ base: 'column', xl: 'row' }} gridTemplateColumns={{ base: 'none', xl: 'repeat(8, minmax(132px, 1fr))' }} minWidth={0} overflowX="auto" paddingBottom={{ base: '8px', xl: 0 }} scrollSnapType={{ base: 'x mandatory', xl: 'none' }}>
+        <Grid
+          ref={categoryListRef}
+          gap="14px"
+          gridAutoColumns={{ base: 'minmax(152px, 176px)', xl: 'auto' }}
+          gridAutoFlow={{ base: 'column', xl: 'row' }}
+          gridTemplateColumns={{ base: 'none', xl: 'repeat(8, minmax(132px, 1fr))' }}
+          minWidth={0}
+          overflowX="auto"
+          paddingBottom={{ base: '8px', xl: 0 }}
+          scrollSnapType={{ base: 'x mandatory', xl: 'none' }}
+          css={{
+            msOverflowStyle: 'none',
+            scrollbarWidth: 'none',
+            '&::-webkit-scrollbar': {
+              display: 'none',
+            },
+          }}
+        >
           {homeCategories[locale].map((category) => (
             <HomeCategoryCard category={category} key={category.name} />
           ))}

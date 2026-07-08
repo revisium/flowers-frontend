@@ -35,8 +35,11 @@ export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: 
       width={{ base: 'auto', md: '260px' }}
       zIndex={6}
       css={{
-        scrollbarColor: 'rgba(255, 248, 233, 0.32) transparent',
-        scrollbarWidth: 'thin',
+        msOverflowStyle: 'none',
+        scrollbarWidth: 'none',
+        '&::-webkit-scrollbar': {
+          display: 'none',
+        },
       }}
     >
       <Flex as="nav" aria-label={text.collection} flexDirection={{ base: 'row', md: 'column' }} gap="12px">
