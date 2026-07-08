@@ -6,7 +6,13 @@ import { HomeStats } from '../HomeStats/HomeStats';
 
 export const HomeHeroIntro = () => {
   return (
-    <Box marginLeft={{ base: 0, md: 'clamp(8px, 4vw, 84px)' }} marginTop={{ base: '34px', md: 'clamp(52px, 8vw, 92px)' }} maxWidth={{ base: '358px', md: '600px' }} position="relative" zIndex={1}>
+    <Box
+      marginLeft={{ base: 0, md: 'clamp(8px, 4vw, 84px)' }}
+      marginTop={{ base: '34px', md: 'clamp(52px, 8vw, 92px)' }}
+      maxWidth={{ base: '358px', md: '600px' }}
+      position="relative"
+      zIndex={1}
+    >
       <Text
         as="h1"
         color="#263a2c"

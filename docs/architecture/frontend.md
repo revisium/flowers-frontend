@@ -55,7 +55,8 @@ the headline collection count, statistic cards, and category card metadata.
 - `ui/HomeHero` composes the generated hero background, top header,
   greeting/statistics/action content, and desktop reminder card.
 - `ui/HomeHeader` is a thin route wrapper around `widgets/GreenhouseMenu`.
-  Search is presentational for now.
+  Search is presentational for now and keeps a visible keyboard focus ring on
+  the surrounding glass pill via `:focus-within`.
 - `ui/HomeCategoriesSection` owns the category strip, arrow scroll controls,
   and the notes callout.
 - Repeated or decorative pieces live in same-named component folders, such as

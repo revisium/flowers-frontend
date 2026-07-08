@@ -5,7 +5,11 @@ import { SmallCanIcon } from '../SmallCanIcon/SmallCanIcon';
 
 export const HomeActions = () => {
   return (
-    <Grid gap="12px" gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', sm: 'repeat(2, max-content)' }} marginTop="28px">
+    <Grid
+      gap="12px"
+      gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', sm: 'repeat(2, max-content)' }}
+      marginTop="28px"
+    >
       <Button
         background="#5c8a54"
         borderRadius="8px"

@@ -1,7 +1,6 @@
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
 
 import { AppProvider } from './app/providers/AppProvider';
-import 'src/shared/ui/theme/fonts.css';
 
 interface LayoutProps {
   readonly children: React.ReactNode;
@@ -18,7 +17,9 @@ export const Layout = ({ children }: LayoutProps) => {
         <Links />
       </head>
       <body>
-        {children}
+        <AppProvider>
+          {children}
+        </AppProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -27,22 +28,18 @@ export const Layout = ({ children }: LayoutProps) => {
 };
 
 const App = () => {
-  return (
-    <AppProvider>
-      <Outlet />
-    </AppProvider>
-  );
+  return <Outlet />;
 };
 
 export default App;
 
 export const ErrorBoundary = ({ error }: { readonly error: unknown }) => {
-  let title = 'Something went wrong';
-  let details = 'An unexpected error occurred.';
+  let title = 'Что-то пошло не так';
+  let details = 'Произошла неожиданная ошибка.';
 
   if (isRouteErrorResponse(error)) {
-    title = error.status === 404 ? 'Page not found' : `Error ${error.status}`;
-    details = error.status === 404 ? 'The requested page does not exist.' : error.statusText || details;
+    title = error.status === 404 ? 'Страница не найдена' : `Ошибка ${error.status}`;
+    details = error.status === 404 ? 'Такой страницы не существует.' : error.statusText || details;
   } else if (error instanceof Error) {
     details = error.message;
   }

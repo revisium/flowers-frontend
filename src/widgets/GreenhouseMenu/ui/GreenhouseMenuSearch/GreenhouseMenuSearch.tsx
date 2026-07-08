@@ -7,7 +7,12 @@ interface GreenhouseMenuSearchProps {
   readonly onChange?: (value: string) => void;
 }
 
-export const GreenhouseMenuSearch = ({ label, onChange, placeholder, value }: GreenhouseMenuSearchProps) => {
+export const GreenhouseMenuSearch = ({
+  label,
+  onChange,
+  placeholder,
+  value,
+}: GreenhouseMenuSearchProps) => {
   return (
     <Flex
       as="label"
@@ -17,10 +22,15 @@ export const GreenhouseMenuSearch = ({ label, onChange, placeholder, value }: Gr
       borderRadius="999px"
       boxShadow="0 10px 24px rgba(21, 18, 10, 0.035)"
       color="#46543b"
-      flex={{ base: '1 1 auto', md: '0 1 440px' }}
       gap="10px"
+      w="300px"
       minHeight="40px"
       padding="0 15px"
+      transition="box-shadow 160ms ease, border-color 160ms ease"
+      _focusWithin={{
+        borderColor: 'rgba(94, 127, 57, 0.38)',
+        boxShadow: '0 0 0 3px rgba(94, 127, 57, 0.24), 0 10px 24px rgba(21, 18, 10, 0.035)',
+      }}
     >
       <Box
         aria-hidden="true"
@@ -52,7 +62,7 @@ export const GreenhouseMenuSearch = ({ label, onChange, placeholder, value }: Gr
         placeholder={placeholder}
         type="search"
         value={value}
-        _focusVisible={{ boxShadow: 'none' }}
+        _focusVisible={{ outline: 'none' }}
         _placeholder={{ color: 'rgba(70, 84, 59, 0.58)' }}
         onChange={(event) => {
           onChange?.(event.target.value);

@@ -13,6 +13,14 @@ export const GreenhouseMenuLanguageSwitcher = ({
   locale,
   onLocaleChange,
 }: GreenhouseMenuLanguageSwitcherProps) => {
+  const changeLocale = (nextLocale: GreenhouseMenuLocale) => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = nextLocale;
+    }
+
+    onLocaleChange?.(nextLocale);
+  };
+
   return (
     <Flex
       aria-label={label}
@@ -37,7 +45,7 @@ export const GreenhouseMenuLanguageSwitcher = ({
         type="button"
         variant="plain"
         onClick={() => {
-          onLocaleChange?.('ru');
+          changeLocale('ru');
         }}
       >
         RU
@@ -54,7 +62,7 @@ export const GreenhouseMenuLanguageSwitcher = ({
         type="button"
         variant="plain"
         onClick={() => {
-          onLocaleChange?.('en');
+          changeLocale('en');
         }}
       >
         EN

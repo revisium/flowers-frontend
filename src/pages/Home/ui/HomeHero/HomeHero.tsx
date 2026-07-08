@@ -13,7 +13,7 @@ export const HomeHero = () => {
       backgroundSize="contain"
       aspectRatio={{ base: 'auto', md: '1535 / 1024' }}
       backgroundColor="#f2eadb"
-      minHeight={{ base: '760px', md: 'auto' }}
+      minHeight={{ base: 'min(70vh, 760px)', md: 'auto' }}
       position="relative"
     >
       <Box bottom={0} height="28%" left={0} pointerEvents="none" position="absolute" right={0} />

@@ -27,12 +27,24 @@ export const GreenhouseMenu = ({
   searchLabel,
   searchPlaceholder,
 }: GreenhouseMenuProps) => {
+  const logoCopy =
+    locale === 'ru'
+      ? {
+          homeLabel: 'Оранжерея, главная',
+          subtitle: 'моя коллекция растений',
+          title: 'Оранжерея',
+        }
+      : {
+          homeLabel: 'Greenhouse, home',
+          subtitle: 'my plant collection',
+          title: 'Greenhouse',
+        };
+
   return (
     <Flex
       as="header"
       alignItems="center"
       backdropFilter="blur(5px) saturate(1.02)"
-      background="linear-gradient(90deg, rgba(255, 248, 233, 0.14), rgba(255, 255, 255, 0.06))"
       borderBottom="1px solid rgba(93, 112, 71, 0.1)"
       boxShadow="0 10px 24px rgba(56, 48, 31, 0.02)"
       flexWrap={{ base: 'wrap', md: 'nowrap' }}
@@ -43,7 +55,8 @@ export const GreenhouseMenu = ({
       width="100%"
       zIndex={7}
       _after={{
-        background: 'linear-gradient(90deg, rgba(95, 127, 57, 0), rgba(95, 127, 57, 0.18), rgba(95, 127, 57, 0))',
+        background:
+          'linear-gradient(90deg, rgba(95, 127, 57, 0), rgba(95, 127, 57, 0.18), rgba(95, 127, 57, 0))',
         bottom: 0,
         content: '""',
         height: '1px',
@@ -52,9 +65,20 @@ export const GreenhouseMenu = ({
         right: 0,
       }}
     >
-      <GreenhouseMenuLogo tone={logoTone} />
+      <GreenhouseMenuLogo
+        homeLabel={logoCopy.homeLabel}
+        subtitle={logoCopy.subtitle}
+        title={logoCopy.title}
+        tone={logoTone}
+      />
 
-      <Flex alignItems="center" flex={{ base: '1 1 100%', md: '1 1 auto' }} gap="12px" justifyContent={{ base: 'stretch', md: 'flex-end' }} minWidth={0}>
+      <Flex
+        alignItems="center"
+        flex={{ base: '1 1 100%', md: '1 1 auto' }}
+        gap="12px"
+        justifyContent={{ base: 'stretch', md: 'flex-end' }}
+        minWidth={0}
+      >
         <GreenhouseMenuSearch
           label={searchLabel}
           onChange={onQueryChange}
