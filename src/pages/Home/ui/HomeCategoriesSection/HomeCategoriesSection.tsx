@@ -30,9 +30,29 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
   };
 
   return (
-    <Box as="section" aria-labelledby="greenhouse-categories-title" margin="-28px auto 0" maxWidth="1600px" padding="0 clamp(16px, 3.2vw, 44px) 28px" position="relative" zIndex={4}>
-      <HStack alignItems="center" justifyContent="space-between" marginBottom="18px" paddingInline={{ base: 0, md: 'clamp(0px, 4vw, 76px)' }}>
-        <Text as="h2" color="#263729" id="greenhouse-categories-title" margin={0} textStyle="bold-xl">
+    <Box
+      border="3px solid green"
+      as="section"
+      aria-labelledby="greenhouse-categories-title"
+      margin="-28px auto 0"
+      maxWidth="1600px"
+      padding="0 clamp(16px, 3.2vw, 44px) 28px"
+      position="relative"
+      zIndex={4}
+    >
+      <HStack
+        alignItems="center"
+        justifyContent="space-between"
+        marginBottom="18px"
+        paddingInline={{ base: 0, md: 'clamp(0px, 4vw, 76px)' }}
+      >
+        <Text
+          as="h2"
+          color="#263729"
+          id="greenhouse-categories-title"
+          margin={0}
+          textStyle="bold-xl"
+        >
           {text.categoriesTitle}
         </Text>
         <Link
@@ -48,7 +68,11 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
         </Link>
       </HStack>
 
-      <Grid alignItems="center" gap="18px" gridTemplateColumns={{ base: 'minmax(0, 1fr)', md: '54px minmax(0, 1fr) 54px' }}>
+      <Grid
+        alignItems="center"
+        gap="18px"
+        gridTemplateColumns={{ base: 'minmax(0, 1fr)', md: '54px minmax(0, 1fr) 54px' }}
+      >
         <Button
           aria-label={text.scrollLeftLabel}
           background="rgba(255, 252, 246, 0.78)"

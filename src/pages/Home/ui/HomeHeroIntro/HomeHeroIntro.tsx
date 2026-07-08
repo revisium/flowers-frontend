@@ -1,30 +1,32 @@
-import { Box, Text } from '@chakra-ui/react';
-import type { Locale } from 'src/shared/config';
+import { Flex, Text } from '@chakra-ui/react';
 
-import { homeStatCards, type HomeCopy } from '../../model/homePageData';
-import { HomeActions } from '../HomeActions/HomeActions';
-import { HomeStats } from '../HomeStats/HomeStats';
+import type { HomeCopy } from '../../model/homePageData';
+import { DayReminderCard } from '../DayReminderCard/DayReminderCard';
 
 interface HomeHeroIntroProps {
-  readonly locale: Locale;
   readonly text: HomeCopy;
 }
 
-export const HomeHeroIntro = ({ locale, text }: HomeHeroIntroProps) => {
+export const HomeHeroIntro = ({ text }: HomeHeroIntroProps) => {
   return (
-    <Box
-      marginLeft={{ base: 0, md: 'clamp(8px, 4vw, 84px)' }}
-      marginTop={{ base: '34px', md: 'clamp(52px, 8vw, 92px)' }}
-      maxWidth={{ base: '358px', md: '600px' }}
-      position="relative"
-      zIndex={1}
+    <Flex
+      border="3px solid green"
+      direction="column"
+      justify="center"
+      align="start"
+      gap="20px"
+      p="18px"
     >
-      <Text color="#314235" marginTop="24px" textStyle={{ base: 'regular-md', md: 'regular-xl' }}>
+      <Text
+        border="3px solid green"
+        w={{ base: '290px', md: '370px', lg: '470px' }}
+        color="#5b4c36"
+        textStyle={{ base: 'bold-lg', md: 'bold-xl', lg: 'bold-xxl' }}
+      >
         {text.tagline}
       </Text>
 
-      <HomeStats cards={homeStatCards[locale]} />
-      <HomeActions label={text.actionLabel} />
-    </Box>
+      <DayReminderCard text={text} />
+    </Flex>
   );
 };

@@ -1,6 +1,7 @@
-import { Box, Link, Text } from '@chakra-ui/react';
+import { Button, Flex, Text } from '@chakra-ui/react';
 
 import type { HomeCopy } from '../../model/homePageData';
+import { SmallCanIcon } from 'src/pages/Home/ui/SmallCanIcon/SmallCanIcon.tsx';
 
 interface DayReminderCardProps {
   readonly text: HomeCopy;
@@ -8,48 +9,40 @@ interface DayReminderCardProps {
 
 export const DayReminderCard = ({ text }: DayReminderCardProps) => {
   return (
-    <Box
-      background="rgba(255, 252, 246, 0.78)"
+    <Flex
+      direction="column"
+      gap="10px"
+      background="rgba(255, 252, 246, 0.50)"
       border="1px solid rgba(126, 104, 69, 0.16)"
-      borderRadius="8px"
+      p="12px"
+      borderRadius="18px"
       boxShadow="0 18px 46px rgba(92, 77, 46, 0.18)"
-      color="#344134"
-      display={{ base: 'none', md: 'block' }}
-      marginLeft={{ md: 'clamp(8px, 4vw, 84px)', xl: 0 }}
-      marginTop={{ md: '38px', xl: 0 }}
-      maxWidth="390px"
-      padding="28px"
-      position={{ md: 'relative', xl: 'absolute' }}
-      right={{ xl: '77px' }}
-      top={{ xl: ' 100px' }}
-      zIndex={2}
     >
-      <Text as="strong" display="block" fontSize="1.05rem" marginBottom="14px">
-        {text.reminderTitle}
-      </Text>
-      <Text color="#6f6b5d" lineHeight={1.55} margin="0 0 18px">
-        {text.reminderText}
-      </Text>
-      <Link
-        alignItems="center"
-        border="1px solid rgba(126, 104, 69, 0.22)"
-        borderRadius="8px"
-        display="inline-flex"
-        fontWeight={760}
-        gap="12px"
-        href="/collection"
-        minHeight="44px"
-        padding="0 18px"
-        textDecoration="none"
-        _active={{ textDecoration: 'none' }}
-        _focus={{ textDecoration: 'none' }}
-        _hover={{ textDecoration: 'none' }}
-      >
-        {text.reminderActionLabel}
-        <Text as="span" aria-hidden="true">
-          »
-        </Text>
-      </Link>
-    </Box>
+      <Text textStyle="semibold-md">{text.reminderTitle}</Text>
+      <Text color="#6f6b5d">{text.reminderText}</Text>
+      <Flex gap="10px">
+        <Button
+          variant="subtle"
+          background="#5c8a54"
+          borderRadius="8px"
+          color="#fffaf1"
+          fontSize={{ base: '0.85rem', sm: '1rem' }}
+          fontWeight={760}
+          p="10px"
+        >
+          <SmallCanIcon />
+          Уход и советы
+        </Button>
+        <Button
+          border="1px solid rgba(126, 104, 69, 0.22)"
+          variant="outline"
+          borderRadius="8px"
+          p="10px"
+          fontSize={{ base: '0.85rem', sm: '1rem' }}
+        >
+          Смотреть список »
+        </Button>
+      </Flex>
+    </Flex>
   );
 };
