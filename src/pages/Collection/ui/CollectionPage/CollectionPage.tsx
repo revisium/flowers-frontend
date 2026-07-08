@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import { useCallback, useEffect } from 'react';
+import { useLocation } from 'react-router';
 import { Layout, useLayoutContext } from 'src/widgets/Layout';
 
 import { useCollectionViewModel } from '../../model/collectionViewModel';
@@ -7,8 +8,10 @@ import { RoomScene } from '../RoomScene/RoomScene';
 
 export const CollectionPage = () => {
   const { locale, onSearchPlantClear, query, selectedSearchPlantId, selectedSearchPlantRequest } = useLayoutContext();
+  const location = useLocation();
   const viewModel = useCollectionViewModel();
   const { closePlantCard, selectPlant } = viewModel;
+  const routeSearchPlantId = isSearchPlantLocationState(location.state) ? location.state.searchPlantId : null;
 
   const closeSelectedPlantCard = useCallback(() => {
     onSearchPlantClear();
@@ -16,16 +19,18 @@ export const CollectionPage = () => {
   }, [closePlantCard, onSearchPlantClear]);
 
   useEffect(() => {
-    if (!selectedSearchPlantId) {
+    if (!selectedSearchPlantId && !routeSearchPlantId) {
       closePlantCard();
     }
-  }, [closePlantCard, query, selectedSearchPlantId]);
+  }, [closePlantCard, query, routeSearchPlantId, selectedSearchPlantId]);
 
   useEffect(() => {
-    if (selectedSearchPlantId) {
-      selectPlant(selectedSearchPlantId);
+    const plantId = selectedSearchPlantId ?? routeSearchPlantId;
+
+    if (plantId) {
+      selectPlant(plantId);
     }
-  }, [selectPlant, selectedSearchPlantId, selectedSearchPlantRequest]);
+  }, [routeSearchPlantId, selectPlant, selectedSearchPlantId, selectedSearchPlantRequest]);
 
   return (
     <Layout>
@@ -49,4 +54,11 @@ export const CollectionPage = () => {
       </Box>
     </Layout>
   );
+};
+
+const isSearchPlantLocationState = (state: unknown): state is { readonly searchPlantId: string } => {
+  return typeof state === 'object'
+    && state !== null
+    && 'searchPlantId' in state
+    && typeof state.searchPlantId === 'string';
 };

@@ -32,7 +32,7 @@ export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: 
       position="absolute"
       right={{ base: '12px', md: 'auto' }}
       top={{ base: '148px', md: '154px' }}
-      width={{ base: 'auto', md: '260px' }}
+      width={{ base: 'auto', md: '292px' }}
       zIndex={6}
       css={{
         msOverflowStyle: 'none',

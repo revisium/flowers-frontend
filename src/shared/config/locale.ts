@@ -13,24 +13,40 @@ const applyDocumentLocale = (locale: Locale) => {
   document.documentElement.lang = locale;
 };
 
-export const usePreferredLocale = () => {
-  const [locale, setLocale] = useState<Locale>(defaultLocale);
+const readStoredLocale = () => {
+  if (typeof window === 'undefined') {
+    return defaultLocale;
+  }
 
-  useEffect(() => {
+  try {
     const storedLocale = window.localStorage.getItem(localeStorageKey);
 
     if (isLocale(storedLocale)) {
-      setLocale(storedLocale);
-      applyDocumentLocale(storedLocale);
-      return;
+      return storedLocale;
     }
+  } catch {
+    return defaultLocale;
+  }
 
-    applyDocumentLocale(defaultLocale);
-  }, []);
+  return defaultLocale;
+};
+
+export const usePreferredLocale = () => {
+  const [locale, setLocale] = useState<Locale>(readStoredLocale);
+
+  useEffect(() => {
+    applyDocumentLocale(locale);
+  }, [locale]);
 
   const changeLocale = useCallback((nextLocale: Locale) => {
     setLocale(nextLocale);
-    window.localStorage.setItem(localeStorageKey, nextLocale);
+
+    try {
+      window.localStorage.setItem(localeStorageKey, nextLocale);
+    } catch {
+      // Locale persistence is best-effort; UI state still updates.
+    }
+
     applyDocumentLocale(nextLocale);
   }, []);
 

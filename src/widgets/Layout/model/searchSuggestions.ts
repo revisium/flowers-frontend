@@ -81,31 +81,3 @@ export const createSearchSuggestions = (query: string, locale: Locale): readonly
       latinName: suggestion.latinName,
     }));
 };
-
-export const findExactSearchSuggestion = (query: string, locale: Locale): SearchSuggestionView | null => {
-  const normalizedQuery = normalizeSearchValue(query);
-
-  if (!normalizedQuery) {
-    return null;
-  }
-
-  const suggestion = suggestions.find((item) => {
-    const exactValues = [
-      item.name.ru,
-      item.name.en,
-      item.latinName,
-    ];
-
-    return exactValues.some((value) => normalizeSearchValue(value) === normalizedQuery);
-  });
-
-  if (!suggestion) {
-    return null;
-  }
-
-  return {
-    id: suggestion.id,
-    label: suggestion.name[locale],
-    latinName: suggestion.latinName,
-  };
-};

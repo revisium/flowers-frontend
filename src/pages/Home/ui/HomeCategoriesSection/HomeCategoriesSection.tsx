@@ -12,7 +12,7 @@ interface HomeCategoriesSectionProps {
 
 export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionProps) => {
   return (
-    <Flex direction="column" paddingBottom="18px">
+    <Flex as="section" aria-labelledby="greenhouse-categories-title" direction="column" paddingBottom="18px">
       <Flex alignItems="center" justifyContent="space-between" p="18px">
         <Text
           as="h2"

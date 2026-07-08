@@ -1,4 +1,5 @@
 import { Flex } from '@chakra-ui/react';
+import { useLocation, useNavigate } from 'react-router';
 
 import { useLayoutContext } from '../../model/layoutContext';
 import { Header } from '../Header/Header';
@@ -9,12 +10,28 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   const { locale, onLocaleChange, onQueryChange, onSearchSuggestionSelect, query } = useLayoutContext();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const logoTone = location.pathname.startsWith('/collection') ? 'light' : 'dark';
+
+  const selectSearchSuggestion = (nextQuery: string, plantId: string) => {
+    onSearchSuggestionSelect(nextQuery, plantId);
+
+    if (!location.pathname.startsWith('/collection')) {
+      void navigate('/collection', {
+        state: {
+          searchPlantId: plantId,
+        },
+      });
+    }
+  };
 
   return (
     <Flex
       background="linear-gradient(180deg, #f4edde 0%, #ebe0cd 100%)"
       height="100dvh"
       justify="center"
+      overflow="hidden"
       padding="18px"
     >
       <Flex
@@ -37,9 +54,10 @@ export const Layout = ({ children }: LayoutProps) => {
       >
         <Header
           locale={locale}
+          logoTone={logoTone}
           onLocaleChange={onLocaleChange}
           onQueryChange={onQueryChange}
-          onSearchSuggestionSelect={onSearchSuggestionSelect}
+          onSearchSuggestionSelect={selectSearchSuggestion}
           query={query}
         />
         {children}

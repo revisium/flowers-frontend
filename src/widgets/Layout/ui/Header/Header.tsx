@@ -1,5 +1,4 @@
 import { Flex } from '@chakra-ui/react';
-import { useLocation } from 'react-router';
 import type { Locale } from 'src/shared/config';
 
 import { HeaderLanguageSwitcher } from '../HeaderLanguageSwitcher/HeaderLanguageSwitcher';
@@ -8,6 +7,7 @@ import { HeaderSearch } from '../HeaderSearch/HeaderSearch';
 
 interface HeaderProps {
   readonly locale: Locale;
+  readonly logoTone: 'dark' | 'light';
   readonly query: string;
   readonly onLocaleChange: (locale: Locale) => void;
   readonly onQueryChange: (query: string) => void;
@@ -37,9 +37,7 @@ const copy = {
   },
 } satisfies Record<Locale, Record<'homeLabel' | 'languageLabel' | 'searchClearLabel' | 'searchEmptyLabel' | 'searchLabel' | 'searchPlaceholder' | 'subtitle' | 'title', string>>;
 
-export const Header = ({ locale, onLocaleChange, onQueryChange, onSearchSuggestionSelect, query }: HeaderProps) => {
-  const location = useLocation();
-  const logoTone = location.pathname.startsWith('/collection') ? 'light' : 'dark';
+export const Header = ({ locale, logoTone, onLocaleChange, onQueryChange, onSearchSuggestionSelect, query }: HeaderProps) => {
   const text = copy[locale];
 
   return (

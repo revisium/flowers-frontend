@@ -69,7 +69,7 @@ export const useLayoutContext = () => {
   const context = useContext(LayoutContext);
 
   if (!context) {
-    throw new Error('useLayoutContext must be used inside Layout');
+    throw new Error('useLayoutContext must be used inside LayoutProvider');
   }
 
   return context;

@@ -10,7 +10,7 @@ export const HomePage = () => {
 
   return (
     <Layout>
-      <Flex color="#2d3c2d" direction="column" minHeight="100%" width="100%">
+      <Flex as="main" color="#2d3c2d" direction="column" minHeight="100%" width="100%">
         <HomeHero locale={locale} text={homeCopy[locale]} />
         <HomeCategoriesSection locale={locale} text={homeCopy[locale]} />
       </Flex>

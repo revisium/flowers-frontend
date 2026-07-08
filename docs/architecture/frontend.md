@@ -5,8 +5,8 @@ product surface is an exploratory greenhouse prototype with two route-level
 page slices:
 
 - `src/pages/Home` renders the presentation-focused landing/dashboard view:
-  hero, search affordance, collection summary, care actions, category cards,
-  and notes callout.
+  hero, collection summary, care actions, responsive category cards, and notes
+  callout.
 - `src/pages/Collection` renders the interactive room canvas with fixed-position
   plant assets, category/search filtering, locale-aware labels, hover plant
   plates, and an opened plant folio card overlay.
@@ -18,18 +18,17 @@ Layers, from top to bottom, each depending only downward:
 - `app` — routes, layouts, providers, and app-wide composition.
 - `pages` — route-level page slices.
 - `widgets` — reusable composed UI blocks shared by page slices. Current widget
-  slices are `Layout`, which owns the shared inner-screen frame, and
-  `GreenhouseMenu`, which keeps the brand mark, search, and language controls
-  visually consistent across routes.
+  slice is `Layout`, which owns the shared inner-screen frame, persistent
+  header, brand mark, search, and language controls across routes.
 - `features` — cross-page reusable behavior (none yet).
 - `entities` — domain types and mock/data records (none yet).
 - `shared` — cross-cutting UI, API/transport, config, and infrastructure
   helpers with no product-domain knowledge.
 
-`src/shared/config/locale.ts` owns the prototype locale type and persistence
-hook. Route pages call it locally and pass the selected locale into
-`GreenhouseMenu`, so the visible RU/EN control is one shared widget component
-while page-local copy remains in each page slice model.
+`src/shared/config/locale.ts` owns the prototype locale type and best-effort
+localStorage persistence. `src/widgets/Layout` calls the locale hook once,
+keeps shared search state, and passes locale/search values into the persistent
+header while page-local copy remains in each page slice model.
 
 `entities/` and `features/` do not exist as directories in the repo yet. An
 FSD layer should contain only slice folders, and there is no real slice to
@@ -44,11 +43,13 @@ no slices.
 chrome lives in `src/widgets/Layout`, following the widget layout pattern used
 by sibling projects.
 
-`src/widgets/Layout` owns the persistent viewport frame. It renders the app
-background, applies the fixed `18px` viewport padding, and places page content
-inside a rounded inner screen that fills the remaining viewport width and
-height. `HomePage` and `CollectionPage` wrap their route content in this widget
-instead of adding their own outer viewport padding or top-level rounded frame.
+`src/widgets/Layout` owns the persistent viewport frame and shared header. It
+renders the app background, applies the fixed `18px` viewport padding, hides
+outer overflow, and places page content inside a rounded scroll container that
+fills the remaining viewport width and height up to the current content max
+width. `HomePage` and `CollectionPage` wrap their route content in this widget
+instead of adding their own outer viewport padding, top-level rounded frame, or
+duplicated header.
 
 ## Home Prototype Contract
 
@@ -58,19 +59,17 @@ the headline collection count, locale copy, statistic cards, and category card
 metadata.
 
 - `ui/HomePage` is a composition shell only.
-- `ui/HomeHero` composes the generated hero background, top header,
-  greeting/statistics/action content, and desktop reminder card.
-- `ui/HomeHeader` is a thin route wrapper around `widgets/GreenhouseMenu`.
-  Search is presentational for now and keeps a visible keyboard focus ring on
-  the surrounding glass pill via `:focus-within`; the language control is wired
-  to the shared locale hook instead of being a placeholder.
-- `ui/HomeCategoriesSection` owns the category strip, arrow scroll controls,
-  and the notes callout.
+- `ui/HomeHero` composes the generated hero background, tagline, statistics,
+  action content, and tablet/desktop reminder card. The shared header is owned
+  by `widgets/Layout`, not by the hero.
+- `ui/HomeCategoriesSection` owns the labeled category section, responsive
+  auto-fit category grid, collection link, and notes callout.
 - Repeated or decorative pieces live in same-named component folders, such as
   `HomeCategoryCard`, `HomeStats`, and `StatIconBox`.
 
-The home category thumbnails intentionally use temporary representative plant
-images until distinct category artwork lands with the product content model.
+The home category thumbnails use one distinct category artwork asset per
+category. Cards link to `/collection`; the current prototype does not deep-link
+to a category yet.
 
 ## Collection Prototype Contract
 
@@ -81,22 +80,24 @@ windowsill, and floor areas while the room scrolls.
 
 - `model/collectionModel.ts` owns the local room facts: plants, categories,
   labels, locale copy, and count helpers.
-- `model/collectionViewModel.ts` owns the prototype interaction state and
-  actions: category, search query, shared locale, selected plant id, and the
-  card reset rules used when filters change.
+- `model/collectionViewModel.ts` owns collection-local prototype interaction
+  state and actions: active category and selected plant id.
 - `model/plantItemViewModel.ts` derives repeated plant item view data:
   localized names, filter results, image paths, and fixed positioning.
 - `model/plantCardViewModel.ts` derives the selected plant folio data from the
   local plant record and card content map.
-- `ui/RoomScene` composes the shared `widgets/GreenhouseMenu` above the room
-  canvas and wires collection search and locale changes into it.
+- `ui/CollectionPage` bridges shared layout search state and route navigation
+  state into the collection ViewModel so choosing a search suggestion can open
+  the plant card from any route.
+- `ui/RoomScene` composes the room canvas, collection return link, scroll
+  controls, ambient info, plant card overlay, and collection-only child
+  sections. The shared header stays in `widgets/Layout`.
 - `ui/RoomSidebar` owns only collection category navigation.
 - `ui/RoomPlantLayer` renders plant figures with hover/focus plates. The plate
   includes the plant name, category, and an explicit card-action button.
 - `ui/PlantFolioCard` renders the modal plant card overlay with focus entering
   the dialog, Escape dismissal, tab containment, and focus restoration to the
   trigger.
-- `ui/CollectionPage` owns the floating return link back to `/`.
 - The room background remains a fixed-size canvas matching the source asset
   dimensions. Viewport overflow is handled by scrolling the room, not by
   resizing individual plant positions.

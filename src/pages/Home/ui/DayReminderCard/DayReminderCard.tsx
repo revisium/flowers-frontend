@@ -1,4 +1,4 @@
-import { Button, Flex, Text } from '@chakra-ui/react';
+import { Button, Flex, Link, Text } from '@chakra-ui/react';
 
 import type { HomeCopy } from '../../model/homePageData';
 import { SmallCanIcon } from 'src/pages/Home/ui/SmallCanIcon/SmallCanIcon.tsx';
@@ -35,19 +35,27 @@ export const DayReminderCard = ({ text }: DayReminderCardProps) => {
           width={{ base: '100%', sm: 'auto' }}
         >
           <SmallCanIcon />
-          Уход и советы
+          {text.actionLabel}
         </Button>
-        <Button
+        <Link
+          alignItems="center"
           border="1px solid rgba(126, 104, 69, 0.22)"
-          variant="outline"
           borderRadius="8px"
+          color="#242820"
+          display="inline-flex"
+          href="/collection"
+          justifyContent="center"
           p="10px"
+          textDecoration="none"
           textStyle={{ md: 'semibold-xs', xl: 'semibold-md' }}
           minHeight={{ md: '34px', xl: '44px' }}
           width={{ base: '100%', sm: 'auto' }}
+          _active={{ textDecoration: 'none' }}
+          _focus={{ textDecoration: 'none' }}
+          _hover={{ background: 'rgba(255, 252, 246, 0.48)', textDecoration: 'none' }}
         >
-          Смотреть список »
-        </Button>
+          {text.reminderActionLabel} »
+        </Link>
       </Flex>
     </Flex>
   );

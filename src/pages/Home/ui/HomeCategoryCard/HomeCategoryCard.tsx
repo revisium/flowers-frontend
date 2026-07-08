@@ -1,4 +1,4 @@
-import { Flex, Image, Text } from '@chakra-ui/react';
+import { Link, Image, Text } from '@chakra-ui/react';
 
 import type { HomeCategory } from '../../model/homePageData';
 
@@ -8,11 +8,13 @@ interface HomeCategoryCardProps {
 
 export const HomeCategoryCard = ({ category }: HomeCategoryCardProps) => {
   return (
-    <Flex
+    <Link
+      href="/collection"
       width="100%"
       minHeight="118px"
-      direction="column"
-      align="center"
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
       aspectRatio="1 / 1"
       background="rgba(255, 249, 239, 0.62)"
       border="1px solid rgba(126, 104, 69, 0.2)"
@@ -56,6 +58,6 @@ export const HomeCategoryCard = ({ category }: HomeCategoryCardProps) => {
       <Text w="100%" as="span" color="#6b7064" fontSize="0.78rem" lineHeight="20px">
         {category.count}
       </Text>
-    </Flex>
+    </Link>
   );
 };

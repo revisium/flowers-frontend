@@ -32,7 +32,7 @@ export const RoomScene = ({
 }: RoomSceneProps) => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [canScrollRight, setCanScrollRight] = useState(false);
   const selectedPlant = createPlantCardViewModel(selectedPlantId, locale);
 
   const updateScrollHints = useCallback(() => {
