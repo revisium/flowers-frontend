@@ -24,6 +24,6 @@ export const globalCss: SystemConfig['globalCss'] = {
   'a, a:hover, a:focus, a:focus-visible, a:active, [data-scope="link"], [data-scope="link"]:hover, [data-scope="link"]:focus, [data-scope="link"]:focus-visible, [data-scope="link"]:active':
     {
     color: 'inherit',
-    textDecoration: 'none',
+    textDecoration: 'none !important',
   },
 };

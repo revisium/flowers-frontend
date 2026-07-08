@@ -1,5 +1,4 @@
 import { Box, Button, Flex, Grid, Text } from '@chakra-ui/react';
-import { GreenhouseLogo } from 'src/widgets/GreenhouseLogo';
 
 import {
   categoryLabels,
@@ -25,17 +24,15 @@ export function RoomSidebar({ activeCategory, locale, onCategoryChange, text }: 
       as="aside"
       aria-label={text.sidebarLabel}
       flexDirection={{ base: 'row', md: 'column' }}
-      gap={{ base: '12px', md: '40px' }}
+      gap="12px"
       left={{ base: '12px', md: '28px' }}
       overflowX={{ base: 'auto', md: 'visible' }}
       position="absolute"
       right={{ base: '12px', md: 'auto' }}
-      top={{ base: '14px', md: '24px' }}
+      top={{ base: '142px', md: '126px' }}
       width={{ base: 'auto', md: '220px' }}
       zIndex={6}
     >
-      <GreenhouseLogo />
-
       <Flex as="nav" aria-label={text.collection} flexDirection={{ base: 'row', md: 'column' }} gap="12px">
         <Button
           aria-pressed={activeCategory === 'all'}

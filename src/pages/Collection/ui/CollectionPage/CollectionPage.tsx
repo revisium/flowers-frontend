@@ -9,10 +9,9 @@ export function CollectionPage() {
   return (
     <Box
       as="main"
-      height="100vh"
-      minHeight="100vh"
+      height="100%"
+      minHeight="100%"
       overflowX="hidden"
-      padding={{ base: 0, md: 'clamp(10px, 1.8vw, 18px)' }}
       position="relative"
     >
       <RoomScene

@@ -14,22 +14,15 @@ export function HomeHero() {
       aspectRatio={{ base: 'auto', md: '1535 / 1024' }}
       backgroundColor="#f2eadb"
       minHeight={{ base: '760px', md: 'auto' }}
-      padding="clamp(14px, 2.2vw, 24px) clamp(16px, 3.2vw, 44px) clamp(28px, 4vw, 44px)"
       position="relative"
     >
-      <Box
-        // background="linear-gradient(180deg, rgba(255, 252, 244, 0.16), rgba(255, 252, 244, 0.72))"
-        bottom={0}
-        height="28%"
-        left={0}
-        pointerEvents="none"
-        position="absolute"
-        right={0}
-      />
+      <Box bottom={0} height="28%" left={0} pointerEvents="none" position="absolute" right={0} />
 
       <HomeHeader />
-      <HomeHeroIntro />
-      <DayReminderCard />
+      <Box padding="clamp(22px, 4vw, 56px) clamp(16px, 3.2vw, 44px) clamp(28px, 4vw, 44px)">
+        <HomeHeroIntro />
+        <DayReminderCard />
+      </Box>
     </Box>
   );
 }

@@ -1,5 +1,6 @@
 import { Box, Button } from '@chakra-ui/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { GreenhouseMenu, type GreenhouseMenuLocale } from 'src/widgets/GreenhouseMenu';
 
 import type { CollectionCopy, Locale, PlantCategory } from '../../model/collectionModel';
 import { createPlantCardViewModel } from '../../model/plantCardViewModel';
@@ -7,7 +8,6 @@ import { PlantFolioCard } from '../PlantFolioCard/PlantFolioCard';
 import { RoomAmbientInfo } from '../RoomAmbientInfo/RoomAmbientInfo';
 import { RoomPlantLayer } from '../RoomPlantLayer/RoomPlantLayer';
 import { RoomSidebar } from '../RoomSidebar/RoomSidebar';
-import { RoomToolbar } from '../RoomToolbar/RoomToolbar';
 
 interface RoomSceneProps {
   readonly activeCategory: PlantCategory;
@@ -73,12 +73,7 @@ export function RoomScene({
       as="section"
       aria-label={text.sceneLabel}
       background="#211b0f"
-      borderRadius={{ base: '0 0 22px 22px', md: '18px' }}
-      boxShadow="0 24px 80px rgba(52, 43, 28, 0.2)"
-      height={{
-        base: 'min(100vh, 941px)',
-        md: 'min(calc(100vh - clamp(20px, 3.6vw, 36px)), 941px)',
-      }}
+      height="100%"
       overflow="hidden"
       position="relative"
     >
@@ -115,13 +110,20 @@ export function RoomScene({
         onCategoryChange={onCategoryChange}
         text={text}
       />
-      <RoomToolbar
-        locale={locale}
-        onLocaleChange={onLocaleChange}
-        onQueryChange={onQueryChange}
-        query={query}
-        text={text}
-      />
+      <Box left={0} position="absolute" right={0} top={0} zIndex={7}>
+        <GreenhouseMenu
+          languageLabel={text.languageLabel}
+          locale={locale}
+          logoTone="light"
+          query={query}
+          searchLabel={text.searchLabel}
+          searchPlaceholder={text.searchPlaceholder}
+          onLocaleChange={(nextLocale: GreenhouseMenuLocale) => {
+            onLocaleChange(nextLocale);
+          }}
+          onQueryChange={onQueryChange}
+        />
+      </Box>
       <RoomAmbientInfo text={text} />
 
       {selectedPlant ? (

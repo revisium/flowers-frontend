@@ -5,7 +5,7 @@ import { HomeHero } from '../HomeHero/HomeHero';
 
 export function HomePage() {
   return (
-    <Box overflow="hidden">
+    <Box minHeight="100%" overflow="hidden">
       <HomeHero />
       <HomeCategoriesSection />
     </Box>
