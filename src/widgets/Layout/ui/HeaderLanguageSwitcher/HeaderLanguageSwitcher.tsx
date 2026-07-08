@@ -7,6 +7,11 @@ interface HeaderLanguageSwitcherProps {
   readonly onLocaleChange: (locale: Locale) => void;
 }
 
+const languageOptions = [
+  { label: 'RU', locale: 'ru' },
+  { label: 'EN', locale: 'en' },
+] satisfies readonly { readonly label: string; readonly locale: Locale }[];
+
 export const HeaderLanguageSwitcher = ({ label, locale, onLocaleChange }: HeaderLanguageSwitcherProps) => {
   return (
     <Flex
@@ -20,44 +25,32 @@ export const HeaderLanguageSwitcher = ({ label, locale, onLocaleChange }: Header
       padding={{ base: '2px', xl: '3px' }}
       role="group"
     >
-      <Button
-        aria-pressed={locale === 'ru'}
-        background={locale === 'ru' ? '#5e7f39' : 'transparent'}
-        borderRadius="999px"
-        color={locale === 'ru' ? '#fff8e9' : '#516344'}
-        fontSize={{ base: '0.68rem', md: '0.72rem', xl: '0.74rem' }}
-        fontWeight={800}
-        height={{ base: '30px', md: '32px' }}
-        minWidth={{ base: '30px', md: '32px' }}
-        padding={0}
-        width={{ base: '30px', md: '32px' }}
-        type="button"
-        variant="plain"
-        onClick={() => {
-          onLocaleChange('ru');
-        }}
-      >
-        RU
-      </Button>
-      <Button
-        aria-pressed={locale === 'en'}
-        background={locale === 'en' ? '#5e7f39' : 'transparent'}
-        borderRadius="999px"
-        color={locale === 'en' ? '#fff8e9' : '#516344'}
-        fontSize={{ base: '0.68rem', md: '0.72rem', xl: '0.74rem' }}
-        fontWeight={800}
-        height={{ base: '30px', md: '32px' }}
-        minWidth={{ base: '30px', md: '32px' }}
-        padding={0}
-        width={{ base: '30px', md: '32px' }}
-        type="button"
-        variant="plain"
-        onClick={() => {
-          onLocaleChange('en');
-        }}
-      >
-        EN
-      </Button>
+      {languageOptions.map((option) => {
+        const isActive = locale === option.locale;
+
+        return (
+          <Button
+            aria-pressed={isActive}
+            background={isActive ? '#5e7f39' : 'transparent'}
+            borderRadius="999px"
+            color={isActive ? '#fff8e9' : '#516344'}
+            fontSize={{ base: '0.68rem', md: '0.72rem', xl: '0.74rem' }}
+            fontWeight={800}
+            height={{ base: '30px', md: '32px' }}
+            key={option.locale}
+            minWidth={{ base: '30px', md: '32px' }}
+            padding={0}
+            type="button"
+            variant="plain"
+            width={{ base: '30px', md: '32px' }}
+            onClick={() => {
+              onLocaleChange(option.locale);
+            }}
+          >
+            {option.label}
+          </Button>
+        );
+      })}
     </Flex>
   );
 };
