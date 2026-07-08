@@ -37,22 +37,22 @@ export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: 
         <Button
           aria-pressed={activeCategory === 'all'}
           alignItems="center"
-          background="transparent"
+          background={activeCategory === 'all' ? 'rgba(255, 248, 233, 0.1)' : 'transparent'}
           border={0}
           borderRadius="14px"
           color={activeCategory === 'all' ? '#f1d98f' : 'rgba(205, 221, 188, 0.78)'}
           display="grid"
           fontSize="0.95rem"
-          fontWeight={activeCategory === 'all' ? 740 : 560}
+          fontWeight={700}
           gap="10px"
-          gridTemplateColumns="18px max-content auto"
+          gridTemplateColumns="18px minmax(150px, 1fr) 28px"
           minHeight="46px"
           padding="9px 12px"
           textAlign="left"
           textShadow="0 1px 8px rgba(28, 23, 12, 0.3)"
-          transition="color 180ms ease, font-weight 180ms ease"
-          width="fit-content"
-          _hover={{ color: '#f1d98f', fontWeight: 740 }}
+          transition="background 180ms ease, color 180ms ease"
+          width={{ base: 'max-content', md: '100%' }}
+          _hover={{ background: 'rgba(255, 248, 233, 0.08)', color: '#f1d98f' }}
           onClick={() => {
             onCategoryChange('all');
           }}
@@ -78,22 +78,22 @@ export const RoomSidebar = ({ activeCategory, locale, onCategoryChange, text }: 
               <Button
                 aria-pressed={activeCategory === category}
                 alignItems="center"
-                background="transparent"
+                background={isActive ? 'rgba(255, 248, 233, 0.1)' : 'transparent'}
                 border={0}
                 borderRadius="12px"
                 color={isActive ? '#f1d98f' : 'rgba(205, 221, 188, 0.74)'}
                 display="grid"
                 fontSize="0.95rem"
-                fontWeight={isActive ? 700 : 500}
+                fontWeight={650}
                 gap="11px"
-                gridTemplateColumns="20px max-content auto"
+                gridTemplateColumns="20px minmax(136px, 1fr) 28px"
                 minHeight="36px"
                 padding="6px 10px"
                 textAlign="left"
                 textShadow="0 1px 8px rgba(28, 23, 12, 0.3)"
-                transition="color 180ms ease, font-weight 180ms ease"
-                width="fit-content"
-                _hover={{ color: '#f1d98f', fontWeight: 700 }}
+                transition="background 180ms ease, color 180ms ease"
+                width={{ base: 'max-content', md: '100%' }}
+                _hover={{ background: 'rgba(255, 248, 233, 0.08)', color: '#f1d98f' }}
                 key={category}
                 onClick={() => {
                   onCategoryChange(category);

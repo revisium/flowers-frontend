@@ -23,7 +23,20 @@ export const HomeNote = () => {
         <br />
         Продолжайте заботиться, наблюдать и наслаждаться!
       </Text>
-      <Link background="rgba(255, 248, 239, 0.84)" borderRadius="8px" color="#6c634d" display={{ base: 'none', md: 'block' }} fontWeight={760} href="/collection" padding="14px 24px" whiteSpace="nowrap">
+      <Link
+        background="rgba(255, 248, 239, 0.84)"
+        borderRadius="8px"
+        color="#6c634d"
+        display={{ base: 'none', md: 'block' }}
+        fontWeight={760}
+        href="/collection"
+        padding="14px 24px"
+        textDecoration="none"
+        whiteSpace="nowrap"
+        _active={{ textDecoration: 'none' }}
+        _focus={{ textDecoration: 'none' }}
+        _hover={{ textDecoration: 'none' }}
+      >
         Мои заметки
       </Link>
       <Image alignSelf="end" alt="" display={{ base: 'none', md: 'block' }} height="92px" marginBottom="-22px" objectFit="contain" src="/plants/chlorophytum.png" width="92px" />

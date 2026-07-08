@@ -18,8 +18,8 @@ const config = defineConfig({
         },
       },
       fonts: {
-        body: { value: "'NT Somic', sans-serif" },
-        heading: { value: "'NT Somic', sans-serif" },
+        body: { value: "'NT Somic', 'NT Somic Fallback', sans-serif" },
+        heading: { value: "'NT Somic', 'NT Somic Fallback', sans-serif" },
       },
     },
     breakpoints: {

@@ -36,7 +36,7 @@ export const RoomScene = ({
 }: RoomSceneProps) => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
   const selectedPlant = createPlantCardViewModel(selectedPlantId, locale);
 
   const updateScrollHints = useCallback(() => {
@@ -130,65 +130,71 @@ export const RoomScene = ({
         <PlantFolioCard onClose={onPlantClose} plant={selectedPlant} text={text} />
       ) : null}
 
-      {canScrollLeft ? (
-        <Button
-          aria-label={text.scrollLeftLabel}
-          background="rgba(255, 248, 233, 0.7)"
-          border="1px solid rgba(255, 248, 233, 0.65)"
-          borderRadius="999px"
-          height="44px"
-          left="16px"
-          position="absolute"
-          top="50%"
-          transform="translateY(-50%)"
-          type="button"
-          variant="plain"
-          width="44px"
-          zIndex={10}
-          onClick={() => {
-            scrollRoom('left');
-          }}
-        >
-          <Box
-            borderBottom="7px solid transparent"
-            borderRight="10px solid #416d3c"
-            borderTop="7px solid transparent"
-            height={0}
-            margin="0 auto"
-            width={0}
-          />
-        </Button>
-      ) : null}
+      <Button
+        aria-hidden={!canScrollLeft}
+        aria-label={text.scrollLeftLabel}
+        background="rgba(255, 248, 233, 0.7)"
+        border="1px solid rgba(255, 248, 233, 0.65)"
+        borderRadius="999px"
+        height="44px"
+        left="16px"
+        opacity={canScrollLeft ? 1 : 0}
+        pointerEvents={canScrollLeft ? 'auto' : 'none'}
+        position="absolute"
+        tabIndex={canScrollLeft ? 0 : -1}
+        top="50%"
+        transform="translateY(-50%)"
+        transition="opacity 120ms ease"
+        type="button"
+        variant="plain"
+        width="44px"
+        zIndex={10}
+        onClick={() => {
+          scrollRoom('left');
+        }}
+      >
+        <Box
+          borderBottom="7px solid transparent"
+          borderRight="10px solid #416d3c"
+          borderTop="7px solid transparent"
+          height={0}
+          margin="0 auto"
+          width={0}
+        />
+      </Button>
 
-      {canScrollRight ? (
-        <Button
-          aria-label={text.scrollRightLabel}
-          background="rgba(255, 248, 233, 0.7)"
-          border="1px solid rgba(255, 248, 233, 0.65)"
-          borderRadius="999px"
-          height="44px"
-          position="absolute"
-          right="16px"
-          top="50%"
-          transform="translateY(-50%)"
-          type="button"
-          variant="plain"
-          width="44px"
-          zIndex={10}
-          onClick={() => {
-            scrollRoom('right');
-          }}
-        >
-          <Box
-            borderBottom="7px solid transparent"
-            borderLeft="10px solid #416d3c"
-            borderTop="7px solid transparent"
-            height={0}
-            margin="0 auto"
-            width={0}
-          />
-        </Button>
-      ) : null}
+      <Button
+        aria-hidden={!canScrollRight}
+        aria-label={text.scrollRightLabel}
+        background="rgba(255, 248, 233, 0.7)"
+        border="1px solid rgba(255, 248, 233, 0.65)"
+        borderRadius="999px"
+        height="44px"
+        opacity={canScrollRight ? 1 : 0}
+        pointerEvents={canScrollRight ? 'auto' : 'none'}
+        position="absolute"
+        right="16px"
+        tabIndex={canScrollRight ? 0 : -1}
+        top="50%"
+        transform="translateY(-50%)"
+        transition="opacity 120ms ease"
+        type="button"
+        variant="plain"
+        width="44px"
+        zIndex={10}
+        onClick={() => {
+          scrollRoom('right');
+        }}
+      >
+        <Box
+          borderBottom="7px solid transparent"
+          borderLeft="10px solid #416d3c"
+          borderTop="7px solid transparent"
+          height={0}
+          margin="0 auto"
+          width={0}
+        />
+      </Button>
     </Box>
   );
 };

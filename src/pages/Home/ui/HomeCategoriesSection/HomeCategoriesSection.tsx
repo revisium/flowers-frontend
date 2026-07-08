@@ -29,7 +29,15 @@ export const HomeCategoriesSection = () => {
         <Text as="h2" color="#263729" id="greenhouse-categories-title" margin={0} textStyle="bold-xl">
           Категории
         </Text>
-        <Link color="#526246" fontWeight={720} href="/collection">
+        <Link
+          color="#526246"
+          fontWeight={720}
+          href="/collection"
+          textDecoration="none"
+          _active={{ textDecoration: 'none' }}
+          _focus={{ textDecoration: 'none' }}
+          _hover={{ textDecoration: 'none' }}
+        >
           Показать все
         </Link>
       </HStack>

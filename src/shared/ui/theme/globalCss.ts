@@ -4,7 +4,7 @@ export const globalCss: SystemConfig['globalCss'] = {
   'html, body': {
     height: '100%',
     margin: 0,
-    fontFamily: "'NT Somic', sans-serif",
+    fontFamily: "'NT Somic', 'NT Somic Fallback', sans-serif",
     background: '#f2eadb',
     color: '#2e3328',
   },

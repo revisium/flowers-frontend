@@ -24,7 +24,21 @@ export const DayReminderCard = () => {
       <Text color="#6f6b5d" lineHeight={1.55} margin="0 0 18px">
         Лучшее время подарить растениям свое внимание
       </Text>
-      <Link alignItems="center" border="1px solid rgba(126, 104, 69, 0.22)" borderRadius="8px" display="inline-flex" fontWeight={760} gap="12px" href="/collection" minHeight="44px" padding="0 18px">
+      <Link
+        alignItems="center"
+        border="1px solid rgba(126, 104, 69, 0.22)"
+        borderRadius="8px"
+        display="inline-flex"
+        fontWeight={760}
+        gap="12px"
+        href="/collection"
+        minHeight="44px"
+        padding="0 18px"
+        textDecoration="none"
+        _active={{ textDecoration: 'none' }}
+        _focus={{ textDecoration: 'none' }}
+        _hover={{ textDecoration: 'none' }}
+      >
         Смотреть список
         <Text as="span" aria-hidden="true">
           »

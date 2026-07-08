@@ -1,6 +1,37 @@
-import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
+import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration, type LinksFunction } from 'react-router';
 
 import { AppProvider } from './app/providers/AppProvider';
+
+export const links: LinksFunction = () => [
+  {
+    as: 'font',
+    crossOrigin: 'anonymous',
+    href: '/fonts/NTSomic-Regular.woff2',
+    rel: 'preload',
+    type: 'font/woff2',
+  },
+  {
+    as: 'font',
+    crossOrigin: 'anonymous',
+    href: '/fonts/NTSomic-Medium.woff2',
+    rel: 'preload',
+    type: 'font/woff2',
+  },
+  {
+    as: 'font',
+    crossOrigin: 'anonymous',
+    href: '/fonts/NTSomic-Semibold.woff2',
+    rel: 'preload',
+    type: 'font/woff2',
+  },
+  {
+    as: 'font',
+    crossOrigin: 'anonymous',
+    href: '/fonts/NTSomic-Bold.woff2',
+    rel: 'preload',
+    type: 'font/woff2',
+  },
+];
 
 interface LayoutProps {
   readonly children: React.ReactNode;

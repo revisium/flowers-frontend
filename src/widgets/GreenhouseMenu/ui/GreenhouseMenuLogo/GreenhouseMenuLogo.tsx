@@ -13,7 +13,7 @@ export const GreenhouseMenuLogo = ({ homeLabel, subtitle, title, tone }: Greenho
   const focusColor = tone === 'dark' ? 'rgba(94, 127, 57, 0.62)' : 'rgba(255, 248, 233, 0.72)';
 
   return (
-    <Flex alignItems="center" flex="0 0 auto" minWidth={0}>
+    <Flex alignItems="center" flex={{ base: '0 0 220px', md: '0 0 304px' }} minWidth={0} width={{ base: '220px', md: '304px' }}>
       <Link
         alignItems="center"
         aria-label={homeLabel}
@@ -25,7 +25,7 @@ export const GreenhouseMenuLogo = ({ homeLabel, subtitle, title, tone }: Greenho
         maxWidth="100%"
         minHeight={{ base: '44px', md: '52px' }}
         textDecoration="none"
-        width="fit-content"
+        width="100%"
         _active={{ textDecoration: 'none' }}
         _focus={{ textDecoration: 'none' }}
         _focusVisible={{
@@ -45,18 +45,28 @@ export const GreenhouseMenuLogo = ({ homeLabel, subtitle, title, tone }: Greenho
           src="/greenhouse-leaf-logo.png"
           width={{ base: '30px', md: '36px' }}
         />
-        <Flex direction="column" minWidth={0}>
+        <Flex direction="column" flex="0 0 auto" minWidth={0} overflow="hidden" width={{ base: '166px', md: '232px' }}>
           <Text
             as="strong"
             display="block"
             letterSpacing={0}
+            overflow="hidden"
             textDecoration="none"
             textStyle={{ base: 'bold-md', md: 'bold-xl' }}
+            textOverflow="ellipsis"
             whiteSpace="nowrap"
           >
             {title}
           </Text>
-          <Text as="small" color={subtitleColor} textDecoration="none" textStyle="medium-xs" whiteSpace="nowrap">
+          <Text
+            as="small"
+            color={subtitleColor}
+            overflow="hidden"
+            textDecoration="none"
+            textOverflow="ellipsis"
+            textStyle="medium-xs"
+            whiteSpace="nowrap"
+          >
             {subtitle}
           </Text>
         </Flex>
