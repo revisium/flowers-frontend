@@ -8,7 +8,7 @@ interface LayoutProps {
 }
 
 export const Layout = ({ children }: LayoutProps) => {
-  const { locale, onLocaleChange, onQueryChange, query } = useLayoutContext();
+  const { locale, onLocaleChange, onQueryChange, onSearchSuggestionSelect, query } = useLayoutContext();
 
   return (
     <Flex
@@ -39,6 +39,7 @@ export const Layout = ({ children }: LayoutProps) => {
           locale={locale}
           onLocaleChange={onLocaleChange}
           onQueryChange={onQueryChange}
+          onSearchSuggestionSelect={onSearchSuggestionSelect}
           query={query}
         />
         {children}

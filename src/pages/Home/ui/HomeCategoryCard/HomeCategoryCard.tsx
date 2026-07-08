@@ -12,15 +12,11 @@ export const HomeCategoryCard = ({ category }: HomeCategoryCardProps) => {
       width="100%"
       minHeight="118px"
       direction="column"
-      // justify="center"
       align="center"
-      // alignItems="center"
       aspectRatio="1 / 1"
       background="rgba(255, 249, 239, 0.62)"
       border="1px solid rgba(126, 104, 69, 0.2)"
       borderRadius="8px"
-      // justifyItems="center"
-
       padding="10px"
       scrollSnapAlign={{ base: 'start', xl: 'none' }}
       textAlign="center"

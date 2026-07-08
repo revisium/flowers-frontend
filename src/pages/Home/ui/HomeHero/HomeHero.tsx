@@ -1,16 +1,15 @@
 import { Flex } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
 
-import { homeStatCards, type HomeCopy } from '../../model/homePageData';
+import { type HomeCopy } from '../../model/homePageData';
 import { HomeHeroIntro } from '../HomeHeroIntro/HomeHeroIntro';
-import { HomeStats } from '../HomeStats/HomeStats';
 
 interface HomeHeroProps {
   readonly locale: Locale;
   readonly text: HomeCopy;
 }
 
-export const HomeHero = ({ locale, text }: HomeHeroProps) => {
+export const HomeHero = ({ text }: HomeHeroProps) => {
   return (
     <Flex
       backgroundImage=" url('/greenhouse-home-hero.png')"
@@ -29,7 +28,6 @@ export const HomeHero = ({ locale, text }: HomeHeroProps) => {
         width="100%"
       >
         <HomeHeroIntro text={text} />
-        <HomeStats cards={homeStatCards[locale]} />
       </Flex>
     </Flex>
   );

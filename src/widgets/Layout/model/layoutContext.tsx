@@ -5,8 +5,13 @@ import { usePreferredLocale } from 'src/shared/config';
 interface LayoutContextValue {
   readonly locale: Locale;
   readonly query: string;
+  readonly selectedSearchPlantId: string | null;
+  readonly selectedSearchPlantRequest: number;
   readonly onLocaleChange: (locale: Locale) => void;
   readonly onQueryChange: (query: string) => void;
+  readonly onSearchPlantClear: () => void;
+  readonly onSearchPlantSelect: (plantId: string) => void;
+  readonly onSearchSuggestionSelect: (query: string, plantId: string) => void;
 }
 
 export const LayoutContext = createContext<LayoutContextValue | null>(null);
@@ -18,14 +23,41 @@ interface LayoutProviderProps {
 export const LayoutProvider = ({ children }: LayoutProviderProps) => {
   const [locale, changeLocale] = usePreferredLocale();
   const [query, setQuery] = useState('');
+  const [selectedSearchPlantId, setSelectedSearchPlantId] = useState<string | null>(null);
+  const [selectedSearchPlantRequest, setSelectedSearchPlantRequest] = useState(0);
+
+  const changeSearchQuery = (nextQuery: string) => {
+    setQuery(nextQuery);
+    setSelectedSearchPlantId(null);
+  };
+
+  const selectSearchPlant = (plantId: string) => {
+    setSelectedSearchPlantId(plantId);
+    setSelectedSearchPlantRequest((request) => request + 1);
+  };
+
+  const selectSearchSuggestion = (nextQuery: string, plantId: string) => {
+    setQuery(nextQuery);
+    setSelectedSearchPlantId(plantId);
+    setSelectedSearchPlantRequest((request) => request + 1);
+  };
+
+  const clearSearchPlant = () => {
+    setSelectedSearchPlantId(null);
+  };
 
   return (
     <LayoutContext.Provider
       value={{
         locale,
         onLocaleChange: changeLocale,
-        onQueryChange: setQuery,
+        onQueryChange: changeSearchQuery,
+        onSearchPlantClear: clearSearchPlant,
+        onSearchPlantSelect: selectSearchPlant,
+        onSearchSuggestionSelect: selectSearchSuggestion,
         query,
+        selectedSearchPlantId,
+        selectedSearchPlantRequest,
       }}
     >
       {children}

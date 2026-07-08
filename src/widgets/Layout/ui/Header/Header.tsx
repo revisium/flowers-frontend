@@ -11,12 +11,15 @@ interface HeaderProps {
   readonly query: string;
   readonly onLocaleChange: (locale: Locale) => void;
   readonly onQueryChange: (query: string) => void;
+  readonly onSearchSuggestionSelect: (query: string, plantId: string) => void;
 }
 
 const copy = {
   ru: {
     homeLabel: 'Оранжерея, главная',
     languageLabel: 'Выбор языка',
+    searchClearLabel: 'Очистить поиск',
+    searchEmptyLabel: 'Ничего не нашлось',
     searchLabel: 'Поиск растения',
     searchPlaceholder: 'Найти растение...',
     subtitle: 'моя коллекция растений',
@@ -25,14 +28,16 @@ const copy = {
   en: {
     homeLabel: 'Greenhouse, home',
     languageLabel: 'Language selector',
+    searchClearLabel: 'Clear search',
+    searchEmptyLabel: 'Nothing found',
     searchLabel: 'Search plants',
     searchPlaceholder: 'Search plants...',
     subtitle: 'my plant collection',
     title: 'Greenhouse',
   },
-} satisfies Record<Locale, Record<'homeLabel' | 'languageLabel' | 'searchLabel' | 'searchPlaceholder' | 'subtitle' | 'title', string>>;
+} satisfies Record<Locale, Record<'homeLabel' | 'languageLabel' | 'searchClearLabel' | 'searchEmptyLabel' | 'searchLabel' | 'searchPlaceholder' | 'subtitle' | 'title', string>>;
 
-export const Header = ({ locale, onLocaleChange, onQueryChange, query }: HeaderProps) => {
+export const Header = ({ locale, onLocaleChange, onQueryChange, onSearchSuggestionSelect, query }: HeaderProps) => {
   const location = useLocation();
   const logoTone = location.pathname.startsWith('/collection') ? 'light' : 'dark';
   const text = copy[locale];
@@ -68,7 +73,7 @@ export const Header = ({ locale, onLocaleChange, onQueryChange, query }: HeaderP
       <HeaderLogo homeLabel={text.homeLabel} subtitle={text.subtitle} title={text.title} tone={logoTone} />
 
       <Flex alignItems="center" flex="0 0 auto" gap={{ base: '8px', md: '12px' }} justifyContent="flex-end" minWidth={0}>
-        <HeaderSearch label={text.searchLabel} onChange={onQueryChange} placeholder={text.searchPlaceholder} value={query} />
+        <HeaderSearch clearLabel={text.searchClearLabel} emptyLabel={text.searchEmptyLabel} label={text.searchLabel} locale={locale} onChange={onQueryChange} onSelect={onSearchSuggestionSelect} placeholder={text.searchPlaceholder} value={query} />
         <HeaderLanguageSwitcher label={text.languageLabel} locale={locale} onLocaleChange={onLocaleChange} />
       </Flex>
     </Flex>

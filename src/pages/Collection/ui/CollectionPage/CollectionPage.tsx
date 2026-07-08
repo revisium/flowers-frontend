@@ -1,18 +1,31 @@
 import { Box } from '@chakra-ui/react';
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import { Layout, useLayoutContext } from 'src/widgets/Layout';
 
 import { useCollectionViewModel } from '../../model/collectionViewModel';
 import { RoomScene } from '../RoomScene/RoomScene';
 
 export const CollectionPage = () => {
-  const { locale, query } = useLayoutContext();
+  const { locale, onSearchPlantClear, query, selectedSearchPlantId, selectedSearchPlantRequest } = useLayoutContext();
   const viewModel = useCollectionViewModel();
-  const { closePlantCard } = viewModel;
+  const { closePlantCard, selectPlant } = viewModel;
+
+  const closeSelectedPlantCard = useCallback(() => {
+    onSearchPlantClear();
+    closePlantCard();
+  }, [closePlantCard, onSearchPlantClear]);
 
   useEffect(() => {
-    closePlantCard();
-  }, [closePlantCard, query]);
+    if (!selectedSearchPlantId) {
+      closePlantCard();
+    }
+  }, [closePlantCard, query, selectedSearchPlantId]);
+
+  useEffect(() => {
+    if (selectedSearchPlantId) {
+      selectPlant(selectedSearchPlantId);
+    }
+  }, [selectPlant, selectedSearchPlantId, selectedSearchPlantRequest]);
 
   return (
     <Layout>
@@ -27,7 +40,7 @@ export const CollectionPage = () => {
           activeCategory={viewModel.activeCategory}
           locale={locale}
           onCategoryChange={viewModel.changeCategory}
-          onPlantClose={viewModel.closePlantCard}
+          onPlantClose={closeSelectedPlantCard}
           onPlantSelect={viewModel.selectPlant}
           query={query}
           selectedPlantId={viewModel.selectedPlantId}

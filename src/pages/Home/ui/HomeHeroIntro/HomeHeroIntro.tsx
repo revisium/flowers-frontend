@@ -15,10 +15,10 @@ export const HomeHeroIntro = ({ text }: HomeHeroIntroProps) => {
       justify="center"
       align="flex-start"
       p={{ base: '16px', md: '18px', xl: '18px' }}
+      h={{ base: '40%', md: '90%' }}
     >
       <Text
         color="#5b4c36"
-        maxWidth={{ base: '310px', sm: '430px', md: '560px', xl: 'none' }}
         textStyle={{ base: 'bold-md', md: 'bold-xl', xl: 'bold-xxl' }}
         w={{ base: '43%', md: '70%', xl: '470px' }}
       >
