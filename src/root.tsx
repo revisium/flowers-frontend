@@ -1,8 +1,25 @@
-import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration, type LinksFunction } from 'react-router';
+import {
+  isRouteErrorResponse,
+  Links,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  type LinksFunction,
+} from 'react-router';
 
 import { AppProvider } from './app/providers/AppProvider';
 
 export const links: LinksFunction = () => [
+  {
+    href: '/greenhouse-leaf-logo.png',
+    rel: 'icon',
+    type: 'image/png',
+  },
+  {
+    href: '/greenhouse-leaf-logo.png',
+    rel: 'apple-touch-icon',
+  },
   {
     as: 'font',
     crossOrigin: 'anonymous',
@@ -43,14 +60,12 @@ export const Layout = ({ children }: LayoutProps) => {
       <head>
         <meta charSet="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <title>flowers-frontend</title>
+        <title>Оранжерея. Моя личная коллекция.</title>
         <Meta />
         <Links />
       </head>
       <body>
-        <AppProvider>
-          {children}
-        </AppProvider>
+        <AppProvider>{children}</AppProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
