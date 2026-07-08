@@ -17,8 +17,6 @@ export interface Plant {
 
 export interface CollectionCopy {
   readonly backToHome: string;
-  readonly brandSubtitle: string;
-  readonly brandHomeLabel: string;
   readonly cardAction: string;
   readonly cardCategoryLabel: string;
   readonly cardCloseLabel: string;
@@ -136,8 +134,6 @@ export const categoryLabels: Record<Locale, Record<PlantCategory, string>> = {
 
 const copyKeys = [
   'backToHome',
-  'brandSubtitle',
-  'brandHomeLabel',
   'cardAction',
   'cardCategoryLabel',
   'cardCloseLabel',
@@ -172,8 +168,6 @@ function createCollectionCopy(values: CollectionCopyValues): CollectionCopy {
 export const copy: Record<Locale, CollectionCopy> = {
   ru: createCollectionCopy([
     'На главную',
-    'моя коллекция растений',
-    'Оранжерея, главная',
     'Открыть карточку',
     'Категория',
     'Закрыть карточку растения',
@@ -200,8 +194,6 @@ export const copy: Record<Locale, CollectionCopy> = {
   ] as const),
   en: createCollectionCopy([
     'Back home',
-    'my plant collection',
-    'Greenhouse, home',
     'Open card',
     'Category',
     'Close plant card',

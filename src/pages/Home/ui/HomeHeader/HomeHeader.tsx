@@ -1,8 +1,8 @@
-import { Button, Grid, Input, Link, Text } from '@chakra-ui/react';
+import { Button, Grid, Input, Link } from '@chakra-ui/react';
+import { GreenhouseLogo } from 'src/widgets/GreenhouseLogo';
 
 import { homeTotalPlantsCount } from '../../model/homePageData';
 import { BellIcon } from '../BellIcon/BellIcon';
-import { LeafMark } from '../LeafMark/LeafMark';
 import { SearchIcon } from '../SearchIcon/SearchIcon';
 
 export function HomeHeader() {
@@ -15,12 +15,7 @@ export function HomeHeader() {
       position="relative"
       zIndex={2}
     >
-      <Link alignItems="center" aria-label="Оранжерея, главная" color="#263729" display="inline-flex" gap={{ base: '10px', sm: '14px' }} href="/" minHeight="52px">
-        <LeafMark />
-        <Text as="strong" fontFamily="Georgia, 'Times New Roman', serif" fontSize={{ base: '1.45rem', sm: 'clamp(1.55rem, 2vw, 2rem)' }} letterSpacing={0} lineHeight={1}>
-          Оранжерея
-        </Text>
-      </Link>
+      <GreenhouseLogo tone="dark" />
 
       <Link
         background="rgba(255, 248, 235, 0.74)"

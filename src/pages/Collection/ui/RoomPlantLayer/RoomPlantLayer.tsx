@@ -82,7 +82,7 @@ export function RoomPlantLayer({
             width="max-content"
             zIndex={6}
           >
-            <Text fontFamily="Georgia, serif" fontSize="1rem" fontWeight={700}>
+            <Text textStyle="bold-md">
               {plant.name}
             </Text>
             <Text color="#6f755f" fontSize="0.7rem" fontWeight={700} letterSpacing="0.08em" textTransform="uppercase">

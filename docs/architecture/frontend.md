@@ -17,7 +17,9 @@ Layers, from top to bottom, each depending only downward:
 
 - `app` — routes, layouts, providers, and app-wide composition.
 - `pages` — route-level page slices.
-- `widgets` — reusable composed UI blocks (none yet).
+- `widgets` — reusable composed UI blocks shared by page slices. The current
+  widget slice is `GreenhouseLogo`, used by Home and Collection so the brand
+  mark stays visually consistent across routes.
 - `features` — cross-page reusable behavior (none yet).
 - `entities` — domain types and mock/data records (none yet).
 - `shared` — cross-cutting UI, API/transport, config, and infrastructure

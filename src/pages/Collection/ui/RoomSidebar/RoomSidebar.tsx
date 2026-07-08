@@ -1,4 +1,5 @@
-import { Box, Button, Flex, Grid, Link, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Grid, Text } from '@chakra-ui/react';
+import { GreenhouseLogo } from 'src/widgets/GreenhouseLogo';
 
 import {
   categoryLabels,
@@ -30,38 +31,10 @@ export function RoomSidebar({ activeCategory, locale, onCategoryChange, text }: 
       position="absolute"
       right={{ base: '12px', md: 'auto' }}
       top={{ base: '14px', md: '24px' }}
-      width={{ base: 'auto', md: '204px' }}
+      width={{ base: 'auto', md: '220px' }}
       zIndex={6}
     >
-      <Link aria-label={text.brandHomeLabel} alignItems="center" color="#fff8e9" display="inline-flex" gap="12px" href="/">
-        <Box
-          as="span"
-          background="#607f38"
-          borderRadius="999px 999px 999px 0"
-          display="inline-block"
-          height="22px"
-          position="relative"
-          rotate="-45deg"
-          width="22px"
-          _after={{
-            background: 'rgba(255, 255, 255, 0.56)',
-            content: '""',
-            height: '12px',
-            left: '10px',
-            position: 'absolute',
-            top: '5px',
-            width: '2px',
-          }}
-        />
-        <Box as="span">
-          <Text as="strong" display="block" fontFamily="Georgia, 'Times New Roman', serif" fontSize={{ base: '1.3rem', md: '1.7rem' }} letterSpacing={0} lineHeight={1.05}>
-            Оранжерея
-          </Text>
-          <Text as="small" color="rgba(255, 248, 233, 0.78)" display={{ base: 'none', md: 'block' }} fontSize="0.82rem" marginTop="6px">
-            {text.brandSubtitle}
-          </Text>
-        </Box>
-      </Link>
+      <GreenhouseLogo />
 
       <Flex as="nav" aria-label={text.collection} flexDirection={{ base: 'row', md: 'column' }} gap="12px">
         <Button

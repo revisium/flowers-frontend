@@ -1,6 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react';
-
-import { chakraSystem } from './chakraTheme';
+import { chakraSystem } from 'src/shared/ui';
 
 interface AppProviderProps {
   readonly children: React.ReactNode;

@@ -1,7 +1,7 @@
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
 
 import { AppProvider } from './app/providers/AppProvider';
-import './shared/ui/global.css';
+import 'src/shared/ui/theme/fonts.css';
 
 interface LayoutProps {
   readonly children: React.ReactNode;
@@ -9,7 +9,7 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <head>
         <meta charSet="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
