@@ -1,7 +1,7 @@
 import { Box, Button, Text } from '@chakra-ui/react';
 import { type RefObject } from 'react';
 
-import { type CategoryDetailData } from './types';
+import { type CategoryDetailData } from '../AraceaeCategoryModal/types';
 
 interface CategoryHeroProps {
   readonly closeButtonRef: RefObject<HTMLButtonElement | null>;

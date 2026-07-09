@@ -1,10 +1,10 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { type KeyboardEvent, useEffect, useRef, useState } from 'react';
 
-import { CategoryCollectionSection } from './CategoryCollectionSection';
-import { CategoryHero } from './CategoryHero';
-import { CategoryInfoGrid } from './CategoryInfoGrid';
-import { type CategoryDetailData } from './types';
+import { CategoryCollectionSection } from '../CategoryCollectionSection/CategoryCollectionSection';
+import { CategoryHero } from '../CategoryHero/CategoryHero';
+import { CategoryInfoGrid } from '../CategoryInfoGrid/CategoryInfoGrid';
+import { type CategoryDetailData } from '../AraceaeCategoryModal/types';
 
 interface CategoryDetailModalProps {
   readonly data: CategoryDetailData;

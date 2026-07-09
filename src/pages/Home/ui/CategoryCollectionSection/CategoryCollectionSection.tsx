@@ -1,7 +1,7 @@
 import { Box, Flex, Grid, Image, Text } from '@chakra-ui/react';
 
-import { SproutIcon } from './SproutIcon';
-import { type CategoryDetailData } from './types';
+import { type CategoryDetailData } from '../AraceaeCategoryModal/types';
+import { SproutIcon } from '../SproutIcon/SproutIcon';
 
 interface CategoryCollectionSectionProps {
   readonly data: CategoryDetailData;

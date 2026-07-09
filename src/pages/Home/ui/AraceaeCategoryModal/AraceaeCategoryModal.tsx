@@ -1,6 +1,7 @@
-import { CategoryDetailModal } from './CategoryDetailModal';
-import { araceaeCategoryDataByLocale } from './data';
 import type { Locale } from 'src/shared/config';
+
+import { CategoryDetailModal } from '../CategoryDetailModal/CategoryDetailModal';
+import { araceaeCategoryDataByLocale } from './data';
 
 interface AraceaeCategoryModalProps {
   readonly locale: Locale;
