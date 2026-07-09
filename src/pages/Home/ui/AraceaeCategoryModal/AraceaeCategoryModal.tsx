@@ -31,15 +31,6 @@ const araceaeFacts = [
   'У многих ароидных молодые и взрослые листья выглядят так по-разному, будто это разные растения.',
 ] as const;
 
-const araceaeGenera = [
-  { image: '/plants/araceae-modal/alocasia.jpg', name: 'Alocasia', species: '97 видов' },
-  { image: '/plants/araceae-modal/philodendron.jpg', name: 'Philodendron', species: '489 видов' },
-  { image: '/plants/araceae-modal/monstera.jpg', name: 'Monstera', species: '60 видов' },
-  { image: '/plants/araceae-modal/aglaonema.jpg', name: 'Aglaonema', species: '50 видов' },
-  { image: '/plants/araceae-modal/anthurium.jpg', name: 'Anthurium', species: '1100 видов' },
-  { image: '/plants/araceae-modal/spathiphyllum.jpg', name: 'Spathiphyllum', species: '45 видов' },
-] as const;
-
 const araceaePlants = [
   { image: '/plants/araceae-modal/alocasia.jpg', name: "Alocasia baginda 'Dragon Scale'" },
   { image: '/plants/araceae-modal/alocasia.jpg', name: "Alocasia x amazonica 'Bambino'" },
@@ -223,38 +214,45 @@ export const AraceaeCategoryModal = ({ onClose }: AraceaeCategoryModalProps) => 
         </Box>
 
         <Grid
+          alignItems="stretch"
           gap="8px"
-          gridTemplateColumns={{ base: '1fr', lg: '0.95fr 0.95fr 1.15fr' }}
+          gridTemplateColumns={{
+            base: '1fr',
+            md: 'repeat(2, minmax(0, 1fr))',
+            lg: 'repeat(3, minmax(0, 1fr))',
+          }}
           padding={{ base: '0 18px 18px', md: '0 34px 26px' }}
           position="relative"
           zIndex={2}
         >
-          <InfoPanel title="Происхождение">
-            <Box
-              alignItems="center"
-              display="flex"
-              height="128px"
-              justifyContent="center"
-              marginBottom="18px"
-              overflow="hidden"
-            >
-              <Image
-                alt=""
-                height="100%"
-                objectFit="contain"
-                src="/plants/araceae-modal/origin-map-transparent.png"
-                width="100%"
-              />
-            </Box>
-            <Text color="#5d675b" fontSize="0.9rem" lineHeight={1.55}>
-              Тропические и субтропические регионы Азии, Центральной и Южной Америки, Африки,
-              Австралии и островов Тихого океана.
-            </Text>
-          </InfoPanel>
+          <Box gridColumn={{ base: 'auto', md: '1 / -1', lg: 'auto' }} height="100%">
+            <InfoPanel title="Происхождение">
+              <Box
+                alignItems="center"
+                display="flex"
+                height="136px"
+                justifyContent="center"
+                marginBottom="18px"
+                overflow="hidden"
+              >
+                <Image
+                  alt=""
+                  height="108%"
+                  objectFit="contain"
+                  src="/plants/araceae-modal/origin-map-transparent.png"
+                  width="108%"
+                />
+              </Box>
+              <Text color="#5d675b" fontSize="0.9rem" lineHeight={1.55}>
+                Тропические и субтропические регионы Азии, Центральной и Южной Америки, Африки,
+                Австралии и островов Тихого океана.
+              </Text>
+            </InfoPanel>
+          </Box>
 
           <InfoPanel title="Отличительные признаки">
             {araceaeTraits.map((trait) => (
-              <Flex alignItems="center" gap="12px" key={trait.body} marginBottom="14px">
+              <Flex alignItems="center" gap="12px" key={trait.body}>
                 <Image
                   alt=""
                   borderRadius="8px"
@@ -272,7 +270,7 @@ export const AraceaeCategoryModal = ({ onClose }: AraceaeCategoryModalProps) => 
 
           <InfoPanel title="Интересные факты">
             {araceaeFacts.map((fact) => (
-              <Flex alignItems="flex-start" gap="13px" key={fact} marginBottom="16px">
+              <Flex alignItems="flex-start" gap="13px" key={fact}>
                 <Box
                   background="#758f62"
                   borderRadius="999px"
@@ -288,96 +286,6 @@ export const AraceaeCategoryModal = ({ onClose }: AraceaeCategoryModalProps) => 
             ))}
           </InfoPanel>
         </Grid>
-
-        <Box padding={{ base: '0 18px 18px', md: '0 34px 26px' }}>
-          <Box
-            background="rgba(255, 253, 247, 0.76)"
-            border="1px solid rgba(218, 204, 178, 0.72)"
-            borderRadius="13px"
-            padding={{ base: '18px', md: '24px' }}
-          >
-            <Text
-              as="h3"
-              color="#25382b"
-              fontFamily="Georgia, 'Times New Roman', serif"
-              fontSize="1.45rem"
-              marginBottom="22px"
-            >
-              Дерево родов
-            </Text>
-            <Flex alignItems="center" direction="column" gap="18px">
-              <Box
-                background="#dfe8c1"
-                borderRadius="9px"
-                color="#2d3b2f"
-                fontWeight={760}
-                padding="10px 34px"
-              >
-                Araceae
-              </Box>
-              <Grid
-                gap="14px"
-                gridTemplateColumns={{
-                  base: 'repeat(2, minmax(0, 1fr))',
-                  md: 'repeat(3, 1fr)',
-                  xl: 'repeat(6, 1fr)',
-                }}
-                width="100%"
-              >
-                {araceaeGenera.map((genus) => (
-                  <Box
-                    background="#fffdf7"
-                    border="1px solid rgba(218, 204, 178, 0.78)"
-                    borderRadius="10px"
-                    boxShadow="0 10px 24px rgba(76, 64, 42, 0.06)"
-                    key={genus.name}
-                    minHeight="154px"
-                    padding="10px"
-                    textAlign="center"
-                  >
-                    <Text color="#344334" fontSize="0.88rem" fontWeight={760} lineClamp={1}>
-                      {genus.name}
-                    </Text>
-                    <Image
-                      alt=""
-                      height="76px"
-                      margin="8px auto"
-                      objectFit="contain"
-                      src={genus.image}
-                      width="84px"
-                    />
-                    <Text color="#7a7a68" fontSize="0.72rem">
-                      ≈ {genus.species}
-                    </Text>
-                  </Box>
-                ))}
-              </Grid>
-            </Flex>
-            <Flex
-              alignItems="center"
-              borderTop="1px solid rgba(218, 204, 178, 0.68)"
-              color="#7a7f70"
-              fontSize="0.86rem"
-              gap="10px"
-              marginTop="22px"
-              paddingTop="14px"
-            >
-              <Box
-                border="1px solid #9ba88a"
-                borderRadius="999px"
-                color="#7b8f6c"
-                flexShrink={0}
-                height="22px"
-                lineHeight="20px"
-                textAlign="center"
-                width="22px"
-              >
-                i
-              </Box>
-              Количество видов указано приблизительно и может меняться по мере новых исследований.
-            </Flex>
-          </Box>
-        </Box>
 
         <Box padding={{ base: '0 18px 22px', md: '0 34px 34px' }}>
           <Box
@@ -447,12 +355,14 @@ const InfoPanel = ({
   readonly title: string;
 }) => {
   return (
-    <Box
+    <Flex
+      direction="column"
+      gap="16px"
       background="rgba(255, 253, 247, 0.88)"
       border="1px solid rgba(218, 204, 178, 0.72)"
       borderRadius="12px"
       boxShadow="0 14px 34px rgba(76, 64, 42, 0.06)"
-      minHeight="258px"
+      height="100%"
       padding={{ base: '18px', md: '24px 24px 22px' }}
     >
       <Text
@@ -461,11 +371,10 @@ const InfoPanel = ({
         fontFamily="Georgia, 'Times New Roman', serif"
         fontSize="1.24rem"
         lineHeight={1.1}
-        marginBottom="20px"
       >
         {title}
       </Text>
       {children}
-    </Box>
+    </Flex>
   );
 };
