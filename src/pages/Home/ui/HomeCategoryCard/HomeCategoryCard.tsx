@@ -1,15 +1,26 @@
 import { Box, Image, Link, Text } from '@chakra-ui/react';
+import type { MouseEvent } from 'react';
 
 import type { HomeCategory } from '../../model/homePageData';
 
 interface HomeCategoryCardProps {
   readonly category: HomeCategory;
+  readonly onOpen?: (category: HomeCategory) => void;
 }
 
 const imagePanelMask =
   "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath fill='black' d='M0 0H78C88 0 86 15 84 25C81 38 88 44 89 54C90 66 81 72 83 84C85 93 80 100 74 100H0Z'/%3E%3C/svg%3E\")";
 
-export const HomeCategoryCard = ({ category }: HomeCategoryCardProps) => {
+export const HomeCategoryCard = ({ category, onOpen }: HomeCategoryCardProps) => {
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (!onOpen) {
+      return;
+    }
+
+    event.preventDefault();
+    onOpen(category);
+  };
+
   return (
     <Link
       href="/collection"
@@ -33,6 +44,7 @@ export const HomeCategoryCard = ({ category }: HomeCategoryCardProps) => {
       scrollSnapAlign={{ base: 'start', xl: 'none' }}
       textDecoration="none"
       transition="border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease"
+      onClick={handleClick}
 
       _active={{ textDecoration: 'none' }}
       _focus={{ textDecoration: 'none' }}

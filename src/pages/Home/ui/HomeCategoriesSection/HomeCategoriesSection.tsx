@@ -1,7 +1,9 @@
 import { Flex, Grid, Link, Text } from '@chakra-ui/react';
+import { useState } from 'react';
 import type { Locale } from 'src/shared/config';
 
 import { homeCategories, type HomeCopy } from '../../model/homePageData';
+import { AraceaeCategoryModal } from '../AraceaeCategoryModal/AraceaeCategoryModal';
 import { HomeCategoryCard } from '../HomeCategoryCard/HomeCategoryCard';
 import { HomeNote } from '../HomeNote/HomeNote';
 
@@ -11,6 +13,8 @@ interface HomeCategoriesSectionProps {
 }
 
 export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionProps) => {
+  const [isAraceaeOpen, setIsAraceaeOpen] = useState(false);
+
   return (
     <Flex
       as="section"
@@ -79,12 +83,17 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
           width={{ base: 'max-content', md: '100%' }}
         >
           {homeCategories[locale].map((category) => (
-            <HomeCategoryCard category={category} key={category.name} />
+            <HomeCategoryCard
+              category={category}
+              key={category.key}
+              onOpen={category.key === 'araceae' ? () => setIsAraceaeOpen(true) : undefined}
+            />
           ))}
         </Grid>
       </Flex>
 
       <HomeNote text={text} />
+      {isAraceaeOpen ? <AraceaeCategoryModal onClose={() => setIsAraceaeOpen(false)} /> : null}
     </Flex>
   );
 };
