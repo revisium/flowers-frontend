@@ -14,18 +14,22 @@ export interface CategoryOrigin {
 }
 
 export interface CategoryDetailData {
+  readonly backLabel: string;
+  readonly closingNote: string;
+  readonly collectionPlants: readonly CategoryPlant[];
+  readonly collectionTitle: string;
   readonly title: string;
   readonly latinName: string;
   readonly description: string;
+  readonly facts: readonly string[];
+  readonly factsTitle: string;
   readonly heroImage: string;
   readonly heroPosition?: ResponsiveString;
   readonly heroSize?: ResponsiveString;
   readonly origin: CategoryOrigin;
+  readonly originTitle: string;
   readonly traits: readonly CategoryTrait[];
-  readonly facts: readonly string[];
-  readonly collectionTitle: string;
-  readonly collectionPlants: readonly CategoryPlant[];
-  readonly closingNote: string;
+  readonly traitsTitle: string;
 }
 
 type ResponsiveString =

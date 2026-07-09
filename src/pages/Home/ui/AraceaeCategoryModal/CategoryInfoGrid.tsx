@@ -21,7 +21,7 @@ export const CategoryInfoGrid = ({ data }: CategoryInfoGridProps) => (
     zIndex={2}
   >
     <Box gridColumn={{ base: 'auto', md: '1 / -1', lg: 'auto' }} height="100%">
-      <InfoPanel title="Происхождение">
+      <InfoPanel title={data.originTitle}>
         <Box
           alignItems="center"
           display="flex"
@@ -38,7 +38,7 @@ export const CategoryInfoGrid = ({ data }: CategoryInfoGridProps) => (
       </InfoPanel>
     </Box>
 
-    <InfoPanel title="Отличительные признаки">
+    <InfoPanel title={data.traitsTitle}>
       {data.traits.map((trait) => (
         <Flex alignItems="center" gap="12px" key={trait.body}>
           <Image
@@ -56,7 +56,7 @@ export const CategoryInfoGrid = ({ data }: CategoryInfoGridProps) => (
       ))}
     </InfoPanel>
 
-    <InfoPanel title="Интересные факты">
+    <InfoPanel title={data.factsTitle}>
       {data.facts.map((fact) => (
         <Flex alignItems="flex-start" gap="13px" key={fact}>
           <Box

@@ -99,7 +99,9 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
       </Flex>
 
       <HomeNote text={text} />
-      {isAraceaeOpen ? <AraceaeCategoryModal onClose={() => setIsAraceaeOpen(false)} /> : null}
+      {isAraceaeOpen ? (
+        <AraceaeCategoryModal locale={locale} onClose={() => setIsAraceaeOpen(false)} />
+      ) : null}
     </Flex>
   );
 };

@@ -46,7 +46,7 @@ export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: Categor
       <Box as="span" fontSize="20px" lineHeight={1}>
         ←
       </Box>
-      Назад к категориям
+      {data.backLabel}
     </Button>
 
     <Box

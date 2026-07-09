@@ -1,10 +1,12 @@
 import { CategoryDetailModal } from './CategoryDetailModal';
-import { araceaeCategoryData } from './data';
+import { araceaeCategoryDataByLocale } from './data';
+import type { Locale } from 'src/shared/config';
 
 interface AraceaeCategoryModalProps {
+  readonly locale: Locale;
   readonly onClose: () => void;
 }
 
-export const AraceaeCategoryModal = ({ onClose }: AraceaeCategoryModalProps) => (
-  <CategoryDetailModal data={araceaeCategoryData} onClose={onClose} />
+export const AraceaeCategoryModal = ({ locale, onClose }: AraceaeCategoryModalProps) => (
+  <CategoryDetailModal data={araceaeCategoryDataByLocale[locale]} onClose={onClose} />
 );
