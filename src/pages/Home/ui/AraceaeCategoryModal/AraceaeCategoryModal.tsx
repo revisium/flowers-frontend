@@ -230,17 +230,17 @@ export const AraceaeCategoryModal = ({ onClose }: AraceaeCategoryModalProps) => 
               <Box
                 alignItems="center"
                 display="flex"
-                height="136px"
+                height="150px"
                 justifyContent="center"
                 marginBottom="18px"
-                overflow="hidden"
+                overflow="visible"
               >
                 <Image
                   alt=""
-                  height="108%"
+                  height="100%"
                   objectFit="contain"
                   src="/plants/araceae-modal/origin-map-transparent.png"
-                  width="108%"
+                  width="100%"
                 />
               </Box>
               <Text color="#5d675b" fontSize="0.9rem" lineHeight={1.55}>
@@ -340,12 +340,65 @@ export const AraceaeCategoryModal = ({ onClose }: AraceaeCategoryModalProps) => 
                 </Box>
               ))}
             </Grid>
+            <Flex
+              alignItems="center"
+              background="linear-gradient(90deg, rgba(235, 242, 218, 0.86), rgba(246, 248, 235, 0.94))"
+              borderRadius="10px"
+              color="#465247"
+              fontSize={{ base: '0.86rem', md: '0.95rem' }}
+              fontWeight={720}
+              gap="12px"
+              justifyContent="center"
+              lineHeight={1.35}
+              marginTop="18px"
+              minHeight="48px"
+              padding={{ base: '12px 14px', md: '12px 22px' }}
+              textAlign="center"
+            >
+              <SproutIcon />
+              Ароидные - это не просто растения, это целый мир удивительных форм и адаптаций.
+            </Flex>
           </Box>
         </Box>
       </Box>
     </Flex>
   );
 };
+
+const SproutIcon = () => (
+  <svg
+    aria-hidden="true"
+    height="24px"
+    style={{ color: '#6f8f5c', flexShrink: 0 }}
+    viewBox="0 0 28 28"
+    width="24px"
+  >
+    <path
+      d="M13.6 21.6c.6-4.8.4-8.7 3.2-12.4"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="2.1"
+    />
+    <path
+      d="M18.8 4.7c4.2.7 5.7 3.6 3.8 7.4-2.2 4.2-6.1 4.7-8.2 4.5-.2-2.7.4-6.1 4.4-11.9Z"
+      fill="currentColor"
+      opacity={0.82}
+    />
+    <path
+      d="M12.3 21.4c-1.1-3.4-3.1-5.1-6.6-5.7"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="2.1"
+    />
+    <path
+      d="M4.2 12.9c3.3-.5 5.8.8 7.4 3.6-1.4 2.3-4.5 3.4-7.1 1.2-1.7-1.5-1.9-3.2-.3-4.8Z"
+      fill="currentColor"
+      opacity={0.72}
+    />
+  </svg>
+);
 
 const InfoPanel = ({
   children,
