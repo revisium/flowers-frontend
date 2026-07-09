@@ -12,7 +12,12 @@ interface HomeCategoriesSectionProps {
 
 export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionProps) => {
   return (
-    <Flex as="section" aria-labelledby="greenhouse-categories-title" direction="column" paddingBottom="18px">
+    <Flex
+      as="section"
+      aria-labelledby="greenhouse-categories-title"
+      direction="column"
+      paddingBottom="18px"
+    >
       <Flex
         alignItems="center"
         justifyContent="space-between"
@@ -60,6 +65,7 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
         }}
       >
         <Grid
+          pt="2px"
           gap={{ base: '12px', md: '16px' }}
           gridAutoColumns={{ base: 'minmax(282px, calc(100vw - 72px))', md: 'auto' }}
           gridAutoFlow={{ base: 'column', md: 'row' }}
@@ -69,6 +75,7 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
             lg: 'repeat(3, minmax(0, 1fr))',
             xl: 'repeat(4, minmax(0, 1fr))',
           }}
+          gridTemplateRows={{ base: 'repeat(2, auto)', md: 'none' }}
           width={{ base: 'max-content', md: '100%' }}
         >
           {homeCategories[locale].map((category) => (
