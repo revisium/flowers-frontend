@@ -1,10 +1,11 @@
 import { Box, Flex } from '@chakra-ui/react';
-import { type KeyboardEvent, useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 
+import { type CategoryDetailData } from '../AraceaeCategoryModal/types';
 import { CategoryCollectionSection } from '../CategoryCollectionSection/CategoryCollectionSection';
 import { CategoryHero } from '../CategoryHero/CategoryHero';
 import { CategoryInfoGrid } from '../CategoryInfoGrid/CategoryInfoGrid';
-import { type CategoryDetailData } from '../AraceaeCategoryModal/types';
+import { useModalFocusTrap } from './useModalFocusTrap';
 
 interface CategoryDetailModalProps {
   readonly data: CategoryDetailData;
@@ -12,60 +13,10 @@ interface CategoryDetailModalProps {
 }
 
 export const CategoryDetailModal = ({ data, onClose }: CategoryDetailModalProps) => {
-  const [isOpen, setIsOpen] = useState(false);
   const cardRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
-  const previousFocusRef = useRef<HTMLElement | null>(null);
   const titleId = `${data.latinName.toLowerCase()}-modal-title`;
-
-  useEffect(() => {
-    previousFocusRef.current =
-      document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    const frame = window.requestAnimationFrame(() => {
-      setIsOpen(true);
-      closeButtonRef.current?.focus();
-    });
-
-    return () => {
-      window.cancelAnimationFrame(frame);
-      previousFocusRef.current?.focus();
-    };
-  }, []);
-
-  const handleDialogKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === 'Escape') {
-      event.stopPropagation();
-      onClose();
-      return;
-    }
-
-    if (event.key !== 'Tab') {
-      return;
-    }
-
-    const focusableElements = cardRef.current?.querySelectorAll<HTMLElement>(
-      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
-    );
-    const focusable = Array.from(focusableElements ?? []).filter((element) => element.offsetParent);
-    const firstElement = focusable.at(0);
-    const lastElement = focusable.at(-1);
-
-    if (!firstElement || !lastElement) {
-      event.preventDefault();
-      return;
-    }
-
-    if (event.shiftKey && document.activeElement === firstElement) {
-      event.preventDefault();
-      lastElement.focus();
-      return;
-    }
-
-    if (!event.shiftKey && document.activeElement === lastElement) {
-      event.preventDefault();
-      firstElement.focus();
-    }
-  };
+  const { handleKeyDown, isOpen } = useModalFocusTrap({ cardRef, closeButtonRef, onClose });
 
   return (
     <Flex
@@ -81,7 +32,7 @@ export const CategoryDetailModal = ({ data, onClose }: CategoryDetailModalProps)
       role="dialog"
       tabIndex={-1}
       zIndex={80}
-      onKeyDown={handleDialogKeyDown}
+      onKeyDown={handleKeyDown}
     >
       <Box
         ref={cardRef}
