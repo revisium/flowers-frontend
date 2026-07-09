@@ -18,9 +18,9 @@ export const CategoryCollectionSection = ({ data }: CategoryCollectionSectionPro
       <Text
         as="h3"
         color="#25382b"
-        fontFamily="Georgia, 'Times New Roman', serif"
         fontSize="1.45rem"
         marginBottom="20px"
+        textStyle="serif"
       >
         {data.collectionTitle}
       </Text>

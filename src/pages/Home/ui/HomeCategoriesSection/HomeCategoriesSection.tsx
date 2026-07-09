@@ -2,7 +2,7 @@ import { Flex, Grid, Link, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import type { Locale } from 'src/shared/config';
 
-import { homeCategories, type HomeCategory, type HomeCopy } from '../../model/homePageData';
+import { homeCategories, type HomeCopy } from '../../model/homePageData';
 import { AraceaeCategoryModal } from '../AraceaeCategoryModal/AraceaeCategoryModal';
 import { HomeCategoryCard } from '../HomeCategoryCard/HomeCategoryCard';
 import { HomeNote } from '../HomeNote/HomeNote';
@@ -15,10 +15,8 @@ interface HomeCategoriesSectionProps {
 export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionProps) => {
   const [isAraceaeOpen, setIsAraceaeOpen] = useState(false);
 
-  const handleCategoryOpen = (category: HomeCategory) => {
-    if (category.image.endsWith('/araceae.jpg')) {
-      setIsAraceaeOpen(true);
-    }
+  const handleCategoryOpen = () => {
+    setIsAraceaeOpen(true);
   };
 
   return (
@@ -91,8 +89,8 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
           {homeCategories[locale].map((category) => (
             <HomeCategoryCard
               category={category}
-              key={category.image}
-              {...(category.image.endsWith('/araceae.jpg') ? { onOpen: handleCategoryOpen } : {})}
+              key={category.id}
+              {...(category.id === 'araceae' ? { onOpen: handleCategoryOpen } : {})}
             />
           ))}
         </Grid>

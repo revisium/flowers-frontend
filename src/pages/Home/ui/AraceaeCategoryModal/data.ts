@@ -45,7 +45,7 @@ const sharedData = {
 const ruText = {
   backLabel: 'Назад к категориям',
   closingNote: 'Ароидные - это не просто растения, это целый мир удивительных форм и адаптаций.',
-  collectionTitle: 'Растения из моей коллекции (9)',
+  collectionTitle: 'Растения из моей коллекции (10)',
   description:
     'Ароидные - одно из крупнейших семейств цветковых растений. Большинство представителей происходят из тропических и субтропических регионов и отличаются эффектными листьями, воздушными корнями и соцветиями-початками.',
   facts: [
@@ -71,7 +71,7 @@ const ruText = {
 const enText = {
   backLabel: 'Back to categories',
   closingNote: 'Aroids are more than houseplants: they are a world of remarkable forms and adaptations.',
-  collectionTitle: 'Plants in my collection (9)',
+  collectionTitle: 'Plants in my collection (10)',
   description:
     'Aroids are one of the largest families of flowering plants. Most members come from tropical and subtropical regions and are known for dramatic foliage, aerial roots, and spadix-and-spathe inflorescences.',
   facts: [

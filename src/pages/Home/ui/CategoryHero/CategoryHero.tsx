@@ -60,21 +60,21 @@ export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: Categor
       <Text
         as="h2"
         color="#1f3d2b"
-        fontFamily="Georgia, 'Times New Roman', serif"
         fontSize={{ base: '3.1rem', md: '5.25rem' }}
         fontWeight={500}
         id={titleId}
         lineHeight={0.92}
         margin={0}
+        textStyle="serif"
       >
         {data.title}
       </Text>
       <Text
         color="#6f835d"
-        fontFamily="Georgia, 'Times New Roman', serif"
         fontSize={{ base: '2rem', md: '3.1rem' }}
         lineHeight={1.05}
         marginTop="6px"
+        textStyle="serif"
       >
         {data.latinName}
       </Text>

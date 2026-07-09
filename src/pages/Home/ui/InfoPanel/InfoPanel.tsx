@@ -20,9 +20,9 @@ export const InfoPanel = ({ children, title }: InfoPanelProps) => (
     <Text
       as="h3"
       color="#25382b"
-      fontFamily="Georgia, 'Times New Roman', serif"
       fontSize="1.24rem"
       lineHeight={1.1}
+      textStyle="serif"
     >
       {title}
     </Text>

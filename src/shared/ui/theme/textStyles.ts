@@ -22,6 +22,10 @@ const weights: Record<string, string> = {
 
 const textStyleConfig: Parameters<typeof defineTextStyles>[0] = {};
 
+textStyleConfig.serif = {
+  value: { fontFamily: "Georgia, 'Times New Roman', serif" },
+};
+
 for (const [weight, fontWeight] of Object.entries(weights)) {
   for (const [size, { fontSize, lineHeight }] of Object.entries(sizes)) {
     textStyleConfig[`${weight}-${size}`] = {
