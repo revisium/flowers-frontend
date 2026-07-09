@@ -66,6 +66,7 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
           gridTemplateColumns={{
             base: 'none',
             md: 'repeat(2, minmax(0, 1fr))',
+            lg: 'repeat(3, minmax(0, 1fr))',
             xl: 'repeat(4, minmax(0, 1fr))',
           }}
           width={{ base: 'max-content', md: '100%' }}

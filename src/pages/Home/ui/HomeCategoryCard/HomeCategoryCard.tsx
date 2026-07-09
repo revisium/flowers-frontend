@@ -17,11 +17,11 @@ export const HomeCategoryCard = ({ category }: HomeCategoryCardProps) => {
       height={{ base: '126px', md: '142px', xl: '156px' }}
       display="grid"
       gridTemplateColumns={{
-        base: '90px minmax(0, 1fr)',
-        md: '106px minmax(0, 1fr)',
-        xl: '116px minmax(0, 1fr)',
+        base: '86px minmax(0, 1fr)',
+        md: '102px minmax(0, 1fr)',
+        xl: '112px minmax(0, 1fr)',
       }}
-      gap={{ base: '4px', md: '6px', xl: '8px' }}
+      gap={{ base: '2px', md: '3px', xl: '3px' }}
       alignItems="center"
       background="linear-gradient(135deg, rgba(255, 252, 245, 0.94), rgba(250, 244, 234, 0.82))"
       border="1px solid rgba(126, 104, 69, 0.14)"
@@ -87,7 +87,12 @@ export const HomeCategoryCard = ({ category }: HomeCategoryCardProps) => {
         >
           {category.name}
         </Text>
-        <Text as="span" color="#5b655a" fontSize={{ base: '0.88rem', md: '0.9rem' }} lineHeight="20px">
+        <Text
+          as="span"
+          color="#5b655a"
+          fontSize={{ base: '0.88rem', md: '0.9rem' }}
+          lineHeight="20px"
+        >
           {category.count}
         </Text>
       </Box>
