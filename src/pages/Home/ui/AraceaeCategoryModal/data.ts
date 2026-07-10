@@ -183,6 +183,8 @@ interface FamilyDetailSeed {
   readonly description: LocalizedText;
   readonly facts: LocalizedTextList;
   readonly heroImage?: string;
+  readonly heroPosition?: NonNullable<CategoryDetailData['heroPosition']>;
+  readonly heroSize?: NonNullable<CategoryDetailData['heroSize']>;
   readonly latinName: string;
   readonly origin: LocalizedText;
   readonly originMapImage?: string;
@@ -569,6 +571,8 @@ const familySeeds: Record<Exclude<CategoryId, 'araceae'>, FamilyDetailSeed> = {
       ],
     },
     heroImage: gesneriaceaeAssets.hero,
+    heroPosition: { base: 'calc(100% + 208px) top', md: 'calc(100% + 158px) top', lg: 'calc(100% + 128px) top' },
+    heroSize: { base: '590px auto', md: '730px auto', lg: '830px auto' },
     latinName: 'Gesneriaceae',
     origin: {
       en: 'Tropical and subtropical regions of Asia, Africa, Madagascar, Central America, and South America.',
@@ -885,8 +889,8 @@ const createFamilyCategoryData = (
     facts: seed.facts[locale],
     factsTitle: modalCopy[locale].factsTitle,
     heroImage: seed.heroImage ?? categoryCutout(id),
-    heroPosition: { base: 'calc(100% + 132px) top', md: 'calc(100% + 80px) top' },
-    heroSize: { base: '430px auto', md: '560px auto', lg: '640px auto' },
+    heroPosition: seed.heroPosition ?? { base: 'calc(100% + 132px) top', md: 'calc(100% + 80px) top' },
+    heroSize: seed.heroSize ?? { base: '430px auto', md: '560px auto', lg: '640px auto' },
     latinName: seed.latinName,
     origin: {
       mapImage: seed.originMapImage ?? image,
