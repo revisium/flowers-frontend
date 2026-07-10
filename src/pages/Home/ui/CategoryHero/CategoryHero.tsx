@@ -62,7 +62,7 @@ export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: Categor
         _hover={{ color: '#314034' }}
         onClick={onClose}
       >
-        <Box as="span" fontSize="20px" lineHeight={1}>
+        <Box as="span" fontSize="20px" lineHeight={1} marginBottom="3px">
           ←
         </Box>
         {data.backLabel}
