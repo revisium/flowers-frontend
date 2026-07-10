@@ -2,6 +2,31 @@ import type { Locale } from 'src/shared/config';
 
 import { type CategoryDetailData, type CategoryPlant, type CategoryTrait } from './types';
 
+type CategoryId =
+  | 'amaryllidaceae'
+  | 'apocynaceae'
+  | 'araceae'
+  | 'arecaceae'
+  | 'asparagaceae'
+  | 'asphodelaceae'
+  | 'cactaceae'
+  | 'commelinaceae'
+  | 'cycadaceae'
+  | 'gesneriaceae'
+  | 'marantaceae'
+  | 'nephrolepidaceae'
+  | 'orchidaceae'
+  | 'piperaceae'
+  | 'vitaceae';
+interface LocalizedText {
+  readonly en: string;
+  readonly ru: string;
+}
+interface LocalizedTextList {
+  readonly en: readonly string[];
+  readonly ru: readonly string[];
+}
+
 const assets = {
   aglaonema: '/plants/araceae-modal/aglaonema.jpg',
   alocasia: '/plants/araceae-modal/alocasia.jpg',
@@ -12,6 +37,9 @@ const assets = {
   philodendron: '/plants/araceae-modal/philodendron.jpg',
   spathiphyllum: '/plants/araceae-modal/spathiphyllum.jpg',
 } as const;
+
+const categoryImage = (id: CategoryId) => `/plants/categories/studio/${id}.jpg`;
+const categoryCutout = (id: CategoryId) => `/plants/categories/generated/${id}.png`;
 
 const collectionPlants = [
   { image: assets.alocasia, name: "Alocasia baginda 'Dragon Scale'" },
@@ -34,7 +62,7 @@ const createPlants = (locale: Locale): readonly CategoryPlant[] =>
 
 const createTrait = (body: string, image: string): CategoryTrait => ({ body, image });
 
-const sharedData = {
+const araceaeSharedData = {
   heroImage: assets.hero,
   heroPosition: 'calc(100% + 70px) top',
   heroSize: { base: '540px auto', md: '650px auto', lg: '700px auto' },
@@ -98,11 +126,11 @@ const createCategoryData = (
   locale: Locale,
   text: typeof ruText | typeof enText,
 ): CategoryDetailData => ({
-  ...sharedData,
+  ...araceaeSharedData,
   ...text,
   collectionPlants: createPlants(locale),
   origin: {
-    mapImage: sharedData.originMapImage,
+    mapImage: araceaeSharedData.originMapImage,
     text: text.originText,
   },
 });
@@ -110,4 +138,693 @@ const createCategoryData = (
 export const araceaeCategoryDataByLocale: Record<Locale, CategoryDetailData> = {
   en: createCategoryData('en', enText),
   ru: createCategoryData('ru', ruText),
+};
+
+interface FamilyDetailSeed {
+  readonly description: LocalizedText;
+  readonly facts: LocalizedTextList;
+  readonly latinName: string;
+  readonly origin: LocalizedText;
+  readonly plants: readonly LocalizedText[];
+  readonly traits: LocalizedTextList;
+}
+
+const familySeeds: Record<Exclude<CategoryId, 'araceae'>, FamilyDetailSeed> = {
+  amaryllidaceae: {
+    description: {
+      en: 'Amaryllis relatives are bulbous plants grown for architectural leaves and generous seasonal blooms. They store strength underground, then answer good light with clear flower stems.',
+      ru: 'Амариллисовые - луковичные растения с выразительными листьями и щедрым сезонным цветением. Они запасают силы под землей, а на хороший свет отвечают крепкими цветоносами.',
+    },
+    facts: {
+      en: [
+        'The bulb works as a reserve organ, helping the plant survive dry or cool rest periods.',
+        'Many indoor amaryllis relatives bloom after a distinct pause in watering and growth.',
+        'Flowers are often arranged in umbels, so one stem can look like a whole bouquet.',
+      ],
+      ru: [
+        'Луковица работает как запас питания и помогает переживать сухой или прохладный период покоя.',
+        'Многие комнатные амариллисовые цветут лучше после заметной паузы в поливе и росте.',
+        'Цветы часто собраны зонтиком, поэтому один цветонос выглядит как маленький букет.',
+      ],
+    },
+    latinName: 'Amaryllidaceae',
+    origin: {
+      en: 'Warm and seasonally dry regions of South America, South Africa, and the Mediterranean.',
+      ru: 'Теплые и сезонно сухие регионы Южной Америки, Южной Африки и Средиземноморья.',
+    },
+    plants: [
+      { en: 'Hippeastrum', ru: 'Гиппеаструм' },
+      { en: 'Clivia miniata', ru: 'Кливия киноварная' },
+      { en: 'Eucharis amazonica', ru: 'Эухарис амазонский' },
+      { en: 'Zephyranthes', ru: 'Зефирантес' },
+      { en: 'Narcissus', ru: 'Нарцисс' },
+    ],
+    traits: {
+      en: [
+        'Bulbs or thickened bases store moisture and nutrients.',
+        'Long strap-like leaves grow in tidy fans or rosettes.',
+        'Flowers rise on leafless stems and often open in clusters.',
+        'A rest period is usually part of the yearly rhythm.',
+      ],
+      ru: [
+        'Луковицы или утолщенные основания запасают влагу и питание.',
+        'Длинные ремневидные листья растут аккуратными веерами или розетками.',
+        'Цветы поднимаются на безлистных цветоносах и часто раскрываются группой.',
+        'Период покоя обычно входит в естественный годовой ритм.',
+      ],
+    },
+  },
+  apocynaceae: {
+    description: {
+      en: 'Dogbane family plants bring sculptural stems, glossy leaves, and fragrant starry flowers. Indoors they are loved for hoyas, desert roses, and other resilient bloomers.',
+      ru: 'Кутровые объединяют скульптурные стебли, глянцевые листья и ароматные звездчатые цветы. В доме их любят за хойи, адениумы и другие стойкие цветущие формы.',
+    },
+    facts: {
+      en: [
+        'Many members have milky sap, so pruning is best done with care.',
+        'Hoyas can flower repeatedly from the same spurs if old peduncles are left intact.',
+        'Succulent relatives store water in thick stems and prefer airy mineral soil.',
+      ],
+      ru: [
+        'У многих представителей есть млечный сок, поэтому обрезку лучше делать аккуратно.',
+        'Хойи могут цвести повторно с одних и тех же цветоносов, если их не удалять.',
+        'Суккулентные виды запасают воду в толстых стеблях и любят воздушный минеральный грунт.',
+      ],
+    },
+    latinName: 'Apocynaceae',
+    origin: {
+      en: 'Tropics and subtropics of Asia, Africa, Australia, and the Americas.',
+      ru: 'Тропики и субтропики Азии, Африки, Австралии и Америки.',
+    },
+    plants: [
+      { en: 'Hoya carnosa', ru: 'Хойя мясистая' },
+      { en: 'Adenium obesum', ru: 'Адениум тучный' },
+    ],
+    traits: {
+      en: [
+        'Milky sap is common in stems and leaves.',
+        'Flowers are often star-shaped, waxy, or strongly fragrant.',
+        'Some species trail and climb, while others form swollen caudex stems.',
+        'Most prefer bright light and careful watering.',
+      ],
+      ru: [
+        'В стеблях и листьях часто есть млечный сок.',
+        'Цветы нередко звездчатые, восковые или заметно ароматные.',
+        'Одни виды свисают и цепляются, другие формируют утолщенный каудекс.',
+        'Большинству нужен яркий свет и аккуратный полив.',
+      ],
+    },
+  },
+  arecaceae: {
+    description: {
+      en: 'Palms add a calm vertical rhythm to a room with feathered or fan-shaped fronds. They grow from a single crown and appreciate steady warmth, light, and room to unfold.',
+      ru: 'Пальмовые дают комнате спокойный вертикальный ритм перистыми или веерными листьями. Они растут из одной верхушки и ценят стабильное тепло, свет и место для раскрытия вай.',
+    },
+    facts: {
+      en: [
+        'Most palms do not branch from the trunk, so the growing point is especially important.',
+        'Young indoor palms often prefer softer light than mature outdoor specimens.',
+        'Leaf tips react quickly to dry air, salts in water, and irregular watering.',
+      ],
+      ru: [
+        'Большинство пальм не ветвится от ствола, поэтому точка роста особенно важна.',
+        'Молодые комнатные пальмы часто любят более мягкий свет, чем взрослые растения на улице.',
+        'Кончики листьев быстро реагируют на сухой воздух, соли в воде и нерегулярный полив.',
+      ],
+    },
+    latinName: 'Arecaceae',
+    origin: {
+      en: 'Mainly tropical and subtropical forests, coastlines, and islands around the world.',
+      ru: 'Преимущественно тропические и субтропические леса, побережья и острова по всему миру.',
+    },
+    plants: [{ en: 'Chamaedorea elegans', ru: 'Хамедорея изящная' }],
+    traits: {
+      en: [
+        'Leaves are feather-like or fan-shaped and unfold from the crown.',
+        'The stem is usually upright and rarely branches indoors.',
+        'Roots like consistent moisture without stagnant water.',
+        'A warm stable place helps new fronds open cleanly.',
+      ],
+      ru: [
+        'Листья перистые или веерные и разворачиваются из центральной верхушки.',
+        'Стебель обычно прямой и в комнате почти не ветвится.',
+        'Корни любят равномерную влажность без застоя воды.',
+        'Теплое стабильное место помогает новым листьям раскрываться ровно.',
+      ],
+    },
+  },
+  asparagaceae: {
+    description: {
+      en: 'The asparagus family includes easy indoor classics with rosettes, canes, and resilient root systems. These plants usually forgive small care mistakes and grow steadily in bright filtered light.',
+      ru: 'Спаржевые включают комнатную классику с розетками, стволиками и выносливыми корнями. Такие растения часто прощают небольшие ошибки ухода и стабильно растут на ярком рассеянном свету.',
+    },
+    facts: {
+      en: [
+        'The family includes familiar indoor genera such as Chlorophytum, Dracaena, Sansevieria, and Yucca.',
+        'Many species store water in thick roots, rhizomes, or firm leaves.',
+        'Spider plants make baby rosettes on long runners, which makes propagation simple.',
+      ],
+      ru: [
+        'К семейству относятся знакомые комнатные роды: хлорофитум, драцена, сансевиерия и юкка.',
+        'Многие виды запасают воду в толстых корнях, корневищах или плотных листьях.',
+        'Хлорофитум образует детки на длинных усах, поэтому его легко размножать.',
+      ],
+    },
+    latinName: 'Asparagaceae',
+    origin: {
+      en: 'Africa, Eurasia, and the Americas, from dry habitats to forest understories.',
+      ru: 'Африка, Евразия и Америка: от сухих местообитаний до лесного подлеска.',
+    },
+    plants: [{ en: 'Chlorophytum comosum', ru: 'Хлорофитум хохлатый' }],
+    traits: {
+      en: [
+        'Leaves are often narrow, leathery, or arranged in rosettes.',
+        'Thick roots and rhizomes help tolerate short dry spells.',
+        'Many species grow slowly but hold their shape for years.',
+        'Bright filtered light keeps variegation cleaner.',
+      ],
+      ru: [
+        'Листья часто узкие, кожистые или собраны в розетки.',
+        'Толстые корни и корневища помогают переживать короткую пересушку.',
+        'Многие виды растут неспешно, но годами держат форму.',
+        'Яркий рассеянный свет сохраняет вариегатность чище.',
+      ],
+    },
+  },
+  asphodelaceae: {
+    description: {
+      en: 'Asphodel relatives are built for light, drainage, and patience. Aloes and haworthias keep water in firm leaves and reward restraint more than constant attention.',
+      ru: 'Асфоделовые созданы для света, дренажа и терпения. Алоэ и хавортии держат воду в плотных листьях и лучше отвечают на сдержанный уход, чем на постоянное внимание.',
+    },
+    facts: {
+      en: [
+        'Leaf succulence lets these plants survive long dry pauses.',
+        'Rosettes can burn in harsh direct sun if moved too quickly from shade.',
+        'Offsets around the mother plant are an easy way to renew the pot.',
+      ],
+      ru: [
+        'Сочные листья помогают переживать длинные сухие паузы.',
+        'Розетки могут обгореть на прямом солнце, если резко переставить их из тени.',
+        'Детки вокруг материнского растения легко используют для обновления горшка.',
+      ],
+    },
+    latinName: 'Asphodelaceae',
+    origin: {
+      en: 'Dry and sunny regions of Africa, Madagascar, and nearby islands.',
+      ru: 'Сухие и солнечные регионы Африки, Мадагаскара и соседних островов.',
+    },
+    plants: [{ en: 'Aloe vera', ru: 'Алоэ вера' }],
+    traits: {
+      en: [
+        'Leaves are thick, pointed, and arranged in compact rosettes.',
+        'Roots need mineral, fast-draining soil.',
+        'Watering is sparse, especially in cool seasons.',
+        'Soft color changes often show how much light the plant receives.',
+      ],
+      ru: [
+        'Листья толстые, заостренные и собраны в компактные розетки.',
+        'Корням нужен минеральный, быстро просыхающий грунт.',
+        'Полив редкий, особенно в прохладный сезон.',
+        'Мягкая смена оттенка часто показывает, сколько света получает растение.',
+      ],
+    },
+  },
+  cactaceae: {
+    description: {
+      en: 'Cacti are specialists in storing water and protecting it. Their stems do the work of leaves, while spines and ribs help them handle bright dry conditions.',
+      ru: 'Кактусовые специализируются на запасе и защите воды. Их стебли выполняют работу листьев, а колючки и ребра помогают жить в ярких сухих условиях.',
+    },
+    facts: {
+      en: [
+        'Cactus spines are modified leaves that shade the stem and protect stored water.',
+        'Ribbed stems expand after rain and shrink during dry spells.',
+        'Most indoor cacti need a cool bright rest to bloom reliably.',
+      ],
+      ru: [
+        'Колючки кактусов - видоизмененные листья, которые притеняют стебель и защищают запас воды.',
+        'Ребристые стебли расширяются после дождя и сжимаются в сухой период.',
+        'Большинству комнатных кактусов для цветения нужен прохладный светлый отдых.',
+      ],
+    },
+    latinName: 'Cactaceae',
+    origin: {
+      en: 'Mostly the Americas, especially arid and seasonally dry landscapes.',
+      ru: 'Преимущественно Америка, особенно засушливые и сезонно сухие ландшафты.',
+    },
+    plants: [{ en: 'Mammillaria', ru: 'Маммиллярия' }],
+    traits: {
+      en: [
+        'Leaves are reduced to spines, while green stems photosynthesize.',
+        'Areoles produce spines, flowers, and new growth.',
+        'The potting mix should dry quickly and contain mineral particles.',
+        'More light means denser growth and stronger shape.',
+      ],
+      ru: [
+        'Листья редуцированы до колючек, а зеленые стебли фотосинтезируют.',
+        'Ареолы дают колючки, цветы и новый рост.',
+        'Смесь должна быстро просыхать и содержать минеральные частицы.',
+        'Чем больше света, тем плотнее рост и крепче форма.',
+      ],
+    },
+  },
+  commelinaceae: {
+    description: {
+      en: 'Spiderwort relatives are fast, colorful, and generous with cuttings. Their trailing stems and striped leaves make shelves and hanging pots feel instantly alive.',
+      ru: 'Коммелиновые быстрые, цветные и щедрые на черенки. Их свисающие побеги и полосатые листья мгновенно оживляют полки и подвесные кашпо.',
+    },
+    facts: {
+      en: [
+        'Tradescantias root so easily that a tired pot can be refreshed from cuttings.',
+        'Brighter light usually makes purple and silver markings more expressive.',
+        'Older stems may bare at the base, so regular pruning keeps the plant full.',
+      ],
+      ru: [
+        'Традесканции так легко укореняются, что уставший горшок можно быстро обновить черенками.',
+        'На ярком свету фиолетовые и серебристые полосы обычно становятся выразительнее.',
+        'Старые побеги могут оголяться у основания, поэтому прищипка сохраняет пышность.',
+      ],
+    },
+    latinName: 'Commelinaceae',
+    origin: {
+      en: 'Warm regions of the Americas, Africa, and Asia, often in bright forest edges.',
+      ru: 'Теплые регионы Америки, Африки и Азии, часто светлые лесные опушки.',
+    },
+    plants: [{ en: 'Tradescantia zebrina', ru: 'Традесканция зебрина' }],
+    traits: {
+      en: [
+        'Jointed stems root from nodes and trail easily.',
+        'Leaves are often striped, metallic, purple, or softly hairy.',
+        'Growth is quick, so pruning is part of normal care.',
+        'Soft stems prefer moderate watering without long drought.',
+      ],
+      ru: [
+        'Членистые стебли укореняются в узлах и легко свисают.',
+        'Листья часто полосатые, металлические, фиолетовые или мягко опушенные.',
+        'Рост быстрый, поэтому обрезка - обычная часть ухода.',
+        'Мягкие стебли любят умеренный полив без долгой засухи.',
+      ],
+    },
+  },
+  cycadaceae: {
+    description: {
+      en: 'Cycads look ancient because they are ancient in form: a sturdy trunk, a crown of stiff fronds, and very slow deliberate growth.',
+      ru: 'Саговниковые выглядят древними, потому что их форма действительно древняя: крепкий стволик, корона жестких листьев и очень медленный уверенный рост.',
+    },
+    facts: {
+      en: [
+        'Cycads are not palms, even though many indoor forms look palm-like.',
+        'New leaves often emerge together as a soft flush, then harden and darken.',
+        'They dislike frequent repotting and recover slowly from root damage.',
+      ],
+      ru: [
+        'Саговники не пальмы, хотя многие комнатные формы похожи на маленькие пальмы.',
+        'Новые листья часто выходят сразу волной, затем твердеют и темнеют.',
+        'Они не любят частую пересадку и медленно восстанавливаются после повреждения корней.',
+      ],
+    },
+    latinName: 'Cycadaceae',
+    origin: {
+      en: 'Subtropical parts of Asia, Africa, Australia, and islands of the Pacific.',
+      ru: 'Субтропические области Азии, Африки, Австралии и островов Тихого океана.',
+    },
+    plants: [{ en: 'Cycas revoluta', ru: 'Саговник поникающий' }],
+    traits: {
+      en: [
+        'A stout trunk or caudex carries a crown of stiff fronds.',
+        'Growth is slow and usually comes in seasonal flushes.',
+        'Bright light keeps the crown compact.',
+        'All parts are best kept away from pets and small children.',
+      ],
+      ru: [
+        'Толстый стволик или каудекс несет корону жестких листьев.',
+        'Рост медленный и обычно идет сезонными волнами.',
+        'Яркий свет сохраняет крону компактной.',
+        'Все части лучше держать вдали от животных и маленьких детей.',
+      ],
+    },
+  },
+  gesneriaceae: {
+    description: {
+      en: 'Gesneriads are compact flowering plants with velvety leaves and jewel-like blooms. They are perfect for windowsills where soft light and careful watering can be controlled.',
+      ru: 'Геснериевые - компактные цветущие растения с бархатными листьями и драгоценными бутонами. Они идеальны для подоконника, где можно дать мягкий свет и аккуратный полив.',
+    },
+    facts: {
+      en: [
+        'African violets, gloxinias, streptocarpus, and episcias all belong here.',
+        'Velvety leaves can spot if cold water sits on them.',
+        'Many gesneriads bloom best when the pot is not oversized.',
+      ],
+      ru: [
+        'Сенполии, глоксинии, стрептокарпусы и эписции относятся к этому семейству.',
+        'На бархатных листьях могут оставаться пятна, если на них попадает холодная вода.',
+        'Многие геснериевые цветут лучше, когда горшок не слишком большой.',
+      ],
+    },
+    latinName: 'Gesneriaceae',
+    origin: {
+      en: 'Tropical forests and mountain regions of the Americas, Africa, and Asia.',
+      ru: 'Тропические леса и горные регионы Америки, Африки и Азии.',
+    },
+    plants: [
+      { en: 'Sinningia speciosa', ru: 'Глоксиния прекрасная' },
+      { en: 'Saintpaulia', ru: 'Сенполия' },
+      { en: 'Streptocarpus', ru: 'Стрептокарпус' },
+      { en: 'Episcia cupreata', ru: 'Эписция медная' },
+      { en: 'Kohleria', ru: 'Колерия' },
+      { en: 'Achimenes', ru: 'Ахименес' },
+      { en: 'Primulina', ru: 'Примулина' },
+      { en: 'Columnea', ru: 'Колумнея' },
+    ],
+    traits: {
+      en: [
+        'Leaves are often soft, velvety, or slightly fuzzy.',
+        'Flowers are tubular, bell-shaped, or asymmetric.',
+        'Watering is careful, usually avoiding the leaf surface.',
+        'Compact roots prefer light soil and modest pot size.',
+      ],
+      ru: [
+        'Листья часто мягкие, бархатные или слегка опушенные.',
+        'Цветы трубчатые, колокольчатые или асимметричные.',
+        'Полив аккуратный, обычно без попадания на листовую пластину.',
+        'Компактные корни любят легкий грунт и умеренный размер горшка.',
+      ],
+    },
+  },
+  marantaceae: {
+    description: {
+      en: 'Prayer plant relatives are grown for living patterns: painted leaves that shift through the day. They prefer softness in everything: light, water, humidity, and temperature.',
+      ru: 'Марантовые выращивают ради живых узоров: расписные листья меняют положение в течение дня. Им нужна мягкость во всем - свете, воде, влажности и температуре.',
+    },
+    facts: {
+      en: [
+        'Many species raise or fold their leaves at night, which is why they are called prayer plants.',
+        'Leaf patterns can fade in harsh sun and crisp in dry air.',
+        'They appreciate warm rooms and dislike cold windowsills.',
+      ],
+      ru: [
+        'Многие виды поднимают или складывают листья ночью, поэтому их называют молитвенными растениями.',
+        'Узоры выгорают на жестком солнце, а края сохнут в сухом воздухе.',
+        'Они любят теплые комнаты и не любят холодные подоконники.',
+      ],
+    },
+    latinName: 'Marantaceae',
+    origin: {
+      en: 'Humid tropical forests of Central and South America, Africa, and Asia.',
+      ru: 'Влажные тропические леса Центральной и Южной Америки, Африки и Азии.',
+    },
+    plants: [
+      { en: 'Calathea orbifolia', ru: 'Калатея орбифолия' },
+      { en: 'Maranta leuconeura', ru: 'Маранта беложильчатая' },
+      { en: 'Ctenanthe setosa', ru: 'Ктенанта щетинистая' },
+    ],
+    traits: {
+      en: [
+        'Leaves carry painted stripes, spots, or feathered markings.',
+        'Nyctinastic movement changes leaf position from day to night.',
+        'Roots prefer evenly moist soil and soft water.',
+        'High humidity keeps edges cleaner.',
+      ],
+      ru: [
+        'Листья несут расписные полосы, пятна или перистые узоры.',
+        'Никтинастия меняет положение листьев днем и ночью.',
+        'Корни любят равномерно влажный грунт и мягкую воду.',
+        'Высокая влажность сохраняет края листьев аккуратнее.',
+      ],
+    },
+  },
+  nephrolepidaceae: {
+    description: {
+      en: 'Nephrolepis ferns bring fine green texture and a fresh forest mood. They do not flower; their beauty is in arching fronds, steady moisture, and soft shade.',
+      ru: 'Нефролеписовые папоротники дают тонкую зеленую фактуру и свежий лесной характер. Они не цветут: их красота в дуговидных вайях, стабильной влажности и мягкой тени.',
+    },
+    facts: {
+      en: [
+        'Ferns reproduce by spores rather than flowers and seeds.',
+        'Dry air quickly shows as brittle tips and shedding leaflets.',
+        'A hanging pot lets the fronds fall naturally on all sides.',
+      ],
+      ru: [
+        'Папоротники размножаются спорами, а не цветами и семенами.',
+        'Сухой воздух быстро проявляется ломкими кончиками и осыпанием сегментов.',
+        'В подвесном горшке вайи естественно расходятся во все стороны.',
+      ],
+    },
+    latinName: 'Nephrolepidaceae',
+    origin: {
+      en: 'Humid tropical and subtropical forests across many regions.',
+      ru: 'Влажные тропические и субтропические леса разных регионов.',
+    },
+    plants: [{ en: 'Nephrolepis exaltata', ru: 'Нефролепис возвышенный' }],
+    traits: {
+      en: [
+        'Arching fronds are divided into many small leaflets.',
+        'The plant prefers constant light moisture.',
+        'Soft filtered light prevents scorching.',
+        'Spores form on the underside of mature fronds.',
+      ],
+      ru: [
+        'Дуговидные вайи разделены на множество мелких сегментов.',
+        'Растение любит постоянную легкую влажность.',
+        'Мягкий рассеянный свет защищает от ожогов.',
+        'Споры формируются на нижней стороне зрелых вай.',
+      ],
+    },
+  },
+  orchidaceae: {
+    description: {
+      en: 'Orchids are masters of refined flowers and aerial roots. Indoor favorites like phalaenopsis grow on bark, breathe through their roots, and bloom for weeks.',
+      ru: 'Орхидные - мастера утонченных цветов и воздушных корней. Комнатные фаленопсисы растут в коре, дышат корнями и могут цвести неделями.',
+    },
+    facts: {
+      en: [
+        'Many orchids are epiphytes: they attach to trees without taking food from them.',
+        'Green or silvery roots help show when watering is needed.',
+        'One flower spike can hold blooms for several months in good conditions.',
+      ],
+      ru: [
+        'Многие орхидеи эпифиты: они крепятся к деревьям, не забирая у них питание.',
+        'Зеленые или серебристые корни помогают понять, когда нужен полив.',
+        'Один цветонос при хороших условиях может держать цветы несколько месяцев.',
+      ],
+    },
+    latinName: 'Orchidaceae',
+    origin: {
+      en: 'Nearly worldwide, with indoor species mostly from tropical forests of Asia and the Americas.',
+      ru: 'Почти по всему миру, а комнатные виды чаще из тропических лесов Азии и Америки.',
+    },
+    plants: [
+      { en: 'Phalaenopsis', ru: 'Фаленопсис' },
+      { en: 'Dendrobium', ru: 'Дендробиум' },
+      { en: 'Oncidium', ru: 'Онцидиум' },
+    ],
+    traits: {
+      en: [
+        'Flowers are bilaterally symmetrical and often long-lasting.',
+        'Aerial roots need air as much as moisture.',
+        'Many species grow in bark rather than dense soil.',
+        'Bright filtered light supports repeat blooming.',
+      ],
+      ru: [
+        'Цветы двусторонне симметричные и часто долго держатся.',
+        'Воздушным корням нужен воздух не меньше, чем влага.',
+        'Многие виды растут в коре, а не в плотной земле.',
+        'Яркий рассеянный свет помогает повторному цветению.',
+      ],
+    },
+  },
+  piperaceae: {
+    description: {
+      en: 'Pepper family houseplants are compact, tactile, and expressive in leaf shape. Peperomias especially suit small shelves because they stay neat and tolerate modest care.',
+      ru: 'Перцевые в доме компактные, фактурные и выразительные по форме листа. Особенно пеперомии хороши для небольших полок: они аккуратные и терпят умеренный уход.',
+    },
+    facts: {
+      en: [
+        'Peperomia flowers are tiny and carried on slender spikes.',
+        'Many species have succulent leaves that dislike constant wet soil.',
+        'Leaf cuttings can produce new plants in several popular peperomias.',
+      ],
+      ru: [
+        'Цветы пеперомий крошечные и собраны на тонких початках.',
+        'У многих видов сочные листья, которые не любят постоянно мокрый грунт.',
+        'У популярных пеперомий новое растение можно получить даже из листового черенка.',
+      ],
+    },
+    latinName: 'Piperaceae',
+    origin: {
+      en: 'Tropical regions of Central and South America, Africa, and Asia.',
+      ru: 'Тропические регионы Центральной и Южной Америки, Африки и Азии.',
+    },
+    plants: [{ en: 'Peperomia obtusifolia', ru: 'Пеперомия туполистная' }],
+    traits: {
+      en: [
+        'Leaves may be round, corrugated, glossy, or softly succulent.',
+        'Flower spikes are narrow and understated.',
+        'Small root systems prefer compact pots.',
+        'Moderate light keeps growth dense.',
+      ],
+      ru: [
+        'Листья бывают круглыми, морщинистыми, глянцевыми или слегка суккулентными.',
+        'Соцветия узкие и очень сдержанные.',
+        'Небольшая корневая система любит компактные горшки.',
+        'Умеренный свет сохраняет рост плотным.',
+      ],
+    },
+  },
+  vitaceae: {
+    description: {
+      en: 'Grape family climbers bring tendrils, fast growth, and a true vine silhouette. Indoors they are useful when a plant should climb, trail, or fill a support quickly.',
+      ru: 'Виноградовые дают усики, быстрый рост и настоящий силуэт лианы. В доме они хороши там, где растение должно быстро оплести опору, свисать или заполнить угол.',
+    },
+    facts: {
+      en: [
+        'Tendrils help vines grip supports without heavy stems.',
+        'Cissus is a classic indoor member that tolerates pruning well.',
+        'Fast growth means regular shaping keeps the plant decorative.',
+      ],
+      ru: [
+        'Усики помогают лианам цепляться за опору без тяжелых стеблей.',
+        'Циссус - классический комнатный представитель, который хорошо переносит обрезку.',
+        'Быстрый рост требует регулярной формировки, чтобы растение оставалось декоративным.',
+      ],
+    },
+    latinName: 'Vitaceae',
+    origin: {
+      en: 'Temperate and tropical regions worldwide, especially forest edges and climbing habitats.',
+      ru: 'Умеренные и тропические регионы мира, особенно лесные опушки и места для лазания.',
+    },
+    plants: [{ en: 'Cissus rhombifolia', ru: 'Циссус ромболистный' }],
+    traits: {
+      en: [
+        'Flexible stems climb or trail from supports.',
+        'Tendrils appear opposite leaves in many species.',
+        'Leaves are often lobed, compound, or grape-like.',
+        'Pruning encourages branching and a fuller silhouette.',
+      ],
+      ru: [
+        'Гибкие стебли карабкаются по опоре или свисают.',
+        'У многих видов усики появляются напротив листьев.',
+        'Листья часто лопастные, сложные или похожие на виноградные.',
+        'Обрезка стимулирует ветвление и более пышный силуэт.',
+      ],
+    },
+  },
+};
+
+const modalCopy = {
+  en: {
+    backLabel: 'Back to categories',
+    closingNote: 'Each family has its own rhythm; matching light, water, and soil to that rhythm keeps the collection calmer.',
+    factsTitle: 'Interesting Facts',
+    originTitle: 'Origin',
+    traitsTitle: 'Distinctive Traits',
+  },
+  ru: {
+    backLabel: 'Назад к категориям',
+    closingNote: 'У каждого семейства свой ритм; когда свет, вода и грунт совпадают с ним, коллекция чувствует себя спокойнее.',
+    factsTitle: 'Интересные факты',
+    originTitle: 'Происхождение',
+    traitsTitle: 'Отличительные признаки',
+  },
+} as const;
+
+const createFamilyCategoryData = (
+  id: Exclude<CategoryId, 'araceae'>,
+  locale: Locale,
+  title: string,
+  seed: FamilyDetailSeed,
+): CategoryDetailData => {
+  const image = categoryImage(id);
+
+  return {
+    backLabel: modalCopy[locale].backLabel,
+    closingNote: modalCopy[locale].closingNote,
+    collectionPlants: seed.plants.map((plant) => ({ image, name: plant[locale] })),
+    collectionTitle:
+      locale === 'ru'
+        ? `Растения из моей коллекции (${seed.plants.length})`
+        : `Plants in my collection (${seed.plants.length})`,
+    description: seed.description[locale],
+    facts: seed.facts[locale],
+    factsTitle: modalCopy[locale].factsTitle,
+    heroImage: categoryCutout(id),
+    heroPosition: { base: 'calc(100% + 132px) top', md: 'calc(100% + 80px) top' },
+    heroSize: { base: '430px auto', md: '560px auto', lg: '640px auto' },
+    latinName: seed.latinName,
+    origin: {
+      mapImage: image,
+      text: seed.origin[locale],
+    },
+    originTitle: modalCopy[locale].originTitle,
+    title,
+    traits: seed.traits[locale].map((body) => createTrait(body, image)),
+    traitsTitle: modalCopy[locale].traitsTitle,
+  };
+};
+
+const createFamilyDataByLocale = (
+  id: Exclude<CategoryId, 'araceae'>,
+  title: LocalizedText,
+  seed: FamilyDetailSeed,
+): Record<Locale, CategoryDetailData> => ({
+  en: createFamilyCategoryData(id, 'en', title.en, seed),
+  ru: createFamilyCategoryData(id, 'ru', title.ru, seed),
+});
+
+const familyTitles: Record<Exclude<CategoryId, 'araceae'>, LocalizedText> = {
+  amaryllidaceae: { en: 'Amaryllis family', ru: 'Амариллисовые' },
+  apocynaceae: { en: 'Dogbane family', ru: 'Кутровые' },
+  arecaceae: { en: 'Palms', ru: 'Пальмовые' },
+  asparagaceae: { en: 'Asparagus family', ru: 'Спаржевые' },
+  asphodelaceae: { en: 'Asphodel family', ru: 'Асфоделовые' },
+  cactaceae: { en: 'Cacti', ru: 'Кактусовые' },
+  commelinaceae: { en: 'Spiderwort family', ru: 'Коммелиновые' },
+  cycadaceae: { en: 'Cycads', ru: 'Саговниковые' },
+  gesneriaceae: { en: 'Gesneriad family', ru: 'Геснериевые' },
+  marantaceae: { en: 'Prayer plant family', ru: 'Марантовые' },
+  nephrolepidaceae: { en: 'Ferns', ru: 'Папоротники' },
+  orchidaceae: { en: 'Orchids', ru: 'Орхидные' },
+  piperaceae: { en: 'Pepper family', ru: 'Перцевые' },
+  vitaceae: { en: 'Grape family', ru: 'Виноградовые' },
+};
+
+export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryDetailData>> = {
+  araceae: araceaeCategoryDataByLocale,
+  amaryllidaceae: createFamilyDataByLocale(
+    'amaryllidaceae',
+    familyTitles.amaryllidaceae,
+    familySeeds.amaryllidaceae,
+  ),
+  apocynaceae: createFamilyDataByLocale('apocynaceae', familyTitles.apocynaceae, familySeeds.apocynaceae),
+  arecaceae: createFamilyDataByLocale('arecaceae', familyTitles.arecaceae, familySeeds.arecaceae),
+  asparagaceae: createFamilyDataByLocale(
+    'asparagaceae',
+    familyTitles.asparagaceae,
+    familySeeds.asparagaceae,
+  ),
+  asphodelaceae: createFamilyDataByLocale(
+    'asphodelaceae',
+    familyTitles.asphodelaceae,
+    familySeeds.asphodelaceae,
+  ),
+  cactaceae: createFamilyDataByLocale('cactaceae', familyTitles.cactaceae, familySeeds.cactaceae),
+  commelinaceae: createFamilyDataByLocale(
+    'commelinaceae',
+    familyTitles.commelinaceae,
+    familySeeds.commelinaceae,
+  ),
+  cycadaceae: createFamilyDataByLocale('cycadaceae', familyTitles.cycadaceae, familySeeds.cycadaceae),
+  gesneriaceae: createFamilyDataByLocale(
+    'gesneriaceae',
+    familyTitles.gesneriaceae,
+    familySeeds.gesneriaceae,
+  ),
+  marantaceae: createFamilyDataByLocale('marantaceae', familyTitles.marantaceae, familySeeds.marantaceae),
+  nephrolepidaceae: createFamilyDataByLocale(
+    'nephrolepidaceae',
+    familyTitles.nephrolepidaceae,
+    familySeeds.nephrolepidaceae,
+  ),
+  orchidaceae: createFamilyDataByLocale('orchidaceae', familyTitles.orchidaceae, familySeeds.orchidaceae),
+  piperaceae: createFamilyDataByLocale('piperaceae', familyTitles.piperaceae, familySeeds.piperaceae),
+  vitaceae: createFamilyDataByLocale('vitaceae', familyTitles.vitaceae, familySeeds.vitaceae),
 };
