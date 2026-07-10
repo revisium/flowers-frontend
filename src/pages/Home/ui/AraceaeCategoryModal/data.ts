@@ -60,6 +60,25 @@ const amaryllidaceaeAssets = {
   zephyranthesRosea: '/plants/amaryllidaceae-modal/zephyranthes-rosea.jpg',
 } as const;
 
+const gesneriaceaeAssets = {
+  achimenesLongiflora: '/plants/gesneriaceae-modal/achimenes-longiflora.jpg',
+  aeschynanthusPulcher: '/plants/gesneriaceae-modal/aeschynanthus-pulcher.jpg',
+  aeschynanthusRadicans: '/plants/gesneriaceae-modal/aeschynanthus-radicans.jpg',
+  chiritaTamiana: '/plants/gesneriaceae-modal/chirita-tamiana.jpg',
+  episciaCupreata: '/plants/gesneriaceae-modal/episcia-cupreata.jpg',
+  hero: '/plants/gesneriaceae-modal/hero.png',
+  kohleriaAmabilis: '/plants/gesneriaceae-modal/kohleria-amabilis.jpg',
+  originMap: '/plants/gesneriaceae-modal/origin-map.png',
+  saintpauliaIonantha: '/plants/gesneriaceae-modal/saintpaulia-ionantha.jpg',
+  sinningiaLeucotricha: '/plants/gesneriaceae-modal/sinningia-leucotricha.jpg',
+  sinningiaSpeciosa: '/plants/gesneriaceae-modal/sinningia-speciosa.jpg',
+  streptocarpus: '/plants/gesneriaceae-modal/streptocarpus.jpg',
+  traitFlowers: '/plants/gesneriaceae-modal/trait-flowers.jpg',
+  traitLeaves: '/plants/gesneriaceae-modal/trait-leaves.jpg',
+  traitRosette: '/plants/gesneriaceae-modal/trait-rosette.jpg',
+  traitSeedCapsule: '/plants/gesneriaceae-modal/trait-seed-capsule.jpg',
+} as const;
+
 const collectionPlants = [
   { image: assets.alocasia, name: "Alocasia baginda 'Dragon Scale'" },
   { image: assets.alocasia, name: "Alocasia x amazonica 'Bambino'" },
@@ -163,6 +182,7 @@ interface FamilyDetailSeed {
   readonly closingNote?: LocalizedText;
   readonly description: LocalizedText;
   readonly facts: LocalizedTextList;
+  readonly heroImage?: string;
   readonly latinName: string;
   readonly origin: LocalizedText;
   readonly originMapImage?: string;
@@ -526,51 +546,107 @@ const familySeeds: Record<Exclude<CategoryId, 'araceae'>, FamilyDetailSeed> = {
     },
   },
   gesneriaceae: {
+    closingNote: {
+      en: 'Gesneriads win with variety of form, color, and texture. They fill a home with comfort, flowers, and a tropical mood.',
+      ru: 'Геснериевые покоряют разнообразием форм, окраски и текстур. Они наполняют дом уютом, цветением и тропическим настроением!',
+    },
     description: {
-      en: 'Gesneriads are compact flowering plants with velvety leaves and jewel-like blooms. They are perfect for windowsills where soft light and careful watering can be controlled.',
-      ru: 'Геснериевые - компактные цветущие растения с бархатными листьями и драгоценными бутонами. Они идеальны для подоконника, где можно дать мягкий свет и аккуратный полив.',
+      en: 'Gesneriads are a large and diverse family of flowering plants, most of which come from tropical and subtropical regions. Many species are valued for decorative foliage and expressive blooming, which makes them popular houseplants.',
+      ru: 'Геснериевые - крупное и разнообразное семейство цветковых растений, большинство представителей которого произрастают в тропических и субтропических регионах. Многие виды ценятся за свои декоративные листья и эффектное цветение, что делает их популярными комнатными растениями.',
     },
     facts: {
       en: [
-        'African violets, gloxinias, streptocarpus, and episcias all belong here.',
-        'Velvety leaves can spot if cold water sits on them.',
-        'Many gesneriads bloom best when the pot is not oversized.',
+        'Saintpaulias, or African violets, are among the most popular houseplants in the world.',
+        'Gloxinias are famous for large velvety flowers and bright seasonal blooming.',
+        'Streptocarpus are often called cape primroses for their graceful bell-shaped flowers.',
+        'Many gesneriads like bright filtered light and do not tolerate waterlogged soil.',
       ],
       ru: [
-        'Сенполии, глоксинии, стрептокарпусы и эписции относятся к этому семейству.',
-        'На бархатных листьях могут оставаться пятна, если на них попадает холодная вода.',
-        'Многие геснериевые цветут лучше, когда горшок не слишком большой.',
+        'Сенполии (узамбарские фиалки) - одни из самых популярных комнатных растений в мире.',
+        'Глоксинии славятся крупными бархатистыми цветками и ярким цветением.',
+        'Стрептокарпусы часто называют «капскими фиалками» за их изящные колокольчатые цветы.',
+        'Многие геснериевые любят яркий рассеянный свет и не переносят переувлажнения.',
       ],
     },
+    heroImage: gesneriaceaeAssets.hero,
     latinName: 'Gesneriaceae',
     origin: {
-      en: 'Tropical forests and mountain regions of the Americas, Africa, and Asia.',
-      ru: 'Тропические леса и горные регионы Америки, Африки и Азии.',
+      en: 'Tropical and subtropical regions of Asia, Africa, Madagascar, Central America, and South America.',
+      ru: 'Тропические и субтропические регионы Азии, Африки, Мадагаскара, Центральной и Южной Америки.',
     },
+    originMapImage: gesneriaceaeAssets.originMap,
     plants: [
-      { en: 'Sinningia speciosa', ru: 'Глоксиния прекрасная' },
-      { en: 'Saintpaulia', ru: 'Сенполия' },
-      { en: 'Streptocarpus', ru: 'Стрептокарпус' },
-      { en: 'Episcia cupreata', ru: 'Эписция медная' },
-      { en: 'Kohleria', ru: 'Колерия' },
-      { en: 'Achimenes', ru: 'Ахименес' },
-      { en: 'Primulina', ru: 'Примулина' },
-      { en: 'Columnea', ru: 'Колумнея' },
+      {
+        en: 'Saintpaulia ionantha',
+        image: gesneriaceaeAssets.saintpauliaIonantha,
+        ru: 'Saintpaulia ionantha (Узамбарская фиалка)',
+      },
+      {
+        en: 'Sinningia speciosa',
+        image: gesneriaceaeAssets.sinningiaSpeciosa,
+        ru: 'Sinningia speciosa (Глоксиния)',
+      },
+      {
+        en: 'Streptocarpus',
+        image: gesneriaceaeAssets.streptocarpus,
+        ru: 'Streptocarpus (Стрептокарпус)',
+      },
+      {
+        en: 'Aeschynanthus radicans',
+        image: gesneriaceaeAssets.aeschynanthusRadicans,
+        ru: 'Aeschynanthus radicans (Эсхинантус)',
+      },
+      {
+        en: 'Aeschynanthus pulcher',
+        image: gesneriaceaeAssets.aeschynanthusPulcher,
+        ru: 'Aeschynanthus pulcher (Эсхинантус прекрасный)',
+      },
+      {
+        en: 'Kohleria amabilis',
+        image: gesneriaceaeAssets.kohleriaAmabilis,
+        ru: 'Kohleria amabilis (Колерия)',
+      },
+      {
+        en: 'Chirita tamiana',
+        image: gesneriaceaeAssets.chiritaTamiana,
+        ru: 'Chirita tamiana (Хирита)',
+      },
+      {
+        en: 'Achimenes longiflora',
+        image: gesneriaceaeAssets.achimenesLongiflora,
+        ru: 'Achimenes longiflora (Ахименес)',
+      },
+      {
+        en: 'Episcia cupreata',
+        image: gesneriaceaeAssets.episciaCupreata,
+        ru: 'Episcia cupreata (Эписция)',
+      },
+      {
+        en: 'Sinningia leucotricha',
+        image: gesneriaceaeAssets.sinningiaLeucotricha,
+        ru: 'Sinningia leucotricha (Синнингия)',
+      },
     ],
     traits: {
       en: [
-        'Leaves are often soft, velvety, or slightly fuzzy.',
-        'Flowers are tubular, bell-shaped, or asymmetric.',
-        'Watering is careful, usually avoiding the leaf surface.',
-        'Compact roots prefer light soil and modest pot size.',
+        'Leaves are often soft, fuzzy, and beautifully textured or patterned.',
+        'Flowers vary widely in shape and color: tubular, bell-shaped, funnel-shaped, or irregular.',
+        'Many species form leaf rosettes and bloom for a long time and abundantly.',
+        'Fruits are capsules with tiny seeds; many species also root easily from leaf cuttings.',
       ],
       ru: [
-        'Листья часто мягкие, бархатные или слегка опушенные.',
-        'Цветы трубчатые, колокольчатые или асимметричные.',
-        'Полив аккуратный, обычно без попадания на листовую пластину.',
-        'Компактные корни любят легкий грунт и умеренный размер горшка.',
+        'Листья часто мягкие, опушённые, с красивой текстурой и окраской.',
+        'Цветки разнообразной формы и окраски: трубчатые, колокольчатые, воронковидные или неправильные.',
+        'Многие виды образуют розетки листьев и цветут продолжительно и обильно.',
+        'Плоды - коробочки с мелкими семенами. Размножаются семенами и черенками листьев.',
       ],
     },
+    traitImages: [
+      gesneriaceaeAssets.traitLeaves,
+      gesneriaceaeAssets.traitFlowers,
+      gesneriaceaeAssets.traitRosette,
+      gesneriaceaeAssets.traitSeedCapsule,
+    ],
   },
   marantaceae: {
     description: {
@@ -808,7 +884,7 @@ const createFamilyCategoryData = (
     description: seed.description[locale],
     facts: seed.facts[locale],
     factsTitle: modalCopy[locale].factsTitle,
-    heroImage: categoryCutout(id),
+    heroImage: seed.heroImage ?? categoryCutout(id),
     heroPosition: { base: 'calc(100% + 132px) top', md: 'calc(100% + 80px) top' },
     heroSize: { base: '430px auto', md: '560px auto', lg: '640px auto' },
     latinName: seed.latinName,
