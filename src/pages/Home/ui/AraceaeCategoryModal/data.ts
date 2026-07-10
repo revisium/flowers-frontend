@@ -26,6 +26,9 @@ interface LocalizedTextList {
   readonly en: readonly string[];
   readonly ru: readonly string[];
 }
+interface LocalizedPlant extends LocalizedText {
+  readonly image?: string;
+}
 
 const assets = {
   aglaonema: '/plants/araceae-modal/aglaonema.jpg',
@@ -40,6 +43,22 @@ const assets = {
 
 const categoryImage = (id: CategoryId) => `/plants/categories/studio/${id}.jpg`;
 const categoryCutout = (id: CategoryId) => `/plants/categories/generated/${id}.png`;
+
+const amaryllidaceaeAssets = {
+  cliviaMiniata: '/plants/amaryllidaceae-modal/clivia-miniata.jpg',
+  crinumAsiaticum: '/plants/amaryllidaceae-modal/crinum-asiaticum.jpg',
+  hippeastrumAlfresco: '/plants/amaryllidaceae-modal/hippeastrum-alfresco.jpg',
+  hippeastrumAppleBlossom: '/plants/amaryllidaceae-modal/hippeastrum-apple-blossom.jpg',
+  hippeastrumRedLion: '/plants/amaryllidaceae-modal/hippeastrum-red-lion.jpg',
+  narcissusTeteATete: '/plants/amaryllidaceae-modal/narcissus-tete-a-tete.jpg',
+  originMap: '/plants/amaryllidaceae-modal/origin-map.png',
+  traitBulb: '/plants/amaryllidaceae-modal/trait-bulb.jpg',
+  traitFlowers: '/plants/amaryllidaceae-modal/trait-flowers.jpg',
+  traitFragrance: '/plants/amaryllidaceae-modal/trait-fragrance.jpg',
+  traitLeaves: '/plants/amaryllidaceae-modal/trait-leaves.jpg',
+  zephyranthesCitrina: '/plants/amaryllidaceae-modal/zephyranthes-citrina.jpg',
+  zephyranthesRosea: '/plants/amaryllidaceae-modal/zephyranthes-rosea.jpg',
+} as const;
 
 const collectionPlants = [
   { image: assets.alocasia, name: "Alocasia baginda 'Dragon Scale'" },
@@ -141,58 +160,101 @@ export const araceaeCategoryDataByLocale: Record<Locale, CategoryDetailData> = {
 };
 
 interface FamilyDetailSeed {
+  readonly closingNote?: LocalizedText;
   readonly description: LocalizedText;
   readonly facts: LocalizedTextList;
   readonly latinName: string;
   readonly origin: LocalizedText;
-  readonly plants: readonly LocalizedText[];
+  readonly originMapImage?: string;
+  readonly plants: readonly LocalizedPlant[];
   readonly traits: LocalizedTextList;
+  readonly traitImages?: readonly string[];
 }
 
 const familySeeds: Record<Exclude<CategoryId, 'araceae'>, FamilyDetailSeed> = {
   amaryllidaceae: {
+    closingNote: {
+      en: 'Amaryllis relatives combine elegance, scent, and vivid seasonal blooms. Add a little tropical charm to your home.',
+      ru: 'Амариллисовые - это сочетание изящества, аромата и яркого цветения. Добавьте немного тропического очарования в ваш дом!',
+    },
     description: {
-      en: 'Amaryllis relatives are bulbous plants grown for architectural leaves and generous seasonal blooms. They store strength underground, then answer good light with clear flower stems.',
-      ru: 'Амариллисовые - луковичные растения с выразительными листьями и щедрым сезонным цветением. Они запасают силы под землей, а на хороший свет отвечают крепкими цветоносами.',
+      en: 'Amaryllis relatives are monocot flowering plants that include many decorative bulbous species. They are known for expressive flowers, varied forms, and easy-going seasonal care.',
+      ru: 'Амариллисовые - семейство однодольных цветковых растений, включающее множество декоративных луковичных видов. Они известны своими эффектными цветами, разнообразием форм и неприхотливостью в уходе.',
     },
     facts: {
       en: [
-        'The bulb works as a reserve organ, helping the plant survive dry or cool rest periods.',
-        'Many indoor amaryllis relatives bloom after a distinct pause in watering and growth.',
-        'Flowers are often arranged in umbels, so one stem can look like a whole bouquet.',
+        'The family includes more than 1,600 species in roughly 75 genera.',
+        'Hippeastrum is a beloved houseplant, though in nature it comes from South America.',
+        'Narcissus and Hippeastrum are also members of this family.',
+        'Some species, such as Clivia, bloom in winter and brighten the home during colder months.',
       ],
       ru: [
-        'Луковица работает как запас питания и помогает переживать сухой или прохладный период покоя.',
-        'Многие комнатные амариллисовые цветут лучше после заметной паузы в поливе и росте.',
-        'Цветы часто собраны зонтиком, поэтому один цветонос выглядит как маленький букет.',
+        'В семейство входит более 1600 видов в 75 родах.',
+        'Амариллис (Hippeastrum) - популярное комнатное растение, хотя в природе он произрастает только в Южной Америке.',
+        'Нарцисс и гиппеаструм - тоже представители этого семейства.',
+        'Некоторые виды, например, кливия, цветут зимой, украшая дом в холодное время года.',
       ],
     },
     latinName: 'Amaryllidaceae',
     origin: {
-      en: 'Warm and seasonally dry regions of South America, South Africa, and the Mediterranean.',
-      ru: 'Теплые и сезонно сухие регионы Южной Америки, Южной Африки и Средиземноморья.',
+      en: 'The genera occur mainly in tropical and subtropical regions of the Americas, South Africa, and the Mediterranean.',
+      ru: 'Роды в основном из тропических и субтропических регионов Америки, Южной Африки и Средиземноморья.',
     },
+    originMapImage: amaryllidaceaeAssets.originMap,
     plants: [
-      { en: 'Hippeastrum', ru: 'Гиппеаструм' },
-      { en: 'Clivia miniata', ru: 'Кливия киноварная' },
-      { en: 'Eucharis amazonica', ru: 'Эухарис амазонский' },
-      { en: 'Zephyranthes', ru: 'Зефирантес' },
-      { en: 'Narcissus', ru: 'Нарцисс' },
+      {
+        en: "Hippeastrum 'Red Lion'",
+        image: amaryllidaceaeAssets.hippeastrumRedLion,
+        ru: "Hippeastrum 'Red Lion'",
+      },
+      {
+        en: "Hippeastrum 'Apple Blossom'",
+        image: amaryllidaceaeAssets.hippeastrumAppleBlossom,
+        ru: "Hippeastrum 'Apple Blossom'",
+      },
+      {
+        en: "Hippeastrum 'Alfresco'",
+        image: amaryllidaceaeAssets.hippeastrumAlfresco,
+        ru: "Hippeastrum 'Alfresco'",
+      },
+      { en: 'Clivia miniata', image: amaryllidaceaeAssets.cliviaMiniata, ru: 'Clivia miniata' },
+      {
+        en: 'Zephyranthes citrina',
+        image: amaryllidaceaeAssets.zephyranthesCitrina,
+        ru: 'Zephyranthes citrina',
+      },
+      {
+        en: 'Zephyranthes rosea',
+        image: amaryllidaceaeAssets.zephyranthesRosea,
+        ru: 'Zephyranthes rosea',
+      },
+      {
+        en: "Narcissus 'Tete-a-Tete'",
+        image: amaryllidaceaeAssets.narcissusTeteATete,
+        ru: "Narcissus 'Tete-a-Tete'",
+      },
+      { en: 'Crinum asiaticum', image: amaryllidaceaeAssets.crinumAsiaticum, ru: 'Crinum asiaticum' },
     ],
     traits: {
       en: [
-        'Bulbs or thickened bases store moisture and nutrients.',
-        'Long strap-like leaves grow in tidy fans or rosettes.',
-        'Flowers rise on leafless stems and often open in clusters.',
-        'A rest period is usually part of the yearly rhythm.',
+        'Bulbous plants with an underground bulb.',
+        'Leaves are usually basal, linear, and strap-shaped.',
+        'Flowers are large, often funnel-shaped or tubular, gathered in umbels or brush-like clusters.',
+        'Many species have a pleasant fragrance.',
       ],
       ru: [
-        'Луковицы или утолщенные основания запасают влагу и питание.',
-        'Длинные ремневидные листья растут аккуратными веерами или розетками.',
-        'Цветы поднимаются на безлистных цветоносах и часто раскрываются группой.',
-        'Период покоя обычно входит в естественный годовой ритм.',
+        'Луковичные растения с подземной луковицей.',
+        'Листья чаще всего прикорневые, линейные, ремневидные.',
+        'Цветки крупные, часто воронковидные или трубчатые, собраны в зонтичные или кистевидные соцветия.',
+        'Многие виды обладают приятным ароматом.',
       ],
     },
+    traitImages: [
+      amaryllidaceaeAssets.traitBulb,
+      amaryllidaceaeAssets.traitLeaves,
+      amaryllidaceaeAssets.traitFlowers,
+      amaryllidaceaeAssets.traitFragrance,
+    ],
   },
   apocynaceae: {
     description: {
@@ -737,8 +799,8 @@ const createFamilyCategoryData = (
 
   return {
     backLabel: modalCopy[locale].backLabel,
-    closingNote: modalCopy[locale].closingNote,
-    collectionPlants: seed.plants.map((plant) => ({ image, name: plant[locale] })),
+    closingNote: seed.closingNote?.[locale] ?? modalCopy[locale].closingNote,
+    collectionPlants: seed.plants.map((plant) => ({ image: plant.image ?? image, name: plant[locale] })),
     collectionTitle:
       locale === 'ru'
         ? `Растения из моей коллекции (${seed.plants.length})`
@@ -751,12 +813,14 @@ const createFamilyCategoryData = (
     heroSize: { base: '430px auto', md: '560px auto', lg: '640px auto' },
     latinName: seed.latinName,
     origin: {
-      mapImage: image,
+      mapImage: seed.originMapImage ?? image,
       text: seed.origin[locale],
     },
     originTitle: modalCopy[locale].originTitle,
     title,
-    traits: seed.traits[locale].map((body) => createTrait(body, image)),
+    traits: seed.traits[locale].map((body, index) =>
+      createTrait(body, seed.traitImages?.[index] ?? image),
+    ),
     traitsTitle: modalCopy[locale].traitsTitle,
   };
 };
