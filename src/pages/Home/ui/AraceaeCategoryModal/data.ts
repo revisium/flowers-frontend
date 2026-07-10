@@ -79,6 +79,26 @@ const gesneriaceaeAssets = {
   traitSeedCapsule: '/plants/gesneriaceae-modal/trait-seed-capsule.jpg',
 } as const;
 
+const marantaceaeAssets = {
+  calatheaLancifolia: '/plants/marantaceae-modal/calathea-lancifolia.jpg',
+  calatheaMakoyana: '/plants/marantaceae-modal/calathea-makoyana.jpg',
+  calatheaOrnata: '/plants/marantaceae-modal/calathea-ornata.jpg',
+  ctenantheBurleMarxii: '/plants/marantaceae-modal/ctenanthe-burle-marxii.jpg',
+  goeppertiaInsignis: '/plants/marantaceae-modal/goeppertia-insignis.jpg',
+  goeppertiaZebrina: '/plants/marantaceae-modal/goeppertia-zebrina.jpg',
+  hero: '/plants/marantaceae-modal/hero.png',
+  marantaKerchoveana: '/plants/marantaceae-modal/maranta-kerchoveana.jpg',
+  marantaLeuconeura: '/plants/marantaceae-modal/maranta-leuconeura.jpg',
+  originMap: '/plants/marantaceae-modal/origin-map.png',
+  stromantheSanguinea: '/plants/marantaceae-modal/stromanthe-sanguinea.jpg',
+  stromantheTriostar: '/plants/marantaceae-modal/stromanthe-triostar.jpg',
+  traitFlowers: '/plants/marantaceae-modal/trait-flowers.jpg',
+  traitHumidity: '/plants/marantaceae-modal/trait-humidity.jpg',
+  traitNyctinasty: '/plants/marantaceae-modal/trait-nyctinasty.jpg',
+  traitPattern: '/plants/marantaceae-modal/trait-pattern.jpg',
+  traitUnderside: '/plants/marantaceae-modal/trait-underside.jpg',
+} as const;
+
 const collectionPlants = [
   { image: assets.alocasia, name: "Alocasia baginda 'Dragon Scale'" },
   { image: assets.alocasia, name: "Alocasia x amazonica 'Bambino'" },
@@ -653,46 +673,112 @@ const familySeeds: Record<Exclude<CategoryId, 'araceae'>, FamilyDetailSeed> = {
     ],
   },
   marantaceae: {
+    closingNote: {
+      en: 'Marantaceae are perfect for those who love beauty in details. Their leaves move with their own rhythm and make every day at home feel special.',
+      ru: 'Марантовые - идеальный выбор для тех, кто любит красоту в деталях. Их листья живут своей жизнью и делают каждый день в вашем доме особенным!',
+    },
     description: {
-      en: 'Prayer plant relatives are grown for living patterns: painted leaves that shift through the day. They prefer softness in everything: light, water, humidity, and temperature.',
-      ru: 'Марантовые выращивают ради живых узоров: расписные листья меняют положение в течение дня. Им нужна мягкость во всем - свете, воде, влажности и температуре.',
+      en: 'Marantaceae are tropical plants known for spectacular patterned leaves and unique behavior: many fold their leaves at night and open them again in the morning. They are valued for decorative foliage, calm care habits, and the ability to make a home feel cozy.',
+      ru: 'Марантовые - семейство тропических растений, известных своими эффектными узорчатыми листьями и уникальным поведением: многие из них складывают листья на ночь и открывают их утром. Эти растения ценятся за декоративность, неприхотливость в уходе и способность создавать уютную атмосферу в доме.',
     },
     facts: {
       en: [
-        'Many species raise or fold their leaves at night, which is why they are called prayer plants.',
-        'Leaf patterns can fade in harsh sun and crisp in dry air.',
-        'They appreciate warm rooms and dislike cold windowsills.',
+        'Marantaceae are often called prayer plants because their leaves move upward in the evening.',
+        'Calathea, Maranta, and Ctenanthe are the most popular genera of this family in indoor plant collections.',
+        'The plants are sensitive to water quality and prefer soft, settled water.',
+        'Marantaceae help humidify the air thanks to their large leaf surface.',
       ],
       ru: [
-        'Многие виды поднимают или складывают листья ночью, поэтому их называют молитвенными растениями.',
-        'Узоры выгорают на жестком солнце, а края сохнут в сухом воздухе.',
-        'Они любят теплые комнаты и не любят холодные подоконники.',
+        'Марантовые часто называют «молящимися растениями» за движение листьев вверх вечером.',
+        'Калатея, маранта и ктенанта - самые популярные роды этого семейства в комнатном цветоводстве.',
+        'Растения чувствительны к качеству воды: предпочитают мягкую, отстоянную воду.',
+        'Марантовые отлично увлажняют воздух благодаря крупной площади листьев.',
       ],
     },
+    heroImage: marantaceaeAssets.hero,
+    heroPosition: { base: 'calc(100% + 210px) top', md: 'calc(100% + 150px) top', lg: 'calc(100% + 105px) top' },
+    heroSize: { base: '600px auto', md: '740px auto', lg: '850px auto' },
     latinName: 'Marantaceae',
     origin: {
-      en: 'Humid tropical forests of Central and South America, Africa, and Asia.',
-      ru: 'Влажные тропические леса Центральной и Южной Америки, Африки и Азии.',
+      en: 'Tropical regions of Central and South America, especially the humid forests of Brazil.',
+      ru: 'Тропические регионы Центральной и Южной Америки, особенно влажные леса Бразилии.',
     },
+    originMapImage: marantaceaeAssets.originMap,
     plants: [
-      { en: 'Calathea orbifolia', ru: 'Калатея орбифолия' },
-      { en: 'Maranta leuconeura', ru: 'Маранта беложильчатая' },
-      { en: 'Ctenanthe setosa', ru: 'Ктенанта щетинистая' },
+      {
+        en: 'Maranta leuconeura',
+        image: marantaceaeAssets.marantaLeuconeura,
+        ru: 'Maranta leuconeura (Маранта беложильчатая)',
+      },
+      {
+        en: "Maranta leuconeura 'Kerchoveana'",
+        image: marantaceaeAssets.marantaKerchoveana,
+        ru: "Maranta leuconeura 'Kerchoveana'",
+      },
+      {
+        en: 'Calathea makoyana',
+        image: marantaceaeAssets.calatheaMakoyana,
+        ru: 'Calathea makoyana (Калатея Макояна)',
+      },
+      {
+        en: 'Calathea ornata',
+        image: marantaceaeAssets.calatheaOrnata,
+        ru: 'Calathea ornata (Калатея орната)',
+      },
+      {
+        en: 'Calathea lancifolia',
+        image: marantaceaeAssets.calatheaLancifolia,
+        ru: 'Calathea lancifolia (Калатея лансифолия)',
+      },
+      {
+        en: 'Ctenanthe burle-marxii',
+        image: marantaceaeAssets.ctenantheBurleMarxii,
+        ru: 'Ctenanthe burle-marxii (Ктенанта Бурле-Маркса)',
+      },
+      {
+        en: 'Stromanthe sanguinea',
+        image: marantaceaeAssets.stromantheSanguinea,
+        ru: 'Stromanthe sanguinea (Строманта кроваво-красная)',
+      },
+      {
+        en: "Stromanthe 'Triostar'",
+        image: marantaceaeAssets.stromantheTriostar,
+        ru: "Stromanthe 'Triostar' (Строманта Триостар)",
+      },
+      {
+        en: 'Goeppertia insignis',
+        image: marantaceaeAssets.goeppertiaInsignis,
+        ru: 'Goeppertia insignis (Геппертия инсигнис)',
+      },
+      {
+        en: 'Goeppertia zebrina',
+        image: marantaceaeAssets.goeppertiaZebrina,
+        ru: 'Goeppertia zebrina (Геппертия зебрина)',
+      },
     ],
     traits: {
       en: [
-        'Leaves carry painted stripes, spots, or feathered markings.',
-        'Nyctinastic movement changes leaf position from day to night.',
-        'Roots prefer evenly moist soil and soft water.',
-        'High humidity keeps edges cleaner.',
+        'Leaves have bright patterns: stripes, spots, herringbone shapes, and feathered markings.',
+        'Many species fold their leaves at night in a movement called nyctinasty.',
+        'The underside of the leaves is often purple or red, with contrasting shades.',
+        'They prefer humid air and a stable temperature.',
+        'Flowers are small and modest, gathered in spike-like inflorescences.',
       ],
       ru: [
-        'Листья несут расписные полосы, пятна или перистые узоры.',
-        'Никтинастия меняет положение листьев днем и ночью.',
-        'Корни любят равномерно влажный грунт и мягкую воду.',
-        'Высокая влажность сохраняет края листьев аккуратнее.',
+        'Листья с ярким рисунком: полосы, пятна, «ёлочка», перышки.',
+        'Многие виды складывают листья на ночь (никтинастия).',
+        'Нижняя сторона листьев часто окрашена в фиолетовые или красноватые оттенки.',
+        'Предпочитают влажный воздух и стабильную температуру.',
+        'Цветки мелкие, невзрачные, собраны в колосовидные соцветия.',
       ],
     },
+    traitImages: [
+      marantaceaeAssets.traitPattern,
+      marantaceaeAssets.traitNyctinasty,
+      marantaceaeAssets.traitUnderside,
+      marantaceaeAssets.traitHumidity,
+      marantaceaeAssets.traitFlowers,
+    ],
   },
   nephrolepidaceae: {
     description: {
