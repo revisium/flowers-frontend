@@ -92,51 +92,74 @@
     ]
   },
   "apocynaceae": {
+    "closingNote": {
+      "en": "Dogbane plants combine beauty, resilience, and surprising forms. They bring memorable blooms and character to any collection.",
+      "ru": "Кутровые - это красота, выносливость и удивительное разнообразие форм. Они украсят ваш дом и подарят незабываемое цветение!"
+    },
     "description": {
-      "en": "Dogbane family plants bring sculptural stems, glossy leaves, and fragrant starry flowers. Indoors they are loved for hoyas, desert roses, and other resilient bloomers.",
-      "ru": "Кутровые объединяют скульптурные стебли, глянцевые листья и ароматные звездчатые цветы. В доме их любят за хойи, адениумы и другие стойкие цветущие формы."
+      "en": "Dogbane is a broad family of flowering plants that includes vines, shrubs, and trees. Many species are valued for their beautiful, often fragrant flowers, unusual forms, and resilience. Some relatives have useful properties and are used in medicine.",
+      "ru": "Кутровые - обширное семейство цветковых растений, включающее лианы, кустарники и деревья. Многие виды ценятся за красивые, часто ароматные цветки необычной формы и неприхотливость. Некоторые представители обладают полезными свойствами и используются в медицине."
     },
     "facts": {
       "en": [
-        "Many members have milky sap, so pruning is best done with care.",
-        "Hoyas can flower repeatedly from the same spurs if old peduncles are left intact.",
-        "Succulent relatives store water in thick stems and prefer airy mineral soil."
+        "Hoyas are known for long-lasting waxy blooms and a pleasant fragrance.",
+        "Stapelia attracts pollinators with a scent resembling decaying flesh.",
+        "Catharanthus roseus is a popular garden plant with medicinal properties.",
+        "Many dogbane plants produce milky sap that can be toxic.",
+        "Their seeds often have silky tufts that help them travel in the wind."
       ],
       "ru": [
-        "У многих представителей есть млечный сок, поэтому обрезку лучше делать аккуратно.",
-        "Хойи могут цвести повторно с одних и тех же цветоносов, если их не удалять.",
-        "Суккулентные виды запасают воду в толстых стеблях и любят воздушный минеральный грунт."
+        "Хойи (восковой плющ) известны своими долговечными цветками и приятным ароматом.",
+        "Стапелии и орхидеи-падальщики привлекают опылителей запахом разлагающегося мяса.",
+        "Катарантус розовый - популярное садовое растение с лекарственными свойствами.",
+        "Многие кутровые выделяют млечный сок, который может быть ядовитым.",
+        "Семена кутровых имеют шелковистый хохолок, благодаря которому они переносятся ветром."
       ]
     },
+    "heroImage": "/plants/apocynaceae-modal/hero.png",
+    "heroPosition": { "base": "calc(100% + 160px) top", "md": "calc(100% + 80px) top", "lg": "calc(100% + 18px) top" },
+    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
     "latinName": "Apocynaceae",
     "origin": {
-      "en": "Tropics and subtropics of Asia, Africa, Australia, and the Americas.",
-      "ru": "Тропики и субтропики Азии, Африки, Австралии и Америки."
+      "en": "Tropical and subtropical regions of Asia, Africa, Australia, Indian Ocean islands, and the Americas.",
+      "ru": "Тропические и субтропические регионы Азии, Африки, Австралии, островов Индийского океана, а также Америки."
     },
+    "originMapImage": "/plants/apocynaceae-modal/origin-map.png",
     "plants": [
-      {
-        "en": "Hoya carnosa",
-        "ru": "Хойя мясистая"
-      },
-      {
-        "en": "Adenium obesum",
-        "ru": "Адениум тучный"
-      }
+      { "en": "Hoya carnosa", "image": "/plants/apocynaceae-modal/hoya-carnosa.png", "ru": "Хойя карноза (Hoya carnosa)" },
+      { "en": "Hoya multiflora", "image": "/plants/apocynaceae-modal/hoya-multiflora.png", "ru": "Хойя мультифлора (Hoya multiflora)" },
+      { "en": "Allamanda cathartica", "image": "/plants/apocynaceae-modal/allamanda-cathartica.png", "ru": "Алламанда (Allamanda cathartica)" },
+      { "en": "Stephanotis floribunda", "image": "/plants/apocynaceae-modal/stephanotis-floribunda.png", "ru": "Стефанотис флорибунда (Stephanotis floribunda)" },
+      { "en": "Catharanthus roseus", "image": "/plants/apocynaceae-modal/catharanthus-roseus.png", "ru": "Катарантус розовый (Catharanthus roseus)" },
+      { "en": "Stapelia gigantea", "image": "/plants/apocynaceae-modal/stapelia-gigantea.png", "ru": "Стапелия гигантская (Stapelia gigantea)" },
+      { "en": "Ceropegia woodii", "image": "/plants/apocynaceae-modal/ceropegia-woodii.png", "ru": "Церопегия Вуда (Ceropegia woodii)" },
+      { "en": "Plumeria alba", "image": "/plants/apocynaceae-modal/plumeria-alba.png", "ru": "Плюмерия белая (Plumeria alba)" },
+      { "en": "Mandevilla splendens", "image": "/plants/apocynaceae-modal/mandevilla-splendens.png", "ru": "Мандевилла (Mandevilla splendens)" },
+      { "en": "Euphorbia trigona", "image": "/plants/apocynaceae-modal/euphorbia-trigona.png", "ru": "Эуфорбия тригона (Euphorbia trigona)" }
     ],
     "traits": {
       "en": [
-        "Milky sap is common in stems and leaves.",
-        "Flowers are often star-shaped, waxy, or strongly fragrant.",
-        "Some species trail and climb, while others form swollen caudex stems.",
-        "Most prefer bright light and careful watering."
+        "Flowers may be regular or irregular, often with a tubular corolla and an unusual crown.",
+        "Milky sap occurs in the tissues of most representatives.",
+        "Leaves are simple, entire, often leathery, with a pronounced vein.",
+        "The fruits are paired leaflets with many silky-haired seeds.",
+        "Many species are vines with twining or climbing shoots."
       ],
       "ru": [
-        "В стеблях и листьях часто есть млечный сок.",
-        "Цветы нередко звездчатые, восковые или заметно ароматные.",
-        "Одни виды свисают и цепляются, другие формируют утолщенный каудекс.",
-        "Большинству нужен яркий свет и аккуратный полив."
+        "Цветки правильные или неправильные, часто с трубчатым венчиком и необычной коронкой.",
+        "Млечный сок содержится в тканях большинства представителей.",
+        "Листья простые, цельнокрайние, часто кожистые, с выраженной жилкой.",
+        "Плоды - парные листовки (фолликулы) с множеством семян с хохолком.",
+        "Многие виды - лианы с цепляющимися или вьющимися побегами."
       ]
-    }
+    },
+    "traitImages": [
+      "/plants/apocynaceae-modal/hoya-carnosa.png",
+      "/plants/apocynaceae-modal/stapelia-gigantea.png",
+      "/plants/apocynaceae-modal/plumeria-alba.png",
+      "/plants/apocynaceae-modal/euphorbia-trigona.png",
+      "/plants/apocynaceae-modal/mandevilla-splendens.png"
+    ]
   },
   "arecaceae": {
     "description": {
