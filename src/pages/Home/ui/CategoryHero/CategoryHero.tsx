@@ -31,6 +31,7 @@ export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: Categor
 
   return (
     <Box
+      background="linear-gradient(135deg, #fffdf7, #f8f2e6)"
       minHeight={{ base: '340px', md: '410px', lg: '497px' }}
       overflow="hidden"
       padding={{ base: '18px 18px 22px', md: '38px 48px 18px' }}

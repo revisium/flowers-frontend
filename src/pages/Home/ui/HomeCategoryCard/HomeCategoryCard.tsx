@@ -76,9 +76,9 @@ export const HomeCategoryCard = ({ category, onOpen }: HomeCategoryCardProps) =>
           alt=""
           height="100%"
           objectFit="cover"
-          objectPosition="left center"
+          objectPosition={category.id === 'bromeliaceae' ? 'center' : 'left center'}
           src={category.image}
-          transform="scale(1.3)"
+          transform={category.id === 'bromeliaceae' ? 'scale(1)' : 'scale(1.3)'}
           transformOrigin="left center"
           width="100%"
         />
