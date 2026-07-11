@@ -844,6 +844,9 @@
         "В подвесном горшке вайи естественно расходятся во все стороны."
       ]
     },
+    "heroImage": "/plants/nephrolepidaceae-modal/hero.png",
+    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 12px) top" },
+    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
     "latinName": "Nephrolepidaceae",
     "origin": {
       "en": "Humid tropical and subtropical forests across many regions.",
