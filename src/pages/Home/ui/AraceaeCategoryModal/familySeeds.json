@@ -833,55 +833,122 @@
     }
   },
   "orchidaceae": {
+    "closingNote": {
+      "en": "Orchids are a symbol of elegance and nature's perfection. Their extraordinary blooms inspire collectors all over the world.",
+      "ru": "Орхидеи - символ изящества и совершенства природы. Они вдохновляют коллекционеров по всему миру своей красотой и разнообразием!"
+    },
     "description": {
-      "en": "Orchids are masters of refined flowers and aerial roots. Indoor favorites like phalaenopsis grow on bark, breathe through their roots, and bloom for weeks.",
-      "ru": "Орхидные - мастера утонченных цветов и воздушных корней. Комнатные фаленопсисы растут в коре, дышат корнями и могут цвести неделями."
+      "en": "Orchids are one of the largest families of flowering plants. They amaze with the diversity of forms, colours, and sizes, and are valued for the refined beauty of their blooms, delicate fragrance, and ability to adapt to very different habitats.",
+      "ru": "Орхидные - одно из самых крупных семейств цветковых растений. Они поражают разнообразием форм, расцветок и размеров. Орхидеи ценятся за изысканную красоту цветков, утончённый аромат и способность адаптироваться к самым разным условиям - от тропических лесов до горных склонов."
     },
     "facts": {
       "en": [
-        "Many orchids are epiphytes: they attach to trees without taking food from them.",
-        "Green or silvery roots help show when watering is needed.",
-        "One flower spike can hold blooms for several months in good conditions."
+        "Orchidaceae includes more than 25,000 species and thousands of hybrids.",
+        "Vanilla is the only orchid widely used in cooking.",
+        "The smallest orchid flowers can be less than 2 mm across.",
+        "Some orchids can live for decades, with individual species exceeding 50 years.",
+        "A single fruit may contain millions of dust-like seeds."
       ],
       "ru": [
-        "Многие орхидеи эпифиты: они крепятся к деревьям, не забирая у них питание.",
-        "Зеленые или серебристые корни помогают понять, когда нужен полив.",
-        "Один цветонос при хороших условиях может держать цветы несколько месяцев."
+        "Орхидные насчитывают более 25 000 видов и тысячи гибридов.",
+        "Ваниль - единственная орхидея, которую широко используют в кулинарии.",
+        "Самая маленькая орхидея - Platystele jungermannioides, её цветки меньше 2 мм.",
+        "Орхидеи могут жить десятилетиями: некоторые виды - более 50 лет.",
+        "Семена орхидей настолько малы, что в одном плоде их может быть до нескольких миллионов."
       ]
+    },
+    "heroImage": "/plants/orchidaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 78px) top",
+      "lg": "calc(100% + 22px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "730px auto",
+      "lg": "900px auto"
     },
     "latinName": "Orchidaceae",
     "origin": {
-      "en": "Nearly worldwide, with indoor species mostly from tropical forests of Asia and the Americas.",
-      "ru": "Почти по всему миру, а комнатные виды чаще из тропических лесов Азии и Америки."
+      "en": "Almost every continent except Antarctica, with the greatest diversity in tropical Asia, South America, Central America, Africa, Australia, and Pacific islands.",
+      "ru": "Практически все континенты, кроме Антарктиды. Наибольшее разнообразие орхидных - в тропиках Азии, Южной и Центральной Америки, Африки, Австралии и островов Тихого океана."
     },
+    "originMapImage": "/plants/orchidaceae-modal/origin-map.png",
     "plants": [
       {
-        "en": "Phalaenopsis",
-        "ru": "Фаленопсис"
+        "en": "Phalaenopsis amabilis",
+        "image": "/plants/orchidaceae-modal/phalaenopsis-amabilis.png",
+        "ru": "Phalaenopsis amabilis (Фаленопсис)"
       },
       {
-        "en": "Dendrobium",
-        "ru": "Дендробиум"
+        "en": "Phalaenopsis 'Pink Dream'",
+        "image": "/plants/orchidaceae-modal/phalaenopsis-pink-dream.png",
+        "ru": "Phalaenopsis 'Pink Dream' (Фаленопсис)"
       },
       {
-        "en": "Oncidium",
-        "ru": "Онцидиум"
+        "en": "Phalaenopsis schilleriana",
+        "image": "/plants/orchidaceae-modal/phalaenopsis-schilleriana.png",
+        "ru": "Phalaenopsis schilleriana (Фаленопсис Шиллера)"
+      },
+      {
+        "en": "Cattleya trianae",
+        "image": "/plants/orchidaceae-modal/cattleya-trianae.png",
+        "ru": "Cattleya trianae (Каттлея Трианае)"
+      },
+      {
+        "en": "Vanda coerulea",
+        "image": "/plants/orchidaceae-modal/vanda-coerulea.png",
+        "ru": "Vanda coerulea (Ванда голубая)"
+      },
+      {
+        "en": "Oncidium 'Golden Shower'",
+        "image": "/plants/orchidaceae-modal/oncidium-golden-shower.png",
+        "ru": "Oncidium 'Golden Shower' (Онцидиум)"
+      },
+      {
+        "en": "Paphiopedilum venustum",
+        "image": "/plants/orchidaceae-modal/paphiopedilum-venustum.png",
+        "ru": "Paphiopedilum venustum (Пафиопедилум)"
+      },
+      {
+        "en": "Dendrobium nobile",
+        "image": "/plants/orchidaceae-modal/dendrobium-nobile.png",
+        "ru": "Dendrobium nobile (Дендробиум благородный)"
+      },
+      {
+        "en": "Cymbidium ensifolium",
+        "image": "/plants/orchidaceae-modal/cymbidium-ensifolium.png",
+        "ru": "Cymbidium ensifolium (Цимбидиум)"
+      },
+      {
+        "en": "Miltonia spectabilis",
+        "image": "/plants/orchidaceae-modal/miltonia-spectabilis.png",
+        "ru": "Miltonia spectabilis (Мильтония)"
       }
     ],
     "traits": {
       "en": [
-        "Flowers are bilaterally symmetrical and often long-lasting.",
-        "Aerial roots need air as much as moisture.",
-        "Many species grow in bark rather than dense soil.",
-        "Bright filtered light supports repeat blooming."
+        "Flowers are often irregular, with a unique lip petal.",
+        "Flower symmetry is usually bilateral.",
+        "Many species are epiphytes and grow on trees without parasitising them.",
+        "Pseudobulbs or thickened stems store water.",
+        "Seeds are extremely small and germinate only with mycorrhizal fungi."
       ],
       "ru": [
-        "Цветы двусторонне симметричные и часто долго держатся.",
-        "Воздушным корням нужен воздух не меньше, чем влага.",
-        "Многие виды растут в коре, а не в плотной земле.",
-        "Яркий рассеянный свет помогает повторному цветению."
+        "Цветки часто неправильной формы, с уникальной губой (лабеллумом).",
+        "Симметрия цветка обычно двусторонняя.",
+        "Многие виды - эпифиты, растут на деревьях, не паразитируя на них.",
+        "Псевдобульбы или утолщённые стебли запасают влагу.",
+        "Семена очень мелкие, без эндосперма, прорастают только с микоризой."
       ]
-    }
+    },
+    "traitImages": [
+      "/plants/orchidaceae-modal/phalaenopsis-schilleriana.png",
+      "/plants/orchidaceae-modal/cattleya-trianae.png",
+      "/plants/orchidaceae-modal/dendrobium-nobile.png",
+      "/plants/orchidaceae-modal/cymbidium-ensifolium.png",
+      "/plants/orchidaceae-modal/paphiopedilum-venustum.png"
+    ]
   },
   "piperaceae": {
     "description": {
