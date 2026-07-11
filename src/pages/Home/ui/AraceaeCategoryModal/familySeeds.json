@@ -181,6 +181,97 @@
       ]
     }
   },
+  "bromeliaceae": {
+    "closingNote": {
+      "en": "Bromeliads bring tropical character to any interior. They are striking, resilient, and never look ordinary.",
+      "ru": "Бромелиевые - это тропическая экзотика, которая оживит любой интерьер. Они неприхотливы, эффектны и способны удивлять каждый день."
+    },
+    "description": {
+      "en": "Bromeliads are a family of tropical plants known for spectacular leaf rosettes and bright bracts. Many species store moisture in their leaves, which helps them survive in drier conditions. Indoors they are valued for decorative form, unusual texture, and easy care.",
+      "ru": "Бромелиевые - семейство тропических растений, известных своими эффектными розетками листьев и яркими прицветниками. Многие виды способны накапливать влагу в листьях, что помогает им выживать в засушливых условиях. Бромелиевые ценятся за декоративность, необычную форму и неприхотливость в уходе."
+    },
+    "facts": {
+      "en": [
+        "Pineapple (Ananas comosus) is the best-known member of the family.",
+        "Tillandsias can live without soil, absorbing moisture and nutrients from the air.",
+        "Some bromeliads are grown for decorative flowers, while others are loved for patterned leaves.",
+        "The leaf cup can hold rainwater and become a small home for microorganisms and tiny animals."
+      ],
+      "ru": [
+        "Ананас (Ananas comosus) - самый известный представитель семейства.",
+        "Тилландсии могут жить без почвы, получая влагу и питание из воздуха.",
+        "Некоторые бромелиевые выращиваются ради декоративных цветков, другие - из-за красивой листвы.",
+        "В «чаше» растения может накапливаться дождевая вода, служащая домом для микроорганизмов и мелких животных."
+      ]
+    },
+    "heroImage": "/plants/bromeliaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 112px) top",
+      "md": "calc(100% + 44px) top",
+      "lg": "calc(100% + 8px) top"
+    },
+    "heroSize": {
+      "base": "500px auto",
+      "md": "650px auto",
+      "lg": "760px auto"
+    },
+    "latinName": "Bromeliaceae",
+    "origin": {
+      "en": "Tropical and subtropical regions of Central and South America, from Mexico to Argentina and the Caribbean islands.",
+      "ru": "Тропические и субтропические регионы Центральной и Южной Америки, от Мексики до Аргентины и Карибских островов."
+    },
+    "originMapImage": "/plants/bromeliaceae-modal/origin-map.png",
+    "plants": [
+      {
+        "en": "Tillandsia ionantha",
+        "image": "/plants/bromeliaceae-modal/tillandsia-ionantha.jpg",
+        "ru": "Тилландсия ионанта"
+      },
+      {
+        "en": "Tillandsia usneoides",
+        "image": "/plants/bromeliaceae-modal/tillandsia-usneoides.jpg",
+        "ru": "Тилландсия уснеевидная"
+      },
+      {
+        "en": "Guzmania lingulata",
+        "image": "/plants/bromeliaceae-modal/guzmania-lingulata.jpg",
+        "ru": "Гузмания"
+      },
+      {
+        "en": "Aechmea fasciata",
+        "image": "/plants/bromeliaceae-modal/aechmea-fasciata.jpg",
+        "ru": "Эхмея"
+      },
+      {
+        "en": "Ananas comosus",
+        "image": "/plants/bromeliaceae-modal/ananas-comosus.jpg",
+        "ru": "Ананас"
+      }
+    ],
+    "traits": {
+      "en": [
+        "Leaves are gathered into a rosette that forms a cup for collecting water.",
+        "Flowers are often small, but surrounded by bright bracts.",
+        "Many species are epiphytes: they grow on trees without harming them.",
+        "They can store water and nutrients in the rosette and leaf tissues.",
+        "Fruits are berries or capsules with small seeds."
+      ],
+      "ru": [
+        "Листья собраны в розетку, образующую «чашу» для сбора воды.",
+        "Цветки часто мелкие, но окружены яркими прицветниками.",
+        "Многие виды эпифиты - растут на деревьях, не повреждая их.",
+        "Обладают способностью запасать воду и питательные вещества.",
+        "Плоды - ягоды или коробочки с мелкими семенами."
+      ]
+    },
+    "traitImages": [
+      "/plants/bromeliaceae-modal/trait-water-cup.jpg",
+      "/plants/bromeliaceae-modal/trait-bracts.jpg",
+      "/plants/bromeliaceae-modal/trait-epiphyte.jpg",
+      "/plants/bromeliaceae-modal/trait-storage.jpg",
+      "/plants/bromeliaceae-modal/trait-fruit.jpg"
+    ]
+  },
   "asparagaceae": {
     "description": {
       "en": "The asparagus family includes easy indoor classics with rosettes, canes, and resilient root systems. These plants usually forgive small care mistakes and grow steadily in bright filtered light.",
