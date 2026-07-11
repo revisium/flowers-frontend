@@ -2,10 +2,11 @@ import { Flex, Grid, Link, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import type { Locale } from 'src/shared/config';
 
-import { homeCategories, type HomeCopy } from '../../model/homePageData';
-import { AraceaeCategoryModal } from '../AraceaeCategoryModal/AraceaeCategoryModal';
+import { homeCategories, type HomeCategory, type HomeCopy } from '../../model/homePageData';
+import { categoryDetailDataById } from '../AraceaeCategoryModal/data';
 import { HomeCategoryCard } from '../HomeCategoryCard/HomeCategoryCard';
 import { HomeNote } from '../HomeNote/HomeNote';
+import { CategoryDetailModal } from '../CategoryDetailModal/CategoryDetailModal';
 
 interface HomeCategoriesSectionProps {
   readonly locale: Locale;
@@ -13,11 +14,15 @@ interface HomeCategoriesSectionProps {
 }
 
 export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionProps) => {
-  const [isAraceaeOpen, setIsAraceaeOpen] = useState(false);
+  const [selectedCategoryId, setSelectedCategoryId] = useState<HomeCategory['id'] | null>(null);
 
-  const handleCategoryOpen = () => {
-    setIsAraceaeOpen(true);
+  const handleCategoryOpen = (category: HomeCategory) => {
+    setSelectedCategoryId(category.id);
   };
+  const selectedCategoryData =
+    selectedCategoryId && selectedCategoryId in categoryDetailDataById
+      ? categoryDetailDataById[selectedCategoryId as keyof typeof categoryDetailDataById][locale]
+      : null;
 
   return (
     <Flex
@@ -87,18 +92,17 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
           width={{ base: 'max-content', md: '100%' }}
         >
           {homeCategories[locale].map((category) => (
-            <HomeCategoryCard
-              category={category}
-              key={category.id}
-              {...(category.id === 'araceae' ? { onOpen: handleCategoryOpen } : {})}
-            />
+            <HomeCategoryCard category={category} key={category.id} onOpen={handleCategoryOpen} />
           ))}
         </Grid>
       </Flex>
 
       <HomeNote text={text} />
-      {isAraceaeOpen ? (
-        <AraceaeCategoryModal locale={locale} onClose={() => setIsAraceaeOpen(false)} />
+      {selectedCategoryData ? (
+        <CategoryDetailModal
+          data={selectedCategoryData}
+          onClose={() => setSelectedCategoryId(null)}
+        />
       ) : null}
     </Flex>
   );

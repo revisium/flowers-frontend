@@ -1,4 +1,4 @@
-import { Box, Image, Link, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Link, Text } from '@chakra-ui/react';
 import type { MouseEvent } from 'react';
 
 import type { HomeCategory } from '../../model/homePageData';
@@ -109,16 +109,16 @@ export const HomeCategoryCard = ({ category, onOpen }: HomeCategoryCardProps) =>
         </Text>
       </Box>
 
-      <Box
+      <Flex
+        alignItems="center"
         border="1px solid rgba(86, 93, 76, 0.32)"
         borderRadius="999px"
-        bottom={{ base: '14px', md: '18px' }}
         color="#3c4b38"
-        display="grid"
         fontSize="20px"
         height={{ base: '32px', md: '36px' }}
+        justify="center"
         lineHeight={1}
-        placeItems="center"
+        bottom={{ base: '14px', md: '18px' }}
         position="absolute"
         right={{ base: '14px', md: '16px' }}
         width={{ base: '32px', md: '36px' }}
@@ -126,7 +126,7 @@ export const HomeCategoryCard = ({ category, onOpen }: HomeCategoryCardProps) =>
         <Box as="span" marginTop="-2px">
           →
         </Box>
-      </Box>
+      </Flex>
     </Link>
   );
 };

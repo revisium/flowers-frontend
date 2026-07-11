@@ -153,7 +153,7 @@ const categoryCounts: Record<Exclude<PlantCategory, 'all'>, number> = {
   commelinaceae: 1,
   cycadaceae: 1,
   gesneriaceae: 8,
-  marantaceae: 3,
+  marantaceae: 10,
   nephrolepidaceae: 1,
   orchidaceae: 3,
   piperaceae: 1,

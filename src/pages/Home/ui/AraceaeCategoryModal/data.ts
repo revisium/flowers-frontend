@@ -1,6 +1,35 @@
 import type { Locale } from 'src/shared/config';
 
+import familySeedsJson from './familySeeds.json';
 import { type CategoryDetailData, type CategoryPlant, type CategoryTrait } from './types';
+
+type CategoryId =
+  | 'amaryllidaceae'
+  | 'apocynaceae'
+  | 'araceae'
+  | 'arecaceae'
+  | 'asparagaceae'
+  | 'asphodelaceae'
+  | 'cactaceae'
+  | 'commelinaceae'
+  | 'cycadaceae'
+  | 'gesneriaceae'
+  | 'marantaceae'
+  | 'nephrolepidaceae'
+  | 'orchidaceae'
+  | 'piperaceae'
+  | 'vitaceae';
+interface LocalizedText {
+  readonly en: string;
+  readonly ru: string;
+}
+interface LocalizedTextList {
+  readonly en: readonly string[];
+  readonly ru: readonly string[];
+}
+interface LocalizedPlant extends LocalizedText {
+  readonly image?: string;
+}
 
 const assets = {
   aglaonema: '/plants/araceae-modal/aglaonema.jpg',
@@ -12,6 +41,9 @@ const assets = {
   philodendron: '/plants/araceae-modal/philodendron.jpg',
   spathiphyllum: '/plants/araceae-modal/spathiphyllum.jpg',
 } as const;
+
+const categoryImage = (id: CategoryId) => `/plants/categories/studio/${id}.jpg`;
+const categoryCutout = (id: CategoryId) => `/plants/categories/generated/${id}.png`;
 
 const collectionPlants = [
   { image: assets.alocasia, name: "Alocasia baginda 'Dragon Scale'" },
@@ -34,7 +66,7 @@ const createPlants = (locale: Locale): readonly CategoryPlant[] =>
 
 const createTrait = (body: string, image: string): CategoryTrait => ({ body, image });
 
-const sharedData = {
+const araceaeSharedData = {
   heroImage: assets.hero,
   heroPosition: 'calc(100% + 70px) top',
   heroSize: { base: '540px auto', md: '650px auto', lg: '700px auto' },
@@ -98,11 +130,11 @@ const createCategoryData = (
   locale: Locale,
   text: typeof ruText | typeof enText,
 ): CategoryDetailData => ({
-  ...sharedData,
+  ...araceaeSharedData,
   ...text,
   collectionPlants: createPlants(locale),
   origin: {
-    mapImage: sharedData.originMapImage,
+    mapImage: araceaeSharedData.originMapImage,
     text: text.originText,
   },
 });
@@ -110,4 +142,142 @@ const createCategoryData = (
 export const araceaeCategoryDataByLocale: Record<Locale, CategoryDetailData> = {
   en: createCategoryData('en', enText),
   ru: createCategoryData('ru', ruText),
+};
+
+interface FamilyDetailSeed {
+  readonly closingNote?: LocalizedText;
+  readonly description: LocalizedText;
+  readonly facts: LocalizedTextList;
+  readonly heroImage?: string;
+  readonly heroPosition?: NonNullable<CategoryDetailData['heroPosition']>;
+  readonly heroSize?: NonNullable<CategoryDetailData['heroSize']>;
+  readonly latinName: string;
+  readonly origin: LocalizedText;
+  readonly originMapImage?: string;
+  readonly plants: readonly LocalizedPlant[];
+  readonly traits: LocalizedTextList;
+  readonly traitImages?: readonly string[];
+}
+
+const familySeeds = familySeedsJson as Record<Exclude<CategoryId, 'araceae'>, FamilyDetailSeed>;
+
+const modalCopy = {
+  en: {
+    backLabel: 'Back to categories',
+    closingNote: 'Each family has its own rhythm; matching light, water, and soil to that rhythm keeps the collection calmer.',
+    factsTitle: 'Interesting Facts',
+    originTitle: 'Origin',
+    traitsTitle: 'Distinctive Traits',
+  },
+  ru: {
+    backLabel: 'Назад к категориям',
+    closingNote: 'У каждого семейства свой ритм; когда свет, вода и грунт совпадают с ним, коллекция чувствует себя спокойнее.',
+    factsTitle: 'Интересные факты',
+    originTitle: 'Происхождение',
+    traitsTitle: 'Отличительные признаки',
+  },
+} as const;
+
+const createFamilyCategoryData = (
+  id: Exclude<CategoryId, 'araceae'>,
+  locale: Locale,
+  title: string,
+  seed: FamilyDetailSeed,
+): CategoryDetailData => {
+  const image = categoryImage(id);
+
+  return {
+    backLabel: modalCopy[locale].backLabel,
+    closingNote: seed.closingNote?.[locale] ?? modalCopy[locale].closingNote,
+    collectionPlants: seed.plants.map((plant) => ({ image: plant.image ?? image, name: plant[locale] })),
+    collectionTitle:
+      locale === 'ru'
+        ? `Растения из моей коллекции (${seed.plants.length})`
+        : `Plants in my collection (${seed.plants.length})`,
+    description: seed.description[locale],
+    facts: seed.facts[locale],
+    factsTitle: modalCopy[locale].factsTitle,
+    heroImage: seed.heroImage ?? categoryCutout(id),
+    heroPosition: seed.heroPosition ?? { base: 'calc(100% + 132px) top', md: 'calc(100% + 80px) top' },
+    heroSize: seed.heroSize ?? { base: '430px auto', md: '560px auto', lg: '640px auto' },
+    latinName: seed.latinName,
+    origin: {
+      mapImage: seed.originMapImage ?? image,
+      text: seed.origin[locale],
+    },
+    originTitle: modalCopy[locale].originTitle,
+    title,
+    traits: seed.traits[locale].map((body, index) =>
+      createTrait(body, seed.traitImages?.[index] ?? image),
+    ),
+    traitsTitle: modalCopy[locale].traitsTitle,
+  };
+};
+
+const createFamilyDataByLocale = (
+  id: Exclude<CategoryId, 'araceae'>,
+  title: LocalizedText,
+  seed: FamilyDetailSeed,
+): Record<Locale, CategoryDetailData> => ({
+  en: createFamilyCategoryData(id, 'en', title.en, seed),
+  ru: createFamilyCategoryData(id, 'ru', title.ru, seed),
+});
+
+const familyTitles: Record<Exclude<CategoryId, 'araceae'>, LocalizedText> = {
+  amaryllidaceae: { en: 'Amaryllis family', ru: 'Амариллисовые' },
+  apocynaceae: { en: 'Dogbane family', ru: 'Кутровые' },
+  arecaceae: { en: 'Palms', ru: 'Пальмовые' },
+  asparagaceae: { en: 'Asparagus family', ru: 'Спаржевые' },
+  asphodelaceae: { en: 'Asphodel family', ru: 'Асфоделовые' },
+  cactaceae: { en: 'Cacti', ru: 'Кактусовые' },
+  commelinaceae: { en: 'Spiderwort family', ru: 'Коммелиновые' },
+  cycadaceae: { en: 'Cycads', ru: 'Саговниковые' },
+  gesneriaceae: { en: 'Gesneriad family', ru: 'Геснериевые' },
+  marantaceae: { en: 'Prayer plant family', ru: 'Марантовые' },
+  nephrolepidaceae: { en: 'Ferns', ru: 'Папоротники' },
+  orchidaceae: { en: 'Orchids', ru: 'Орхидные' },
+  piperaceae: { en: 'Pepper family', ru: 'Перцевые' },
+  vitaceae: { en: 'Grape family', ru: 'Виноградовые' },
+};
+
+export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryDetailData>> = {
+  araceae: araceaeCategoryDataByLocale,
+  amaryllidaceae: createFamilyDataByLocale(
+    'amaryllidaceae',
+    familyTitles.amaryllidaceae,
+    familySeeds.amaryllidaceae,
+  ),
+  apocynaceae: createFamilyDataByLocale('apocynaceae', familyTitles.apocynaceae, familySeeds.apocynaceae),
+  arecaceae: createFamilyDataByLocale('arecaceae', familyTitles.arecaceae, familySeeds.arecaceae),
+  asparagaceae: createFamilyDataByLocale(
+    'asparagaceae',
+    familyTitles.asparagaceae,
+    familySeeds.asparagaceae,
+  ),
+  asphodelaceae: createFamilyDataByLocale(
+    'asphodelaceae',
+    familyTitles.asphodelaceae,
+    familySeeds.asphodelaceae,
+  ),
+  cactaceae: createFamilyDataByLocale('cactaceae', familyTitles.cactaceae, familySeeds.cactaceae),
+  commelinaceae: createFamilyDataByLocale(
+    'commelinaceae',
+    familyTitles.commelinaceae,
+    familySeeds.commelinaceae,
+  ),
+  cycadaceae: createFamilyDataByLocale('cycadaceae', familyTitles.cycadaceae, familySeeds.cycadaceae),
+  gesneriaceae: createFamilyDataByLocale(
+    'gesneriaceae',
+    familyTitles.gesneriaceae,
+    familySeeds.gesneriaceae,
+  ),
+  marantaceae: createFamilyDataByLocale('marantaceae', familyTitles.marantaceae, familySeeds.marantaceae),
+  nephrolepidaceae: createFamilyDataByLocale(
+    'nephrolepidaceae',
+    familyTitles.nephrolepidaceae,
+    familySeeds.nephrolepidaceae,
+  ),
+  orchidaceae: createFamilyDataByLocale('orchidaceae', familyTitles.orchidaceae, familySeeds.orchidaceae),
+  piperaceae: createFamilyDataByLocale('piperaceae', familyTitles.piperaceae, familySeeds.piperaceae),
+  vitaceae: createFamilyDataByLocale('vitaceae', familyTitles.vitaceae, familySeeds.vitaceae),
 };

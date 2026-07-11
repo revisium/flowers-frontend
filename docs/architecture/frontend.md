@@ -64,24 +64,24 @@ metadata.
   by `widgets/Layout`, not by the hero.
 - `ui/HomeCategoriesSection` owns the labeled category section, responsive
   auto-fit category grid, collection link, notes callout, and category-card
-  modal triggers. The Araceae card currently opens the local category detail
-  modal instead of navigating immediately to `/collection`; other category
-  cards still use the collection link behavior until their detail content is
-  added.
-- `ui/AraceaeCategoryModal` is a thin locale-aware data wrapper for the shared
-  category detail modal. The reusable modal frame and sections live in
+  modal triggers. Category cards open local category detail modals from
+  `ui/AraceaeCategoryModal/data.ts`; the card `href` remains `/collection` as a
+  fallback while the explicit collection link stays available in the section
+  header.
+- The reusable category detail modal frame and sections live in
   `ui/CategoryDetailModal`, `ui/CategoryHero`, `ui/CategoryInfoGrid`,
   `ui/CategoryCollectionSection`, `ui/InfoPanel`, and `ui/SproutIcon`.
-  Category-specific copy and image paths stay in the page-local modal data
-  helper so future category detail modals can reuse the same presentation
-  structure with different content.
+  Category-specific copy and image paths stay in page-local detail data and the
+  adjacent `familySeeds.json` content file so each completed family reuses the
+  same presentation structure with different content.
 - Repeated or decorative pieces live in same-named component folders, such as
   `HomeCategoryCard`, `HomeStats`, and `StatIconBox`.
 
 The home category thumbnails use one distinct category artwork asset per
-category. Cards link to `/collection` by default; categories with completed
-detail content may intercept the click to open their modal first. The current
-prototype does not deep-link to a category yet.
+category. Cards open local detail modals for family overviews; `/collection`
+remains reachable through the section link and as the card fallback when
+JavaScript is unavailable. The current prototype does not deep-link to a
+category yet.
 
 ## Collection Prototype Contract
 
