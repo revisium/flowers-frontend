@@ -110,17 +110,22 @@ export const HomeCategoryCard = ({ category, onOpen }: HomeCategoryCardProps) =>
       </Box>
 
       <Flex
-        width={{ base: '32px', md: '36px' }}
-        justify="center"
+        alignItems="center"
         border="1px solid rgba(86, 93, 76, 0.32)"
         borderRadius="999px"
         color="#3c4b38"
+        fontSize="20px"
         height={{ base: '32px', md: '36px' }}
-        position="absolute"
+        justify="center"
+        lineHeight={1}
         bottom={{ base: '14px', md: '18px' }}
+        position="absolute"
         right={{ base: '14px', md: '16px' }}
+        width={{ base: '32px', md: '36px' }}
       >
-        <Flex marginTop="3px">→</Flex>
+        <Box as="span" marginTop="-2px">
+          →
+        </Box>
       </Flex>
     </Link>
   );

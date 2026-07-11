@@ -32,7 +32,7 @@ export interface HomeCopy {
   readonly tagline: string;
 }
 
-export const homeTotalPlantsCount = '39';
+export const homeTotalPlantsCount = '46';
 
 export const homeCopy: Record<Locale, HomeCopy> = {
   ru: {

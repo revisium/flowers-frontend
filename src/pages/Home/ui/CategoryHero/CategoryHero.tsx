@@ -88,7 +88,7 @@ export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: Categor
           margin={0}
           overflowWrap="normal"
           textStyle="serif"
-          whiteSpace="nowrap"
+          whiteSpace={{ base: 'normal', md: 'nowrap' }}
           wordBreak="normal"
         >
           {data.title}
