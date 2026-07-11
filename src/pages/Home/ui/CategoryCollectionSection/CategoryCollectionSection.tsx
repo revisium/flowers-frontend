@@ -41,7 +41,14 @@ export const CategoryCollectionSection = ({ data }: CategoryCollectionSectionPro
             key={plant.name}
             overflow="hidden"
           >
-            <Image alt="" aspectRatio="1.25 / 1" objectFit="cover" src={plant.image} width="100%" />
+            <Image
+              alt=""
+              aspectRatio="1.25 / 1"
+              background="#fffaf1"
+              objectFit="contain"
+              src={plant.image}
+              width="100%"
+            />
             <Text
               color="#344334"
               fontSize="0.86rem"
