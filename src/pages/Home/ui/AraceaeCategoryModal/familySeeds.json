@@ -412,6 +412,7 @@
     ]
   },
   "asphodelaceae": {
+    "closingNote": { "en": "Asphodel plants balance endurance and beauty with remarkably little care.", "ru": "Асфоделовые - это гармония выносливости и красоты. Они украшают интерьер и требуют минимума ухода!" },
     "description": {
       "en": "Asphodel relatives are built for light, drainage, and patience. Aloes and haworthias keep water in firm leaves and reward restraint more than constant attention.",
       "ru": "Асфоделовые созданы для света, дренажа и терпения. Алоэ и хавортии держат воду в плотных листьях и лучше отвечают на сдержанный уход, чем на постоянное внимание."
@@ -429,15 +430,25 @@
       ]
     },
     "latinName": "Asphodelaceae",
+    "heroImage": "/plants/asphodelaceae-modal/hero.png",
+    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 10px) top" },
+    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
     "origin": {
       "en": "Dry and sunny regions of Africa, Madagascar, and nearby islands.",
       "ru": "Сухие и солнечные регионы Африки, Мадагаскара и соседних островов."
     },
+    "originMapImage": "/plants/asphodelaceae-modal/origin-map.png",
     "plants": [
-      {
-        "en": "Aloe vera",
-        "ru": "Алоэ вера"
-      }
+      { "en": "Aloe vera", "image": "/plants/asphodelaceae-modal/aloe-vera.png", "ru": "Алоэ вера (Aloe vera)" },
+      { "en": "Aloe arborescens", "image": "/plants/asphodelaceae-modal/aloe-arborescens.png", "ru": "Алоэ древовидное (Aloe arborescens)" },
+      { "en": "Aloe aristata", "image": "/plants/asphodelaceae-modal/aloe-aristata.png", "ru": "Алоэ остистое (Aloe aristata)" },
+      { "en": "Haworthia fasciata", "image": "/plants/asphodelaceae-modal/haworthia-fasciata.png", "ru": "Хавортия полосатая (Haworthia fasciata)" },
+      { "en": "Gasteria maculata", "image": "/plants/asphodelaceae-modal/gasteria-maculata.png", "ru": "Гастерия пятнистая (Gasteria maculata)" },
+      { "en": "Gasteria verrucosa", "image": "/plants/asphodelaceae-modal/gasteria-verrucosa.png", "ru": "Гастерия бородавчатая (Gasteria verrucosa)" },
+      { "en": "Kniphofia uvaria", "image": "/plants/asphodelaceae-modal/kniphofia-uvaria.png", "ru": "Книфофия ягодная (Kniphofia uvaria)" },
+      { "en": "Erythrina crista-galli", "image": "/plants/asphodelaceae-modal/erythrina-crista-galli.png", "ru": "Эритрина гребенчатая (Erythrina crista-galli)" },
+      { "en": "Bulbine frutescens", "image": "/plants/asphodelaceae-modal/bulbine-frutescens.png", "ru": "Бульбине фрутикоза (Bulbine frutescens)" },
+      { "en": "Aspidistra elatior", "image": "/plants/asphodelaceae-modal/aspidistra-elatior.png", "ru": "Аспидистра высокая (Aspidistra elatior)" }
     ],
     "traits": {
       "en": [
@@ -452,7 +463,8 @@
         "Полив редкий, особенно в прохладный сезон.",
         "Мягкая смена оттенка часто показывает, сколько света получает растение."
       ]
-    }
+    },
+    "traitImages": ["/plants/asphodelaceae-modal/aloe-vera.png", "/plants/asphodelaceae-modal/haworthia-fasciata.png", "/plants/asphodelaceae-modal/kniphofia-uvaria.png", "/plants/asphodelaceae-modal/gasteria-maculata.png"]
   },
   "cactaceae": {
     "description": {
