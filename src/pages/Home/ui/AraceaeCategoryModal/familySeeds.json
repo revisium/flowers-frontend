@@ -483,6 +483,9 @@
         "Большинству комнатных кактусов для цветения нужен прохладный светлый отдых."
       ]
     },
+    "heroImage": "/plants/cactaceae-modal/hero.png",
+    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 12px) top" },
+    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
     "latinName": "Cactaceae",
     "origin": {
       "en": "Mostly the Americas, especially arid and seasonally dry landscapes.",
