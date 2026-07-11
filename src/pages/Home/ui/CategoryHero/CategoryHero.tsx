@@ -31,15 +31,21 @@ export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: Categor
 
   return (
     <Box
-      backgroundImage={`url('${data.heroImage}')`}
-      backgroundPosition={data.heroPosition ?? 'top right'}
-      backgroundRepeat="no-repeat"
-      backgroundSize={data.heroSize ?? { base: '540px auto', md: '650px auto', lg: '700px auto' }}
       minHeight={{ base: '340px', md: '410px', lg: '497px' }}
       overflow="hidden"
       padding={{ base: '18px 18px 22px', md: '38px 48px 18px' }}
       position="relative"
     >
+      <Box
+        aria-hidden="true"
+        backgroundImage={`url('${data.heroImage}')`}
+        backgroundPosition={data.heroPosition ?? 'top right'}
+        backgroundRepeat="no-repeat"
+        backgroundSize={data.heroSize ?? { base: '540px auto', md: '650px auto', lg: '700px auto' }}
+        inset={0}
+        pointerEvents="none"
+        position="absolute"
+      />
       <Button
         ref={closeButtonRef}
         alignItems="center"

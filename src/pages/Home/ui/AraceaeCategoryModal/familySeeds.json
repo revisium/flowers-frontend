@@ -273,47 +273,120 @@
     ]
   },
   "asparagaceae": {
+    "closingNote": {
+      "en": "Asparagus family plants balance form and usefulness. They decorate the home, clean the air, and stay generous without extra fuss.",
+      "ru": "Спаржевые - это гармония формы и пользы. Они украшают дом, очищают воздух и дарят заботу без лишних хлопот."
+    },
     "description": {
-      "en": "The asparagus family includes easy indoor classics with rosettes, canes, and resilient root systems. These plants usually forgive small care mistakes and grow steadily in bright filtered light.",
-      "ru": "Спаржевые включают комнатную классику с розетками, стволиками и выносливыми корнями. Такие растения часто прощают небольшие ошибки ухода и стабильно растут на ярком рассеянном свету."
+      "en": "The asparagus family includes monocot plants with herbs, vines, shrubs, and even tree-like forms. They are known for varied foliage, delicate flowers, and bright berries. Many species are valued not only for decoration, but also for edible shoots, fruits, and useful properties.",
+      "ru": "Спаржевые - семейство однодольных растений, включающее травы, лианы, кустарники и даже деревья. Они известны своей разнообразной листвой, изящными цветками и ягодами. Многие виды ценятся не только за декоративность, но и за съедобные побеги и плоды, а также за полезные свойства."
     },
     "facts": {
       "en": [
-        "The family includes familiar indoor genera such as Chlorophytum, Dracaena, Sansevieria, and Yucca.",
-        "Many species store water in thick roots, rhizomes, or firm leaves.",
-        "Spider plants make baby rosettes on long runners, which makes propagation simple."
+        "Asparagus officinalis is the only member widely grown as a vegetable crop.",
+        "Sansevieria releases oxygen at night and helps clean indoor air.",
+        "Ruscus is popular in floristry, although its \"leaves\" are actually modified shoots.",
+        "Many asparagus relatives contain saponins and have useful properties."
       ],
       "ru": [
-        "К семейству относятся знакомые комнатные роды: хлорофитум, драцена, сансевиерия и юкка.",
-        "Многие виды запасают воду в толстых корнях, корневищах или плотных листьях.",
-        "Хлорофитум образует детки на длинных усах, поэтому его легко размножать."
+        "Спаржа (Asparagus officinalis) - единственный вид, который выращивается как овощная культура.",
+        "Сансевиерия выделяет кислород ночью и очищает воздух от вредных веществ.",
+        "Рускус популярен во флористике, хотя его «листья» - это на самом деле видоизмененные побеги.",
+        "Многие спаржевые содержат сапонины и обладают полезными свойствами."
       ]
+    },
+    "heroImage": "/plants/asparagaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 120px) top",
+      "md": "calc(100% + 64px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "520px auto",
+      "md": "690px auto",
+      "lg": "820px auto"
     },
     "latinName": "Asparagaceae",
     "origin": {
-      "en": "Africa, Eurasia, and the Americas, from dry habitats to forest understories.",
-      "ru": "Африка, Евразия и Америка: от сухих местообитаний до лесного подлеска."
+      "en": "Tropical and subtropical regions of Africa, Asia, Australia, Pacific islands, and South America.",
+      "ru": "Тропические и субтропические регионы Африки, Азии, Австралии, островов Тихого океана и Южной Америки."
     },
+    "originMapImage": "/plants/asparagaceae-modal/origin-map.png",
     "plants": [
       {
+        "en": "Asparagus setaceus",
+        "image": "/plants/asparagaceae-modal/asparagus-setaceus.jpg",
+        "ru": "Аспарагус сетачесус"
+      },
+      {
+        "en": "Sansevieria trifasciata",
+        "image": "/plants/asparagaceae-modal/sansevieria-trifasciata.jpg",
+        "ru": "Сансевиерия трёхполосая"
+      },
+      {
         "en": "Chlorophytum comosum",
+        "image": "/plants/asparagaceae-modal/chlorophytum-comosum.jpg",
         "ru": "Хлорофитум хохлатый"
+      },
+      {
+        "en": "Zamioculcas zamiifolia",
+        "image": "/plants/asparagaceae-modal/zamioculcas-zamiifolia.jpg",
+        "ru": "Замиокулькас замиелистный"
+      },
+      {
+        "en": "Ruscus aculeatus",
+        "image": "/plants/asparagaceae-modal/ruscus-aculeatus.jpg",
+        "ru": "Рускус колючий"
+      },
+      {
+        "en": "Asparagopsis plumosus",
+        "image": "/plants/asparagaceae-modal/asparagopsis-plumosus.jpg",
+        "ru": "Аспарагопсис перистый"
+      },
+      {
+        "en": "Dischidia nummularia",
+        "image": "/plants/asparagaceae-modal/dischidia-nummularia.jpg",
+        "ru": "Дисхидия нуммулярия"
+      },
+      {
+        "en": "Asparagus densiflorus",
+        "image": "/plants/asparagaceae-modal/asparagus-densiflorus.jpg",
+        "ru": "Аспарагус густоцветковый"
+      },
+      {
+        "en": "Clivia miniata",
+        "image": "/plants/asparagaceae-modal/clivia-miniata.jpg",
+        "ru": "Кливия миниата"
+      },
+      {
+        "en": "Asparagus officinalis",
+        "image": "/plants/asparagaceae-modal/asparagus-officinalis.jpg",
+        "ru": "Спаржа лекарственная"
       }
     ],
     "traits": {
       "en": [
-        "Leaves are often narrow, leathery, or arranged in rosettes.",
-        "Thick roots and rhizomes help tolerate short dry spells.",
-        "Many species grow slowly but hold their shape for years.",
-        "Bright filtered light keeps variegation cleaner."
+        "Leaves vary from scale-like and needle-like to broad and fleshy.",
+        "Flowers are small, often white, greenish, or yellowish.",
+        "Fruits are berries, often brightly colored: red, orange, or black.",
+        "Many species have underground rhizomes, tubers, or thickened stems.",
+        "They adapt well to different conditions and are easy to care for."
       ],
       "ru": [
-        "Листья часто узкие, кожистые или собраны в розетки.",
-        "Толстые корни и корневища помогают переживать короткую пересушку.",
-        "Многие виды растут неспешно, но годами держат форму.",
-        "Яркий рассеянный свет сохраняет вариегатность чище."
+        "Листья разнообразные: от чешуевидных и игольчатых до широких и мясистых.",
+        "Цветки мелкие, чаще всего белые, зеленоватые или желтоватые.",
+        "Плоды - ягоды, часто ярко окрашенные: красные, оранжевые, чёрные.",
+        "Многие виды имеют подземные корневища, клубни или утолщённые стебли.",
+        "Хорошо адаптируются к различным условиям, неприхотливы в уходе."
       ]
-    }
+    },
+    "traitImages": [
+      "/plants/asparagaceae-modal/trait-leaf-variety.jpg",
+      "/plants/asparagaceae-modal/trait-small-flowers.jpg",
+      "/plants/asparagaceae-modal/trait-berries.jpg",
+      "/plants/asparagaceae-modal/trait-rhizomes.jpg",
+      "/plants/asparagaceae-modal/trait-adaptable.jpg"
+    ]
   },
   "asphodelaceae": {
     "description": {

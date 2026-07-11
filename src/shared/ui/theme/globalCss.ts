@@ -16,6 +16,11 @@ export const globalCss: SystemConfig['globalCss'] = {
   '*, *::before, *::after': {
     boxSizing: 'border-box',
   },
+  '*:focus, *:focus-visible, *:focus-within, *[data-focus], *[data-focus-visible], *[data-focus-within]': {
+    boxShadow: 'none !important',
+    outline: 'none !important',
+    outlineOffset: '0 !important',
+  },
   button: {
     color: 'inherit',
     cursor: 'pointer',

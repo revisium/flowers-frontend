@@ -32,7 +32,7 @@ export interface HomeCopy {
   readonly tagline: string;
 }
 
-export const homeTotalPlantsCount = '51';
+export const homeTotalPlantsCount = '60';
 
 export const homeCopy: Record<Locale, HomeCopy> = {
   ru: {
@@ -92,7 +92,7 @@ export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
     { count: '8 растений', image: '/plants/categories/studio/gesneriaceae.jpg', id: 'gesneriaceae', name: 'Геснериевые' },
     { count: '10 растений', image: '/plants/categories/studio/marantaceae.jpg', id: 'marantaceae', name: 'Марантовые' },
     { count: '3 растения', image: '/plants/categories/studio/orchidaceae.jpg', id: 'orchidaceae', name: 'Орхидные' },
-    { count: '1 растение', image: '/plants/categories/studio/asparagaceae.jpg', id: 'asparagaceae', name: 'Спаржевые' },
+    { count: '10 растений', image: '/plants/categories/studio/asparagaceae.jpg', id: 'asparagaceae', name: 'Спаржевые' },
     { count: '2 растения', image: '/plants/categories/studio/apocynaceae.jpg', id: 'apocynaceae', name: 'Кутровые' },
     { count: '1 растение', image: '/plants/categories/studio/asphodelaceae.jpg', id: 'asphodelaceae', name: 'Асфоделовые' },
     { count: '5 растений', image: '/plants/categories/studio/bromeliaceae.jpg', id: 'bromeliaceae', name: 'Бромелиевые' },
@@ -110,7 +110,7 @@ export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
     { count: '8 plants', image: '/plants/categories/studio/gesneriaceae.jpg', id: 'gesneriaceae', name: 'Gesneriad family' },
     { count: '10 plants', image: '/plants/categories/studio/marantaceae.jpg', id: 'marantaceae', name: 'Prayer plant family' },
     { count: '3 plants', image: '/plants/categories/studio/orchidaceae.jpg', id: 'orchidaceae', name: 'Orchids' },
-    { count: '1 plant', image: '/plants/categories/studio/asparagaceae.jpg', id: 'asparagaceae', name: 'Asparagus family' },
+    { count: '10 plants', image: '/plants/categories/studio/asparagaceae.jpg', id: 'asparagaceae', name: 'Asparagus family' },
     { count: '2 plants', image: '/plants/categories/studio/apocynaceae.jpg', id: 'apocynaceae', name: 'Dogbane family' },
     { count: '1 plant', image: '/plants/categories/studio/asphodelaceae.jpg', id: 'asphodelaceae', name: 'Asphodel family' },
     { count: '5 plants', image: '/plants/categories/studio/bromeliaceae.jpg', id: 'bromeliaceae', name: 'Bromeliads' },

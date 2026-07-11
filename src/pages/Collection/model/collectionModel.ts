@@ -149,7 +149,7 @@ const categoryCounts: Record<Exclude<PlantCategory, 'all'>, number> = {
   apocynaceae: 2,
   araceae: 9,
   arecaceae: 1,
-  asparagaceae: 1,
+  asparagaceae: 10,
   asphodelaceae: 1,
   bromeliaceae: 5,
   cactaceae: 1,
