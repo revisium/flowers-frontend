@@ -14,6 +14,7 @@ const categoryIconImages: Partial<Record<PlantCategory, string>> = {
   arecaceae: '/plants/categories/arecaceae.png',
   asparagaceae: '/plants/categories/asparagaceae.png',
   asphodelaceae: '/plants/categories/asphodelaceae.png',
+  bromeliaceae: '/plants/categories/bromeliaceae.png',
   cactaceae: '/plants/categories/cactaceae.png',
   commelinaceae: '/plants/categories/commelinaceae.png',
   cycadaceae: '/plants/categories/cycadaceae.png',

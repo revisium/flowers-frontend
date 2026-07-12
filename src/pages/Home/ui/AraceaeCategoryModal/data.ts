@@ -10,6 +10,7 @@ type CategoryId =
   | 'arecaceae'
   | 'asparagaceae'
   | 'asphodelaceae'
+  | 'bromeliaceae'
   | 'cactaceae'
   | 'commelinaceae'
   | 'cycadaceae'
@@ -202,7 +203,7 @@ const createFamilyCategoryData = (
     heroSize: seed.heroSize ?? { base: '430px auto', md: '560px auto', lg: '640px auto' },
     latinName: seed.latinName,
     origin: {
-      mapImage: seed.originMapImage ?? image,
+      mapImage: seed.originMapImage ?? assets.map,
       text: seed.origin[locale],
     },
     originTitle: modalCopy[locale].originTitle,
@@ -229,6 +230,7 @@ const familyTitles: Record<Exclude<CategoryId, 'araceae'>, LocalizedText> = {
   arecaceae: { en: 'Palms', ru: 'Пальмовые' },
   asparagaceae: { en: 'Asparagus family', ru: 'Спаржевые' },
   asphodelaceae: { en: 'Asphodel family', ru: 'Асфоделовые' },
+  bromeliaceae: { en: 'Bromeliads', ru: 'Бромелиевые' },
   cactaceae: { en: 'Cacti', ru: 'Кактусовые' },
   commelinaceae: { en: 'Spiderwort family', ru: 'Коммелиновые' },
   cycadaceae: { en: 'Cycads', ru: 'Саговниковые' },
@@ -258,6 +260,11 @@ export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryD
     'asphodelaceae',
     familyTitles.asphodelaceae,
     familySeeds.asphodelaceae,
+  ),
+  bromeliaceae: createFamilyDataByLocale(
+    'bromeliaceae',
+    familyTitles.bromeliaceae,
+    familySeeds.bromeliaceae,
   ),
   cactaceae: createFamilyDataByLocale('cactaceae', familyTitles.cactaceae, familySeeds.cactaceae),
   commelinaceae: createFamilyDataByLocale(

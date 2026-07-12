@@ -11,6 +11,8 @@ export interface HomeStatCard {
 export interface HomeCategory {
   readonly count: string;
   readonly image: string;
+  readonly imageObjectPosition?: string;
+  readonly imageScale?: string;
   readonly id: string;
   readonly name: string;
 }
@@ -32,7 +34,7 @@ export interface HomeCopy {
   readonly tagline: string;
 }
 
-export const homeTotalPlantsCount = '46';
+export const homeTotalPlantsCount = '67';
 
 export const homeCopy: Record<Locale, HomeCopy> = {
   ru: {
@@ -92,14 +94,14 @@ export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
     { count: '8 растений', image: '/plants/categories/studio/gesneriaceae.jpg', id: 'gesneriaceae', name: 'Геснериевые' },
     { count: '10 растений', image: '/plants/categories/studio/marantaceae.jpg', id: 'marantaceae', name: 'Марантовые' },
     { count: '3 растения', image: '/plants/categories/studio/orchidaceae.jpg', id: 'orchidaceae', name: 'Орхидные' },
-    { count: '1 растение', image: '/plants/categories/studio/asparagaceae.jpg', id: 'asparagaceae', name: 'Спаржевые' },
+    { count: '9 растений', image: '/plants/categories/studio/asparagaceae.jpg', id: 'asparagaceae', name: 'Спаржевые' },
     { count: '2 растения', image: '/plants/categories/studio/apocynaceae.jpg', id: 'apocynaceae', name: 'Кутровые' },
     { count: '1 растение', image: '/plants/categories/studio/asphodelaceae.jpg', id: 'asphodelaceae', name: 'Асфоделовые' },
+    { count: '5 растений', image: '/plants/categories/studio/bromeliaceae.jpg', imageObjectPosition: 'center', imageScale: '1', id: 'bromeliaceae', name: 'Бромелиевые' },
     { count: '1 растение', image: '/plants/categories/studio/cactaceae.jpg', id: 'cactaceae', name: 'Кактусовые' },
     { count: '1 растение', image: '/plants/categories/studio/commelinaceae.jpg', id: 'commelinaceae', name: 'Коммелиновые' },
-    { count: '1 растение', image: '/plants/categories/studio/piperaceae.jpg', id: 'piperaceae', name: 'Перцевые' },
+    { count: '10 растений', image: '/plants/categories/studio/piperaceae.jpg', id: 'piperaceae', name: 'Перцевые' },
     { count: '1 растение', image: '/plants/categories/studio/vitaceae.jpg', id: 'vitaceae', name: 'Виноградовые' },
-    { count: '1 растение', image: '/plants/categories/studio/nephrolepidaceae.jpg', id: 'nephrolepidaceae', name: 'Папоротники' },
     { count: '1 растение', image: '/plants/categories/studio/arecaceae.jpg', id: 'arecaceae', name: 'Пальмовые' },
     { count: '1 растение', image: '/plants/categories/studio/cycadaceae.jpg', id: 'cycadaceae', name: 'Саговниковые' },
   ],
@@ -109,14 +111,14 @@ export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
     { count: '8 plants', image: '/plants/categories/studio/gesneriaceae.jpg', id: 'gesneriaceae', name: 'Gesneriad family' },
     { count: '10 plants', image: '/plants/categories/studio/marantaceae.jpg', id: 'marantaceae', name: 'Prayer plant family' },
     { count: '3 plants', image: '/plants/categories/studio/orchidaceae.jpg', id: 'orchidaceae', name: 'Orchids' },
-    { count: '1 plant', image: '/plants/categories/studio/asparagaceae.jpg', id: 'asparagaceae', name: 'Asparagus family' },
+    { count: '9 plants', image: '/plants/categories/studio/asparagaceae.jpg', id: 'asparagaceae', name: 'Asparagus family' },
     { count: '2 plants', image: '/plants/categories/studio/apocynaceae.jpg', id: 'apocynaceae', name: 'Dogbane family' },
     { count: '1 plant', image: '/plants/categories/studio/asphodelaceae.jpg', id: 'asphodelaceae', name: 'Asphodel family' },
+    { count: '5 plants', image: '/plants/categories/studio/bromeliaceae.jpg', imageObjectPosition: 'center', imageScale: '1', id: 'bromeliaceae', name: 'Bromeliads' },
     { count: '1 plant', image: '/plants/categories/studio/cactaceae.jpg', id: 'cactaceae', name: 'Cacti' },
     { count: '1 plant', image: '/plants/categories/studio/commelinaceae.jpg', id: 'commelinaceae', name: 'Spiderwort family' },
-    { count: '1 plant', image: '/plants/categories/studio/piperaceae.jpg', id: 'piperaceae', name: 'Pepper family' },
+    { count: '10 plants', image: '/plants/categories/studio/piperaceae.jpg', id: 'piperaceae', name: 'Pepper family' },
     { count: '1 plant', image: '/plants/categories/studio/vitaceae.jpg', id: 'vitaceae', name: 'Grape family' },
-    { count: '1 plant', image: '/plants/categories/studio/nephrolepidaceae.jpg', id: 'nephrolepidaceae', name: 'Ferns' },
     { count: '1 plant', image: '/plants/categories/studio/arecaceae.jpg', id: 'arecaceae', name: 'Palms' },
     { count: '1 plant', image: '/plants/categories/studio/cycadaceae.jpg', id: 'cycadaceae', name: 'Cycads' },
   ],

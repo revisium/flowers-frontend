@@ -11,6 +11,7 @@ export type PlantCategory =
   | 'arecaceae'
   | 'asparagaceae'
   | 'asphodelaceae'
+  | 'bromeliaceae'
   | 'cactaceae'
   | 'commelinaceae'
   | 'cycadaceae'
@@ -133,11 +134,11 @@ export const plantCategories = [
   { key: 'asparagaceae' },
   { key: 'apocynaceae' },
   { key: 'asphodelaceae' },
+  { key: 'bromeliaceae' },
   { key: 'cactaceae' },
   { key: 'commelinaceae' },
   { key: 'piperaceae' },
   { key: 'vitaceae' },
-  { key: 'nephrolepidaceae' },
   { key: 'arecaceae' },
   { key: 'cycadaceae' },
 ] satisfies readonly { readonly key: Exclude<PlantCategory, 'all'> }[];
@@ -147,8 +148,9 @@ const categoryCounts: Record<Exclude<PlantCategory, 'all'>, number> = {
   apocynaceae: 2,
   araceae: 9,
   arecaceae: 1,
-  asparagaceae: 1,
+  asparagaceae: 10,
   asphodelaceae: 1,
+  bromeliaceae: 5,
   cactaceae: 1,
   commelinaceae: 1,
   cycadaceae: 1,
@@ -156,7 +158,7 @@ const categoryCounts: Record<Exclude<PlantCategory, 'all'>, number> = {
   marantaceae: 10,
   nephrolepidaceae: 1,
   orchidaceae: 3,
-  piperaceae: 1,
+  piperaceae: 10,
   vitaceae: 1,
 };
 
@@ -169,6 +171,7 @@ export const categoryLabels: Record<Locale, Record<PlantCategory, string>> = {
     arecaceae: 'Пальмовые',
     asparagaceae: 'Спаржевые',
     asphodelaceae: 'Асфоделовые',
+    bromeliaceae: 'Бромелиевые',
     cactaceae: 'Кактусовые',
     commelinaceae: 'Коммелиновые',
     cycadaceae: 'Саговниковые',
@@ -187,6 +190,7 @@ export const categoryLabels: Record<Locale, Record<PlantCategory, string>> = {
     arecaceae: 'Palms',
     asparagaceae: 'Asparagus family',
     asphodelaceae: 'Asphodel family',
+    bromeliaceae: 'Bromeliads',
     cactaceae: 'Cacti',
     commelinaceae: 'Spiderwort family',
     cycadaceae: 'Cycads',

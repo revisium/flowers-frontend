@@ -76,9 +76,9 @@ export const HomeCategoryCard = ({ category, onOpen }: HomeCategoryCardProps) =>
           alt=""
           height="100%"
           objectFit="cover"
-          objectPosition="left center"
+          objectPosition={category.imageObjectPosition ?? 'left center'}
           src={category.image}
-          transform="scale(1.3)"
+          transform={`scale(${category.imageScale ?? '1.3'})`}
           transformOrigin="left center"
           width="100%"
         />
