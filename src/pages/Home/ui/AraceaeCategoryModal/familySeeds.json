@@ -162,20 +162,28 @@
     ]
   },
   "arecaceae": {
+    "closingNote": {
+      "en": "Palms bring an unmistakable tropical rhythm to an interior: from airy feathered crowns to sculptural fans, each form changes the character of a room.",
+      "ru": "Пальмовые задают интерьеру узнаваемый тропический ритм: от воздушных перистых крон до скульптурных вееров, каждая форма меняет характер пространства."
+    },
     "description": {
-      "en": "Palms add a calm vertical rhythm to a room with feathered or fan-shaped fronds. They grow from a single crown and appreciate steady warmth, light, and room to unfold.",
-      "ru": "Пальмовые дают комнате спокойный вертикальный ритм перистыми или веерными листьями. Они растут из одной верхушки и ценят стабильное тепло, свет и место для раскрытия вай."
+      "en": "Palms are a diverse family of flowering plants, recognised by their distinctive crowns of fan-shaped or feathered leaves. They range from compact clumping species to tall single-stemmed trees and bring a calm vertical rhythm to interiors.",
+      "ru": "Пальмовые - разнообразное семейство цветковых растений, узнаваемое по характерной кроне из веерных или перистых листьев. Среди них есть компактные кустящиеся виды и высокие одноствольные деревья; все они добавляют интерьеру спокойный вертикальный ритм."
     },
     "facts": {
       "en": [
-        "Most palms do not branch from the trunk, so the growing point is especially important.",
-        "Young indoor palms often prefer softer light than mature outdoor specimens.",
-        "Leaf tips react quickly to dry air, salts in water, and irregular watering."
+        "Palms are flowering plants, not trees in a separate botanical group.",
+        "Their leaves may be fan-shaped, feather-like, or formed from both patterns.",
+        "Many palms grow from a single crown, so damage to the growing point can be critical.",
+        "Small flowers are often gathered in large branching inflorescences below the leaves.",
+        "Palm fruits are commonly drupes, although their size, colour, and uses vary widely."
       ],
       "ru": [
-        "Большинство пальм не ветвится от ствола, поэтому точка роста особенно важна.",
-        "Молодые комнатные пальмы часто любят более мягкий свет, чем взрослые растения на улице.",
-        "Кончики листьев быстро реагируют на сухой воздух, соли в воде и нерегулярный полив."
+        "Пальмовые - цветковые растения, а не отдельная ботаническая группа деревьев.",
+        "Их листья бывают веерными, перистыми или сочетают признаки обеих форм.",
+        "Многие пальмы растут из одной верхушки, поэтому повреждение точки роста для них особенно важно.",
+        "Небольшие цветки часто собраны в крупные разветвленные соцветия под листьями.",
+        "Плоды пальм чаще всего представляют собой костянки, но сильно различаются по размеру, окраске и применению."
       ]
     },
     "heroImage": "/plants/arecaceae-modal/hero.png",
@@ -183,30 +191,40 @@
     "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
     "latinName": "Arecaceae",
     "origin": {
-      "en": "Mainly tropical and subtropical forests, coastlines, and islands around the world.",
-      "ru": "Преимущественно тропические и субтропические леса, побережья и острова по всему миру."
+      "en": "Tropical and subtropical regions of Central and South America, Africa, South and Southeast Asia, northern Australia, and the Pacific islands.",
+      "ru": "Тропические и субтропические регионы Центральной и Южной Америки, Африки, Южной и Юго-Восточной Азии, севера Австралии и островов Тихого океана."
     },
     "originMapImage": "/plants/arecaceae-modal/origin-map.png",
     "plants": [
       {
         "en": "Chamaedorea elegans",
+        "image": "/plants/arecaceae-modal/chamaedorea-elegans.png",
         "ru": "Хамедорея изящная"
       }
     ],
     "traits": {
       "en": [
-        "Leaves are feather-like or fan-shaped and unfold from the crown.",
-        "The stem is usually upright and rarely branches indoors.",
-        "Roots like consistent moisture without stagnant water.",
-        "A warm stable place helps new fronds open cleanly."
+        "Leaves are usually fan-shaped or feather-like and unfold from the crown.",
+        "A ringed trunk or a compact group of stems supports the leafy crown.",
+        "Many species have one main growing point at the top of the stem.",
+        "Tiny flowers are gathered in branched inflorescences between or below the leaves.",
+        "Fruits commonly develop as clusters of drupes containing one seed."
       ],
       "ru": [
-        "Листья перистые или веерные и разворачиваются из центральной верхушки.",
-        "Стебель обычно прямой и в комнате почти не ветвится.",
-        "Корни любят равномерную влажность без застоя воды.",
-        "Теплое стабильное место помогает новым листьям раскрываться ровно."
+        "Листья обычно веерные или перистые и разворачиваются из кроны.",
+        "Кольчатый ствол или компактная группа стеблей поддерживает крону из листьев.",
+        "У многих видов есть одна главная точка роста на вершине стебля.",
+        "Мелкие цветки собраны в разветвленные соцветия между листьями или ниже них.",
+        "Плоды часто развиваются гроздьями костянок, содержащих по одному семени."
       ]
-    }
+    },
+    "traitImages": [
+      "/plants/arecaceae-modal/trait-fan-leaf.png",
+      "/plants/arecaceae-modal/trait-feather-leaf.png",
+      "/plants/arecaceae-modal/trait-ringed-trunk.png",
+      "/plants/arecaceae-modal/trait-inflorescence.png",
+      "/plants/arecaceae-modal/trait-fruit-cluster.png"
+    ]
   },
   "bromeliaceae": {
     "closingNote": {
@@ -586,6 +604,10 @@
     ]
   },
   "cycadaceae": {
+    "closingNote": {
+      "en": "Cycads bring the measured geometry of an ancient plant lineage into an interior: slow-growing, sculptural, and unmistakably distinct.",
+      "ru": "Саговниковые привносят в интерьер выверенную геометрию древней линии растений: они медленно растут, скульптурны и ни на что не похожи."
+    },
     "description": {
       "en": "Cycads look ancient because they are ancient in form: a sturdy trunk, a crown of stiff fronds, and very slow deliberate growth.",
       "ru": "Саговниковые выглядят древними, потому что их форма действительно древняя: крепкий стволик, корона жестких листьев и очень медленный уверенный рост."
@@ -593,13 +615,17 @@
     "facts": {
       "en": [
         "Cycads are not palms, even though many indoor forms look palm-like.",
-        "New leaves often emerge together as a soft flush, then harden and darken.",
-        "They dislike frequent repotting and recover slowly from root damage."
+        "They are ancient seed plants and do not produce flowers or fruits in the botanical sense.",
+        "Male and female reproductive structures usually develop on separate plants.",
+        "Many cycads are threatened in the wild, so cultivated plants should come from responsible growers.",
+        "All parts of cycads are best kept away from pets and small children."
       ],
       "ru": [
         "Саговники не пальмы, хотя многие комнатные формы похожи на маленькие пальмы.",
-        "Новые листья часто выходят сразу волной, затем твердеют и темнеют.",
-        "Они не любят частую пересадку и медленно восстанавливаются после повреждения корней."
+        "Это древние семенные растения: в ботаническом смысле они не образуют ни цветков, ни плодов.",
+        "Мужские и женские репродуктивные органы обычно развиваются на разных растениях.",
+        "Многие саговники в природе находятся под угрозой, поэтому растения стоит приобретать только у ответственных поставщиков.",
+        "Все части саговников лучше держать вдали от домашних животных и маленьких детей."
       ]
     },
     "heroImage": "/plants/cycadaceae-modal/hero.png",
@@ -607,30 +633,40 @@
     "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
     "latinName": "Cycadaceae",
     "origin": {
-      "en": "East Africa and Madagascar, then South and Southeast Asia through to Australia and the western Pacific islands.",
-      "ru": "Восточное побережье Африки и Мадагаскар, затем Южная и Юго-Восточная Азия, Австралия и западные острова Тихого океана."
+      "en": "Tropical and subtropical regions from East Africa and Madagascar through South and Southeast Asia to Australia and the western Pacific islands.",
+      "ru": "Тропические и субтропические регионы от Восточной Африки и Мадагаскара через Южную и Юго-Восточную Азию до Австралии и западных островов Тихого океана."
     },
     "originMapImage": "/plants/cycadaceae-modal/origin-map.png",
     "plants": [
       {
         "en": "Cycas revoluta",
+        "image": "/plants/cycadaceae-modal/cycas-revoluta.png",
         "ru": "Саговник поникающий"
       }
     ],
     "traits": {
       "en": [
-        "A stout trunk or caudex carries a crown of stiff fronds.",
-        "Growth is slow and usually comes in seasonal flushes.",
-        "Bright light keeps the crown compact.",
-        "All parts are best kept away from pets and small children."
+        "Stiff pinnate fronds form a symmetrical crown at the top of the plant.",
+        "A short stout trunk or caudex keeps the bases of old leaves.",
+        "Male cones are elongated; in Cycas, female reproductive leaves form a loose seed-bearing cluster.",
+        "New fronds often appear together in one pale green flush before hardening.",
+        "Seeds develop openly on cone scales rather than inside a fruit."
       ],
       "ru": [
-        "Толстый стволик или каудекс несет корону жестких листьев.",
-        "Рост медленный и обычно идет сезонными волнами.",
-        "Яркий свет сохраняет крону компактной.",
-        "Все части лучше держать вдали от животных и маленьких детей."
+        "Жесткие перистые листья образуют симметричную крону на вершине растения.",
+        "Короткий крепкий стволик или каудекс сохраняет основания старых листьев.",
+        "Мужские шишки вытянутые; у саговников женские спороносные листья образуют рыхлую группу с семенами.",
+        "Новые листья часто появляются вместе одной светло-зеленой волной, а затем твердеют.",
+        "Семена развиваются открыто на чешуях шишек, а не внутри плода."
       ]
-    }
+    },
+    "traitImages": [
+      "/plants/cycadaceae-modal/trait-pinnate-frond.png",
+      "/plants/cycadaceae-modal/trait-caudeux.png",
+      "/plants/cycadaceae-modal/trait-female-cone.png",
+      "/plants/cycadaceae-modal/trait-male-cone.png",
+      "/plants/cycadaceae-modal/trait-young-flush.png"
+    ]
   },
   "gesneriaceae": {
     "closingNote": {
