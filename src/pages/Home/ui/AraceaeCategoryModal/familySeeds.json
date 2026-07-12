@@ -313,13 +313,15 @@
         "Asparagus officinalis is the only member widely grown as a vegetable crop.",
         "Sansevieria releases oxygen at night and helps clean indoor air.",
         "Ruscus is popular in floristry, although its \"leaves\" are actually modified shoots.",
-        "Many asparagus relatives contain saponins and have useful properties."
+        "Many asparagus relatives contain saponins and have useful properties.",
+        "The fine green \"leaves\" of ornamental asparagus are often flattened stems called cladodes."
       ],
       "ru": [
         "Спаржа (Asparagus officinalis) - единственный вид, который выращивается как овощная культура.",
         "Сансевиерия выделяет кислород ночью и очищает воздух от вредных веществ.",
         "Рускус популярен во флористике, хотя его «листья» - это на самом деле видоизмененные побеги.",
-        "Многие спаржевые содержат сапонины и обладают полезными свойствами."
+        "Многие спаржевые содержат сапонины и обладают полезными свойствами.",
+        "Тонкие зеленые «листочки» декоративного аспарагуса часто являются уплощенными побегами — кладодиями."
       ]
     },
     "heroImage": "/plants/asparagaceae-modal/hero.png",
@@ -523,6 +525,10 @@
     "traitImages": ["/plants/cactaceae-modal/echinocactus-grusonii.png", "/plants/cactaceae-modal/astrophytum-asterias.png", "/plants/cactaceae-modal/ferocactus-cylindraceus.png", "/plants/cactaceae-modal/opuntia-microdasys.png"]
   },
   "commelinaceae": {
+    "closingNote": {
+      "en": "Commelinaceae bring color, movement, and an easy-going tropical mood to the home. They grow quickly, propagate simply, and reward regular shaping.",
+      "ru": "Коммелиновые приносят в дом цвет, движение и легкое тропическое настроение. Они быстро растут, легко размножаются и любят регулярную формировку."
+    },
     "description": {
       "en": "Spiderwort relatives are fast, colorful, and generous with cuttings. Their trailing stems and striped leaves make shelves and hanging pots feel instantly alive.",
       "ru": "Коммелиновые быстрые, цветные и щедрые на черенки. Их свисающие побеги и полосатые листья мгновенно оживляют полки и подвесные кашпо."
@@ -531,24 +537,38 @@
       "en": [
         "Tradescantias root so easily that a tired pot can be refreshed from cuttings.",
         "Brighter light usually makes purple and silver markings more expressive.",
-        "Older stems may bare at the base, so regular pruning keeps the plant full."
+        "Older stems may bare at the base, so regular pruning keeps the plant full.",
+        "Many members close their flowers by midday, which is why they are often called dayflowers.",
+        "Purple foliage usually becomes richer when the plant receives more bright, filtered light."
       ],
       "ru": [
         "Традесканции так легко укореняются, что уставший горшок можно быстро обновить черенками.",
         "На ярком свету фиолетовые и серебристые полосы обычно становятся выразительнее.",
-        "Старые побеги могут оголяться у основания, поэтому прищипка сохраняет пышность."
+        "Старые побеги могут оголяться у основания, поэтому прищипка сохраняет пышность.",
+        "Цветки многих представителей закрываются к полудню, поэтому их часто называют однодневными.",
+        "При ярком рассеянном свете фиолетовая окраска листьев обычно становится насыщеннее."
       ]
     },
+    "heroImage": "/plants/commelinaceae-modal/hero.png",
+    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 12px) top" },
+    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
     "latinName": "Commelinaceae",
     "origin": {
       "en": "Warm regions of the Americas, Africa, and Asia, often in bright forest edges.",
       "ru": "Теплые регионы Америки, Африки и Азии, часто светлые лесные опушки."
     },
+    "originMapImage": "/plants/commelinaceae-modal/origin-map.png",
     "plants": [
-      {
-        "en": "Tradescantia zebrina",
-        "ru": "Традесканция зебрина"
-      }
+      { "en": "Tradescantia zebrina", "image": "/plants/commelinaceae-modal/tradescantia-zebrina.png", "ru": "Традесканция зебрина" },
+      { "en": "Tradescantia fluminensis", "image": "/plants/commelinaceae-modal/tradescantia-fluminensis.png", "ru": "Традесканция приречная" },
+      { "en": "Tradescantia pallida", "image": "/plants/commelinaceae-modal/tradescantia-pallida.png", "ru": "Традесканция бледная" },
+      { "en": "Tradescantia sillamontana", "image": "/plants/commelinaceae-modal/tradescantia-sillamontana.png", "ru": "Традесканция силламонтана" },
+      { "en": "Callisia repens", "image": "/plants/commelinaceae-modal/callisia-repens.png", "ru": "Каллизия ползучая" },
+      { "en": "Tradescantia spathacea", "image": "/plants/commelinaceae-modal/tradescantia-spathacea.png", "ru": "Традесканция покрывальчатая" },
+      { "en": "Commelina communis", "image": "/plants/commelinaceae-modal/commelina-communis.png", "ru": "Коммелина обыкновенная" },
+      { "en": "Cyanotis kewensis", "image": "/plants/commelinaceae-modal/cyanotis-kewensis.png", "ru": "Цианотис кьюский" },
+      { "en": "Tradescantia virginiana", "image": "/plants/commelinaceae-modal/tradescantia-virginiana.png", "ru": "Традесканция виргинская" },
+      { "en": "Callisia fragrans", "image": "/plants/commelinaceae-modal/callisia-fragrans.png", "ru": "Каллизия душистая" }
     ],
     "traits": {
       "en": [
@@ -563,7 +583,14 @@
         "Рост быстрый, поэтому обрезка - обычная часть ухода.",
         "Мягкие стебли любят умеренный полив без долгой засухи."
       ]
-    }
+    },
+    "traitImages": [
+      "/plants/commelinaceae-modal/tradescantia-zebrina.png",
+      "/plants/commelinaceae-modal/tradescantia-pallida.png",
+      "/plants/commelinaceae-modal/tradescantia-sillamontana.png",
+      "/plants/commelinaceae-modal/commelina-communis.png",
+      "/plants/commelinaceae-modal/callisia-repens.png"
+    ]
   },
   "cycadaceae": {
     "description": {
