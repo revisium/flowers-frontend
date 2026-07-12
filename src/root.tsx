@@ -9,7 +9,7 @@ import {
 } from 'react-router';
 
 import { AppProvider } from './app/providers/AppProvider';
-import { LayoutProvider } from './widgets/Layout';
+import { LayoutProvider } from './shared/config';
 
 export const links: LinksFunction = () => [
   {

@@ -2,3 +2,4 @@
 import './theme/fonts.css';
 
 export { chakraSystem } from './theme/theme';
+export { PlantCollectionIcon } from './PlantCollectionIcon/PlantCollectionIcon';

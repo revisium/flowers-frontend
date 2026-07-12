@@ -58,7 +58,7 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
         <Grid
           pt="2px"
           gap={{ base: '12px', md: '16px' }}
-          gridAutoColumns={{ base: 'minmax(282px, calc(100vw - 72px))', md: 'auto' }}
+          gridAutoColumns={{ base: '262px', md: 'auto' }}
           gridAutoFlow={{ base: 'column', md: 'row' }}
           gridTemplateColumns={{
             base: 'none',

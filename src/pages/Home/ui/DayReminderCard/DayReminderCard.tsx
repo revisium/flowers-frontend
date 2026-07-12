@@ -1,4 +1,5 @@
-import { Button, Flex, Link, Text } from '@chakra-ui/react';
+import { Button, Flex, Text } from '@chakra-ui/react';
+import { useLayoutContext } from 'src/shared/config';
 
 import type { HomeCopy } from '../../model/homePageData';
 import { SmallCanIcon } from 'src/pages/Home/ui/SmallCanIcon/SmallCanIcon.tsx';
@@ -8,6 +9,8 @@ interface DayReminderCardProps {
 }
 
 export const DayReminderCard = ({ text }: DayReminderCardProps) => {
+  const { onCollectionOpen } = useLayoutContext();
+
   return (
     <Flex
       display={{ base: 'none', md: 'flex' }}
@@ -37,25 +40,24 @@ export const DayReminderCard = ({ text }: DayReminderCardProps) => {
           <SmallCanIcon />
           {text.actionLabel}
         </Button>
-        <Link
-          alignItems="center"
+        <Button
+          aria-label={text.reminderActionLabel}
           border="1px solid rgba(126, 104, 69, 0.22)"
           borderRadius="8px"
           color="#242820"
           display="inline-flex"
-          href="/collection"
           justifyContent="center"
           p="10px"
-          textDecoration="none"
           textStyle={{ md: 'semibold-xs', xl: 'semibold-md' }}
+          type="button"
+          variant="plain"
           minHeight={{ md: '34px', xl: '44px' }}
           width={{ base: '100%', sm: 'auto' }}
-          _active={{ textDecoration: 'none' }}
-          _focus={{ textDecoration: 'none' }}
-          _hover={{ background: 'rgba(255, 252, 246, 0.48)', textDecoration: 'none' }}
+          onClick={onCollectionOpen}
+          _hover={{ background: 'rgba(255, 252, 246, 0.48)' }}
         >
           {text.reminderActionLabel} »
-        </Link>
+        </Button>
       </Flex>
     </Flex>
   );

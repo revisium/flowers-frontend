@@ -1,5 +1,5 @@
 import { Box, Flex } from '@chakra-ui/react';
-import { useRef } from 'react';
+import { useRef, type MouseEvent } from 'react';
 
 import { type CategoryDetailData } from '../AraceaeCategoryModal/types';
 import { CategoryCollectionSection } from '../CategoryCollectionSection/CategoryCollectionSection';
@@ -18,6 +18,12 @@ export const CategoryDetailModal = ({ data, onClose }: CategoryDetailModalProps)
   const titleId = `${data.latinName.toLowerCase()}-modal-title`;
   const { handleKeyDown, isOpen } = useModalFocusTrap({ cardRef, closeButtonRef, onClose });
 
+  const handleBackdropClick = (event: MouseEvent<HTMLDivElement>) => {
+    if (event.target === event.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
     <Flex
       alignItems="flex-start"
@@ -32,6 +38,7 @@ export const CategoryDetailModal = ({ data, onClose }: CategoryDetailModalProps)
       role="dialog"
       tabIndex={-1}
       zIndex={80}
+      onClick={handleBackdropClick}
       onKeyDown={handleKeyDown}
     >
       <Box

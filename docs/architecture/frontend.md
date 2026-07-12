@@ -1,15 +1,12 @@
 # Frontend Architecture
 
 This repository has moved past the pure structural skeleton. The current
-product surface is an exploratory greenhouse prototype with two route-level
-page slices:
+product surface is an exploratory greenhouse prototype with one route-level
+page slice:
 
 - `src/pages/Home` renders the presentation-focused landing/dashboard view:
   hero, collection summary, care actions, responsive category cards, and notes
   callout.
-- `src/pages/Collection` renders the interactive room canvas with fixed-position
-  plant assets, category/search filtering, locale-aware labels, hover plant
-  plates, and an opened plant folio card overlay.
 
 ## FSD Layer Hierarchy
 
@@ -19,7 +16,8 @@ Layers, from top to bottom, each depending only downward:
 - `pages` — route-level page slices.
 - `widgets` — reusable composed UI blocks shared by page slices. Current widget
   slice is `Layout`, which owns the shared inner-screen frame, persistent
-  header, brand mark, search, and language controls across routes.
+  header, brand mark, search, language controls, and the entry point to the
+  personal-plant catalog.
 - `features` — cross-page reusable behavior (none yet).
 - `entities` — domain types and mock/data records (none yet).
 - `shared` — cross-cutting UI, API/transport, config, and infrastructure
@@ -47,9 +45,8 @@ by sibling projects.
 renders the app background, applies the fixed `18px` viewport padding, hides
 outer overflow, and places page content inside a rounded scroll container that
 fills the remaining viewport width and height up to the current content max
-width. `HomePage` and `CollectionPage` wrap their route content in this widget
-instead of adding their own outer viewport padding, top-level rounded frame, or
-duplicated header.
+width. `HomePage` wraps its route content in this widget instead of adding its
+own outer viewport padding, top-level rounded frame, or duplicated header.
 
 ## Home Prototype Contract
 
@@ -63,11 +60,14 @@ metadata.
   action content, and tablet/desktop reminder card. The shared header is owned
   by `widgets/Layout`, not by the hero.
 - `ui/HomeCategoriesSection` owns the labeled category section, responsive
-  auto-fit category grid, collection link, notes callout, and category-card
-  modal triggers. Category cards open local category detail modals from
-  `ui/AraceaeCategoryModal/data.ts`; the card `href` remains `/collection` as a
-  fallback while the explicit collection link stays available in the section
-  header.
+  auto-fit category grid, notes callout, and category-card modal triggers.
+  Category cards open local category detail modals from
+  `ui/AraceaeCategoryModal/data.ts`.
+- `ui/HomeCollectionOverlay` owns the full-screen personal-plant catalog. It
+  derives its 67 local mock records from the existing family data, supports
+  header-search filtering, and has both a horizontally scrollable family list
+  and an explicit `All families` chooser so none of the 15 families are
+  hidden behind the initial viewport.
 - The reusable category detail modal frame and sections live in
   `ui/CategoryDetailModal`, `ui/CategoryHero`, `ui/CategoryInfoGrid`,
   `ui/CategoryCollectionSection`, `ui/InfoPanel`, and `ui/SproutIcon`.
@@ -78,41 +78,10 @@ metadata.
   `HomeCategoryCard`, `HomeStats`, and `StatIconBox`.
 
 The home category thumbnails use one distinct category artwork asset per
-category. Cards open local detail modals for family overviews; `/collection`
-remains reachable through the section link and as the card fallback when
-JavaScript is unavailable. The current prototype does not deep-link to a
-category yet.
-
-## Collection Prototype Contract
-
-`src/pages/Collection` is still a client-side prototype, not an API-backed
-product flow. Its data is local mock content in the page slice model, and the UI
-uses a fixed room coordinate system so plants stay anchored to shelves, the
-windowsill, and floor areas while the room scrolls.
-
-- `model/collectionModel.ts` owns the local room facts: plants, categories,
-  labels, locale copy, and count helpers.
-- `model/collectionViewModel.ts` owns collection-local prototype interaction
-  state and actions: active category and selected plant id.
-- `model/plantItemViewModel.ts` derives repeated plant item view data:
-  localized names, filter results, image paths, and fixed positioning.
-- `model/plantCardViewModel.ts` derives the selected plant folio data from the
-  local plant record and card content map.
-- `ui/CollectionPage` bridges shared layout search state and route navigation
-  state into the collection ViewModel so choosing a search suggestion can open
-  the plant card from any route.
-- `ui/RoomScene` composes the room canvas, collection return link, scroll
-  controls, ambient info, plant card overlay, and collection-only child
-  sections. The shared header stays in `widgets/Layout`.
-- `ui/RoomSidebar` owns only collection category navigation.
-- `ui/RoomPlantLayer` renders plant figures with hover/focus plates. The plate
-  includes the plant name, category, and an explicit card-action button.
-- `ui/PlantFolioCard` renders the modal plant card overlay with focus entering
-  the dialog, Escape dismissal, tab containment, and focus restoration to the
-  trigger.
-- The room background remains a fixed-size canvas matching the source asset
-  dimensions. Viewport overflow is handled by scrolling the room, not by
-  resizing individual plant positions.
+category. Cards open local detail modals for family overviews. Personal plants
+are available from the persistent header button and open in the local overlay,
+not at a separate route. The current prototype does not deep-link to a family
+or an individual plant yet.
 
 ## Target MVVM Contract
 
@@ -122,10 +91,10 @@ Once product work starts, pages should follow this contract:
 - ViewModels own state, actions, derived values, and validation.
 - React views render observable state and forward events only.
 
-MobX is still not wired for the current prototype pages. `src/pages/Home` is a
-presentational composition backed by typed local mock data, while
-`src/pages/Collection` uses a small React-state prototype boundary plus pure
-plant item/card derivation helpers. Do not add MobX observer wiring,
+MobX is still not wired for the current prototype page. `src/pages/Home` is a
+presentational composition backed by typed local mock data, while the
+personal-plant overlay uses small local React-state controls and pure catalog
+derivation helpers. Do not add MobX observer wiring,
 DataSources, or DI composition until the prototype needs real state ownership
 beyond the route prototype or external data.
 
