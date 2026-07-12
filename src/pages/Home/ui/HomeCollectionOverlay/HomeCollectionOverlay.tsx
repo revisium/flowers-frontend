@@ -143,15 +143,16 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
         maxWidth="1320px"
         overflow="hidden"
         padding={{ base: '18px', md: '28px' }}
+        position="relative"
         width="100%"
       >
-        <Flex alignItems={{ base: 'stretch', lg: 'center' }} direction={{ base: 'column', lg: 'row' }} gap="14px" justifyContent="space-between">
-          <Flex alignItems="baseline" gap="12px">
+        <Flex alignItems={{ base: 'stretch', lg: 'center' }} direction={{ base: 'column', lg: 'row' }} gap="14px" justifyContent="space-between" paddingRight={{ base: '56px', md: '64px' }}>
+          <Flex alignItems="center" gap="12px">
             <Flex alignItems="center" as="h2" color="#314034" gap="8px" id="my-plants-title" margin={0} textStyle="bold-xl">
               <PlantCollectionIcon size={28} />
               {text.title}
             </Flex>
-            <Text color="#64705f" textStyle="medium-sm">
+            <Text color="#64705f" textStyle="medium-sm" transform="translateY(4px)">
               {catalogByLocale[locale].length} {text.plantCount}
             </Text>
           </Flex>
@@ -198,27 +199,31 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
                 </Button>
               ) : null}
             </Box>
-            <Button
-              ref={closeButtonRef}
-              aria-label={text.close}
-              border="1px solid rgba(82, 98, 70, 0.35)"
-              borderRadius="999px"
-              color="#3e513d"
-              flex="0 0 auto"
-              fontSize="24px"
-              height="46px"
-              minWidth="46px"
-              padding={0}
-              type="button"
-              variant="plain"
-              onClick={onClose}
-              _focusVisible={{ boxShadow: '0 0 0 3px rgba(94, 127, 57, 0.26)', outline: 'none' }}
-              _hover={{ background: 'rgba(218, 204, 178, 0.3)' }}
-            >
-              ×
-            </Button>
           </Flex>
         </Flex>
+
+        <Button
+          ref={closeButtonRef}
+          aria-label={text.close}
+          border="1px solid rgba(82, 98, 70, 0.35)"
+          borderRadius="999px"
+          color="#3e513d"
+          fontSize="24px"
+          height="46px"
+          minWidth="46px"
+          padding={0}
+          position="absolute"
+          right={{ base: '18px', md: '28px' }}
+          top={{ base: '18px', md: '28px' }}
+          type="button"
+          variant="plain"
+          zIndex={2}
+          onClick={onClose}
+          _focusVisible={{ boxShadow: '0 0 0 3px rgba(94, 127, 57, 0.26)', outline: 'none' }}
+          _hover={{ background: 'rgba(218, 204, 178, 0.3)' }}
+        >
+          ×
+        </Button>
 
         <Flex alignItems="center" gap="10px" marginTop="20px" minWidth={0}>
           <Flex
