@@ -139,7 +139,6 @@ export const plantCategories = [
   { key: 'commelinaceae' },
   { key: 'piperaceae' },
   { key: 'vitaceae' },
-  { key: 'nephrolepidaceae' },
   { key: 'arecaceae' },
   { key: 'cycadaceae' },
 ] satisfies readonly { readonly key: Exclude<PlantCategory, 'all'> }[];
