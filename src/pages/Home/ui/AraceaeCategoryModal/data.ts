@@ -203,7 +203,7 @@ const createFamilyCategoryData = (
     heroSize: seed.heroSize ?? { base: '430px auto', md: '560px auto', lg: '640px auto' },
     latinName: seed.latinName,
     origin: {
-    mapImage: seed.originMapImage ?? assets.map,
+      mapImage: seed.originMapImage ?? assets.map,
       text: seed.origin[locale],
     },
     originTitle: modalCopy[locale].originTitle,

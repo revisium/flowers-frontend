@@ -134,8 +134,7 @@
       { "en": "Stapelia gigantea", "image": "/plants/apocynaceae-modal/stapelia-gigantea.png", "ru": "Стапелия гигантская (Stapelia gigantea)" },
       { "en": "Ceropegia woodii", "image": "/plants/apocynaceae-modal/ceropegia-woodii.png", "ru": "Церопегия Вуда (Ceropegia woodii)" },
       { "en": "Plumeria alba", "image": "/plants/apocynaceae-modal/plumeria-alba.png", "ru": "Плюмерия белая (Plumeria alba)" },
-      { "en": "Mandevilla splendens", "image": "/plants/apocynaceae-modal/mandevilla-splendens.png", "ru": "Мандевилла (Mandevilla splendens)" },
-      { "en": "Euphorbia trigona", "image": "/plants/apocynaceae-modal/euphorbia-trigona.png", "ru": "Эуфорбия тригона (Euphorbia trigona)" }
+      { "en": "Mandevilla splendens", "image": "/plants/apocynaceae-modal/mandevilla-splendens.png", "ru": "Мандевилла (Mandevilla splendens)" }
     ],
     "traits": {
       "en": [
@@ -467,9 +466,7 @@
       { "en": "Gasteria maculata", "image": "/plants/asphodelaceae-modal/gasteria-maculata.png", "ru": "Гастерия пятнистая (Gasteria maculata)" },
       { "en": "Gasteria verrucosa", "image": "/plants/asphodelaceae-modal/gasteria-verrucosa.png", "ru": "Гастерия бородавчатая (Gasteria verrucosa)" },
       { "en": "Kniphofia uvaria", "image": "/plants/asphodelaceae-modal/kniphofia-uvaria.png", "ru": "Книфофия ягодная (Kniphofia uvaria)" },
-      { "en": "Erythrina crista-galli", "image": "/plants/asphodelaceae-modal/erythrina-crista-galli.png", "ru": "Эритрина гребенчатая (Erythrina crista-galli)" },
-      { "en": "Bulbine frutescens", "image": "/plants/asphodelaceae-modal/bulbine-frutescens.png", "ru": "Бульбине фрутикоза (Bulbine frutescens)" },
-      { "en": "Aspidistra elatior", "image": "/plants/asphodelaceae-modal/aspidistra-elatior.png", "ru": "Аспидистра высокая (Aspidistra elatior)" }
+      { "en": "Bulbine frutescens", "image": "/plants/asphodelaceae-modal/bulbine-frutescens.png", "ru": "Бульбине фрутикоза (Bulbine frutescens)" }
     ],
     "traits": {
       "en": [
