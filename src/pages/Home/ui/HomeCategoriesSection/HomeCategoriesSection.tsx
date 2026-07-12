@@ -1,4 +1,4 @@
-import { Flex, Grid, Link, Text } from '@chakra-ui/react';
+import { Flex, Grid, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import type { Locale } from 'src/shared/config';
 
@@ -25,12 +25,7 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
       : null;
 
   return (
-    <Flex
-      as="section"
-      aria-labelledby="greenhouse-categories-title"
-      direction="column"
-      paddingBottom="18px"
-    >
+    <Flex as="section" aria-labelledby="greenhouse-categories-title" direction="column">
       <Flex
         alignItems="center"
         justifyContent="space-between"
@@ -38,30 +33,13 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
       >
         <Text
           as="h2"
-          color="#263729"
+          color="#526246"
           id="greenhouse-categories-title"
           margin={0}
           textStyle="bold-xl"
         >
-          {text.categoriesTitle}
+          ❧ {text.categoriesTitle}
         </Text>
-        <Link
-          alignItems="center"
-          color="#526246"
-          display="inline-flex"
-          gap="6px"
-          fontWeight={720}
-          href="/collection"
-          textDecoration="none"
-          _active={{ textDecoration: 'none' }}
-          _focus={{ textDecoration: 'none' }}
-          _hover={{ textDecoration: 'none' }}
-        >
-          {text.showAllLabel}
-          <Text as="span" aria-hidden="true" fontSize="17px" lineHeight={1}>
-            ❧
-          </Text>
-        </Link>
       </Flex>
 
       <Flex
