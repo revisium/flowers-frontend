@@ -1,5 +1,6 @@
 import { Flex, Grid, Text } from '@chakra-ui/react';
 import { useState } from 'react';
+import { getCollectionPlantCountByFamily, type CollectionFamilyId } from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
 
 import { homeCategories, type HomeCategory, type HomeCopy } from '../../model/homePageData';
@@ -23,6 +24,26 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
     selectedCategoryId && selectedCategoryId in categoryDetailDataById
       ? categoryDetailDataById[selectedCategoryId as keyof typeof categoryDetailDataById][locale]
       : null;
+
+  const formatPlantCount = (count: number) => {
+    if (locale === 'en') {
+      return `${count} ${count === 1 ? 'plant' : 'plants'}`;
+    }
+
+    const lastTwoDigits = count % 100;
+    const lastDigit = count % 10;
+    let word = 'растений';
+
+    if (lastTwoDigits < 11 || lastTwoDigits > 14) {
+      if (lastDigit === 1) {
+        word = 'растение';
+      } else if (lastDigit >= 2 && lastDigit <= 4) {
+        word = 'растения';
+      }
+    }
+
+    return `${count} ${word}`;
+  };
 
   return (
     <Flex as="section" aria-labelledby="greenhouse-categories-title" direction="column">
@@ -70,7 +91,14 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
           width={{ base: 'max-content', md: '100%' }}
         >
           {homeCategories[locale].map((category) => (
-            <HomeCategoryCard category={category} key={category.id} onOpen={handleCategoryOpen} />
+            <HomeCategoryCard
+              category={{
+                ...category,
+                count: formatPlantCount(getCollectionPlantCountByFamily(category.id as CollectionFamilyId)),
+              }}
+              key={category.id}
+              onOpen={handleCategoryOpen}
+            />
           ))}
         </Grid>
       </Flex>

@@ -1,25 +1,10 @@
 import type { Locale } from 'src/shared/config';
+import { getCollectionPlantsByFamily, type CollectionFamilyId } from 'src/entities/collection';
 
 import familySeedsJson from './familySeeds.json';
 import { type CategoryDetailData, type CategoryPlant, type CategoryTrait } from './types';
 
-type CategoryId =
-  | 'amaryllidaceae'
-  | 'apocynaceae'
-  | 'araceae'
-  | 'arecaceae'
-  | 'asparagaceae'
-  | 'asphodelaceae'
-  | 'bromeliaceae'
-  | 'cactaceae'
-  | 'commelinaceae'
-  | 'cycadaceae'
-  | 'gesneriaceae'
-  | 'marantaceae'
-  | 'nephrolepidaceae'
-  | 'orchidaceae'
-  | 'piperaceae'
-  | 'vitaceae';
+type CategoryId = CollectionFamilyId;
 interface LocalizedText {
   readonly en: string;
   readonly ru: string;
@@ -46,24 +31,7 @@ const assets = {
 const categoryImage = (id: CategoryId) => `/plants/categories/studio/${id}.jpg`;
 const categoryCutout = (id: CategoryId) => `/plants/categories/generated/${id}.png`;
 
-const collectionPlants = [
-  { image: assets.alocasia, name: "Alocasia baginda 'Dragon Scale'" },
-  { image: assets.alocasia, name: "Alocasia x amazonica 'Bambino'" },
-  { image: assets.alocasia, name: "Alocasia reginula 'Black Velvet'" },
-  { image: assets.aglaonema, name: "Aglaonema 'Red Valentine'" },
-  { image: assets.aglaonema, name: "Aglaonema 'Silver Queen'" },
-  { image: assets.aglaonema, name: { en: 'Pink Aglaonema', ru: 'Aglaonema розовая' } },
-  { image: assets.philodendron, name: "Philodendron erubescens 'Imperial Red'" },
-  { image: assets.monstera, name: 'Monstera adansonii' },
-  { image: assets.anthurium, name: 'Anthurium' },
-  { image: assets.spathiphyllum, name: 'Spathiphyllum' },
-] as const;
-
-const createPlants = (locale: Locale): readonly CategoryPlant[] =>
-  collectionPlants.map((plant) => ({
-    image: plant.image,
-    name: typeof plant.name === 'string' ? plant.name : plant.name[locale],
-  }));
+const createPlants = (locale: Locale): readonly CategoryPlant[] => getCollectionPlantsByFamily('araceae', locale);
 
 const createTrait = (body: string, image: string): CategoryTrait => ({ body, image });
 
@@ -78,7 +46,6 @@ const araceaeSharedData = {
 const ruText = {
   backLabel: 'Назад к категориям',
   closingNote: 'Ароидные - это не просто растения, это целый мир удивительных форм и адаптаций.',
-  collectionTitle: 'Растения из моей коллекции (10)',
   description:
     'Ароидные - одно из крупнейших семейств цветковых растений. Большинство представителей происходят из тропических и субтропических регионов и отличаются эффектными листьями, воздушными корнями и соцветиями-початками.',
   facts: [
@@ -104,7 +71,6 @@ const ruText = {
 const enText = {
   backLabel: 'Back to categories',
   closingNote: 'Aroids are more than houseplants: they are a world of remarkable forms and adaptations.',
-  collectionTitle: 'Plants in my collection (10)',
   description:
     'Aroids are one of the largest families of flowering plants. Most members come from tropical and subtropical regions and are known for dramatic foliage, aerial roots, and spadix-and-spathe inflorescences.',
   facts: [
@@ -130,15 +96,23 @@ const enText = {
 const createCategoryData = (
   locale: Locale,
   text: typeof ruText | typeof enText,
-): CategoryDetailData => ({
-  ...araceaeSharedData,
-  ...text,
-  collectionPlants: createPlants(locale),
-  origin: {
-    mapImage: araceaeSharedData.originMapImage,
-    text: text.originText,
-  },
-});
+): CategoryDetailData => {
+  const plants = createPlants(locale);
+
+  return {
+    ...araceaeSharedData,
+    ...text,
+    collectionPlants: plants,
+    collectionTitle:
+      locale === 'ru'
+        ? `Растения из моей коллекции (${plants.length})`
+        : `Plants in my collection (${plants.length})`,
+    origin: {
+      mapImage: araceaeSharedData.originMapImage,
+      text: text.originText,
+    },
+  };
+};
 
 export const araceaeCategoryDataByLocale: Record<Locale, CategoryDetailData> = {
   en: createCategoryData('en', enText),
@@ -186,15 +160,16 @@ const createFamilyCategoryData = (
   seed: FamilyDetailSeed,
 ): CategoryDetailData => {
   const image = categoryImage(id);
+  const plants = getCollectionPlantsByFamily(id, locale);
 
   return {
     backLabel: modalCopy[locale].backLabel,
     closingNote: seed.closingNote?.[locale] ?? modalCopy[locale].closingNote,
-    collectionPlants: seed.plants.map((plant) => ({ image: plant.image ?? image, name: plant[locale] })),
+    collectionPlants: plants,
     collectionTitle:
       locale === 'ru'
-        ? `Растения из моей коллекции (${seed.plants.length})`
-        : `Plants in my collection (${seed.plants.length})`,
+        ? `Растения из моей коллекции (${plants.length})`
+        : `Plants in my collection (${plants.length})`,
     description: seed.description[locale],
     facts: seed.facts[locale],
     factsTitle: modalCopy[locale].factsTitle,

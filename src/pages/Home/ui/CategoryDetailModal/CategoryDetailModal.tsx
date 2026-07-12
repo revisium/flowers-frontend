@@ -26,7 +26,7 @@ export const CategoryDetailModal = ({ data, onClose }: CategoryDetailModalProps)
 
   return (
     <Flex
-      alignItems="flex-start"
+      alignItems="center"
       aria-labelledby={titleId}
       aria-modal="true"
       background="rgba(34, 29, 18, 0.28)"
@@ -48,6 +48,7 @@ export const CategoryDetailModal = ({ data, onClose }: CategoryDetailModalProps)
         borderRadius={{ base: '12px', md: '14px' }}
         boxShadow="0 24px 90px rgba(46, 38, 24, 0.28)"
         maxWidth="1180px"
+        marginY="auto"
         opacity={isOpen ? 1 : 0}
         overflow="hidden"
         position="relative"

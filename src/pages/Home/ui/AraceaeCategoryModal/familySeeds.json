@@ -28,48 +28,7 @@
       "ru": "Представители семейства происходят преимущественно из тропических и субтропических регионов Америки, Южной Африки и Средиземноморья."
     },
     "originMapImage": "/plants/amaryllidaceae-modal/origin-map.png",
-    "plants": [
-      {
-        "en": "Hippeastrum 'Red Lion'",
-        "image": "/plants/amaryllidaceae-modal/hippeastrum-red-lion.jpg",
-        "ru": "Hippeastrum 'Red Lion'"
-      },
-      {
-        "en": "Hippeastrum 'Apple Blossom'",
-        "image": "/plants/amaryllidaceae-modal/hippeastrum-apple-blossom.jpg",
-        "ru": "Hippeastrum 'Apple Blossom'"
-      },
-      {
-        "en": "Hippeastrum 'Alfresco'",
-        "image": "/plants/amaryllidaceae-modal/hippeastrum-alfresco.jpg",
-        "ru": "Hippeastrum 'Alfresco'"
-      },
-      {
-        "en": "Clivia miniata",
-        "image": "/plants/amaryllidaceae-modal/clivia-miniata.jpg",
-        "ru": "Clivia miniata"
-      },
-      {
-        "en": "Zephyranthes citrina",
-        "image": "/plants/amaryllidaceae-modal/zephyranthes-citrina.jpg",
-        "ru": "Zephyranthes citrina"
-      },
-      {
-        "en": "Zephyranthes rosea",
-        "image": "/plants/amaryllidaceae-modal/zephyranthes-rosea.jpg",
-        "ru": "Zephyranthes rosea"
-      },
-      {
-        "en": "Narcissus 'Tete-a-Tete'",
-        "image": "/plants/amaryllidaceae-modal/narcissus-tete-a-tete.jpg",
-        "ru": "Narcissus 'Tete-a-Tete'"
-      },
-      {
-        "en": "Crinum asiaticum",
-        "image": "/plants/amaryllidaceae-modal/crinum-asiaticum.jpg",
-        "ru": "Crinum asiaticum"
-      }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Bulbous plants with an underground bulb.",
@@ -117,25 +76,23 @@
       ]
     },
     "heroImage": "/plants/apocynaceae-modal/hero.png",
-    "heroPosition": { "base": "calc(100% + 160px) top", "md": "calc(100% + 80px) top", "lg": "calc(100% + 18px) top" },
-    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
+    "heroPosition": {
+      "base": "calc(100% + 160px) top",
+      "md": "calc(100% + 80px) top",
+      "lg": "calc(100% + 18px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
     "latinName": "Apocynaceae",
     "origin": {
       "en": "Tropical and subtropical regions of Asia, Africa, Australia, Indian Ocean islands, and the Americas.",
       "ru": "Тропические и субтропические регионы Азии, Африки, Австралии, островов Индийского океана, а также Америки."
     },
     "originMapImage": "/plants/apocynaceae-modal/origin-map.png",
-    "plants": [
-      { "en": "Hoya carnosa", "image": "/plants/apocynaceae-modal/hoya-carnosa.png", "ru": "Хойя карноза (Hoya carnosa)" },
-      { "en": "Hoya multiflora", "image": "/plants/apocynaceae-modal/hoya-multiflora.png", "ru": "Хойя мультифлора (Hoya multiflora)" },
-      { "en": "Allamanda cathartica", "image": "/plants/apocynaceae-modal/allamanda-cathartica.png", "ru": "Алламанда (Allamanda cathartica)" },
-      { "en": "Stephanotis floribunda", "image": "/plants/apocynaceae-modal/stephanotis-floribunda.png", "ru": "Стефанотис флорибунда (Stephanotis floribunda)" },
-      { "en": "Catharanthus roseus", "image": "/plants/apocynaceae-modal/catharanthus-roseus.png", "ru": "Катарантус розовый (Catharanthus roseus)" },
-      { "en": "Stapelia gigantea", "image": "/plants/apocynaceae-modal/stapelia-gigantea.png", "ru": "Стапелия гигантская (Stapelia gigantea)" },
-      { "en": "Ceropegia woodii", "image": "/plants/apocynaceae-modal/ceropegia-woodii.png", "ru": "Церопегия Вуда (Ceropegia woodii)" },
-      { "en": "Plumeria alba", "image": "/plants/apocynaceae-modal/plumeria-alba.png", "ru": "Плюмерия белая (Plumeria alba)" },
-      { "en": "Mandevilla splendens", "image": "/plants/apocynaceae-modal/mandevilla-splendens.png", "ru": "Мандевилла (Mandevilla splendens)" }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Flowers may be regular or irregular, often with a tubular corolla and an unusual crown.",
@@ -186,21 +143,23 @@
       ]
     },
     "heroImage": "/plants/arecaceae-modal/hero.png",
-    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 12px) top" },
-    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
     "latinName": "Arecaceae",
     "origin": {
       "en": "Tropical and subtropical regions of Central and South America, Africa, South and Southeast Asia, northern Australia, and the Pacific islands.",
       "ru": "Тропические и субтропические регионы Центральной и Южной Америки, Африки, Южной и Юго-Восточной Азии, севера Австралии и островов Тихого океана."
     },
     "originMapImage": "/plants/arecaceae-modal/origin-map.png",
-    "plants": [
-      {
-        "en": "Chamaedorea elegans",
-        "image": "/plants/arecaceae-modal/chamaedorea-elegans.png",
-        "ru": "Хамедорея изящная"
-      }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Leaves are usually fan-shaped or feather-like and unfold from the crown.",
@@ -265,33 +224,7 @@
       "ru": "Тропические и субтропические регионы Центральной и Южной Америки, от Мексики до Аргентины и Карибских островов."
     },
     "originMapImage": "/plants/bromeliaceae-modal/origin-map.png",
-    "plants": [
-      {
-        "en": "Tillandsia ionantha",
-        "image": "/plants/bromeliaceae-modal/tillandsia-ionantha.jpg",
-        "ru": "Тилландсия ионанта"
-      },
-      {
-        "en": "Tillandsia usneoides",
-        "image": "/plants/bromeliaceae-modal/tillandsia-usneoides.jpg",
-        "ru": "Тилландсия уснеевидная"
-      },
-      {
-        "en": "Guzmania lingulata",
-        "image": "/plants/bromeliaceae-modal/guzmania-lingulata.jpg",
-        "ru": "Гузмания"
-      },
-      {
-        "en": "Aechmea fasciata",
-        "image": "/plants/bromeliaceae-modal/aechmea-fasciata.jpg",
-        "ru": "Эхмея"
-      },
-      {
-        "en": "Ananas comosus",
-        "image": "/plants/bromeliaceae-modal/ananas-comosus.jpg",
-        "ru": "Ананас"
-      }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Leaves are gathered into a rosette that forms a cup for collecting water.",
@@ -358,53 +291,7 @@
       "ru": "Тропические и субтропические регионы Африки, Азии, Австралии, островов Тихого океана и Южной Америки."
     },
     "originMapImage": "/plants/asparagaceae-modal/origin-map.png",
-    "plants": [
-      {
-        "en": "Asparagus setaceus",
-        "image": "/plants/asparagaceae-modal/asparagus-setaceus.jpg",
-        "ru": "Аспарагус сетачесус"
-      },
-      {
-        "en": "Sansevieria trifasciata",
-        "image": "/plants/asparagaceae-modal/sansevieria-trifasciata.jpg",
-        "ru": "Сансевиерия трёхполосая"
-      },
-      {
-        "en": "Chlorophytum comosum",
-        "image": "/plants/asparagaceae-modal/chlorophytum-comosum.jpg",
-        "ru": "Хлорофитум хохлатый"
-      },
-      {
-        "en": "Zamioculcas zamiifolia",
-        "image": "/plants/asparagaceae-modal/zamioculcas-zamiifolia.jpg",
-        "ru": "Замиокулькас замиелистный"
-      },
-      {
-        "en": "Ruscus aculeatus",
-        "image": "/plants/asparagaceae-modal/ruscus-aculeatus.jpg",
-        "ru": "Рускус колючий"
-      },
-      {
-        "en": "Asparagopsis plumosus",
-        "image": "/plants/asparagaceae-modal/asparagopsis-plumosus.jpg",
-        "ru": "Аспарагопсис перистый"
-      },
-      {
-        "en": "Dischidia nummularia",
-        "image": "/plants/asparagaceae-modal/dischidia-nummularia.jpg",
-        "ru": "Дисхидия нуммулярия"
-      },
-      {
-        "en": "Asparagus densiflorus",
-        "image": "/plants/asparagaceae-modal/asparagus-densiflorus.jpg",
-        "ru": "Аспарагус густоцветковый"
-      },
-      {
-        "en": "Asparagus officinalis",
-        "image": "/plants/asparagaceae-modal/asparagus-officinalis.jpg",
-        "ru": "Спаржа лекарственная"
-      }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Leaves vary from scale-like and needle-like to broad and fleshy.",
@@ -430,7 +317,10 @@
     ]
   },
   "asphodelaceae": {
-    "closingNote": { "en": "Asphodel plants balance endurance and beauty with remarkably little care.", "ru": "Асфоделовые - это гармония выносливости и красоты. Они украшают интерьер и требуют минимума ухода!" },
+    "closingNote": {
+      "en": "Asphodel plants balance endurance and beauty with remarkably little care.",
+      "ru": "Асфоделовые - это гармония выносливости и красоты. Они украшают интерьер и требуют минимума ухода!"
+    },
     "description": {
       "en": "Asphodel relatives are built for light, drainage, and patience. Aloes and haworthias keep water in firm leaves and reward restraint more than constant attention.",
       "ru": "Асфоделовые созданы для света, дренажа и терпения. Алоэ и хавортии держат воду в плотных листьях и лучше отвечают на сдержанный уход, чем на постоянное внимание."
@@ -451,23 +341,22 @@
     },
     "latinName": "Asphodelaceae",
     "heroImage": "/plants/asphodelaceae-modal/hero.png",
-    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 10px) top" },
-    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 10px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
     "origin": {
       "en": "Mainly dry and sunny regions of southern and eastern Africa, Madagascar, and nearby Indian Ocean islands.",
       "ru": "Преимущественно сухие и солнечные регионы Южной и Восточной Африки, Мадагаскара и соседних островов Индийского океана."
     },
     "originMapImage": "/plants/asphodelaceae-modal/origin-map.png",
-    "plants": [
-      { "en": "Aloe vera", "image": "/plants/asphodelaceae-modal/aloe-vera.png", "ru": "Алоэ вера (Aloe vera)" },
-      { "en": "Aloe arborescens", "image": "/plants/asphodelaceae-modal/aloe-arborescens.png", "ru": "Алоэ древовидное (Aloe arborescens)" },
-      { "en": "Aloe aristata", "image": "/plants/asphodelaceae-modal/aloe-aristata.png", "ru": "Алоэ остистое (Aloe aristata)" },
-      { "en": "Haworthia fasciata", "image": "/plants/asphodelaceae-modal/haworthia-fasciata.png", "ru": "Хавортия полосатая (Haworthia fasciata)" },
-      { "en": "Gasteria maculata", "image": "/plants/asphodelaceae-modal/gasteria-maculata.png", "ru": "Гастерия пятнистая (Gasteria maculata)" },
-      { "en": "Gasteria verrucosa", "image": "/plants/asphodelaceae-modal/gasteria-verrucosa.png", "ru": "Гастерия бородавчатая (Gasteria verrucosa)" },
-      { "en": "Kniphofia uvaria", "image": "/plants/asphodelaceae-modal/kniphofia-uvaria.png", "ru": "Книфофия ягодная (Kniphofia uvaria)" },
-      { "en": "Bulbine frutescens", "image": "/plants/asphodelaceae-modal/bulbine-frutescens.png", "ru": "Бульбине фрутикоза (Bulbine frutescens)" }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Leaves are thick, pointed, and arranged in compact rosettes.",
@@ -482,10 +371,18 @@
         "Мягкая смена оттенка часто показывает, сколько света получает растение."
       ]
     },
-    "traitImages": ["/plants/asphodelaceae-modal/aloe-vera.png", "/plants/asphodelaceae-modal/haworthia-fasciata.png", "/plants/asphodelaceae-modal/kniphofia-uvaria.png", "/plants/asphodelaceae-modal/gasteria-maculata.png"]
+    "traitImages": [
+      "/plants/asphodelaceae-modal/aloe-vera.png",
+      "/plants/asphodelaceae-modal/haworthia-fasciata.png",
+      "/plants/asphodelaceae-modal/kniphofia-uvaria.png",
+      "/plants/asphodelaceae-modal/gasteria-maculata.png"
+    ]
   },
   "cactaceae": {
-    "closingNote": { "en": "Cacti are masters of survival in extreme conditions: resilient, unpretentious, and wonderfully diverse.", "ru": "Кактусовые - мастера выживания в экстремальных условиях. Они неприхотливы, выносливы и удивительно разнообразны!" },
+    "closingNote": {
+      "en": "Cacti are masters of survival in extreme conditions: resilient, unpretentious, and wonderfully diverse.",
+      "ru": "Кактусовые - мастера выживания в экстремальных условиях. Они неприхотливы, выносливы и удивительно разнообразны!"
+    },
     "description": {
       "en": "Cacti are specialists in storing water and protecting it. Their stems do the work of leaves, while spines and ribs help them handle bright dry conditions.",
       "ru": "Кактусовые специализируются на запасе и защите воды. Их стебли выполняют работу листьев, а колючки и ребра помогают жить в ярких сухих условиях."
@@ -507,17 +404,23 @@
       ]
     },
     "heroImage": "/plants/cactaceae-modal/hero.png",
-    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 12px) top" },
-    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
     "latinName": "Cactaceae",
     "origin": {
       "en": "Mostly the Americas, especially arid and seasonally dry landscapes.",
       "ru": "Преимущественно Америка, особенно засушливые и сезонно сухие ландшафты."
     },
     "originMapImage": "/plants/cactaceae-modal/origin-map.png",
-    "plants": [
-      { "en": "Echinocactus grusonii", "image": "/plants/cactaceae-modal/echinocactus-grusonii.png", "ru": "Эхинокактус Грузона" }, { "en": "Opuntia microdasys", "image": "/plants/cactaceae-modal/opuntia-microdasys.png", "ru": "Опунция мелковолосистая" }, { "en": "Mammillaria prolifera", "image": "/plants/cactaceae-modal/mammillaria-prolifera.png", "ru": "Маммиллярия побегоносная" }, { "en": "Astrophytum asterias", "image": "/plants/cactaceae-modal/astrophytum-asterias.png", "ru": "Астрофитум астериас" }, { "en": "Lophophora williamsii", "image": "/plants/cactaceae-modal/lophophora-williamsii.png", "ru": "Лофофора Уильямса" }, { "en": "Echinopsis multiplex", "image": "/plants/cactaceae-modal/echinopsis-multiplex.png", "ru": "Эхинопсис многоцветковый" }, { "en": "Cereus peruvianus", "image": "/plants/cactaceae-modal/cereus-peruvianus.png", "ru": "Цереус перуанский" }, { "en": "Gymnocalycium mihanovichii", "image": "/plants/cactaceae-modal/gymnocalycium-mihanovichii.png", "ru": "Гимнокалициум Михановича" }, { "en": "Rhipsalis cassutha", "image": "/plants/cactaceae-modal/rhipsalis-cassutha.png", "ru": "Рипсалис кассута" }, { "en": "Ferocactus cylindraceus", "image": "/plants/cactaceae-modal/ferocactus-cylindraceus.png", "ru": "Ферокактус цилиндрический" }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Leaves are reduced to spines, while green stems photosynthesize.",
@@ -532,7 +435,12 @@
         "Чем больше света, тем плотнее рост и крепче форма."
       ]
     },
-    "traitImages": ["/plants/cactaceae-modal/echinocactus-grusonii.png", "/plants/cactaceae-modal/astrophytum-asterias.png", "/plants/cactaceae-modal/ferocactus-cylindraceus.png", "/plants/cactaceae-modal/opuntia-microdasys.png"]
+    "traitImages": [
+      "/plants/cactaceae-modal/echinocactus-grusonii.png",
+      "/plants/cactaceae-modal/astrophytum-asterias.png",
+      "/plants/cactaceae-modal/ferocactus-cylindraceus.png",
+      "/plants/cactaceae-modal/opuntia-microdasys.png"
+    ]
   },
   "commelinaceae": {
     "closingNote": {
@@ -558,26 +466,23 @@
       ]
     },
     "heroImage": "/plants/commelinaceae-modal/hero.png",
-    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 12px) top" },
-    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
     "latinName": "Commelinaceae",
     "origin": {
       "en": "Mainly tropical and subtropical regions of the Americas, Africa, Asia, Australia, and the islands of Oceania, often along bright forest edges.",
       "ru": "Преимущественно тропические и субтропические регионы Америки, Африки, Азии, Австралии и островов Океании, часто светлые лесные опушки."
     },
     "originMapImage": "/plants/commelinaceae-modal/origin-map.png",
-    "plants": [
-      { "en": "Tradescantia zebrina", "image": "/plants/commelinaceae-modal/tradescantia-zebrina.png?v=2", "ru": "Традесканция зебрина" },
-      { "en": "Tradescantia fluminensis", "image": "/plants/commelinaceae-modal/tradescantia-fluminensis.png?v=2", "ru": "Традесканция приречная" },
-      { "en": "Tradescantia pallida", "image": "/plants/commelinaceae-modal/tradescantia-pallida.png?v=2", "ru": "Традесканция бледная" },
-      { "en": "Tradescantia sillamontana", "image": "/plants/commelinaceae-modal/tradescantia-sillamontana.png?v=2", "ru": "Традесканция силламонтана" },
-      { "en": "Callisia repens", "image": "/plants/commelinaceae-modal/callisia-repens.png?v=2", "ru": "Каллизия ползучая" },
-      { "en": "Tradescantia spathacea", "image": "/plants/commelinaceae-modal/tradescantia-spathacea.png?v=2", "ru": "Традесканция покрывальчатая" },
-      { "en": "Commelina communis", "image": "/plants/commelinaceae-modal/commelina-communis.png?v=2", "ru": "Коммелина обыкновенная" },
-      { "en": "Cyanotis kewensis", "image": "/plants/commelinaceae-modal/cyanotis-kewensis.png?v=2", "ru": "Цианотис кьюский" },
-      { "en": "Tradescantia virginiana", "image": "/plants/commelinaceae-modal/tradescantia-virginiana.png?v=2", "ru": "Традесканция виргинская" },
-      { "en": "Callisia fragrans", "image": "/plants/commelinaceae-modal/callisia-fragrans.png?v=2", "ru": "Каллизия душистая" }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Jointed stems root from nodes and trail easily.",
@@ -626,21 +531,23 @@
       ]
     },
     "heroImage": "/plants/cycadaceae-modal/hero.png",
-    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 12px) top" },
-    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
     "latinName": "Cycadaceae",
     "origin": {
       "en": "Tropical and subtropical regions from East Africa and Madagascar through South and Southeast Asia to Australia and the western Pacific islands.",
       "ru": "Тропические и субтропические регионы от Восточной Африки и Мадагаскара через Южную и Юго-Восточную Азию до Австралии и западных островов Тихого океана."
     },
     "originMapImage": "/plants/cycadaceae-modal/origin-map.png",
-    "plants": [
-      {
-        "en": "Cycas revoluta",
-        "image": "/plants/cycadaceae-modal/cycas-revoluta.png",
-        "ru": "Саговник поникающий"
-      }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Stiff pinnate fronds form a symmetrical crown at the top of the plant.",
@@ -705,58 +612,7 @@
       "ru": "Тропические и субтропические регионы Азии, Африки, Мадагаскара, Центральной и Южной Америки."
     },
     "originMapImage": "/plants/gesneriaceae-modal/origin-map.png",
-    "plants": [
-      {
-        "en": "Saintpaulia ionantha",
-        "image": "/plants/gesneriaceae-modal/saintpaulia-ionantha.jpg",
-        "ru": "Saintpaulia ionantha (Узамбарская фиалка)"
-      },
-      {
-        "en": "Sinningia speciosa",
-        "image": "/plants/gesneriaceae-modal/sinningia-speciosa.jpg",
-        "ru": "Sinningia speciosa (Глоксиния)"
-      },
-      {
-        "en": "Streptocarpus",
-        "image": "/plants/gesneriaceae-modal/streptocarpus.jpg",
-        "ru": "Streptocarpus (Стрептокарпус)"
-      },
-      {
-        "en": "Aeschynanthus radicans",
-        "image": "/plants/gesneriaceae-modal/aeschynanthus-radicans.jpg",
-        "ru": "Aeschynanthus radicans (Эсхинантус)"
-      },
-      {
-        "en": "Aeschynanthus pulcher",
-        "image": "/plants/gesneriaceae-modal/aeschynanthus-pulcher.jpg",
-        "ru": "Aeschynanthus pulcher (Эсхинантус прекрасный)"
-      },
-      {
-        "en": "Kohleria amabilis",
-        "image": "/plants/gesneriaceae-modal/kohleria-amabilis.jpg",
-        "ru": "Kohleria amabilis (Колерия)"
-      },
-      {
-        "en": "Chirita tamiana",
-        "image": "/plants/gesneriaceae-modal/chirita-tamiana.jpg",
-        "ru": "Chirita tamiana (Хирита)"
-      },
-      {
-        "en": "Achimenes longiflora",
-        "image": "/plants/gesneriaceae-modal/achimenes-longiflora.jpg",
-        "ru": "Achimenes longiflora (Ахименес)"
-      },
-      {
-        "en": "Episcia cupreata",
-        "image": "/plants/gesneriaceae-modal/episcia-cupreata.jpg",
-        "ru": "Episcia cupreata (Эписция)"
-      },
-      {
-        "en": "Sinningia leucotricha",
-        "image": "/plants/gesneriaceae-modal/sinningia-leucotricha.jpg",
-        "ru": "Sinningia leucotricha (Синнингия)"
-      }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Leaves are often soft, fuzzy, and beautifully textured or patterned.",
@@ -818,58 +674,7 @@
       "ru": "Тропические регионы Центральной и Южной Америки, особенно влажные леса Бразилии."
     },
     "originMapImage": "/plants/marantaceae-modal/origin-map.png",
-    "plants": [
-      {
-        "en": "Maranta leuconeura",
-        "image": "/plants/marantaceae-modal/maranta-leuconeura.jpg",
-        "ru": "Maranta leuconeura (Маранта беложильчатая)"
-      },
-      {
-        "en": "Maranta leuconeura 'Kerchoveana'",
-        "image": "/plants/marantaceae-modal/maranta-kerchoveana.jpg",
-        "ru": "Maranta leuconeura 'Kerchoveana'"
-      },
-      {
-        "en": "Calathea makoyana",
-        "image": "/plants/marantaceae-modal/calathea-makoyana.jpg",
-        "ru": "Calathea makoyana (Калатея Макояна)"
-      },
-      {
-        "en": "Calathea ornata",
-        "image": "/plants/marantaceae-modal/calathea-ornata.jpg",
-        "ru": "Calathea ornata (Калатея орната)"
-      },
-      {
-        "en": "Calathea lancifolia",
-        "image": "/plants/marantaceae-modal/calathea-lancifolia.jpg",
-        "ru": "Calathea lancifolia (Калатея лансифолия)"
-      },
-      {
-        "en": "Ctenanthe burle-marxii",
-        "image": "/plants/marantaceae-modal/ctenanthe-burle-marxii.jpg",
-        "ru": "Ctenanthe burle-marxii (Ктенанта Бурле-Маркса)"
-      },
-      {
-        "en": "Stromanthe sanguinea",
-        "image": "/plants/marantaceae-modal/stromanthe-sanguinea.jpg",
-        "ru": "Stromanthe sanguinea (Строманта кроваво-красная)"
-      },
-      {
-        "en": "Stromanthe 'Triostar'",
-        "image": "/plants/marantaceae-modal/stromanthe-triostar.jpg",
-        "ru": "Stromanthe 'Triostar' (Строманта Триостар)"
-      },
-      {
-        "en": "Goeppertia insignis",
-        "image": "/plants/marantaceae-modal/goeppertia-insignis.jpg",
-        "ru": "Goeppertia insignis (Геппертия инсигнис)"
-      },
-      {
-        "en": "Goeppertia zebrina",
-        "image": "/plants/marantaceae-modal/goeppertia-zebrina.jpg",
-        "ru": "Goeppertia zebrina (Геппертия зебрина)"
-      }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Leaves have bright patterns: stripes, spots, herringbone shapes, and feathered markings.",
@@ -912,20 +717,23 @@
       ]
     },
     "heroImage": "/plants/nephrolepidaceae-modal/hero.png",
-    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 12px) top" },
-    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
     "latinName": "Nephrolepidaceae",
     "origin": {
       "en": "Humid tropical and subtropical forests across many regions.",
       "ru": "Влажные тропические и субтропические леса разных регионов."
     },
     "originMapImage": "/plants/nephrolepidaceae-modal/origin-map.png",
-    "plants": [
-      {
-        "en": "Nephrolepis exaltata",
-        "ru": "Нефролепис возвышенный"
-      }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Arching fronds are divided into many small leaflets.",
@@ -983,58 +791,7 @@
       "ru": "Практически все континенты, кроме Антарктиды. Наибольшее разнообразие орхидных - в тропиках Азии, Южной и Центральной Америки, Африки, Австралии и островов Тихого океана."
     },
     "originMapImage": "/plants/orchidaceae-modal/origin-map.png",
-    "plants": [
-      {
-        "en": "Phalaenopsis amabilis",
-        "image": "/plants/orchidaceae-modal/phalaenopsis-amabilis.png",
-        "ru": "Phalaenopsis amabilis (Фаленопсис)"
-      },
-      {
-        "en": "Phalaenopsis 'Pink Dream'",
-        "image": "/plants/orchidaceae-modal/phalaenopsis-pink-dream.png",
-        "ru": "Phalaenopsis 'Pink Dream' (Фаленопсис)"
-      },
-      {
-        "en": "Phalaenopsis schilleriana",
-        "image": "/plants/orchidaceae-modal/phalaenopsis-schilleriana.png",
-        "ru": "Phalaenopsis schilleriana (Фаленопсис Шиллера)"
-      },
-      {
-        "en": "Cattleya trianae",
-        "image": "/plants/orchidaceae-modal/cattleya-trianae.png",
-        "ru": "Cattleya trianae (Каттлея Трианае)"
-      },
-      {
-        "en": "Vanda coerulea",
-        "image": "/plants/orchidaceae-modal/vanda-coerulea.png",
-        "ru": "Vanda coerulea (Ванда голубая)"
-      },
-      {
-        "en": "Oncidium 'Golden Shower'",
-        "image": "/plants/orchidaceae-modal/oncidium-golden-shower.png",
-        "ru": "Oncidium 'Golden Shower' (Онцидиум)"
-      },
-      {
-        "en": "Paphiopedilum venustum",
-        "image": "/plants/orchidaceae-modal/paphiopedilum-venustum.png",
-        "ru": "Paphiopedilum venustum (Пафиопедилум)"
-      },
-      {
-        "en": "Dendrobium nobile",
-        "image": "/plants/orchidaceae-modal/dendrobium-nobile.png",
-        "ru": "Dendrobium nobile (Дендробиум благородный)"
-      },
-      {
-        "en": "Cymbidium ensifolium",
-        "image": "/plants/orchidaceae-modal/cymbidium-ensifolium.png",
-        "ru": "Cymbidium ensifolium (Цимбидиум)"
-      },
-      {
-        "en": "Miltonia spectabilis",
-        "image": "/plants/orchidaceae-modal/miltonia-spectabilis.png",
-        "ru": "Miltonia spectabilis (Мильтония)"
-      }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Flowers are often irregular, with a unique lip petal.",
@@ -1085,26 +842,23 @@
       ]
     },
     "heroImage": "/plants/piperaceae-modal/hero.png",
-    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 12px) top" },
-    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
     "latinName": "Piperaceae",
     "origin": {
       "en": "Tropical regions of Central and South America, Africa, and Asia.",
       "ru": "Тропические регионы Центральной и Южной Америки, Африки и Азии."
     },
     "originMapImage": "/plants/piperaceae-modal/origin-map.png",
-    "plants": [
-      { "en": "Peperomia obtusifolia", "image": "/plants/piperaceae-modal/peperomia-obtusifolia.png?v=2", "ru": "Пеперомия туполистная" },
-      { "en": "Peperomia caperata", "image": "/plants/piperaceae-modal/peperomia-caperata.png?v=2", "ru": "Пеперомия сморщенная" },
-      { "en": "Peperomia argyreia", "image": "/plants/piperaceae-modal/peperomia-argyreia.png?v=2", "ru": "Пеперомия арбузная" },
-      { "en": "Peperomia polybotrya", "image": "/plants/piperaceae-modal/peperomia-polybotrya.png?v=2", "ru": "Пеперомия многокистевая" },
-      { "en": "Peperomia clusiifolia", "image": "/plants/piperaceae-modal/peperomia-clusiifolia.png?v=2", "ru": "Пеперомия клузиелистная" },
-      { "en": "Peperomia ferreyrae", "image": "/plants/piperaceae-modal/peperomia-ferreyrae.png?v=2", "ru": "Пеперомия феррейра" },
-      { "en": "Peperomia prostrata", "image": "/plants/piperaceae-modal/peperomia-prostrata.png?v=2", "ru": "Пеперомия прострата" },
-      { "en": "Piper nigrum", "image": "/plants/piperaceae-modal/piper-nigrum.png?v=2", "ru": "Перец черный" },
-      { "en": "Piper crocatum", "image": "/plants/piperaceae-modal/piper-crocatum.png?v=2", "ru": "Перец крокатум" },
-      { "en": "Peperomia graveolens", "image": "/plants/piperaceae-modal/peperomia-graveolens.png?v=2", "ru": "Пеперомия гравеоленс" }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Leaves may be round, corrugated, glossy, or softly succulent.",
@@ -1153,21 +907,23 @@
       ]
     },
     "heroImage": "/plants/vitaceae-modal/hero.png",
-    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 12px) top" },
-    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
     "latinName": "Vitaceae",
     "origin": {
       "en": "Temperate and tropical regions worldwide, especially forest edges and climbing habitats.",
       "ru": "Умеренные и тропические регионы мира, особенно лесные опушки и места для лазания."
     },
     "originMapImage": "/plants/vitaceae-modal/origin-map.png",
-    "plants": [
-      {
-        "en": "Cissus rhombifolia",
-        "image": "/plants/vitaceae-modal/cissus-rhombifolia.png",
-        "ru": "Циссус ромболистный"
-      }
-    ],
+    "plants": [],
     "traits": {
       "en": [
         "Flexible stems climb or trail naturally from a support.",

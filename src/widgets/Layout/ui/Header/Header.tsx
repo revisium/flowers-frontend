@@ -1,4 +1,5 @@
 import { Box, Button, Flex } from '@chakra-ui/react';
+import { getCollectionPlantCount } from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
 import { PlantCollectionIcon } from 'src/shared/ui';
 
@@ -15,14 +16,14 @@ interface HeaderProps {
 const copy = {
   ru: {
     homeLabel: 'Оранжерея, главная',
-    collectionLabel: 'Мои растения · 67',
+    collectionLabel: 'Мои растения',
     languageLabel: 'Выбор языка',
     subtitle: 'моя коллекция растений',
     title: 'Оранжерея',
   },
   en: {
     homeLabel: 'Greenhouse, home',
-    collectionLabel: 'My plants · 67',
+    collectionLabel: 'My plants',
     languageLabel: 'Language selector',
     subtitle: 'my plant collection',
     title: 'Greenhouse',
@@ -31,6 +32,7 @@ const copy = {
 
 export const Header = ({ locale, logoTone, onCollectionOpen, onLocaleChange }: HeaderProps) => {
   const text = copy[locale];
+  const collectionLabel = `${text.collectionLabel} · ${getCollectionPlantCount()}`;
 
   return (
     <Flex
@@ -65,7 +67,7 @@ export const Header = ({ locale, logoTone, onCollectionOpen, onLocaleChange }: H
 
       <Flex alignItems="center" flex="0 0 auto" gap={{ base: '8px', md: '12px' }} justifyContent="flex-end" minWidth={0}>
         <Button
-          aria-label={text.collectionLabel}
+          aria-label={collectionLabel}
           background="#526246"
           borderRadius="999px"
           color="#fffaf0"
@@ -83,7 +85,7 @@ export const Header = ({ locale, logoTone, onCollectionOpen, onLocaleChange }: H
         >
           <PlantCollectionIcon size={27} />
           <Box as="span" display={{ base: 'none', lg: 'inline' }}>
-            {text.collectionLabel}
+            {collectionLabel}
           </Box>
         </Button>
         <HeaderLanguageSwitcher label={text.languageLabel} locale={locale} onLocaleChange={onLocaleChange} />

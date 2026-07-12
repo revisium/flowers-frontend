@@ -16,24 +16,22 @@ Layers, from top to bottom, each depending only downward:
 - `pages` — route-level page slices.
 - `widgets` — reusable composed UI blocks shared by page slices. Current widget
   slice is `Layout`, which owns the shared inner-screen frame, persistent
-  header, brand mark, search, language controls, and the entry point to the
+  header, brand mark, language controls, and the entry point to the
   personal-plant catalog.
 - `features` — cross-page reusable behavior (none yet).
-- `entities` — domain types and mock/data records (none yet).
+- `entities` — domain types and data records. `collection` owns the canonical
+  personal-plant list, its count helpers, and the localized content used by
+  reusable plant profiles.
 - `shared` — cross-cutting UI, API/transport, config, and infrastructure
   helpers with no product-domain knowledge.
 
 `src/shared/config/locale.ts` owns the prototype locale type and best-effort
-localStorage persistence. `src/widgets/Layout` calls the locale hook once,
-keeps shared search state, and passes locale/search values into the persistent
-header while page-local copy remains in each page slice model.
+localStorage persistence. `src/shared/config/layoutContext.tsx` owns shared
+locale and catalog-open state, while page-local copy remains in each page slice
+model.
 
-`entities/` and `features/` do not exist as directories in the repo yet. An
-FSD layer should contain only slice folders, and there is no real slice to
-put in either layer until the product domain is decided. Create the directory
-when the first entity or feature slice lands, instead of adding an empty
-placeholder now, to avoid tripping Steiger's structure checks on a layer with
-no slices.
+`features/` does not exist yet. An FSD layer should contain only slice folders;
+create a feature only when its behavior is needed across pages.
 
 ## App Layout Contract
 
@@ -51,9 +49,10 @@ own outer viewport padding, top-level rounded frame, or duplicated header.
 ## Home Prototype Contract
 
 `src/pages/Home` is a client-side presentation prototype, not an API-backed
-product flow. Its local mock data lives in `model/homePageData.ts`, including
-the headline collection count, locale copy, statistic cards, and category card
-metadata.
+product flow. Its local presentation data lives in `model/homePageData.ts`,
+including locale copy, statistic cards, and category-card metadata. The actual
+personal-plant list lives in `src/entities/collection` so every counter is
+derived from one source.
 
 - `ui/HomePage` is a composition shell only.
 - `ui/HomeHero` composes the generated hero background, tagline, statistics,
@@ -64,10 +63,14 @@ metadata.
   Category cards open local category detail modals from
   `ui/AraceaeCategoryModal/data.ts`.
 - `ui/HomeCollectionOverlay` owns the full-screen personal-plant catalog. It
-  derives its 67 local mock records from the existing family data, supports
-  header-search filtering, and has both a horizontally scrollable family list
-  and an explicit `All families` chooser so none of the 15 families are
-  hidden behind the initial viewport.
+  derives its records and the count from `entities/collection`, supports local
+  search filtering, and has both a horizontally scrollable family list and an
+  explicit `All families` chooser so none of the 15 families are hidden behind
+  the initial viewport.
+- `ui/PlantProfileTemplate` is the reusable detailed-profile layout opened
+  from a catalog card. It renders an individual plant's localized entity data:
+  title, taxonomy, photos, difficulty, practical care, and a note. The first
+  profile is the real Cissus rhombifolia record in `entities/collection`.
 - The reusable category detail modal frame and sections live in
   `ui/CategoryDetailModal`, `ui/CategoryHero`, `ui/CategoryInfoGrid`,
   `ui/CategoryCollectionSection`, `ui/InfoPanel`, and `ui/SproutIcon`.

@@ -1,4 +1,5 @@
 import type { Locale } from 'src/shared/config';
+import { getCollectionPlantCount } from 'src/entities/collection';
 
 export type HomeStatIcon = 'leaf' | 'grid' | 'can' | 'heart';
 
@@ -34,7 +35,7 @@ export interface HomeCopy {
   readonly tagline: string;
 }
 
-export const homeTotalPlantsCount = '67';
+export const homeTotalPlantsCount = String(getCollectionPlantCount());
 
 export const homeCopy: Record<Locale, HomeCopy> = {
   ru: {
