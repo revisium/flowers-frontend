@@ -159,7 +159,7 @@ const categoryCounts: Record<Exclude<PlantCategory, 'all'>, number> = {
   marantaceae: 10,
   nephrolepidaceae: 1,
   orchidaceae: 3,
-  piperaceae: 1,
+  piperaceae: 10,
   vitaceae: 1,
 };
 

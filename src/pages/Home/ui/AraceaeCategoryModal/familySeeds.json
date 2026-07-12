@@ -1027,6 +1027,10 @@
     ]
   },
   "piperaceae": {
+    "closingNote": {
+      "en": "Piperaceae turn small shelves into a living collection of texture, pattern, and sculptural leaves. Their quiet forms reward attentive but uncomplicated care.",
+      "ru": "Перцевые превращают небольшие полки в живую коллекцию фактур, узоров и выразительных листьев. Их спокойная красота отвечает на внимательный, но несложный уход."
+    },
     "description": {
       "en": "Pepper family houseplants are compact, tactile, and expressive in leaf shape. Peperomias especially suit small shelves because they stay neat and tolerate modest care.",
       "ru": "Перцевые в доме компактные, фактурные и выразительные по форме листа. Особенно пеперомии хороши для небольших полок: они аккуратные и терпят умеренный уход."
@@ -1035,24 +1039,38 @@
       "en": [
         "Peperomia flowers are tiny and carried on slender spikes.",
         "Many species have succulent leaves that dislike constant wet soil.",
-        "Leaf cuttings can produce new plants in several popular peperomias."
+        "Leaf cuttings can produce new plants in several popular peperomias.",
+        "Black pepper berries grow in clusters that ripen from green to red before drying.",
+        "Many peperomias stay compact for years and suit small pots."
       ],
       "ru": [
         "Цветы пеперомий крошечные и собраны на тонких початках.",
         "У многих видов сочные листья, которые не любят постоянно мокрый грунт.",
-        "У популярных пеперомий новое растение можно получить даже из листового черенка."
+        "У популярных пеперомий новое растение можно получить даже из листового черенка.",
+        "Ягоды черного перца растут в кистях и перед сушкой меняют цвет с зеленого на красный.",
+        "Многие пеперомии годами остаются компактными и хорошо подходят для небольших горшков."
       ]
     },
+    "heroImage": "/plants/piperaceae-modal/hero.png",
+    "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 12px) top" },
+    "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
     "latinName": "Piperaceae",
     "origin": {
       "en": "Tropical regions of Central and South America, Africa, and Asia.",
       "ru": "Тропические регионы Центральной и Южной Америки, Африки и Азии."
     },
+    "originMapImage": "/plants/piperaceae-modal/origin-map.png",
     "plants": [
-      {
-        "en": "Peperomia obtusifolia",
-        "ru": "Пеперомия туполистная"
-      }
+      { "en": "Peperomia obtusifolia", "image": "/plants/piperaceae-modal/peperomia-obtusifolia.png?v=2", "ru": "Пеперомия туполистная" },
+      { "en": "Peperomia caperata", "image": "/plants/piperaceae-modal/peperomia-caperata.png?v=2", "ru": "Пеперомия сморщенная" },
+      { "en": "Peperomia argyreia", "image": "/plants/piperaceae-modal/peperomia-argyreia.png?v=2", "ru": "Пеперомия арбузная" },
+      { "en": "Peperomia polybotrya", "image": "/plants/piperaceae-modal/peperomia-polybotrya.png?v=2", "ru": "Пеперомия многокистевая" },
+      { "en": "Peperomia clusiifolia", "image": "/plants/piperaceae-modal/peperomia-clusiifolia.png?v=2", "ru": "Пеперомия клузиелистная" },
+      { "en": "Peperomia ferreyrae", "image": "/plants/piperaceae-modal/peperomia-ferreyrae.png?v=2", "ru": "Пеперомия феррейра" },
+      { "en": "Peperomia prostrata", "image": "/plants/piperaceae-modal/peperomia-prostrata.png?v=2", "ru": "Пеперомия прострата" },
+      { "en": "Piper nigrum", "image": "/plants/piperaceae-modal/piper-nigrum.png?v=2", "ru": "Перец черный" },
+      { "en": "Piper crocatum", "image": "/plants/piperaceae-modal/piper-crocatum.png?v=2", "ru": "Перец крокатум" },
+      { "en": "Peperomia graveolens", "image": "/plants/piperaceae-modal/peperomia-graveolens.png?v=2", "ru": "Пеперомия гравеоленс" }
     ],
     "traits": {
       "en": [
@@ -1067,7 +1085,14 @@
         "Небольшая корневая система любит компактные горшки.",
         "Умеренный свет сохраняет рост плотным."
       ]
-    }
+    },
+    "traitImages": [
+      "/plants/piperaceae-modal/peperomia-obtusifolia.png?v=2",
+      "/plants/piperaceae-modal/peperomia-caperata.png?v=2",
+      "/plants/piperaceae-modal/peperomia-argyreia.png?v=2",
+      "/plants/piperaceae-modal/piper-nigrum.png?v=2",
+      "/plants/piperaceae-modal/peperomia-prostrata.png?v=2"
+    ]
   },
   "vitaceae": {
     "description": {
