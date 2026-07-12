@@ -10,6 +10,7 @@ export type CollectionFamilyId =
   | 'bromeliaceae'
   | 'cactaceae'
   | 'commelinaceae'
+  | 'crassulaceae'
   | 'cycadaceae'
   | 'gesneriaceae'
   | 'marantaceae'

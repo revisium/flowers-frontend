@@ -1,4 +1,4 @@
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
 import type { HomeCopy } from '../../model/homePageData';
 import { DayReminderCard } from '../DayReminderCard/DayReminderCard';
@@ -17,14 +17,6 @@ export const HomeHeroIntro = ({ text }: HomeHeroIntroProps) => {
       p={{ base: '16px', md: '18px', xl: '18px' }}
       h={{ base: '40%', md: '90%' }}
     >
-      <Text
-        color="#5b4c36"
-        textStyle={{ base: 'bold-md', md: 'bold-xl', xl: 'bold-xxl' }}
-        w={{ base: '43%', md: '70%', xl: '470px' }}
-      >
-        {text.tagline}
-      </Text>
-
       <DayReminderCard text={text} />
     </Flex>
   );

@@ -947,5 +947,68 @@
       "/plants/vitaceae-modal/trait-branching.png",
       "/plants/vitaceae-modal/trait-young-growth.png"
     ]
+  },
+  "crassulaceae": {
+    "closingNote": {
+      "en": "Crassulaceae bring sculptural shapes and an unhurried rhythm to a collection. Give them bright light and let the soil dry between waterings.",
+      "ru": "Толстянковые добавляют коллекции выразительные формы и спокойный ритм. Дайте им яркий свет и позволяйте грунту просыхать между поливами."
+    },
+    "description": {
+      "en": "Crassulaceae are succulent plants that store water in thick leaves and stems. They are valued for compact rosettes, graphic silhouettes, and their ability to stay decorative with simple, measured care.",
+      "ru": "Толстянковые — суккулентные растения, которые запасают воду в мясистых листьях и стеблях. Их ценят за компактные розетки, графичные силуэты и способность оставаться декоративными при простом, размеренном уходе."
+    },
+    "facts": {
+      "en": [
+        "Many members store water in leaves, stems, or both, so they tolerate short dry periods.",
+        "Jade plants can grow into small branching trees indoors and are easy to shape with pruning.",
+        "Echeverias form neat rosettes whose colours become more expressive in bright light.",
+        "Most species prefer a compact pot and a very airy, fast-draining substrate."
+      ],
+      "ru": [
+        "Многие представители запасают воду в листьях, стеблях или сразу в обоих, поэтому спокойно переносят короткую засуху.",
+        "Толстянки могут вырастать в комнатные деревца с ветвящимся стволом и хорошо поддаются формировке.",
+        "Эхеверии образуют аккуратные розетки, окраска которых становится выразительнее на ярком свету.",
+        "Большинству видов нужен небольшой горшок и очень рыхлый, быстро просыхающий субстрат."
+      ]
+    },
+    "heroFilter": "drop-shadow(0 18px 14px rgba(72, 57, 37, 0.16))",
+    "heroImage": "/plants/crassulaceae-modal/hero-cutout.png",
+    "heroPosition": {
+      "base": "72% bottom",
+      "md": "right bottom",
+      "lg": "right bottom"
+    },
+    "heroSize": {
+      "base": "auto 100%",
+      "md": "auto 100%",
+      "lg": "auto 100%"
+    },
+    "latinName": "Crassulaceae",
+    "origin": {
+      "en": "Dry and seasonally dry regions worldwide, especially southern Africa, Mexico, and the Mediterranean.",
+      "ru": "Засушливые и сезонно сухие регионы мира, особенно Южная Африка, Мексика и Средиземноморье."
+    },
+    "originMapImage": "/plants/crassulaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Fleshy leaves or stems store water for dry periods.",
+        "Rosettes and branching crowns create a clear, sculptural silhouette.",
+        "Dense, gritty soil and a drainage hole protect roots from excess moisture.",
+        "Bright light keeps the plant compact and its leaf colouring expressive."
+      ],
+      "ru": [
+        "Мясистые листья или стебли запасают воду на период засухи.",
+        "Розетки и ветвящиеся кроны создают узнаваемый, скульптурный силуэт.",
+        "Плотный минеральный грунт и дренажное отверстие защищают корни от лишней влаги.",
+        "Яркий свет сохраняет компактную форму и выразительную окраску листьев."
+      ]
+    },
+    "traitImages": [
+      "/plants/crassulaceae-modal/trait-water-storage.png",
+      "/plants/crassulaceae-modal/trait-rosette.png",
+      "/plants/crassulaceae-modal/trait-drainage.png",
+      "/plants/crassulaceae-modal/trait-bright-light.png"
+    ]
   }
 }

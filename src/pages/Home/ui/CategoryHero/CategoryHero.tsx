@@ -43,7 +43,10 @@ export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: Categor
         backgroundPosition={data.heroPosition ?? 'top right'}
         backgroundRepeat="no-repeat"
         backgroundSize={data.heroSize ?? { base: '540px auto', md: '650px auto', lg: '700px auto' }}
+        filter={data.heroFilter}
         inset={0}
+        mixBlendMode={data.heroBlendMode}
+        opacity={data.heroBlendMode ? 0.92 : 1}
         pointerEvents="none"
         position="absolute"
       />

@@ -48,7 +48,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       'Продолжайте заботиться, наблюдать и наслаждаться!',
     ],
     reminderActionLabel: 'Смотреть список',
-    reminderText: 'Лучшее время подарить растениям свое внимание',
+    reminderText: 'Лучшее время подарить растениям <br/> свое внимание',
     reminderTitle: 'Сегодня особенный день',
     scrollLeftLabel: 'Предыдущие категории',
     scrollRightLabel: 'Следующие категории',
@@ -78,12 +78,12 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 export const homeStatCards: Record<Locale, readonly HomeStatCard[]> = {
   ru: [
     { icon: 'leaf', label: 'всего растений', value: homeTotalPlantsCount },
-    { icon: 'grid', label: 'категорий', value: '15' },
+    { icon: 'grid', label: 'категорий', value: '16' },
     { icon: 'heart', label: 'легких в уходе', value: '12' },
   ],
   en: [
     { icon: 'leaf', label: 'total plants', value: homeTotalPlantsCount },
-    { icon: 'grid', label: 'categories', value: '15' },
+    { icon: 'grid', label: 'categories', value: '16' },
     { icon: 'heart', label: 'easy-care picks', value: '12' },
   ],
 };
@@ -182,6 +182,12 @@ export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
       id: 'cycadaceae',
       name: 'Саговниковые',
     },
+    {
+      count: '0 растений',
+      image: '/plants/categories/studio/crassulaceae.jpg',
+      id: 'crassulaceae',
+      name: 'Толстянковые',
+    },
   ],
   en: [
     {
@@ -275,6 +281,12 @@ export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
       image: '/plants/categories/studio/cycadaceae.jpg',
       id: 'cycadaceae',
       name: 'Cycads',
+    },
+    {
+      count: '0 plants',
+      image: '/plants/categories/studio/crassulaceae.jpg',
+      id: 'crassulaceae',
+      name: 'Stonecrop family',
     },
   ],
 };

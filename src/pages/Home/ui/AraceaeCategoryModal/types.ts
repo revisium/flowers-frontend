@@ -24,6 +24,8 @@ export interface CategoryDetailData {
   readonly facts: readonly string[];
   readonly factsTitle: string;
   readonly heroImage: string;
+  readonly heroBlendMode?: 'multiply';
+  readonly heroFilter?: string;
   readonly heroPosition?: ResponsiveString;
   readonly heroSize?: ResponsiveString;
   readonly origin: CategoryOrigin;

@@ -124,6 +124,8 @@ interface FamilyDetailSeed {
   readonly description: LocalizedText;
   readonly facts: LocalizedTextList;
   readonly heroImage?: string;
+  readonly heroBlendMode?: 'multiply';
+  readonly heroFilter?: string;
   readonly heroPosition?: NonNullable<CategoryDetailData['heroPosition']>;
   readonly heroSize?: NonNullable<CategoryDetailData['heroSize']>;
   readonly latinName: string;
@@ -174,6 +176,8 @@ const createFamilyCategoryData = (
     facts: seed.facts[locale],
     factsTitle: modalCopy[locale].factsTitle,
     heroImage: seed.heroImage ?? categoryCutout(id),
+    heroBlendMode: seed.heroBlendMode,
+    heroFilter: seed.heroFilter,
     heroPosition: seed.heroPosition ?? { base: 'calc(100% + 132px) top', md: 'calc(100% + 80px) top' },
     heroSize: seed.heroSize ?? { base: '430px auto', md: '560px auto', lg: '640px auto' },
     latinName: seed.latinName,
@@ -208,6 +212,7 @@ const familyTitles: Record<Exclude<CategoryId, 'araceae'>, LocalizedText> = {
   bromeliaceae: { en: 'Bromeliads', ru: 'Бромелиевые' },
   cactaceae: { en: 'Cacti', ru: 'Кактусовые' },
   commelinaceae: { en: 'Spiderwort family', ru: 'Коммелиновые' },
+  crassulaceae: { en: 'Stonecrop family', ru: 'Толстянковые' },
   cycadaceae: { en: 'Cycads', ru: 'Саговниковые' },
   gesneriaceae: { en: 'Gesneriad family', ru: 'Геснериевые' },
   marantaceae: { en: 'Prayer plant family', ru: 'Марантовые' },
@@ -246,6 +251,11 @@ export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryD
     'commelinaceae',
     familyTitles.commelinaceae,
     familySeeds.commelinaceae,
+  ),
+  crassulaceae: createFamilyDataByLocale(
+    'crassulaceae',
+    familyTitles.crassulaceae,
+    familySeeds.crassulaceae,
   ),
   cycadaceae: createFamilyDataByLocale('cycadaceae', familyTitles.cycadaceae, familySeeds.cycadaceae),
   gesneriaceae: createFamilyDataByLocale(
