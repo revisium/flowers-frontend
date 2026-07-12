@@ -1095,6 +1095,10 @@
     ]
   },
   "vitaceae": {
+    "closingNote": {
+      "en": "Vitaceae bring the relaxed movement of a real vine indoors. Give them a support or let them trail, and their quick growth will make the space feel alive.",
+      "ru": "Виноградовые приносят в интерьер живое движение настоящей лианы. Дайте им опору или позвольте свободно свисать — быстрый рост сразу оживит пространство."
+    },
     "description": {
       "en": "Grape family climbers bring tendrils, fast growth, and a true vine silhouette. Indoors they are useful when a plant should climb, trail, or fill a support quickly.",
       "ru": "Виноградовые дают усики, быстрый рост и настоящий силуэт лианы. В доме они хороши там, где растение должно быстро оплести опору, свисать или заполнить угол."
@@ -1103,12 +1107,16 @@
       "en": [
         "Tendrils help vines grip supports without heavy stems.",
         "Cissus is a classic indoor member that tolerates pruning well.",
-        "Fast growth means regular shaping keeps the plant decorative."
+        "Fast growth means regular shaping keeps the plant decorative.",
+        "Some species use adhesive pads or tendrils to hold onto a support.",
+        "Cissus rhombifolia is prized indoors for its resilience and lush compound leaves."
       ],
       "ru": [
         "Усики помогают лианам цепляться за опору без тяжелых стеблей.",
         "Циссус - классический комнатный представитель, который хорошо переносит обрезку.",
-        "Быстрый рост требует регулярной формировки, чтобы растение оставалось декоративным."
+        "Быстрый рост требует регулярной формировки, чтобы растение оставалось декоративным.",
+        "Некоторые виды цепляются за опору усиками или присосками на побегах.",
+        "Циссус ромболистный ценят в интерьере за выносливость и пышные сложные листья."
       ]
     },
     "heroImage": "/plants/vitaceae-modal/hero.png",
@@ -1123,22 +1131,32 @@
     "plants": [
       {
         "en": "Cissus rhombifolia",
+        "image": "/plants/vitaceae-modal/cissus-rhombifolia.png",
         "ru": "Циссус ромболистный"
       }
     ],
     "traits": {
       "en": [
-        "Flexible stems climb or trail from supports.",
-        "Tendrils appear opposite leaves in many species.",
-        "Leaves are often lobed, compound, or grape-like.",
-        "Pruning encourages branching and a fuller silhouette."
+        "Flexible stems climb or trail naturally from a support.",
+        "Tendrils grow opposite leaves and help the vine hold its place.",
+        "Leaves are often compound, lobed, or distinctly grape-like.",
+        "Pruning encourages branching and a fuller silhouette.",
+        "Young growth stays soft and is easy to guide in the desired direction."
       ],
       "ru": [
-        "Гибкие стебли карабкаются по опоре или свисают.",
-        "У многих видов усики появляются напротив листьев.",
-        "Листья часто лопастные, сложные или похожие на виноградные.",
-        "Обрезка стимулирует ветвление и более пышный силуэт."
+        "Гибкие стебли естественно карабкаются по опоре или свисают.",
+        "Усики растут напротив листьев и помогают лиане держаться на опоре.",
+        "Листья часто сложные, лопастные или похожие на виноградные.",
+        "Обрезка стимулирует ветвление и более пышный силуэт.",
+        "Молодые побеги остаются мягкими, поэтому их легко направлять."
       ]
-    }
+    },
+    "traitImages": [
+      "/plants/vitaceae-modal/trait-climbing-stems.png",
+      "/plants/vitaceae-modal/trait-tendrils.png",
+      "/plants/vitaceae-modal/trait-compound-leaves.png",
+      "/plants/vitaceae-modal/trait-branching.png",
+      "/plants/vitaceae-modal/trait-young-growth.png"
+    ]
   }
 }
