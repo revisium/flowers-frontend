@@ -25,7 +25,7 @@
     "latinName": "Amaryllidaceae",
     "origin": {
       "en": "The genera occur mainly in tropical and subtropical regions of the Americas, South Africa, and the Mediterranean.",
-      "ru": "Роды в основном из тропических и субтропических регионов Америки, Южной Африки и Средиземноморья."
+      "ru": "Представители семейства происходят преимущественно из тропических и субтропических регионов Америки, Южной Африки и Средиземноморья."
     },
     "originMapImage": "/plants/amaryllidaceae-modal/origin-map.png",
     "plants": [
@@ -186,6 +186,7 @@
       "en": "Mainly tropical and subtropical forests, coastlines, and islands around the world.",
       "ru": "Преимущественно тропические и субтропические леса, побережья и острова по всему миру."
     },
+    "originMapImage": "/plants/arecaceae-modal/origin-map.png",
     "plants": [
       {
         "en": "Chamaedorea elegans",
@@ -424,12 +425,14 @@
       "en": [
         "Leaf succulence lets these plants survive long dry pauses.",
         "Rosettes can burn in harsh direct sun if moved too quickly from shade.",
-        "Offsets around the mother plant are an easy way to renew the pot."
+        "Offsets around the mother plant are an easy way to renew the pot.",
+        "Tall flower spikes can carry dozens of nectar-rich tubular blooms."
       ],
       "ru": [
         "Сочные листья помогают переживать длинные сухие паузы.",
         "Розетки могут обгореть на прямом солнце, если резко переставить их из тени.",
-        "Детки вокруг материнского растения легко используют для обновления горшка."
+        "Детки вокруг материнского растения легко используют для обновления горшка.",
+        "Высокие цветоносы могут нести десятки трубчатых цветков, богатых нектаром."
       ]
     },
     "latinName": "Asphodelaceae",
@@ -437,8 +440,8 @@
     "heroPosition": { "base": "calc(100% + 150px) top", "md": "calc(100% + 70px) top", "lg": "calc(100% + 10px) top" },
     "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
     "origin": {
-      "en": "Dry and sunny regions of Africa, Madagascar, and nearby islands.",
-      "ru": "Сухие и солнечные регионы Африки, Мадагаскара и соседних островов."
+      "en": "Mainly dry and sunny regions of southern and eastern Africa, Madagascar, and nearby Indian Ocean islands.",
+      "ru": "Преимущественно сухие и солнечные регионы Южной и Восточной Африки, Мадагаскара и соседних островов Индийского океана."
     },
     "originMapImage": "/plants/asphodelaceae-modal/origin-map.png",
     "plants": [
@@ -470,20 +473,25 @@
     "traitImages": ["/plants/asphodelaceae-modal/aloe-vera.png", "/plants/asphodelaceae-modal/haworthia-fasciata.png", "/plants/asphodelaceae-modal/kniphofia-uvaria.png", "/plants/asphodelaceae-modal/gasteria-maculata.png"]
   },
   "cactaceae": {
+    "closingNote": { "en": "Cacti are masters of survival in extreme conditions: resilient, unpretentious, and wonderfully diverse.", "ru": "Кактусовые - мастера выживания в экстремальных условиях. Они неприхотливы, выносливы и удивительно разнообразны!" },
     "description": {
       "en": "Cacti are specialists in storing water and protecting it. Their stems do the work of leaves, while spines and ribs help them handle bright dry conditions.",
       "ru": "Кактусовые специализируются на запасе и защите воды. Их стебли выполняют работу листьев, а колючки и ребра помогают жить в ярких сухих условиях."
     },
     "facts": {
       "en": [
-        "Cactus spines are modified leaves that shade the stem and protect stored water.",
-        "Ribbed stems expand after rain and shrink during dry spells.",
-        "Most indoor cacti need a cool bright rest to bloom reliably."
+        "The tallest cactus, Carnegiea gigantea, can grow over 15 metres.",
+        "Some cacti live for hundreds of years.",
+        "Cactus flowers are pollinated by insects, birds, and bats.",
+        "Prickly pear fruits and cactus pears are edible.",
+        "Cacti can help make indoor air feel fresher."
       ],
       "ru": [
-        "Колючки кактусов - видоизмененные листья, которые притеняют стебель и защищают запас воды.",
-        "Ребристые стебли расширяются после дождя и сжимаются в сухой период.",
-        "Большинству комнатных кактусов для цветения нужен прохладный светлый отдых."
+        "Самый высокий кактус - карнегия гигантская (сагуаро), может достигать более 15 метров.",
+        "Кактусы могут жить сотни лет: некоторые опунции и ферокактусы - более 200 лет.",
+        "Цветки у кактусов опыляются насекомыми, птицами или летучими мышами.",
+        "Некоторые виды съедобны: плоды опунции, кактусовые груши - популярный продукт.",
+        "Кактусы не только украшают, но и очищают воздух от вредных веществ."
       ]
     },
     "heroImage": "/plants/cactaceae-modal/hero.png",
@@ -494,11 +502,9 @@
       "en": "Mostly the Americas, especially arid and seasonally dry landscapes.",
       "ru": "Преимущественно Америка, особенно засушливые и сезонно сухие ландшафты."
     },
+    "originMapImage": "/plants/cactaceae-modal/origin-map.png",
     "plants": [
-      {
-        "en": "Mammillaria",
-        "ru": "Маммиллярия"
-      }
+      { "en": "Echinocactus grusonii", "image": "/plants/cactaceae-modal/echinocactus-grusonii.png", "ru": "Эхинокактус Грузона" }, { "en": "Opuntia microdasys", "image": "/plants/cactaceae-modal/opuntia-microdasys.png", "ru": "Опунция мелковолосистая" }, { "en": "Mammillaria prolifera", "image": "/plants/cactaceae-modal/mammillaria-prolifera.png", "ru": "Маммиллярия побегоносная" }, { "en": "Astrophytum asterias", "image": "/plants/cactaceae-modal/astrophytum-asterias.png", "ru": "Астрофитум астериас" }, { "en": "Lophophora williamsii", "image": "/plants/cactaceae-modal/lophophora-williamsii.png", "ru": "Лофофора Уильямса" }, { "en": "Echinopsis multiplex", "image": "/plants/cactaceae-modal/echinopsis-multiplex.png", "ru": "Эхинопсис многоцветковый" }, { "en": "Cereus peruvianus", "image": "/plants/cactaceae-modal/cereus-peruvianus.png", "ru": "Цереус перуанский" }, { "en": "Gymnocalycium mihanovichii", "image": "/plants/cactaceae-modal/gymnocalycium-mihanovichii.png", "ru": "Гимнокалициум Михановича" }, { "en": "Rhipsalis cassutha", "image": "/plants/cactaceae-modal/rhipsalis-cassutha.png", "ru": "Рипсалис кассута" }, { "en": "Ferocactus cylindraceus", "image": "/plants/cactaceae-modal/ferocactus-cylindraceus.png", "ru": "Ферокактус цилиндрический" }
     ],
     "traits": {
       "en": [
@@ -513,7 +519,8 @@
         "Смесь должна быстро просыхать и содержать минеральные частицы.",
         "Чем больше света, тем плотнее рост и крепче форма."
       ]
-    }
+    },
+    "traitImages": ["/plants/cactaceae-modal/echinocactus-grusonii.png", "/plants/cactaceae-modal/astrophytum-asterias.png", "/plants/cactaceae-modal/ferocactus-cylindraceus.png", "/plants/cactaceae-modal/opuntia-microdasys.png"]
   },
   "commelinaceae": {
     "description": {
@@ -580,9 +587,10 @@
     "heroSize": { "base": "570px auto", "md": "720px auto", "lg": "900px auto" },
     "latinName": "Cycadaceae",
     "origin": {
-      "en": "Subtropical parts of Asia, Africa, Australia, and islands of the Pacific.",
-      "ru": "Субтропические области Азии, Африки, Австралии и островов Тихого океана."
+      "en": "East Africa and Madagascar, then South and Southeast Asia through to Australia and the western Pacific islands.",
+      "ru": "Восточное побережье Африки и Мадагаскар, затем Южная и Юго-Восточная Азия, Австралия и западные острова Тихого океана."
     },
+    "originMapImage": "/plants/cycadaceae-modal/origin-map.png",
     "plants": [
       {
         "en": "Cycas revoluta",
@@ -858,6 +866,7 @@
       "en": "Humid tropical and subtropical forests across many regions.",
       "ru": "Влажные тропические и субтропические леса разных регионов."
     },
+    "originMapImage": "/plants/nephrolepidaceae-modal/origin-map.png",
     "plants": [
       {
         "en": "Nephrolepis exaltata",
@@ -1065,6 +1074,7 @@
       "en": "Temperate and tropical regions worldwide, especially forest edges and climbing habitats.",
       "ru": "Умеренные и тропические регионы мира, особенно лесные опушки и места для лазания."
     },
+    "originMapImage": "/plants/vitaceae-modal/origin-map.png",
     "plants": [
       {
         "en": "Cissus rhombifolia",
