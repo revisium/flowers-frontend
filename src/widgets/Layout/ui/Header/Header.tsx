@@ -1,52 +1,47 @@
-import { Flex } from '@chakra-ui/react';
+import { Box, Button, Flex } from '@chakra-ui/react';
+import { getCollectionPlantCount } from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
+import { PlantCollectionIcon } from 'src/shared/ui';
 
 import { HeaderLanguageSwitcher } from '../HeaderLanguageSwitcher/HeaderLanguageSwitcher';
 import { HeaderLogo } from '../HeaderLogo/HeaderLogo';
-import { HeaderSearch } from '../HeaderSearch/HeaderSearch';
 
 interface HeaderProps {
   readonly locale: Locale;
   readonly logoTone: 'dark' | 'light';
-  readonly query: string;
   readonly onLocaleChange: (locale: Locale) => void;
-  readonly onQueryChange: (query: string) => void;
-  readonly onSearchSuggestionSelect: (query: string, plantId: string) => void;
+  readonly onCollectionOpen: () => void;
 }
 
 const copy = {
   ru: {
     homeLabel: 'Оранжерея, главная',
+    collectionLabel: 'Мои растения',
     languageLabel: 'Выбор языка',
-    searchClearLabel: 'Очистить поиск',
-    searchEmptyLabel: 'Ничего не нашлось',
-    searchLabel: 'Поиск растения',
-    searchPlaceholder: 'Найти растение...',
     subtitle: 'моя коллекция растений',
     title: 'Оранжерея',
   },
   en: {
     homeLabel: 'Greenhouse, home',
+    collectionLabel: 'My plants',
     languageLabel: 'Language selector',
-    searchClearLabel: 'Clear search',
-    searchEmptyLabel: 'Nothing found',
-    searchLabel: 'Search plants',
-    searchPlaceholder: 'Search plants...',
     subtitle: 'my plant collection',
     title: 'Greenhouse',
   },
-} satisfies Record<Locale, Record<'homeLabel' | 'languageLabel' | 'searchClearLabel' | 'searchEmptyLabel' | 'searchLabel' | 'searchPlaceholder' | 'subtitle' | 'title', string>>;
+} satisfies Record<Locale, Record<'collectionLabel' | 'homeLabel' | 'languageLabel' | 'subtitle' | 'title', string>>;
 
-export const Header = ({ locale, logoTone, onLocaleChange, onQueryChange, onSearchSuggestionSelect, query }: HeaderProps) => {
+export const Header = ({ locale, logoTone, onCollectionOpen, onLocaleChange }: HeaderProps) => {
   const text = copy[locale];
+  const collectionLabel = `${text.collectionLabel} · ${getCollectionPlantCount()}`;
 
   return (
     <Flex
       as="header"
       alignItems="center"
-      backdropFilter="blur(5px) saturate(1.02)"
-      borderBottom="1px solid rgba(93, 112, 71, 0.1)"
-      boxShadow="0 10px 24px rgba(56, 48, 31, 0.02)"
+      background="rgba(255, 251, 243, 0.58)"
+      backdropFilter="blur(14px) saturate(1.04) brightness(1.08)"
+      borderBottom="1px solid rgba(119, 108, 83, 0.14)"
+      boxShadow="0 10px 24px rgba(56, 48, 31, 0.035)"
       flexWrap="nowrap"
       gap={{ base: '8px', md: '12px', lg: '24px' }}
       justifyContent="space-between"
@@ -71,7 +66,28 @@ export const Header = ({ locale, logoTone, onLocaleChange, onQueryChange, onSear
       <HeaderLogo homeLabel={text.homeLabel} subtitle={text.subtitle} title={text.title} tone={logoTone} />
 
       <Flex alignItems="center" flex="0 0 auto" gap={{ base: '8px', md: '12px' }} justifyContent="flex-end" minWidth={0}>
-        <HeaderSearch clearLabel={text.searchClearLabel} emptyLabel={text.searchEmptyLabel} label={text.searchLabel} locale={locale} onChange={onQueryChange} onSelect={onSearchSuggestionSelect} placeholder={text.searchPlaceholder} value={query} />
+        <Button
+          aria-label={collectionLabel}
+          background="#526246"
+          borderRadius="999px"
+          color="#fffaf0"
+          display="inline-flex"
+          fontWeight={720}
+          gap="8px"
+          height={{ base: '36px', md: '38px' }}
+          minWidth={{ base: '40px', md: 'auto' }}
+          padding={{ base: 0, md: '0 16px' }}
+          type="button"
+          variant="plain"
+          onClick={onCollectionOpen}
+          _focusVisible={{ boxShadow: '0 0 0 3px rgba(94, 127, 57, 0.3)', outline: 'none' }}
+          _hover={{ background: '#3e513d' }}
+        >
+          <PlantCollectionIcon size={27} />
+          <Box as="span" display={{ base: 'none', lg: 'inline' }}>
+            {collectionLabel}
+          </Box>
+        </Button>
         <HeaderLanguageSwitcher label={text.languageLabel} locale={locale} onLocaleChange={onLocaleChange} />
       </Flex>
     </Flex>

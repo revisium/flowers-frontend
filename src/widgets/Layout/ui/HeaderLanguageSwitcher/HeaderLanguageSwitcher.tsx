@@ -12,7 +12,11 @@ const languageOptions = [
   { label: 'EN', locale: 'en' },
 ] satisfies readonly { readonly label: string; readonly locale: Locale }[];
 
-export const HeaderLanguageSwitcher = ({ label, locale, onLocaleChange }: HeaderLanguageSwitcherProps) => {
+export const HeaderLanguageSwitcher = ({
+  label,
+  locale,
+  onLocaleChange,
+}: HeaderLanguageSwitcherProps) => {
   return (
     <Flex
       aria-label={label}
@@ -31,7 +35,7 @@ export const HeaderLanguageSwitcher = ({ label, locale, onLocaleChange }: Header
         return (
           <Button
             aria-pressed={isActive}
-            background={isActive ? '#5e7f39' : 'transparent'}
+            background={isActive ? '#526246' : 'transparent'}
             borderRadius="999px"
             color={isActive ? '#fff8e9' : '#516344'}
             fontSize={{ base: '0.68rem', md: '0.72rem', xl: '0.74rem' }}

@@ -1,7 +1,7 @@
 import { Box, Button, Text } from '@chakra-ui/react';
 import { type RefObject } from 'react';
 
-import { type CategoryDetailData } from '../AraceaeCategoryModal/types';
+import { type CategoryDetailData } from '../CategoryDetailModal/types';
 
 interface CategoryHeroProps {
   readonly closeButtonRef: RefObject<HTMLButtonElement | null>;
@@ -43,7 +43,10 @@ export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: Categor
         backgroundPosition={data.heroPosition ?? 'top right'}
         backgroundRepeat="no-repeat"
         backgroundSize={data.heroSize ?? { base: '540px auto', md: '650px auto', lg: '700px auto' }}
+        filter={data.heroFilter}
         inset={0}
+        mixBlendMode={data.heroBlendMode}
+        opacity={data.heroBlendMode ? 0.92 : 1}
         pointerEvents="none"
         position="absolute"
       />
@@ -76,9 +79,9 @@ export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: Categor
       </Button>
 
       <Box
-        background="rgba(255, 253, 247, 0.55)"
+        background="rgba(255, 253, 247, 0.85)"
         borderRadius="1000px"
-        boxShadow="0 0 72px 58px rgba(255, 253, 247, 0.6)"
+        boxShadow="0 0 72px 58px rgba(255, 253, 247, 0.9)"
         maxWidth="100%"
         position="relative"
         w="450px"

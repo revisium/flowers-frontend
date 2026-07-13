@@ -1,9 +1,10 @@
-import { Flex, Grid, Link, Text } from '@chakra-ui/react';
+import { Flex, Grid, Text } from '@chakra-ui/react';
 import { useState } from 'react';
+import { getCollectionPlantCountByFamily, type CollectionFamilyId } from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
 
 import { homeCategories, type HomeCategory, type HomeCopy } from '../../model/homePageData';
-import { categoryDetailDataById } from '../AraceaeCategoryModal/data';
+import { categoryDetailDataById } from '../CategoryDetailModal/data';
 import { HomeCategoryCard } from '../HomeCategoryCard/HomeCategoryCard';
 import { HomeNote } from '../HomeNote/HomeNote';
 import { CategoryDetailModal } from '../CategoryDetailModal/CategoryDetailModal';
@@ -24,13 +25,28 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
       ? categoryDetailDataById[selectedCategoryId as keyof typeof categoryDetailDataById][locale]
       : null;
 
+  const formatPlantCount = (count: number) => {
+    if (locale === 'en') {
+      return `${count} ${count === 1 ? 'plant' : 'plants'}`;
+    }
+
+    const lastTwoDigits = count % 100;
+    const lastDigit = count % 10;
+    let word = 'растений';
+
+    if (lastTwoDigits < 11 || lastTwoDigits > 14) {
+      if (lastDigit === 1) {
+        word = 'растение';
+      } else if (lastDigit >= 2 && lastDigit <= 4) {
+        word = 'растения';
+      }
+    }
+
+    return `${count} ${word}`;
+  };
+
   return (
-    <Flex
-      as="section"
-      aria-labelledby="greenhouse-categories-title"
-      direction="column"
-      paddingBottom="18px"
-    >
+    <Flex as="section" aria-labelledby="greenhouse-categories-title" direction="column">
       <Flex
         alignItems="center"
         justifyContent="space-between"
@@ -38,30 +54,13 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
       >
         <Text
           as="h2"
-          color="#263729"
+          color="#526246"
           id="greenhouse-categories-title"
           margin={0}
           textStyle="bold-xl"
         >
-          {text.categoriesTitle}
+          ❧ {text.categoriesTitle}
         </Text>
-        <Link
-          alignItems="center"
-          color="#526246"
-          display="inline-flex"
-          gap="6px"
-          fontWeight={720}
-          href="/collection"
-          textDecoration="none"
-          _active={{ textDecoration: 'none' }}
-          _focus={{ textDecoration: 'none' }}
-          _hover={{ textDecoration: 'none' }}
-        >
-          {text.showAllLabel}
-          <Text as="span" aria-hidden="true" fontSize="17px" lineHeight={1}>
-            ❧
-          </Text>
-        </Link>
       </Flex>
 
       <Flex
@@ -80,7 +79,7 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
         <Grid
           pt="2px"
           gap={{ base: '12px', md: '16px' }}
-          gridAutoColumns={{ base: 'minmax(282px, calc(100vw - 72px))', md: 'auto' }}
+          gridAutoColumns={{ base: '262px', md: 'auto' }}
           gridAutoFlow={{ base: 'column', md: 'row' }}
           gridTemplateColumns={{
             base: 'none',
@@ -92,7 +91,14 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
           width={{ base: 'max-content', md: '100%' }}
         >
           {homeCategories[locale].map((category) => (
-            <HomeCategoryCard category={category} key={category.id} onOpen={handleCategoryOpen} />
+            <HomeCategoryCard
+              category={{
+                ...category,
+                count: formatPlantCount(getCollectionPlantCountByFamily(category.id as CollectionFamilyId)),
+              }}
+              key={category.id}
+              onOpen={handleCategoryOpen}
+            />
           ))}
         </Grid>
       </Flex>
@@ -101,6 +107,7 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
       {selectedCategoryData ? (
         <CategoryDetailModal
           data={selectedCategoryData}
+          locale={locale}
           onClose={() => setSelectedCategoryId(null)}
         />
       ) : null}

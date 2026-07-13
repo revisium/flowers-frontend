@@ -19,7 +19,7 @@ export const HeaderLogo = ({ homeLabel, subtitle, title, tone }: HeaderLogoProps
         aria-label={homeLabel}
         color={titleColor}
         display="inline-flex"
-        gap={{ base: '8px', md: '12px' }}
+        gap={{ base: '4px', md: '6px' }}
         href="/"
         lineHeight={1}
         maxWidth="100%"
@@ -36,7 +36,7 @@ export const HeaderLogo = ({ homeLabel, subtitle, title, tone }: HeaderLogoProps
         }}
         _hover={{ textDecoration: 'none' }}
       >
-        <Image alt="" aria-hidden="true" flex="0 0 auto" height={{ base: '38px', md: '52px' }} objectFit="contain" src="/greenhouse-leaf-logo.png" width={{ base: '26px', md: '36px' }} />
+        <Image alt="" aria-hidden="true" flex="0 0 auto" height={{ base: '38px', md: '52px' }} objectFit="contain" src="/greenhouse-logo-mark.png" width={{ base: '30px', md: '42px' }} />
         <Flex direction="column" flex="1 1 auto" minWidth={0} overflow="hidden" width={{ base: 'auto', md: '232px' }}>
           <Text as="strong" display="block" letterSpacing={0} overflow="hidden" textDecoration="none" textOverflow="ellipsis" textStyle={{ base: 'bold-sm', md: 'bold-xl' }} whiteSpace="nowrap">
             {title}

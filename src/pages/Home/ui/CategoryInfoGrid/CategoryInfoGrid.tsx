@@ -1,6 +1,6 @@
 import { Box, Flex, Grid, Image, Text } from '@chakra-ui/react';
 
-import { type CategoryDetailData } from '../AraceaeCategoryModal/types';
+import { type CategoryDetailData } from '../CategoryDetailModal/types';
 import { InfoPanel } from '../InfoPanel/InfoPanel';
 
 interface CategoryInfoGridProps {
@@ -25,12 +25,11 @@ export const CategoryInfoGrid = ({ data }: CategoryInfoGridProps) => (
         <Box
           alignItems="center"
           display="flex"
-          height="150px"
           justifyContent="center"
           marginBottom="18px"
           overflow="visible"
         >
-          <Image alt="" height="100%" objectFit="contain" src={data.origin.mapImage} width="100%" />
+          <Image alt="" height="auto" objectFit="contain" src={data.origin.mapImage} width="100%" />
         </Box>
         <Text color="#5d675b" fontSize="0.9rem" lineHeight={1.55}>
           {data.origin.text}

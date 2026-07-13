@@ -1,0 +1,1072 @@
+{
+  "aizoaceae": {
+    "closingNote": {
+      "en": "Aizoaceae bring the quiet geometry of dry landscapes into a collection: compact, sculptural and unexpectedly bright in flower.",
+      "ru": "Аизовые привносят в коллекцию спокойную геометрию сухих ландшафтов: они компактны, скульптурны и неожиданно ярко цветут."
+    },
+    "description": {
+      "en": "Aizoaceae, often called ice plants or mesembs, are mostly low-growing succulents from southern Africa. Their fleshy leaves store water, while many species surprise with brilliant daisy-like flowers.",
+      "ru": "Аизовые, или мезембы, — преимущественно низкорослые суккуленты юга Африки. Их мясистые листья запасают воду, а многие виды удивляют яркими цветками, похожими на ромашки."
+    },
+    "facts": {
+      "en": [
+        "The family includes around 123 genera and about 1,880 species.",
+        "Most of its diversity is concentrated in the arid west of Namibia and South Africa.",
+        "Lithops are known as living stones because their paired leaves mimic surrounding pebbles.",
+        "Many species have seed capsules that open when rain wets them, releasing seeds at the right moment."
+      ],
+      "ru": [
+        "Семейство включает около 123 родов и примерно 1 880 видов.",
+        "Большая часть разнообразия сосредоточена в засушливых районах Намибии и Южной Африки.",
+        "Литопсы называют живыми камнями: их парные листья маскируются среди гальки.",
+        "У многих видов коробочки раскрываются от дождя и выпускают семена в подходящий момент."
+      ]
+    },
+    "heroImage": "/plants/categories/generated/aizoaceae.png",
+    "heroPosition": "right bottom",
+    "heroSize": {
+      "base": "430px auto",
+      "md": "570px auto",
+      "lg": "660px auto"
+    },
+    "latinName": "Aizoaceae",
+    "origin": {
+      "en": "Dry and semi-arid regions of southern Africa, especially the western parts of Namibia and South Africa.",
+      "ru": "Засушливые и полузасушливые регионы юга Африки, особенно запад Намибии и Южной Африки."
+    },
+    "originMapImage": "/plants/aizoaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Fleshy leaves store water and may be covered with sparkling bladder cells.",
+        "Flowers have many narrow, shiny petals and often open in bright sun.",
+        "Some forms, such as Lithops, resemble stones and blend into their surroundings.",
+        "Hygrochastic seed capsules open after rain, helping seeds meet favourable conditions."
+      ],
+      "ru": [
+        "Мясистые листья запасают воду; у некоторых видов они покрыты блестящими пузыревидными клетками.",
+        "У цветков много узких сияющих лепестков, и часто они раскрываются на ярком солнце.",
+        "Некоторые формы, например литопсы, напоминают камни и сливаются с окружением.",
+        "Гигрохастические коробочки раскрываются после дождя, помогая семенам попасть в благоприятные условия."
+      ]
+    },
+    "traitImages": [
+      "/plants/aizoaceae-modal/trait-water-storage.png",
+      "/plants/aizoaceae-modal/trait-flowers.png",
+      "/plants/aizoaceae-modal/trait-lithops.png",
+      "/plants/aizoaceae-modal/trait-capsule.png"
+    ]
+  },
+  "amaryllidaceae": {
+    "closingNote": {
+      "en": "Amaryllis relatives combine elegance, scent, and vivid seasonal blooms. Add a little tropical charm to your home.",
+      "ru": "Амариллисовые - это сочетание изящества, аромата и яркого цветения. Добавьте немного тропического очарования в ваш дом!"
+    },
+    "description": {
+      "en": "Amaryllis relatives are monocot flowering plants that include many decorative bulbous species. They are known for expressive flowers, varied forms, and easy-going seasonal care.",
+      "ru": "Амариллисовые - семейство однодольных цветковых растений, включающее множество декоративных луковичных видов. Они известны своими эффектными цветами, разнообразием форм и неприхотливостью в уходе."
+    },
+    "facts": {
+      "en": [
+        "The family includes more than 1,600 species in roughly 75 genera.",
+        "Hippeastrum is a beloved houseplant, though in nature it comes from South America.",
+        "Narcissus and Hippeastrum are also members of this family.",
+        "Some species, such as Clivia, bloom in winter and brighten the home during colder months."
+      ],
+      "ru": [
+        "В семейство входит более 1600 видов в 75 родах.",
+        "Гиппеаструм - популярное комнатное растение, хотя в природе он произрастает только в Южной Америке.",
+        "Нарцисс и гиппеаструм - тоже представители этого семейства.",
+        "Некоторые виды, например, кливия, цветут зимой, украшая дом в холодное время года."
+      ]
+    },
+    "latinName": "Amaryllidaceae",
+    "origin": {
+      "en": "The genera occur mainly in tropical and subtropical regions of the Americas, South Africa, and the Mediterranean.",
+      "ru": "Представители семейства происходят преимущественно из тропических и субтропических регионов Америки, Южной Африки и Средиземноморья."
+    },
+    "originMapImage": "/plants/amaryllidaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Bulbous plants with an underground bulb.",
+        "Leaves are usually basal, linear, and strap-shaped.",
+        "Flowers are large, often funnel-shaped or tubular, gathered in umbels or brush-like clusters.",
+        "Many species have a pleasant fragrance."
+      ],
+      "ru": [
+        "Луковичные растения с подземной луковицей.",
+        "Листья чаще всего прикорневые, линейные, ремневидные.",
+        "Цветки крупные, часто воронковидные или трубчатые, собраны в зонтичные или кистевидные соцветия.",
+        "Многие виды обладают приятным ароматом."
+      ]
+    },
+    "traitImages": [
+      "/plants/amaryllidaceae-modal/trait-bulb.jpg",
+      "/plants/amaryllidaceae-modal/trait-leaves.jpg",
+      "/plants/amaryllidaceae-modal/trait-flowers.jpg",
+      "/plants/amaryllidaceae-modal/trait-fragrance.jpg"
+    ]
+  },
+  "apocynaceae": {
+    "closingNote": {
+      "en": "Dogbane plants combine beauty, resilience, and surprising forms. They bring memorable blooms and character to any collection.",
+      "ru": "Кутровые - это красота, выносливость и удивительное разнообразие форм. Они украсят ваш дом и подарят незабываемое цветение!"
+    },
+    "description": {
+      "en": "Dogbane is a broad family of flowering plants that includes vines, shrubs, and trees. Many species are valued for their beautiful, often fragrant flowers, unusual forms, and resilience. Some relatives have useful properties and are used in medicine.",
+      "ru": "Кутровые - обширное семейство цветковых растений, включающее лианы, кустарники и деревья. Многие виды ценятся за красивые, часто ароматные цветки необычной формы и неприхотливость. Некоторые представители обладают полезными свойствами и используются в медицине."
+    },
+    "facts": {
+      "en": [
+        "Hoyas are known for long-lasting waxy blooms and a pleasant fragrance.",
+        "Stapelia attracts pollinators with a scent resembling decaying flesh.",
+        "Catharanthus roseus is a popular garden plant with medicinal properties.",
+        "Many dogbane plants produce milky sap that can be toxic.",
+        "Their seeds often have silky tufts that help them travel in the wind."
+      ],
+      "ru": [
+        "Хойи (восковой плющ) известны своими долговечными цветками и приятным ароматом.",
+        "Стапелии и орхидеи-падальщики привлекают опылителей запахом разлагающегося мяса.",
+        "Катарантус розовый - популярное садовое растение с лекарственными свойствами.",
+        "Многие кутровые выделяют млечный сок, который может быть ядовитым.",
+        "Семена кутровых имеют шелковистый хохолок, благодаря которому они переносятся ветром."
+      ]
+    },
+    "heroImage": "/plants/apocynaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 160px) top",
+      "md": "calc(100% + 80px) top",
+      "lg": "calc(100% + 18px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
+    "latinName": "Apocynaceae",
+    "origin": {
+      "en": "Tropical and subtropical regions of Asia, Africa, Australia, Indian Ocean islands, and the Americas.",
+      "ru": "Тропические и субтропические регионы Азии, Африки, Австралии, островов Индийского океана, а также Америки."
+    },
+    "originMapImage": "/plants/apocynaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Flowers may be regular or irregular, often with a tubular corolla and an unusual crown.",
+        "Milky sap occurs in the tissues of most representatives.",
+        "Leaves are simple, entire, often leathery, with a pronounced vein.",
+        "The fruits are paired leaflets with many silky-haired seeds.",
+        "Many species are vines with twining or climbing shoots."
+      ],
+      "ru": [
+        "Цветки правильные или неправильные, часто с трубчатым венчиком и необычной коронкой.",
+        "Млечный сок содержится в тканях большинства представителей.",
+        "Листья простые, цельнокрайние, часто кожистые, с выраженной жилкой.",
+        "Плоды - парные листовки (фолликулы) с множеством семян с хохолком.",
+        "Многие виды - лианы с цепляющимися или вьющимися побегами."
+      ]
+    },
+    "traitImages": [
+      "/plants/apocynaceae-modal/hoya-carnosa.png",
+      "/plants/apocynaceae-modal/stapelia-gigantea.png",
+      "/plants/apocynaceae-modal/plumeria-alba.png",
+      "/plants/apocynaceae-modal/euphorbia-trigona.png",
+      "/plants/apocynaceae-modal/mandevilla-splendens.png"
+    ]
+  },
+  "arecaceae": {
+    "closingNote": {
+      "en": "Palms bring an unmistakable tropical rhythm to an interior: from airy feathered crowns to sculptural fans, each form changes the character of a room.",
+      "ru": "Пальмовые задают интерьеру узнаваемый тропический ритм: от воздушных перистых крон до скульптурных вееров, каждая форма меняет характер пространства."
+    },
+    "description": {
+      "en": "Palms are a diverse family of flowering plants, recognised by their distinctive crowns of fan-shaped or feathered leaves. They range from compact clumping species to tall single-stemmed trees and bring a calm vertical rhythm to interiors.",
+      "ru": "Пальмовые - разнообразное семейство цветковых растений, узнаваемое по характерной кроне из веерных или перистых листьев. Среди них есть компактные кустящиеся виды и высокие одноствольные деревья; все они добавляют интерьеру спокойный вертикальный ритм."
+    },
+    "facts": {
+      "en": [
+        "Palms are flowering plants, not trees in a separate botanical group.",
+        "Their leaves may be fan-shaped, feather-like, or formed from both patterns.",
+        "Many palms grow from a single crown, so damage to the growing point can be critical.",
+        "Small flowers are often gathered in large branching inflorescences below the leaves.",
+        "Palm fruits are commonly drupes, although their size, colour, and uses vary widely."
+      ],
+      "ru": [
+        "Пальмовые - цветковые растения, а не отдельная ботаническая группа деревьев.",
+        "Их листья бывают веерными, перистыми или сочетают признаки обеих форм.",
+        "Многие пальмы растут из одной верхушки, поэтому повреждение точки роста для них особенно важно.",
+        "Небольшие цветки часто собраны в крупные разветвленные соцветия под листьями.",
+        "Плоды пальм чаще всего представляют собой костянки, но сильно различаются по размеру, окраске и применению."
+      ]
+    },
+    "heroImage": "/plants/arecaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
+    "latinName": "Arecaceae",
+    "origin": {
+      "en": "Tropical and subtropical regions of Central and South America, Africa, South and Southeast Asia, northern Australia, and the Pacific islands.",
+      "ru": "Тропические и субтропические регионы Центральной и Южной Америки, Африки, Южной и Юго-Восточной Азии, севера Австралии и островов Тихого океана."
+    },
+    "originMapImage": "/plants/arecaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Leaves are usually fan-shaped or feather-like and unfold from the crown.",
+        "A ringed trunk or a compact group of stems supports the leafy crown.",
+        "Many species have one main growing point at the top of the stem.",
+        "Tiny flowers are gathered in branched inflorescences between or below the leaves.",
+        "Fruits commonly develop as clusters of drupes containing one seed."
+      ],
+      "ru": [
+        "Листья обычно веерные или перистые и разворачиваются из кроны.",
+        "Кольчатый ствол или компактная группа стеблей поддерживает крону из листьев.",
+        "У многих видов есть одна главная точка роста на вершине стебля.",
+        "Мелкие цветки собраны в разветвленные соцветия между листьями или ниже них.",
+        "Плоды часто развиваются гроздьями костянок, содержащих по одному семени."
+      ]
+    },
+    "traitImages": [
+      "/plants/arecaceae-modal/trait-fan-leaf.png",
+      "/plants/arecaceae-modal/trait-feather-leaf.png",
+      "/plants/arecaceae-modal/trait-ringed-trunk.png",
+      "/plants/arecaceae-modal/trait-inflorescence.png",
+      "/plants/arecaceae-modal/trait-fruit-cluster.png"
+    ]
+  },
+  "bromeliaceae": {
+    "closingNote": {
+      "en": "Bromeliads bring tropical character to any interior. They are striking, resilient, and never look ordinary.",
+      "ru": "Бромелиевые - это тропическая экзотика, которая оживит любой интерьер. Они неприхотливы, эффектны и способны удивлять каждый день."
+    },
+    "description": {
+      "en": "Bromeliads are a family of tropical plants known for spectacular leaf rosettes and bright bracts. Many species store moisture in their leaves, which helps them survive in drier conditions. Indoors they are valued for decorative form, unusual texture, and easy care.",
+      "ru": "Бромелиевые - семейство тропических растений, известных своими эффектными розетками листьев и яркими прицветниками. Многие виды способны накапливать влагу в листьях, что помогает им выживать в засушливых условиях. Бромелиевые ценятся за декоративность, необычную форму и неприхотливость в уходе."
+    },
+    "facts": {
+      "en": [
+        "Pineapple (Ananas comosus) is the best-known member of the family.",
+        "Tillandsias can live without soil, absorbing moisture and nutrients from the air.",
+        "Some bromeliads are grown for decorative flowers, while others are loved for patterned leaves.",
+        "The leaf cup can hold rainwater and become a small home for microorganisms and tiny animals."
+      ],
+      "ru": [
+        "Ананас (Ananas comosus) - самый известный представитель семейства.",
+        "Тилландсии могут жить без почвы, получая влагу и питание из воздуха.",
+        "Некоторые бромелиевые выращиваются ради декоративных цветков, другие - из-за красивой листвы.",
+        "В «чаше» растения может накапливаться дождевая вода, служащая домом для микроорганизмов и мелких животных."
+      ]
+    },
+    "heroImage": "/plants/bromeliaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 112px) top",
+      "md": "calc(100% + 44px) top",
+      "lg": "calc(100% + 8px) top"
+    },
+    "heroSize": {
+      "base": "500px auto",
+      "md": "650px auto",
+      "lg": "760px auto"
+    },
+    "latinName": "Bromeliaceae",
+    "origin": {
+      "en": "Tropical and subtropical regions of Central and South America, from Mexico to Argentina and the Caribbean islands.",
+      "ru": "Тропические и субтропические регионы Центральной и Южной Америки, от Мексики до Аргентины и Карибских островов."
+    },
+    "originMapImage": "/plants/bromeliaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Leaves are gathered into a rosette that forms a cup for collecting water.",
+        "Flowers are often small, but surrounded by bright bracts.",
+        "Many species are epiphytes: they grow on trees without harming them.",
+        "They can store water and nutrients in the rosette and leaf tissues.",
+        "Fruits are berries or capsules with small seeds."
+      ],
+      "ru": [
+        "Листья собраны в розетку, образующую «чашу» для сбора воды.",
+        "Цветки часто мелкие, но окружены яркими прицветниками.",
+        "Многие виды эпифиты - растут на деревьях, не повреждая их.",
+        "Обладают способностью запасать воду и питательные вещества.",
+        "Плоды - ягоды или коробочки с мелкими семенами."
+      ]
+    },
+    "traitImages": [
+      "/plants/bromeliaceae-modal/trait-water-cup.jpg",
+      "/plants/bromeliaceae-modal/trait-bracts.jpg",
+      "/plants/bromeliaceae-modal/trait-epiphyte.jpg",
+      "/plants/bromeliaceae-modal/trait-storage.jpg",
+      "/plants/bromeliaceae-modal/trait-fruit.jpg"
+    ]
+  },
+  "asparagaceae": {
+    "closingNote": {
+      "en": "Asparagus family plants balance form and usefulness. They decorate the home, clean the air, and stay generous without extra fuss.",
+      "ru": "Спаржевые - это гармония формы и пользы. Они украшают дом, очищают воздух и дарят заботу без лишних хлопот."
+    },
+    "description": {
+      "en": "The asparagus family includes monocot plants with herbs, vines, shrubs, and even tree-like forms. They are known for varied foliage, delicate flowers, and bright berries. Many species are valued not only for decoration, but also for edible shoots, fruits, and useful properties.",
+      "ru": "Спаржевые - семейство однодольных растений, включающее травы, лианы, кустарники и даже деревья. Они известны своей разнообразной листвой, изящными цветками и ягодами. Многие виды ценятся не только за декоративность, но и за съедобные побеги и плоды, а также за полезные свойства."
+    },
+    "facts": {
+      "en": [
+        "Asparagus officinalis is the only member widely grown as a vegetable crop.",
+        "Sansevieria releases oxygen at night and helps clean indoor air.",
+        "Ruscus is popular in floristry, although its \"leaves\" are actually modified shoots.",
+        "Many asparagus relatives contain saponins and have useful properties.",
+        "The fine green \"leaves\" of ornamental asparagus are often flattened stems called cladodes."
+      ],
+      "ru": [
+        "Спаржа (Asparagus officinalis) - единственный вид, который выращивается как овощная культура.",
+        "Сансевиерия выделяет кислород ночью и очищает воздух от вредных веществ.",
+        "Рускус популярен во флористике, хотя его «листья» - это на самом деле видоизмененные побеги.",
+        "Многие спаржевые содержат сапонины и обладают полезными свойствами.",
+        "Тонкие зеленые «листочки» декоративного аспарагуса часто являются уплощенными побегами — кладодиями."
+      ]
+    },
+    "heroImage": "/plants/asparagaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 120px) top",
+      "md": "calc(100% + 64px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "520px auto",
+      "md": "690px auto",
+      "lg": "820px auto"
+    },
+    "latinName": "Asparagaceae",
+    "origin": {
+      "en": "Tropical and subtropical regions of Africa, Asia, Australia, Pacific islands, and South America.",
+      "ru": "Тропические и субтропические регионы Африки, Азии, Австралии, островов Тихого океана и Южной Америки."
+    },
+    "originMapImage": "/plants/asparagaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Leaves vary from scale-like and needle-like to broad and fleshy.",
+        "Flowers are small, often white, greenish, or yellowish.",
+        "Fruits are berries, often brightly colored: red, orange, or black.",
+        "Many species have underground rhizomes, tubers, or thickened stems.",
+        "They adapt well to different conditions and are easy to care for."
+      ],
+      "ru": [
+        "Листья разнообразные: от чешуевидных и игольчатых до широких и мясистых.",
+        "Цветки мелкие, чаще всего белые, зеленоватые или желтоватые.",
+        "Плоды - ягоды, часто ярко окрашенные: красные, оранжевые, чёрные.",
+        "Многие виды имеют подземные корневища, клубни или утолщённые стебли.",
+        "Хорошо адаптируются к различным условиям, неприхотливы в уходе."
+      ]
+    },
+    "traitImages": [
+      "/plants/asparagaceae-modal/trait-leaf-variety.jpg",
+      "/plants/asparagaceae-modal/trait-small-flowers.jpg",
+      "/plants/asparagaceae-modal/trait-berries.jpg",
+      "/plants/asparagaceae-modal/trait-rhizomes.jpg",
+      "/plants/asparagaceae-modal/trait-adaptable.jpg"
+    ]
+  },
+  "asphodelaceae": {
+    "closingNote": {
+      "en": "Asphodel plants balance endurance and beauty with remarkably little care.",
+      "ru": "Асфоделовые - это гармония выносливости и красоты. Они украшают интерьер и требуют минимума ухода!"
+    },
+    "description": {
+      "en": "Asphodel relatives are built for light, drainage, and patience. Aloes and haworthias keep water in firm leaves and reward restraint more than constant attention.",
+      "ru": "Асфоделовые созданы для света, дренажа и терпения. Алоэ и хавортии держат воду в плотных листьях и лучше отвечают на сдержанный уход, чем на постоянное внимание."
+    },
+    "facts": {
+      "en": [
+        "Leaf succulence lets these plants survive long dry pauses.",
+        "Rosettes can burn in harsh direct sun if moved too quickly from shade.",
+        "Offsets around the mother plant are an easy way to renew the pot.",
+        "Tall flower spikes can carry dozens of nectar-rich tubular blooms."
+      ],
+      "ru": [
+        "Сочные листья помогают переживать длинные сухие паузы.",
+        "Розетки могут обгореть на прямом солнце, если резко переставить их из тени.",
+        "Детки вокруг материнского растения легко используют для обновления горшка.",
+        "Высокие цветоносы могут нести десятки трубчатых цветков, богатых нектаром."
+      ]
+    },
+    "latinName": "Asphodelaceae",
+    "heroImage": "/plants/asphodelaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 10px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
+    "origin": {
+      "en": "Mainly dry and sunny regions of southern and eastern Africa, Madagascar, and nearby Indian Ocean islands.",
+      "ru": "Преимущественно сухие и солнечные регионы Южной и Восточной Африки, Мадагаскара и соседних островов Индийского океана."
+    },
+    "originMapImage": "/plants/asphodelaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Leaves are thick, pointed, and arranged in compact rosettes.",
+        "Roots need mineral, fast-draining soil.",
+        "Watering is sparse, especially in cool seasons.",
+        "Soft color changes often show how much light the plant receives."
+      ],
+      "ru": [
+        "Листья толстые, заостренные и собраны в компактные розетки.",
+        "Корням нужен минеральный, быстро просыхающий грунт.",
+        "Полив редкий, особенно в прохладный сезон.",
+        "Мягкая смена оттенка часто показывает, сколько света получает растение."
+      ]
+    },
+    "traitImages": [
+      "/plants/asphodelaceae-modal/aloe-vera.png",
+      "/plants/asphodelaceae-modal/haworthia-fasciata.png",
+      "/plants/asphodelaceae-modal/kniphofia-uvaria.png",
+      "/plants/asphodelaceae-modal/gasteria-maculata.png"
+    ]
+  },
+  "cactaceae": {
+    "closingNote": {
+      "en": "Cacti are masters of survival in extreme conditions: resilient, unpretentious, and wonderfully diverse.",
+      "ru": "Кактусовые - мастера выживания в экстремальных условиях. Они неприхотливы, выносливы и удивительно разнообразны!"
+    },
+    "description": {
+      "en": "Cacti are specialists in storing water and protecting it. Their stems do the work of leaves, while spines and ribs help them handle bright dry conditions.",
+      "ru": "Кактусовые специализируются на запасе и защите воды. Их стебли выполняют работу листьев, а колючки и ребра помогают жить в ярких сухих условиях."
+    },
+    "facts": {
+      "en": [
+        "The tallest cactus, Carnegiea gigantea, can grow over 15 metres.",
+        "Some cacti live for hundreds of years.",
+        "Cactus flowers are pollinated by insects, birds, and bats.",
+        "Prickly pear fruits and cactus pears are edible.",
+        "Cacti can help make indoor air feel fresher."
+      ],
+      "ru": [
+        "Самый высокий кактус - карнегия гигантская (сагуаро), может достигать более 15 метров.",
+        "Кактусы могут жить сотни лет: некоторые опунции и ферокактусы - более 200 лет.",
+        "Цветки у кактусов опыляются насекомыми, птицами или летучими мышами.",
+        "Некоторые виды съедобны: плоды опунции, кактусовые груши - популярный продукт.",
+        "Кактусы не только украшают, но и очищают воздух от вредных веществ."
+      ]
+    },
+    "heroImage": "/plants/cactaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
+    "latinName": "Cactaceae",
+    "origin": {
+      "en": "Mostly the Americas, especially arid and seasonally dry landscapes.",
+      "ru": "Преимущественно Америка, особенно засушливые и сезонно сухие ландшафты."
+    },
+    "originMapImage": "/plants/cactaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Leaves are reduced to spines, while green stems photosynthesize.",
+        "Areoles produce spines, flowers, and new growth.",
+        "The potting mix should dry quickly and contain mineral particles.",
+        "More light means denser growth and stronger shape."
+      ],
+      "ru": [
+        "Листья редуцированы до колючек, а зеленые стебли фотосинтезируют.",
+        "Ареолы дают колючки, цветы и новый рост.",
+        "Смесь должна быстро просыхать и содержать минеральные частицы.",
+        "Чем больше света, тем плотнее рост и крепче форма."
+      ]
+    },
+    "traitImages": [
+      "/plants/cactaceae-modal/echinocactus-grusonii.png",
+      "/plants/cactaceae-modal/astrophytum-asterias.png",
+      "/plants/cactaceae-modal/ferocactus-cylindraceus.png",
+      "/plants/cactaceae-modal/opuntia-microdasys.png"
+    ]
+  },
+  "commelinaceae": {
+    "closingNote": {
+      "en": "Commelinaceae bring color, movement, and an easy-going tropical mood to the home. They grow quickly, propagate simply, and reward regular shaping.",
+      "ru": "Коммелиновые приносят в дом цвет, движение и легкое тропическое настроение. Они быстро растут, легко размножаются и любят регулярную формировку."
+    },
+    "description": {
+      "en": "Spiderwort relatives are fast, colorful, and generous with cuttings. Their trailing stems and striped leaves make shelves and hanging pots feel instantly alive.",
+      "ru": "Коммелиновые быстрые, цветные и щедрые на черенки. Их свисающие побеги и полосатые листья мгновенно оживляют полки и подвесные кашпо."
+    },
+    "facts": {
+      "en": [
+        "Tradescantias root so easily that a tired pot can be refreshed from cuttings.",
+        "Brighter light usually makes purple and silver markings more expressive.",
+        "Older stems may bare at the base, so regular pruning keeps the plant full.",
+        "Many members close their flowers by midday, which is why they are often called dayflowers."
+      ],
+      "ru": [
+        "Традесканции так легко укореняются, что уставший горшок можно быстро обновить черенками.",
+        "На ярком свету фиолетовые и серебристые полосы обычно становятся выразительнее.",
+        "Старые побеги могут оголяться у основания, поэтому прищипка сохраняет пышность.",
+        "Цветки многих представителей закрываются к полудню, поэтому их часто называют однодневными."
+      ]
+    },
+    "heroImage": "/plants/commelinaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
+    "latinName": "Commelinaceae",
+    "origin": {
+      "en": "Mainly tropical and subtropical regions of the Americas, Africa, Asia, Australia, and the islands of Oceania, often along bright forest edges.",
+      "ru": "Преимущественно тропические и субтропические регионы Америки, Африки, Азии, Австралии и островов Океании, часто светлые лесные опушки."
+    },
+    "originMapImage": "/plants/commelinaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Jointed stems root from nodes and trail easily.",
+        "Leaves are often striped, metallic, purple, or softly hairy.",
+        "Growth is quick, so pruning is part of normal care.",
+        "Soft stems prefer moderate watering without long drought."
+      ],
+      "ru": [
+        "Членистые стебли укореняются в узлах и легко свисают.",
+        "Листья часто полосатые, металлические, фиолетовые или мягко опушенные.",
+        "Рост быстрый, поэтому обрезка - обычная часть ухода.",
+        "Мягкие стебли любят умеренный полив без долгой засухи."
+      ]
+    },
+    "traitImages": [
+      "/plants/commelinaceae-modal/tradescantia-zebrina.png",
+      "/plants/commelinaceae-modal/tradescantia-pallida.png",
+      "/plants/commelinaceae-modal/tradescantia-sillamontana.png",
+      "/plants/commelinaceae-modal/commelina-communis.png",
+      "/plants/commelinaceae-modal/callisia-repens.png"
+    ]
+  },
+  "cycadaceae": {
+    "closingNote": {
+      "en": "Cycads bring the measured geometry of an ancient plant lineage into an interior: slow-growing, sculptural, and unmistakably distinct.",
+      "ru": "Саговниковые привносят в интерьер выверенную геометрию древней линии растений: они медленно растут, скульптурны и ни на что не похожи."
+    },
+    "description": {
+      "en": "Cycads look ancient because they are ancient in form: a sturdy trunk, a crown of stiff fronds, and very slow deliberate growth.",
+      "ru": "Саговниковые выглядят древними, потому что их форма действительно древняя: крепкий стволик, корона жестких листьев и очень медленный уверенный рост."
+    },
+    "facts": {
+      "en": [
+        "Cycads are not palms, even though many indoor forms look palm-like.",
+        "They are ancient seed plants and do not produce flowers or fruits in the botanical sense.",
+        "Male and female reproductive structures usually develop on separate plants.",
+        "Many cycads are threatened in the wild, so cultivated plants should come from responsible growers.",
+        "All parts of cycads are best kept away from pets and small children."
+      ],
+      "ru": [
+        "Саговники не пальмы, хотя многие комнатные формы похожи на маленькие пальмы.",
+        "Это древние семенные растения: в ботаническом смысле они не образуют ни цветков, ни плодов.",
+        "Мужские и женские репродуктивные органы обычно развиваются на разных растениях.",
+        "Многие саговники в природе находятся под угрозой, поэтому растения стоит приобретать только у ответственных поставщиков.",
+        "Все части саговников лучше держать вдали от домашних животных и маленьких детей."
+      ]
+    },
+    "heroImage": "/plants/cycadaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
+    "latinName": "Cycadaceae",
+    "origin": {
+      "en": "Tropical and subtropical regions from East Africa and Madagascar through South and Southeast Asia to Australia and the western Pacific islands.",
+      "ru": "Тропические и субтропические регионы от Восточной Африки и Мадагаскара через Южную и Юго-Восточную Азию до Австралии и западных островов Тихого океана."
+    },
+    "originMapImage": "/plants/cycadaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Stiff pinnate fronds form a symmetrical crown at the top of the plant.",
+        "A short stout trunk or caudex keeps the bases of old leaves.",
+        "Male cones are elongated; in Cycas, female reproductive leaves form a loose seed-bearing cluster.",
+        "New fronds often appear together in one pale green flush before hardening.",
+        "Seeds develop openly on cone scales rather than inside a fruit."
+      ],
+      "ru": [
+        "Жесткие перистые листья образуют симметричную крону на вершине растения.",
+        "Короткий крепкий стволик или каудекс сохраняет основания старых листьев.",
+        "Мужские шишки вытянутые; у саговников женские спороносные листья образуют рыхлую группу с семенами.",
+        "Новые листья часто появляются вместе одной светло-зеленой волной, а затем твердеют.",
+        "Семена развиваются открыто на чешуях шишек, а не внутри плода."
+      ]
+    },
+    "traitImages": [
+      "/plants/cycadaceae-modal/trait-pinnate-frond.png",
+      "/plants/cycadaceae-modal/trait-caudeux.png",
+      "/plants/cycadaceae-modal/trait-female-cone.png",
+      "/plants/cycadaceae-modal/trait-male-cone.png",
+      "/plants/cycadaceae-modal/trait-young-flush.png"
+    ]
+  },
+  "gesneriaceae": {
+    "closingNote": {
+      "en": "Gesneriads win with variety of form, color, and texture. They fill a home with comfort, flowers, and a tropical mood.",
+      "ru": "Геснериевые покоряют разнообразием форм, окраски и текстур. Они наполняют дом уютом, цветением и тропическим настроением!"
+    },
+    "description": {
+      "en": "Gesneriads are a large and diverse family of flowering plants, most of which come from tropical and subtropical regions. Many species are valued for decorative foliage and expressive blooming, which makes them popular houseplants.",
+      "ru": "Геснериевые - крупное и разнообразное семейство цветковых растений, большинство представителей которого произрастают в тропических и субтропических регионах. Многие виды ценятся за свои декоративные листья и эффектное цветение, что делает их популярными комнатными растениями."
+    },
+    "facts": {
+      "en": [
+        "Saintpaulias, or African violets, are among the most popular houseplants in the world.",
+        "Gloxinias are famous for large velvety flowers and bright seasonal blooming.",
+        "Streptocarpus are often called cape primroses for their graceful bell-shaped flowers.",
+        "Many gesneriads like bright filtered light and do not tolerate waterlogged soil."
+      ],
+      "ru": [
+        "Сенполии (узамбарские фиалки) - одни из самых популярных комнатных растений в мире.",
+        "Глоксинии славятся крупными бархатистыми цветками и ярким цветением.",
+        "Стрептокарпусы часто называют «капскими фиалками» за их изящные колокольчатые цветы.",
+        "Многие геснериевые любят яркий рассеянный свет и не переносят переувлажнения."
+      ]
+    },
+    "heroImage": "/plants/gesneriaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 208px) top",
+      "md": "calc(100% + 158px) top",
+      "lg": "calc(100% + 128px) top"
+    },
+    "heroSize": {
+      "base": "590px auto",
+      "md": "730px auto",
+      "lg": "830px auto"
+    },
+    "latinName": "Gesneriaceae",
+    "origin": {
+      "en": "Tropical and subtropical regions of Asia, Africa, Madagascar, Central America, and South America.",
+      "ru": "Тропические и субтропические регионы Азии, Африки, Мадагаскара, Центральной и Южной Америки."
+    },
+    "originMapImage": "/plants/gesneriaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Leaves are often soft, fuzzy, and beautifully textured or patterned.",
+        "Flowers vary widely in shape and color: tubular, bell-shaped, funnel-shaped, or irregular.",
+        "Many species form leaf rosettes and bloom for a long time and abundantly.",
+        "Fruits are capsules with tiny seeds; many species also root easily from leaf cuttings."
+      ],
+      "ru": [
+        "Листья часто мягкие, опушённые, с красивой текстурой и окраской.",
+        "Цветки разнообразной формы и окраски: трубчатые, колокольчатые, воронковидные или неправильные.",
+        "Многие виды образуют розетки листьев и цветут продолжительно и обильно.",
+        "Плоды - коробочки с мелкими семенами. Размножаются семенами и черенками листьев."
+      ]
+    },
+    "traitImages": [
+      "/plants/gesneriaceae-modal/trait-leaves.jpg",
+      "/plants/gesneriaceae-modal/trait-flowers.jpg",
+      "/plants/gesneriaceae-modal/trait-rosette.jpg",
+      "/plants/gesneriaceae-modal/trait-seed-capsule.jpg"
+    ]
+  },
+  "marantaceae": {
+    "closingNote": {
+      "en": "Marantaceae are perfect for those who love beauty in details. Their leaves move with their own rhythm and make every day at home feel special.",
+      "ru": "Марантовые - идеальный выбор для тех, кто любит красоту в деталях. Их листья живут своей жизнью и делают каждый день в вашем доме особенным!"
+    },
+    "description": {
+      "en": "Marantaceae are tropical plants known for spectacular patterned leaves and unique behavior: many fold their leaves at night and open them again in the morning. They are valued for decorative foliage, calm care habits, and the ability to make a home feel cozy.",
+      "ru": "Марантовые - семейство тропических растений, известных своими эффектными узорчатыми листьями и уникальным поведением: многие из них складывают листья на ночь и открывают их утром. Эти растения ценятся за декоративность, неприхотливость в уходе и способность создавать уютную атмосферу в доме."
+    },
+    "facts": {
+      "en": [
+        "Marantaceae are often called prayer plants because their leaves move upward in the evening.",
+        "Calathea, Maranta, and Ctenanthe are the most popular genera of this family in indoor plant collections.",
+        "The plants are sensitive to water quality and prefer soft, settled water.",
+        "Marantaceae help humidify the air thanks to their large leaf surface."
+      ],
+      "ru": [
+        "Марантовые часто называют «молящимися растениями» за движение листьев вверх вечером.",
+        "Калатея, маранта и ктенанта - самые популярные роды этого семейства в комнатном цветоводстве.",
+        "Растения чувствительны к качеству воды: предпочитают мягкую, отстоянную воду.",
+        "Марантовые отлично увлажняют воздух благодаря крупной площади листьев."
+      ]
+    },
+    "heroImage": "/plants/marantaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 210px) top",
+      "md": "calc(100% + 150px) top",
+      "lg": "calc(100% + 105px) top"
+    },
+    "heroSize": {
+      "base": "600px auto",
+      "md": "740px auto",
+      "lg": "850px auto"
+    },
+    "latinName": "Marantaceae",
+    "origin": {
+      "en": "Tropical regions of Central and South America, especially the humid forests of Brazil.",
+      "ru": "Тропические регионы Центральной и Южной Америки, особенно влажные леса Бразилии."
+    },
+    "originMapImage": "/plants/marantaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Leaves have bright patterns: stripes, spots, herringbone shapes, and feathered markings.",
+        "Many species fold their leaves at night in a movement called nyctinasty.",
+        "The underside of the leaves is often purple or red, with contrasting shades.",
+        "They prefer humid air and a stable temperature.",
+        "Flowers are small and modest, gathered in spike-like inflorescences."
+      ],
+      "ru": [
+        "Листья с ярким рисунком: полосы, пятна, «ёлочка», перышки.",
+        "Многие виды складывают листья на ночь (никтинастия).",
+        "Нижняя сторона листьев часто окрашена в фиолетовые или красноватые оттенки.",
+        "Предпочитают влажный воздух и стабильную температуру.",
+        "Цветки мелкие, невзрачные, собраны в колосовидные соцветия."
+      ]
+    },
+    "traitImages": [
+      "/plants/marantaceae-modal/trait-pattern.jpg",
+      "/plants/marantaceae-modal/trait-nyctinasty.jpg",
+      "/plants/marantaceae-modal/trait-underside.jpg",
+      "/plants/marantaceae-modal/trait-humidity.jpg",
+      "/plants/marantaceae-modal/trait-flowers.jpg"
+    ]
+  },
+  "nephrolepidaceae": {
+    "description": {
+      "en": "Nephrolepis ferns bring fine green texture and a fresh forest mood. They do not flower; their beauty is in arching fronds, steady moisture, and soft shade.",
+      "ru": "Нефролеписовые папоротники дают тонкую зеленую фактуру и свежий лесной характер. Они не цветут: их красота в дуговидных вайях, стабильной влажности и мягкой тени."
+    },
+    "facts": {
+      "en": [
+        "Ferns reproduce by spores rather than flowers and seeds.",
+        "Dry air quickly shows as brittle tips and shedding leaflets.",
+        "A hanging pot lets the fronds fall naturally on all sides."
+      ],
+      "ru": [
+        "Папоротники размножаются спорами, а не цветами и семенами.",
+        "Сухой воздух быстро проявляется ломкими кончиками и осыпанием сегментов.",
+        "В подвесном горшке вайи естественно расходятся во все стороны."
+      ]
+    },
+    "heroImage": "/plants/nephrolepidaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
+    "latinName": "Nephrolepidaceae",
+    "origin": {
+      "en": "Humid tropical and subtropical forests across many regions.",
+      "ru": "Влажные тропические и субтропические леса разных регионов."
+    },
+    "originMapImage": "/plants/nephrolepidaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Arching fronds are divided into many small leaflets.",
+        "The plant prefers constant light moisture.",
+        "Soft filtered light prevents scorching.",
+        "Spores form on the underside of mature fronds."
+      ],
+      "ru": [
+        "Дуговидные вайи разделены на множество мелких сегментов.",
+        "Растение любит постоянную легкую влажность.",
+        "Мягкий рассеянный свет защищает от ожогов.",
+        "Споры формируются на нижней стороне зрелых вай."
+      ]
+    }
+  },
+  "orchidaceae": {
+    "closingNote": {
+      "en": "Orchids are a symbol of elegance and nature's perfection. Their extraordinary blooms inspire collectors all over the world.",
+      "ru": "Орхидеи - символ изящества и совершенства природы. Они вдохновляют коллекционеров по всему миру своей красотой и разнообразием!"
+    },
+    "description": {
+      "en": "Orchids are one of the largest families of flowering plants. They amaze with the diversity of forms, colours, and sizes, and are valued for the refined beauty of their blooms, delicate fragrance, and ability to adapt to very different habitats.",
+      "ru": "Орхидные - одно из самых крупных семейств цветковых растений. Они поражают разнообразием форм, расцветок и размеров. Орхидеи ценятся за изысканную красоту цветков, утончённый аромат и способность адаптироваться к самым разным условиям - от тропических лесов до горных склонов."
+    },
+    "facts": {
+      "en": [
+        "Orchidaceae includes more than 25,000 species and thousands of hybrids.",
+        "Vanilla is the only orchid widely used in cooking.",
+        "The smallest orchid flowers can be less than 2 mm across.",
+        "Some orchids can live for decades, with individual species exceeding 50 years.",
+        "A single fruit may contain millions of dust-like seeds."
+      ],
+      "ru": [
+        "Орхидные насчитывают более 25 000 видов и тысячи гибридов.",
+        "Ваниль - единственная орхидея, которую широко используют в кулинарии.",
+        "Самая маленькая орхидея - Platystele jungermannioides, её цветки меньше 2 мм.",
+        "Орхидеи могут жить десятилетиями: некоторые виды - более 50 лет.",
+        "Семена орхидей настолько малы, что в одном плоде их может быть до нескольких миллионов."
+      ]
+    },
+    "heroImage": "/plants/orchidaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 78px) top",
+      "lg": "calc(100% + 22px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "730px auto",
+      "lg": "900px auto"
+    },
+    "latinName": "Orchidaceae",
+    "origin": {
+      "en": "Almost every continent except Antarctica, with the greatest diversity in tropical Asia, South America, Central America, Africa, Australia, and Pacific islands.",
+      "ru": "Практически все континенты, кроме Антарктиды. Наибольшее разнообразие орхидных - в тропиках Азии, Южной и Центральной Америки, Африки, Австралии и островов Тихого океана."
+    },
+    "originMapImage": "/plants/orchidaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Flowers are often irregular, with a unique lip petal.",
+        "Flower symmetry is usually bilateral.",
+        "Many species are epiphytes and grow on trees without parasitising them.",
+        "Pseudobulbs or thickened stems store water.",
+        "Seeds are extremely small and germinate only with mycorrhizal fungi."
+      ],
+      "ru": [
+        "Цветки часто неправильной формы, с уникальной губой (лабеллумом).",
+        "Симметрия цветка обычно двусторонняя.",
+        "Многие виды - эпифиты, растут на деревьях, не паразитируя на них.",
+        "Псевдобульбы или утолщённые стебли запасают влагу.",
+        "Семена очень мелкие, без эндосперма, прорастают только с микоризой."
+      ]
+    },
+    "traitImages": [
+      "/plants/orchidaceae-modal/phalaenopsis-schilleriana.png",
+      "/plants/orchidaceae-modal/cattleya-trianae.png",
+      "/plants/orchidaceae-modal/dendrobium-nobile.png",
+      "/plants/orchidaceae-modal/cymbidium-ensifolium.png",
+      "/plants/orchidaceae-modal/paphiopedilum-venustum.png"
+    ]
+  },
+  "piperaceae": {
+    "closingNote": {
+      "en": "Piperaceae turn small shelves into a living collection of texture, pattern, and sculptural leaves. Their quiet forms reward attentive but uncomplicated care.",
+      "ru": "Перцевые превращают небольшие полки в живую коллекцию фактур, узоров и выразительных листьев. Их спокойная красота отвечает на внимательный, но несложный уход."
+    },
+    "description": {
+      "en": "Pepper family houseplants are compact, tactile, and expressive in leaf shape. Peperomias especially suit small shelves because they stay neat and tolerate modest care.",
+      "ru": "Перцевые в доме компактные, фактурные и выразительные по форме листа. Особенно пеперомии хороши для небольших полок: они аккуратные и терпят умеренный уход."
+    },
+    "facts": {
+      "en": [
+        "Peperomia flowers are tiny and carried on slender spikes.",
+        "Many species have succulent leaves that dislike constant wet soil.",
+        "Leaf cuttings can produce new plants in several popular peperomias.",
+        "Black pepper berries grow in clusters that ripen from green to red before drying.",
+        "Many peperomias stay compact for years and suit small pots."
+      ],
+      "ru": [
+        "Цветы пеперомий крошечные и собраны на тонких початках.",
+        "У многих видов сочные листья, которые не любят постоянно мокрый грунт.",
+        "У популярных пеперомий новое растение можно получить даже из листового черенка.",
+        "Ягоды черного перца растут в кистях и перед сушкой меняют цвет с зеленого на красный.",
+        "Многие пеперомии годами остаются компактными и хорошо подходят для небольших горшков."
+      ]
+    },
+    "heroImage": "/plants/piperaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
+    "latinName": "Piperaceae",
+    "origin": {
+      "en": "Tropical regions of Central and South America, Africa, and Asia.",
+      "ru": "Тропические регионы Центральной и Южной Америки, Африки и Азии."
+    },
+    "originMapImage": "/plants/piperaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Leaves may be round, corrugated, glossy, or softly succulent.",
+        "Flower spikes are narrow and understated.",
+        "Small root systems prefer compact pots.",
+        "Moderate light keeps growth dense."
+      ],
+      "ru": [
+        "Листья бывают круглыми, морщинистыми, глянцевыми или слегка суккулентными.",
+        "Соцветия узкие и очень сдержанные.",
+        "Небольшая корневая система любит компактные горшки.",
+        "Умеренный свет сохраняет рост плотным."
+      ]
+    },
+    "traitImages": [
+      "/plants/piperaceae-modal/peperomia-obtusifolia.png?v=2",
+      "/plants/piperaceae-modal/peperomia-caperata.png?v=2",
+      "/plants/piperaceae-modal/peperomia-argyreia.png?v=2",
+      "/plants/piperaceae-modal/piper-nigrum.png?v=2",
+      "/plants/piperaceae-modal/peperomia-prostrata.png?v=2"
+    ]
+  },
+  "vitaceae": {
+    "closingNote": {
+      "en": "Vitaceae bring the relaxed movement of a real vine indoors. Give them a support or let them trail, and their quick growth will make the space feel alive.",
+      "ru": "Виноградовые приносят в интерьер живое движение настоящей лианы. Дайте им опору или позвольте свободно свисать — быстрый рост сразу оживит пространство."
+    },
+    "description": {
+      "en": "Grape family climbers bring tendrils, fast growth, and a true vine silhouette. Indoors they are useful when a plant should climb, trail, or fill a support quickly.",
+      "ru": "Виноградовые дают усики, быстрый рост и настоящий силуэт лианы. В доме они хороши там, где растение должно быстро оплести опору, свисать или заполнить угол."
+    },
+    "facts": {
+      "en": [
+        "Tendrils help vines grip supports without heavy stems.",
+        "Cissus is a classic indoor member that tolerates pruning well.",
+        "Fast growth means regular shaping keeps the plant decorative.",
+        "Some species use adhesive pads or tendrils to hold onto a support.",
+        "Cissus rhombifolia is prized indoors for its resilience and lush compound leaves."
+      ],
+      "ru": [
+        "Усики помогают лианам цепляться за опору без тяжелых стеблей.",
+        "Циссус - классический комнатный представитель, который хорошо переносит обрезку.",
+        "Быстрый рост требует регулярной формировки, чтобы растение оставалось декоративным.",
+        "Некоторые виды цепляются за опору усиками или присосками на побегах.",
+        "Циссус ромболистный ценят в интерьере за выносливость и пышные сложные листья."
+      ]
+    },
+    "heroImage": "/plants/vitaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 150px) top",
+      "md": "calc(100% + 70px) top",
+      "lg": "calc(100% + 12px) top"
+    },
+    "heroSize": {
+      "base": "570px auto",
+      "md": "720px auto",
+      "lg": "900px auto"
+    },
+    "latinName": "Vitaceae",
+    "origin": {
+      "en": "Temperate and tropical regions worldwide, especially forest edges and climbing habitats.",
+      "ru": "Умеренные и тропические регионы мира, особенно лесные опушки и места для лазания."
+    },
+    "originMapImage": "/plants/vitaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Flexible stems climb or trail naturally from a support.",
+        "Tendrils grow opposite leaves and help the vine hold its place.",
+        "Leaves are often compound, lobed, or distinctly grape-like.",
+        "Pruning encourages branching and a fuller silhouette.",
+        "Young growth stays soft and is easy to guide in the desired direction."
+      ],
+      "ru": [
+        "Гибкие стебли естественно карабкаются по опоре или свисают.",
+        "Усики растут напротив листьев и помогают лиане держаться на опоре.",
+        "Листья часто сложные, лопастные или похожие на виноградные.",
+        "Обрезка стимулирует ветвление и более пышный силуэт.",
+        "Молодые побеги остаются мягкими, поэтому их легко направлять."
+      ]
+    },
+    "traitImages": [
+      "/plants/vitaceae-modal/trait-climbing-stems.png",
+      "/plants/vitaceae-modal/trait-tendrils.png",
+      "/plants/vitaceae-modal/trait-compound-leaves.png",
+      "/plants/vitaceae-modal/trait-branching.png",
+      "/plants/vitaceae-modal/trait-young-growth.png"
+    ]
+  },
+  "crassulaceae": {
+    "closingNote": {
+      "en": "Crassulaceae bring sculptural shapes and an unhurried rhythm to a collection. Give them bright light and let the soil dry between waterings.",
+      "ru": "Толстянковые добавляют коллекции выразительные формы и спокойный ритм. Дайте им яркий свет и позволяйте грунту просыхать между поливами."
+    },
+    "description": {
+      "en": "Crassulaceae are succulent plants that store water in thick leaves and stems. They are valued for compact rosettes, graphic silhouettes, and their ability to stay decorative with simple, measured care.",
+      "ru": "Толстянковые — суккулентные растения, которые запасают воду в мясистых листьях и стеблях. Их ценят за компактные розетки, графичные силуэты и способность оставаться декоративными при простом, размеренном уходе."
+    },
+    "facts": {
+      "en": [
+        "Many members store water in leaves, stems, or both, so they tolerate short dry periods.",
+        "Jade plants can grow into small branching trees indoors and are easy to shape with pruning.",
+        "Echeverias form neat rosettes whose colours become more expressive in bright light.",
+        "Most species prefer a compact pot and a very airy, fast-draining substrate."
+      ],
+      "ru": [
+        "Многие представители запасают воду в листьях, стеблях или сразу в обоих, поэтому спокойно переносят короткую засуху.",
+        "Толстянки могут вырастать в комнатные деревца с ветвящимся стволом и хорошо поддаются формировке.",
+        "Эхеверии образуют аккуратные розетки, окраска которых становится выразительнее на ярком свету.",
+        "Большинству видов нужен небольшой горшок и очень рыхлый, быстро просыхающий субстрат."
+      ]
+    },
+    "heroFilter": "drop-shadow(0 18px 14px rgba(72, 57, 37, 0.16))",
+    "heroImage": "/plants/crassulaceae-modal/hero-cutout.png",
+    "heroPosition": {
+      "base": "72% bottom",
+      "md": "right bottom",
+      "lg": "right bottom"
+    },
+    "heroSize": {
+      "base": "auto 100%",
+      "md": "auto 100%",
+      "lg": "auto 100%"
+    },
+    "latinName": "Crassulaceae",
+    "origin": {
+      "en": "Dry and seasonally dry regions worldwide, especially southern Africa, Mexico, and the Mediterranean.",
+      "ru": "Засушливые и сезонно сухие регионы мира, особенно Южная Африка, Мексика и Средиземноморье."
+    },
+    "originMapImage": "/plants/crassulaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Fleshy leaves or stems store water for dry periods.",
+        "Rosettes and branching crowns create a clear, sculptural silhouette.",
+        "Dense, gritty soil and a drainage hole protect roots from excess moisture.",
+        "Bright light keeps the plant compact and its leaf colouring expressive."
+      ],
+      "ru": [
+        "Мясистые листья или стебли запасают воду на период засухи.",
+        "Розетки и ветвящиеся кроны создают узнаваемый, скульптурный силуэт.",
+        "Плотный минеральный грунт и дренажное отверстие защищают корни от лишней влаги.",
+        "Яркий свет сохраняет компактную форму и выразительную окраску листьев."
+      ]
+    },
+    "traitImages": [
+      "/plants/crassulaceae-modal/trait-water-storage.png",
+      "/plants/crassulaceae-modal/trait-rosette.png",
+      "/plants/crassulaceae-modal/trait-drainage.png",
+      "/plants/crassulaceae-modal/trait-bright-light.png"
+    ]
+  }
+}
