@@ -40,9 +40,6 @@ interface PlantProfileCareCard {
 interface PlantProfileQuickFacts {
   readonly growth: Record<Locale, string>;
   readonly height: Record<Locale, string>;
-  readonly humidity: Record<Locale, string>;
-  readonly light: Record<Locale, string>;
-  readonly temperature: Record<Locale, string>;
 }
 
 export interface CollectionPlantProfile {
@@ -122,9 +119,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       quickFacts: {
         growth: { en: 'Fast-growing', ru: 'Быстрый' },
         height: { en: 'Long climbing shoots', ru: 'Длинные побеги' },
-        humidity: { en: 'Medium to high', ru: 'Средняя — высокая' },
-        light: { en: 'Indirect light / light shade', ru: 'Рассеянный свет / полутень' },
-        temperature: { en: 'Warm, stable conditions', ru: 'Тепло, без перепадов' },
       },
     },
   },

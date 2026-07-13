@@ -23,8 +23,8 @@ export const PlantProfileTemplate = ({ locale, onBack, onClose, plant }: PlantPr
     <Flex background="#fdfaf3" direction="column" margin="0 auto" maxWidth="1200px" padding={{ base: '16px', md: '22px 28px 28px' }} position="relative" width="100%">
       <ProfileHeader locale={locale} plant={plant} onBack={onBack} onClose={onClose} />
       <ProfileFacts locale={locale} plant={plant} text={text} />
-      <ProfileSummary locale={locale} plant={plant} />
-      <ProfileCare locale={locale} plant={plant} text={text} />
+      <ProfileSummary locale={locale} plant={plant} text={text} />
+      <ProfileCare locale={locale} plant={plant} />
       <ProfileFooter locale={locale} text={text} />
     </Flex>
   );
