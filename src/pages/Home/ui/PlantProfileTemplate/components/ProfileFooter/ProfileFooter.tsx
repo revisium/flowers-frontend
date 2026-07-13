@@ -84,7 +84,7 @@ const FooterCard = ({
             {title}
           </Text>
         </Flex>
-        <Flex>
+        <Flex justify="space-between" gap="8px">
           <Box color="#2d362d" fontSize="0.8rem" lineHeight={1.48}>
             {children}
           </Box>{' '}
@@ -96,7 +96,8 @@ const FooterCard = ({
               height="132px"
               objectFit="cover"
               src={photo}
-              width={{ base: '112px', lg: '128px' }}
+              width={{ base: '92px', lg: '100px' }}
+              h={{ base: '110px', lg: '128px' }}
             />
           ) : null}
         </Flex>
