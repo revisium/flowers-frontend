@@ -1,5 +1,6 @@
 export {
   collectionPlants,
+  formatCollectionPlantCount,
   getCollectionPlantCount,
   getCollectionPlantCountByFamily,
   getCollectionPlantsByFamily,

@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Grid, Image, Input, Text } from '@chakra-ui/react';
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent, type MouseEvent } from 'react';
-import { collectionPlants, type CollectionFamilyId, type CollectionPlant } from 'src/entities/collection';
+import { collectionPlants, formatCollectionPlantCount, type CollectionFamilyId, type CollectionPlant } from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
 import { PlantCollectionIcon } from 'src/shared/ui';
 
@@ -30,7 +30,6 @@ const copy = {
     clearSearch: 'Clear search',
     close: 'Close my plants',
     empty: 'No plants matched your search.',
-    plantCount: 'plants',
     searchLabel: 'Search plants',
     searchPlaceholder: 'Find a plant',
     title: 'My plants',
@@ -41,7 +40,6 @@ const copy = {
     clearSearch: 'Очистить поиск',
     close: 'Закрыть каталог растений',
     empty: 'По вашему запросу растений не нашлось.',
-    plantCount: 'растений',
     searchLabel: 'Поиск растения',
     searchPlaceholder: 'Найти растение',
     title: 'Мои растения',
@@ -156,7 +154,7 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
               {text.title}
             </Flex>
             <Text color="#64705f" textStyle="medium-sm" transform="translateY(4px)">
-              {catalogByLocale[locale].length} {text.plantCount}
+              {formatCollectionPlantCount(catalogByLocale[locale].length, locale)}
             </Text>
           </Flex>
           <Flex alignItems="center" gap="10px" width={{ base: '100%', lg: 'min(480px, 52%)' }}>

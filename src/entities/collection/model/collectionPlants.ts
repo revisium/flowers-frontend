@@ -165,7 +165,10 @@ export const collectionPlants: readonly CollectionPlant[] = [
           title: { en: 'Repotting', ru: 'Пересадка' },
         },
         {
-          body: { en: 'Use a balanced fertiliser during active growth, following the product instructions.', ru: 'В период активного роста используйте сбалансированное удобрение по инструкции производителя.' },
+          body: {
+            en: 'From spring to early autumn, use a balanced liquid fertiliser with near-equal N-P-K (for example 10-10-10), plus Mg, Fe, Mn, Zn and B. Apply monthly at half the label rate; do not feed in winter.',
+            ru: 'С весны до начала осени — жидкое удобрение с примерно равным N-P-K (например, 10-10-10) и Mg, Fe, Mn, Zn, B. Вносите раз в месяц в половинной дозировке; зимой не подкармливайте.',
+          },
           title: { en: 'Feeding', ru: 'Подкормки' },
         },
         {
@@ -210,8 +213,8 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ],
       footer: {
         facts: {
-          en: ['The wavy, lance-shaped leaves are marked with dark oval blotches.', 'The underside of each leaf is deep purple to maroon.', 'Small yellow flowers are uncommon on indoor plants.'],
-          ru: ['Волнистые ланцетные листья украшены тёмными овальными пятнами.', 'Изнанка листьев окрашена в глубокий пурпурно-бордовый цвет.', 'Небольшие жёлтые цветки в комнатных условиях появляются редко.'],
+          en: ['The wavy, lance-shaped leaves are marked with dark oval blotches.', 'The underside of each leaf is deep purple to maroon.', 'In the evening the leaves lift and fold, then open again in the morning.', 'Small yellow flowers are uncommon on indoor plants.'],
+          ru: ['Волнистые ланцетные листья украшены тёмными овальными пятнами.', 'Изнанка листьев окрашена в глубокий пурпурно-бордовый цвет.', 'Вечером листья поднимаются и складываются, а утром снова раскрываются.', 'Небольшие жёлтые цветки в комнатных условиях появляются редко.'],
         },
         important: {
           en: 'Do not let the compost dry out completely and keep the plant away from direct sun, cold glass and draughts.',
@@ -244,7 +247,10 @@ export const collectionPlants: readonly CollectionPlant[] = [
       },
       secondaryCare: [
         {
-          body: { en: 'Use a peat-free, moisture-retentive but well-drained potting mix.', ru: 'Подойдёт рыхлый влагоёмкий, но хорошо дренируемый безторфяной субстрат.' },
+          body: {
+            en: 'Mix by volume: 40% quality houseplant compost, 30% coco coir, 20% perlite and 10% fine pine bark. The mix stays evenly moist yet airy around the roots.',
+            ru: 'Смешайте по объёму: 40% качественного грунта для декоративнолистных, 30% кокосового субстрата, 20% перлита и 10% мелкой сосновой коры. Смесь удерживает влагу, но остаётся воздушной у корней.',
+          },
           title: { en: 'Soil', ru: 'Грунт' },
         },
         {
@@ -252,7 +258,10 @@ export const collectionPlants: readonly CollectionPlant[] = [
           title: { en: 'Repotting', ru: 'Пересадка' },
         },
         {
-          body: { en: 'Feed monthly with a balanced liquid fertiliser during active growth.', ru: 'В период активного роста подкармливайте раз в месяц сбалансированным жидким удобрением.' },
+          body: {
+            en: 'Use a low-salt liquid fertiliser with N-P₂O₅-K₂O close to 3-1-2 (for example 18-6-12), including Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer; avoid fluoride-containing products.',
+            ru: 'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2 (например, 18-6-12), с Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. Подкармливайте с весны до конца лета раз в месяц в ¼–½ дозы; избегайте средств с фтором.',
+          },
           title: { en: 'Feeding', ru: 'Подкормки' },
         },
         {
@@ -269,6 +278,26 @@ export const getCollectionPlantCount = () => collectionPlants.length;
 
 export const getCollectionPlantCountByFamily = (familyId: CollectionFamilyId) =>
   collectionPlants.filter((plant) => plant.familyId === familyId).length;
+
+export const formatCollectionPlantCount = (count: number, locale: Locale) => {
+  if (locale === 'en') {
+    return `${count} ${count === 1 ? 'plant' : 'plants'}`;
+  }
+
+  const lastTwoDigits = count % 100;
+  const lastDigit = count % 10;
+  let ending = 'растений';
+
+  if (lastTwoDigits < 11 || lastTwoDigits > 14) {
+    if (lastDigit === 1) {
+      ending = 'растение';
+    } else if (lastDigit >= 2 && lastDigit <= 4) {
+      ending = 'растения';
+    }
+  }
+
+  return `${count} ${ending}`;
+};
 
 export const getCollectionPlantsByFamily = (familyId: CollectionFamilyId, locale: Locale) =>
   collectionPlants
