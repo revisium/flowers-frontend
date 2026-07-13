@@ -22,7 +22,9 @@ export const DayReminderCard = ({ text }: DayReminderCardProps) => {
         {text.reminderTitle}
       </Text>
       <Text color="#6f6b5d" textStyle={{ base: 'regular-md', md: 'regular-lп', xl: 'regular-xl' }}>
-        Лучшее время подарить растениям <br /> свое внимание и заботу
+        {text.reminderText[0]}
+        <br />
+        {text.reminderText[1]}
       </Text>
       <Flex direction={{ base: 'column', sm: 'row' }} gap="10px">
         <Button

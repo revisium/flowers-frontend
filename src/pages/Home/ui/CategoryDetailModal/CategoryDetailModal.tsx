@@ -1,5 +1,5 @@
 import { Box, Flex } from '@chakra-ui/react';
-import { useRef, useState, type MouseEvent } from 'react';
+import { useLayoutEffect, useRef, useState, type MouseEvent } from 'react';
 import { collectionPlants, type CollectionPlant } from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
 
@@ -19,6 +19,7 @@ interface CategoryDetailModalProps {
 export const CategoryDetailModal = ({ data, locale, onClose }: CategoryDetailModalProps) => {
   const cardRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
   const [selectedPlant, setSelectedPlant] = useState<CollectionPlant | null>(null);
   const titleId = `${data.latinName.toLowerCase()}-modal-title`;
   const { handleKeyDown, isOpen } = useModalFocusTrap({ cardRef, closeButtonRef, onClose });
@@ -29,8 +30,15 @@ export const CategoryDetailModal = ({ data, locale, onClose }: CategoryDetailMod
     }
   };
 
+  useLayoutEffect(() => {
+    if (selectedPlant) {
+      dialogRef.current?.scrollTo({ behavior: 'auto', top: 0 });
+    }
+  }, [selectedPlant]);
+
   return (
     <Flex
+      ref={dialogRef}
       alignItems="center"
       aria-label={selectedPlant ? selectedPlant.name[locale] : undefined}
       aria-labelledby={selectedPlant ? undefined : titleId}

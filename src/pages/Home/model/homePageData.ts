@@ -25,7 +25,7 @@ export interface HomeCopy {
   readonly noteActionLabel: string;
   readonly noteText: readonly string[];
   readonly reminderActionLabel: string;
-  readonly reminderText: string;
+  readonly reminderText: readonly [string, string];
   readonly reminderTitle: string;
   readonly scrollLeftLabel: string;
   readonly scrollRightLabel: string;
@@ -48,7 +48,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       'Продолжайте заботиться, наблюдать и наслаждаться!',
     ],
     reminderActionLabel: 'Смотреть список',
-    reminderText: 'Лучшее время подарить растениям <br/> свое внимание',
+    reminderText: ['Лучшее время подарить растениям', 'своё внимание и заботу'],
     reminderTitle: 'Сегодня особенный день',
     scrollLeftLabel: 'Предыдущие категории',
     scrollRightLabel: 'Следующие категории',
@@ -64,7 +64,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     noteActionLabel: 'My notes',
     noteText: ['Every plant is a small story.', 'Keep caring, watching, and enjoying the growth.'],
     reminderActionLabel: 'View list',
-    reminderText: 'A good moment to give your plants a little attention',
+    reminderText: ['A good moment to give your plants', 'some attention and care'],
     reminderTitle: 'A special day',
     scrollLeftLabel: 'Previous categories',
     scrollRightLabel: 'Next categories',
