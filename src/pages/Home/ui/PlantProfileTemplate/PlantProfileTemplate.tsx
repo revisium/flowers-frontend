@@ -25,7 +25,7 @@ export const PlantProfileTemplate = ({ locale, onBack, onClose, plant }: PlantPr
       <ProfileFacts locale={locale} plant={plant} text={text} />
       <ProfileSummary locale={locale} plant={plant} text={text} />
       <ProfileCare locale={locale} plant={plant} />
-      <ProfileFooter locale={locale} text={text} />
+      <ProfileFooter locale={locale} plant={plant} text={text} />
     </Flex>
   );
 };

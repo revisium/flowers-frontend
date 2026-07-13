@@ -1,10 +1,12 @@
 import { Box, Flex, Grid, Image, Link, Text } from '@chakra-ui/react';
+import type { CollectionPlant } from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
 
-import { profileFooter, type ProfileCopy } from '../../content/profileContent';
+import type { ProfileCopy } from '../../content/profileContent';
 
 interface ProfileFooterProps {
   readonly locale: Locale;
+  readonly plant: CollectionPlant;
   readonly text: ProfileCopy;
 }
 
@@ -105,9 +107,11 @@ const FooterCard = ({
 
 const ImportantCard = ({
   children,
+  image,
   title,
 }: {
   readonly children: React.ReactNode;
+  readonly image: string;
   readonly title: string;
 }) => (
   <Flex
@@ -151,13 +155,13 @@ const ImportantCard = ({
       objectFit="contain"
       position="absolute"
       right="10px"
-      src="/plant-profile/important-vine.png"
+      src={image}
       width={{ base: '72px', md: '114px' }}
     />
   </Flex>
 );
 
-const SaleCard = ({ locale, title }: { readonly locale: Locale; readonly title: string }) => (
+const SaleCard = ({ image, locale, title }: { readonly image: string; readonly locale: Locale; readonly title: string }) => (
   <Flex
     background="#eff4e6"
     border="1px solid #d6e0c2"
@@ -172,8 +176,8 @@ const SaleCard = ({ locale, title }: { readonly locale: Locale; readonly title: 
       </Text>
       <Text color="#3e493b" fontSize="0.8rem" lineHeight={1.48}>
         {locale === 'ru'
-          ? 'Укоренённые и свежесрезанные черенки циссуса антарктического. Наличие и стоимость — по запросу.'
-          : 'Rooted and freshly cut cuttings of Antarctic cissus. Availability and price are available on request.'}
+          ? 'Укоренённые черенки и молодые растения из моей коллекции. Наличие и стоимость — по запросу.'
+          : 'Rooted cuttings and young plants from my collection. Availability and price are available on request.'}
       </Text>
       <Flex flexWrap="wrap" gap="8px">
         <Link
@@ -230,14 +234,14 @@ const SaleCard = ({ locale, title }: { readonly locale: Locale; readonly title: 
       objectFit="contain"
       position="absolute"
       right="8px"
-      src="/plant-profile/cuttings-for-sale.png"
+      src={image}
       width={{ base: '90px', md: '158px' }}
     />
   </Flex>
 );
 
-export const ProfileFooter = ({ locale, text }: ProfileFooterProps) => {
-  const footer = profileFooter[locale];
+export const ProfileFooter = ({ locale, plant, text }: ProfileFooterProps) => {
+  const footer = plant.profile.footer;
 
   return (
     <>
@@ -251,13 +255,13 @@ export const ProfileFooter = ({ locale, text }: ProfileFooterProps) => {
         overflow="hidden"
       >
         <FooterCard
-          image="/plant-profile/footer-propagation.png"
+          image={plant.profile.propagationIcon ?? '/plant-profile/footer-propagation.png'}
           index={0}
-          photo="/plant-profile/propagation-cuttings.jpg"
+          photo={plant.profile.propagationImage}
           title={text.propagation}
           unified
         >
-          {footer.propagation}
+          {footer.propagation[locale]}
         </FooterCard>
         <FooterCard
           image="/plant-profile/footer-problems.png"
@@ -265,19 +269,21 @@ export const ProfileFooter = ({ locale, text }: ProfileFooterProps) => {
           title={text.problems}
           unified
         >
-          {footer.problems.map((item) => (
+          {footer.problems[locale].map((item) => (
             <Text key={item}>❧ {item}</Text>
           ))}
         </FooterCard>
         <FooterCard image="/plant-profile/footer-facts.png" index={2} title={text.facts} unified>
-          {footer.facts.map((item) => (
+          {footer.facts[locale].map((item) => (
             <Text key={item}>› {item}</Text>
           ))}
         </FooterCard>
       </Grid>
       <Grid gap="10px" gridTemplateColumns={{ base: '1fr', md: '0.85fr 1.15fr' }} marginTop="10px">
-        <ImportantCard title={text.important}>{footer.important}</ImportantCard>
-        <SaleCard locale={locale} title={text.notes} />
+        <ImportantCard image={plant.profile.importantImage ?? '/plant-profile/important-vine.png'} title={text.important}>
+          {footer.important[locale]}
+        </ImportantCard>
+        <SaleCard image={plant.profile.saleImage ?? '/plant-profile/cuttings-for-sale.png'} locale={locale} title={text.notes} />
       </Grid>
     </>
   );

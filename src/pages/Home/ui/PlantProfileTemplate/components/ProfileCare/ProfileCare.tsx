@@ -2,7 +2,7 @@ import { Flex, Grid, Image, Text } from '@chakra-ui/react';
 import type { CollectionPlant } from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
 
-import { secondaryCare, type ProfileCopy } from '../../content/profileContent';
+import type { ProfileCopy } from '../../content/profileContent';
 
 interface ProfileCareProps {
   readonly locale: Locale;
@@ -160,9 +160,9 @@ export const ProfileCare = ({ locale, plant }: ProfileCareProps) => (
         title={care.title[locale]}
       />
     ))}
-    {secondaryCare[locale].map(([title, body], index) => (
+    {plant.profile.secondaryCare.map((care, index) => (
       <CareCard
-        body={body}
+        body={care.body[locale]}
         icon={
           [
             '/plant-profile/care-soil.png',
@@ -172,8 +172,8 @@ export const ProfileCare = ({ locale, plant }: ProfileCareProps) => (
           ][index]!
         }
         index={index + plant.profile.care.length}
-        key={title}
-        title={title}
+        key={care.title[locale]}
+        title={care.title[locale]}
       />
     ))}
   </Grid>

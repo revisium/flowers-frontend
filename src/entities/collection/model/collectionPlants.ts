@@ -37,6 +37,13 @@ interface PlantProfileCareCard {
   readonly title: Record<Locale, string>;
 }
 
+interface PlantProfileFooter {
+  readonly facts: Record<Locale, readonly string[]>;
+  readonly important: Record<Locale, string>;
+  readonly problems: Record<Locale, readonly string[]>;
+  readonly propagation: Record<Locale, string>;
+}
+
 interface PlantProfileQuickFacts {
   readonly growth: Record<Locale, string>;
   readonly height: Record<Locale, string>;
@@ -46,10 +53,16 @@ export interface CollectionPlantProfile {
   readonly care: readonly PlantProfileCareCard[];
   readonly difficulty: number;
   readonly facts: readonly PlantProfileFact[];
+  readonly footer: PlantProfileFooter;
   readonly latinName: string;
   readonly notes: Record<Locale, string>;
   readonly overview: Record<Locale, string>;
+  readonly importantImage?: string;
+  readonly propagationIcon?: string;
+  readonly propagationImage?: string;
   readonly quickFacts: PlantProfileQuickFacts;
+  readonly saleImage?: string;
+  readonly secondaryCare: readonly PlantProfileCareCard[];
 }
 
 export const collectionPlants: readonly CollectionPlant[] = [
@@ -107,6 +120,24 @@ export const collectionPlants: readonly CollectionPlant[] = [
           value: { en: 'Woody climbing vine with tendrils', ru: 'Древеснеющая лиана с усиками' },
         },
       ],
+      footer: {
+        facts: {
+          en: ['An evergreen woody climber native to eastern Australia.', 'Simple toothed leaves are usually ovate to oblong.', 'The vine climbs with simple or two-branched tendrils.'],
+          ru: ['Вечнозелёная древеснеющая лиана, родом с восточного побережья Австралии.', 'Простые зубчатые листья обычно имеют яйцевидную или продолговатую форму.', 'Лиана цепляется за опору простыми или двураздельными усиками.'],
+        },
+        important: {
+          en: 'Do not let the root ball dry out completely during active growth, but never leave it standing in water.',
+          ru: 'В период активного роста не пересушивайте корневой ком полностью, но и не оставляйте растение стоять в воде.',
+        },
+        problems: {
+          en: ['Yellowing leaves — check for waterlogging.', 'Brown edges — air may be too dry or the soil has dried too far.', 'Sparse growth — move to brighter indirect light.'],
+          ru: ['Желтеют листья — проверьте, нет ли застоя воды.', 'Края листьев буреют — воздух может быть слишком сухим или грунт сильно пересох.', 'Побеги вытягиваются — переставьте растение в более яркий рассеянный свет.'],
+        },
+        propagation: {
+          en: 'Propagate from stem cuttings during active growth in a lightly moist, airy substrate.',
+          ru: 'Размножайте стеблевыми черенками в период активного роста в слегка влажном, воздухопроницаемом субстрате.',
+        },
+      },
       latinName: 'Cissus antarctica',
       notes: {
         en: 'Guide the young shoots onto a support and prune them after active growth to keep the vine tidy.',
@@ -116,10 +147,120 @@ export const collectionPlants: readonly CollectionPlant[] = [
         en: 'Kangaroo vine is an Australian evergreen climber with simple toothed leaves and tendrils. In nature it grows in warm coastal rainforests and their margins.',
         ru: 'Кенгуровая лиана — австралийская вечнозелёная лиана с простыми зубчатыми листьями и усиками. В природе растёт во влажных лесах и на их опушках восточного побережья.',
       },
+      importantImage: '/plant-profile/important-vine.png',
+      propagationIcon: '/plant-profile/footer-propagation.png',
+      propagationImage: '/plant-profile/propagation-cuttings.jpg',
+      saleImage: '/plant-profile/cuttings-for-sale.png',
       quickFacts: {
         growth: { en: 'Fast-growing', ru: 'Быстрый' },
         height: { en: 'Long climbing shoots', ru: 'Длинные побеги' },
       },
+      secondaryCare: [
+        {
+          body: { en: 'A humus-rich, airy mix that holds some moisture but drains well.', ru: 'Гумусный и воздухопроницаемый субстрат, который удерживает немного влаги, но хорошо дренируется.' },
+          title: { en: 'Soil', ru: 'Грунт' },
+        },
+        {
+          body: { en: 'Repot in spring when the roots have filled the pot.', ru: 'Пересаживайте весной, когда корни полностью освоят горшок.' },
+          title: { en: 'Repotting', ru: 'Пересадка' },
+        },
+        {
+          body: { en: 'Use a balanced fertiliser during active growth, following the product instructions.', ru: 'В период активного роста используйте сбалансированное удобрение по инструкции производителя.' },
+          title: { en: 'Feeding', ru: 'Подкормки' },
+        },
+        {
+          body: { en: 'Offer a support for the tendrils and prune long shoots to keep the vine neat.', ru: 'Дайте усикам опору и подрезайте длинные побеги, чтобы лиана оставалась аккуратной.' },
+          title: { en: 'Support & shaping', ru: 'Опоры и формировка' },
+        },
+      ],
+    },
+  },
+  {
+    familyId: 'marantaceae',
+    id: 'goeppertia-insignis',
+    image: '/plants/calathea-lancifolia-home-photo.jpg',
+    name: {
+      en: 'Rattlesnake plant',
+      ru: 'Калатея лансифолия',
+    },
+    profile: {
+      care: [
+        {
+          body: { en: 'Give bright filtered or indirect light. Direct sun can scorch the patterned leaves.', ru: 'Нужен яркий фильтрованный или рассеянный свет. Прямое солнце может обжечь узорчатые листья.' },
+          title: { en: 'Light', ru: 'Освещение' },
+        },
+        {
+          body: { en: 'Keep the compost evenly moist during active growth, but never soggy. Water less in winter.', ru: 'В период роста поддерживайте грунт равномерно влажным, но не мокрым. Зимой поливайте реже.' },
+          title: { en: 'Watering', ru: 'Полив' },
+        },
+        {
+          body: { en: 'High humidity helps prevent leaf edges from browning and curling.', ru: 'Высокая влажность помогает избежать подсыхания и скручивания краёв листьев.' },
+          title: { en: 'Humidity', ru: 'Влажность' },
+        },
+        {
+          body: { en: 'Keep warm and draught-free, ideally above 16°C with no sudden temperature changes.', ru: 'Держите в тепле и без сквозняков, желательно выше 16 °C и без резких перепадов температуры.' },
+          title: { en: 'Temperature', ru: 'Температура' },
+        },
+      ],
+      difficulty: 4,
+      facts: [
+        { label: { en: 'Family', ru: 'Семейство' }, value: { en: 'Prayer plant family (Marantaceae)', ru: 'Марантовые (Marantaceae)' } },
+        { label: { en: 'Origin', ru: 'Родина' }, value: { en: 'Brazil, Rio de Janeiro', ru: 'Бразилия, штат Рио-де-Жанейро' } },
+        { label: { en: 'Plant type', ru: 'Тип растения' }, value: { en: 'Rhizomatous evergreen perennial', ru: 'Корневищный вечнозелёный многолетник' } },
+      ],
+      footer: {
+        facts: {
+          en: ['The wavy, lance-shaped leaves are marked with dark oval blotches.', 'The underside of each leaf is deep purple to maroon.', 'Small yellow flowers are uncommon on indoor plants.'],
+          ru: ['Волнистые ланцетные листья украшены тёмными овальными пятнами.', 'Изнанка листьев окрашена в глубокий пурпурно-бордовый цвет.', 'Небольшие жёлтые цветки в комнатных условиях появляются редко.'],
+        },
+        important: {
+          en: 'Do not let the compost dry out completely and keep the plant away from direct sun, cold glass and draughts.',
+          ru: 'Не пересушивайте грунт полностью и берегите растение от прямого солнца, холодного стекла и сквозняков.',
+        },
+        problems: {
+          en: ['Brown, curling edges — humidity may be too low.', 'Faded patches — move away from direct sun.', 'Yellowing leaves — check that the compost is not waterlogged.'],
+          ru: ['Края листьев буреют и скручиваются — вероятно, слишком сухой воздух.', 'Узор бледнеет или появляются ожоги — уберите от прямого солнца.', 'Листья желтеют — проверьте, не переувлажнён ли грунт.'],
+        },
+        propagation: {
+          en: 'Divide a mature clump in late spring, keeping several healthy shoots and roots in each section.',
+          ru: 'Делите взрослый куст поздней весной: у каждой делёнки должны остаться здоровые побеги и корни.',
+        },
+      },
+      latinName: 'Goeppertia insignis',
+      notes: {
+        en: 'Also sold as Calathea lancifolia. Its patterned leaves look their best in stable, humid conditions.',
+        ru: 'Также встречается под названием Calathea lancifolia. Узорчатые листья лучше всего выглядят в стабильных влажных условиях.',
+      },
+      overview: {
+        en: 'Rattlesnake plant is a tropical Brazilian perennial grown for its long, wavy leaves with dark oval markings and purple undersides.',
+        ru: 'Калатея лансифолия — тропический многолетник из Бразилии, который ценят за длинные волнистые листья с тёмным овальным узором и пурпурной изнанкой.',
+      },
+      importantImage: '/plant-profile/calathea-important-leaves.png',
+      propagationIcon: '/plant-profile/calathea-propagation-icon.png',
+      propagationImage: '/plant-profile/calathea-propagation.jpg',
+      quickFacts: {
+        growth: { en: 'Moderate', ru: 'Умеренный' },
+        height: { en: 'Clump to 60 cm', ru: 'Куст до 60 см' },
+      },
+      secondaryCare: [
+        {
+          body: { en: 'Use a peat-free, moisture-retentive but well-drained potting mix.', ru: 'Подойдёт рыхлый влагоёмкий, но хорошо дренируемый безторфяной субстрат.' },
+          title: { en: 'Soil', ru: 'Грунт' },
+        },
+        {
+          body: { en: 'Repot or divide in late spring when the clump has filled its pot.', ru: 'Пересаживайте или делите куст поздней весной, когда он освоит горшок.' },
+          title: { en: 'Repotting', ru: 'Пересадка' },
+        },
+        {
+          body: { en: 'Feed monthly with a balanced liquid fertiliser during active growth.', ru: 'В период активного роста подкармливайте раз в месяц сбалансированным жидким удобрением.' },
+          title: { en: 'Feeding', ru: 'Подкормки' },
+        },
+        {
+          body: { en: 'No support is needed. Remove only yellowed or damaged leaves at the base.', ru: 'Опора не нужна. Удаляйте только пожелтевшие или повреждённые листья у основания.' },
+          title: { en: 'Grooming', ru: 'Уход за листвой' },
+        },
+      ],
+      saleImage: '/plant-profile/calathea-for-sale.png',
     },
   },
 ];
