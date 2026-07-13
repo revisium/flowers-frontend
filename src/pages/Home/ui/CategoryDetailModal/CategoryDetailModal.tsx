@@ -1,20 +1,25 @@
 import { Box, Flex } from '@chakra-ui/react';
-import { useRef, type MouseEvent } from 'react';
+import { useRef, useState, type MouseEvent } from 'react';
+import { collectionPlants, type CollectionPlant } from 'src/entities/collection';
+import type { Locale } from 'src/shared/config';
 
 import { type CategoryDetailData } from '../AraceaeCategoryModal/types';
 import { CategoryCollectionSection } from '../CategoryCollectionSection/CategoryCollectionSection';
 import { CategoryHero } from '../CategoryHero/CategoryHero';
 import { CategoryInfoGrid } from '../CategoryInfoGrid/CategoryInfoGrid';
+import { PlantProfileTemplate } from '../PlantProfileTemplate/PlantProfileTemplate';
 import { useModalFocusTrap } from './useModalFocusTrap';
 
 interface CategoryDetailModalProps {
   readonly data: CategoryDetailData;
+  readonly locale: Locale;
   readonly onClose: () => void;
 }
 
-export const CategoryDetailModal = ({ data, onClose }: CategoryDetailModalProps) => {
+export const CategoryDetailModal = ({ data, locale, onClose }: CategoryDetailModalProps) => {
   const cardRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const [selectedPlant, setSelectedPlant] = useState<CollectionPlant | null>(null);
   const titleId = `${data.latinName.toLowerCase()}-modal-title`;
   const { handleKeyDown, isOpen } = useModalFocusTrap({ cardRef, closeButtonRef, onClose });
 
@@ -27,7 +32,8 @@ export const CategoryDetailModal = ({ data, onClose }: CategoryDetailModalProps)
   return (
     <Flex
       alignItems="center"
-      aria-labelledby={titleId}
+      aria-label={selectedPlant ? selectedPlant.name[locale] : undefined}
+      aria-labelledby={selectedPlant ? undefined : titleId}
       aria-modal="true"
       background="rgba(34, 29, 18, 0.28)"
       inset={0}
@@ -56,14 +62,23 @@ export const CategoryDetailModal = ({ data, onClose }: CategoryDetailModalProps)
         transition="opacity 220ms ease, transform 260ms ease"
         width="100%"
       >
-        <CategoryHero
-          closeButtonRef={closeButtonRef}
-          data={data}
-          titleId={titleId}
-          onClose={onClose}
-        />
-        <CategoryInfoGrid data={data} />
-        <CategoryCollectionSection data={data} />
+        {selectedPlant ? (
+          <PlantProfileTemplate locale={locale} plant={selectedPlant} onBack={() => setSelectedPlant(null)} onClose={onClose} />
+        ) : (
+          <>
+            <CategoryHero
+              closeButtonRef={closeButtonRef}
+              data={data}
+              titleId={titleId}
+              onClose={onClose}
+            />
+            <CategoryInfoGrid data={data} />
+            <CategoryCollectionSection
+              data={data}
+              onPlantOpen={(plantId) => setSelectedPlant(collectionPlants.find((plant) => plant.id === plantId) ?? null)}
+            />
+          </>
+        )}
       </Box>
     </Flex>
   );

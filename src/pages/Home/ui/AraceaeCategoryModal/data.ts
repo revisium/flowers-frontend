@@ -31,7 +31,8 @@ const assets = {
 const categoryImage = (id: CategoryId) => `/plants/categories/studio/${id}.jpg`;
 const categoryCutout = (id: CategoryId) => `/plants/categories/generated/${id}.png`;
 
-const createPlants = (locale: Locale): readonly CategoryPlant[] => getCollectionPlantsByFamily('araceae', locale);
+const createPlants = (locale: Locale): readonly CategoryPlant[] =>
+  getCollectionPlantsByFamily('araceae', locale);
 
 const createTrait = (body: string, image: string): CategoryTrait => ({ body, image });
 
@@ -60,17 +61,30 @@ const ruText = {
   originTitle: 'Происхождение',
   title: 'Ароидные',
   traits: [
-    createTrait('Соцветие-початок с покрывалом, которое часто выглядит как отдельный цветок.', assets.spathiphyllum),
-    createTrait('Листья простые, часто крупные, с выразительными жилками и разными формами пластины.', assets.alocasia),
-    createTrait('Многие представители образуют воздушные корни и цепляются за опору.', assets.monstera),
-    createTrait('Часть видов содержит оксалаты кальция, поэтому их лучше держать вдали от животных.', assets.philodendron),
+    createTrait(
+      'Соцветие-початок с покрывалом, которое часто выглядит как отдельный цветок.',
+      assets.spathiphyllum,
+    ),
+    createTrait(
+      'Листья простые, часто крупные, с выразительными жилками и разными формами пластины.',
+      assets.alocasia,
+    ),
+    createTrait(
+      'Многие представители образуют воздушные корни и цепляются за опору.',
+      assets.monstera,
+    ),
+    createTrait(
+      'Часть видов содержит оксалаты кальция, поэтому их лучше держать вдали от животных.',
+      assets.philodendron,
+    ),
   ],
   traitsTitle: 'Отличительные признаки',
 } as const;
 
 const enText = {
   backLabel: 'Back to categories',
-  closingNote: 'Aroids are more than houseplants: they are a world of remarkable forms and adaptations.',
+  closingNote:
+    'Aroids are more than houseplants: they are a world of remarkable forms and adaptations.',
   description:
     'Aroids are one of the largest families of flowering plants. Most members come from tropical and subtropical regions and are known for dramatic foliage, aerial roots, and spadix-and-spathe inflorescences.',
   facts: [
@@ -85,10 +99,22 @@ const enText = {
   originTitle: 'Origin',
   title: 'Aroids',
   traits: [
-    createTrait('A spadix with a spathe, often perceived as a single flower.', assets.spathiphyllum),
-    createTrait('Simple, often large leaves with expressive veins and varied blade shapes.', assets.alocasia),
-    createTrait('Many members form aerial roots and use them to cling to support.', assets.monstera),
-    createTrait('Some species contain calcium oxalate crystals, so they are best kept away from pets.', assets.philodendron),
+    createTrait(
+      'A spadix with a spathe, often perceived as a single flower.',
+      assets.spathiphyllum,
+    ),
+    createTrait(
+      'Simple, often large leaves with expressive veins and varied blade shapes.',
+      assets.alocasia,
+    ),
+    createTrait(
+      'Many members form aerial roots and use them to cling to support.',
+      assets.monstera,
+    ),
+    createTrait(
+      'Some species contain calcium oxalate crystals, so they are best kept away from pets.',
+      assets.philodendron,
+    ),
   ],
   traitsTitle: 'Distinctive Traits',
 } as const;
@@ -141,14 +167,16 @@ const familySeeds = familySeedsJson as Record<Exclude<CategoryId, 'araceae'>, Fa
 const modalCopy = {
   en: {
     backLabel: 'Back to categories',
-    closingNote: 'Each family has its own rhythm; matching light, water, and soil to that rhythm keeps the collection calmer.',
+    closingNote:
+      'Each family has its own rhythm; matching light, water, and soil to that rhythm keeps the collection calmer.',
     factsTitle: 'Interesting Facts',
     originTitle: 'Origin',
     traitsTitle: 'Distinctive Traits',
   },
   ru: {
-    backLabel: 'Назад к категориям',
-    closingNote: 'У каждого семейства свой ритм; когда свет, вода и грунт совпадают с ним, коллекция чувствует себя спокойнее.',
+    backLabel: 'Назад',
+    closingNote:
+      'У каждого семейства свой ритм; когда свет, вода и грунт совпадают с ним, коллекция чувствует себя спокойнее.',
     factsTitle: 'Интересные факты',
     originTitle: 'Происхождение',
     traitsTitle: 'Отличительные признаки',
@@ -178,7 +206,10 @@ const createFamilyCategoryData = (
     heroImage: seed.heroImage ?? categoryCutout(id),
     heroBlendMode: seed.heroBlendMode,
     heroFilter: seed.heroFilter,
-    heroPosition: seed.heroPosition ?? { base: 'calc(100% + 132px) top', md: 'calc(100% + 80px) top' },
+    heroPosition: seed.heroPosition ?? {
+      base: 'calc(100% + 132px) top',
+      md: 'calc(100% + 80px) top',
+    },
     heroSize: seed.heroSize ?? { base: '430px auto', md: '560px auto', lg: '640px auto' },
     latinName: seed.latinName,
     origin: {
@@ -229,7 +260,11 @@ export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryD
     familyTitles.amaryllidaceae,
     familySeeds.amaryllidaceae,
   ),
-  apocynaceae: createFamilyDataByLocale('apocynaceae', familyTitles.apocynaceae, familySeeds.apocynaceae),
+  apocynaceae: createFamilyDataByLocale(
+    'apocynaceae',
+    familyTitles.apocynaceae,
+    familySeeds.apocynaceae,
+  ),
   arecaceae: createFamilyDataByLocale('arecaceae', familyTitles.arecaceae, familySeeds.arecaceae),
   asparagaceae: createFamilyDataByLocale(
     'asparagaceae',
@@ -257,19 +292,35 @@ export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryD
     familyTitles.crassulaceae,
     familySeeds.crassulaceae,
   ),
-  cycadaceae: createFamilyDataByLocale('cycadaceae', familyTitles.cycadaceae, familySeeds.cycadaceae),
+  cycadaceae: createFamilyDataByLocale(
+    'cycadaceae',
+    familyTitles.cycadaceae,
+    familySeeds.cycadaceae,
+  ),
   gesneriaceae: createFamilyDataByLocale(
     'gesneriaceae',
     familyTitles.gesneriaceae,
     familySeeds.gesneriaceae,
   ),
-  marantaceae: createFamilyDataByLocale('marantaceae', familyTitles.marantaceae, familySeeds.marantaceae),
+  marantaceae: createFamilyDataByLocale(
+    'marantaceae',
+    familyTitles.marantaceae,
+    familySeeds.marantaceae,
+  ),
   nephrolepidaceae: createFamilyDataByLocale(
     'nephrolepidaceae',
     familyTitles.nephrolepidaceae,
     familySeeds.nephrolepidaceae,
   ),
-  orchidaceae: createFamilyDataByLocale('orchidaceae', familyTitles.orchidaceae, familySeeds.orchidaceae),
-  piperaceae: createFamilyDataByLocale('piperaceae', familyTitles.piperaceae, familySeeds.piperaceae),
+  orchidaceae: createFamilyDataByLocale(
+    'orchidaceae',
+    familyTitles.orchidaceae,
+    familySeeds.orchidaceae,
+  ),
+  piperaceae: createFamilyDataByLocale(
+    'piperaceae',
+    familyTitles.piperaceae,
+    familySeeds.piperaceae,
+  ),
   vitaceae: createFamilyDataByLocale('vitaceae', familyTitles.vitaceae, familySeeds.vitaceae),
 };

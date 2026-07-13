@@ -37,57 +37,65 @@ interface PlantProfileCareCard {
   readonly title: Record<Locale, string>;
 }
 
+interface PlantProfileQuickFacts {
+  readonly growth: Record<Locale, string>;
+  readonly height: Record<Locale, string>;
+  readonly humidity: Record<Locale, string>;
+  readonly light: Record<Locale, string>;
+  readonly temperature: Record<Locale, string>;
+}
+
 export interface CollectionPlantProfile {
   readonly care: readonly PlantProfileCareCard[];
   readonly difficulty: number;
   readonly facts: readonly PlantProfileFact[];
-  readonly idealImage: string;
   readonly latinName: string;
   readonly notes: Record<Locale, string>;
   readonly overview: Record<Locale, string>;
+  readonly quickFacts: PlantProfileQuickFacts;
 }
 
 export const collectionPlants: readonly CollectionPlant[] = [
   {
     familyId: 'vitaceae',
-    id: 'cissus-rhombifolia',
-    image: '/plants/cissus-rhombifolia-home-photo.png',
+    id: 'cissus-antarctica',
+    image: '/plants/cissus-antarctica-home-photo.jpg',
     name: {
-      en: 'Grape ivy',
-      ru: 'Циссус ромболистный',
+      en: 'Kangaroo vine',
+      ru: 'Циссус антарктический',
     },
     profile: {
       care: [
         {
           body: {
-            en: 'Bright indirect light. The leaves lose colour and size in deep shade.',
-            ru: 'Яркий рассеянный свет. В глубокой тени листья мельчают и теряют насыщенность.',
+            en: 'Bright indirect light or light shade. Protect the foliage from harsh direct sun.',
+            ru: 'Яркий рассеянный свет или лёгкая полутень. Берегите листву от жёсткого прямого солнца.',
           },
           title: { en: 'Light', ru: 'Освещение' },
         },
         {
           body: {
-            en: 'Water after the top 1–2 cm of soil has dried. Do not leave the pot in water.',
-            ru: 'Поливайте после подсыхания верхних 1–2 см грунта. Не оставляйте горшок в воде.',
+            en: 'Keep the substrate lightly and evenly moist while the plant is growing. Avoid waterlogging.',
+            ru: 'В период роста поддерживайте грунт слегка и равномерно влажным. Не допускайте застоя воды.',
           },
           title: { en: 'Watering', ru: 'Полив' },
         },
         {
           body: {
-            en: 'Average room humidity is enough; it appreciates a warm shower from time to time.',
-            ru: 'Подходит обычная комнатная влажность; время от времени полезен тёплый душ.',
+            en: 'Average to higher room humidity suits this rainforest vine; dry air can mark the foliage.',
+            ru: 'Эта лиана из влажных лесов любит среднюю и повышенную влажность; сухой воздух отражается на листве.',
           },
           title: { en: 'Humidity', ru: 'Влажность' },
         },
         {
           body: {
-            en: '18–25 °C. Keep it away from cold drafts and sudden temperature changes.',
-            ru: '18–25 °C. Берегите от холодных сквозняков и резких перепадов температуры.',
+            en: 'A warm, stable room suits it best. Keep it away from cold glass and drafts.',
+            ru: 'Лучше всего подходит тёплое, стабильное помещение. Берегите от холодного стекла и сквозняков.',
           },
           title: { en: 'Temperature', ru: 'Температура' },
         },
       ],
-      difficulty: 3,
+      difficulty: 2,
       facts: [
         {
           label: { en: 'Family', ru: 'Семейство' },
@@ -95,22 +103,28 @@ export const collectionPlants: readonly CollectionPlant[] = [
         },
         {
           label: { en: 'Origin', ru: 'Родина' },
-          value: { en: 'Tropical Africa and Southwest Asia', ru: 'Тропическая Африка, Юго-Восточная Азия' },
+          value: { en: 'Eastern Australia', ru: 'Восточное побережье Австралии' },
         },
         {
           label: { en: 'Plant type', ru: 'Тип растения' },
-          value: { en: 'Perennial climbing vine', ru: 'Лиана, многолетнее вечнозелёное растение' },
+          value: { en: 'Woody climbing vine with tendrils', ru: 'Древеснеющая лиана с усиками' },
         },
       ],
-      idealImage: '/plants/cissus-rhombifolia-ideal.png',
-      latinName: 'Cissus rhombifolia',
+      latinName: 'Cissus antarctica',
       notes: {
-        en: 'Pinch young shoots to encourage branching and a fuller silhouette.',
-        ru: 'Прищипывайте молодые побеги, чтобы стимулировать ветвление и сделать крону пышнее.',
+        en: 'Guide the young shoots onto a support and prune them after active growth to keep the vine tidy.',
+        ru: 'Направляйте молодые побеги на опору и подрезайте их после активного роста, чтобы лиана сохраняла аккуратную форму.',
       },
       overview: {
-        en: 'A fast-growing decorative vine with graceful compound leaves. It works beautifully on a support, high shelf, or in a hanging planter.',
-        ru: 'Быстрорастущая декоративная лиана с изящными сложными листьями. Хорошо смотрится на опоре, высокой полке или в подвесном кашпо.',
+        en: 'Kangaroo vine is an Australian evergreen climber with simple toothed leaves and tendrils. In nature it grows in warm coastal rainforests and their margins.',
+        ru: 'Кенгуровая лиана — австралийская вечнозелёная лиана с простыми зубчатыми листьями и усиками. В природе растёт во влажных лесах и на их опушках восточного побережья.',
+      },
+      quickFacts: {
+        growth: { en: 'Fast-growing', ru: 'Быстрый' },
+        height: { en: 'Long climbing shoots', ru: 'Длинные побеги' },
+        humidity: { en: 'Medium to high', ru: 'Средняя — высокая' },
+        light: { en: 'Indirect light / light shade', ru: 'Рассеянный свет / полутень' },
+        temperature: { en: 'Warm, stable conditions', ru: 'Тепло, без перепадов' },
       },
     },
   },
@@ -124,4 +138,4 @@ export const getCollectionPlantCountByFamily = (familyId: CollectionFamilyId) =>
 export const getCollectionPlantsByFamily = (familyId: CollectionFamilyId, locale: Locale) =>
   collectionPlants
     .filter((plant) => plant.familyId === familyId)
-    .map((plant) => ({ image: plant.image, name: plant.name[locale] }));
+    .map((plant) => ({ id: plant.id, image: plant.image, name: plant.name[locale] }));

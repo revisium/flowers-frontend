@@ -107,6 +107,7 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
       {selectedCategoryData ? (
         <CategoryDetailModal
           data={selectedCategoryData}
+          locale={locale}
           onClose={() => setSelectedCategoryId(null)}
         />
       ) : null}

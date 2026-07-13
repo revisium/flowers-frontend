@@ -4,6 +4,7 @@ export interface CategoryTrait {
 }
 
 export interface CategoryPlant {
+  readonly id: string;
   readonly image: string;
   readonly name: string;
 }
