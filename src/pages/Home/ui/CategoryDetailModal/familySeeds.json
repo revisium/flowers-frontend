@@ -1,4 +1,62 @@
 {
+  "aizoaceae": {
+    "closingNote": {
+      "en": "Aizoaceae bring the quiet geometry of dry landscapes into a collection: compact, sculptural and unexpectedly bright in flower.",
+      "ru": "Аизовые привносят в коллекцию спокойную геометрию сухих ландшафтов: они компактны, скульптурны и неожиданно ярко цветут."
+    },
+    "description": {
+      "en": "Aizoaceae, often called ice plants or mesembs, are mostly low-growing succulents from southern Africa. Their fleshy leaves store water, while many species surprise with brilliant daisy-like flowers.",
+      "ru": "Аизовые, или мезембы, — преимущественно низкорослые суккуленты юга Африки. Их мясистые листья запасают воду, а многие виды удивляют яркими цветками, похожими на ромашки."
+    },
+    "facts": {
+      "en": [
+        "The family includes around 123 genera and about 1,880 species.",
+        "Most of its diversity is concentrated in the arid west of Namibia and South Africa.",
+        "Lithops are known as living stones because their paired leaves mimic surrounding pebbles.",
+        "Many species have seed capsules that open when rain wets them, releasing seeds at the right moment."
+      ],
+      "ru": [
+        "Семейство включает около 123 родов и примерно 1 880 видов.",
+        "Большая часть разнообразия сосредоточена в засушливых районах Намибии и Южной Африки.",
+        "Литопсы называют живыми камнями: их парные листья маскируются среди гальки.",
+        "У многих видов коробочки раскрываются от дождя и выпускают семена в подходящий момент."
+      ]
+    },
+    "heroImage": "/plants/categories/generated/aizoaceae.png",
+    "heroPosition": "right bottom",
+    "heroSize": {
+      "base": "430px auto",
+      "md": "570px auto",
+      "lg": "660px auto"
+    },
+    "latinName": "Aizoaceae",
+    "origin": {
+      "en": "Dry and semi-arid regions of southern Africa, especially the western parts of Namibia and South Africa.",
+      "ru": "Засушливые и полузасушливые регионы юга Африки, особенно запад Намибии и Южной Африки."
+    },
+    "originMapImage": "/plants/aizoaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Fleshy leaves store water and may be covered with sparkling bladder cells.",
+        "Flowers have many narrow, shiny petals and often open in bright sun.",
+        "Some forms, such as Lithops, resemble stones and blend into their surroundings.",
+        "Hygrochastic seed capsules open after rain, helping seeds meet favourable conditions."
+      ],
+      "ru": [
+        "Мясистые листья запасают воду; у некоторых видов они покрыты блестящими пузыревидными клетками.",
+        "У цветков много узких сияющих лепестков, и часто они раскрываются на ярком солнце.",
+        "Некоторые формы, например литопсы, напоминают камни и сливаются с окружением.",
+        "Гигрохастические коробочки раскрываются после дождя, помогая семенам попасть в благоприятные условия."
+      ]
+    },
+    "traitImages": [
+      "/plants/aizoaceae-modal/trait-water-storage.png",
+      "/plants/aizoaceae-modal/trait-flowers.png",
+      "/plants/aizoaceae-modal/trait-lithops.png",
+      "/plants/aizoaceae-modal/trait-capsule.png"
+    ]
+  },
   "amaryllidaceae": {
     "closingNote": {
       "en": "Amaryllis relatives combine elegance, scent, and vivid seasonal blooms. Add a little tropical charm to your home.",

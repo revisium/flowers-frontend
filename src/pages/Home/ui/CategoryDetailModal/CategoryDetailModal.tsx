@@ -3,7 +3,7 @@ import { useRef, useState, type MouseEvent } from 'react';
 import { collectionPlants, type CollectionPlant } from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
 
-import { type CategoryDetailData } from '../AraceaeCategoryModal/types';
+import { type CategoryDetailData } from './types';
 import { CategoryCollectionSection } from '../CategoryCollectionSection/CategoryCollectionSection';
 import { CategoryHero } from '../CategoryHero/CategoryHero';
 import { CategoryInfoGrid } from '../CategoryInfoGrid/CategoryInfoGrid';

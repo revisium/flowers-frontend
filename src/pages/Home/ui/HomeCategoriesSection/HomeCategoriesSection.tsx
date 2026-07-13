@@ -4,7 +4,7 @@ import { getCollectionPlantCountByFamily, type CollectionFamilyId } from 'src/en
 import type { Locale } from 'src/shared/config';
 
 import { homeCategories, type HomeCategory, type HomeCopy } from '../../model/homePageData';
-import { categoryDetailDataById } from '../AraceaeCategoryModal/data';
+import { categoryDetailDataById } from '../CategoryDetailModal/data';
 import { HomeCategoryCard } from '../HomeCategoryCard/HomeCategoryCard';
 import { HomeNote } from '../HomeNote/HomeNote';
 import { CategoryDetailModal } from '../CategoryDetailModal/CategoryDetailModal';

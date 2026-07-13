@@ -78,18 +78,26 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 export const homeStatCards: Record<Locale, readonly HomeStatCard[]> = {
   ru: [
     { icon: 'leaf', label: 'всего растений', value: homeTotalPlantsCount },
-    { icon: 'grid', label: 'категорий', value: '16' },
+    { icon: 'grid', label: 'категорий', value: '17' },
     { icon: 'heart', label: 'легких в уходе', value: '12' },
   ],
   en: [
     { icon: 'leaf', label: 'total plants', value: homeTotalPlantsCount },
-    { icon: 'grid', label: 'categories', value: '16' },
+    { icon: 'grid', label: 'categories', value: '17' },
     { icon: 'heart', label: 'easy-care picks', value: '12' },
   ],
 };
 
 export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
   ru: [
+    {
+      count: '0 растений',
+      image: '/plants/categories/studio/aizoaceae.jpg',
+      imageObjectPosition: 'right center',
+      imageScale: '1',
+      id: 'aizoaceae',
+      name: 'Аизовые',
+    },
     {
       count: '9 растений',
       image: '/plants/categories/studio/araceae.jpg',
@@ -190,6 +198,14 @@ export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
     },
   ],
   en: [
+    {
+      count: '0 plants',
+      image: '/plants/categories/studio/aizoaceae.jpg',
+      imageObjectPosition: 'right center',
+      imageScale: '1',
+      id: 'aizoaceae',
+      name: 'Ice plant family',
+    },
     {
       count: '9 plants',
       image: '/plants/categories/studio/araceae.jpg',

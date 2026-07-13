@@ -1,6 +1,6 @@
 import { Box, Flex, Grid, Image, Text } from '@chakra-ui/react';
 
-import { type CategoryDetailData } from '../AraceaeCategoryModal/types';
+import { type CategoryDetailData } from '../CategoryDetailModal/types';
 import { InfoPanel } from '../InfoPanel/InfoPanel';
 
 interface CategoryInfoGridProps {
