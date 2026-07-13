@@ -79,9 +79,9 @@ export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: Categor
       </Button>
 
       <Box
-        background="rgba(255, 253, 247, 0.55)"
+        background="rgba(255, 253, 247, 0.85)"
         borderRadius="1000px"
-        boxShadow="0 0 72px 58px rgba(255, 253, 247, 0.6)"
+        boxShadow="0 0 72px 58px rgba(255, 253, 247, 0.9)"
         maxWidth="100%"
         position="relative"
         w="450px"
