@@ -1,6 +1,11 @@
 import { Box, Button, Flex, Grid, Image, Input, Text } from '@chakra-ui/react';
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent, type MouseEvent } from 'react';
-import { collectionPlants, formatCollectionPlantCount, type CollectionFamilyId, type CollectionPlant } from 'src/entities/collection';
+import {
+  collectionPlants,
+  formatCollectionPlantCount,
+  type CollectionFamilyId,
+  type CollectionPlant,
+} from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
 import { PlantCollectionIcon } from 'src/shared/ui';
 
@@ -51,7 +56,8 @@ const catalogByLocale: Record<Locale, readonly CatalogPlant[]> = {
   ru: createCatalog('ru'),
 };
 
-const focusableSelector = 'button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
+const focusableSelector =
+  'button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlayProps) => {
   const [activeFamily, setActiveFamily] = useState<FamilyId | 'all'>('all');
@@ -73,7 +79,8 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
   );
 
   useEffect(() => {
-    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const previousFocus =
+      document.activeElement instanceof HTMLElement ? document.activeElement : null;
     closeButtonRef.current?.focus();
 
     return () => {
@@ -92,7 +99,9 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
       return;
     }
 
-    const focusable = Array.from(dialogRef.current?.querySelectorAll<HTMLElement>(focusableSelector) ?? []);
+    const focusable = Array.from(
+      dialogRef.current?.querySelectorAll<HTMLElement>(focusableSelector) ?? [],
+    );
     const firstElement = focusable.at(0);
     const lastElement = focusable.at(-1);
 
@@ -147,13 +156,32 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
         position="relative"
         width="100%"
       >
-        <Flex alignItems={{ base: 'stretch', lg: 'center' }} direction={{ base: 'column', lg: 'row' }} display={selectedPlant ? 'none' : 'flex'} gap="14px" justifyContent="space-between" paddingRight={{ base: '56px', md: '64px' }}>
-          <Flex alignItems="center" gap="12px">
-            <Flex alignItems="center" as="h2" color="#314034" gap="8px" id="my-plants-title" margin={0} textStyle="bold-xl">
+        <Flex
+          alignItems={{ base: 'stretch', lg: 'center' }}
+          direction={{ base: 'column', lg: 'row' }}
+          display={selectedPlant ? 'none' : 'flex'}
+          gap="14px"
+          justifyContent="space-between"
+          paddingRight={{ base: '56px', md: '64px' }}
+        >
+          <Flex
+            direction={{ base: 'column', md: 'row' }}
+            align={{ base: 'flex-start', md: 'center' }}
+            gap={{ base: '0', md: '12px' }}
+          >
+            <Flex
+              alignItems="center"
+              as="h2"
+              color="#314034"
+              gap="8px"
+              id="my-plants-title"
+              margin={0}
+              textStyle="bold-xl"
+            >
               <PlantCollectionIcon size={28} />
               {text.title}
             </Flex>
-            <Text color="#64705f" textStyle="medium-sm" transform="translateY(4px)">
+            <Text color="#64705f" textStyle="medium-sm" transform="translateY(3px)">
               {formatCollectionPlantCount(catalogByLocale[locale].length, locale)}
             </Text>
           </Flex>
@@ -171,7 +199,11 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
                 type="search"
                 value={query}
                 width="100%"
-                _focusVisible={{ borderColor: '#6f9253', boxShadow: '0 0 0 3px rgba(111, 146, 83, 0.22)', outline: 'none' }}
+                _focusVisible={{
+                  borderColor: '#6f9253',
+                  boxShadow: '0 0 0 3px rgba(111, 146, 83, 0.22)',
+                  outline: 'none',
+                }}
                 _placeholder={{ color: 'rgba(70, 84, 59, 0.58)' }}
                 onChange={(event) => {
                   setQuery(event.target.value);
@@ -193,7 +225,10 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
                   variant="plain"
                   width="30px"
                   onClick={() => setQuery('')}
-                  _focusVisible={{ boxShadow: '0 0 0 3px rgba(94, 127, 57, 0.22)', outline: 'none' }}
+                  _focusVisible={{
+                    boxShadow: '0 0 0 3px rgba(94, 127, 57, 0.22)',
+                    outline: 'none',
+                  }}
                   _hover={{ background: 'rgba(218, 204, 178, 0.38)', color: '#314034' }}
                 >
                   ×
@@ -227,21 +262,35 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
           ×
         </Button>
 
-        <Flex alignItems="center" display={selectedPlant ? 'none' : 'flex'} gap="10px" marginTop="20px" minWidth={0}>
+        <Flex
+          alignItems="center"
+          display={selectedPlant ? 'none' : 'flex'}
+          gap="10px"
+          marginTop="20px"
+          minWidth={0}
+        >
           <Flex
             gap="8px"
             minWidth={0}
             overflowX="auto"
-            paddingBottom="4px"
             css={{
               msOverflowStyle: 'none',
               scrollbarWidth: 'none',
               '&::-webkit-scrollbar': { display: 'none' },
             }}
           >
-            <FamilyFilter active={activeFamily === 'all'} label={text.allPlants} onClick={() => selectFamily('all')} />
+            <FamilyFilter
+              active={activeFamily === 'all'}
+              label={text.allPlants}
+              onClick={() => selectFamily('all')}
+            />
             {families.map((family) => (
-              <FamilyFilter active={activeFamily === family.id} key={family.id} label={family.name} onClick={() => selectFamily(family.id as FamilyId)} />
+              <FamilyFilter
+                active={activeFamily === family.id}
+                key={family.id}
+                label={family.name}
+                onClick={() => selectFamily(family.id as FamilyId)}
+              />
             ))}
           </Flex>
           <Button
@@ -260,32 +309,90 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
             _focusVisible={{ boxShadow: '0 0 0 3px rgba(94, 127, 57, 0.22)', outline: 'none' }}
             _hover={{ background: '#f5edde' }}
           >
-            {text.allFamilies} ⌄
+            {text.allFamilies} &or;
           </Button>
         </Flex>
 
         {!selectedPlant && showAllFamilies ? (
-          <Grid background="rgba(255, 250, 240, 0.7)" border="1px solid rgba(218, 204, 178, 0.72)" borderRadius="12px" gap="8px" gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', md: 'repeat(3, minmax(0, 1fr))', lg: 'repeat(5, minmax(0, 1fr))' }} marginTop="10px" padding="10px">
+          <Grid
+            background="rgba(255, 250, 240, 0.7)"
+            border="1px solid rgba(218, 204, 178, 0.72)"
+            borderRadius="12px"
+            gap="8px"
+            gridTemplateColumns={{
+              base: 'repeat(2, minmax(0, 1fr))',
+              md: 'repeat(3, minmax(0, 1fr))',
+              lg: 'repeat(5, minmax(0, 1fr))',
+            }}
+            marginTop="10px"
+            padding="10px"
+          >
             {families.map((family) => (
-              <Button key={family.id} justifyContent="flex-start" padding="8px 10px" type="button" variant="plain" onClick={() => selectFamily(family.id as FamilyId)} _hover={{ background: 'rgba(220, 232, 200, 0.75)' }}>
+              <Button
+                key={family.id}
+                justifyContent="flex-start"
+                padding="8px 10px"
+                type="button"
+                variant="plain"
+                onClick={() => selectFamily(family.id as FamilyId)}
+                _hover={{ background: 'rgba(220, 232, 200, 0.75)' }}
+              >
                 {family.name}
               </Button>
             ))}
           </Grid>
         ) : null}
 
-        <Box
-          display={selectedPlant ? 'none' : 'block'}
-          flex="0 0 auto"
-          marginTop="20px"
-        >
+        <Box display={selectedPlant ? 'none' : 'block'} flex="0 0 auto" marginTop="20px">
           {visiblePlants.length ? (
-            <Grid gap={{ base: '12px', md: '16px' }} gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', sm: 'repeat(3, minmax(0, 1fr))', lg: 'repeat(4, minmax(0, 1fr))', xl: 'repeat(5, minmax(0, 1fr))' }}>
+            <Grid
+              gap={{ base: '12px', md: '16px' }}
+              gridTemplateColumns={{
+                base: 'repeat(2, minmax(0, 1fr))',
+                sm: 'repeat(3, minmax(0, 1fr))',
+                lg: 'repeat(4, minmax(0, 1fr))',
+                xl: 'repeat(5, minmax(0, 1fr))',
+              }}
+            >
               {visiblePlants.map((plant) => (
-                <Button alignItems="stretch" background="rgba(255, 253, 247, 0.9)" border="1px solid rgba(218, 204, 178, 0.75)" borderRadius="12px" flexDirection="column" height="auto" key={plant.id} overflow="hidden" padding={0} textAlign="left" type="button" variant="plain" whiteSpace="normal" width="100%" onClick={() => setSelectedPlant(plant.plant)} _hover={{ borderColor: 'rgba(105, 145, 69, 0.58)', boxShadow: '0 12px 24px rgba(91, 76, 54, 0.11)', transform: 'translateY(-2px)' }}>
-                  <Image alt="" aspectRatio="1 / 0.82" background="#f4ede0" objectFit="cover" src={plant.image} width="100%" />
+                <Button
+                  alignItems="stretch"
+                  background="rgba(255, 253, 247, 0.9)"
+                  border="1px solid rgba(218, 204, 178, 0.75)"
+                  borderRadius="12px"
+                  flexDirection="column"
+                  height="auto"
+                  key={plant.id}
+                  overflow="hidden"
+                  padding={0}
+                  textAlign="left"
+                  type="button"
+                  variant="plain"
+                  whiteSpace="normal"
+                  width="100%"
+                  onClick={() => setSelectedPlant(plant.plant)}
+                  _hover={{
+                    borderColor: 'rgba(105, 145, 69, 0.58)',
+                    boxShadow: '0 12px 24px rgba(91, 76, 54, 0.11)',
+                    transform: 'translateY(-2px)',
+                  }}
+                >
+                  <Image
+                    alt=""
+                    aspectRatio="1 / 0.82"
+                    background="#f4ede0"
+                    objectFit="cover"
+                    src={plant.image}
+                    width="100%"
+                  />
                   <Flex direction="column" gap="4px" padding="12px">
-                    <Text color="#314034" fontWeight={760} lineClamp={2} lineHeight={1.2} minHeight="38px">
+                    <Text
+                      color="#314034"
+                      fontWeight={760}
+                      lineClamp={2}
+                      lineHeight={1.2}
+                      minHeight="38px"
+                    >
                       {plant.name}
                     </Text>
                     <Text color="#68715d" fontSize="0.78rem" lineClamp={1}>
@@ -296,12 +403,25 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
               ))}
             </Grid>
           ) : (
-            <Flex alignItems="center" color="#68715d" height="100%" justifyContent="center" textAlign="center">
+            <Flex
+              alignItems="center"
+              color="#68715d"
+              height="100%"
+              justifyContent="center"
+              textAlign="center"
+            >
               {text.empty}
             </Flex>
           )}
         </Box>
-        {selectedPlant ? <PlantProfileTemplate locale={locale} plant={selectedPlant} onBack={() => setSelectedPlant(null)} onClose={onClose} /> : null}
+        {selectedPlant ? (
+          <PlantProfileTemplate
+            locale={locale}
+            plant={selectedPlant}
+            onBack={() => setSelectedPlant(null)}
+            onClose={onClose}
+          />
+        ) : null}
       </Flex>
     </Flex>
   );
@@ -337,13 +457,15 @@ const FamilyFilter = ({ active, label, onClick }: FamilyFilterProps) => (
 function createCatalog(locale: Locale): readonly CatalogPlant[] {
   return homeCategories[locale].flatMap((family) => {
     const categoryId = family.id as FamilyId;
-    return collectionPlants.filter((plant) => plant.familyId === categoryId).map((plant, index) => ({
-      categoryId,
-      categoryName: family.name,
-      id: `${categoryId}-${index}`,
-      image: plant.image,
-      name: plant.name[locale],
-      plant,
-    }));
+    return collectionPlants
+      .filter((plant) => plant.familyId === categoryId)
+      .map((plant, index) => ({
+        categoryId,
+        categoryName: family.name,
+        id: `${categoryId}-${index}`,
+        image: plant.image,
+        name: plant.name[locale],
+        plant,
+      }));
   });
 }

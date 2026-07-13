@@ -21,6 +21,10 @@ export const globalCss: SystemConfig['globalCss'] = {
     cursor: 'pointer',
     font: 'inherit',
   },
+  'button:focus, button:focus-visible, a:focus, a:focus-visible, input:focus, input:focus-visible, textarea:focus, textarea:focus-visible, select:focus, select:focus-visible, [role="button"]:focus, [role="button"]:focus-visible, [tabindex]:focus, [tabindex]:focus-visible, [data-focus], [data-focus-visible]': {
+    boxShadow: 'none !important',
+    outline: 'none !important',
+  },
   'a, a:hover, a:focus, a:focus-visible, a:active, [data-scope="link"], [data-scope="link"]:hover, [data-scope="link"]:focus, [data-scope="link"]:focus-visible, [data-scope="link"]:active': {
     color: 'inherit',
     textDecoration: 'none',
