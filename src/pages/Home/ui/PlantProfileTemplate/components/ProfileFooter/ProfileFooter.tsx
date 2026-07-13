@@ -161,7 +161,15 @@ const ImportantCard = ({
   </Flex>
 );
 
-const SaleCard = ({ image, locale, title }: { readonly image: string; readonly locale: Locale; readonly title: string }) => (
+const SaleCard = ({
+  image,
+  locale,
+  title,
+}: {
+  readonly image: string;
+  readonly locale: Locale;
+  readonly title: string;
+}) => (
   <Flex
     background="#eff4e6"
     border="1px solid #d6e0c2"
@@ -193,7 +201,14 @@ const SaleCard = ({ image, locale, title }: { readonly image: string; readonly l
           transition="transform 0.2s ease"
           width="34px"
         >
-          <Image alt="" borderRadius="50%" height="100%" objectFit="cover" src="/plant-profile/contact-telegram.png" width="100%" />
+          <Image
+            alt=""
+            borderRadius="50%"
+            height="100%"
+            objectFit="cover"
+            src="/plant-profile/contact-telegram.png"
+            width="100%"
+          />
         </Link>
         <Link
           _hover={{ transform: 'translateY(-1px)' }}
@@ -208,7 +223,14 @@ const SaleCard = ({ image, locale, title }: { readonly image: string; readonly l
           transition="transform 0.2s ease"
           width="34px"
         >
-          <Image alt="" borderRadius="50%" height="100%" objectFit="cover" src="/plant-profile/contact-whatsapp.png" width="100%" />
+          <Image
+            alt=""
+            borderRadius="50%"
+            height="100%"
+            objectFit="cover"
+            src="/plant-profile/contact-whatsapp.png"
+            width="100%"
+          />
         </Link>
         <Link
           _hover={{ transform: 'translateY(-1px)' }}
@@ -223,7 +245,14 @@ const SaleCard = ({ image, locale, title }: { readonly image: string; readonly l
           transition="transform 0.2s ease"
           width="34px"
         >
-          <Image alt="" borderRadius="10px" height="100%" objectFit="cover" src="/plant-profile/contact-max.png" width="100%" />
+          <Image
+            alt=""
+            borderRadius="10px"
+            height="100%"
+            objectFit="cover"
+            src="/plant-profile/contact-max.png"
+            width="100%"
+          />
         </Link>
       </Flex>
     </Flex>
@@ -279,12 +308,19 @@ export const ProfileFooter = ({ locale, plant, text }: ProfileFooterProps) => {
           ))}
         </FooterCard>
       </Grid>
-      <Grid gap="10px" gridTemplateColumns={{ base: '1fr', md: '0.85fr 1.15fr' }} marginTop="10px">
-        <ImportantCard image={plant.profile.importantImage ?? '/plant-profile/important-vine.png'} title={text.important}>
+      <Flex gap="10px" direction={{ base: 'column', lg: 'row' }} marginTop="10px">
+        <ImportantCard
+          image={plant.profile.importantImage ?? '/plant-profile/important-vine.png'}
+          title={text.important}
+        >
           {footer.important[locale]}
         </ImportantCard>
-        <SaleCard image={plant.profile.saleImage ?? '/plant-profile/cuttings-for-sale.png'} locale={locale} title={text.notes} />
-      </Grid>
+        <SaleCard
+          image={plant.profile.saleImage ?? '/plant-profile/cuttings-for-sale.png'}
+          locale={locale}
+          title={text.notes}
+        />
+      </Flex>
     </>
   );
 };
