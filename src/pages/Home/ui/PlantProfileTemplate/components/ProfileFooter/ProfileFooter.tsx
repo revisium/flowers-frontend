@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Grid, Image, Link, Text } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
 
 import { profileFooter, type ProfileCopy } from '../../content/profileContent';
@@ -175,6 +175,53 @@ const SaleCard = ({ locale, title }: { readonly locale: Locale; readonly title: 
           ? 'Укоренённые и свежесрезанные черенки циссуса антарктического. Наличие и стоимость — по запросу.'
           : 'Rooted and freshly cut cuttings of Antarctic cissus. Availability and price are available on request.'}
       </Text>
+      <Flex flexWrap="wrap" gap="8px">
+        <Link
+          _hover={{ transform: 'translateY(-1px)' }}
+          aria-label="Telegram"
+          as="a"
+          borderRadius="50%"
+          display="inline-flex"
+          href="https://t.me/nastya009"
+          height="34px"
+          rel="noreferrer"
+          target="_blank"
+          transition="transform 0.2s ease"
+          width="34px"
+        >
+          <Image alt="" borderRadius="50%" height="100%" objectFit="cover" src="/plant-profile/contact-telegram.png" width="100%" />
+        </Link>
+        <Link
+          _hover={{ transform: 'translateY(-1px)' }}
+          aria-label="WhatsApp"
+          as="a"
+          borderRadius="50%"
+          display="inline-flex"
+          href="https://wa.me/79109002117"
+          height="34px"
+          rel="noreferrer"
+          target="_blank"
+          transition="transform 0.2s ease"
+          width="34px"
+        >
+          <Image alt="" borderRadius="50%" height="100%" objectFit="cover" src="/plant-profile/contact-whatsapp.png" width="100%" />
+        </Link>
+        <Link
+          _hover={{ transform: 'translateY(-1px)' }}
+          aria-label="MAX"
+          as="a"
+          borderRadius="10px"
+          display="inline-flex"
+          href="https://max.ru/u/f9LHodD0cOJOX6XSSkA_yvYvLrD9YIgDikqDcUZQoIz_pn-RTN2FtysHrSY"
+          height="34px"
+          rel="noreferrer"
+          target="_blank"
+          transition="transform 0.2s ease"
+          width="34px"
+        >
+          <Image alt="" borderRadius="10px" height="100%" objectFit="cover" src="/plant-profile/contact-max.png" width="100%" />
+        </Link>
+      </Flex>
     </Flex>
     <Image
       alt=""
