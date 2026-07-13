@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Text } from '@chakra-ui/react';
+import { Box, Flex, Grid, Image, Text } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
 
 import { profileFooter, type ProfileCopy } from '../../content/profileContent';
@@ -8,10 +8,184 @@ interface ProfileFooterProps {
   readonly text: ProfileCopy;
 }
 
-const FooterCard = ({ accent = false, children, icon, title }: { readonly accent?: boolean; readonly children: React.ReactNode; readonly icon?: string; readonly title: string }) => (
-  <Flex background={accent ? '#fff3e9' : '#fffaf3'} border="1px solid #e8dece" direction="column" gap="9px" minHeight="138px" padding="16px">
-    <Text color={accent ? '#b24132' : '#27502d'} fontSize="0.8rem" fontWeight={800} textTransform="uppercase">{icon ? `${icon} ` : ''}{title}</Text>
-    <Box color="#2d362d" fontSize="0.8rem" lineHeight={1.48}>{children}</Box>
+const FooterCard = ({
+  accent = false,
+  children,
+  icon,
+  image,
+  index,
+  photo,
+  title,
+  unified = false,
+}: {
+  readonly accent?: boolean;
+  readonly children: React.ReactNode;
+  readonly icon?: string;
+  readonly image?: string;
+  readonly index?: number;
+  readonly photo?: string;
+  readonly title: string;
+  readonly unified?: boolean;
+}) => (
+  <Flex
+    _after={
+      unified && index
+        ? {
+            background:
+              'linear-gradient(90deg, transparent 0%, #e8dece 12%, #e8dece 88%, transparent 100%)',
+            content: '""',
+            display: { base: 'block', lg: 'none' },
+            height: '1px',
+            left: '16px',
+            position: 'absolute',
+            right: '16px',
+            top: 0,
+          }
+        : undefined
+    }
+    _before={
+      unified && index
+        ? {
+            background:
+              'linear-gradient(180deg, transparent 0%, #e8dece 12%, #e8dece 88%, transparent 100%)',
+            bottom: '16px',
+            content: '""',
+            display: { base: 'none', lg: 'block' },
+            left: 0,
+            position: 'absolute',
+            top: '16px',
+            width: '1px',
+          }
+        : undefined
+    }
+    background={accent ? '#fff3e9' : '#fffaf3'}
+    border={unified ? undefined : '1px solid #e8dece'}
+    direction="column"
+    gap="9px"
+    minHeight="138px"
+    padding="16px"
+    position="relative"
+  >
+    <Flex gap="12px" height="100%">
+      <Flex direction="column" flex="1" gap="9px" minWidth={0}>
+        <Flex alignItems="center" gap="8px">
+          {image ? (
+            <Image alt="" height="38px" objectFit="contain" src={image} width="38px" />
+          ) : null}
+          <Text
+            color={accent ? '#b24132' : '#27502d'}
+            fontSize="0.8rem"
+            fontWeight={800}
+            textTransform="uppercase"
+          >
+            {icon ? `${icon} ` : ''}
+            {title}
+          </Text>
+        </Flex>
+        <Flex>
+          <Box color="#2d362d" fontSize="0.8rem" lineHeight={1.48}>
+            {children}
+          </Box>{' '}
+          {photo ? (
+            <Image
+              alt=""
+              borderRadius="8px"
+              flexShrink={0}
+              height="132px"
+              objectFit="cover"
+              src={photo}
+              width={{ base: '112px', lg: '128px' }}
+            />
+          ) : null}
+        </Flex>
+      </Flex>
+    </Flex>
+  </Flex>
+);
+
+const ImportantCard = ({
+  children,
+  title,
+}: {
+  readonly children: React.ReactNode;
+  readonly title: string;
+}) => (
+  <Flex
+    background="#fff3ed"
+    border="1px solid #e7cfc3"
+    borderRadius="8px"
+    minHeight="122px"
+    padding={{ base: '16px 82px 16px 16px', md: '16px 128px 16px 18px' }}
+    position="relative"
+  >
+    <Flex alignItems="flex-start" gap="14px">
+      <Flex
+        alignItems="center"
+        border="2px solid #c53932"
+        borderRadius="50%"
+        color="#bd352e"
+        flexShrink={0}
+        fontSize="1.35rem"
+        fontWeight={700}
+        height="34px"
+        justifyContent="center"
+        lineHeight={1}
+        marginTop="2px"
+        width="34px"
+      >
+        !
+      </Flex>
+      <Flex direction="column" gap="6px">
+        <Text color="#b72f2b" fontSize="0.8rem" fontWeight={800} textTransform="uppercase">
+          {title}
+        </Text>
+        <Box color="#3e3a35" fontSize="0.8rem" lineHeight={1.48}>
+          {children}
+        </Box>
+      </Flex>
+    </Flex>
+    <Image
+      alt=""
+      bottom="7px"
+      height={{ base: '76px', md: '96px' }}
+      objectFit="contain"
+      position="absolute"
+      right="10px"
+      src="/plant-profile/important-vine.png"
+      width={{ base: '72px', md: '114px' }}
+    />
+  </Flex>
+);
+
+const SaleCard = ({ locale, title }: { readonly locale: Locale; readonly title: string }) => (
+  <Flex
+    background="#eff4e6"
+    border="1px solid #d6e0c2"
+    borderRadius="8px"
+    minHeight="122px"
+    padding={{ base: '16px 96px 16px 16px', md: '16px 170px 16px 18px' }}
+    position="relative"
+  >
+    <Flex direction="column" gap="7px">
+      <Text color="#3e6334" fontSize="0.8rem" fontWeight={800} textTransform="uppercase">
+        {title}
+      </Text>
+      <Text color="#3e493b" fontSize="0.8rem" lineHeight={1.48}>
+        {locale === 'ru'
+          ? 'Укоренённые и свежесрезанные черенки циссуса антарктического. Наличие и стоимость — по запросу.'
+          : 'Rooted and freshly cut cuttings of Antarctic cissus. Availability and price are available on request.'}
+      </Text>
+    </Flex>
+    <Image
+      alt=""
+      bottom="5px"
+      height={{ base: '76px', md: '108px' }}
+      objectFit="contain"
+      position="absolute"
+      right="8px"
+      src="/plant-profile/cuttings-for-sale.png"
+      width={{ base: '90px', md: '158px' }}
+    />
   </Flex>
 );
 
@@ -20,14 +194,43 @@ export const ProfileFooter = ({ locale, text }: ProfileFooterProps) => {
 
   return (
     <>
-      <Grid gap="1px" gridTemplateColumns={{ base: '1fr', lg: '1.1fr 0.9fr 1.2fr' }} marginTop="12px">
-        <FooterCard icon="♧" title={text.propagation}>{footer.propagation}</FooterCard>
-        <FooterCard icon="⚠" title={text.problems}>{footer.problems.map((item) => <Text key={item}>❧ {item}</Text>)}</FooterCard>
-        <FooterCard icon="♧" title={text.facts}>{footer.facts.map((item) => <Text key={item}>› {item}</Text>)}</FooterCard>
+      <Grid
+        background="#fffaf3"
+        border="1px solid #e8dece"
+        borderRadius="10px"
+        gap="0"
+        gridTemplateColumns={{ base: '1fr', lg: '1.1fr 0.9fr 1.2fr' }}
+        marginTop="12px"
+        overflow="hidden"
+      >
+        <FooterCard
+          image="/plant-profile/footer-propagation.png"
+          index={0}
+          photo="/plant-profile/propagation-cuttings.jpg"
+          title={text.propagation}
+          unified
+        >
+          {footer.propagation}
+        </FooterCard>
+        <FooterCard
+          image="/plant-profile/footer-problems.png"
+          index={1}
+          title={text.problems}
+          unified
+        >
+          {footer.problems.map((item) => (
+            <Text key={item}>❧ {item}</Text>
+          ))}
+        </FooterCard>
+        <FooterCard image="/plant-profile/footer-facts.png" index={2} title={text.facts} unified>
+          {footer.facts.map((item) => (
+            <Text key={item}>› {item}</Text>
+          ))}
+        </FooterCard>
       </Grid>
-      <Grid gap="1px" gridTemplateColumns={{ base: '1fr', md: '0.85fr 1.15fr' }} marginTop="10px">
-        <FooterCard accent icon="!" title={text.important}>{footer.important}</FooterCard>
-        <FooterCard title={text.notes}><Box borderBottom="1px dashed #d8c9b3" height="22px" /><Box borderBottom="1px dashed #d8c9b3" height="22px" /><Box borderBottom="1px dashed #d8c9b3" height="22px" /></FooterCard>
+      <Grid gap="10px" gridTemplateColumns={{ base: '1fr', md: '0.85fr 1.15fr' }} marginTop="10px">
+        <ImportantCard title={text.important}>{footer.important}</ImportantCard>
+        <SaleCard locale={locale} title={text.notes} />
       </Grid>
     </>
   );
