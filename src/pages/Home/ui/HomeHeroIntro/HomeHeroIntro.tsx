@@ -15,7 +15,7 @@ export const HomeHeroIntro = ({ text }: HomeHeroIntroProps) => {
       justify="center"
       align="flex-start"
       p={{ base: '16px', md: '18px', xl: '18px' }}
-      h={{ base: '40%', md: '90%' }}
+      h={{ base: 'auto', md: '90%' }}
     >
       <DayReminderCard text={text} />
     </Flex>

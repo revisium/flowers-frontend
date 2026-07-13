@@ -12,8 +12,8 @@ export const DayReminderCard = ({ text }: DayReminderCardProps) => {
     <Flex
       direction="column"
       gap="10px"
-      background="rgba(255, 252, 246, 0.50)"
-      border="1px solid rgba(126, 104, 69, 0.16)"
+      background="rgba(255, 252, 246, 0.78)"
+      border="1px solid rgba(126, 104, 69, 0.24)"
       p={{ base: '12px', md: '14px', xl: '12px' }}
       borderRadius="18px"
       boxShadow="0 18px 46px rgba(92, 77, 46, 0.18)"
