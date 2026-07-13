@@ -50,6 +50,23 @@ interface PlantProfileQuickFacts {
   readonly height: Record<Locale, string>;
 }
 
+type LocalizedPair = readonly [en: string, ru: string];
+type CareDefinition = readonly [title: LocalizedPair, body: LocalizedPair];
+type FactDefinition = readonly [label: LocalizedPair, value: LocalizedPair];
+
+const localized = ([en, ru]: LocalizedPair): Record<Locale, string> => ({ en, ru });
+
+const careCards = (...cards: readonly CareDefinition[]): readonly PlantProfileCareCard[] =>
+  cards.map(([title, body]) => ({ body: localized(body), title: localized(title) }));
+
+const profileFacts = (...facts: readonly FactDefinition[]): readonly PlantProfileFact[] =>
+  facts.map(([label, value]) => ({ label: localized(label), value: localized(value) }));
+
+const quickFacts = (growth: LocalizedPair, height: LocalizedPair): PlantProfileQuickFacts => ({
+  growth: localized(growth),
+  height: localized(height),
+});
+
 export interface CollectionPlantProfile {
   readonly care: readonly PlantProfileCareCard[];
   readonly difficulty: number;
@@ -370,18 +387,18 @@ export const collectionPlants: readonly CollectionPlant[] = [
     image: '/plants/kalanchoe-tomentosa-home-photo.jpg',
     name: { en: 'Panda plant', ru: 'Каланхоэ войлочное' },
     profile: {
-      care: [
-        { body: { en: 'Give bright light and several hours of gentle direct sun after acclimatisation.', ru: 'Нужен яркий свет и несколько часов мягкого прямого солнца после постепенного привыкания.' }, title: { en: 'Light', ru: 'Освещение' } },
-        { body: { en: 'Water only when the gritty mix has dried almost completely. Drain excess water.', ru: 'Поливайте только после почти полного просыхания минеральной смеси. Излишки воды всегда сливайте.' }, title: { en: 'Watering', ru: 'Полив' } },
-        { body: { en: 'Normal dry room air is ideal; do not mist the velvety leaves.', ru: 'Обычный сухой комнатный воздух подходит идеально; бархатистые листья не опрыскивайте.' }, title: { en: 'Humidity', ru: 'Влажность' } },
-        { body: { en: 'Keep warm in growth and brighter, drier and cooler in winter, above 10°C.', ru: 'В период роста держите в тепле, а зимой — светлее, суше и прохладнее, выше 10 °C.' }, title: { en: 'Temperature', ru: 'Температура' } },
-      ],
+      care: careCards(
+        [['Light', 'Освещение'], ['Give bright light and several hours of gentle direct sun after acclimatisation.', 'Нужен яркий свет и несколько часов мягкого прямого солнца после постепенного привыкания.']],
+        [['Watering', 'Полив'], ['Water only when the gritty mix has dried almost completely. Drain excess water.', 'Поливайте только после почти полного просыхания минеральной смеси. Излишки воды всегда сливайте.']],
+        [['Humidity', 'Влажность'], ['Normal dry room air is ideal; do not mist the velvety leaves.', 'Обычный сухой комнатный воздух подходит идеально; бархатистые листья не опрыскивайте.']],
+        [['Temperature', 'Температура'], ['Keep warm in growth and brighter, drier and cooler in winter, above 10°C.', 'В период роста держите в тепле, а зимой — светлее, суше и прохладнее, выше 10 °C.']],
+      ),
       difficulty: 2,
-      facts: [
-        { label: { en: 'Family', ru: 'Семейство' }, value: { en: 'Stonecrop family (Crassulaceae)', ru: 'Толстянковые (Crassulaceae)' } },
-        { label: { en: 'Origin', ru: 'Родина' }, value: { en: 'Central-eastern Madagascar', ru: 'Центрально-восточный Мадагаскар' } },
-        { label: { en: 'Plant type', ru: 'Тип растения' }, value: { en: 'Velvety succulent subshrub', ru: 'Бархатистый суккулентный полукустарник' } },
-      ],
+      facts: profileFacts(
+        [['Family', 'Семейство'], ['Stonecrop family (Crassulaceae)', 'Толстянковые (Crassulaceae)']],
+        [['Origin', 'Родина'], ['Central-eastern Madagascar', 'Центрально-восточный Мадагаскар']],
+        [['Plant type', 'Тип растения'], ['Velvety succulent subshrub', 'Бархатистый суккулентный полукустарник']],
+      ),
       footer: {
         facts: { en: ['The dense felt-like hairs protect the leaves from intense sun and reduce water loss.', 'Brown markings along the leaf margins give the plant a distinctive outline.', 'Indoor plants rarely flower, but mature plants can produce tubular blooms.', 'It is often called panda plant for its soft, fuzzy foliage.'], ru: ['Густое войлочное опушение защищает листья от яркого солнца и уменьшает потерю влаги.', 'Коричневые отметины по краям листьев создают узнаваемый рисунок.', 'В помещении растение цветёт редко, но взрослые экземпляры могут дать трубчатые цветки.', 'Из-за мягкой пушистой листвы его часто называют панда-плант.'] },
         important: { en: 'Never keep the roots wet for long and avoid getting water trapped in the leaf fuzz.', ru: 'Не держите корни во влажном грунте долго и не оставляйте воду в опушении листьев.' },
@@ -394,14 +411,14 @@ export const collectionPlants: readonly CollectionPlant[] = [
       importantImage: '/plant-profile/kalanchoe-important-leaves.png',
       propagationIcon: '/plant-profile/kalanchoe-propagation-icon.png',
       propagationImage: '/plant-profile/kalanchoe-propagation.jpg',
-      quickFacts: { growth: { en: 'Slow to moderate', ru: 'Медленный' }, height: { en: 'Up to 45 cm indoors', ru: 'До 45 см в помещении' } },
+      quickFacts: quickFacts(['Slow to moderate', 'Медленный'], ['Up to 45 cm indoors', 'До 45 см в помещении']),
       saleImage: '/plant-profile/kalanchoe-for-sale.png',
-      secondaryCare: [
-        { body: { en: 'Mix by volume: 35% cactus compost, 30% pumice or fine gravel, 25% perlite and 10% coarse sand. Use a drainage hole.', ru: 'Смешайте по объёму: 35% грунта для кактусов, 30% пемзы или мелкого гравия, 25% перлита и 10% крупного песка. Горшок нужен с дренажным отверстием.' }, title: { en: 'Soil', ru: 'Грунт' } },
-        { body: { en: 'Repot in spring only when the roots have filled the pot.', ru: 'Пересаживайте весной, только когда корни полностью освоят горшок.' }, title: { en: 'Repotting', ru: 'Пересадка' } },
-        { body: { en: 'Use a low-nitrogen cactus fertiliser with micronutrients once a month in active growth at half strength.', ru: 'Раз в месяц в период роста используйте удобрение для кактусов с пониженным азотом и микроэлементами в половинной дозе.' }, title: { en: 'Feeding', ru: 'Подкормки' } },
-        { body: { en: 'No support is needed. Do not rub or wash the leaves: their felted coating is natural protection.', ru: 'Опора не нужна. Не трите и не мойте листья: войлочное покрытие — естественная защита.' }, title: { en: 'Grooming', ru: 'Уход за листвой' } },
-      ],
+      secondaryCare: careCards(
+        [['Soil', 'Грунт'], ['Mix by volume: 35% cactus compost, 30% pumice or fine gravel, 25% perlite and 10% coarse sand. Use a drainage hole.', 'Смешайте по объёму: 35% грунта для кактусов, 30% пемзы или мелкого гравия, 25% перлита и 10% крупного песка. Горшок нужен с дренажным отверстием.']],
+        [['Repotting', 'Пересадка'], ['Repot in spring only when the roots have filled the pot.', 'Пересаживайте весной, только когда корни полностью освоят горшок.']],
+        [['Feeding', 'Подкормки'], ['Use a low-nitrogen cactus fertiliser with micronutrients once a month in active growth at half strength.', 'Раз в месяц в период роста используйте удобрение для кактусов с пониженным азотом и микроэлементами в половинной дозе.']],
+        [['Grooming', 'Уход за листвой'], ['No support is needed. Do not rub or wash the leaves: their felted coating is natural protection.', 'Опора не нужна. Не трите и не мойте листья: войлочное покрытие — естественная защита.']],
+      ),
     },
   },
   {
@@ -410,18 +427,18 @@ export const collectionPlants: readonly CollectionPlant[] = [
     image: '/plants/goeppertia-rufibarba-home-photo.jpg',
     name: { en: 'Velvet calathea', ru: 'Калатея руфибарба' },
     profile: {
-      care: [
-        { body: { en: 'Give bright, filtered or indirect light. Direct sun can fade and scorch the velvety leaves.', ru: 'Нужен яркий фильтрованный или рассеянный свет. Прямое солнце может обесцветить и обжечь бархатистые листья.' }, title: { en: 'Light', ru: 'Освещение' } },
-        { body: { en: 'Keep the mix lightly and evenly moist while it grows, then water less in winter. Never leave the roots standing in water.', ru: 'В период роста поддерживайте смесь слегка и равномерно влажной, а зимой поливайте реже. Не оставляйте корни в воде.' }, title: { en: 'Watering', ru: 'Полив' } },
-        { body: { en: 'A humid room helps the leaf edges remain smooth; keep it away from dry hot airflow.', ru: 'Влажный воздух помогает краям листьев оставаться ровными; не ставьте растение на пути сухого горячего воздуха.' }, title: { en: 'Humidity', ru: 'Влажность' } },
-        { body: { en: 'Keep warm and draught-free, ideally 18–27°C and never close to cold glass.', ru: 'Держите в тепле и без сквозняков, лучше при 18–27 °C и не вплотную к холодному стеклу.' }, title: { en: 'Temperature', ru: 'Температура' } },
-      ],
+      care: careCards(
+        [['Light', 'Освещение'], ['Give bright, filtered or indirect light. Direct sun can fade and scorch the velvety leaves.', 'Нужен яркий фильтрованный или рассеянный свет. Прямое солнце может обесцветить и обжечь бархатистые листья.']],
+        [['Watering', 'Полив'], ['Keep the mix lightly and evenly moist while it grows, then water less in winter. Never leave the roots standing in water.', 'В период роста поддерживайте смесь слегка и равномерно влажной, а зимой поливайте реже. Не оставляйте корни в воде.']],
+        [['Humidity', 'Влажность'], ['A humid room helps the leaf edges remain smooth; keep it away from dry hot airflow.', 'Влажный воздух помогает краям листьев оставаться ровными; не ставьте растение на пути сухого горячего воздуха.']],
+        [['Temperature', 'Температура'], ['Keep warm and draught-free, ideally 18–27°C and never close to cold glass.', 'Держите в тепле и без сквозняков, лучше при 18–27 °C и не вплотную к холодному стеклу.']],
+      ),
       difficulty: 4,
-      facts: [
-        { label: { en: 'Family', ru: 'Семейство' }, value: { en: 'Prayer plant family (Marantaceae)', ru: 'Марантовые (Marantaceae)' } },
-        { label: { en: 'Origin', ru: 'Родина' }, value: { en: 'Bahia, north-eastern Brazil', ru: 'Баия, северо-восток Бразилии' } },
-        { label: { en: 'Plant type', ru: 'Тип растения' }, value: { en: 'Rhizomatous evergreen perennial', ru: 'Корневищный вечнозелёный многолетник' } },
-      ],
+      facts: profileFacts(
+        [['Family', 'Семейство'], ['Prayer plant family (Marantaceae)', 'Марантовые (Marantaceae)']],
+        [['Origin', 'Родина'], ['Bahia, north-eastern Brazil', 'Баия, северо-восток Бразилии']],
+        [['Plant type', 'Тип растения'], ['Rhizomatous evergreen perennial', 'Корневищный вечнозелёный многолетник']],
+      ),
       footer: {
         facts: {
           en: ['The long, narrow leaves have strongly wavy edges and a velvety surface.', 'The leaf undersides and petioles show a rich burgundy tone.', 'Its name rufibarba refers to the fine reddish hairs around the leaf stems.', 'Like other prayer plants, it can raise and fold its leaves as light changes.'],
@@ -440,14 +457,14 @@ export const collectionPlants: readonly CollectionPlant[] = [
       importantImage: '/plant-profile/rufibarba-important-leaves.png',
       propagationIcon: '/plant-profile/rufibarba-propagation-icon.png',
       propagationImage: '/plant-profile/rufibarba-propagation.jpg',
-      quickFacts: { growth: { en: 'Moderate', ru: 'Умеренный' }, height: { en: 'Clump to 90 cm', ru: 'Куст до 90 см' } },
+      quickFacts: quickFacts(['Moderate', 'Умеренный'], ['Clump to 90 cm', 'Куст до 90 см']),
       saleImage: '/plant-profile/rufibarba-for-sale.png',
-      secondaryCare: [
-        { body: { en: 'Mix by volume: 40% quality foliage-plant compost, 30% coco coir, 20% perlite and 10% fine pine bark. It holds moisture evenly while keeping air around the roots.', ru: 'Смешайте по объёму: 40% качественного грунта для декоративнолистных, 30% кокосового субстрата, 20% перлита и 10% мелкой сосновой коры. Смесь равномерно удерживает влагу, но остаётся воздушной у корней.' }, title: { en: 'Soil', ru: 'Грунт' } },
-        { body: { en: 'Repot or divide in late spring once the clump has filled its pot.', ru: 'Пересаживайте или делите куст поздней весной, когда он освоит горшок.' }, title: { en: 'Repotting', ru: 'Пересадка' } },
-        { body: { en: 'Use a low-salt liquid fertiliser with N-P₂O₅-K₂O near 3-1-2 and Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer.', ru: 'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2, а также Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. С весны до конца лета подкармливайте раз в месяц в ¼–½ дозы.' }, title: { en: 'Feeding', ru: 'Подкормки' } },
-        { body: { en: 'No support is needed. Remove only damaged leaves at the base and do not polish the naturally velvety foliage.', ru: 'Опора не нужна. Удаляйте только повреждённые листья у основания и не полируйте естественно бархатистую листву.' }, title: { en: 'Grooming', ru: 'Уход за листвой' } },
-      ],
+      secondaryCare: careCards(
+        [['Soil', 'Грунт'], ['Mix by volume: 40% quality foliage-plant compost, 30% coco coir, 20% perlite and 10% fine pine bark. It holds moisture evenly while keeping air around the roots.', 'Смешайте по объёму: 40% качественного грунта для декоративнолистных, 30% кокосового субстрата, 20% перлита и 10% мелкой сосновой коры. Смесь равномерно удерживает влагу, но остаётся воздушной у корней.']],
+        [['Repotting', 'Пересадка'], ['Repot or divide in late spring once the clump has filled its pot.', 'Пересаживайте или делите куст поздней весной, когда он освоит горшок.']],
+        [['Feeding', 'Подкормки'], ['Use a low-salt liquid fertiliser with N-P₂O₅-K₂O near 3-1-2 and Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer.', 'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2, а также Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. С весны до конца лета подкармливайте раз в месяц в ¼–½ дозы.']],
+        [['Grooming', 'Уход за листвой'], ['No support is needed. Remove only damaged leaves at the base and do not polish the naturally velvety foliage.', 'Опора не нужна. Удаляйте только повреждённые листья у основания и не полируйте естественно бархатистую листву.']],
+      ),
     },
   },
   {
@@ -456,18 +473,18 @@ export const collectionPlants: readonly CollectionPlant[] = [
     image: '/plants/goeppertia-elliptica-vittata-home-photo.jpg',
     name: { en: 'Vittata calathea', ru: 'Калатея виттата' },
     profile: {
-      care: [
-        { body: { en: 'Give bright, filtered or indirect light. Direct sun fades the pale stripes and can scorch the leaves.', ru: 'Нужен яркий фильтрованный или рассеянный свет. Прямое солнце обесцвечивает светлые полосы и может обжечь листья.' }, title: { en: 'Light', ru: 'Освещение' } },
-        { body: { en: 'Keep the mix evenly moist during active growth, allowing only the surface to dry slightly. Never leave the roots waterlogged.', ru: 'В период роста поддерживайте смесь равномерно влажной, позволяя лишь поверхности слегка подсохнуть. Не допускайте застоя воды у корней.' }, title: { en: 'Watering', ru: 'Полив' } },
-        { body: { en: 'High humidity helps preserve smooth leaf edges and clear variegation; avoid dry hot air.', ru: 'Высокая влажность помогает сохранить ровные края листьев и чёткий рисунок; избегайте сухого горячего воздуха.' }, title: { en: 'Humidity', ru: 'Влажность' } },
-        { body: { en: 'Keep warm and draught-free, ideally 18–27°C. Do not place close to cold glass.', ru: 'Держите в тепле и без сквозняков, лучше при 18–27 °C. Не ставьте растение вплотную к холодному стеклу.' }, title: { en: 'Temperature', ru: 'Температура' } },
-      ],
+      care: careCards(
+        [['Light', 'Освещение'], ['Give bright, filtered or indirect light. Direct sun fades the pale stripes and can scorch the leaves.', 'Нужен яркий фильтрованный или рассеянный свет. Прямое солнце обесцвечивает светлые полосы и может обжечь листья.']],
+        [['Watering', 'Полив'], ['Keep the mix evenly moist during active growth, allowing only the surface to dry slightly. Never leave the roots waterlogged.', 'В период роста поддерживайте смесь равномерно влажной, позволяя лишь поверхности слегка подсохнуть. Не допускайте застоя воды у корней.']],
+        [['Humidity', 'Влажность'], ['High humidity helps preserve smooth leaf edges and clear variegation; avoid dry hot air.', 'Высокая влажность помогает сохранить ровные края листьев и чёткий рисунок; избегайте сухого горячего воздуха.']],
+        [['Temperature', 'Температура'], ['Keep warm and draught-free, ideally 18–27°C. Do not place close to cold glass.', 'Держите в тепле и без сквозняков, лучше при 18–27 °C. Не ставьте растение вплотную к холодному стеклу.']],
+      ),
       difficulty: 4,
-      facts: [
-        { label: { en: 'Family', ru: 'Семейство' }, value: { en: 'Prayer plant family (Marantaceae)', ru: 'Марантовые (Marantaceae)' } },
-        { label: { en: 'Origin', ru: 'Родина' }, value: { en: 'Tropical northern South America and Brazil', ru: 'Тропики севера Южной Америки и Бразилии' } },
-        { label: { en: 'Plant type', ru: 'Тип растения' }, value: { en: 'Rhizomatous evergreen perennial', ru: 'Корневищный вечнозелёный многолетник' } },
-      ],
+      facts: profileFacts(
+        [['Family', 'Семейство'], ['Prayer plant family (Marantaceae)', 'Марантовые (Marantaceae)']],
+        [['Origin', 'Родина'], ['Tropical northern South America and Brazil', 'Тропики севера Южной Америки и Бразилии']],
+        [['Plant type', 'Тип растения'], ['Rhizomatous evergreen perennial', 'Корневищный вечнозелёный многолетник']],
+      ),
       footer: {
         facts: {
           en: ['The pale, narrow stripes radiate from the midrib across each leaf.', 'The pattern stays clearest in stable bright indirect light.', 'Like other prayer plants, the leaves can rise and fold at night.', 'It grows as a compact clump, producing new leaves from its rhizome.'],
@@ -486,14 +503,14 @@ export const collectionPlants: readonly CollectionPlant[] = [
       importantImage: '/plant-profile/vittata-important-leaves.png',
       propagationIcon: '/plant-profile/vittata-propagation-icon.png',
       propagationImage: '/plant-profile/vittata-propagation.jpg',
-      quickFacts: { growth: { en: 'Moderate', ru: 'Умеренный' }, height: { en: 'Clump to 60 cm', ru: 'Куст до 60 см' } },
+      quickFacts: quickFacts(['Moderate', 'Умеренный'], ['Clump to 60 cm', 'Куст до 60 см']),
       saleImage: '/plant-profile/vittata-for-sale.png',
-      secondaryCare: [
-        { body: { en: 'Mix by volume: 40% quality foliage-plant compost, 30% coco coir, 20% perlite and 10% fine pine bark. It keeps moisture available without compacting around the roots.', ru: 'Смешайте по объёму: 40% качественного грунта для декоративнолистных, 30% кокосового субстрата, 20% перлита и 10% мелкой сосновой коры. Смесь удерживает влагу, но не уплотняется у корней.' }, title: { en: 'Soil', ru: 'Грунт' } },
-        { body: { en: 'Repot or divide in late spring when the clump has filled its pot.', ru: 'Пересаживайте или делите куст поздней весной, когда он освоит горшок.' }, title: { en: 'Repotting', ru: 'Пересадка' } },
-        { body: { en: 'Use a low-salt liquid fertiliser with N-P₂O₅-K₂O near 3-1-2 and Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer.', ru: 'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2, а также Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. С весны до конца лета подкармливайте раз в месяц в ¼–½ дозы.' }, title: { en: 'Feeding', ru: 'Подкормки' } },
-        { body: { en: 'No support is needed. Remove only damaged leaves at the base and wipe dust with a soft damp cloth.', ru: 'Опора не нужна. Удаляйте только повреждённые листья у основания, а пыль убирайте мягкой влажной салфеткой.' }, title: { en: 'Grooming', ru: 'Уход за листвой' } },
-      ],
+      secondaryCare: careCards(
+        [['Soil', 'Грунт'], ['Mix by volume: 40% quality foliage-plant compost, 30% coco coir, 20% perlite and 10% fine pine bark. It keeps moisture available without compacting around the roots.', 'Смешайте по объёму: 40% качественного грунта для декоративнолистных, 30% кокосового субстрата, 20% перлита и 10% мелкой сосновой коры. Смесь удерживает влагу, но не уплотняется у корней.']],
+        [['Repotting', 'Пересадка'], ['Repot or divide in late spring when the clump has filled its pot.', 'Пересаживайте или делите куст поздней весной, когда он освоит горшок.']],
+        [['Feeding', 'Подкормки'], ['Use a low-salt liquid fertiliser with N-P₂O₅-K₂O near 3-1-2 and Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer.', 'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2, а также Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. С весны до конца лета подкармливайте раз в месяц в ¼–½ дозы.']],
+        [['Grooming', 'Уход за листвой'], ['No support is needed. Remove only damaged leaves at the base and wipe dust with a soft damp cloth.', 'Опора не нужна. Удаляйте только повреждённые листья у основания, а пыль убирайте мягкой влажной салфеткой.']],
+      ),
     },
   },
 ];
