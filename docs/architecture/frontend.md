@@ -1,12 +1,15 @@
 # Frontend Architecture
 
 This repository has moved past the pure structural skeleton. The current
-product surface is an exploratory greenhouse prototype with one route-level
-page slice:
+product surface is an exploratory greenhouse prototype with two route-level
+page slices:
 
 - `src/pages/Home` renders the presentation-focused landing/dashboard view:
   hero, collection summary, care actions, responsive category cards, and notes
   callout.
+- `src/pages/Care` renders the localized care editorial at `/care`: a generated
+  photographic hero, practical topic cards, a weekly plant-check routine, and a
+  seasonal note.
 
 ## FSD Layer Hierarchy
 
@@ -35,9 +38,10 @@ create a feature only when its behavior is needed across pages.
 
 ## App Layout Contract
 
-`src/app/layouts/AppLayout` is only a React Router outlet boundary. Shared app
-chrome lives in `src/widgets/Layout`, following the widget layout pattern used
-by sibling projects.
+`src/app/layouts/AppLayout` composes the React Router outlet and mounts the
+collection overlay globally so the persistent header action works without
+leaving the current route. Shared app chrome lives in `src/widgets/Layout`,
+following the widget layout pattern used by sibling projects.
 
 `src/widgets/Layout` owns the persistent viewport frame and shared header. It
 renders the app background, applies the fixed `18px` viewport padding, hides
@@ -62,11 +66,12 @@ derived from one source.
   auto-fit category grid, notes callout, and category-card modal triggers.
   Category cards open local category detail modals from
   `ui/AraceaeCategoryModal/data.ts`.
-- `ui/HomeCollectionOverlay` owns the full-screen personal-plant catalog. It
-  derives its records and the count from `entities/collection`, supports local
-  search filtering, and has both a horizontally scrollable family list and an
-  explicit `All families` chooser so none of the 15 families are hidden behind
-  the initial viewport.
+- `ui/HomeCollectionOverlay` supplies the full-screen personal-plant catalog
+  mounted by `AppLayout`, so it opens above any current page. It derives its
+  records and the count from `entities/collection`, supports local search
+  filtering, and has both a horizontally scrollable family list and an explicit
+  `All families` chooser so none of the 15 families are hidden behind the
+  initial viewport.
 - `ui/PlantProfileTemplate` is the reusable detailed-profile layout opened
   from a catalog card. It renders an individual plant's localized entity data:
   title, taxonomy, photos, difficulty, practical care, and a note. The first
@@ -85,6 +90,23 @@ category. Cards open local detail modals for family overviews. Personal plants
 are available from the persistent header button and open in the local overlay,
 not at a separate route. The current prototype does not deep-link to a family
 or an individual plant yet.
+
+## Care Prototype Contract
+
+`src/pages/Care` is a static, localized companion page opened by the home
+hero's care action. Its typed copy and topic descriptors live in
+`model/carePageData.ts`; it does not introduce data fetching, business state,
+or speculative ViewModel/DataSource wiring.
+
+- `ui/CarePage` is a composition shell only.
+- `ui/CareHero` owns the generated editorial hero image and the route back to
+  the greenhouse.
+- `ui/CareGuidesSection` composes the three responsive topic cards, while
+  `ui/CareGuideCard` owns one repeated card and its practical checklist.
+- `ui/CareRoutine` owns the weekly routine and seasonal reminder.
+
+Care photography lives under `public/care/` and is referenced by the typed
+page-local descriptors.
 
 ## Target MVVM Contract
 
