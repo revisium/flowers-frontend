@@ -1,4 +1,5 @@
 import { Button, Flex, Text } from '@chakra-ui/react';
+import { Link } from 'react-router';
 
 import type { HomeCopy } from '../../model/homePageData';
 import { SmallCanIcon } from 'src/pages/Home/ui/SmallCanIcon/SmallCanIcon.tsx';
@@ -28,6 +29,7 @@ export const DayReminderCard = ({ text }: DayReminderCardProps) => {
       </Text>
       <Flex direction={{ base: 'column', sm: 'row' }} gap="10px">
         <Button
+          asChild
           variant="subtle"
           background="#526246"
           borderRadius="8px"
@@ -37,8 +39,10 @@ export const DayReminderCard = ({ text }: DayReminderCardProps) => {
           p="10px"
           width={{ base: '100%', sm: 'auto' }}
         >
-          <SmallCanIcon />
-          {text.actionLabel}
+          <Link to="/care">
+            <SmallCanIcon />
+            {text.actionLabel}
+          </Link>
         </Button>
       </Flex>
     </Flex>

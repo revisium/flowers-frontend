@@ -1,9 +1,9 @@
 # Flowers Frontend Docs
 
-This is a bootstrap skeleton. The product concept for flowers-frontend has not
-been decided yet. Docs here cover the structural scaffold only: FSD layout,
-React Router v7 SSR app shell, and Chakra UI wiring. This directory will grow
-once domain/product work starts.
+The product concept for flowers-frontend is still exploratory. The current
+prototype includes the greenhouse home page and the localized `/care`
+editorial page. Docs here cover those presentation surfaces alongside the FSD
+layout, React Router v7 SSR app shell, and Chakra UI wiring.
 
 ## Reading Order
 

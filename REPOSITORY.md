@@ -20,9 +20,10 @@ Feature-Sliced Design layers, one-way dependency
 
 - `src/app/` - application composition: root layout, providers, global
   setup.
-- `src/pages/` - route-level page slices. Currently only `Home` exists, as a
-  placeholder.
-- `src/widgets/` - composite UI slices. Empty pending product work.
+- `src/pages/` - route-level page slices. `Home` owns the greenhouse dashboard
+  and `Care` owns the localized `/care` editorial page.
+- `src/widgets/` - composite UI slices. `Layout` owns the persistent app frame,
+  header, locale control, and collection entry point.
 - `src/features/` - reusable leaf UI/behavior slices. Empty pending product
   work.
 - `src/entities/` - domain-shaped UI/data slices. Empty pending product

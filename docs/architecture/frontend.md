@@ -1,12 +1,15 @@
 # Frontend Architecture
 
 This repository has moved past the pure structural skeleton. The current
-product surface is an exploratory greenhouse prototype with one route-level
-page slice:
+product surface is an exploratory greenhouse prototype with two route-level
+page slices:
 
 - `src/pages/Home` renders the presentation-focused landing/dashboard view:
   hero, collection summary, care actions, responsive category cards, and notes
   callout.
+- `src/pages/Care` renders the localized care editorial at `/care`: a generated
+  photographic hero, practical topic cards, a weekly plant-check routine, and a
+  seasonal note.
 
 ## FSD Layer Hierarchy
 
@@ -85,6 +88,23 @@ category. Cards open local detail modals for family overviews. Personal plants
 are available from the persistent header button and open in the local overlay,
 not at a separate route. The current prototype does not deep-link to a family
 or an individual plant yet.
+
+## Care Prototype Contract
+
+`src/pages/Care` is a static, localized companion page opened by the home
+hero's care action. Its typed copy and topic descriptors live in
+`model/carePageData.ts`; it does not introduce data fetching, business state,
+or speculative ViewModel/DataSource wiring.
+
+- `ui/CarePage` is a composition shell only.
+- `ui/CareHero` owns the generated editorial hero image and the route back to
+  the greenhouse.
+- `ui/CareGuidesSection` composes the three responsive topic cards, while
+  `ui/CareGuideCard` owns one repeated card and its practical checklist.
+- `ui/CareRoutine` owns the weekly routine and seasonal reminder.
+
+Care photography lives under `public/care/` and is referenced by the typed
+page-local descriptors.
 
 ## Target MVVM Contract
 
