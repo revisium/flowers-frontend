@@ -413,6 +413,49 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ),
   ),
   collectionPlant(
+    'araceae',
+    'aglaonema-red-valentine',
+    '/plant-profile/aglaonema-red-valentine.jpg',
+    ["Aglaonema 'Red Valentine'", "Аглаонема 'Red Valentine'"],
+    plantProfile(
+      careCards(
+        [['Light', 'Свет'], ['Bright diffused light without direct midday sun. Brighter filtered light helps preserve the pink-red coloring.', 'Яркий рассеянный свет без прямого полуденного солнца. Более светлое место помогает сохранить розово-красную окраску.']],
+        [['Watering', 'Полив'], ['Water after the top 2–4 cm of soil dries. Drain excess water and do not leave the roots standing in moisture.', 'Поливайте после просыхания верхних 2–4 см грунта. Сливайте лишнюю воду и не оставляйте корни в сырости.']],
+        [['Humidity', 'Влажность'], ['Average room humidity is suitable, but keep the plant away from heaters and dry drafts.', 'Подходит обычная комнатная влажность, но растение лучше держать подальше от батарей и сухих сквозняков.']],
+        [['Temperature', 'Температура'], ['Keep at 18–27 °C and protect from cold windows, drafts, and temperatures below 15 °C.', 'Содержите при 18–27 °C, защищая от холодного стекла, сквозняков и температуры ниже 15 °C.']],
+      ),
+      2,
+      profileFacts(
+        [['Family', 'Семейство'], ['Araceae', 'Ароидные']],
+        [['Origin', 'Происхождение'], ['Cultivated hybrid; the genus comes from tropical Asia', 'Культурный гибрид; род происходит из тропической Азии']],
+        [['Type', 'Тип'], ['Evergreen ornamental foliage perennial', 'Вечнозелёный декоративно-лиственный многолетник']],
+      ),
+      profileFooter(
+        [
+          ['Broad leaves combine a pink-red field with irregular green flecks.', 'The intensity of the coloring depends on the amount of soft light.', 'The cultivar forms a compact, lush bush.'],
+          ['Широкие листья сочетают розово-красное поле с нерегулярными зелёными вкраплениями.', 'Интенсивность окраски зависит от количества мягкого света.', 'Сорт формирует компактный пышный куст.'],
+        ],
+        ['The sap contains calcium oxalate crystals. Keep away from children and pets and wash hands after pruning.', 'Сок содержит кристаллы оксалата кальция. Держите растение подальше от детей и животных, после обрезки мойте руки.'],
+        [
+          ['Yellow, soft leaves usually indicate excess moisture or cold roots.', 'Brown tips can appear from very dry air or salt buildup in the soil.', 'Fading pink color usually means the plant needs more diffused light.'],
+          ['Жёлтые мягкие листья обычно говорят о переувлажнении или переохлаждении корней.', 'Коричневые кончики могут появляться из-за сухого воздуха или накопления солей в грунте.', 'Побледнение розовой окраски обычно означает нехватку рассеянного света.'],
+        ],
+        ['Propagate by dividing a mature bush or by rooting stem cuttings during the warm growing season.', 'Размножайте делением взрослого куста или укоренением стеблевых черенков в тёплый период роста.'],
+      ),
+      "Aglaonema 'Red Valentine'",
+      ['Wipe the leaves regularly and rotate the pot so the bush develops evenly.', 'Регулярно протирайте листья и поворачивайте горшок, чтобы куст развивался равномерно.'],
+      ["'Red Valentine' is valued for its unusually warm pink-red foliage and compact shape.", "'Red Valentine' ценят за необычную тёплую розово-красную листву и компактную форму."],
+      quickFacts(['Moderate', 'Умеренная'], ['Compact, about 40–60 cm', 'Компактная, около 40–60 см']),
+      careCards(
+        [['Soil', 'Грунт'], ['Use an airy mix: 40% foliage compost, 25% coco coir, 20% perlite, and 15% fine bark.', 'Используйте воздушную смесь: 40% грунта для декоративно-лиственных, 25% кокосового субстрата, 20% перлита и 15% мелкой коры.']],
+        [['Repotting', 'Пересадка'], ['Repot in spring when roots fill the pot, choosing a container only slightly larger than the previous one.', 'Пересаживайте весной, когда корни заполнят горшок, выбирая ёмкость лишь немного больше предыдущей.']],
+        [['Feeding', 'Подкормка'], ['Feed monthly in spring and summer with a balanced foliage fertilizer at half strength.', 'Весной и летом подкармливайте раз в месяц половинной дозой сбалансированного удобрения для декоративно-лиственных.']],
+        [['Grooming', 'Уход за листьями'], ['Remove yellow leaves at the base and wipe healthy leaves with a soft damp cloth.', 'Удаляйте пожелтевшие листья у основания, а здоровые протирайте мягкой влажной тканью.']],
+      ),
+      {},
+    ),
+  ),
+  collectionPlant(
     'commelinaceae',
     'tradescantia-collection',
     '/plant-profile/tradescantia-cover.webp',
