@@ -38,9 +38,10 @@ create a feature only when its behavior is needed across pages.
 
 ## App Layout Contract
 
-`src/app/layouts/AppLayout` is only a React Router outlet boundary. Shared app
-chrome lives in `src/widgets/Layout`, following the widget layout pattern used
-by sibling projects.
+`src/app/layouts/AppLayout` composes the React Router outlet and mounts the
+collection overlay globally so the persistent header action works without
+leaving the current route. Shared app chrome lives in `src/widgets/Layout`,
+following the widget layout pattern used by sibling projects.
 
 `src/widgets/Layout` owns the persistent viewport frame and shared header. It
 renders the app background, applies the fixed `18px` viewport padding, hides
@@ -65,11 +66,12 @@ derived from one source.
   auto-fit category grid, notes callout, and category-card modal triggers.
   Category cards open local category detail modals from
   `ui/AraceaeCategoryModal/data.ts`.
-- `ui/HomeCollectionOverlay` owns the full-screen personal-plant catalog. It
-  derives its records and the count from `entities/collection`, supports local
-  search filtering, and has both a horizontally scrollable family list and an
-  explicit `All families` chooser so none of the 15 families are hidden behind
-  the initial viewport.
+- `ui/HomeCollectionOverlay` supplies the full-screen personal-plant catalog
+  mounted by `AppLayout`, so it opens above any current page. It derives its
+  records and the count from `entities/collection`, supports local search
+  filtering, and has both a horizontally scrollable family list and an explicit
+  `All families` chooser so none of the 15 families are hidden behind the
+  initial viewport.
 - `ui/PlantProfileTemplate` is the reusable detailed-profile layout opened
   from a catalog card. It renders an individual plant's localized entity data:
   title, taxonomy, photos, difficulty, practical care, and a note. The first
