@@ -105,7 +105,7 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
   { count: { en: '1 plant', ru: '1 растение' }, id: 'asphodelaceae', image: '/plants/categories/studio/asphodelaceae.jpg', name: { en: 'Asphodel family', ru: 'Асфоделовые' } },
   { count: { en: '5 plants', ru: '5 растений' }, id: 'bromeliaceae', image: '/plants/categories/studio/bromeliaceae.jpg', imageObjectPosition: 'center', imageScale: '1', name: { en: 'Bromeliads', ru: 'Бромелиевые' } },
   { count: { en: '1 plant', ru: '1 растение' }, id: 'cactaceae', image: '/plants/categories/studio/cactaceae.jpg', name: { en: 'Cacti', ru: 'Кактусовые' } },
-  { count: { en: '1 plant', ru: '1 растение' }, id: 'commelinaceae', image: '/plants/categories/studio/commelinaceae.jpg', name: { en: 'Spiderwort family', ru: 'Коммелиновые' } },
+  { count: { en: '2 plants', ru: '2 растения' }, id: 'commelinaceae', image: '/plants/categories/studio/commelinaceae.jpg', name: { en: 'Spiderwort family', ru: 'Коммелиновые' } },
   { count: { en: '10 plants', ru: '10 растений' }, id: 'piperaceae', image: '/plants/categories/studio/piperaceae.jpg', name: { en: 'Pepper family', ru: 'Перцевые' } },
   { count: { en: '1 plant', ru: '1 растение' }, id: 'vitaceae', image: '/plants/categories/studio/vitaceae.jpg', name: { en: 'Grape family', ru: 'Виноградовые' } },
   { count: { en: '1 plant', ru: '1 растение' }, id: 'arecaceae', image: '/plants/categories/studio/arecaceae.jpg', name: { en: 'Palms', ru: 'Пальмовые' } },
