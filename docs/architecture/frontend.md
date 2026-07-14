@@ -74,8 +74,10 @@ derived from one source.
   initial viewport.
 - `ui/PlantProfileTemplate` is the reusable detailed-profile layout opened
   from a catalog card. It renders an individual plant's localized entity data:
-  title, taxonomy, photos, difficulty, practical care, and a note. The first
-  profile is the real Cissus rhombifolia record in `entities/collection`.
+  title, taxonomy, photos, difficulty, practical care, and a note. Profiles can
+  also opt into a reusable variants gallery for plants represented by several
+  colours or forms. The first profile is the real Cissus rhombifolia record in
+  `entities/collection`.
 - The reusable category detail modal frame and sections live in
   `ui/CategoryDetailModal`, `ui/CategoryHero`, `ui/CategoryInfoGrid`,
   `ui/CategoryCollectionSection`, `ui/InfoPanel`, and `ui/SproutIcon`.

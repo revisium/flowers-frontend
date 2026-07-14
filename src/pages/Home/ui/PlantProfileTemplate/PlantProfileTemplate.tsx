@@ -7,6 +7,7 @@ import { ProfileFacts } from './components/ProfileFacts/ProfileFacts';
 import { ProfileFooter } from './components/ProfileFooter/ProfileFooter';
 import { ProfileHeader } from './components/ProfileHeader/ProfileHeader';
 import { ProfileSummary } from './components/ProfileSummary/ProfileSummary';
+import { ProfileVariants } from './components/ProfileVariants/ProfileVariants';
 import { profileCopy } from './content/profileContent';
 
 interface PlantProfileTemplateProps {
@@ -37,6 +38,7 @@ export const PlantProfileTemplate = ({
       <ProfileHeader locale={locale} plant={plant} onBack={onBack} onClose={onClose} />
       <ProfileFacts locale={locale} plant={plant} text={text} />
       <ProfileSummary locale={locale} plant={plant} text={text} />
+      <ProfileVariants locale={locale} plant={plant} />
       <ProfileCare locale={locale} plant={plant} />
       <ProfileFooter locale={locale} plant={plant} text={text} />
     </Flex>

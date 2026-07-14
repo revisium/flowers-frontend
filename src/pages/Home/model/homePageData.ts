@@ -97,7 +97,7 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
   { count: { en: '0 plants', ru: '0 растений' }, id: 'aizoaceae', image: '/plants/categories/studio/aizoaceae.jpg', imageObjectPosition: 'right center', imageScale: '1', name: { en: 'Ice plant family', ru: 'Аизовые' } },
   { count: { en: '9 plants', ru: '9 растений' }, id: 'araceae', image: '/plants/categories/studio/araceae.jpg', name: { en: 'Aroids', ru: 'Ароидные' } },
   { count: { en: '5 plants', ru: '5 растений' }, id: 'amaryllidaceae', image: '/plants/categories/studio/amaryllidaceae.jpg', name: { en: 'Amaryllis family', ru: 'Амариллисовые' } },
-  { count: { en: '8 plants', ru: '8 растений' }, id: 'gesneriaceae', image: '/plants/categories/studio/gesneriaceae.jpg', name: { en: 'Gesneriad family', ru: 'Геснериевые' } },
+  { count: { en: '9 plants', ru: '9 растений' }, id: 'gesneriaceae', image: '/plants/categories/studio/gesneriaceae.jpg', name: { en: 'Gesneriad family', ru: 'Геснериевые' } },
   { count: { en: '10 plants', ru: '10 растений' }, id: 'marantaceae', image: '/plants/categories/studio/marantaceae.jpg', name: { en: 'Prayer plant family', ru: 'Марантовые' } },
   { count: { en: '3 plants', ru: '3 растения' }, id: 'orchidaceae', image: '/plants/categories/studio/orchidaceae.jpg', name: { en: 'Orchids', ru: 'Орхидные' } },
   { count: { en: '9 plants', ru: '9 растений' }, id: 'asparagaceae', image: '/plants/categories/studio/asparagaceae.jpg', name: { en: 'Asparagus family', ru: 'Спаржевые' } },

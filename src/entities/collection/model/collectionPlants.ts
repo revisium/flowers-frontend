@@ -50,16 +50,29 @@ interface PlantProfileQuickFacts {
   readonly height: Record<Locale, string>;
 }
 
+interface PlantProfileVariant {
+  readonly image: string;
+  readonly name: Record<Locale, string>;
+}
+
+interface PlantProfileVariants {
+  readonly description: Record<Locale, string>;
+  readonly items: readonly PlantProfileVariant[];
+  readonly title: Record<Locale, string>;
+}
+
 type LocalizedPair = readonly [en: string, ru: string];
 type CareDefinition = readonly [title: LocalizedPair, body: LocalizedPair];
 type FactDefinition = readonly [label: LocalizedPair, value: LocalizedPair];
 type LocalizedListPair = readonly [en: readonly string[], ru: readonly string[]];
+type VariantDefinition = readonly [image: string, name: LocalizedPair];
 
 interface ProfileAssets {
   readonly importantImage?: string;
   readonly propagationIcon?: string;
   readonly propagationImage?: string;
   readonly saleImage?: string;
+  readonly variants?: PlantProfileVariants;
 }
 
 const localized = ([en, ru]: LocalizedPair): Record<Locale, string> => ({ en, ru });
@@ -73,6 +86,16 @@ const profileFacts = (...facts: readonly FactDefinition[]): readonly PlantProfil
 const quickFacts = (growth: LocalizedPair, height: LocalizedPair): PlantProfileQuickFacts => ({
   growth: localized(growth),
   height: localized(height),
+});
+
+const profileVariants = (
+  title: LocalizedPair,
+  description: LocalizedPair,
+  ...items: readonly VariantDefinition[]
+): PlantProfileVariants => ({
+  description: localized(description),
+  items: items.map(([image, name]) => ({ image, name: localized(name) })),
+  title: localized(title),
 });
 
 const profileFooter = (
@@ -133,6 +156,7 @@ export interface CollectionPlantProfile {
   readonly quickFacts: PlantProfileQuickFacts;
   readonly saleImage?: string;
   readonly secondaryCare: readonly PlantProfileCareCard[];
+  readonly variants?: PlantProfileVariants;
 }
 
 export const collectionPlants: readonly CollectionPlant[] = [
@@ -385,6 +409,67 @@ export const collectionPlants: readonly CollectionPlant[] = [
         propagationIcon: '/plant-profile/vittata-propagation-icon.png',
         propagationImage: '/plant-profile/vittata-propagation.jpg',
         saleImage: '/plant-profile/vittata-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'gesneriaceae',
+    'sinningia-speciosa',
+    '/plant-profile/gloxinia-cover.jpg',
+    ["Florist's gloxinia", 'Глоксиния'],
+    plantProfile(
+      careCards(
+        [['Light', 'Освещение'], ['Give bright indirect light without harsh midday sun, which can scorch the soft leaves.', 'Нужен яркий рассеянный свет без жёсткого полуденного солнца, которое может обжечь нежные листья.']],
+        [['Watering', 'Полив'], ['Keep the mix consistently moist during active growth, but never waterlog it. Water around the edge of the pot rather than into the crown.', 'В период активного роста поддерживайте грунт равномерно влажным, но не заболоченным. Поливайте по краю горшка, не попадая в центр розетки.']],
+        [['Humidity', 'Влажность'], ['Moderate humidity with good air movement is ideal. Do not mist the velvety leaves and flowers.', 'Лучше всего подходит умеренная влажность при хорошем движении воздуха. Не опрыскивайте бархатистые листья и цветы.']],
+        [['Temperature', 'Температура'], ['Keep warm while growing. After flowering, a dormant tuber can rest cool at about 16–18°C.', 'Во время роста держите в тепле. После цветения клубень может отдыхать в прохладе примерно при 16–18 °C.']],
+      ),
+      3,
+      profileFacts(
+        [['Family', 'Семейство'], ['Gesneriad family (Gesneriaceae)', 'Геснериевые (Gesneriaceae)']],
+        [['Origin', 'Родина'], ['Brazil', 'Бразилия']],
+        [['Plant type', 'Тип растения'], ['Tuberous flowering perennial', 'Клубневый цветущий многолетник']],
+      ),
+      profileFooter(
+        [['The large velvety flowers can be single or double.', 'Modern hybrids bloom in white, pink, red, purple and many contrasting patterns.', 'The soft scalloped leaves form a compact rosette.', 'After flowering, the plant can enter a natural dormant period.'], ['Крупные бархатистые цветки бывают простыми и махровыми.', 'Современные гибриды цветут белыми, розовыми, красными и фиолетовыми цветами с самыми разными узорами.', 'Мягкие зубчатые листья образуют компактную розетку.', 'После цветения растение может уйти в естественный период покоя.']],
+        ['Avoid overhead watering: moisture trapped in the crown or on velvety foliage increases the risk of crown rot and grey mould.', 'Не поливайте сверху: вода в центре розетки и на бархатистой листве повышает риск загнивания и серой гнили.'],
+        [['Bud drop — check for cold drafts, dry soil or sudden changes.', 'Brown patches — protect from direct sun and wet foliage.', 'Soft crown or tuber — stop watering and inspect immediately for rot.'], ['Бутоны опадают — проверьте, нет ли сквозняка, пересушки или резкой смены условий.', 'Коричневые пятна — защитите от прямого солнца и не мочите листву.', 'Розетка или клубень стали мягкими — прекратите полив и сразу проверьте растение на гниль.']],
+        ['In spring, root a healthy mature leaf with its petiole in a light, slightly moist mix. Gloxinia can also be propagated by dividing a large tuber with a growing point on each section.', 'Весной укореняйте здоровый взрослый лист с черешком в лёгком, слегка влажном субстрате. Крупный клубень также можно делить, оставляя на каждой части точку роста.'],
+      ),
+      'Sinningia speciosa',
+      ['My gloxinia collection is especially dear to me: it includes many colours, contrasting rims, speckled throats and double flowers.', 'Глоксинии занимают особое место в моей коллекции: у меня много расцветок — с контрастной каймой, крапом, светлым горлом и махровыми цветами.'],
+      ["Florist's gloxinia is a Brazilian tuberous perennial related to African violets. Its compact rosette carries spectacular bell-shaped flowers above soft velvety leaves.", 'Глоксиния — бразильский клубневый многолетник, родственник сенполии. Над компактной розеткой мягких бархатистых листьев раскрываются эффектные колокольчатые цветы.'],
+      quickFacts(['Moderate', 'Умеренный'], ['Rosette 15–30 cm', 'Розетка 15–30 см']),
+      careCards(
+        [['Soil', 'Грунт'], ['Use a light, moisture-retentive but well-drained mix: 45% quality houseplant compost, 30% coco coir, 15% perlite and 10% fine pine bark.', 'Используйте лёгкую, влагоёмкую, но дренированную смесь: 45% качественного универсального грунта, 30% кокосового субстрата, 15% перлита и 10% мелкой сосновой коры.']],
+        [['Repotting', 'Пересадка'], ['Repot the tuber as new growth begins, placing it shallowly with the top close to the surface.', 'Пересаживайте клубень с началом нового роста, размещая его неглубоко, почти у поверхности грунта.']],
+        [['Feeding', 'Подкормки'], ['During leaf and flower growth, feed every two weeks with a complete liquid fertiliser for flowering houseplants at half strength. Stop during dormancy.', 'Во время роста листьев и цветения подкармливайте раз в две недели полным жидким удобрением для цветущих растений в половинной дозировке. В период покоя не подкармливайте.']],
+        [['Dormancy & grooming', 'Покой и уход'], ['Remove spent flowers. After flowering, gradually reduce watering as the foliage dies back; resume regular care only when the tuber sprouts again.', 'Удаляйте увядшие цветы. После цветения постепенно сокращайте полив по мере отмирания листьев; вернитесь к обычному уходу только с появлением новых ростков.']],
+      ),
+      {
+        importantImage: '/plant-profile/gloxinia-variants/velvet-red.webp',
+        propagationImage: '/plant-profile/gloxinia-variants/lilac-speckled-double.webp',
+        saleImage: '/plant-profile/gloxinia-variants/pink-white-edge.webp',
+        variants: profileVariants(
+          ['My collection of colours', 'Моя коллекция расцветок'],
+          ['Gloxinias can look completely different while sharing the same velvety leaves and generous flowering. Here are the distinct colours and flower forms that have bloomed in my collection.', 'Глоксинии могут выглядеть совершенно по-разному, сохраняя бархатистую листву и щедрое цветение. Здесь собраны разные расцветки и формы цветка, которые цвели в моей коллекции.'],
+          ['/plant-profile/gloxinia-variants/raspberry.webp', ['Raspberry with a pale throat', 'Малиновая со светлым горлом']],
+          ['/plant-profile/gloxinia-variants/lilac-white.webp', ['White and lilac', 'Бело-лиловая']],
+          ['/plant-profile/gloxinia-variants/burgundy-speckles.webp', ['Burgundy speckles', 'Бордовый крап']],
+          ['/plant-profile/gloxinia-variants/lavender-double.webp', ['Double lavender', 'Лавандовая махровая']],
+          ['/plant-profile/gloxinia-variants/pink-speckled-double.webp', ['Double pink speckles', 'Розовая крапчатая махровая']],
+          ['/plant-profile/gloxinia-variants/deep-purple.webp', ['Deep purple', 'Глубокая фиолетовая']],
+          ['/plant-profile/gloxinia-variants/crimson.webp', ['Crimson', 'Малиновая']],
+          ['/plant-profile/gloxinia-variants/plum-speckles.webp', ['Plum speckles', 'Сливовый крап']],
+          ['/plant-profile/gloxinia-variants/white-pink-ring.webp', ['White with a pink ring', 'Белая с розовым кольцом']],
+          ['/plant-profile/gloxinia-variants/white-speckled-double.webp', ['Double white speckles', 'Белая крапчатая махровая']],
+          ['/plant-profile/gloxinia-variants/hot-pink.webp', ['Hot pink', 'Ярко-розовая']],
+          ['/plant-profile/gloxinia-variants/raspberry-white-edge.webp', ['Raspberry with a white edge', 'Малиновая с белым кантом']],
+          ['/plant-profile/gloxinia-variants/velvet-red.webp', ['Velvet red', 'Бархатная красная']],
+          ['/plant-profile/gloxinia-variants/violet-stippled.webp', ['Violet stippling', 'Фиолетовая крапчатая']],
+          ['/plant-profile/gloxinia-variants/pink-white-edge.webp', ['Pink with a white edge', 'Розовая с белым кантом']],
+          ['/plant-profile/gloxinia-variants/lilac-speckled-double.webp', ['Double lilac speckles', 'Лиловая крапчатая махровая']],
+        ),
       },
     ),
   ),
