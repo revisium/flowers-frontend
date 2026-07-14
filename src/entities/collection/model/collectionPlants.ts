@@ -634,6 +634,8 @@ export const collectionPlants: readonly CollectionPlant[] = [
           ['/plant-profile/gloxinia-variants/violet-stippled.webp', ['Violet stippling', 'Фиолетовая крапчатая']],
           ['/plant-profile/gloxinia-variants/pink-white-edge.webp', ['Pink with a white edge', 'Розовая с белым кантом']],
           ['/plant-profile/gloxinia-variants/lilac-speckled-double.webp', ['Double lilac speckles', 'Лиловая крапчатая махровая']],
+          ['/plant-profile/gloxinia-variants/pure-white.webp', ['Pure white', 'Чисто-белая']],
+          ['/plant-profile/gloxinia-variants/pale-lilac-throat.webp', ['Pale lilac with a violet throat', 'Светло-лиловая с фиолетовым горлом']],
         ),
       },
     ),
