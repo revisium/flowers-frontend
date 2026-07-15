@@ -159,6 +159,126 @@ export interface CollectionPlantProfile {
   readonly variants?: PlantProfileVariants;
 }
 
+const aglaonemaProfile = (
+  cultivarName: string,
+  facts: LocalizedListPair,
+  notes: LocalizedPair,
+  overview: LocalizedPair,
+  height: LocalizedPair,
+  assets: ProfileAssets,
+): CollectionPlantProfile =>
+  plantProfile(
+    careCards(
+      [
+        ['Light', 'Свет'],
+        [
+          'Bright diffused light without direct midday sun. Brighter filtered light helps preserve the red and pink coloring.',
+          'Яркий рассеянный свет без прямого полуденного солнца. Более светлое место помогает сохранить красную и розовую окраску.',
+        ],
+      ],
+      [
+        ['Watering', 'Полив'],
+        [
+          'Water after the top 2–4 cm of soil dries. Drain excess water and do not leave the roots standing in moisture.',
+          'Поливайте после просыхания верхних 2–4 см грунта. Сливайте лишнюю воду и не оставляйте корни в сырости.',
+        ],
+      ],
+      [
+        ['Humidity', 'Влажность'],
+        [
+          'Average room humidity is suitable, but keep the plant away from heaters and dry drafts.',
+          'Подходит обычная комнатная влажность, но растение лучше держать подальше от батарей и сухих сквозняков.',
+        ],
+      ],
+      [
+        ['Temperature', 'Температура'],
+        [
+          'Keep at 18–27 °C and protect from cold windows, drafts, and temperatures below 15 °C.',
+          'Содержите при 18–27 °C, защищая от холодного стекла, сквозняков и температуры ниже 15 °C.',
+        ],
+      ],
+    ),
+    2,
+    profileFacts(
+      [
+        ['Family', 'Семейство'],
+        ['Araceae', 'Ароидные'],
+      ],
+      [
+        ['Origin', 'Происхождение'],
+        [
+          'Cultivated hybrid; the genus comes from tropical Asia',
+          'Культурный гибрид; род происходит из тропической Азии',
+        ],
+      ],
+      [
+        ['Type', 'Тип'],
+        [
+          'Evergreen ornamental foliage perennial',
+          'Вечнозелёный декоративно-лиственный многолетник',
+        ],
+      ],
+    ),
+    profileFooter(
+      facts,
+      [
+        'The sap contains calcium oxalate crystals. Keep away from children and pets and wash hands after pruning.',
+        'Сок содержит кристаллы оксалата кальция. Держите растение подальше от детей и животных, после обрезки мойте руки.',
+      ],
+      [
+        [
+          'Yellow, soft leaves usually indicate excess moisture or cold roots.',
+          'Brown tips can appear from very dry air or salt buildup in the soil.',
+          'Fading red or pink color usually means the plant needs more diffused light.',
+        ],
+        [
+          'Жёлтые мягкие листья обычно говорят о переувлажнении или переохлаждении корней.',
+          'Коричневые кончики могут появляться из-за сухого воздуха или накопления солей в грунте.',
+          'Побледнение красной или розовой окраски обычно означает нехватку рассеянного света.',
+        ],
+      ],
+      [
+        'Propagate by dividing a mature bush or by rooting stem cuttings during the warm growing season.',
+        'Размножайте делением взрослого куста или укоренением стеблевых черенков в тёплый период роста.',
+      ],
+    ),
+    `Aglaonema '${cultivarName}'`,
+    notes,
+    overview,
+    quickFacts(['Moderate', 'Умеренная'], height),
+    careCards(
+      [
+        ['Soil', 'Грунт'],
+        [
+          'Use an airy mix: 40% foliage compost, 25% coco coir, 20% perlite, and 15% fine bark.',
+          'Используйте воздушную смесь: 40% грунта для декоративно-лиственных, 25% кокосового субстрата, 20% перлита и 15% мелкой коры.',
+        ],
+      ],
+      [
+        ['Repotting', 'Пересадка'],
+        [
+          'Repot in spring when roots fill the pot, choosing a container only slightly larger than the previous one.',
+          'Пересаживайте весной, когда корни заполнят горшок, выбирая ёмкость лишь немного больше предыдущей.',
+        ],
+      ],
+      [
+        ['Feeding', 'Подкормка'],
+        [
+          'Feed monthly in spring and summer with a balanced foliage fertilizer at half strength.',
+          'Весной и летом подкармливайте раз в месяц половинной дозой сбалансированного удобрения для декоративно-лиственных.',
+        ],
+      ],
+      [
+        ['Grooming', 'Уход за листьями'],
+        [
+          'Remove yellow leaves at the base and wipe healthy leaves with a soft damp cloth.',
+          'Удаляйте пожелтевшие листья у основания, а здоровые протирайте мягкой влажной тканью.',
+        ],
+      ],
+    ),
+    assets,
+  );
+
 export const collectionPlants: readonly CollectionPlant[] = [
   collectionPlant(
     'vitaceae',
@@ -452,7 +572,48 @@ export const collectionPlants: readonly CollectionPlant[] = [
         [['Feeding', 'Подкормка'], ['Feed monthly in spring and summer with a balanced foliage fertilizer at half strength.', 'Весной и летом подкармливайте раз в месяц половинной дозой сбалансированного удобрения для декоративно-лиственных.']],
         [['Grooming', 'Уход за листьями'], ['Remove yellow leaves at the base and wipe healthy leaves with a soft damp cloth.', 'Удаляйте пожелтевшие листья у основания, а здоровые протирайте мягкой влажной тканью.']],
       ),
-      {},
+      {
+        importantImage: '/plant-profile/aglaonema-red-valentine-important.png',
+        propagationImage: '/plant-profile/aglaonema-red-valentine-propagation.png',
+        saleImage: '/plant-profile/aglaonema-red-valentine-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'aglaonema-red-peacock',
+    '/plant-profile/aglaonema-red-peacock.jpg',
+    ["Aglaonema 'Red Peacock'", "Аглаонема 'Red Peacock'"],
+    aglaonemaProfile(
+      'Red Peacock',
+      [
+        [
+          'Each leaf develops its own mix of coral-red, warm pink, lime, and deep green.',
+          'Pale pink petioles make the bright leaf pattern look even lighter.',
+          'New leaves may open greener and gain warmer tones as they mature.',
+          'The compact rosette becomes fuller as basal shoots develop.',
+        ],
+        [
+          'Каждый лист получает собственный рисунок из кораллово-красных, тёплых розовых, лаймовых и тёмно-зелёных пятен.',
+          'Светло-розовые черешки делают яркий рисунок листьев ещё воздушнее.',
+          'Молодые листья могут раскрываться более зелёными и набирать тёплые оттенки по мере взросления.',
+          'Компактная розетка становится пышнее благодаря прикорневым побегам.',
+        ],
+      ],
+      [
+        'Wipe the broad leaves gently and turn the pot a quarter turn every week for balanced growth.',
+        'Аккуратно протирайте широкие листья и раз в неделю поворачивайте горшок на четверть оборота для равномерного роста.',
+      ],
+      [
+        "'Red Peacock' is a vivid aglaonema cultivar with broad leaves covered in an irregular mosaic of green, lime, pink, and coral-red.",
+        "'Red Peacock' — яркий сорт аглаонемы с широкими листьями, покрытыми нерегулярной мозаикой зелёных, лаймовых, розовых и кораллово-красных оттенков.",
+      ],
+      ['Compact, about 40–60 cm', 'Компактная, около 40–60 см'],
+      {
+        importantImage: '/plant-profile/aglaonema-red-peacock-important.png',
+        propagationImage: '/plant-profile/aglaonema-red-peacock-propagation.png',
+        saleImage: '/plant-profile/aglaonema-red-peacock-for-sale.png',
+      },
     ),
   ),
   collectionPlant(
@@ -490,9 +651,9 @@ export const collectionPlants: readonly CollectionPlant[] = [
         [['Pruning', 'Формирование'], ['Pinch growing tips regularly and replant rooted cuttings into the same pot to keep the centre dense.', 'Регулярно прищипывайте верхушки и подсаживайте укоренённые черенки в тот же горшок, чтобы середина куста оставалась густой.']],
       ),
       {
-        importantImage: '/plant-profile/tradescantia-variants/sillamontana.webp',
-        propagationImage: '/plant-profile/tradescantia-variants/green.webp',
-        saleImage: '/plant-profile/tradescantia-variants/tricolor.webp',
+        importantImage: '/plant-profile/tradescantia-important.png',
+        propagationImage: '/plant-profile/tradescantia-propagation.png',
+        saleImage: '/plant-profile/tradescantia-for-sale.png',
         variants: profileVariants(
           ['My Tradescantia collection', 'Моя коллекция традесканций'],
           ['These plants began as small cuttings with distinctly different leaves. The gallery shows how each one can look as a mature, full potted plant.', 'Эти растения начинались с маленьких черенков с совершенно разными листьями. В галерее показано, как каждый из них может выглядеть взрослым пышным растением в горшке.'],
@@ -551,9 +712,9 @@ export const collectionPlants: readonly CollectionPlant[] = [
         [['Pruning', 'Формирование'], ['Pinch growing tips regularly and replant rooted cuttings into the same pot to keep the centre dense.', 'Регулярно прищипывайте верхушки и подсаживайте укоренённые черенки в тот же горшок, чтобы середина оставалась густой.']],
       ),
       {
-        importantImage: '/plant-profile/callisia-variants/gold.webp',
-        propagationImage: '/plant-profile/callisia-variants/classic.webp',
-        saleImage: '/plant-profile/callisia-variants/pink-panther.webp',
+        importantImage: '/plant-profile/callisia-important.png',
+        propagationImage: '/plant-profile/callisia-propagation.png',
+        saleImage: '/plant-profile/callisia-for-sale.png',
         variants: profileVariants(
           ['My Callisia collection', 'Моя коллекция каллизий'],
           ['These forms began as small rooted shoots. The gallery shows how their different leaf colours look in mature, full pots.', 'Эти формы начинались с маленьких укоренённых ростков. В галерее показано, как их разная окраска выглядит во взрослых пышных горшках.'],
@@ -568,7 +729,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
     'orchidaceae',
     'phalaenopsis-collection',
     '/plant-profile/orchid-cover.webp',
-    ['Phalaenopsis collection', 'Орхидеи'],
+    ['Phalaenopsis', 'Фаленопсисы'],
     plantProfile(
       careCards(
         [['Light', 'Освещение'], ['Give bright indirect light without harsh midday sun.', 'Нужен яркий рассеянный свет без жёсткого полуденного солнца.']],
@@ -599,15 +760,14 @@ export const collectionPlants: readonly CollectionPlant[] = [
         [['Pruning', 'Обрезка'], ['Remove only fully dry spikes and damaged roots with a sterile tool.', 'Удаляйте только полностью сухие цветоносы и повреждённые корни стерильным инструментом.']],
       ),
       {
-        importantImage: '/plant-profile/orchid-variants/04-white.webp',
-        propagationImage: '/plant-profile/orchid-variants/08-pink-cascade.webp',
-        saleImage: '/plant-profile/orchid-variants/10-purple-mini.webp',
+        importantImage: '/plant-profile/orchid-important.png',
+        propagationImage: '/plant-profile/orchid-propagation.png',
+        saleImage: '/plant-profile/orchid-for-sale.png',
         variants: profileVariants(
-          ['My orchid collection', 'Моя коллекция орхидей'],
-          ['Eleven Phalaenopsis orchids, from warm copper and lemon tones to spotted, veined and velvet-purple blooms.', 'Одиннадцать фаленопсисов: от тёплых медных и лимонных оттенков до крапчатых, прожилковых и бархатно-фиолетовых цветков.'],
+          ['My Phalaenopsis collection', 'Моя коллекция фаленопсисов'],
+          ['Ten more Phalaenopsis orchids, from warm copper and lemon tones to spotted and velvet-purple blooms. The white flower with raspberry veins is featured as the main plant.', 'Ещё десять фаленопсисов: от тёплых медных и лимонных оттенков до крапчатых и бархатно-фиолетовых цветков. Бело-малиновая орхидея вынесена в главное изображение.'],
           ['/plant-profile/orchid-variants/01-copper.webp', ['Copper orange', 'Медно-оранжевая']],
           ['/plant-profile/orchid-variants/02-yellow.webp', ['Lemon yellow', 'Лимонно-жёлтая']],
-          ['/plant-profile/orchid-variants/03-veined-white.webp', ['White with raspberry veins', 'Белая с малиновыми прожилками']],
           ['/plant-profile/orchid-variants/04-white.webp', ['Snow white', 'Белоснежная']],
           ['/plant-profile/orchid-variants/05-pale-pink.webp', ['Soft pink', 'Нежно-розовая']],
           ['/plant-profile/orchid-variants/06-burgundy-spots.webp', ['White with burgundy spots', 'Белая с бордовым крапом']],
@@ -655,9 +815,9 @@ export const collectionPlants: readonly CollectionPlant[] = [
         [['Dormancy & grooming', 'Покой и уход'], ['Remove spent flowers. After flowering, gradually reduce watering as the foliage dies back; resume regular care only when the tuber sprouts again.', 'Удаляйте увядшие цветы. После цветения постепенно сокращайте полив по мере отмирания листьев; вернитесь к обычному уходу только с появлением новых ростков.']],
       ),
       {
-        importantImage: '/plant-profile/gloxinia-variants/velvet-red.webp',
-        propagationImage: '/plant-profile/gloxinia-variants/lilac-speckled-double.webp',
-        saleImage: '/plant-profile/gloxinia-variants/pink-white-edge.webp',
+        importantImage: '/plant-profile/gloxinia-important.png',
+        propagationImage: '/plant-profile/gloxinia-propagation.png',
+        saleImage: '/plant-profile/gloxinia-for-sale.png',
         variants: profileVariants(
           ['My collection of colours', 'Моя коллекция расцветок'],
           ['Gloxinias can look completely different while sharing the same velvety leaves and generous flowering. Here are the distinct colours and flower forms that have bloomed in my collection.', 'Глоксинии могут выглядеть совершенно по-разному, сохраняя бархатистую листву и щедрое цветение. Здесь собраны разные расцветки и формы цветка, которые цвели в моей коллекции.'],
