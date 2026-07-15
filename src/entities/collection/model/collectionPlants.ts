@@ -161,6 +161,7 @@ export interface CollectionPlantProfile {
 
 const aglaonemaProfile = (
   cultivarName: string,
+  coloring: LocalizedPair,
   facts: LocalizedListPair,
   notes: LocalizedPair,
   overview: LocalizedPair,
@@ -172,8 +173,8 @@ const aglaonemaProfile = (
       [
         ['Light', 'Свет'],
         [
-          'Bright diffused light without direct midday sun. Brighter filtered light helps preserve the red and pink coloring.',
-          'Яркий рассеянный свет без прямого полуденного солнца. Более светлое место помогает сохранить красную и розовую окраску.',
+          `Bright diffused light without direct midday sun. Brighter filtered light helps preserve ${coloring[0]}.`,
+          `Яркий рассеянный свет без прямого полуденного солнца. Более светлое место помогает сохранить ${coloring[1]}.`,
         ],
       ],
       [
@@ -229,12 +230,12 @@ const aglaonemaProfile = (
         [
           'Yellow, soft leaves usually indicate excess moisture or cold roots.',
           'Brown tips can appear from very dry air or salt buildup in the soil.',
-          'Fading red or pink color usually means the plant needs more diffused light.',
+          `If ${coloring[0]} fades, the plant usually needs more diffused light.`,
         ],
         [
           'Жёлтые мягкие листья обычно говорят о переувлажнении или переохлаждении корней.',
           'Коричневые кончики могут появляться из-за сухого воздуха или накопления солей в грунте.',
-          'Побледнение красной или розовой окраски обычно означает нехватку рассеянного света.',
+          'Характерная окраска бледнеет — растению обычно не хватает рассеянного света.',
         ],
       ],
       [
@@ -287,32 +288,123 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ['Kangaroo vine', 'Циссус антарктический'],
     plantProfile(
       careCards(
-        [['Light', 'Освещение'], ['Bright indirect light or light shade. Protect the foliage from harsh direct sun.', 'Яркий рассеянный свет или лёгкая полутень. Берегите листву от жёсткого прямого солнца.']],
-        [['Watering', 'Полив'], ['Keep the substrate lightly and evenly moist while the plant is growing. Avoid waterlogging.', 'В период роста поддерживайте грунт слегка и равномерно влажным. Не допускайте застоя воды.']],
-        [['Humidity', 'Влажность'], ['Average to higher room humidity suits this rainforest vine; dry air can mark the foliage.', 'Эта лиана из влажных лесов любит среднюю и повышенную влажность; сухой воздух отражается на листве.']],
-        [['Temperature', 'Температура'], ['A warm, stable room suits it best. Keep it away from cold glass and drafts.', 'Лучше всего подходит тёплое, стабильное помещение. Берегите от холодного стекла и сквозняков.']],
+        [
+          ['Light', 'Освещение'],
+          [
+            'Bright indirect light or light shade. Protect the foliage from harsh direct sun.',
+            'Яркий рассеянный свет или лёгкая полутень. Берегите листву от жёсткого прямого солнца.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Keep the substrate lightly and evenly moist while the plant is growing. Avoid waterlogging.',
+            'В период роста поддерживайте грунт слегка и равномерно влажным. Не допускайте застоя воды.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Average to higher room humidity suits this rainforest vine; dry air can mark the foliage.',
+            'Эта лиана из влажных лесов любит среднюю и повышенную влажность; сухой воздух отражается на листве.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'A warm, stable room suits it best. Keep it away from cold glass and drafts.',
+            'Лучше всего подходит тёплое, стабильное помещение. Берегите от холодного стекла и сквозняков.',
+          ],
+        ],
       ),
       2,
       profileFacts(
-        [['Family', 'Семейство'], ['Grape family (Vitaceae)', 'Виноградовые (Vitaceae)']],
-        [['Origin', 'Родина'], ['Eastern Australia', 'Восточное побережье Австралии']],
-        [['Plant type', 'Тип растения'], ['Woody climbing vine with tendrils', 'Древеснеющая лиана с усиками']],
+        [
+          ['Family', 'Семейство'],
+          ['Grape family (Vitaceae)', 'Виноградовые (Vitaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Eastern Australia', 'Восточное побережье Австралии'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Woody climbing vine with tendrils', 'Древеснеющая лиана с усиками'],
+        ],
       ),
       profileFooter(
-        [['An evergreen woody climber native to eastern Australia.', 'Simple toothed leaves are usually ovate to oblong.', 'The vine climbs with simple or two-branched tendrils.'], ['Вечнозелёная древеснеющая лиана, родом с восточного побережья Австралии.', 'Простые зубчатые листья обычно имеют яйцевидную или продолговатую форму.', 'Лиана цепляется за опору простыми или двураздельными усиками.']],
-        ['Do not let the root ball dry out completely during active growth, but never leave it standing in water.', 'В период активного роста не пересушивайте корневой ком полностью, но и не оставляйте растение стоять в воде.'],
-        [['Yellowing leaves — check for waterlogging.', 'Brown edges — air may be too dry or the soil has dried too far.', 'Sparse growth — move to brighter indirect light.'], ['Желтеют листья — проверьте, нет ли застоя воды.', 'Края листьев буреют — воздух может быть слишком сухим или грунт сильно пересох.', 'Побеги вытягиваются — переставьте растение в более яркий рассеянный свет.']],
-        ['Propagate from stem cuttings during active growth in a lightly moist, airy substrate.', 'Размножайте стеблевыми черенками в период активного роста в слегка влажном, воздухопроницаемом субстрате.'],
+        [
+          [
+            'An evergreen woody climber native to eastern Australia.',
+            'Simple toothed leaves are usually ovate to oblong.',
+            'The vine climbs with simple or two-branched tendrils.',
+          ],
+          [
+            'Вечнозелёная древеснеющая лиана, родом с восточного побережья Австралии.',
+            'Простые зубчатые листья обычно имеют яйцевидную или продолговатую форму.',
+            'Лиана цепляется за опору простыми или двураздельными усиками.',
+          ],
+        ],
+        [
+          'Do not let the root ball dry out completely during active growth, but never leave it standing in water.',
+          'В период активного роста не пересушивайте корневой ком полностью, но и не оставляйте растение стоять в воде.',
+        ],
+        [
+          [
+            'Yellowing leaves — check for waterlogging.',
+            'Brown edges — air may be too dry or the soil has dried too far.',
+            'Sparse growth — move to brighter indirect light.',
+          ],
+          [
+            'Желтеют листья — проверьте, нет ли застоя воды.',
+            'Края листьев буреют — воздух может быть слишком сухим или грунт сильно пересох.',
+            'Побеги вытягиваются — переставьте растение в более яркий рассеянный свет.',
+          ],
+        ],
+        [
+          'Propagate from stem cuttings during active growth in a lightly moist, airy substrate.',
+          'Размножайте стеблевыми черенками в период активного роста в слегка влажном, воздухопроницаемом субстрате.',
+        ],
       ),
       'Cissus antarctica',
-      ['Guide the young shoots onto a support and prune them after active growth to keep the vine tidy.', 'Направляйте молодые побеги на опору и подрезайте их после активного роста, чтобы лиана сохраняла аккуратную форму.'],
-      ['Kangaroo vine is an Australian evergreen climber with simple toothed leaves and tendrils. In nature it grows in warm coastal rainforests and their margins.', 'Кенгуровая лиана — австралийская вечнозелёная лиана с простыми зубчатыми листьями и усиками. В природе растёт во влажных лесах и на их опушках восточного побережья.'],
+      [
+        'Guide the young shoots onto a support and prune them after active growth to keep the vine tidy.',
+        'Направляйте молодые побеги на опору и подрезайте их после активного роста, чтобы лиана сохраняла аккуратную форму.',
+      ],
+      [
+        'Kangaroo vine is an Australian evergreen climber with simple toothed leaves and tendrils. In nature it grows in warm coastal rainforests and their margins.',
+        'Кенгуровая лиана — австралийская вечнозелёная лиана с простыми зубчатыми листьями и усиками. В природе растёт во влажных лесах и на их опушках восточного побережья.',
+      ],
       quickFacts(['Fast-growing', 'Быстрый'], ['Long climbing shoots', 'Длинные побеги']),
       careCards(
-        [['Soil', 'Грунт'], ['Use 80% peat-free loam-based houseplant compost with 20% perlite or fine potting grit. The mix should drain well but still hold moderate moisture.', 'Используйте 80% безторфяного грунта для комнатных растений на суглинистой основе и 20% перлита или мелкого посадочного гравия. Смесь должна хорошо отводить воду, но удерживать умеренную влагу.']],
-        [['Repotting', 'Пересадка'], ['Repot in spring when the roots have filled the pot.', 'Пересаживайте весной, когда корни полностью освоят горшок.']],
-        [['Feeding', 'Подкормки'], ['From spring to early autumn, use a balanced liquid fertiliser with near-equal N-P-K (for example 10-10-10), plus Mg, Fe, Mn, Zn and B. Apply monthly at half the label rate; do not feed in winter.', 'С весны до начала осени — жидкое удобрение с примерно равным N-P-K (например, 10-10-10) и Mg, Fe, Mn, Zn, B. Вносите раз в месяц в половинной дозировке; зимой не подкармливайте.']],
-        [['Support & shaping', 'Опоры и формировка'], ['Offer a support for the tendrils and prune long shoots to keep the vine neat.', 'Дайте усикам опору и подрезайте длинные побеги, чтобы лиана оставалась аккуратной.']],
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use 80% peat-free loam-based houseplant compost with 20% perlite or fine potting grit. The mix should drain well but still hold moderate moisture.',
+            'Используйте 80% безторфяного грунта для комнатных растений на суглинистой основе и 20% перлита или мелкого посадочного гравия. Смесь должна хорошо отводить воду, но удерживать умеренную влагу.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring when the roots have filled the pot.',
+            'Пересаживайте весной, когда корни полностью освоят горшок.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, use a balanced liquid fertiliser with near-equal N-P-K (for example 10-10-10), plus Mg, Fe, Mn, Zn and B. Apply monthly at half the label rate; do not feed in winter.',
+            'С весны до начала осени — жидкое удобрение с примерно равным N-P-K (например, 10-10-10) и Mg, Fe, Mn, Zn, B. Вносите раз в месяц в половинной дозировке; зимой не подкармливайте.',
+          ],
+        ],
+        [
+          ['Support & shaping', 'Опоры и формировка'],
+          [
+            'Offer a support for the tendrils and prune long shoots to keep the vine neat.',
+            'Дайте усикам опору и подрезайте длинные побеги, чтобы лиана оставалась аккуратной.',
+          ],
+        ],
       ),
       {
         importantImage: '/plant-profile/important-vine.png',
@@ -329,32 +421,125 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ['Rattlesnake plant', 'Калатея лансифолия'],
     plantProfile(
       careCards(
-        [['Light', 'Освещение'], ['Give bright filtered or indirect light. Direct sun can scorch the patterned leaves.', 'Нужен яркий фильтрованный или рассеянный свет. Прямое солнце может обжечь узорчатые листья.']],
-        [['Watering', 'Полив'], ['Keep the compost evenly moist during active growth, but never soggy. Water less in winter.', 'В период роста поддерживайте грунт равномерно влажным, но не мокрым. Зимой поливайте реже.']],
-        [['Humidity', 'Влажность'], ['High humidity helps prevent leaf edges from browning and curling.', 'Высокая влажность помогает избежать подсыхания и скручивания краёв листьев.']],
-        [['Temperature', 'Температура'], ['Keep warm and draught-free, ideally above 16°C with no sudden temperature changes.', 'Держите в тепле и без сквозняков, желательно выше 16 °C и без резких перепадов температуры.']],
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright filtered or indirect light. Direct sun can scorch the patterned leaves.',
+            'Нужен яркий фильтрованный или рассеянный свет. Прямое солнце может обжечь узорчатые листья.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Keep the compost evenly moist during active growth, but never soggy. Water less in winter.',
+            'В период роста поддерживайте грунт равномерно влажным, но не мокрым. Зимой поливайте реже.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'High humidity helps prevent leaf edges from browning and curling.',
+            'Высокая влажность помогает избежать подсыхания и скручивания краёв листьев.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep warm and draught-free, ideally above 16°C with no sudden temperature changes.',
+            'Держите в тепле и без сквозняков, желательно выше 16 °C и без резких перепадов температуры.',
+          ],
+        ],
       ),
       4,
       profileFacts(
-        [['Family', 'Семейство'], ['Prayer plant family (Marantaceae)', 'Марантовые (Marantaceae)']],
-        [['Origin', 'Родина'], ['Brazil, Rio de Janeiro', 'Бразилия, штат Рио-де-Жанейро']],
-        [['Plant type', 'Тип растения'], ['Rhizomatous evergreen perennial', 'Корневищный вечнозелёный многолетник']],
+        [
+          ['Family', 'Семейство'],
+          ['Prayer plant family (Marantaceae)', 'Марантовые (Marantaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Brazil, Rio de Janeiro', 'Бразилия, штат Рио-де-Жанейро'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Rhizomatous evergreen perennial', 'Корневищный вечнозелёный многолетник'],
+        ],
       ),
       profileFooter(
-        [['The wavy, lance-shaped leaves are marked with dark oval blotches.', 'The underside of each leaf is deep purple to maroon.', 'In the evening the leaves lift and fold, then open again in the morning.', 'Small yellow flowers are uncommon on indoor plants.'], ['Волнистые ланцетные листья украшены тёмными овальными пятнами.', 'Изнанка листьев окрашена в глубокий пурпурно-бордовый цвет.', 'Вечером листья поднимаются и складываются, а утром снова раскрываются.', 'Небольшие жёлтые цветки в комнатных условиях появляются редко.']],
-        ['Do not let the compost dry out completely and keep the plant away from direct sun, cold glass and draughts.', 'Не пересушивайте грунт полностью и берегите растение от прямого солнца, холодного стекла и сквозняков.'],
-        [['Brown, curling edges — humidity may be too low.', 'Faded patches — move away from direct sun.', 'Yellowing leaves — check that the compost is not waterlogged.'], ['Края листьев буреют и скручиваются — вероятно, слишком сухой воздух.', 'Узор бледнеет или появляются ожоги — уберите от прямого солнца.', 'Листья желтеют — проверьте, не переувлажнён ли грунт.']],
-        ['Divide a mature clump in late spring, keeping several healthy shoots and roots in each section.', 'Делите взрослый куст поздней весной: у каждой делёнки должны остаться здоровые побеги и корни.'],
+        [
+          [
+            'The wavy, lance-shaped leaves are marked with dark oval blotches.',
+            'The underside of each leaf is deep purple to maroon.',
+            'In the evening the leaves lift and fold, then open again in the morning.',
+            'Small yellow flowers are uncommon on indoor plants.',
+          ],
+          [
+            'Волнистые ланцетные листья украшены тёмными овальными пятнами.',
+            'Изнанка листьев окрашена в глубокий пурпурно-бордовый цвет.',
+            'Вечером листья поднимаются и складываются, а утром снова раскрываются.',
+            'Небольшие жёлтые цветки в комнатных условиях появляются редко.',
+          ],
+        ],
+        [
+          'Do not let the compost dry out completely and keep the plant away from direct sun, cold glass and draughts.',
+          'Не пересушивайте грунт полностью и берегите растение от прямого солнца, холодного стекла и сквозняков.',
+        ],
+        [
+          [
+            'Brown, curling edges — humidity may be too low.',
+            'Faded patches — move away from direct sun.',
+            'Yellowing leaves — check that the compost is not waterlogged.',
+          ],
+          [
+            'Края листьев буреют и скручиваются — вероятно, слишком сухой воздух.',
+            'Узор бледнеет или появляются ожоги — уберите от прямого солнца.',
+            'Листья желтеют — проверьте, не переувлажнён ли грунт.',
+          ],
+        ],
+        [
+          'Divide a mature clump in late spring, keeping several healthy shoots and roots in each section.',
+          'Делите взрослый куст поздней весной: у каждой делёнки должны остаться здоровые побеги и корни.',
+        ],
       ),
       'Goeppertia insignis',
-      ['Also sold as Calathea lancifolia. Its patterned leaves look their best in stable, humid conditions.', 'Также встречается под названием Calathea lancifolia. Узорчатые листья лучше всего выглядят в стабильных влажных условиях.'],
-      ['Rattlesnake plant is a tropical Brazilian perennial grown for its long, wavy leaves with dark oval markings and purple undersides.', 'Калатея лансифолия — тропический многолетник из Бразилии, который ценят за длинные волнистые листья с тёмным овальным узором и пурпурной изнанкой.'],
+      [
+        'Also sold as Calathea lancifolia. Its patterned leaves look their best in stable, humid conditions.',
+        'Также встречается под названием Calathea lancifolia. Узорчатые листья лучше всего выглядят в стабильных влажных условиях.',
+      ],
+      [
+        'Rattlesnake plant is a tropical Brazilian perennial grown for its long, wavy leaves with dark oval markings and purple undersides.',
+        'Калатея лансифолия — тропический многолетник из Бразилии, который ценят за длинные волнистые листья с тёмным овальным узором и пурпурной изнанкой.',
+      ],
       quickFacts(['Moderate', 'Умеренный'], ['Clump to 60 cm', 'Куст до 60 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Use a moisture-retentive but free-draining mix: 90% peat-free houseplant compost and 10% fine potting grit or perlite.', 'Используйте влагоёмкую, но хорошо дренированную смесь: 90% безторфяного грунта для комнатных растений и 10% мелкого посадочного гравия или перлита.']],
-        [['Repotting', 'Пересадка'], ['Repot or divide in late spring when the clump has filled its pot.', 'Пересаживайте или делите куст поздней весной, когда он освоит горшок.']],
-        [['Feeding', 'Подкормки'], ['Use a low-salt liquid fertiliser with N-P₂O₅-K₂O close to 3-1-2 (for example 18-6-12), including Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer; avoid fluoride-containing products.', 'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2 (например, 18-6-12), с Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. Подкармливайте с весны до конца лета раз в месяц в ¼–½ дозы; избегайте средств с фтором.']],
-        [['Grooming', 'Уход за листвой'], ['No support is needed. Remove only yellowed or damaged leaves at the base.', 'Опора не нужна. Удаляйте только пожелтевшие или повреждённые листья у основания.']],
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a moisture-retentive but free-draining mix: 90% peat-free houseplant compost and 10% fine potting grit or perlite.',
+            'Используйте влагоёмкую, но хорошо дренированную смесь: 90% безторфяного грунта для комнатных растений и 10% мелкого посадочного гравия или перлита.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot or divide in late spring when the clump has filled its pot.',
+            'Пересаживайте или делите куст поздней весной, когда он освоит горшок.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Use a low-salt liquid fertiliser with N-P₂O₅-K₂O close to 3-1-2 (for example 18-6-12), including Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer; avoid fluoride-containing products.',
+            'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2 (например, 18-6-12), с Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. Подкармливайте с весны до конца лета раз в месяц в ¼–½ дозы; избегайте средств с фтором.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листвой'],
+          [
+            'No support is needed. Remove only yellowed or damaged leaves at the base.',
+            'Опора не нужна. Удаляйте только пожелтевшие или повреждённые листья у основания.',
+          ],
+        ],
       ),
       {
         importantImage: '/plant-profile/calathea-important-leaves.png',
@@ -371,32 +556,125 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ['Tiger jaws', 'Фаукария тигровая'],
     plantProfile(
       careCards(
-        [['Light', 'Освещение'], ['Give the brightest available position, ideally with several hours of direct sun after gradual acclimatisation.', 'Поставьте на самое светлое место; после постепенного привыкания полезны несколько часов прямого солнца.']],
-        [['Watering', 'Полив'], ['Water thoroughly only after the gritty mix has dried. Never leave water in the saucer.', 'Поливайте обильно только после просыхания минеральной смеси. Не оставляйте воду в поддоне.']],
-        [['Humidity', 'Влажность'], ['Normal dry room air suits it well; high humidity is unnecessary.', 'Обычный сухой комнатный воздух подходит хорошо; повышенная влажность не нужна.']],
-        [['Temperature', 'Температура'], ['Keep warm in growth, then give a bright, cool and dry winter rest above 8°C.', 'В период роста держите в тепле, а зимой обеспечьте светлый, прохладный и сухой отдых выше 8 °C.']],
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give the brightest available position, ideally with several hours of direct sun after gradual acclimatisation.',
+            'Поставьте на самое светлое место; после постепенного привыкания полезны несколько часов прямого солнца.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water thoroughly only after the gritty mix has dried. Never leave water in the saucer.',
+            'Поливайте обильно только после просыхания минеральной смеси. Не оставляйте воду в поддоне.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Normal dry room air suits it well; high humidity is unnecessary.',
+            'Обычный сухой комнатный воздух подходит хорошо; повышенная влажность не нужна.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep warm in growth, then give a bright, cool and dry winter rest above 8°C.',
+            'В период роста держите в тепле, а зимой обеспечьте светлый, прохладный и сухой отдых выше 8 °C.',
+          ],
+        ],
       ),
       2,
       profileFacts(
-        [['Family', 'Семейство'], ['Ice plant family (Aizoaceae)', 'Аизовые (Aizoaceae)']],
-        [['Origin', 'Родина'], ['Eastern Cape, South Africa', 'Восточная Капская провинция, ЮАР']],
-        [['Plant type', 'Тип растения'], ['Clumping succulent subshrub', 'Кустящийся суккулентный полукустарник']],
+        [
+          ['Family', 'Семейство'],
+          ['Ice plant family (Aizoaceae)', 'Аизовые (Aizoaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Eastern Cape, South Africa', 'Восточная Капская провинция, ЮАР'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Clumping succulent subshrub', 'Кустящийся суккулентный полукустарник'],
+        ],
       ),
       profileFooter(
-        [['The paired triangular leaves have soft white marginal teeth that give the plant its tiger-jaw name.', 'Leaf surfaces are dotted with pale translucent spots.', 'Mature plants can open large yellow flowers in bright sunshine.', 'It forms new rosettes at the base and gradually becomes a small clump.'], ['Парные треугольные листья с мягкими белыми зубчиками по краю дали растению «тигровое» название.', 'Поверхность листьев усеяна светлыми полупрозрачными точками.', 'Взрослые растения могут раскрывать крупные жёлтые цветки на ярком солнце.', 'У основания появляются новые розетки, и со временем образуется компактная куртинка.']],
-        ['The main risk is prolonged dampness. Protect the roots from waterlogging and do not water a cold plant.', 'Главный риск — длительная сырость. Берегите корни от застоя воды и не поливайте холодное растение.'],
-        [['Soft, translucent leaves — stop watering and inspect the roots.', 'Stretched, pale growth — move to brighter light gradually.', 'Shrivelled leaves in dry soil — water once, then let the mix drain fully.'], ['Мягкие полупрозрачные листья — прекратите полив и проверьте корни.', 'Вытянутый бледный прирост — постепенно переставьте на более яркий свет.', 'Сморщенные листья при сухом грунте — один раз полейте и дайте смеси полностью стечь.']],
-        ['Separate a rooted offset in late spring or summer. Let the cut dry for a day, then plant into a dry gritty mix and wait before the first light watering.', 'Отделяйте укоренённую дочернюю розетку поздней весной или летом. Подсушите срез сутки, посадите в сухую минеральную смесь и лишь затем осторожно полейте.'],
+        [
+          [
+            'The paired triangular leaves have soft white marginal teeth that give the plant its tiger-jaw name.',
+            'Leaf surfaces are dotted with pale translucent spots.',
+            'Mature plants can open large yellow flowers in bright sunshine.',
+            'It forms new rosettes at the base and gradually becomes a small clump.',
+          ],
+          [
+            'Парные треугольные листья с мягкими белыми зубчиками по краю дали растению «тигровое» название.',
+            'Поверхность листьев усеяна светлыми полупрозрачными точками.',
+            'Взрослые растения могут раскрывать крупные жёлтые цветки на ярком солнце.',
+            'У основания появляются новые розетки, и со временем образуется компактная куртинка.',
+          ],
+        ],
+        [
+          'The main risk is prolonged dampness. Protect the roots from waterlogging and do not water a cold plant.',
+          'Главный риск — длительная сырость. Берегите корни от застоя воды и не поливайте холодное растение.',
+        ],
+        [
+          [
+            'Soft, translucent leaves — stop watering and inspect the roots.',
+            'Stretched, pale growth — move to brighter light gradually.',
+            'Shrivelled leaves in dry soil — water once, then let the mix drain fully.',
+          ],
+          [
+            'Мягкие полупрозрачные листья — прекратите полив и проверьте корни.',
+            'Вытянутый бледный прирост — постепенно переставьте на более яркий свет.',
+            'Сморщенные листья при сухом грунте — один раз полейте и дайте смеси полностью стечь.',
+          ],
+        ],
+        [
+          'Separate a rooted offset in late spring or summer. Let the cut dry for a day, then plant into a dry gritty mix and wait before the first light watering.',
+          'Отделяйте укоренённую дочернюю розетку поздней весной или летом. Подсушите срез сутки, посадите в сухую минеральную смесь и лишь затем осторожно полейте.',
+        ],
       ),
       'Faucaria tigrina',
-      ['Tiger jaws is a compact South African succulent prized for its patterned leaves with tooth-like margins.', 'Фаукарию тигровую ценят за компактные узорчатые листья с зубчиками по краям.'],
-      ['Tiger jaws is a small clumping succulent from South Africa. Its thick paired leaves are edged with soft, pale teeth and store water for dry periods.', 'Фаукария тигровая — небольшой кустящийся суккулент из Южной Африки. Толстые парные листья с мягкими светлыми зубчиками запасают воду на засушливый период.'],
+      [
+        'Tiger jaws is a compact South African succulent prized for its patterned leaves with tooth-like margins.',
+        'Фаукарию тигровую ценят за компактные узорчатые листья с зубчиками по краям.',
+      ],
+      [
+        'Tiger jaws is a small clumping succulent from South Africa. Its thick paired leaves are edged with soft, pale teeth and store water for dry periods.',
+        'Фаукария тигровая — небольшой кустящийся суккулент из Южной Африки. Толстые парные листья с мягкими светлыми зубчиками запасают воду на засушливый период.',
+      ],
       quickFacts(['Slow', 'Медленный'], ['Rosette to 15 cm', 'Розетка до 15 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Mix by volume: 30% cactus compost, 35% pumice or fine gravel, 25% perlite and 10% coarse sand. Use a pot with a drainage hole.', 'Смешайте по объёму: 30% грунта для кактусов, 35% пемзы или мелкого гравия, 25% перлита и 10% крупного песка. Горшок нужен с дренажным отверстием.']],
-        [['Repotting', 'Пересадка'], ['Repot in spring only when the clump has filled its pot. Keep the neck of the plant above the mix.', 'Пересаживайте весной, только когда куртинка освоила горшок. Шейку растения оставляйте над уровнем смеси.']],
-        [['Feeding', 'Подкормки'], ['Use a low-nitrogen cactus fertiliser with micronutrients once a month in active growth at half strength. Do not feed a dormant or stressed plant.', 'Раз в месяц в период роста давайте удобрение для кактусов с пониженным азотом и микроэлементами в половинной дозе. Не подкармливайте спящее или ослабленное растение.']],
-        [['Grooming', 'Уход за розеткой'], ['No support is needed. Remove only fully dry old leaves; the pale marginal teeth are natural and soft.', 'Опора не нужна. Удаляйте только полностью сухие старые листья; светлые зубчики по краю — естественная мягкая особенность.']],
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Mix by volume: 30% cactus compost, 35% pumice or fine gravel, 25% perlite and 10% coarse sand. Use a pot with a drainage hole.',
+            'Смешайте по объёму: 30% грунта для кактусов, 35% пемзы или мелкого гравия, 25% перлита и 10% крупного песка. Горшок нужен с дренажным отверстием.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring only when the clump has filled its pot. Keep the neck of the plant above the mix.',
+            'Пересаживайте весной, только когда куртинка освоила горшок. Шейку растения оставляйте над уровнем смеси.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Use a low-nitrogen cactus fertiliser with micronutrients once a month in active growth at half strength. Do not feed a dormant or stressed plant.',
+            'Раз в месяц в период роста давайте удобрение для кактусов с пониженным азотом и микроэлементами в половинной дозе. Не подкармливайте спящее или ослабленное растение.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за розеткой'],
+          [
+            'No support is needed. Remove only fully dry old leaves; the pale marginal teeth are natural and soft.',
+            'Опора не нужна. Удаляйте только полностью сухие старые листья; светлые зубчики по краю — естественная мягкая особенность.',
+          ],
+        ],
       ),
       {
         importantImage: '/plant-profile/faucaria-important-leaves.png',
@@ -413,32 +691,128 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ['Panda plant', 'Каланхоэ войлочное'],
     plantProfile(
       careCards(
-        [['Light', 'Освещение'], ['Give bright light and several hours of gentle direct sun after acclimatisation.', 'Нужен яркий свет и несколько часов мягкого прямого солнца после постепенного привыкания.']],
-        [['Watering', 'Полив'], ['Water only when the gritty mix has dried almost completely. Drain excess water.', 'Поливайте только после почти полного просыхания минеральной смеси. Излишки воды всегда сливайте.']],
-        [['Humidity', 'Влажность'], ['Normal dry room air is ideal; do not mist the velvety leaves.', 'Обычный сухой комнатный воздух подходит идеально; бархатистые листья не опрыскивайте.']],
-        [['Temperature', 'Температура'], ['Keep warm in growth and brighter, drier and cooler in winter, above 10°C.', 'В период роста держите в тепле, а зимой — светлее, суше и прохладнее, выше 10 °C.']],
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright light and several hours of gentle direct sun after acclimatisation.',
+            'Нужен яркий свет и несколько часов мягкого прямого солнца после постепенного привыкания.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water only when the gritty mix has dried almost completely. Drain excess water.',
+            'Поливайте только после почти полного просыхания минеральной смеси. Излишки воды всегда сливайте.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Normal dry room air is ideal; do not mist the velvety leaves.',
+            'Обычный сухой комнатный воздух подходит идеально; бархатистые листья не опрыскивайте.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep warm in growth and brighter, drier and cooler in winter, above 10°C.',
+            'В период роста держите в тепле, а зимой — светлее, суше и прохладнее, выше 10 °C.',
+          ],
+        ],
       ),
       2,
       profileFacts(
-        [['Family', 'Семейство'], ['Stonecrop family (Crassulaceae)', 'Толстянковые (Crassulaceae)']],
-        [['Origin', 'Родина'], ['Central-eastern Madagascar', 'Центрально-восточный Мадагаскар']],
-        [['Plant type', 'Тип растения'], ['Velvety succulent subshrub', 'Бархатистый суккулентный полукустарник']],
+        [
+          ['Family', 'Семейство'],
+          ['Stonecrop family (Crassulaceae)', 'Толстянковые (Crassulaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Central-eastern Madagascar', 'Центрально-восточный Мадагаскар'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Velvety succulent subshrub', 'Бархатистый суккулентный полукустарник'],
+        ],
       ),
       profileFooter(
-        [['The dense felt-like hairs protect the leaves from intense sun and reduce water loss.', 'Brown markings along the leaf margins give the plant a distinctive outline.', 'Indoor plants rarely flower, but mature plants can produce tubular blooms.', 'It is often called panda plant for its soft, fuzzy foliage.'], ['Густое войлочное опушение защищает листья от яркого солнца и уменьшает потерю влаги.', 'Коричневые отметины по краям листьев создают узнаваемый рисунок.', 'В помещении растение цветёт редко, но взрослые экземпляры могут дать трубчатые цветки.', 'Из-за мягкой пушистой листвы его часто называют панда-плант.']],
-        ['Never keep the roots wet for long and avoid getting water trapped in the leaf fuzz.', 'Не держите корни во влажном грунте долго и не оставляйте воду в опушении листьев.'],
-        [['Soft dark leaves — likely excess moisture.', 'Long pale growth — move gradually to brighter light.', 'Leaf marks rub off easily — handle the velvet foliage gently.'], ['Мягкие тёмные листья — вероятно, избыток влаги.', 'Вытянутый бледный прирост — постепенно добавьте света.', 'Налёт на листьях легко стирается — обращайтесь с бархатистой листвой бережно.']],
-        ['Take a healthy stem cutting in spring or summer. Let the cut dry for several days, then root it in a dry gritty mix.', 'Весной или летом возьмите здоровый стеблевой черенок. Подсушите срез несколько дней, затем укореняйте в сухой минеральной смеси.'],
+        [
+          [
+            'The dense felt-like hairs protect the leaves from intense sun and reduce water loss.',
+            'Brown markings along the leaf margins give the plant a distinctive outline.',
+            'Indoor plants rarely flower, but mature plants can produce tubular blooms.',
+            'It is often called panda plant for its soft, fuzzy foliage.',
+          ],
+          [
+            'Густое войлочное опушение защищает листья от яркого солнца и уменьшает потерю влаги.',
+            'Коричневые отметины по краям листьев создают узнаваемый рисунок.',
+            'В помещении растение цветёт редко, но взрослые экземпляры могут дать трубчатые цветки.',
+            'Из-за мягкой пушистой листвы его часто называют панда-плант.',
+          ],
+        ],
+        [
+          'Never keep the roots wet for long and avoid getting water trapped in the leaf fuzz.',
+          'Не держите корни во влажном грунте долго и не оставляйте воду в опушении листьев.',
+        ],
+        [
+          [
+            'Soft dark leaves — likely excess moisture.',
+            'Long pale growth — move gradually to brighter light.',
+            'Leaf marks rub off easily — handle the velvet foliage gently.',
+          ],
+          [
+            'Мягкие тёмные листья — вероятно, избыток влаги.',
+            'Вытянутый бледный прирост — постепенно добавьте света.',
+            'Налёт на листьях легко стирается — обращайтесь с бархатистой листвой бережно.',
+          ],
+        ],
+        [
+          'Take a healthy stem cutting in spring or summer. Let the cut dry for several days, then root it in a dry gritty mix.',
+          'Весной или летом возьмите здоровый стеблевой черенок. Подсушите срез несколько дней, затем укореняйте в сухой минеральной смеси.',
+        ],
       ),
       'Kalanchoe tomentosa',
-      ['Velvety foliage and chocolate-brown leaf markings make this a quietly sculptural succulent.', 'Бархатистая листва и шоколадно-коричневые отметины делают этот суккулент особенно графичным.'],
-      ['Kalanchoe tomentosa is a Madagascan succulent subshrub with soft silver-green felted leaves and brown margins.', 'Каланхоэ войлочное — мадагаскарский суккулентный полукустарник с мягкими серебристо-зелёными войлочными листьями и коричневыми краями.'],
-      quickFacts(['Slow to moderate', 'Медленный'], ['Up to 45 cm indoors', 'До 45 см в помещении']),
+      [
+        'Velvety foliage and chocolate-brown leaf markings make this a quietly sculptural succulent.',
+        'Бархатистая листва и шоколадно-коричневые отметины делают этот суккулент особенно графичным.',
+      ],
+      [
+        'Kalanchoe tomentosa is a Madagascan succulent subshrub with soft silver-green felted leaves and brown margins.',
+        'Каланхоэ войлочное — мадагаскарский суккулентный полукустарник с мягкими серебристо-зелёными войлочными листьями и коричневыми краями.',
+      ],
+      quickFacts(
+        ['Slow to moderate', 'Медленный'],
+        ['Up to 45 cm indoors', 'До 45 см в помещении'],
+      ),
       careCards(
-        [['Soil', 'Грунт'], ['Mix by volume: 35% cactus compost, 30% pumice or fine gravel, 25% perlite and 10% coarse sand. Use a drainage hole.', 'Смешайте по объёму: 35% грунта для кактусов, 30% пемзы или мелкого гравия, 25% перлита и 10% крупного песка. Горшок нужен с дренажным отверстием.']],
-        [['Repotting', 'Пересадка'], ['Repot in spring only when the roots have filled the pot.', 'Пересаживайте весной, только когда корни полностью освоят горшок.']],
-        [['Feeding', 'Подкормки'], ['Use a low-nitrogen cactus fertiliser with micronutrients once a month in active growth at half strength.', 'Раз в месяц в период роста используйте удобрение для кактусов с пониженным азотом и микроэлементами в половинной дозе.']],
-        [['Grooming', 'Уход за листвой'], ['No support is needed. Do not rub or wash the leaves: their felted coating is natural protection.', 'Опора не нужна. Не трите и не мойте листья: войлочное покрытие — естественная защита.']],
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Mix by volume: 35% cactus compost, 30% pumice or fine gravel, 25% perlite and 10% coarse sand. Use a drainage hole.',
+            'Смешайте по объёму: 35% грунта для кактусов, 30% пемзы или мелкого гравия, 25% перлита и 10% крупного песка. Горшок нужен с дренажным отверстием.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring only when the roots have filled the pot.',
+            'Пересаживайте весной, только когда корни полностью освоят горшок.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Use a low-nitrogen cactus fertiliser with micronutrients once a month in active growth at half strength.',
+            'Раз в месяц в период роста используйте удобрение для кактусов с пониженным азотом и микроэлементами в половинной дозе.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листвой'],
+          [
+            'No support is needed. Do not rub or wash the leaves: their felted coating is natural protection.',
+            'Опора не нужна. Не трите и не мойте листья: войлочное покрытие — естественная защита.',
+          ],
+        ],
       ),
       {
         importantImage: '/plant-profile/kalanchoe-important-leaves.png',
@@ -455,32 +829,125 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ['Velvet calathea', 'Калатея руфибарба'],
     plantProfile(
       careCards(
-        [['Light', 'Освещение'], ['Give bright, filtered or indirect light. Direct sun can fade and scorch the velvety leaves.', 'Нужен яркий фильтрованный или рассеянный свет. Прямое солнце может обесцветить и обжечь бархатистые листья.']],
-        [['Watering', 'Полив'], ['Keep the mix lightly and evenly moist while it grows, then water less in winter. Never leave the roots standing in water.', 'В период роста поддерживайте смесь слегка и равномерно влажной, а зимой поливайте реже. Не оставляйте корни в воде.']],
-        [['Humidity', 'Влажность'], ['A humid room helps the leaf edges remain smooth; keep it away from dry hot airflow.', 'Влажный воздух помогает краям листьев оставаться ровными; не ставьте растение на пути сухого горячего воздуха.']],
-        [['Temperature', 'Температура'], ['Keep warm and draught-free, ideally 18–27°C and never close to cold glass.', 'Держите в тепле и без сквозняков, лучше при 18–27 °C и не вплотную к холодному стеклу.']],
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright, filtered or indirect light. Direct sun can fade and scorch the velvety leaves.',
+            'Нужен яркий фильтрованный или рассеянный свет. Прямое солнце может обесцветить и обжечь бархатистые листья.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Keep the mix lightly and evenly moist while it grows, then water less in winter. Never leave the roots standing in water.',
+            'В период роста поддерживайте смесь слегка и равномерно влажной, а зимой поливайте реже. Не оставляйте корни в воде.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'A humid room helps the leaf edges remain smooth; keep it away from dry hot airflow.',
+            'Влажный воздух помогает краям листьев оставаться ровными; не ставьте растение на пути сухого горячего воздуха.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep warm and draught-free, ideally 18–27°C and never close to cold glass.',
+            'Держите в тепле и без сквозняков, лучше при 18–27 °C и не вплотную к холодному стеклу.',
+          ],
+        ],
       ),
       4,
       profileFacts(
-        [['Family', 'Семейство'], ['Prayer plant family (Marantaceae)', 'Марантовые (Marantaceae)']],
-        [['Origin', 'Родина'], ['Bahia, north-eastern Brazil', 'Баия, северо-восток Бразилии']],
-        [['Plant type', 'Тип растения'], ['Rhizomatous evergreen perennial', 'Корневищный вечнозелёный многолетник']],
+        [
+          ['Family', 'Семейство'],
+          ['Prayer plant family (Marantaceae)', 'Марантовые (Marantaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Bahia, north-eastern Brazil', 'Баия, северо-восток Бразилии'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Rhizomatous evergreen perennial', 'Корневищный вечнозелёный многолетник'],
+        ],
       ),
       profileFooter(
-        [['The long, narrow leaves have strongly wavy edges and a velvety surface.', 'The leaf undersides and petioles show a rich burgundy tone.', 'Its name rufibarba refers to the fine reddish hairs around the leaf stems.', 'Like other prayer plants, it can raise and fold its leaves as light changes.'], ['Длинные узкие листья имеют заметно волнистый край и бархатистую поверхность.', 'Изнанка листьев и черешки окрашены в насыщенный бордовый тон.', 'Название rufibarba связано с тонкими рыжеватыми волосками у черешков.', 'Как и другие марантовые, растение может поднимать и складывать листья при смене освещения.']],
-        ['Do not allow the root ball to dry out fully, and keep the plant away from hard direct sun, cold glass and draughts.', 'Не пересушивайте корневой ком полностью и берегите растение от жёсткого прямого солнца, холодного стекла и сквозняков.'],
-        [['Crisp brown edges — humidity may be too low or watering uneven.', 'Faded patches — move away from direct sunlight.', 'Yellowing leaves — let the mix drain and check that the roots are not waterlogged.'], ['Сухие коричневые края — вероятно, слишком сухой воздух или неравномерный полив.', 'Бледные пятна — уберите от прямого солнца.', 'Листья желтеют — дайте смеси просохнуть и проверьте, нет ли застоя у корней.']],
-        ['Divide a mature clump in late spring, keeping several healthy shoots and roots with each division.', 'Делите взрослый куст поздней весной: у каждой делёнки должны остаться несколько здоровых побегов и корней.'],
+        [
+          [
+            'The long, narrow leaves have strongly wavy edges and a velvety surface.',
+            'The leaf undersides and petioles show a rich burgundy tone.',
+            'Its name rufibarba refers to the fine reddish hairs around the leaf stems.',
+            'Like other prayer plants, it can raise and fold its leaves as light changes.',
+          ],
+          [
+            'Длинные узкие листья имеют заметно волнистый край и бархатистую поверхность.',
+            'Изнанка листьев и черешки окрашены в насыщенный бордовый тон.',
+            'Название rufibarba связано с тонкими рыжеватыми волосками у черешков.',
+            'Как и другие марантовые, растение может поднимать и складывать листья при смене освещения.',
+          ],
+        ],
+        [
+          'Do not allow the root ball to dry out fully, and keep the plant away from hard direct sun, cold glass and draughts.',
+          'Не пересушивайте корневой ком полностью и берегите растение от жёсткого прямого солнца, холодного стекла и сквозняков.',
+        ],
+        [
+          [
+            'Crisp brown edges — humidity may be too low or watering uneven.',
+            'Faded patches — move away from direct sunlight.',
+            'Yellowing leaves — let the mix drain and check that the roots are not waterlogged.',
+          ],
+          [
+            'Сухие коричневые края — вероятно, слишком сухой воздух или неравномерный полив.',
+            'Бледные пятна — уберите от прямого солнца.',
+            'Листья желтеют — дайте смеси просохнуть и проверьте, нет ли застоя у корней.',
+          ],
+        ],
+        [
+          'Divide a mature clump in late spring, keeping several healthy shoots and roots with each division.',
+          'Делите взрослый куст поздней весной: у каждой делёнки должны остаться несколько здоровых побегов и корней.',
+        ],
       ),
       'Goeppertia rufibarba',
-      ['Often sold as Calathea rufibarba. It is especially valued for its narrow, softly velvety leaves and wine-coloured undersides.', 'Часто продаётся под названием Calathea rufibarba. Её ценят за узкие мягко-бархатистые листья и винную изнанку.'],
-      ['Velvet calathea is a tropical Brazilian prayer plant with long wavy leaves, reddish petioles and deep burgundy undersides.', 'Калатея руфибарба — тропическое бразильское растение из марантовых с длинными волнистыми листьями, красноватыми черешками и глубокой бордовой изнанкой.'],
+      [
+        'Often sold as Calathea rufibarba. It is especially valued for its narrow, softly velvety leaves and wine-coloured undersides.',
+        'Часто продаётся под названием Calathea rufibarba. Её ценят за узкие мягко-бархатистые листья и винную изнанку.',
+      ],
+      [
+        'Velvet calathea is a tropical Brazilian prayer plant with long wavy leaves, reddish petioles and deep burgundy undersides.',
+        'Калатея руфибарба — тропическое бразильское растение из марантовых с длинными волнистыми листьями, красноватыми черешками и глубокой бордовой изнанкой.',
+      ],
       quickFacts(['Moderate', 'Умеренный'], ['Clump to 90 cm', 'Куст до 90 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Use a moisture-retentive but free-draining mix: 90% peat-free houseplant compost and 10% fine potting grit or perlite.', 'Используйте влагоёмкую, но хорошо дренированную смесь: 90% безторфяного грунта для комнатных растений и 10% мелкого посадочного гравия или перлита.']],
-        [['Repotting', 'Пересадка'], ['Repot or divide in late spring once the clump has filled its pot.', 'Пересаживайте или делите куст поздней весной, когда он освоит горшок.']],
-        [['Feeding', 'Подкормки'], ['Use a low-salt liquid fertiliser with N-P₂O₅-K₂O near 3-1-2 and Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer.', 'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2, а также Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. С весны до конца лета подкармливайте раз в месяц в ¼–½ дозы.']],
-        [['Grooming', 'Уход за листвой'], ['No support is needed. Remove only damaged leaves at the base and do not polish the naturally velvety foliage.', 'Опора не нужна. Удаляйте только повреждённые листья у основания и не полируйте естественно бархатистую листву.']],
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a moisture-retentive but free-draining mix: 90% peat-free houseplant compost and 10% fine potting grit or perlite.',
+            'Используйте влагоёмкую, но хорошо дренированную смесь: 90% безторфяного грунта для комнатных растений и 10% мелкого посадочного гравия или перлита.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot or divide in late spring once the clump has filled its pot.',
+            'Пересаживайте или делите куст поздней весной, когда он освоит горшок.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Use a low-salt liquid fertiliser with N-P₂O₅-K₂O near 3-1-2 and Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer.',
+            'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2, а также Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. С весны до конца лета подкармливайте раз в месяц в ¼–½ дозы.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листвой'],
+          [
+            'No support is needed. Remove only damaged leaves at the base and do not polish the naturally velvety foliage.',
+            'Опора не нужна. Удаляйте только повреждённые листья у основания и не полируйте естественно бархатистую листву.',
+          ],
+        ],
       ),
       {
         importantImage: '/plant-profile/rufibarba-important-leaves.png',
@@ -497,32 +964,125 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ['Vittata calathea', 'Калатея виттата'],
     plantProfile(
       careCards(
-        [['Light', 'Освещение'], ['Give bright, filtered or indirect light. Direct sun fades the pale stripes and can scorch the leaves.', 'Нужен яркий фильтрованный или рассеянный свет. Прямое солнце обесцвечивает светлые полосы и может обжечь листья.']],
-        [['Watering', 'Полив'], ['Keep the mix evenly moist during active growth, allowing only the surface to dry slightly. Never leave the roots waterlogged.', 'В период роста поддерживайте смесь равномерно влажной, позволяя лишь поверхности слегка подсохнуть. Не допускайте застоя воды у корней.']],
-        [['Humidity', 'Влажность'], ['High humidity helps preserve smooth leaf edges and clear variegation; avoid dry hot air.', 'Высокая влажность помогает сохранить ровные края листьев и чёткий рисунок; избегайте сухого горячего воздуха.']],
-        [['Temperature', 'Температура'], ['Keep warm and draught-free, ideally 18–27°C. Do not place close to cold glass.', 'Держите в тепле и без сквозняков, лучше при 18–27 °C. Не ставьте растение вплотную к холодному стеклу.']],
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright, filtered or indirect light. Direct sun fades the pale stripes and can scorch the leaves.',
+            'Нужен яркий фильтрованный или рассеянный свет. Прямое солнце обесцвечивает светлые полосы и может обжечь листья.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Keep the mix evenly moist during active growth, allowing only the surface to dry slightly. Never leave the roots waterlogged.',
+            'В период роста поддерживайте смесь равномерно влажной, позволяя лишь поверхности слегка подсохнуть. Не допускайте застоя воды у корней.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'High humidity helps preserve smooth leaf edges and clear variegation; avoid dry hot air.',
+            'Высокая влажность помогает сохранить ровные края листьев и чёткий рисунок; избегайте сухого горячего воздуха.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep warm and draught-free, ideally 18–27°C. Do not place close to cold glass.',
+            'Держите в тепле и без сквозняков, лучше при 18–27 °C. Не ставьте растение вплотную к холодному стеклу.',
+          ],
+        ],
       ),
       4,
       profileFacts(
-        [['Family', 'Семейство'], ['Prayer plant family (Marantaceae)', 'Марантовые (Marantaceae)']],
-        [['Origin', 'Родина'], ['Tropical northern South America and Brazil', 'Тропики севера Южной Америки и Бразилии']],
-        [['Plant type', 'Тип растения'], ['Rhizomatous evergreen perennial', 'Корневищный вечнозелёный многолетник']],
+        [
+          ['Family', 'Семейство'],
+          ['Prayer plant family (Marantaceae)', 'Марантовые (Marantaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Tropical northern South America and Brazil', 'Тропики севера Южной Америки и Бразилии'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Rhizomatous evergreen perennial', 'Корневищный вечнозелёный многолетник'],
+        ],
       ),
       profileFooter(
-        [['The pale, narrow stripes radiate from the midrib across each leaf.', 'The pattern stays clearest in stable bright indirect light.', 'Like other prayer plants, the leaves can rise and fold at night.', 'It grows as a compact clump, producing new leaves from its rhizome.'], ['Светлые узкие полосы расходятся от центральной жилки по всей пластинке.', 'Рисунок остаётся наиболее чётким при стабильном ярком рассеянном свете.', 'Как и другие марантовые, листья могут подниматься и складываться ночью.', 'Растение растёт компактным кустом, выпуская новые листья из корневища.']],
-        ['Do not let the root ball dry out completely. Keep the plant away from direct sun, cold glass and dry air from radiators.', 'Не пересушивайте корневой ком полностью. Берегите растение от прямого солнца, холодного стекла и сухого воздуха от батарей.'],
-        [['Brown tips — humidity may be low or water may be too hard.', 'Faded stripes — give more bright indirect light, not sun.', 'Yellowing leaves — check that the mix is not staying wet for too long.'], ['Коричневые кончики — вероятно, низкая влажность или слишком жёсткая вода.', 'Полосы бледнеют — добавьте яркого рассеянного света, но не прямого солнца.', 'Листья желтеют — проверьте, не остаётся ли смесь влажной слишком долго.']],
-        ['Divide a mature clump in late spring, keeping healthy roots and several shoots with each new plant.', 'Делите взрослый куст поздней весной: у каждого нового растения должны остаться здоровые корни и несколько побегов.'],
+        [
+          [
+            'The pale, narrow stripes radiate from the midrib across each leaf.',
+            'The pattern stays clearest in stable bright indirect light.',
+            'Like other prayer plants, the leaves can rise and fold at night.',
+            'It grows as a compact clump, producing new leaves from its rhizome.',
+          ],
+          [
+            'Светлые узкие полосы расходятся от центральной жилки по всей пластинке.',
+            'Рисунок остаётся наиболее чётким при стабильном ярком рассеянном свете.',
+            'Как и другие марантовые, листья могут подниматься и складываться ночью.',
+            'Растение растёт компактным кустом, выпуская новые листья из корневища.',
+          ],
+        ],
+        [
+          'Do not let the root ball dry out completely. Keep the plant away from direct sun, cold glass and dry air from radiators.',
+          'Не пересушивайте корневой ком полностью. Берегите растение от прямого солнца, холодного стекла и сухого воздуха от батарей.',
+        ],
+        [
+          [
+            'Brown tips — humidity may be low or water may be too hard.',
+            'Faded stripes — give more bright indirect light, not sun.',
+            'Yellowing leaves — check that the mix is not staying wet for too long.',
+          ],
+          [
+            'Коричневые кончики — вероятно, низкая влажность или слишком жёсткая вода.',
+            'Полосы бледнеют — добавьте яркого рассеянного света, но не прямого солнца.',
+            'Листья желтеют — проверьте, не остаётся ли смесь влажной слишком долго.',
+          ],
+        ],
+        [
+          'Divide a mature clump in late spring, keeping healthy roots and several shoots with each new plant.',
+          'Делите взрослый куст поздней весной: у каждого нового растения должны остаться здоровые корни и несколько побегов.',
+        ],
       ),
       "Goeppertia elliptica 'Vittata'",
-      ['Often sold as Calathea vittata. This horticultural form is prized for its fine pale pinstripes on fresh green leaves.', 'Часто продаётся как Calathea vittata. Эту садовую форму ценят за тонкие светлые полосы на свежей зелёной листве.'],
-      ['Vittata calathea is a striped form of Goeppertia elliptica, a tropical prayer plant that forms a compact clump of pointed, finely variegated leaves.', 'Калатея виттата — полосатая форма Goeppertia elliptica, тропического растения из марантовых, образующего компактный куст с заострёнными тонко-вариегатными листьями.'],
+      [
+        'Often sold as Calathea vittata. This horticultural form is prized for its fine pale pinstripes on fresh green leaves.',
+        'Часто продаётся как Calathea vittata. Эту садовую форму ценят за тонкие светлые полосы на свежей зелёной листве.',
+      ],
+      [
+        'Vittata calathea is a striped form of Goeppertia elliptica, a tropical prayer plant that forms a compact clump of pointed, finely variegated leaves.',
+        'Калатея виттата — полосатая форма Goeppertia elliptica, тропического растения из марантовых, образующего компактный куст с заострёнными тонко-вариегатными листьями.',
+      ],
       quickFacts(['Moderate', 'Умеренный'], ['Clump to 60 cm', 'Куст до 60 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Use a moisture-retentive but free-draining mix: 90% peat-free houseplant compost and 10% fine potting grit or perlite.', 'Используйте влагоёмкую, но хорошо дренированную смесь: 90% безторфяного грунта для комнатных растений и 10% мелкого посадочного гравия или перлита.']],
-        [['Repotting', 'Пересадка'], ['Repot or divide in late spring when the clump has filled its pot.', 'Пересаживайте или делите куст поздней весной, когда он освоит горшок.']],
-        [['Feeding', 'Подкормки'], ['Use a low-salt liquid fertiliser with N-P₂O₅-K₂O near 3-1-2 and Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer.', 'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2, а также Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. С весны до конца лета подкармливайте раз в месяц в ¼–½ дозы.']],
-        [['Grooming', 'Уход за листвой'], ['No support is needed. Remove only damaged leaves at the base and wipe dust with a soft damp cloth.', 'Опора не нужна. Удаляйте только повреждённые листья у основания, а пыль убирайте мягкой влажной салфеткой.']],
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a moisture-retentive but free-draining mix: 90% peat-free houseplant compost and 10% fine potting grit or perlite.',
+            'Используйте влагоёмкую, но хорошо дренированную смесь: 90% безторфяного грунта для комнатных растений и 10% мелкого посадочного гравия или перлита.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot or divide in late spring when the clump has filled its pot.',
+            'Пересаживайте или делите куст поздней весной, когда он освоит горшок.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Use a low-salt liquid fertiliser with N-P₂O₅-K₂O near 3-1-2 and Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer.',
+            'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2, а также Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. С весны до конца лета подкармливайте раз в месяц в ¼–½ дозы.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листвой'],
+          [
+            'No support is needed. Remove only damaged leaves at the base and wipe dust with a soft damp cloth.',
+            'Опора не нужна. Удаляйте только повреждённые листья у основания, а пыль убирайте мягкой влажной салфеткой.',
+          ],
+        ],
       ),
       {
         importantImage: '/plant-profile/vittata-important-leaves.png',
@@ -539,38 +1099,132 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ["Aglaonema 'Red Valentine'", "Аглаонема 'Red Valentine'"],
     plantProfile(
       careCards(
-        [['Light', 'Свет'], ['Bright diffused light without direct midday sun. Brighter filtered light helps preserve the pink-red coloring.', 'Яркий рассеянный свет без прямого полуденного солнца. Более светлое место помогает сохранить розово-красную окраску.']],
-        [['Watering', 'Полив'], ['Water after the top 2–4 cm of soil dries. Drain excess water and do not leave the roots standing in moisture.', 'Поливайте после просыхания верхних 2–4 см грунта. Сливайте лишнюю воду и не оставляйте корни в сырости.']],
-        [['Humidity', 'Влажность'], ['Average room humidity is suitable, but keep the plant away from heaters and dry drafts.', 'Подходит обычная комнатная влажность, но растение лучше держать подальше от батарей и сухих сквозняков.']],
-        [['Temperature', 'Температура'], ['Keep at 18–27 °C and protect from cold windows, drafts, and temperatures below 15 °C.', 'Содержите при 18–27 °C, защищая от холодного стекла, сквозняков и температуры ниже 15 °C.']],
+        [
+          ['Light', 'Свет'],
+          [
+            'Bright diffused light without direct midday sun. Brighter filtered light helps preserve the pink-red coloring.',
+            'Яркий рассеянный свет без прямого полуденного солнца. Более светлое место помогает сохранить розово-красную окраску.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water after the top 2–4 cm of soil dries. Drain excess water and do not leave the roots standing in moisture.',
+            'Поливайте после просыхания верхних 2–4 см грунта. Сливайте лишнюю воду и не оставляйте корни в сырости.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Average room humidity is suitable, but keep the plant away from heaters and dry drafts.',
+            'Подходит обычная комнатная влажность, но растение лучше держать подальше от батарей и сухих сквозняков.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–27 °C and protect from cold windows, drafts, and temperatures below 15 °C.',
+            'Содержите при 18–27 °C, защищая от холодного стекла, сквозняков и температуры ниже 15 °C.',
+          ],
+        ],
       ),
       2,
       profileFacts(
-        [['Family', 'Семейство'], ['Araceae', 'Ароидные']],
-        [['Origin', 'Происхождение'], ['Cultivated hybrid; the genus comes from tropical Asia', 'Культурный гибрид; род происходит из тропической Азии']],
-        [['Type', 'Тип'], ['Evergreen ornamental foliage perennial', 'Вечнозелёный декоративно-лиственный многолетник']],
+        [
+          ['Family', 'Семейство'],
+          ['Araceae', 'Ароидные'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          [
+            'Cultivated hybrid; the genus comes from tropical Asia',
+            'Культурный гибрид; род происходит из тропической Азии',
+          ],
+        ],
+        [
+          ['Type', 'Тип'],
+          [
+            'Evergreen ornamental foliage perennial',
+            'Вечнозелёный декоративно-лиственный многолетник',
+          ],
+        ],
       ),
       profileFooter(
         [
-          ['Broad leaves combine a pink-red field with irregular green flecks.', 'The intensity of the coloring depends on the amount of soft light.', 'The cultivar forms a compact, lush bush.'],
-          ['Широкие листья сочетают розово-красное поле с нерегулярными зелёными вкраплениями.', 'Интенсивность окраски зависит от количества мягкого света.', 'Сорт формирует компактный пышный куст.'],
+          [
+            'Broad leaves combine a pink-red field with irregular green flecks.',
+            'The intensity of the coloring depends on the amount of soft light.',
+            'The cultivar forms a compact, lush bush.',
+          ],
+          [
+            'Широкие листья сочетают розово-красное поле с нерегулярными зелёными вкраплениями.',
+            'Интенсивность окраски зависит от количества мягкого света.',
+            'Сорт формирует компактный пышный куст.',
+          ],
         ],
-        ['The sap contains calcium oxalate crystals. Keep away from children and pets and wash hands after pruning.', 'Сок содержит кристаллы оксалата кальция. Держите растение подальше от детей и животных, после обрезки мойте руки.'],
         [
-          ['Yellow, soft leaves usually indicate excess moisture or cold roots.', 'Brown tips can appear from very dry air or salt buildup in the soil.', 'Fading pink color usually means the plant needs more diffused light.'],
-          ['Жёлтые мягкие листья обычно говорят о переувлажнении или переохлаждении корней.', 'Коричневые кончики могут появляться из-за сухого воздуха или накопления солей в грунте.', 'Побледнение розовой окраски обычно означает нехватку рассеянного света.'],
+          'The sap contains calcium oxalate crystals. Keep away from children and pets and wash hands after pruning.',
+          'Сок содержит кристаллы оксалата кальция. Держите растение подальше от детей и животных, после обрезки мойте руки.',
         ],
-        ['Propagate by dividing a mature bush or by rooting stem cuttings during the warm growing season.', 'Размножайте делением взрослого куста или укоренением стеблевых черенков в тёплый период роста.'],
+        [
+          [
+            'Yellow, soft leaves usually indicate excess moisture or cold roots.',
+            'Brown tips can appear from very dry air or salt buildup in the soil.',
+            'Fading pink color usually means the plant needs more diffused light.',
+          ],
+          [
+            'Жёлтые мягкие листья обычно говорят о переувлажнении или переохлаждении корней.',
+            'Коричневые кончики могут появляться из-за сухого воздуха или накопления солей в грунте.',
+            'Побледнение розовой окраски обычно означает нехватку рассеянного света.',
+          ],
+        ],
+        [
+          'Propagate by dividing a mature bush or by rooting stem cuttings during the warm growing season.',
+          'Размножайте делением взрослого куста или укоренением стеблевых черенков в тёплый период роста.',
+        ],
       ),
       "Aglaonema 'Red Valentine'",
-      ['Wipe the leaves regularly and rotate the pot so the bush develops evenly.', 'Регулярно протирайте листья и поворачивайте горшок, чтобы куст развивался равномерно.'],
-      ["'Red Valentine' is valued for its unusually warm pink-red foliage and compact shape.", "'Red Valentine' ценят за необычную тёплую розово-красную листву и компактную форму."],
-      quickFacts(['Moderate', 'Умеренная'], ['Compact, about 40–60 cm', 'Компактная, около 40–60 см']),
+      [
+        'Wipe the leaves regularly and rotate the pot so the bush develops evenly.',
+        'Регулярно протирайте листья и поворачивайте горшок, чтобы куст развивался равномерно.',
+      ],
+      [
+        "'Red Valentine' is valued for its unusually warm pink-red foliage and compact shape.",
+        "'Red Valentine' ценят за необычную тёплую розово-красную листву и компактную форму.",
+      ],
+      quickFacts(
+        ['Moderate', 'Умеренная'],
+        ['Compact, about 40–60 cm', 'Компактная, около 40–60 см'],
+      ),
       careCards(
-        [['Soil', 'Грунт'], ['Use a loose, well-drained mix: 75% peat-free houseplant compost and 25% perlite or fine pumice.', 'Используйте рыхлую, хорошо дренированную смесь: 75% безторфяного грунта для комнатных растений и 25% перлита или мелкой пемзы.']],
-        [['Repotting', 'Пересадка'], ['Repot in spring when roots fill the pot, choosing a container only slightly larger than the previous one.', 'Пересаживайте весной, когда корни заполнят горшок, выбирая ёмкость лишь немного больше предыдущей.']],
-        [['Feeding', 'Подкормка'], ['Feed monthly in spring and summer with a balanced foliage fertilizer at half strength.', 'Весной и летом подкармливайте раз в месяц половинной дозой сбалансированного удобрения для декоративно-лиственных.']],
-        [['Grooming', 'Уход за листьями'], ['Remove yellow leaves at the base and wipe healthy leaves with a soft damp cloth.', 'Удаляйте пожелтевшие листья у основания, а здоровые протирайте мягкой влажной тканью.']],
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a loose, well-drained mix: 75% peat-free houseplant compost and 25% perlite or fine pumice.',
+            'Используйте рыхлую, хорошо дренированную смесь: 75% безторфяного грунта для комнатных растений и 25% перлита или мелкой пемзы.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring when roots fill the pot, choosing a container only slightly larger than the previous one.',
+            'Пересаживайте весной, когда корни заполнят горшок, выбирая ёмкость лишь немного больше предыдущей.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормка'],
+          [
+            'Feed monthly in spring and summer with a balanced foliage fertilizer at half strength.',
+            'Весной и летом подкармливайте раз в месяц половинной дозой сбалансированного удобрения для декоративно-лиственных.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листьями'],
+          [
+            'Remove yellow leaves at the base and wipe healthy leaves with a soft damp cloth.',
+            'Удаляйте пожелтевшие листья у основания, а здоровые протирайте мягкой влажной тканью.',
+          ],
+        ],
       ),
       {
         importantImage: '/plant-profile/aglaonema-red-valentine-important.png',
@@ -586,6 +1240,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ["Aglaonema 'Red Peacock'", "Аглаонема 'Red Peacock'"],
     aglaonemaProfile(
       'Red Peacock',
+      ['the red and pink tones', 'красные и розовые оттенки'],
       [
         [
           'Each leaf develops its own mix of coral-red, warm pink, lime, and deep green.',
@@ -617,38 +1272,210 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ),
   ),
   collectionPlant(
+    'araceae',
+    'aglaonema-siam-aurora',
+    '/plant-profile/aglaonema-siam-aurora.jpg',
+    ["Aglaonema 'Siam Aurora'", "Аглаонема 'Сиам Аврора'"],
+    aglaonemaProfile(
+      'Siam Aurora',
+      ['the red-pink margins', 'красно-розовую кайму'],
+      [
+        [
+          'The narrow green leaves are outlined by vivid red-pink margins and matching midribs.',
+          'Fine golden-green mottling makes the pattern of every leaf slightly different.',
+          'New growth opens from pale pink sheaths at the center of the rosette.',
+          'Basal shoots gradually turn a young plant into a fuller clump.',
+        ],
+        [
+          'Узкие зелёные листья очерчены яркой красно-розовой каймой и такой же центральной жилкой.',
+          'Мелкий золотисто-зелёный крап делает рисунок каждого листа немного разным.',
+          'Новые листья разворачиваются из светло-розовых влагалищ в центре розетки.',
+          'Прикорневые побеги постепенно превращают молодое растение в более пышный куст.',
+        ],
+      ],
+      [
+        'Keep the leaves clean and turn the pot regularly so the red-edged rosette grows evenly.',
+        'Поддерживайте листья чистыми и регулярно поворачивайте горшок, чтобы красноокаймлённая розетка росла равномерно.',
+      ],
+      [
+        "'Siam Aurora' is an elegant aglaonema cultivar with narrow green leaves traced by vivid red-pink margins and midribs.",
+        "'Сиам Аврора' — элегантный сорт аглаонемы с узкими зелёными листьями, яркой красно-розовой каймой и центральной жилкой.",
+      ],
+      ['Compact, about 35–50 cm', 'Компактная, около 35–50 см'],
+      {
+        importantImage: '/plant-profile/aglaonema-siam-aurora-important.png',
+        propagationImage: '/plant-profile/aglaonema-siam-aurora-propagation.png',
+        saleImage: '/plant-profile/aglaonema-siam-aurora-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'aglaonema-silver-queen',
+    '/plant-profile/aglaonema-silver-queen.jpg',
+    ["Aglaonema 'Silver Queen'", "Аглаонема 'Silver Queen'"],
+    aglaonemaProfile(
+      'Silver Queen',
+      ['the silvery pattern', 'серебристый рисунок'],
+      [
+        [
+          'Long lance-shaped leaves combine dark green margins with broad silvery gray-green feathering.',
+          'Each leaf carries a slightly different irregular camouflage-like pattern.',
+          'The arching foliage gives a mature plant a soft fountain-shaped silhouette.',
+          'Older clumps develop several upright canes and dense basal growth.',
+        ],
+        [
+          'Длинные ланцетные листья сочетают тёмно-зелёные края с широким серебристо-серо-зелёным рисунком.',
+          'На каждом листе формируется немного разный нерегулярный узор, похожий на камуфляж.',
+          'Дуговидная листва придаёт взрослому растению мягкий фонтанообразный силуэт.',
+          'У старых кустов образуются несколько прямостоячих стеблей и густая прикорневая поросль.',
+        ],
+      ],
+      [
+        'Wipe the long leaves carefully and remove aging yellow leaves at the base to keep the clump airy.',
+        'Осторожно протирайте длинные листья и удаляйте стареющие жёлтые листья у основания, чтобы куст оставался воздушным.',
+      ],
+      [
+        "'Silver Queen' is a classic aglaonema cultivar valued for its long arching leaves with a broad silvery pattern over deep green.",
+        "'Silver Queen' — классический сорт аглаонемы с длинными дуговидными листьями и широким серебристым рисунком на тёмно-зелёном фоне.",
+      ],
+      ['Moderate, clump-forming', 'Умеренная, кустящаяся'],
+      {
+        importantImage: '/plant-profile/aglaonema-silver-queen-important.png',
+        propagationImage: '/plant-profile/aglaonema-silver-queen-propagation.png',
+        saleImage: '/plant-profile/aglaonema-silver-queen-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
     'commelinaceae',
     'tradescantia-collection',
     '/plant-profile/tradescantia-cover.webp',
     ['Tradescantia collection', 'Традесканции'],
     plantProfile(
       careCards(
-        [['Light', 'Освещение'], ['Give bright indirect light. Variegated forms keep their colour best close to a bright window without harsh midday sun.', 'Нужен яркий рассеянный свет. Вариегатные формы лучше сохраняют окраску рядом со светлым окном, но без жёсткого полуденного солнца.']],
-        [['Watering', 'Полив'], ['Water after the upper layer of the mix has dried. Let excess water drain freely and never leave the pot standing in water.', 'Поливайте после подсыхания верхнего слоя грунта. Давайте лишней воде свободно стечь и не оставляйте горшок в воде.']],
-        [['Humidity', 'Влажность'], ['Normal room humidity is usually enough. Keep hairy T. sillamontana foliage dry and provide gentle air movement.', 'Обычной комнатной влажности обычно достаточно. Опушённые листья T. sillamontana держите сухими и обеспечьте лёгкое движение воздуха.']],
-        [['Temperature', 'Температура'], ['Grow at 18–26°C and protect from cold draughts. Prolonged temperatures below about 12°C can damage tender growth.', 'Выращивайте при 18–26 °C и берегите от холодных сквозняков. Длительная температура ниже примерно 12 °C может повредить нежные побеги.']],
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright indirect light. Variegated forms keep their colour best close to a bright window without harsh midday sun.',
+            'Нужен яркий рассеянный свет. Вариегатные формы лучше сохраняют окраску рядом со светлым окном, но без жёсткого полуденного солнца.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water after the upper layer of the mix has dried. Let excess water drain freely and never leave the pot standing in water.',
+            'Поливайте после подсыхания верхнего слоя грунта. Давайте лишней воде свободно стечь и не оставляйте горшок в воде.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Normal room humidity is usually enough. Keep hairy T. sillamontana foliage dry and provide gentle air movement.',
+            'Обычной комнатной влажности обычно достаточно. Опушённые листья T. sillamontana держите сухими и обеспечьте лёгкое движение воздуха.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Grow at 18–26°C and protect from cold draughts. Prolonged temperatures below about 12°C can damage tender growth.',
+            'Выращивайте при 18–26 °C и берегите от холодных сквозняков. Длительная температура ниже примерно 12 °C может повредить нежные побеги.',
+          ],
+        ],
       ),
       1,
       profileFacts(
-        [['Family', 'Семейство'], ['Spiderwort family (Commelinaceae)', 'Коммелиновые (Commelinaceae)']],
-        [['Origin', 'Родина'], ['Tropical and subtropical Americas', 'Тропические и субтропические районы Америки']],
-        [['Plant type', 'Тип растения'], ['Evergreen trailing or spreading perennial', 'Вечнозелёный стелющийся или раскидистый многолетник']],
+        [
+          ['Family', 'Семейство'],
+          ['Spiderwort family (Commelinaceae)', 'Коммелиновые (Commelinaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Tropical and subtropical Americas', 'Тропические и субтропические районы Америки'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          [
+            'Evergreen trailing or spreading perennial',
+            'Вечнозелёный стелющийся или раскидистый многолетник',
+          ],
+        ],
       ),
       profileFooter(
-        [['Tradescantias root readily from stem nodes.', 'Leaf colour becomes richer in bright indirect light.', 'Regular pinching makes the plants fuller and more compact.', 'The collection includes smooth, striped, purple and softly woolly leaves.'], ['Традесканции легко укореняются из узлов побега.', 'При ярком рассеянном свете окраска листьев становится выразительнее.', 'Регулярная прищипка делает растения гуще и компактнее.', 'В коллекции есть гладкие, полосатые, пурпурные и мягко опушённые листья.']],
-        ['Avoid constantly wet soil. T. sillamontana is especially sensitive to moisture trapped on its dense woolly foliage.', 'Не держите грунт постоянно мокрым. T. sillamontana особенно чувствительна к влаге, которая задерживается на густо опушённых листьях.'],
-        [['Long bare stems — pinch the tips and give more light.', 'Faded variegation — move closer to bright indirect light.', 'Soft yellowing growth — check for overwatering and poor drainage.'], ['Длинные оголённые побеги — прищипните верхушки и добавьте света.', 'Вариегатность бледнеет — переставьте ближе к яркому рассеянному свету.', 'Мягкие желтеющие побеги — проверьте, нет ли перелива и плохого дренажа.']],
-        ['Cut a healthy shoot below a node, remove the lowest leaves and root several cuttings together in a light, slightly moist mix for a full pot.', 'Срежьте здоровый побег под узлом, удалите нижние листья и укорените сразу несколько черенков в лёгком, слегка влажном грунте, чтобы получить пышный куст.'],
+        [
+          [
+            'Tradescantias root readily from stem nodes.',
+            'Leaf colour becomes richer in bright indirect light.',
+            'Regular pinching makes the plants fuller and more compact.',
+            'The collection includes smooth, striped, purple and softly woolly leaves.',
+          ],
+          [
+            'Традесканции легко укореняются из узлов побега.',
+            'При ярком рассеянном свете окраска листьев становится выразительнее.',
+            'Регулярная прищипка делает растения гуще и компактнее.',
+            'В коллекции есть гладкие, полосатые, пурпурные и мягко опушённые листья.',
+          ],
+        ],
+        [
+          'Avoid constantly wet soil. T. sillamontana is especially sensitive to moisture trapped on its dense woolly foliage.',
+          'Не держите грунт постоянно мокрым. T. sillamontana особенно чувствительна к влаге, которая задерживается на густо опушённых листьях.',
+        ],
+        [
+          [
+            'Long bare stems — pinch the tips and give more light.',
+            'Faded variegation — move closer to bright indirect light.',
+            'Soft yellowing growth — check for overwatering and poor drainage.',
+          ],
+          [
+            'Длинные оголённые побеги — прищипните верхушки и добавьте света.',
+            'Вариегатность бледнеет — переставьте ближе к яркому рассеянному свету.',
+            'Мягкие желтеющие побеги — проверьте, нет ли перелива и плохого дренажа.',
+          ],
+        ],
+        [
+          'Cut a healthy shoot below a node, remove the lowest leaves and root several cuttings together in a light, slightly moist mix for a full pot.',
+          'Срежьте здоровый побег под узлом, удалите нижние листья и укорените сразу несколько черенков в лёгком, слегка влажном грунте, чтобы получить пышный куст.',
+        ],
       ),
       'Tradescantia spp. and cultivars',
-      ['I grow many tradescantias with different leaf colours, stripes and textures. Most of this collection began as small cuttings.', 'У меня много традесканций с разной окраской, полосами и фактурой листьев. Большая часть этой коллекции начиналась с маленьких черенков.'],
-      ['Tradescantias are quick-growing plants valued for colourful foliage and their ability to form a lush cascading pot from just a few cuttings.', 'Традесканции — быстрорастущие растения, которые ценят за яркую листву и способность всего из нескольких черенков превращаться в пышный каскадный куст.'],
+      [
+        'I grow many tradescantias with different leaf colours, stripes and textures. Most of this collection began as small cuttings.',
+        'У меня много традесканций с разной окраской, полосами и фактурой листьев. Большая часть этой коллекции начиналась с маленьких черенков.',
+      ],
+      [
+        'Tradescantias are quick-growing plants valued for colourful foliage and their ability to form a lush cascading pot from just a few cuttings.',
+        'Традесканции — быстрорастущие растения, которые ценят за яркую листву и способность всего из нескольких черенков превращаться в пышный каскадный куст.',
+      ],
       quickFacts(['Fast', 'Быстрый'], ['Trailing shoots 30–60 cm', 'Свисающие побеги 30–60 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Use a light, well-drained mix: 70% peat-free houseplant compost, 20% perlite and 10% coarse horticultural sand.', 'Используйте лёгкую, хорошо дренированную смесь: 70% безторфяного грунта для комнатных растений, 20% перлита и 10% крупного садового песка.']],
-        [['Repotting', 'Пересадка'], ['Repot in spring when roots fill the pot. A wide, shallow container suits several rooted cuttings planted together.', 'Пересаживайте весной, когда корни освоят горшок. Для нескольких укоренённых вместе черенков подойдёт широкий неглубокий горшок.']],
-        [['Feeding', 'Подкормки'], ['From spring to early autumn, feed monthly with a balanced liquid fertiliser at half strength. Do not feed dry or stressed plants.', 'С весны до начала осени подкармливайте раз в месяц сбалансированным жидким удобрением в половинной дозировке. Не удобряйте пересушенные или ослабленные растения.']],
-        [['Pruning', 'Формирование'], ['Pinch growing tips regularly and replant rooted cuttings into the same pot to keep the centre dense.', 'Регулярно прищипывайте верхушки и подсаживайте укоренённые черенки в тот же горшок, чтобы середина куста оставалась густой.']],
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a light, well-drained mix: 70% peat-free houseplant compost, 20% perlite and 10% coarse horticultural sand.',
+            'Используйте лёгкую, хорошо дренированную смесь: 70% безторфяного грунта для комнатных растений, 20% перлита и 10% крупного садового песка.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring when roots fill the pot. A wide, shallow container suits several rooted cuttings planted together.',
+            'Пересаживайте весной, когда корни освоят горшок. Для нескольких укоренённых вместе черенков подойдёт широкий неглубокий горшок.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed monthly with a balanced liquid fertiliser at half strength. Do not feed dry or stressed plants.',
+            'С весны до начала осени подкармливайте раз в месяц сбалансированным жидким удобрением в половинной дозировке. Не удобряйте пересушенные или ослабленные растения.',
+          ],
+        ],
+        [
+          ['Pruning', 'Формирование'],
+          [
+            'Pinch growing tips regularly and replant rooted cuttings into the same pot to keep the centre dense.',
+            'Регулярно прищипывайте верхушки и подсаживайте укоренённые черенки в тот же горшок, чтобы середина куста оставалась густой.',
+          ],
+        ],
       ),
       {
         importantImage: '/plant-profile/tradescantia-important.png',
@@ -656,23 +1483,65 @@ export const collectionPlants: readonly CollectionPlant[] = [
         saleImage: '/plant-profile/tradescantia-for-sale.png',
         variants: profileVariants(
           ['My Tradescantia collection', 'Моя коллекция традесканций'],
-          ['These plants began as small cuttings with distinctly different leaves. The gallery shows how each one can look as a mature, full potted plant.', 'Эти растения начинались с маленьких черенков с совершенно разными листьями. В галерее показано, как каждый из них может выглядеть взрослым пышным растением в горшке.'],
-          ['/plant-profile/tradescantia-variants/nanouk.webp', ["'Nanouk' (likely)", "'Nanouk' (предположительно)"]],
-          ['/plant-profile/tradescantia-variants/dark-broad.webp', ['Dark broad-leaved form', 'Тёмная широколистная форма']],
-          ['/plant-profile/tradescantia-variants/fine-striped.webp', ['Fine-striped form', 'Тонкополосатая форма']],
+          [
+            'These plants began as small cuttings with distinctly different leaves. The gallery shows how each one can look as a mature, full potted plant.',
+            'Эти растения начинались с маленьких черенков с совершенно разными листьями. В галерее показано, как каждый из них может выглядеть взрослым пышным растением в горшке.',
+          ],
+          [
+            '/plant-profile/tradescantia-variants/nanouk.webp',
+            ["'Nanouk' (likely)", "'Nanouk' (предположительно)"],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/dark-broad.webp',
+            ['Dark broad-leaved form', 'Тёмная широколистная форма'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/fine-striped.webp',
+            ['Fine-striped form', 'Тонкополосатая форма'],
+          ],
           ['/plant-profile/tradescantia-variants/green.webp', ['Green form', 'Зелёная форма']],
-          ['/plant-profile/tradescantia-variants/tricolor.webp', ["'Tricolor' (likely)", "'Tricolor' (предположительно)"]],
-          ['/plant-profile/tradescantia-variants/baby-bunny.webp', ["'Baby Bunny Bellies' (likely)", "'Baby Bunny Bellies' (предположительно)"]],
-          ['/plant-profile/tradescantia-variants/purpurea.webp', ["T. pallida 'Purpurea'", "T. pallida 'Purpurea'"]],
-          ['/plant-profile/tradescantia-variants/zebrina-burgundy.webp', ['T. zebrina, burgundy form', 'T. zebrina, бордовая форма']],
-          ['/plant-profile/tradescantia-variants/white-pinstripe.webp', ['White pinstripe form', 'Бело-полосатая форма']],
-          ['/plant-profile/tradescantia-variants/green-purple.webp', ['Green-purple form', 'Зелёно-пурпурная форма']],
-          ['/plant-profile/tradescantia-variants/zebrina-silver.webp', ['T. zebrina, silver form', 'T. zebrina, серебристая форма']],
-          ['/plant-profile/tradescantia-variants/variegated.webp', ['Variegated trailing form', 'Вариегатная ампельная форма']],
-          ['/plant-profile/tradescantia-variants/dark-green-striped.webp', ['Dark green striped form', 'Тёмно-зелёная полосатая форма']],
+          [
+            '/plant-profile/tradescantia-variants/tricolor.webp',
+            ["'Tricolor' (likely)", "'Tricolor' (предположительно)"],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/baby-bunny.webp',
+            ["'Baby Bunny Bellies' (likely)", "'Baby Bunny Bellies' (предположительно)"],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/purpurea.webp',
+            ["T. pallida 'Purpurea'", "T. pallida 'Purpurea'"],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/zebrina-burgundy.webp',
+            ['T. zebrina, burgundy form', 'T. zebrina, бордовая форма'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/white-pinstripe.webp',
+            ['White pinstripe form', 'Бело-полосатая форма'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/green-purple.webp',
+            ['Green-purple form', 'Зелёно-пурпурная форма'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/zebrina-silver.webp',
+            ['T. zebrina, silver form', 'T. zebrina, серебристая форма'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/variegated.webp',
+            ['Variegated trailing form', 'Вариегатная ампельная форма'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/dark-green-striped.webp',
+            ['Dark green striped form', 'Тёмно-зелёная полосатая форма'],
+          ],
           ['/plant-profile/tradescantia-variants/white.webp', ['White', 'Белая']],
           ['/plant-profile/tradescantia-variants/gold.webp', ['Gold', 'Голд']],
-          ['/plant-profile/tradescantia-variants/sillamontana.webp', ['T. sillamontana', 'Силламонтана']],
+          [
+            '/plant-profile/tradescantia-variants/sillamontana.webp',
+            ['T. sillamontana', 'Силламонтана'],
+          ],
         ),
       },
     ),
@@ -684,32 +1553,125 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ['Callisia collection', 'Каллизии'],
     plantProfile(
       careCards(
-        [['Light', 'Освещение'], ['Give bright indirect light. Gold and Pink Panther keep their colour best near a bright window without harsh midday sun.', 'Нужен яркий рассеянный свет. «Голд» и «Розовая пантера» лучше сохраняют окраску рядом со светлым окном, но без жёсткого полуденного солнца.']],
-        [['Watering', 'Полив'], ['Water when the top 1–2 cm of mix has dried. Let excess water drain and avoid keeping the fine roots constantly wet.', 'Поливайте после подсыхания верхних 1–2 см грунта. Давайте лишней воде стечь и не держите тонкие корни постоянно мокрыми.']],
-        [['Humidity', 'Влажность'], ['Average room humidity is suitable. Good air movement helps dense trailing growth stay healthy.', 'Подходит обычная комнатная влажность. Лёгкое движение воздуха помогает густым свисающим побегам оставаться здоровыми.']],
-        [['Temperature', 'Температура'], ['Grow at 18–27°C and keep away from cold glass and draughts. Protect from temperatures below about 12°C.', 'Выращивайте при 18–27 °C и берегите от холодного стекла и сквозняков. Не допускайте температуры ниже примерно 12 °C.']],
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright indirect light. Gold and Pink Panther keep their colour best near a bright window without harsh midday sun.',
+            'Нужен яркий рассеянный свет. «Голд» и «Розовая пантера» лучше сохраняют окраску рядом со светлым окном, но без жёсткого полуденного солнца.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water when the top 1–2 cm of mix has dried. Let excess water drain and avoid keeping the fine roots constantly wet.',
+            'Поливайте после подсыхания верхних 1–2 см грунта. Давайте лишней воде стечь и не держите тонкие корни постоянно мокрыми.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Average room humidity is suitable. Good air movement helps dense trailing growth stay healthy.',
+            'Подходит обычная комнатная влажность. Лёгкое движение воздуха помогает густым свисающим побегам оставаться здоровыми.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Grow at 18–27°C and keep away from cold glass and draughts. Protect from temperatures below about 12°C.',
+            'Выращивайте при 18–27 °C и берегите от холодного стекла и сквозняков. Не допускайте температуры ниже примерно 12 °C.',
+          ],
+        ],
       ),
       1,
       profileFacts(
-        [['Family', 'Семейство'], ['Spiderwort family (Commelinaceae)', 'Коммелиновые (Commelinaceae)']],
-        [['Origin', 'Родина'], ['Tropical Central and South America', 'Тропические районы Центральной и Южной Америки']],
-        [['Plant type', 'Тип растения'], ['Evergreen trailing perennial', 'Вечнозелёный ампельный многолетник']],
+        [
+          ['Family', 'Семейство'],
+          ['Spiderwort family (Commelinaceae)', 'Коммелиновые (Commelinaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Tropical Central and South America', 'Тропические районы Центральной и Южной Америки'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen trailing perennial', 'Вечнозелёный ампельный многолетник'],
+        ],
       ),
       profileFooter(
-        [['Small leaves grow in neat pairs along fine branching stems.', 'Frequent pinching turns a few cuttings into a dense cushion.', 'Gold and Pink Panther need brighter indirect light to hold their colour.', 'The stems root readily wherever a node touches moist mix.'], ['Мелкие листья растут аккуратными парами на тонких ветвящихся побегах.', 'Регулярная прищипка превращает несколько черенков в густую подушку.', 'Формам «Голд» и «Розовая пантера» нужен более яркий рассеянный свет для сохранения окраски.', 'Побеги легко укореняются там, где узел касается влажного грунта.']],
-        ['Do not overwater a freshly rooted plant: its small root system needs air as much as moisture.', 'Не переливайте недавно укоренённое растение: его небольшой корневой системе воздух нужен не меньше, чем влага.'],
-        [['Long sparse stems — give more bright indirect light and pinch the tips.', 'Green reversion in variegated forms — remove green shoots and improve the light.', 'Soft dark stems — check for excess moisture and poor drainage.'], ['Длинные редкие побеги — добавьте яркого рассеянного света и прищипните верхушки.', 'Вариегатная форма зеленеет — удалите зелёные побеги и улучшите освещение.', 'Мягкие потемневшие стебли — проверьте, нет ли лишней влаги и плохого дренажа.']],
-        ['Cut healthy tips below a node, remove the lowest leaves and plant several cuttings together in a light, slightly moist mix.', 'Срежьте здоровые верхушки под узлом, удалите нижние листья и посадите несколько черенков вместе в лёгкий, слегка влажный грунт.'],
+        [
+          [
+            'Small leaves grow in neat pairs along fine branching stems.',
+            'Frequent pinching turns a few cuttings into a dense cushion.',
+            'Gold and Pink Panther need brighter indirect light to hold their colour.',
+            'The stems root readily wherever a node touches moist mix.',
+          ],
+          [
+            'Мелкие листья растут аккуратными парами на тонких ветвящихся побегах.',
+            'Регулярная прищипка превращает несколько черенков в густую подушку.',
+            'Формам «Голд» и «Розовая пантера» нужен более яркий рассеянный свет для сохранения окраски.',
+            'Побеги легко укореняются там, где узел касается влажного грунта.',
+          ],
+        ],
+        [
+          'Do not overwater a freshly rooted plant: its small root system needs air as much as moisture.',
+          'Не переливайте недавно укоренённое растение: его небольшой корневой системе воздух нужен не меньше, чем влага.',
+        ],
+        [
+          [
+            'Long sparse stems — give more bright indirect light and pinch the tips.',
+            'Green reversion in variegated forms — remove green shoots and improve the light.',
+            'Soft dark stems — check for excess moisture and poor drainage.',
+          ],
+          [
+            'Длинные редкие побеги — добавьте яркого рассеянного света и прищипните верхушки.',
+            'Вариегатная форма зеленеет — удалите зелёные побеги и улучшите освещение.',
+            'Мягкие потемневшие стебли — проверьте, нет ли лишней влаги и плохого дренажа.',
+          ],
+        ],
+        [
+          'Cut healthy tips below a node, remove the lowest leaves and plant several cuttings together in a light, slightly moist mix.',
+          'Срежьте здоровые верхушки под узлом, удалите нижние листья и посадите несколько черенков вместе в лёгкий, слегка влажный грунт.',
+        ],
       ),
       'Callisia repens and cultivars',
-      ['My Callisia collection has three distinct forms: classic green, luminous Gold and pastel Pink Panther.', 'В моей коллекции три разные каллизии: зелёная классическая, светлая «Голд» и пастельная «Розовая пантера».'],
-      ['Callisia repens is a compact relative of Tradescantia. Its fine branching stems quickly form a soft cascading cushion of small leaves.', 'Каллизия ползучая — компактная родственница традесканции. Её тонкие ветвящиеся побеги быстро образуют мягкую каскадную подушку из мелких листьев.'],
+      [
+        'My Callisia collection has three distinct forms: classic green, luminous Gold and pastel Pink Panther.',
+        'В моей коллекции три разные каллизии: зелёная классическая, светлая «Голд» и пастельная «Розовая пантера».',
+      ],
+      [
+        'Callisia repens is a compact relative of Tradescantia. Its fine branching stems quickly form a soft cascading cushion of small leaves.',
+        'Каллизия ползучая — компактная родственница традесканции. Её тонкие ветвящиеся побеги быстро образуют мягкую каскадную подушку из мелких листьев.',
+      ],
       quickFacts(['Fast', 'Быстрый'], ['Trailing shoots 20–40 cm', 'Свисающие побеги 20–40 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Use a sandy, well-drained mix: 60% peat-free houseplant compost, 25% perlite and 15% coarse horticultural sand.', 'Используйте песчаную, хорошо дренированную смесь: 60% безторфяного грунта для комнатных растений, 25% перлита и 15% крупного садового песка.']],
-        [['Repotting', 'Пересадка'], ['Repot in spring into a wide, shallow pot. Plant several rooted cuttings together for an even, full cushion.', 'Пересаживайте весной в широкий неглубокий горшок. Для ровной пышной подушки высаживайте вместе несколько укоренённых черенков.']],
-        [['Feeding', 'Подкормки'], ['From spring to early autumn, feed monthly with a balanced liquid fertiliser at half strength.', 'С весны до начала осени подкармливайте раз в месяц сбалансированным жидким удобрением в половинной дозировке.']],
-        [['Pruning', 'Формирование'], ['Pinch growing tips regularly and replant rooted cuttings into the same pot to keep the centre dense.', 'Регулярно прищипывайте верхушки и подсаживайте укоренённые черенки в тот же горшок, чтобы середина оставалась густой.']],
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a sandy, well-drained mix: 60% peat-free houseplant compost, 25% perlite and 15% coarse horticultural sand.',
+            'Используйте песчаную, хорошо дренированную смесь: 60% безторфяного грунта для комнатных растений, 25% перлита и 15% крупного садового песка.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring into a wide, shallow pot. Plant several rooted cuttings together for an even, full cushion.',
+            'Пересаживайте весной в широкий неглубокий горшок. Для ровной пышной подушки высаживайте вместе несколько укоренённых черенков.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed monthly with a balanced liquid fertiliser at half strength.',
+            'С весны до начала осени подкармливайте раз в месяц сбалансированным жидким удобрением в половинной дозировке.',
+          ],
+        ],
+        [
+          ['Pruning', 'Формирование'],
+          [
+            'Pinch growing tips regularly and replant rooted cuttings into the same pot to keep the centre dense.',
+            'Регулярно прищипывайте верхушки и подсаживайте укоренённые черенки в тот же горшок, чтобы середина оставалась густой.',
+          ],
+        ],
       ),
       {
         importantImage: '/plant-profile/callisia-important.png',
@@ -717,10 +1679,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         saleImage: '/plant-profile/callisia-for-sale.png',
         variants: profileVariants(
           ['My Callisia collection', 'Моя коллекция каллизий'],
-          ['These forms began as small rooted shoots. The gallery shows how their different leaf colours look in mature, full pots.', 'Эти формы начинались с маленьких укоренённых ростков. В галерее показано, как их разная окраска выглядит во взрослых пышных горшках.'],
+          [
+            'These forms began as small rooted shoots. The gallery shows how their different leaf colours look in mature, full pots.',
+            'Эти формы начинались с маленьких укоренённых ростков. В галерее показано, как их разная окраска выглядит во взрослых пышных горшках.',
+          ],
           ['/plant-profile/callisia-variants/classic.webp', ['Classic', 'Классическая']],
           ['/plant-profile/callisia-variants/gold.webp', ['Gold', 'Голд']],
-          ['/plant-profile/callisia-variants/pink-panther.webp', ["'Pink Panther'", '«Розовая пантера»']],
+          [
+            '/plant-profile/callisia-variants/pink-panther.webp',
+            ["'Pink Panther'", '«Розовая пантера»'],
+          ],
         ),
       },
     ),
@@ -732,32 +1700,128 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ['Phalaenopsis', 'Фаленопсисы'],
     plantProfile(
       careCards(
-        [['Light', 'Освещение'], ['Give bright indirect light without harsh midday sun.', 'Нужен яркий рассеянный свет без жёсткого полуденного солнца.']],
-        [['Watering', 'Полив'], ['Soak after the roots turn silvery, then let all excess water drain.', 'Замачивайте после того, как корни посеребрятся, затем полностью сливайте лишнюю воду.']],
-        [['Humidity', 'Влажность'], ['About 40–60% humidity with gentle air movement is ideal.', 'Оптимальна влажность около 40–60% при мягкой циркуляции воздуха.']],
-        [['Temperature', 'Температура'], ['Keep at 18–27°C and protect from cold draughts.', 'Держите при 18–27 °C и берегите от холодных сквозняков.']],
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright indirect light without harsh midday sun.',
+            'Нужен яркий рассеянный свет без жёсткого полуденного солнца.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Soak after the roots turn silvery, then let all excess water drain.',
+            'Замачивайте после того, как корни посеребрятся, затем полностью сливайте лишнюю воду.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'About 40–60% humidity with gentle air movement is ideal.',
+            'Оптимальна влажность около 40–60% при мягкой циркуляции воздуха.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–27°C and protect from cold draughts.',
+            'Держите при 18–27 °C и берегите от холодных сквозняков.',
+          ],
+        ],
       ),
       3,
       profileFacts(
-        [['Family', 'Семейство'], ['Orchid family (Orchidaceae)', 'Орхидные (Orchidaceae)']],
-        [['Origin', 'Родина'], ['Tropical Asia and Australia', 'Тропическая Азия и Австралия']],
-        [['Plant type', 'Тип растения'], ['Epiphytic flowering perennial', 'Эпифитный цветущий многолетник']],
+        [
+          ['Family', 'Семейство'],
+          ['Orchid family (Orchidaceae)', 'Орхидные (Orchidaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Tropical Asia and Australia', 'Тропическая Азия и Австралия'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Epiphytic flowering perennial', 'Эпифитный цветущий многолетник'],
+        ],
       ),
       profileFooter(
-        [['Flower spikes can stay decorative for several months.', 'Healthy roots are firm, green after watering and silvery when dry.', 'A transparent ventilated pot makes root condition easier to monitor.', 'A small night-time temperature drop can encourage a new spike.'], ['Цветоносы могут сохранять декоративность несколько месяцев.', 'Здоровые корни плотные, зелёные после полива и серебристые в сухом состоянии.', 'Прозрачный проветриваемый горшок помогает следить за состоянием корней.', 'Небольшой перепад ночной температуры может стимулировать новый цветонос.']],
-        ['Keep water out of the crown and never leave the pot standing in water.', 'Не оставляйте воду в точке роста и не держите горшок в воде.'],
-        [['Root or crown rot — usually caused by stagnant moisture or water trapped between leaves.', 'Wrinkled leaves — check the roots: the plant may be dry or unable to absorb water.', 'Bud blast — often follows draughts, relocation or sharp temperature changes.'], ['Гниль корней или точки роста — обычно возникает из-за застоя влаги или воды между листьями.', 'Сморщенные листья — проверьте корни: растение может быть пересушено или не усваивать воду.', 'Опадение бутонов — часто случается после сквозняка, перестановки или резких перепадов температуры.']],
-        ['At home, separate a keiki only after it forms several roots; flower-stem cuttings are unreliable.', 'В домашних условиях отделяйте детку только после появления нескольких корней; черенки цветоноса ненадёжны.'],
+        [
+          [
+            'Flower spikes can stay decorative for several months.',
+            'Healthy roots are firm, green after watering and silvery when dry.',
+            'A transparent ventilated pot makes root condition easier to monitor.',
+            'A small night-time temperature drop can encourage a new spike.',
+          ],
+          [
+            'Цветоносы могут сохранять декоративность несколько месяцев.',
+            'Здоровые корни плотные, зелёные после полива и серебристые в сухом состоянии.',
+            'Прозрачный проветриваемый горшок помогает следить за состоянием корней.',
+            'Небольшой перепад ночной температуры может стимулировать новый цветонос.',
+          ],
+        ],
+        [
+          'Keep water out of the crown and never leave the pot standing in water.',
+          'Не оставляйте воду в точке роста и не держите горшок в воде.',
+        ],
+        [
+          [
+            'Root or crown rot — usually caused by stagnant moisture or water trapped between leaves.',
+            'Wrinkled leaves — check the roots: the plant may be dry or unable to absorb water.',
+            'Bud blast — often follows draughts, relocation or sharp temperature changes.',
+          ],
+          [
+            'Гниль корней или точки роста — обычно возникает из-за застоя влаги или воды между листьями.',
+            'Сморщенные листья — проверьте корни: растение может быть пересушено или не усваивать воду.',
+            'Опадение бутонов — часто случается после сквозняка, перестановки или резких перепадов температуры.',
+          ],
+        ],
+        [
+          'At home, separate a keiki only after it forms several roots; flower-stem cuttings are unreliable.',
+          'В домашних условиях отделяйте детку только после появления нескольких корней; черенки цветоноса ненадёжны.',
+        ],
       ),
       'Phalaenopsis hybrids',
-      ['My collection includes 11 orchids with distinctly different flowers.', 'В моей коллекции 11 орхидей с заметно разными цветками.'],
-      ['Phalaenopsis orchids combine sculptural leaves with long-lasting, exceptionally varied blooms.', 'Фаленопсисы сочетают скульптурные листья с долгим и очень разнообразным цветением.'],
-      quickFacts(['Moderate', 'Умеренный'], ['Rosette 20–50 cm plus flower spikes', 'Розетка 20–50 см и цветоносы']),
+      [
+        'My collection includes 11 orchids with distinctly different flowers.',
+        'В моей коллекции 10 орхидей с заметно разными цветками.',
+      ],
+      [
+        'Phalaenopsis orchids combine sculptural leaves with long-lasting, exceptionally varied blooms.',
+        'Фаленопсисы сочетают скульптурные листья с долгим и очень разнообразным цветением.',
+      ],
+      quickFacts(
+        ['Moderate', 'Умеренный'],
+        ['Rosette 20–50 cm plus flower spikes', 'Розетка 20–50 см и цветоносы'],
+      ),
       careCards(
-        [['Substrate', 'Субстрат'], ['Use chunky orchid bark with a little sphagnum, never dense universal soil.', 'Используйте крупную кору для орхидей с небольшим количеством сфагнума, а не плотный универсальный грунт.']],
-        [['Repotting', 'Пересадка'], ['Repot after flowering or every 2–3 years into a ventilated pot.', 'Пересаживайте после цветения или раз в 2–3 года в проветриваемый горшок.']],
-        [['Feeding', 'Подкормки'], ['Use a weak orchid fertiliser every second or third watering during active growth.', 'В период роста используйте слабый раствор удобрения для орхидей каждый второй или третий полив.']],
-        [['Pruning', 'Обрезка'], ['Remove only fully dry spikes and damaged roots with a sterile tool.', 'Удаляйте только полностью сухие цветоносы и повреждённые корни стерильным инструментом.']],
+        [
+          ['Substrate', 'Субстрат'],
+          [
+            'Use chunky orchid bark with a little sphagnum, never dense universal soil.',
+            'Используйте крупную кору для орхидей с небольшим количеством сфагнума, а не плотный универсальный грунт.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot after flowering or every 2–3 years into a ventilated pot.',
+            'Пересаживайте после цветения или раз в 2–3 года в проветриваемый горшок.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Use a weak orchid fertiliser every second or third watering during active growth.',
+            'В период роста используйте слабый раствор удобрения для орхидей каждый второй или третий полив.',
+          ],
+        ],
+        [
+          ['Pruning', 'Обрезка'],
+          [
+            'Remove only fully dry spikes and damaged roots with a sterile tool.',
+            'Удаляйте только полностью сухие цветоносы и повреждённые корни стерильным инструментом.',
+          ],
+        ],
       ),
       {
         importantImage: '/plant-profile/orchid-important.png',
@@ -765,17 +1829,38 @@ export const collectionPlants: readonly CollectionPlant[] = [
         saleImage: '/plant-profile/orchid-for-sale.png',
         variants: profileVariants(
           ['My Phalaenopsis collection', 'Моя коллекция фаленопсисов'],
-          ['Ten more Phalaenopsis orchids, from warm copper and lemon tones to spotted and velvet-purple blooms. The pink cascade is featured as the main plant.', 'Ещё десять фаленопсисов: от тёплых медных и лимонных оттенков до крапчатых и бархатно-фиолетовых цветков. «Розовый каскад» вынесен в главное изображение.'],
+          [
+            'Ten more Phalaenopsis orchids, from warm copper and lemon tones to spotted and velvet-purple blooms. The pink cascade is featured as the main plant.',
+            'Ещё десять фаленопсисов: от тёплых медных и лимонных оттенков до крапчатых и бархатно-фиолетовых цветков. «Розовый каскад» вынесен в главное изображение.',
+          ],
           ['/plant-profile/orchid-variants/01-copper.webp', ['Copper orange', 'Медно-оранжевая']],
           ['/plant-profile/orchid-variants/02-yellow.webp', ['Lemon yellow', 'Лимонно-жёлтая']],
           ['/plant-profile/orchid-variants/04-white.webp', ['Snow white', 'Белоснежная']],
           ['/plant-profile/orchid-variants/05-pale-pink.webp', ['Soft pink', 'Нежно-розовая']],
-          ['/plant-profile/orchid-variants/06-burgundy-spots.webp', ['White with burgundy spots', 'Белая с бордовым крапом']],
-          ['/plant-profile/orchid-variants/07-lilac-spots.webp', ['Lilac spotted', 'Сиреневая с крапом']],
-          ['/plant-profile/orchid-variants/03-veined-white.webp', ['White with raspberry veins', 'Белая с малиновыми прожилками']],
-          ['/plant-profile/orchid-variants/09-magenta-veins.webp', ['Magenta veined', 'Малиновая с прожилками']],
-          ['/plant-profile/orchid-variants/10-purple-mini.webp', ['Purple miniature', 'Фиолетовая мини']],
-          ['/plant-profile/orchid-variants/11-burgundy-rim.webp', ['Burgundy with a white rim', 'Бордовая с белой каймой']],
+          [
+            '/plant-profile/orchid-variants/06-burgundy-spots.webp',
+            ['White with burgundy spots', 'Белая с бордовым крапом'],
+          ],
+          [
+            '/plant-profile/orchid-variants/07-lilac-spots.webp',
+            ['Lilac spotted', 'Сиреневая с крапом'],
+          ],
+          [
+            '/plant-profile/orchid-variants/03-veined-white.webp',
+            ['White with raspberry veins', 'Белая с малиновыми прожилками'],
+          ],
+          [
+            '/plant-profile/orchid-variants/09-magenta-veins.webp',
+            ['Magenta veined', 'Малиновая с прожилками'],
+          ],
+          [
+            '/plant-profile/orchid-variants/10-purple-mini.webp',
+            ['Purple miniature', 'Фиолетовая мини'],
+          ],
+          [
+            '/plant-profile/orchid-variants/11-burgundy-rim.webp',
+            ['Burgundy with a white rim', 'Бордовая с белой каймой'],
+          ],
         ),
       },
     ),
@@ -787,32 +1872,125 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ["Florist's gloxinia", 'Глоксиния'],
     plantProfile(
       careCards(
-        [['Light', 'Освещение'], ['Give bright indirect light without harsh midday sun, which can scorch the soft leaves.', 'Нужен яркий рассеянный свет без жёсткого полуденного солнца, которое может обжечь нежные листья.']],
-        [['Watering', 'Полив'], ['Keep the mix consistently moist during active growth, but never waterlog it. Water around the edge of the pot rather than into the crown.', 'В период активного роста поддерживайте грунт равномерно влажным, но не заболоченным. Поливайте по краю горшка, не попадая в центр розетки.']],
-        [['Humidity', 'Влажность'], ['Moderate humidity with good air movement is ideal. Do not mist the velvety leaves and flowers.', 'Лучше всего подходит умеренная влажность при хорошем движении воздуха. Не опрыскивайте бархатистые листья и цветы.']],
-        [['Temperature', 'Температура'], ['Keep warm while growing. After flowering, a dormant tuber can rest cool at about 16–18°C.', 'Во время роста держите в тепле. После цветения клубень может отдыхать в прохладе примерно при 16–18 °C.']],
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright indirect light without harsh midday sun, which can scorch the soft leaves.',
+            'Нужен яркий рассеянный свет без жёсткого полуденного солнца, которое может обжечь нежные листья.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Keep the mix consistently moist during active growth, but never waterlog it. Water around the edge of the pot rather than into the crown.',
+            'В период активного роста поддерживайте грунт равномерно влажным, но не заболоченным. Поливайте по краю горшка, не попадая в центр розетки.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Moderate humidity with good air movement is ideal. Do not mist the velvety leaves and flowers.',
+            'Лучше всего подходит умеренная влажность при хорошем движении воздуха. Не опрыскивайте бархатистые листья и цветы.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep warm while growing. After flowering, a dormant tuber can rest cool at about 16–18°C.',
+            'Во время роста держите в тепле. После цветения клубень может отдыхать в прохладе примерно при 16–18 °C.',
+          ],
+        ],
       ),
       3,
       profileFacts(
-        [['Family', 'Семейство'], ['Gesneriad family (Gesneriaceae)', 'Геснериевые (Gesneriaceae)']],
-        [['Origin', 'Родина'], ['Brazil', 'Бразилия']],
-        [['Plant type', 'Тип растения'], ['Tuberous flowering perennial', 'Клубневый цветущий многолетник']],
+        [
+          ['Family', 'Семейство'],
+          ['Gesneriad family (Gesneriaceae)', 'Геснериевые (Gesneriaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Brazil', 'Бразилия'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Tuberous flowering perennial', 'Клубневый цветущий многолетник'],
+        ],
       ),
       profileFooter(
-        [['The large velvety flowers can be single or double.', 'Modern hybrids bloom in white, pink, red, purple and many contrasting patterns.', 'The soft scalloped leaves form a compact rosette.', 'After flowering, the plant can enter a natural dormant period.'], ['Крупные бархатистые цветки бывают простыми и махровыми.', 'Современные гибриды цветут белыми, розовыми, красными и фиолетовыми цветами с самыми разными узорами.', 'Мягкие зубчатые листья образуют компактную розетку.', 'После цветения растение может уйти в естественный период покоя.']],
-        ['Avoid overhead watering: moisture trapped in the crown or on velvety foliage increases the risk of crown rot and grey mould.', 'Не поливайте сверху: вода в центре розетки и на бархатистой листве повышает риск загнивания и серой гнили.'],
-        [['Bud drop — check for cold drafts, dry soil or sudden changes.', 'Brown patches — protect from direct sun and wet foliage.', 'Soft crown or tuber — stop watering and inspect immediately for rot.'], ['Бутоны опадают — проверьте, нет ли сквозняка, пересушки или резкой смены условий.', 'Коричневые пятна — защитите от прямого солнца и не мочите листву.', 'Розетка или клубень стали мягкими — прекратите полив и сразу проверьте растение на гниль.']],
-        ['In spring, root a healthy mature leaf with its petiole in a light, slightly moist mix. Gloxinia can also be propagated by dividing a large tuber with a growing point on each section.', 'Весной укореняйте здоровый взрослый лист с черешком в лёгком, слегка влажном субстрате. Крупный клубень также можно делить, оставляя на каждой части точку роста.'],
+        [
+          [
+            'The large velvety flowers can be single or double.',
+            'Modern hybrids bloom in white, pink, red, purple and many contrasting patterns.',
+            'The soft scalloped leaves form a compact rosette.',
+            'After flowering, the plant can enter a natural dormant period.',
+          ],
+          [
+            'Крупные бархатистые цветки бывают простыми и махровыми.',
+            'Современные гибриды цветут белыми, розовыми, красными и фиолетовыми цветами с самыми разными узорами.',
+            'Мягкие зубчатые листья образуют компактную розетку.',
+            'После цветения растение может уйти в естественный период покоя.',
+          ],
+        ],
+        [
+          'Avoid overhead watering: moisture trapped in the crown or on velvety foliage increases the risk of crown rot and grey mould.',
+          'Не поливайте сверху: вода в центре розетки и на бархатистой листве повышает риск загнивания и серой гнили.',
+        ],
+        [
+          [
+            'Bud drop — check for cold drafts, dry soil or sudden changes.',
+            'Brown patches — protect from direct sun and wet foliage.',
+            'Soft crown or tuber — stop watering and inspect immediately for rot.',
+          ],
+          [
+            'Бутоны опадают — проверьте, нет ли сквозняка, пересушки или резкой смены условий.',
+            'Коричневые пятна — защитите от прямого солнца и не мочите листву.',
+            'Розетка или клубень стали мягкими — прекратите полив и сразу проверьте растение на гниль.',
+          ],
+        ],
+        [
+          'In spring, root a healthy mature leaf with its petiole in a light, slightly moist mix. Gloxinia can also be propagated by dividing a large tuber with a growing point on each section.',
+          'Весной укореняйте здоровый взрослый лист с черешком в лёгком, слегка влажном субстрате. Крупный клубень также можно делить, оставляя на каждой части точку роста.',
+        ],
       ),
       'Sinningia speciosa',
-      ['My gloxinia collection is especially dear to me: it includes many colours, contrasting rims, speckled throats and double flowers.', 'Глоксинии занимают особое место в моей коллекции: у меня много расцветок — с контрастной каймой, крапом, светлым горлом и махровыми цветами.'],
-      ["Florist's gloxinia is a Brazilian tuberous perennial related to African violets. Its compact rosette carries spectacular bell-shaped flowers above soft velvety leaves.", 'Глоксиния — бразильский клубневый многолетник, родственник сенполии. Над компактной розеткой мягких бархатистых листьев раскрываются эффектные колокольчатые цветы.'],
+      [
+        'My gloxinia collection is especially dear to me: it includes many colours, contrasting rims, speckled throats and double flowers.',
+        'Глоксинии занимают особое место в моей коллекции: у меня много расцветок — с контрастной каймой, крапом, светлым горлом и махровыми цветами.',
+      ],
+      [
+        "Florist's gloxinia is a Brazilian tuberous perennial related to African violets. Its compact rosette carries spectacular bell-shaped flowers above soft velvety leaves.",
+        'Глоксиния — бразильский клубневый многолетник, родственник сенполии. Над компактной розеткой мягких бархатистых листьев раскрываются эффектные колокольчатые цветы.',
+      ],
       quickFacts(['Moderate', 'Умеренный'], ['Rosette 15–30 cm', 'Розетка 15–30 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Use a light, moisture-retentive but well-drained mix: 70% peat-free African-violet or houseplant compost, 20% perlite and 10% vermiculite.', 'Используйте лёгкую, влагоёмкую, но хорошо дренированную смесь: 70% безторфяного грунта для сенполий или комнатных растений, 20% перлита и 10% вермикулита.']],
-        [['Repotting', 'Пересадка'], ['Repot the tuber as new growth begins, placing it shallowly with the top close to the surface.', 'Пересаживайте клубень с началом нового роста, размещая его неглубоко, почти у поверхности грунта.']],
-        [['Feeding', 'Подкормки'], ['During leaf and flower growth, feed every two weeks with a complete liquid fertiliser for flowering houseplants at half strength. Stop during dormancy.', 'Во время роста листьев и цветения подкармливайте раз в две недели полным жидким удобрением для цветущих растений в половинной дозировке. В период покоя не подкармливайте.']],
-        [['Dormancy & grooming', 'Покой и уход'], ['Remove spent flowers. After flowering, gradually reduce watering as the foliage dies back; resume regular care only when the tuber sprouts again.', 'Удаляйте увядшие цветы. После цветения постепенно сокращайте полив по мере отмирания листьев; вернитесь к обычному уходу только с появлением новых ростков.']],
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a light, moisture-retentive but well-drained mix: 70% peat-free African-violet or houseplant compost, 20% perlite and 10% vermiculite.',
+            'Используйте лёгкую, влагоёмкую, но хорошо дренированную смесь: 70% безторфяного грунта для сенполий или комнатных растений, 20% перлита и 10% вермикулита.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot the tuber as new growth begins, placing it shallowly with the top close to the surface.',
+            'Пересаживайте клубень с началом нового роста, размещая его неглубоко, почти у поверхности грунта.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'During leaf and flower growth, feed every two weeks with a complete liquid fertiliser for flowering houseplants at half strength. Stop during dormancy.',
+            'Во время роста листьев и цветения подкармливайте раз в две недели полным жидким удобрением для цветущих растений в половинной дозировке. В период покоя не подкармливайте.',
+          ],
+        ],
+        [
+          ['Dormancy & grooming', 'Покой и уход'],
+          [
+            'Remove spent flowers. After flowering, gradually reduce watering as the foliage dies back; resume regular care only when the tuber sprouts again.',
+            'Удаляйте увядшие цветы. После цветения постепенно сокращайте полив по мере отмирания листьев; вернитесь к обычному уходу только с появлением новых ростков.',
+          ],
+        ],
       ),
       {
         importantImage: '/plant-profile/gloxinia-important.png',
@@ -820,25 +1998,70 @@ export const collectionPlants: readonly CollectionPlant[] = [
         saleImage: '/plant-profile/gloxinia-for-sale.png',
         variants: profileVariants(
           ['My collection of colours', 'Моя коллекция расцветок'],
-          ['Gloxinias can look completely different while sharing the same velvety leaves and generous flowering. Here are the distinct colours and flower forms that have bloomed in my collection.', 'Глоксинии могут выглядеть совершенно по-разному, сохраняя бархатистую листву и щедрое цветение. Здесь собраны разные расцветки и формы цветка, которые цвели в моей коллекции.'],
-          ['/plant-profile/gloxinia-variants/raspberry.webp', ['Raspberry with a pale throat', 'Малиновая со светлым горлом']],
-          ['/plant-profile/gloxinia-variants/lilac-white.webp', ['White and lilac', 'Бело-лиловая']],
-          ['/plant-profile/gloxinia-variants/burgundy-speckles.webp', ['Burgundy speckles', 'Бордовый крап']],
-          ['/plant-profile/gloxinia-variants/lavender-double.webp', ['Double lavender', 'Лавандовая махровая']],
-          ['/plant-profile/gloxinia-variants/pink-speckled-double.webp', ['Double pink speckles', 'Розовая крапчатая махровая']],
-          ['/plant-profile/gloxinia-variants/deep-purple.webp', ['Deep purple', 'Глубокая фиолетовая']],
+          [
+            'Gloxinias can look completely different while sharing the same velvety leaves and generous flowering. Here are the distinct colours and flower forms that have bloomed in my collection.',
+            'Глоксинии могут выглядеть совершенно по-разному, сохраняя бархатистую листву и щедрое цветение. Здесь собраны разные расцветки и формы цветка, которые цвели в моей коллекции.',
+          ],
+          [
+            '/plant-profile/gloxinia-variants/raspberry.webp',
+            ['Raspberry with a pale throat', 'Малиновая со светлым горлом'],
+          ],
+          [
+            '/plant-profile/gloxinia-variants/lilac-white.webp',
+            ['White and lilac', 'Бело-лиловая'],
+          ],
+          [
+            '/plant-profile/gloxinia-variants/burgundy-speckles.webp',
+            ['Burgundy speckles', 'Бордовый крап'],
+          ],
+          [
+            '/plant-profile/gloxinia-variants/lavender-double.webp',
+            ['Double lavender', 'Лавандовая махровая'],
+          ],
+          [
+            '/plant-profile/gloxinia-variants/pink-speckled-double.webp',
+            ['Double pink speckles', 'Розовая крапчатая махровая'],
+          ],
+          [
+            '/plant-profile/gloxinia-variants/deep-purple.webp',
+            ['Deep purple', 'Глубокая фиолетовая'],
+          ],
           ['/plant-profile/gloxinia-variants/crimson.webp', ['Crimson', 'Малиновая']],
-          ['/plant-profile/gloxinia-variants/plum-speckles.webp', ['Plum speckles', 'Сливовый крап']],
-          ['/plant-profile/gloxinia-variants/white-pink-ring.webp', ['White with a pink ring', 'Белая с розовым кольцом']],
-          ['/plant-profile/gloxinia-variants/white-speckled-double.webp', ['Double white speckles', 'Белая крапчатая махровая']],
+          [
+            '/plant-profile/gloxinia-variants/plum-speckles.webp',
+            ['Plum speckles', 'Сливовый крап'],
+          ],
+          [
+            '/plant-profile/gloxinia-variants/white-pink-ring.webp',
+            ['White with a pink ring', 'Белая с розовым кольцом'],
+          ],
+          [
+            '/plant-profile/gloxinia-variants/white-speckled-double.webp',
+            ['Double white speckles', 'Белая крапчатая махровая'],
+          ],
           ['/plant-profile/gloxinia-variants/hot-pink.webp', ['Hot pink', 'Ярко-розовая']],
-          ['/plant-profile/gloxinia-variants/raspberry-white-edge.webp', ['Raspberry with a white edge', 'Малиновая с белым кантом']],
+          [
+            '/plant-profile/gloxinia-variants/raspberry-white-edge.webp',
+            ['Raspberry with a white edge', 'Малиновая с белым кантом'],
+          ],
           ['/plant-profile/gloxinia-variants/velvet-red.webp', ['Velvet red', 'Бархатная красная']],
-          ['/plant-profile/gloxinia-variants/violet-stippled.webp', ['Violet stippling', 'Фиолетовая крапчатая']],
-          ['/plant-profile/gloxinia-variants/pink-white-edge.webp', ['Pink with a white edge', 'Розовая с белым кантом']],
-          ['/plant-profile/gloxinia-variants/lilac-speckled-double.webp', ['Double lilac speckles', 'Лиловая крапчатая махровая']],
+          [
+            '/plant-profile/gloxinia-variants/violet-stippled.webp',
+            ['Violet stippling', 'Фиолетовая крапчатая'],
+          ],
+          [
+            '/plant-profile/gloxinia-variants/pink-white-edge.webp',
+            ['Pink with a white edge', 'Розовая с белым кантом'],
+          ],
+          [
+            '/plant-profile/gloxinia-variants/lilac-speckled-double.webp',
+            ['Double lilac speckles', 'Лиловая крапчатая махровая'],
+          ],
           ['/plant-profile/gloxinia-variants/pure-white.webp', ['Pure white', 'Чисто-белая']],
-          ['/plant-profile/gloxinia-variants/pale-lilac-throat.webp', ['Pale lilac with a violet throat', 'Светло-лиловая с фиолетовым горлом']],
+          [
+            '/plant-profile/gloxinia-variants/pale-lilac-throat.webp',
+            ['Pale lilac with a violet throat', 'Светло-лиловая с фиолетовым горлом'],
+          ],
         ),
       },
     ),
