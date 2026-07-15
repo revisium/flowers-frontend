@@ -34,6 +34,7 @@ export const ProfileHeader = ({ locale, onBack, onClose, plant }: ProfileHeaderP
         type="button"
         variant="plain"
         onClick={onClose}
+        _hover={{ background: 'rgba(218, 204, 178, 0.3)' }}
       >
         ×
       </Button>

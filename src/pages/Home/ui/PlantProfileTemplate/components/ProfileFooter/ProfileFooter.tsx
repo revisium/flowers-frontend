@@ -213,28 +213,6 @@ const SaleCard = ({
         </Link>
         <Link
           _hover={{ transform: 'translateY(-1px)' }}
-          aria-label="WhatsApp"
-          as="a"
-          borderRadius="50%"
-          display="inline-flex"
-          href="https://wa.me/79109002117"
-          height="34px"
-          rel="noreferrer"
-          target="_blank"
-          transition="transform 0.2s ease"
-          width="34px"
-        >
-          <Image
-            alt=""
-            borderRadius="50%"
-            height="100%"
-            objectFit="cover"
-            src="/plant-profile/contact-whatsapp.png"
-            width="100%"
-          />
-        </Link>
-        <Link
-          _hover={{ transform: 'translateY(-1px)' }}
           aria-label="MAX"
           as="a"
           borderRadius="10px"
