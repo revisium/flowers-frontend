@@ -250,8 +250,8 @@ const aglaonemaProfile = (
       [
         ['Soil', 'Грунт'],
         [
-          'Use an airy mix: 40% foliage compost, 25% coco coir, 20% perlite, and 15% fine bark.',
-          'Используйте воздушную смесь: 40% грунта для декоративно-лиственных, 25% кокосового субстрата, 20% перлита и 15% мелкой коры.',
+          'Use a loose, well-drained mix: 75% peat-free houseplant compost and 25% perlite or fine pumice.',
+          'Используйте рыхлую, хорошо дренированную смесь: 75% безторфяного грунта для комнатных растений и 25% перлита или мелкой пемзы.',
         ],
       ],
       [
@@ -309,7 +309,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ['Kangaroo vine is an Australian evergreen climber with simple toothed leaves and tendrils. In nature it grows in warm coastal rainforests and their margins.', 'Кенгуровая лиана — австралийская вечнозелёная лиана с простыми зубчатыми листьями и усиками. В природе растёт во влажных лесах и на их опушках восточного побережья.'],
       quickFacts(['Fast-growing', 'Быстрый'], ['Long climbing shoots', 'Длинные побеги']),
       careCards(
-        [['Soil', 'Грунт'], ['Mix by volume: 50% peat-free loam-based houseplant compost, 25% coco coir, 15% perlite and 10% fine pine bark. This gives the vine organic matter, air around the roots and reliable drainage.', 'Смешайте по объёму: 50% безторфяного грунта для декоративнолистных на суглинистой основе, 25% кокосового субстрата, 15% перлита и 10% мелкой сосновой коры. Смесь питательная, воздушная и хорошо отводит лишнюю воду.']],
+        [['Soil', 'Грунт'], ['Use 80% peat-free loam-based houseplant compost with 20% perlite or fine potting grit. The mix should drain well but still hold moderate moisture.', 'Используйте 80% безторфяного грунта для комнатных растений на суглинистой основе и 20% перлита или мелкого посадочного гравия. Смесь должна хорошо отводить воду, но удерживать умеренную влагу.']],
         [['Repotting', 'Пересадка'], ['Repot in spring when the roots have filled the pot.', 'Пересаживайте весной, когда корни полностью освоят горшок.']],
         [['Feeding', 'Подкормки'], ['From spring to early autumn, use a balanced liquid fertiliser with near-equal N-P-K (for example 10-10-10), plus Mg, Fe, Mn, Zn and B. Apply monthly at half the label rate; do not feed in winter.', 'С весны до начала осени — жидкое удобрение с примерно равным N-P-K (например, 10-10-10) и Mg, Fe, Mn, Zn, B. Вносите раз в месяц в половинной дозировке; зимой не подкармливайте.']],
         [['Support & shaping', 'Опоры и формировка'], ['Offer a support for the tendrils and prune long shoots to keep the vine neat.', 'Дайте усикам опору и подрезайте длинные побеги, чтобы лиана оставалась аккуратной.']],
@@ -351,7 +351,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ['Rattlesnake plant is a tropical Brazilian perennial grown for its long, wavy leaves with dark oval markings and purple undersides.', 'Калатея лансифолия — тропический многолетник из Бразилии, который ценят за длинные волнистые листья с тёмным овальным узором и пурпурной изнанкой.'],
       quickFacts(['Moderate', 'Умеренный'], ['Clump to 60 cm', 'Куст до 60 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Mix by volume: 40% quality houseplant compost, 30% coco coir, 20% perlite and 10% fine pine bark. The mix stays evenly moist yet airy around the roots.', 'Смешайте по объёму: 40% качественного грунта для декоративнолистных, 30% кокосового субстрата, 20% перлита и 10% мелкой сосновой коры. Смесь удерживает влагу, но остаётся воздушной у корней.']],
+        [['Soil', 'Грунт'], ['Use a moisture-retentive but free-draining mix: 90% peat-free houseplant compost and 10% fine potting grit or perlite.', 'Используйте влагоёмкую, но хорошо дренированную смесь: 90% безторфяного грунта для комнатных растений и 10% мелкого посадочного гравия или перлита.']],
         [['Repotting', 'Пересадка'], ['Repot or divide in late spring when the clump has filled its pot.', 'Пересаживайте или делите куст поздней весной, когда он освоит горшок.']],
         [['Feeding', 'Подкормки'], ['Use a low-salt liquid fertiliser with N-P₂O₅-K₂O close to 3-1-2 (for example 18-6-12), including Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer; avoid fluoride-containing products.', 'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2 (например, 18-6-12), с Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. Подкармливайте с весны до конца лета раз в месяц в ¼–½ дозы; избегайте средств с фтором.']],
         [['Grooming', 'Уход за листвой'], ['No support is needed. Remove only yellowed or damaged leaves at the base.', 'Опора не нужна. Удаляйте только пожелтевшие или повреждённые листья у основания.']],
@@ -477,7 +477,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ['Velvet calathea is a tropical Brazilian prayer plant with long wavy leaves, reddish petioles and deep burgundy undersides.', 'Калатея руфибарба — тропическое бразильское растение из марантовых с длинными волнистыми листьями, красноватыми черешками и глубокой бордовой изнанкой.'],
       quickFacts(['Moderate', 'Умеренный'], ['Clump to 90 cm', 'Куст до 90 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Mix by volume: 40% quality foliage-plant compost, 30% coco coir, 20% perlite and 10% fine pine bark. It holds moisture evenly while keeping air around the roots.', 'Смешайте по объёму: 40% качественного грунта для декоративнолистных, 30% кокосового субстрата, 20% перлита и 10% мелкой сосновой коры. Смесь равномерно удерживает влагу, но остаётся воздушной у корней.']],
+        [['Soil', 'Грунт'], ['Use a moisture-retentive but free-draining mix: 90% peat-free houseplant compost and 10% fine potting grit or perlite.', 'Используйте влагоёмкую, но хорошо дренированную смесь: 90% безторфяного грунта для комнатных растений и 10% мелкого посадочного гравия или перлита.']],
         [['Repotting', 'Пересадка'], ['Repot or divide in late spring once the clump has filled its pot.', 'Пересаживайте или делите куст поздней весной, когда он освоит горшок.']],
         [['Feeding', 'Подкормки'], ['Use a low-salt liquid fertiliser with N-P₂O₅-K₂O near 3-1-2 and Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer.', 'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2, а также Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. С весны до конца лета подкармливайте раз в месяц в ¼–½ дозы.']],
         [['Grooming', 'Уход за листвой'], ['No support is needed. Remove only damaged leaves at the base and do not polish the naturally velvety foliage.', 'Опора не нужна. Удаляйте только повреждённые листья у основания и не полируйте естественно бархатистую листву.']],
@@ -519,7 +519,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ['Vittata calathea is a striped form of Goeppertia elliptica, a tropical prayer plant that forms a compact clump of pointed, finely variegated leaves.', 'Калатея виттата — полосатая форма Goeppertia elliptica, тропического растения из марантовых, образующего компактный куст с заострёнными тонко-вариегатными листьями.'],
       quickFacts(['Moderate', 'Умеренный'], ['Clump to 60 cm', 'Куст до 60 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Mix by volume: 40% quality foliage-plant compost, 30% coco coir, 20% perlite and 10% fine pine bark. It keeps moisture available without compacting around the roots.', 'Смешайте по объёму: 40% качественного грунта для декоративнолистных, 30% кокосового субстрата, 20% перлита и 10% мелкой сосновой коры. Смесь удерживает влагу, но не уплотняется у корней.']],
+        [['Soil', 'Грунт'], ['Use a moisture-retentive but free-draining mix: 90% peat-free houseplant compost and 10% fine potting grit or perlite.', 'Используйте влагоёмкую, но хорошо дренированную смесь: 90% безторфяного грунта для комнатных растений и 10% мелкого посадочного гравия или перлита.']],
         [['Repotting', 'Пересадка'], ['Repot or divide in late spring when the clump has filled its pot.', 'Пересаживайте или делите куст поздней весной, когда он освоит горшок.']],
         [['Feeding', 'Подкормки'], ['Use a low-salt liquid fertiliser with N-P₂O₅-K₂O near 3-1-2 and Ca, Mg, chelated Fe, Mn, Zn, Cu and B. Feed monthly at quarter to half strength from spring to summer.', 'Выбирайте малосолевое жидкое удобрение с N-P₂O₅-K₂O около 3-1-2, а также Ca, Mg, хелатным Fe, Mn, Zn, Cu и B. С весны до конца лета подкармливайте раз в месяц в ¼–½ дозы.']],
         [['Grooming', 'Уход за листвой'], ['No support is needed. Remove only damaged leaves at the base and wipe dust with a soft damp cloth.', 'Опора не нужна. Удаляйте только повреждённые листья у основания, а пыль убирайте мягкой влажной салфеткой.']],
@@ -567,7 +567,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ["'Red Valentine' is valued for its unusually warm pink-red foliage and compact shape.", "'Red Valentine' ценят за необычную тёплую розово-красную листву и компактную форму."],
       quickFacts(['Moderate', 'Умеренная'], ['Compact, about 40–60 cm', 'Компактная, около 40–60 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Use an airy mix: 40% foliage compost, 25% coco coir, 20% perlite, and 15% fine bark.', 'Используйте воздушную смесь: 40% грунта для декоративно-лиственных, 25% кокосового субстрата, 20% перлита и 15% мелкой коры.']],
+        [['Soil', 'Грунт'], ['Use a loose, well-drained mix: 75% peat-free houseplant compost and 25% perlite or fine pumice.', 'Используйте рыхлую, хорошо дренированную смесь: 75% безторфяного грунта для комнатных растений и 25% перлита или мелкой пемзы.']],
         [['Repotting', 'Пересадка'], ['Repot in spring when roots fill the pot, choosing a container only slightly larger than the previous one.', 'Пересаживайте весной, когда корни заполнят горшок, выбирая ёмкость лишь немного больше предыдущей.']],
         [['Feeding', 'Подкормка'], ['Feed monthly in spring and summer with a balanced foliage fertilizer at half strength.', 'Весной и летом подкармливайте раз в месяц половинной дозой сбалансированного удобрения для декоративно-лиственных.']],
         [['Grooming', 'Уход за листьями'], ['Remove yellow leaves at the base and wipe healthy leaves with a soft damp cloth.', 'Удаляйте пожелтевшие листья у основания, а здоровые протирайте мягкой влажной тканью.']],
@@ -645,7 +645,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ['Tradescantias are quick-growing plants valued for colourful foliage and their ability to form a lush cascading pot from just a few cuttings.', 'Традесканции — быстрорастущие растения, которые ценят за яркую листву и способность всего из нескольких черенков превращаться в пышный каскадный куст.'],
       quickFacts(['Fast', 'Быстрый'], ['Trailing shoots 30–60 cm', 'Свисающие побеги 30–60 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Use an airy, free-draining mix: 50% quality houseplant compost, 25% coco coir, 15% perlite and 10% fine pine bark.', 'Используйте воздушную дренированную смесь: 50% качественного универсального грунта, 25% кокосового субстрата, 15% перлита и 10% мелкой сосновой коры.']],
+        [['Soil', 'Грунт'], ['Use a light, well-drained mix: 70% peat-free houseplant compost, 20% perlite and 10% coarse horticultural sand.', 'Используйте лёгкую, хорошо дренированную смесь: 70% безторфяного грунта для комнатных растений, 20% перлита и 10% крупного садового песка.']],
         [['Repotting', 'Пересадка'], ['Repot in spring when roots fill the pot. A wide, shallow container suits several rooted cuttings planted together.', 'Пересаживайте весной, когда корни освоят горшок. Для нескольких укоренённых вместе черенков подойдёт широкий неглубокий горшок.']],
         [['Feeding', 'Подкормки'], ['From spring to early autumn, feed monthly with a balanced liquid fertiliser at half strength. Do not feed dry or stressed plants.', 'С весны до начала осени подкармливайте раз в месяц сбалансированным жидким удобрением в половинной дозировке. Не удобряйте пересушенные или ослабленные растения.']],
         [['Pruning', 'Формирование'], ['Pinch growing tips regularly and replant rooted cuttings into the same pot to keep the centre dense.', 'Регулярно прищипывайте верхушки и подсаживайте укоренённые черенки в тот же горшок, чтобы середина куста оставалась густой.']],
@@ -706,7 +706,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ['Callisia repens is a compact relative of Tradescantia. Its fine branching stems quickly form a soft cascading cushion of small leaves.', 'Каллизия ползучая — компактная родственница традесканции. Её тонкие ветвящиеся побеги быстро образуют мягкую каскадную подушку из мелких листьев.'],
       quickFacts(['Fast', 'Быстрый'], ['Trailing shoots 20–40 cm', 'Свисающие побеги 20–40 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Use an airy, free-draining mix: 50% quality houseplant compost, 25% coco coir, 15% perlite and 10% fine pine bark.', 'Используйте воздушную дренированную смесь: 50% качественного универсального грунта, 25% кокосового субстрата, 15% перлита и 10% мелкой сосновой коры.']],
+        [['Soil', 'Грунт'], ['Use a sandy, well-drained mix: 60% peat-free houseplant compost, 25% perlite and 15% coarse horticultural sand.', 'Используйте песчаную, хорошо дренированную смесь: 60% безторфяного грунта для комнатных растений, 25% перлита и 15% крупного садового песка.']],
         [['Repotting', 'Пересадка'], ['Repot in spring into a wide, shallow pot. Plant several rooted cuttings together for an even, full cushion.', 'Пересаживайте весной в широкий неглубокий горшок. Для ровной пышной подушки высаживайте вместе несколько укоренённых черенков.']],
         [['Feeding', 'Подкормки'], ['From spring to early autumn, feed monthly with a balanced liquid fertiliser at half strength.', 'С весны до начала осени подкармливайте раз в месяц сбалансированным жидким удобрением в половинной дозировке.']],
         [['Pruning', 'Формирование'], ['Pinch growing tips regularly and replant rooted cuttings into the same pot to keep the centre dense.', 'Регулярно прищипывайте верхушки и подсаживайте укоренённые черенки в тот же горшок, чтобы середина оставалась густой.']],
@@ -765,14 +765,14 @@ export const collectionPlants: readonly CollectionPlant[] = [
         saleImage: '/plant-profile/orchid-for-sale.png',
         variants: profileVariants(
           ['My Phalaenopsis collection', 'Моя коллекция фаленопсисов'],
-          ['Ten more Phalaenopsis orchids, from warm copper and lemon tones to spotted and velvet-purple blooms. The white flower with raspberry veins is featured as the main plant.', 'Ещё десять фаленопсисов: от тёплых медных и лимонных оттенков до крапчатых и бархатно-фиолетовых цветков. Бело-малиновая орхидея вынесена в главное изображение.'],
+          ['Ten more Phalaenopsis orchids, from warm copper and lemon tones to spotted and velvet-purple blooms. The pink cascade is featured as the main plant.', 'Ещё десять фаленопсисов: от тёплых медных и лимонных оттенков до крапчатых и бархатно-фиолетовых цветков. «Розовый каскад» вынесен в главное изображение.'],
           ['/plant-profile/orchid-variants/01-copper.webp', ['Copper orange', 'Медно-оранжевая']],
           ['/plant-profile/orchid-variants/02-yellow.webp', ['Lemon yellow', 'Лимонно-жёлтая']],
           ['/plant-profile/orchid-variants/04-white.webp', ['Snow white', 'Белоснежная']],
           ['/plant-profile/orchid-variants/05-pale-pink.webp', ['Soft pink', 'Нежно-розовая']],
           ['/plant-profile/orchid-variants/06-burgundy-spots.webp', ['White with burgundy spots', 'Белая с бордовым крапом']],
           ['/plant-profile/orchid-variants/07-lilac-spots.webp', ['Lilac spotted', 'Сиреневая с крапом']],
-          ['/plant-profile/orchid-variants/08-pink-cascade.webp', ['Pink cascade', 'Розовый каскад']],
+          ['/plant-profile/orchid-variants/03-veined-white.webp', ['White with raspberry veins', 'Белая с малиновыми прожилками']],
           ['/plant-profile/orchid-variants/09-magenta-veins.webp', ['Magenta veined', 'Малиновая с прожилками']],
           ['/plant-profile/orchid-variants/10-purple-mini.webp', ['Purple miniature', 'Фиолетовая мини']],
           ['/plant-profile/orchid-variants/11-burgundy-rim.webp', ['Burgundy with a white rim', 'Бордовая с белой каймой']],
@@ -809,7 +809,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ["Florist's gloxinia is a Brazilian tuberous perennial related to African violets. Its compact rosette carries spectacular bell-shaped flowers above soft velvety leaves.", 'Глоксиния — бразильский клубневый многолетник, родственник сенполии. Над компактной розеткой мягких бархатистых листьев раскрываются эффектные колокольчатые цветы.'],
       quickFacts(['Moderate', 'Умеренный'], ['Rosette 15–30 cm', 'Розетка 15–30 см']),
       careCards(
-        [['Soil', 'Грунт'], ['Use a light, moisture-retentive but well-drained mix: 45% quality houseplant compost, 30% coco coir, 15% perlite and 10% fine pine bark.', 'Используйте лёгкую, влагоёмкую, но дренированную смесь: 45% качественного универсального грунта, 30% кокосового субстрата, 15% перлита и 10% мелкой сосновой коры.']],
+        [['Soil', 'Грунт'], ['Use a light, moisture-retentive but well-drained mix: 70% peat-free African-violet or houseplant compost, 20% perlite and 10% vermiculite.', 'Используйте лёгкую, влагоёмкую, но хорошо дренированную смесь: 70% безторфяного грунта для сенполий или комнатных растений, 20% перлита и 10% вермикулита.']],
         [['Repotting', 'Пересадка'], ['Repot the tuber as new growth begins, placing it shallowly with the top close to the surface.', 'Пересаживайте клубень с началом нового роста, размещая его неглубоко, почти у поверхности грунта.']],
         [['Feeding', 'Подкормки'], ['During leaf and flower growth, feed every two weeks with a complete liquid fertiliser for flowering houseplants at half strength. Stop during dormancy.', 'Во время роста листьев и цветения подкармливайте раз в две недели полным жидким удобрением для цветущих растений в половинной дозировке. В период покоя не подкармливайте.']],
         [['Dormancy & grooming', 'Покой и уход'], ['Remove spent flowers. After flowering, gradually reduce watering as the foliage dies back; resume regular care only when the tuber sprouts again.', 'Удаляйте увядшие цветы. После цветения постепенно сокращайте полив по мере отмирания листьев; вернитесь к обычному уходу только с появлением новых ростков.']],
