@@ -9,7 +9,6 @@ interface HomeStatsProps {
 export const HomeStats = ({ stats }: HomeStatsProps) => {
   return (
     <Flex
-      justifyContent="space-between"
       gap={{ base: '14px 20px', sm: '18px' }}
       marginTop={{ base: '24px', md: '20px', lg: '28px' }}
       maxWidth="500px"

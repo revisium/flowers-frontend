@@ -1,5 +1,5 @@
 import type { Locale } from 'src/shared/config';
-import { collectionPlants, getCollectionPlantCount } from 'src/entities/collection';
+import { getCollectionPlantCount } from 'src/entities/collection';
 
 export interface HomeHeroStat {
   readonly label: string;
@@ -39,26 +39,6 @@ export interface HomeCopy {
 
 export const homeTotalPlantsCount = String(getCollectionPlantCount());
 
-const homeFamilyCount = String(new Set(collectionPlants.map((plant) => plant.familyId)).size);
-const homePhotoCount = String(
-  new Set(
-    collectionPlants.flatMap((plant) =>
-      [
-        plant.image,
-        plant.profile.importantImage,
-        plant.profile.propagationImage,
-        plant.profile.saleImage,
-        ...(plant.profile.variants?.items.map((variant) => variant.image) ?? []),
-      ].filter((image): image is string => Boolean(image)),
-    ),
-  ).size,
-);
-const homeNoteCount = String(
-  collectionPlants.filter((plant) =>
-    Object.values(plant.profile.notes).some((note) => note.trim().length > 0),
-  ).length,
-);
-
 export const homeCopy: Record<Locale, HomeCopy> = {
   ru: {
     actionLabel: 'Уход и советы',
@@ -97,21 +77,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     searchPlaceholder: 'Find a plant...',
     showAllLabel: 'Show all',
   },
-};
-
-export const homeHeroStats: Record<Locale, readonly HomeHeroStat[]> = {
-  ru: [
-    { label: 'растений', value: homeTotalPlantsCount },
-    { label: 'семейств', value: homeFamilyCount },
-    { label: 'фотографий', value: homePhotoCount },
-    { label: 'заметок', value: homeNoteCount },
-  ],
-  en: [
-    { label: 'plants', value: homeTotalPlantsCount },
-    { label: 'families', value: homeFamilyCount },
-    { label: 'photos', value: homePhotoCount },
-    { label: 'notes', value: homeNoteCount },
-  ],
 };
 
 const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
@@ -234,4 +199,17 @@ export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
     count: count.ru,
     name: name.ru,
   })),
+};
+
+const homeFamilyCount = String(homeCategoryDefinitions.length);
+
+export const homeHeroStats: Record<Locale, readonly HomeHeroStat[]> = {
+  ru: [
+    { label: 'растений', value: homeTotalPlantsCount },
+    { label: 'семейств', value: homeFamilyCount },
+  ],
+  en: [
+    { label: 'plants', value: homeTotalPlantsCount },
+    { label: 'families', value: homeFamilyCount },
+  ],
 };

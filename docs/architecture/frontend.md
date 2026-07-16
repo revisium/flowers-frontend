@@ -64,10 +64,11 @@ derived from one source.
 
 - `ui/HomePage` is a composition shell only.
 - `ui/HomeHero` composes the generated hero background at its original
-  responsive scale with a localized editorial introduction, collection-derived
-  statistics, and actions for the collection overlay and care page. A narrow
-  contrast gradient supports the text without changing the source image or its
-  composition. The shared header is owned by `widgets/Layout`, not by the hero.
+  responsive scale with a localized editorial introduction, the real plant and
+  represented-family counts, and actions for the collection overlay and care
+  page. A narrow contrast gradient supports the text without changing the source
+  image or its composition. The shared header is owned by `widgets/Layout`, not
+  by the hero.
 - `ui/HomeCategoriesSection` owns the labeled category section, responsive
   auto-fit category grid, notes callout, and category-card modal triggers.
   Category cards open local category detail modals from
