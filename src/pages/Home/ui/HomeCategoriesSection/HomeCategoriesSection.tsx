@@ -48,18 +48,31 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
   return (
     <Flex as="section" aria-labelledby="greenhouse-categories-title" direction="column">
       <Flex
-        alignItems="center"
-        justifyContent="space-between"
-        padding={{ base: '18px', md: '22px clamp(18px, 3vw, 38px) 16px' }}
+        alignItems="flex-start"
+        direction="column"
+        gap={{ base: '4px', md: '6px' }}
+        padding={{ base: '22px 18px 18px', md: '30px clamp(18px, 3vw, 38px) 22px' }}
       >
         <Text
-          as="h2"
-          color="#526246"
-          id="greenhouse-categories-title"
+          color="#718064"
+          fontSize={{ base: '0.68rem', md: '0.76rem' }}
+          fontWeight={700}
+          letterSpacing="0.02em"
+          lineHeight={1.3}
           margin={0}
-          textStyle="bold-xl"
         >
-          ❧ {text.categoriesTitle}
+          Исследуйте коллекцию
+        </Text>
+        <Text
+          as="h2"
+          color="#263b2d"
+          fontSize={{ base: '1.55rem', md: '1.9rem' }}
+          fontWeight={780}
+          id="greenhouse-categories-title"
+          lineHeight={1.08}
+          margin={0}
+        >
+          {text.categoriesTitle}
         </Text>
       </Flex>
 
@@ -94,7 +107,9 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
             <HomeCategoryCard
               category={{
                 ...category,
-                count: formatPlantCount(getCollectionPlantCountByFamily(category.id as CollectionFamilyId)),
+                count: formatPlantCount(
+                  getCollectionPlantCountByFamily(category.id as CollectionFamilyId),
+                ),
               }}
               key={category.id}
               onOpen={handleCategoryOpen}

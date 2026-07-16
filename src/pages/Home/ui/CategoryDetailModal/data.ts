@@ -60,12 +60,22 @@ const araceaeSeed: FamilyDetailSeed = {
     ru: 'Ароидные — одно из крупнейших семейств цветковых растений. Большинство представителей происходят из тропических и субтропических регионов и отличаются эффектными листьями, воздушными корнями и соцветиями-початками.',
   },
   facts: {
-    en: ['The family includes more than 100 genera and thousands of species, from compact plants to large climbing vines.', 'The white spathe of Spathiphyllum and the red plate of Anthurium are modified leaves, not petals.', 'In nature, Monsteras can climb trees and grow leaves larger than a human hand.', 'Juvenile and mature leaves of many aroids can look so different that they seem like separate plants.'],
-    ru: ['Семейство включает более 100 родов и тысячи видов, от миниатюрных растений до крупных лиан.', 'Белое покрывало спатифиллума и красная пластина антуриума — это не лепестки, а видоизменённый лист.', 'Монстеры в природе могут подниматься по деревьям и выращивать листья больше человеческой руки.', 'У многих ароидных молодые и взрослые листья выглядят так по-разному, будто это разные растения.'],
+    en: [
+      'The family includes more than 100 genera and thousands of species, from compact plants to large climbing vines.',
+      'The white spathe of Spathiphyllum and the red plate of Anthurium are modified leaves, not petals.',
+      'In nature, Monsteras can climb trees and grow leaves larger than a human hand.',
+      'Juvenile and mature leaves of many aroids can look so different that they seem like separate plants.',
+    ],
+    ru: [
+      'Семейство включает более 100 родов и тысячи видов, от миниатюрных растений до крупных лиан.',
+      'Белое покрывало спатифиллума и красная пластина антуриума — это не лепестки, а видоизменённый лист.',
+      'Монстеры в природе могут подниматься по деревьям и выращивать листья больше человеческой руки.',
+      'У многих ароидных молодые и взрослые листья выглядят так по-разному, будто это разные растения.',
+    ],
   },
   heroImage: assets.hero,
   heroPosition: 'calc(100% + 70px) top',
-  heroSize: { base: '540px auto', md: '650px auto', lg: '700px auto' },
+  heroSize: { base: '570px auto', md: '700px auto', lg: '780px auto' },
   latinName: 'Araceae',
   origin: {
     en: 'Tropical and subtropical regions of Asia, Central and South America, Africa, Australia, and Pacific islands.',
@@ -74,8 +84,18 @@ const araceaeSeed: FamilyDetailSeed = {
   originMapImage: assets.map,
   plants: [],
   traits: {
-    en: ['A spadix with a spathe, often perceived as a single flower.', 'Simple, often large leaves with expressive veins and varied blade shapes.', 'Many members form aerial roots and use them to cling to support.', 'Some species contain calcium oxalate crystals, so they are best kept away from pets.'],
-    ru: ['Соцветие-початок с покрывалом, которое часто выглядит как отдельный цветок.', 'Листья простые, часто крупные, с выразительными жилками и разными формами пластины.', 'Многие представители образуют воздушные корни и цепляются за опору.', 'Часть видов содержит оксалаты кальция, поэтому их лучше держать вдали от животных.'],
+    en: [
+      'A spadix with a spathe, often perceived as a single flower.',
+      'Simple, often large leaves with expressive veins and varied blade shapes.',
+      'Many members form aerial roots and use them to cling to support.',
+      'Some species contain calcium oxalate crystals, so they are best kept away from pets.',
+    ],
+    ru: [
+      'Соцветие-початок с покрывалом, которое часто выглядит как отдельный цветок.',
+      'Листья простые, часто крупные, с выразительными жилками и разными формами пластины.',
+      'Многие представители образуют воздушные корни и цепляются за опору.',
+      'Часть видов содержит оксалаты кальция, поэтому их лучше держать вдали от животных.',
+    ],
   },
   traitImages: [assets.spathiphyllum, assets.alocasia, assets.monstera, assets.philodendron],
 };

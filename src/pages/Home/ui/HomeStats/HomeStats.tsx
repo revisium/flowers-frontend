@@ -1,40 +1,31 @@
 import { Flex, Text } from '@chakra-ui/react';
 
-import type { HomeStatCard } from '../../model/homePageData';
-import { StatIconBox } from '../StatIconBox/StatIconBox';
+import type { HomeHeroStat } from '../../model/homePageData';
 
 interface HomeStatsProps {
-  readonly cards: readonly HomeStatCard[];
+  readonly stats: readonly HomeHeroStat[];
 }
 
-export const HomeStats = ({ cards }: HomeStatsProps) => {
+export const HomeStats = ({ stats }: HomeStatsProps) => {
   return (
     <Flex
-      display={{ base: 'none', xl: 'flex' }}
-      gap="12px"
-      justifyContent={{ base: 'flex-start', md: 'flex-end', xl: 'flex-start' }}
-      p={{ base: '0 16px', md: '0 18px', xl: '100px 60px 18px' }}
+      gap={{ base: '14px 20px', sm: '18px' }}
+      marginTop={{ base: '24px', md: '20px', lg: '28px' }}
+      maxWidth="500px"
+      width="100%"
     >
-      {cards.map((card) => (
-        <Flex
-          key={card.label}
-          w={{ base: '82px', sm: '92px', xl: '100px' }}
-          h={{ base: '82px', sm: '92px', xl: '100px' }}
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-          p="8px"
-          background="rgba(255, 252, 246, 0.72)"
-          border="1px solid rgba(131, 112, 82, 0.12)"
-          borderRadius="8px"
-          boxShadow="0 18px 46px rgba(92, 77, 46, 0.1)"
-        >
-          <StatIconBox icon={card.icon} />
-          <Text color="#2d3c2d" textStyle="semibold-md">
-            {card.value}
+      {stats.map((stat) => (
+        <Flex key={stat.label} align="center" direction="column" minWidth={0}>
+          <Text
+            color="#2f3c2f"
+            fontSize={{ base: '1.35rem', md: '1.55rem' }}
+            fontWeight={650}
+            lineHeight={1}
+          >
+            {stat.value}
           </Text>
-          <Text color="#4d5548" textStyle="regular-xxs">
-            {card.label}
+          <Text color="#66705f" fontSize="0.72rem" lineHeight={1.25} marginTop="7px">
+            {stat.label}
           </Text>
         </Flex>
       ))}

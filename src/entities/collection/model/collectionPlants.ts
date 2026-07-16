@@ -2068,10 +2068,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
   ),
 ];
 
-export const getCollectionPlantCount = () => collectionPlants.length;
+const getCollectionEntryPlantCount = (plant: CollectionPlant) =>
+  1 + (plant.profile.variants?.items.length ?? 0);
+
+export const getCollectionPlantCount = () =>
+  collectionPlants.reduce((total, plant) => total + getCollectionEntryPlantCount(plant), 0);
 
 export const getCollectionPlantCountByFamily = (familyId: CollectionFamilyId) =>
-  collectionPlants.filter((plant) => plant.familyId === familyId).length;
+  collectionPlants
+    .filter((plant) => plant.familyId === familyId)
+    .reduce((total, plant) => total + getCollectionEntryPlantCount(plant), 0);
 
 export const formatCollectionPlantCount = (count: number, locale: Locale) => {
   if (locale === 'en') {

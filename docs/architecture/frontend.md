@@ -19,12 +19,16 @@ Layers, from top to bottom, each depending only downward:
 - `pages` — route-level page slices.
 - `widgets` — reusable composed UI blocks shared by page slices. Current widget
   slice is `Layout`, which owns the shared inner-screen frame, persistent
-  header, brand mark, language controls, and the entry point to the
-  personal-plant catalog.
+  header, brand mark, and language controls.
 - `features` — cross-page reusable behavior (none yet).
 - `entities` — domain types and data records. `collection` owns the canonical
   personal-plant list, its count helpers, and the localized content used by
-  reusable plant profiles.
+  reusable plant profiles. It remains a domain slice while the prototype has a
+  single Home consumer, so its intentional Steiger `insignificant-slice`
+  exception is scoped in `steiger.config.ts`. Collection count helpers include
+  each nested profile variant as a separate plant, so grouped Tradescantia,
+  Callisia, Phalaenopsis, and gloxinia records contribute their full galleries
+  to total and family counts.
 - `shared` — cross-cutting UI, API/transport, config, and infrastructure
   helpers with no product-domain knowledge.
 
@@ -39,9 +43,9 @@ create a feature only when its behavior is needed across pages.
 ## App Layout Contract
 
 `src/app/layouts/AppLayout` composes the React Router outlet and mounts the
-collection overlay globally so the persistent header action works without
-leaving the current route. Shared app chrome lives in `src/widgets/Layout`,
-following the widget layout pattern used by sibling projects.
+collection overlay globally so the home hero action can open it without leaving
+the current route. Shared app chrome lives in `src/widgets/Layout`, following
+the widget layout pattern used by sibling projects.
 
 `src/widgets/Layout` owns the persistent viewport frame and shared header. It
 renders the app background, applies the fixed `18px` viewport padding, hides
@@ -59,9 +63,12 @@ personal-plant list lives in `src/entities/collection` so every counter is
 derived from one source.
 
 - `ui/HomePage` is a composition shell only.
-- `ui/HomeHero` composes the generated hero background, tagline, statistics,
-  action content, and tablet/desktop reminder card. The shared header is owned
-  by `widgets/Layout`, not by the hero.
+- `ui/HomeHero` composes the generated hero background at its original
+  responsive scale with a localized editorial introduction, the real plant and
+  represented-family counts, and actions for the collection overlay and care
+  page. A narrow contrast gradient supports the text without changing the source
+  image or its composition. The shared header is owned by `widgets/Layout`, not
+  by the hero.
 - `ui/HomeCategoriesSection` owns the labeled category section, responsive
   auto-fit category grid, notes callout, and category-card modal triggers.
   Category cards open local category detail modals from
@@ -70,7 +77,7 @@ derived from one source.
   mounted by `AppLayout`, so it opens above any current page. It derives its
   records and the count from `entities/collection`, supports local search
   filtering, and has both a horizontally scrollable family list and an explicit
-  `All families` chooser so none of the 15 families are hidden behind the
+  `All families` chooser so none of the available families are hidden behind the
   initial viewport.
 - `ui/PlantProfileTemplate` is the reusable detailed-profile layout opened
   from a catalog card. It renders an individual plant's localized entity data:
@@ -81,17 +88,20 @@ derived from one source.
 - The reusable category detail modal frame and sections live in
   `ui/CategoryDetailModal`, `ui/CategoryHero`, `ui/CategoryInfoGrid`,
   `ui/CategoryCollectionSection`, `ui/InfoPanel`, and `ui/SproutIcon`.
+  Family heroes use a tall photographic layer that continues behind the
+  responsive origin, traits, and facts panels; the panels overlap it with a
+  translucent surface and breakpoint-specific offset.
   Category-specific copy and image paths stay in page-local detail data and the
   adjacent `familySeeds.json` content file so each completed family reuses the
   same presentation structure with different content.
 - Repeated or decorative pieces live in same-named component folders, such as
-  `HomeCategoryCard`, `HomeStats`, and `StatIconBox`.
+  `HomeCategoryCard` and `HomeStats`.
 
 The home category thumbnails use one distinct category artwork asset per
 category. Cards open local detail modals for family overviews. Personal plants
-are available from the persistent header button and open in the local overlay,
-not at a separate route. The current prototype does not deep-link to a family
-or an individual plant yet.
+are available from the home hero's primary collection action and open in the
+local overlay, not at a separate route. The current prototype does not deep-link
+to a family or an individual plant yet.
 
 ## Care Prototype Contract
 

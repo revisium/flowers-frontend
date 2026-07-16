@@ -12,7 +12,7 @@ export const CategoryCollectionSection = ({
   data,
   onPlantOpen,
 }: CategoryCollectionSectionProps) => (
-  <Box padding={{ base: '0 18px 22px', md: '0 34px 34px' }}>
+  <Box padding={{ base: '0 18px 22px', md: '0 34px 34px' }} position="relative" zIndex={1}>
     <Box
       background="rgba(255, 253, 247, 0.78)"
       border="1px solid rgba(218, 204, 178, 0.72)"

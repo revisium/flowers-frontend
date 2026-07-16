@@ -10,13 +10,14 @@ interface CategoryInfoGridProps {
 export const CategoryInfoGrid = ({ data }: CategoryInfoGridProps) => (
   <Grid
     alignItems="stretch"
-    gap="8px"
+    gap={{ base: '12px', md: '14px', lg: '16px' }}
     gridTemplateColumns={{
       base: '1fr',
       md: 'repeat(2, minmax(0, 1fr))',
       lg: 'repeat(3, minmax(0, 1fr))',
     }}
-    padding={{ base: '0 18px 18px', md: '0 34px 26px' }}
+    marginTop={{ base: '-54px', md: '-150px', lg: '-220px' }}
+    padding={{ base: '0 18px 22px', md: '0 34px 34px' }}
     position="relative"
     zIndex={2}
   >
