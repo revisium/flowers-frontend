@@ -1,23 +1,25 @@
 import { Flex } from '@chakra-ui/react';
 
-import type { HomeCopy } from '../../model/homePageData';
-import { DayReminderCard } from '../DayReminderCard/DayReminderCard';
+import type { HomeCopy, HomeHeroStat } from '../../model/homePageData';
+import { HomeHeroContent } from '../HomeHeroContent/HomeHeroContent';
 
 interface HomeHeroIntroProps {
+  readonly onCollectionOpen: () => void;
+  readonly stats: readonly HomeHeroStat[];
   readonly text: HomeCopy;
 }
 
-export const HomeHeroIntro = ({ text }: HomeHeroIntroProps) => {
+export const HomeHeroIntro = ({ onCollectionOpen, stats, text }: HomeHeroIntroProps) => {
   return (
     <Flex
-      direction="column"
-      gap={{ base: '16px', md: '20px' }}
-      justify="center"
       align="flex-start"
-      p={{ base: '16px', md: '18px', xl: '18px' }}
-      h={{ base: 'auto', md: '90%' }}
+      direction="column"
+      justify="center"
+      maxWidth={{ base: '580px', md: '610px', lg: '680px' }}
+      padding={{ base: '120px 22px 42px', md: '96px 34px 28px', lg: '116px 58px 54px' }}
+      width="100%"
     >
-      <DayReminderCard text={text} />
+      <HomeHeroContent onCollectionOpen={onCollectionOpen} stats={stats} text={text} />
     </Flex>
   );
 };
