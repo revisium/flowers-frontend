@@ -15,9 +15,21 @@ export const AboutStory = ({ locale, text }: AboutStoryProps) => (
     margin={{ base: '0 18px', md: '26px 34px 0' }}
     overflow="hidden"
   >
-    <Flex background="#f6f3ea" direction="column" justifyContent="center" padding={{ base: '36px 22px', md: '30px 36px' }}>
+    <Flex
+      background="#f6f3ea"
+      direction="column"
+      justifyContent="center"
+      padding={{ base: '36px 22px', md: '30px 36px' }}
+    >
       <BotanicalHeading>{text.reason}</BotanicalHeading>
-      <Flex color="#686a62" direction="column" fontSize="0.84rem" gap="12px" lineHeight={1.52} marginTop="20px">
+      <Flex
+        color="#686a62"
+        direction="column"
+        fontSize="0.84rem"
+        gap="12px"
+        lineHeight={1.52}
+        marginTop="20px"
+      >
         <Text>{text.reasonBody[0]}</Text>
         <Text>{text.reasonBody[1]}</Text>
       </Flex>
@@ -30,14 +42,16 @@ export const AboutStory = ({ locale, text }: AboutStoryProps) => (
         padding="18px 20px"
         position="relative"
       >
-        <Text color="#778265" fontFamily="Georgia, serif" fontSize="1.8rem" lineHeight={0.7}>“</Text>
+        <Text color="#778265" fontFamily="Georgia, serif" fontSize="1.8rem" lineHeight={0.7}>
+          “
+        </Text>
         <Text
           color="#5e6258"
           fontFamily="Georgia, serif"
           fontSize="1rem"
           lineHeight={1.28}
           marginTop="7px"
-          maxWidth="285px"
+          maxWidth="385px"
           position="relative"
           zIndex={1}
         >
@@ -56,7 +70,11 @@ export const AboutStory = ({ locale, text }: AboutStoryProps) => (
       </Box>
     </Flex>
     <Image
-      alt={locale === 'ru' ? 'Вариегатное растение в светлом кашпо' : 'A variegated plant in a pale pot'}
+      alt={
+        locale === 'ru'
+          ? 'Вариегатное растение в светлом кашпо'
+          : 'A variegated plant in a pale pot'
+      }
       height={{ base: '390px', lg: '100%' }}
       minHeight={{ lg: '315px' }}
       objectFit="cover"
