@@ -1,4 +1,4 @@
-import { Flex, Grid, Text } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 
 import type { HomeHeroStat } from '../../model/homePageData';
 
@@ -8,15 +8,15 @@ interface HomeStatsProps {
 
 export const HomeStats = ({ stats }: HomeStatsProps) => {
   return (
-    <Grid
+    <Flex
+      justifyContent="space-between"
       gap={{ base: '14px 20px', sm: '18px' }}
       marginTop={{ base: '24px', md: '20px', lg: '28px' }}
       maxWidth="500px"
-      templateColumns={{ base: 'repeat(2, minmax(0, 1fr))', sm: 'repeat(4, minmax(0, 1fr))' }}
       width="100%"
     >
       {stats.map((stat) => (
-        <Flex key={stat.label} align="flex-start" direction="column" minWidth={0}>
+        <Flex key={stat.label} align="center" direction="column" minWidth={0}>
           <Text
             color="#2f3c2f"
             fontSize={{ base: '1.35rem', md: '1.55rem' }}
@@ -30,6 +30,6 @@ export const HomeStats = ({ stats }: HomeStatsProps) => {
           </Text>
         </Flex>
       ))}
-    </Grid>
+    </Flex>
   );
 };
