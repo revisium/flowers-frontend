@@ -35,3 +35,9 @@ direction is chosen.
   restrained inset section margins, and generated natural-light photography.
   Its desktop sections alternate image and copy blocks; they stack vertically
   on narrow screens.
+- The Gloxinia story extends the About editorial language with a photographic
+  seed-to-flower timeline, thin warm-grey rules, restrained statistic cards,
+  and a compact flowering gallery. Its supplied photographs are shown in full
+  inside responsive aspect-ratio frames. Wide timeline sources are extended
+  into portrait compositions so they fill their cards without destructive
+  cropping or empty letterbox bands when the viewport narrows.

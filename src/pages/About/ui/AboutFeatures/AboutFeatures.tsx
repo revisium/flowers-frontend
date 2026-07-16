@@ -1,4 +1,4 @@
-import { Flex, Grid, Image, Text } from '@chakra-ui/react';
+import { Flex, Grid, Image, Link, Text } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
 import { aboutFeatures, type AboutCopy } from '../../model/aboutPageData';
 import { AboutFeatureArtwork } from '../AboutFeatureArtwork/AboutFeatureArtwork';
@@ -47,6 +47,19 @@ export const AboutFeatures = ({ locale, text }: AboutFeaturesProps) => (
             </Flex>
             <Text color="#343a31" fontSize="0.82rem" fontWeight={600} lineHeight={1.25} marginTop="15px">{title}</Text>
             <Text color="#737268" fontSize="0.78rem" lineHeight={1.55} marginTop="9px">{description}</Text>
+            {icon === 'flower' ? (
+              <Link
+                color="#536448"
+                fontSize="0.74rem"
+                fontWeight={700}
+                href="/gloxinia-story"
+                marginTop="11px"
+                textDecoration="underline"
+                textUnderlineOffset="3px"
+              >
+                {locale === 'ru' ? 'Смотреть историю →' : 'Read the story →'}
+              </Link>
+            ) : null}
           </Flex>
         ))}
       </Grid>

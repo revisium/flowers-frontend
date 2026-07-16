@@ -1,7 +1,7 @@
 # Frontend Architecture
 
 This repository has moved past the pure structural skeleton. The current
-product surface is an exploratory greenhouse prototype with three route-level
+product surface is an exploratory greenhouse prototype with four route-level
 page slices:
 
 - `src/pages/Home` renders the presentation-focused landing/dashboard view:
@@ -13,6 +13,9 @@ page slices:
 - `src/pages/About` renders the localized greenhouse story at `/about`: an
   editorial hero, collection features, personal story, milestone timeline, and
   collection call to action.
+- `src/pages/GloxiniaStory` renders the localized photographic story at
+  `/gloxinia-story`: the February 2024 sowing, six-stage growth timeline,
+  collection figures, sharing story, and first-flowering gallery.
 
 ## FSD Layer Hierarchy
 
@@ -139,11 +142,32 @@ state, or speculative ViewModel/DataSource wiring.
   feature items, `ui/AboutIcon` supplies the line-icon family used by milestone
   items and compact controls, and `ui/BotanicalHeading` supplies the repeated
   editorial heading.
+- The `История цветения` / `Flowering history` feature provides the contextual
+  route into the gloxinia story at `/gloxinia-story`.
 - The closing action opens the global collection overlay through the shared
   layout context.
 
 About photography lives under `public/about/` and is referenced by the page
 sections.
+
+## Gloxinia Story Prototype Contract
+
+`src/pages/GloxiniaStory` is a static, localized photo essay reached from the
+About feature grid. Its typed Russian and English copy, journey records,
+statistics, and gallery descriptors live in
+`model/gloxiniaStoryData.ts`. It introduces no remote data or product state.
+
+- `ui/GloxiniaStoryPage` is a composition shell only.
+- `ui/GloxiniaStoryHero`, `ui/GloxiniaJourney`, `ui/GloxiniaFacts`, and
+  `ui/GloxiniaSharing` own the responsive editorial sections.
+- `ui/GloxiniaJourneyStep` and `ui/GloxiniaStat` own repeated records, while
+  `ui/GloxiniaStoryHeading` owns the shared botanical heading treatment.
+- Journey and gallery images use stable aspect-ratio frames. Wide journey
+  sources are generatively extended into portrait photographs before display,
+  avoiding both responsive cropping and empty letterbox bands.
+
+The edited photographic sequence and generated hero live under
+`public/gloxinia-story/`.
 
 ## Target MVVM Contract
 
