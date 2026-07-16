@@ -23,9 +23,13 @@ const copy = {
     subtitle: 'my plant collection',
     title: 'Greenhouse',
   },
-} satisfies Record<Locale, Record<'homeLabel' | 'languageLabel' | 'subtitle' | 'title', string>>;
+} as const;
 
-export const Header = ({ locale, logoTone, onLocaleChange }: HeaderProps) => {
+export const Header = ({
+  locale,
+  logoTone,
+  onLocaleChange,
+}: HeaderProps) => {
   const text = copy[locale];
 
   return (
@@ -37,7 +41,7 @@ export const Header = ({ locale, logoTone, onLocaleChange }: HeaderProps) => {
       borderBottom="1px solid rgba(119, 108, 83, 0.14)"
       boxShadow="0 10px 24px rgba(56, 48, 31, 0.035)"
       flexWrap="nowrap"
-      gap={{ base: '8px', md: '12px', lg: '24px' }}
+      gap={{ base: '8px', md: '12px', lg: '18px' }}
       justifyContent="space-between"
       left={0}
       marginBottom={{ base: '-66px', md: '-80px' }}

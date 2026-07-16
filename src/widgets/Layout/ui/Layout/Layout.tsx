@@ -36,7 +36,11 @@ export const Layout = ({ children }: LayoutProps) => {
           },
         }}
       >
-        <Header locale={locale} logoTone="dark" onLocaleChange={onLocaleChange} />
+        <Header
+          locale={locale}
+          logoTone="dark"
+          onLocaleChange={onLocaleChange}
+        />
         {children}
       </Flex>
     </Flex>

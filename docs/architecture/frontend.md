@@ -1,7 +1,7 @@
 # Frontend Architecture
 
 This repository has moved past the pure structural skeleton. The current
-product surface is an exploratory greenhouse prototype with two route-level
+product surface is an exploratory greenhouse prototype with three route-level
 page slices:
 
 - `src/pages/Home` renders the presentation-focused landing/dashboard view:
@@ -10,6 +10,9 @@ page slices:
 - `src/pages/Care` renders the localized care editorial at `/care`: a generated
   photographic hero, practical topic cards, a weekly plant-check routine, and a
   seasonal note.
+- `src/pages/About` renders the localized greenhouse story at `/about`: an
+  editorial hero, collection features, personal story, milestone timeline, and
+  collection call to action.
 
 ## FSD Layer Hierarchy
 
@@ -51,8 +54,9 @@ the widget layout pattern used by sibling projects.
 renders the app background, applies the fixed `18px` viewport padding, hides
 outer overflow, and places page content inside a rounded scroll container that
 fills the remaining viewport width and height up to the current content max
-width. `HomePage` wraps its route content in this widget instead of adding its
-own outer viewport padding, top-level rounded frame, or duplicated header.
+width. The header provides a linked brand mark and compact language controls.
+Route pages use this widget instead of adding their own outer viewport padding,
+top-level rounded frame, or duplicated header.
 
 ## Home Prototype Contract
 
@@ -71,6 +75,7 @@ derived from one source.
   by the hero.
 - `ui/HomeCategoriesSection` owns the labeled category section, responsive
   auto-fit category grid, notes callout, and category-card modal triggers.
+  The notes callout links to the greenhouse story at `/about`.
   Category cards open local category detail modals from
   `ui/AraceaeCategoryModal/data.ts`.
 - `ui/HomeCollectionOverlay` supplies the full-screen personal-plant catalog
@@ -119,6 +124,26 @@ or speculative ViewModel/DataSource wiring.
 
 Care photography lives under `public/care/` and is referenced by the typed
 page-local descriptors.
+
+## About Prototype Contract
+
+`src/pages/About` is a static, localized editorial page opened by the home
+notes callout. Its typed copy, feature descriptors, and milestone records live
+in `model/aboutPageData.ts`; it does not introduce data fetching, business
+state, or speculative ViewModel/DataSource wiring.
+
+- `ui/AboutPage` is a composition shell only.
+- `ui/AboutHero`, `ui/AboutFeatures`, `ui/AboutStory`, `ui/AboutTimeline`, and
+  `ui/AboutClosing` own the responsive page sections.
+- `ui/AboutFeatureArtwork` supplies the generated watercolor miniatures used by
+  feature items, `ui/AboutIcon` supplies the line-icon family used by milestone
+  items and compact controls, and `ui/BotanicalHeading` supplies the repeated
+  editorial heading.
+- The closing action opens the global collection overlay through the shared
+  layout context.
+
+About photography lives under `public/about/` and is referenced by the page
+sections.
 
 ## Target MVVM Contract
 

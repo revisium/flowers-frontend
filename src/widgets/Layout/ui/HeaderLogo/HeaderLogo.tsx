@@ -68,7 +68,7 @@ export const HeaderLogo = ({ homeLabel, subtitle, title, tone }: HeaderLogoProps
             overflow="hidden"
             textDecoration="none"
             textOverflow="ellipsis"
-            textTransform="uppercase"
+            textTransform="none"
             whiteSpace="nowrap"
           >
             {title}
@@ -84,7 +84,7 @@ export const HeaderLogo = ({ homeLabel, subtitle, title, tone }: HeaderLogoProps
             overflow="hidden"
             textDecoration="none"
             textOverflow="ellipsis"
-            textTransform="uppercase"
+            textTransform="none"
             whiteSpace="nowrap"
           >
             {subtitle}
