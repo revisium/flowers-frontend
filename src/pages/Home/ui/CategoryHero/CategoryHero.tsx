@@ -31,25 +31,15 @@ export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: Categor
 
   return (
     <Box
-      background="linear-gradient(135deg, #fffdf7, #f8f2e6)"
-      minHeight={{ base: '340px', md: '410px', lg: '497px' }}
-      overflow="hidden"
-      padding={{ base: '18px 18px 22px', md: '38px 48px 18px' }}
+      background={{
+        base: 'linear-gradient(90deg, rgba(255, 253, 247, 0.97) 0%, rgba(255, 253, 247, 0.8) 62%, rgba(255, 253, 247, 0.16) 100%)',
+        md: 'linear-gradient(90deg, rgba(255, 253, 247, 0.98) 0%, rgba(255, 253, 247, 0.88) 34%, rgba(255, 253, 247, 0.18) 62%, rgba(255, 253, 247, 0) 78%)',
+      }}
+      minHeight={{ base: '430px', md: '620px', lg: '720px' }}
+      padding={{ base: '18px 18px 90px', md: '38px 48px 170px', lg: '38px 48px 220px' }}
       position="relative"
+      zIndex={1}
     >
-      <Box
-        aria-hidden="true"
-        backgroundImage={`url('${data.heroImage}')`}
-        backgroundPosition={data.heroPosition ?? 'top right'}
-        backgroundRepeat="no-repeat"
-        backgroundSize={data.heroSize ?? { base: '540px auto', md: '650px auto', lg: '700px auto' }}
-        filter={data.heroFilter}
-        inset={0}
-        mixBlendMode={data.heroBlendMode}
-        opacity={data.heroBlendMode ? 0.92 : 1}
-        pointerEvents="none"
-        position="absolute"
-      />
       <Button
         ref={closeButtonRef}
         alignItems="center"

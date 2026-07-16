@@ -24,3 +24,6 @@ direction is chosen.
   Care while each page keeps its own composition. The contrast field expands at
   tablet and compact-desktop widths so localized copy remains readable at
   responsive sizes and browser zoom.
+- Family detail views use layered depth: a tall botanical hero continues behind
+  softly translucent information panels, which overlap the image with generous
+  spacing instead of creating a hard section boundary.

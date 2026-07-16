@@ -88,6 +88,9 @@ derived from one source.
 - The reusable category detail modal frame and sections live in
   `ui/CategoryDetailModal`, `ui/CategoryHero`, `ui/CategoryInfoGrid`,
   `ui/CategoryCollectionSection`, `ui/InfoPanel`, and `ui/SproutIcon`.
+  Family heroes use a tall photographic layer that continues behind the
+  responsive origin, traits, and facts panels; the panels overlap it with a
+  translucent surface and breakpoint-specific offset.
   Category-specific copy and image paths stay in page-local detail data and the
   adjacent `familySeeds.json` content file so each completed family reuses the
   same presentation structure with different content.

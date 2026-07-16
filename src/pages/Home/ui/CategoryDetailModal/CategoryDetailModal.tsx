@@ -71,9 +71,33 @@ export const CategoryDetailModal = ({ data, locale, onClose }: CategoryDetailMod
         width="100%"
       >
         {selectedPlant ? (
-          <PlantProfileTemplate locale={locale} plant={selectedPlant} onBack={() => setSelectedPlant(null)} onClose={onClose} />
+          <PlantProfileTemplate
+            locale={locale}
+            plant={selectedPlant}
+            onBack={() => setSelectedPlant(null)}
+            onClose={onClose}
+          />
         ) : (
           <>
+            <Box
+              aria-hidden="true"
+              backgroundImage={`url('${data.heroImage}')`}
+              backgroundPosition={data.heroPosition ?? 'top right'}
+              backgroundRepeat="no-repeat"
+              backgroundSize={
+                data.heroSize ?? { base: '540px auto', md: '650px auto', lg: '700px auto' }
+              }
+              filter={data.heroFilter}
+              height={{ base: '560px', md: '780px', lg: '860px' }}
+              left={0}
+              mixBlendMode={data.heroBlendMode}
+              opacity={data.heroBlendMode ? 0.92 : 1}
+              pointerEvents="none"
+              position="absolute"
+              right={0}
+              top={0}
+              zIndex={0}
+            />
             <CategoryHero
               closeButtonRef={closeButtonRef}
               data={data}
@@ -83,7 +107,9 @@ export const CategoryDetailModal = ({ data, locale, onClose }: CategoryDetailMod
             <CategoryInfoGrid data={data} />
             <CategoryCollectionSection
               data={data}
-              onPlantOpen={(plantId) => setSelectedPlant(collectionPlants.find((plant) => plant.id === plantId) ?? null)}
+              onPlantOpen={(plantId) =>
+                setSelectedPlant(collectionPlants.find((plant) => plant.id === plantId) ?? null)
+              }
             />
           </>
         )}

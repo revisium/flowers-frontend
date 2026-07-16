@@ -23,11 +23,11 @@
       ]
     },
     "heroImage": "/plants/categories/generated/aizoaceae.png",
-    "heroPosition": "right bottom",
+    "heroPosition": "right top",
     "heroSize": {
-      "base": "430px auto",
-      "md": "570px auto",
-      "lg": "660px auto"
+      "base": "620px auto",
+      "md": "760px auto",
+      "lg": "900px auto"
     },
     "latinName": "Aizoaceae",
     "origin": {
@@ -272,9 +272,9 @@
       "lg": "calc(100% + 8px) top"
     },
     "heroSize": {
-      "base": "500px auto",
-      "md": "650px auto",
-      "lg": "760px auto"
+      "base": "540px auto",
+      "md": "700px auto",
+      "lg": "850px auto"
     },
     "latinName": "Bromeliaceae",
     "origin": {
@@ -339,9 +339,9 @@
       "lg": "calc(100% + 12px) top"
     },
     "heroSize": {
-      "base": "520px auto",
-      "md": "690px auto",
-      "lg": "820px auto"
+      "base": "560px auto",
+      "md": "730px auto",
+      "lg": "900px auto"
     },
     "latinName": "Asparagaceae",
     "origin": {

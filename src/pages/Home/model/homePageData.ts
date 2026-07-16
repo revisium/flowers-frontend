@@ -22,6 +22,7 @@ interface HomeCategoryDefinition extends Omit<HomeCategory, 'count' | 'name'> {
 
 export interface HomeCopy {
   readonly actionLabel: string;
+  readonly categoriesEyebrow: string;
   readonly categoriesTitle: string;
   readonly collectionActionLabel: string;
   readonly heroEyebrow: string;
@@ -42,7 +43,8 @@ export const homeTotalPlantsCount = String(getCollectionPlantCount());
 export const homeCopy: Record<Locale, HomeCopy> = {
   ru: {
     actionLabel: 'Уход и советы',
-    categoriesTitle: 'Семейства',
+    categoriesEyebrow: 'Исследуйте коллекцию',
+    categoriesTitle: 'Растения по семействам',
     collectionActionLabel: 'Смотреть коллекцию',
     heroEyebrow: `Личная оранжерея · ${homeTotalPlantsCount} растений`,
     heroSummary:
@@ -62,7 +64,8 @@ export const homeCopy: Record<Locale, HomeCopy> = {
   },
   en: {
     actionLabel: 'Care and tips',
-    categoriesTitle: 'Categories',
+    categoriesEyebrow: 'Explore the collection',
+    categoriesTitle: 'Plants by family',
     collectionActionLabel: 'View collection',
     heroEyebrow: `A personal greenhouse · ${homeTotalPlantsCount} plants`,
     heroSummary:
