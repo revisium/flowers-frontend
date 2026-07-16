@@ -5,5 +5,6 @@ export default [
     index('app/routes/_index.tsx'),
     route('about', 'app/routes/about.tsx'),
     route('care', 'app/routes/care.tsx'),
+    route('gloxinia-story', 'app/routes/gloxinia-story.tsx'),
   ]),
 ] satisfies RouteConfig;
