@@ -11,9 +11,10 @@ direction is chosen.
   and is wired into the app through `src/app/providers/AppProvider.tsx`.
 - No custom tokens, palette, or component recipes exist yet; the app uses
   Chakra's `defaultConfig` as-is.
-- The persistent header wordmark uses medium-weight uppercase lettering with a
-  compact uppercase descriptor and a softly muted greenhouse mark. This keeps
-  the brand editorial without competing with page display headings.
+- The persistent header wordmark uses medium-weight editorial lettering with a
+  compact descriptor and a softly muted greenhouse mark. Desktop navigation
+  is intentionally limited to the linked wordmark and compact pill language
+  controls.
 - Editorial photographic heroes preserve the source image's intended scale and
   composition, using only a narrow warm contrast gradient behind the copy.
   Their content uses a compact uppercase eyebrow, a dark-green display heading,
@@ -27,3 +28,10 @@ direction is chosen.
 - Family detail views use layered depth: a tall botanical hero continues behind
   softly translucent information panels, which overlap the image with generous
   spacing instead of creating a hard section boundary.
+- The About editorial uses a warm ivory page surface, Georgia display headings,
+  olive timeline icons, pale generated watercolor miniatures inside feature
+  badges, a pale generated watercolor sprig beside each section heading,
+  a faint generated pencil-style botanical sketch inside the quote card,
+  restrained inset section margins, and generated natural-light photography.
+  Its desktop sections alternate image and copy blocks; they stack vertically
+  on narrow screens.
