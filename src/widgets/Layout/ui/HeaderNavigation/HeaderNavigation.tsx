@@ -1,26 +1,11 @@
 import { Flex, Link } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
 
+import { layoutNavigationLinks } from '../../model/layoutNavigation';
+
 interface HeaderNavigationProps {
   readonly locale: Locale;
 }
-
-const links = {
-  ru: [
-    ['Главная', '/'],
-    ['Семейства', '/#greenhouse-categories-title'],
-    ['Уход', '/care'],
-    ['Обо мне', '/about'],
-    ['Блог', '/blog'],
-  ],
-  en: [
-    ['Home', '/'],
-    ['Families', '/#greenhouse-categories-title'],
-    ['Care', '/care'],
-    ['About me', '/about'],
-    ['Blog', '/blog'],
-  ],
-} as const;
 
 export const HeaderNavigation = ({ locale }: HeaderNavigationProps) => (
   <Flex
@@ -37,26 +22,41 @@ export const HeaderNavigation = ({ locale }: HeaderNavigationProps) => (
     paddingTop={{ base: '7px', md: 0 }}
     width={{ base: '100%', md: 'auto' }}
   >
-    <Link
-      color="#343a31"
-      fontSize={{ base: '0.72rem', md: '0.82rem' }}
-      fontWeight={500}
-      href="/"
-      textDecoration="none"
-      whiteSpace="nowrap"
-    >
-      {locale === 'ru' ? 'Главная' : 'Home'}
-    </Link>
-
-    {links[locale].slice(1).map(([label, href]) => (
+    {layoutNavigationLinks[locale].map(([label, href]) => (
       <Link
         color="#343a31"
-        fontSize={{ base: '0.72rem', md: '0.82rem' }}
-        fontWeight={500}
+        fontSize={{ base: '0.84rem', md: '0.92rem', lg: '0.96rem' }}
+        fontWeight={600}
         href={href}
         key={href}
+        lineHeight={1.35}
+        position="relative"
         textDecoration="none"
+        transition="color 180ms ease"
         whiteSpace="nowrap"
+        _after={{
+          background: '#71815f',
+          borderRadius: '999px',
+          bottom: '-5px',
+          content: '""',
+          height: '2px',
+          left: 0,
+          position: 'absolute',
+          transform: 'scaleX(0)',
+          transformOrigin: 'center',
+          transition: 'transform 180ms ease',
+          width: '100%',
+        }}
+        _focusVisible={{
+          color: '#4f603f',
+          outline: '2px solid rgba(113, 129, 95, 0.38)',
+          outlineOffset: '5px',
+        }}
+        _hover={{
+          color: '#4f603f',
+          textDecoration: 'none',
+          _after: { transform: 'scaleX(1)' },
+        }}
       >
         {label}
       </Link>

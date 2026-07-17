@@ -26,8 +26,8 @@ Layers, from top to bottom, each depending only downward:
 - `pages` — route-level page slices.
 - `widgets` — reusable composed UI blocks shared by page slices. Current widget
   slice is `Layout`, which owns the shared inner-screen frame, persistent
-  header, brand mark, responsive navigation, collection action, and language
-  controls.
+  header and footer, brand mark, responsive navigation, collection action, and
+  language controls.
 - `features` — cross-page reusable behavior (none yet).
 - `entities` — domain types and data records. `collection` owns the canonical
   personal-plant list, its count helpers, and the localized content used by
@@ -55,7 +55,7 @@ collection overlay globally so the home hero action can open it without leaving
 the current route. Shared app chrome lives in `src/widgets/Layout`, following
 the widget layout pattern used by sibling projects.
 
-`src/widgets/Layout` owns the persistent viewport frame and shared header. It
+`src/widgets/Layout` owns the persistent viewport frame and shared page chrome. It
 renders the app background, applies the fixed `18px` viewport padding, hides
 outer overflow, and places page content inside a rounded scroll container that
 fills the remaining viewport width and height up to the current content max
@@ -66,7 +66,10 @@ moves below the brand and language controls as a second row on mobile. The
 collection action always stays beside the language controls, using an icon and
 count below the desktop breakpoint and its full label on desktop. Route pages
 use this widget instead of adding their own outer viewport padding, top-level
-rounded frame, or duplicated header.
+rounded frame, or duplicated header. The shared editorial footer repeats the
+canonical navigation, derives plant and represented-family counts from the
+collection entity, opens the global collection overlay, and stacks its brand,
+links, and collection callout on mobile.
 
 ## Home Prototype Contract
 
@@ -169,7 +172,8 @@ data or speculative state layer.
 
 - `BlogPage/ui/BlogPage` is a composition shell only.
 - `BlogPage/ui/BlogHero` introduces the journal, while
-  `BlogPage/ui/BlogEntries` owns the section heading and future-experiment note.
+  `BlogPage/ui/BlogEntries` owns the section heading and featured experiment,
+  and `BlogPage/ui/BlogQuote` closes the index with a personal botanical quote.
 - `BlogPage/ui/BlogExperimentCard` owns the reusable preview presentation. The
   first entry links to the gloxinia photo essay at `/blog/gloxinia-story`; later
   growing experiments should be added to the Blog slice as peer article-page
@@ -180,7 +184,8 @@ not FSD slices. `steiger.config.ts` narrowly disables the segment and nested
 public-API rules only below `src/pages/Blog`; the `Blog` slice itself continues
 to expose both route pages through its root `index.ts`.
 
-The first preview reuses the edited gloxinia photography under
+The journal hero and first preview use generated editorial photography under
+`public/blog/`; the article's photographic sequence remains under
 `public/blog/gloxinia-story/`.
 
 ## Blog Article Contract: Gloxinia Story
