@@ -71,7 +71,7 @@ export const Header = ({ locale, logoTone, onCollectionOpen, onLocaleChange }: H
         tone={logoTone}
       />
 
-      <HeaderNavigation locale={locale} onCollectionOpen={onCollectionOpen} />
+      <HeaderNavigation locale={locale} />
 
       <Flex
         alignItems="center"

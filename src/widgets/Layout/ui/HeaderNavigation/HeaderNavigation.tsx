@@ -3,7 +3,6 @@ import type { Locale } from 'src/shared/config';
 
 interface HeaderNavigationProps {
   readonly locale: Locale;
-  readonly onCollectionOpen: () => void;
 }
 
 const links = {
