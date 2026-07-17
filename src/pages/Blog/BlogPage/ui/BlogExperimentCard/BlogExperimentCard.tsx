@@ -15,11 +15,11 @@ export const BlogExperimentCard = ({ entry, text }: BlogExperimentCardProps) => 
       background="#fffdf8"
       border="1px solid #ded8ca"
       borderRadius="12px"
-      gridTemplateColumns={{ base: '1fr', lg: 'minmax(320px, .92fr) minmax(0, 1.08fr)' }}
+      gridTemplateColumns={{ base: '1fr', lg: 'minmax(360px, .96fr) minmax(0, 1.04fr)' }}
       overflow="hidden"
     >
-      <Image alt={entry.imageAlt} height="100%" minHeight={{ base: '300px', lg: '410px' }} objectFit="cover" src={entry.image} width="100%" />
-      <Flex alignItems="flex-start" direction="column" justifyContent="center" padding={{ base: '30px 22px', md: '38px' }}>
+      <Image alt={entry.imageAlt} height="100%" minHeight={{ base: '320px', lg: '455px' }} objectFit="cover" src={entry.image} width="100%" />
+      <Flex alignItems="flex-start" direction="column" justifyContent="center" padding={{ base: '30px 22px', md: '38px', xl: '42px' }}>
         <Text color="#7a806f" fontSize="0.72rem" fontWeight={700} letterSpacing="0.04em" textTransform="uppercase">
           {entry.date}
         </Text>
@@ -37,8 +37,8 @@ export const BlogExperimentCard = ({ entry, text }: BlogExperimentCardProps) => 
         </Text>
         <Text color="#5f625b" fontSize="0.86rem" lineHeight={1.65} marginTop="20px" maxWidth="570px">{entry.excerpt}</Text>
         <Grid gap="14px" gridTemplateColumns="repeat(3, minmax(0, 1fr))" marginTop="28px" width="100%">
-          {entry.stats.map(([value, label]) => (
-            <Flex borderLeft="1px solid #e3ddcf" direction="column" key={label} paddingLeft="13px">
+          {entry.stats.map(([value, label], index) => (
+            <Flex borderLeft={index === 0 ? '0' : '1px solid #e3ddcf'} direction="column" key={label} paddingLeft={index === 0 ? 0 : '16px'}>
               <Text color="#3d4937" fontFamily="Georgia, 'Times New Roman', serif" fontSize="1.25rem">{value}</Text>
               <Text color="#77786f" fontSize="0.67rem" lineHeight={1.35} marginTop="4px">{label}</Text>
             </Flex>

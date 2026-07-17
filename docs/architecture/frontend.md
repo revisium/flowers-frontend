@@ -172,7 +172,8 @@ data or speculative state layer.
 
 - `BlogPage/ui/BlogPage` is a composition shell only.
 - `BlogPage/ui/BlogHero` introduces the journal, while
-  `BlogPage/ui/BlogEntries` owns the section heading and future-experiment note.
+  `BlogPage/ui/BlogEntries` owns the section heading and featured experiment,
+  and `BlogPage/ui/BlogQuote` closes the index with a personal botanical quote.
 - `BlogPage/ui/BlogExperimentCard` owns the reusable preview presentation. The
   first entry links to the gloxinia photo essay at `/blog/gloxinia-story`; later
   growing experiments should be added to the Blog slice as peer article-page
@@ -183,7 +184,8 @@ not FSD slices. `steiger.config.ts` narrowly disables the segment and nested
 public-API rules only below `src/pages/Blog`; the `Blog` slice itself continues
 to expose both route pages through its root `index.ts`.
 
-The first preview reuses the edited gloxinia photography under
+The journal hero and first preview use generated editorial photography under
+`public/blog/`; the article's photographic sequence remains under
 `public/blog/gloxinia-story/`.
 
 ## Blog Article Contract: Gloxinia Story

@@ -3,6 +3,7 @@ import { useLayoutContext } from 'src/shared/config';
 import { blogCopy } from '../../model/blogPageData';
 import { BlogEntries } from '../BlogEntries/BlogEntries';
 import { BlogHero } from '../BlogHero/BlogHero';
+import { BlogQuote } from '../BlogQuote/BlogQuote';
 
 export const BlogPage = () => {
   const { locale } = useLayoutContext();
@@ -18,6 +19,7 @@ export const BlogPage = () => {
     >
       <BlogHero locale={locale} text={text} />
       <BlogEntries text={text} />
+      <BlogQuote text={text} />
     </Box>
   );
 };
