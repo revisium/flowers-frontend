@@ -4,7 +4,6 @@ type LocaleIndex = 0 | 1;
 type Pair = readonly [string, string];
 type Translation = readonly [ru: string, en: string];
 type BilingualPair = readonly [Translation, Translation];
-type BilingualGalleryText = readonly [alt: Translation, caption: Translation];
 type BilingualJourneyText = readonly [alt: Translation, date: Translation, description: Translation, title: Translation];
 type BilingualLabels = readonly [
   breadcrumb: Translation,
@@ -18,7 +17,7 @@ type BilingualLabels = readonly [
 ];
 
 interface GloxiniaBilingualSource {
-  readonly gallery: readonly BilingualGalleryText[];
+  readonly gallery: readonly Translation[];
   readonly heroBody: BilingualPair;
   readonly journey: readonly BilingualJourneyText[];
   readonly labels: BilingualLabels;
@@ -39,7 +38,7 @@ export interface GloxiniaJourneyEntry {
 export interface GloxiniaStoryCopy {
   readonly breadcrumb: string;
   readonly factsTitle: string;
-  readonly gallery: readonly (readonly [string, string, string])[];
+  readonly gallery: readonly (readonly [string, string])[];
   readonly heroBody: Pair;
   readonly heroTitle: string;
   readonly journey: readonly GloxiniaJourneyEntry[];
@@ -55,6 +54,9 @@ export interface GloxiniaStoryCopy {
 
 const galleryImages = [
   '/blog/gloxinia-story/07-speckled-bloom.webp',
+  '/blog/gloxinia-story/10-double-red-bloom.webp',
+  '/blog/gloxinia-story/11-double-speckled-bloom.webp',
+  '/blog/gloxinia-story/12-double-lilac-bloom.webp',
   '/blog/gloxinia-story/08-purple-bloom.webp',
   '/blog/gloxinia-story/09-pink-bloom.webp',
 ] as const;
@@ -70,9 +72,12 @@ const journeyMedia = [
 
 const storySource = {
   gallery: [
-    [['Две белые глоксинии с густым бордовым крапом', 'Two cream gloxinias densely speckled burgundy'], ['Крапчатые', 'Speckled']],
-    [['Сиреневая и тёмно-фиолетовая глоксинии', 'Lavender and deep-purple gloxinia flowers'], ['Сиреневые', 'Lavender']],
-    [['Три розовые глоксинии разных оттенков', 'Three gloxinia flowers in different pink shades'], ['Розовые', 'Pink']],
+    ['Две белые глоксинии с густым бордовым крапом', 'Two cream gloxinias densely speckled burgundy'],
+    ['Красная махровая глоксиния крупным планом', 'A red double-flowered gloxinia in close-up'],
+    ['Бело-розовая махровая глоксиния с мелким крапом', 'A white and pink speckled double-flowered gloxinia'],
+    ['Сиреневая махровая глоксиния крупным планом', 'A lavender double-flowered gloxinia in close-up'],
+    ['Светло-сиреневая глоксиния с фиолетовой серединой', 'A pale lavender gloxinia with a violet centre'],
+    ['Нежно-розовая глоксиния крупным планом', 'A pale pink gloxinia in close-up'],
   ],
   heroBody: [
     ['Эта история началась в феврале 2024 года — с маленьких семян и большой веры в чудо.', 'This story began in February 2024, with tiny seeds and a great deal of faith in a small miracle.'],
@@ -121,14 +126,14 @@ const translatePair = (value: BilingualPair, index: LocaleIndex): Pair => [
   translate(value[1], index),
 ];
 
-const buildGallery = (index: LocaleIndex) => storySource.gallery.map(([alt, caption], imageIndex) => {
+const buildGallery = (index: LocaleIndex) => storySource.gallery.map((alt, imageIndex) => {
   const image = galleryImages[imageIndex];
 
   if (!image) {
     throw new Error(`Missing gloxinia gallery image at index ${imageIndex}`);
   }
 
-  return [image, translate(alt, index), translate(caption, index)] as const;
+  return [image, translate(alt, index)] as const;
 });
 
 const buildJourney = (index: LocaleIndex): readonly GloxiniaJourneyEntry[] => storySource.journey.map((entry, imageIndex) => {

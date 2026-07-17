@@ -12,7 +12,7 @@ export const GloxiniaSharing = ({ text }: GloxiniaSharingProps) => (
       border="1px solid #ded8ca"
       borderRadius="10px"
       columnGap={{ base: '28px', lg: '44px' }}
-      gridTemplateColumns={{ base: '1fr', lg: 'minmax(270px, .82fr) minmax(0, 1.58fr)' }}
+      gridTemplateColumns={{ base: '1fr', lg: 'minmax(360px, 1.28fr) minmax(0, 1fr)' }}
       overflow="hidden"
       padding={{ base: '26px 20px 20px', md: '24px 22px 22px' }}
       rowGap="28px"
@@ -28,37 +28,23 @@ export const GloxiniaSharing = ({ text }: GloxiniaSharingProps) => (
         </Box>
       </Box>
       <Grid
-        columnGap="24px"
-        gridTemplateColumns={{ base: '1fr', md: 'repeat(3, minmax(0, 1fr))' }}
-        rowGap="12px"
+        alignContent="start"
+        columnGap={{ base: '12px', md: '16px', xl: '20px' }}
+        gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', md: 'repeat(3, minmax(0, 1fr))' }}
+        rowGap={{ base: '12px', md: '16px', xl: '20px' }}
       >
-        {text.gallery.map(([src, alt, caption]) => (
+        {text.gallery.map(([src, alt]) => (
           <Box alignSelf="start" as="figure" key={src} margin={0}>
-            <Box position="relative">
-              <Image
-                alt={alt}
-                aspectRatio="4 / 5"
-                background="#eee9dd"
-                borderRadius="8px"
-                height="auto"
-                objectFit="cover"
-                src={src}
-                width="100%"
-              />
-              <Text
-                as="figcaption"
-                background="rgba(44,55,39,.78)"
-                borderRadius="999px"
-                bottom="12px"
-                color="white"
-                fontSize="0.72rem"
-                left="12px"
-                padding="6px 11px"
-                position="absolute"
-              >
-                {caption}
-              </Text>
-            </Box>
+            <Image
+              alt={alt}
+              aspectRatio="1 / 1"
+              background="#eee9dd"
+              borderRadius="8px"
+              height="auto"
+              objectFit="cover"
+              src={src}
+              width="100%"
+            />
           </Box>
         ))}
       </Grid>

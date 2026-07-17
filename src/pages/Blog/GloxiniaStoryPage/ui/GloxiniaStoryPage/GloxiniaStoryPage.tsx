@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import { useLayoutContext } from 'src/shared/config';
 import { gloxiniaStoryCopy } from '../../model/gloxiniaStoryData';
 import { GloxiniaClosing } from '../GloxiniaClosing/GloxiniaClosing';
@@ -12,12 +12,20 @@ export const GloxiniaStoryPage = () => {
   const text = gloxiniaStoryCopy[locale];
 
   return (
-    <Box as="main" background="#fbf9f3" color="#343a31" paddingTop={{ base: '66px', md: '80px' }} width="100%">
+    <Flex
+      as="main"
+      background="#fbf9f3"
+      color="#343a31"
+      paddingTop={{ base: '66px', md: '80px' }}
+      width="100%"
+      direction="column"
+      gap="20px"
+    >
       <GloxiniaStoryHero locale={locale} text={text} />
       <GloxiniaJourney text={text} />
       <GloxiniaFacts text={text} />
       <GloxiniaSharing text={text} />
       <GloxiniaClosing locale={locale} text={text} />
-    </Box>
+    </Flex>
   );
 };
