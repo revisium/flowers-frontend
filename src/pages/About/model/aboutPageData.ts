@@ -38,14 +38,14 @@ export const aboutFeatures: Record<
     ['camera', 'Фотографии роста', 'История роста и развития в фотографиях.'],
     ['care', 'Рекомендации по уходу', 'Проверенные советы по уходу, которые работают у меня.'],
     ['note', 'Личные заметки', 'Мои наблюдения, опыт и маленькие открытия.'],
-    ['flower', 'История цветения', 'Всё о цветении: периоды, условия и фотографии.'],
+    ['flower', 'Ботанические эксперименты', 'Посевы, наблюдения и истории растений — от семян до цветения.'],
   ],
   en: [
     ['plant-card', 'Plant profiles', 'Detailed notes about every plant in my collection.'],
     ['camera', 'Growth photos', 'A visual history of growth and development.'],
     ['care', 'Care advice', 'Tried-and-tested care tips that work for me.'],
     ['note', 'Personal notes', 'My observations, experience and small discoveries.'],
-    ['flower', 'Bloom history', 'Blooming periods, conditions and photographs.'],
+    ['flower', 'Botanical experiments', 'Sowing, observations and plant stories, from seed to flower.'],
   ],
 };
 
@@ -111,7 +111,7 @@ export const aboutMilestones: Record<
 
 export const aboutCopy: Record<Locale, AboutCopy> = {
   ru: {
-    breadcrumb: 'О проекте',
+    breadcrumb: 'Обо мне',
     cta: 'Перейти к коллекции растений',
     footer: 'Надеюсь, вам здесь будет так же уютно, как и мне.',
     footerTitle: 'Добро пожаловать в мою оранжерею!',
@@ -131,7 +131,7 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
     what: 'Что вы найдёте здесь',
   },
   en: {
-    breadcrumb: 'About',
+    breadcrumb: 'About me',
     cta: 'View the plant collection',
     footer: 'I hope it feels as warm and welcoming to you as it does to me.',
     footerTitle: 'Welcome to my greenhouse!',

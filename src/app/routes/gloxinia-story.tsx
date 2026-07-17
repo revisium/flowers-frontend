@@ -1,7 +1,7 @@
-import { GloxiniaStoryPage } from 'src/pages/GloxiniaStory';
+import { redirect } from 'react-router';
 
-const GloxiniaStoryRoute = () => {
-  return <GloxiniaStoryPage />;
-};
+export const loader = () => redirect('/blog/gloxinia-story');
 
-export default GloxiniaStoryRoute;
+const LegacyGloxiniaStoryRoute = () => null;
+
+export default LegacyGloxiniaStoryRoute;

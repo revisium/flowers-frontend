@@ -9,4 +9,11 @@ export default defineConfig([
       'fsd/insignificant-slice': 'off',
     },
   },
+  {
+    files: ['./src/pages/Blog/**'],
+    rules: {
+      'fsd/no-segmentless-slices': 'off',
+      'fsd/public-api': 'off',
+    },
+  },
 ]);

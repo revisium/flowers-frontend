@@ -8,7 +8,7 @@ interface LayoutProps {
 }
 
 export const Layout = ({ children }: LayoutProps) => {
-  const { locale, onLocaleChange } = useLayoutContext();
+  const { locale, onCollectionOpen, onLocaleChange } = useLayoutContext();
 
   return (
     <Flex
@@ -39,6 +39,7 @@ export const Layout = ({ children }: LayoutProps) => {
         <Header
           locale={locale}
           logoTone="dark"
+          onCollectionOpen={onCollectionOpen}
           onLocaleChange={onLocaleChange}
         />
         {children}

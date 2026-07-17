@@ -52,12 +52,12 @@ export const AboutFeatures = ({ locale, text }: AboutFeaturesProps) => (
                 color="#536448"
                 fontSize="0.74rem"
                 fontWeight={700}
-                href="/gloxinia-story"
+                href="/blog"
                 marginTop="11px"
                 textDecoration="underline"
                 textUnderlineOffset="3px"
               >
-                {locale === 'ru' ? 'Смотреть историю →' : 'Read the story →'}
+                {locale === 'ru' ? 'Перейти в блог →' : 'Open the blog →'}
               </Link>
             ) : null}
           </Flex>
