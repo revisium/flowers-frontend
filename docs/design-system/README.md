@@ -48,4 +48,5 @@ direction is chosen.
   closing row. Its supplied photographs are shown in responsive aspect-ratio
   frames. Wide timeline sources are extended into portrait compositions so
   they fill their cards without destructive cropping or empty letterbox bands
-  when the viewport narrows.
+  when the viewport narrows. A generated panoramic gloxinia photograph and
+  transparent handwritten sign-off form the final reflective quote banner.

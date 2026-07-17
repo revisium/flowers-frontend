@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useLayoutContext } from 'src/shared/config';
 import { gloxiniaStoryCopy } from '../../model/gloxiniaStoryData';
+import { GloxiniaClosing } from '../GloxiniaClosing/GloxiniaClosing';
 import { GloxiniaFacts } from '../GloxiniaFacts/GloxiniaFacts';
 import { GloxiniaJourney } from '../GloxiniaJourney/GloxiniaJourney';
 import { GloxiniaSharing } from '../GloxiniaSharing/GloxiniaSharing';
@@ -16,6 +17,7 @@ export const GloxiniaStoryPage = () => {
       <GloxiniaJourney text={text} />
       <GloxiniaFacts text={text} />
       <GloxiniaSharing text={text} />
+      <GloxiniaClosing locale={locale} text={text} />
     </Box>
   );
 };

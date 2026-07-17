@@ -182,8 +182,9 @@ statistics, and gallery descriptors live in
 `model/gloxiniaStoryData.ts`. It introduces no remote data or product state.
 
 - `ui/GloxiniaStoryPage` is a composition shell only.
-- `ui/GloxiniaStoryHero`, `ui/GloxiniaJourney`, `ui/GloxiniaFacts`, and
-  `ui/GloxiniaSharing` own the responsive editorial sections.
+- `ui/GloxiniaStoryHero`, `ui/GloxiniaJourney`, `ui/GloxiniaFacts`,
+  `ui/GloxiniaSharing`, and `ui/GloxiniaClosing` own the responsive editorial
+  sections.
 - `ui/GloxiniaJourneyStep` and `ui/GloxiniaStat` own repeated records, while
   `ui/GloxiniaStoryHeading` owns the shared botanical heading treatment.
 - At desktop width the hero, six-stage journey, paired fact cards, and sharing
@@ -193,7 +194,8 @@ statistics, and gallery descriptors live in
   sources are generatively extended into portrait photographs before display,
   avoiding both responsive cropping and empty letterbox bands.
 
-The edited photographic sequence and generated hero live under
+The edited photographic sequence, generated hero, closing banner, and
+handwritten closing artwork live under
 `public/gloxinia-story/`.
 
 ## Target MVVM Contract
