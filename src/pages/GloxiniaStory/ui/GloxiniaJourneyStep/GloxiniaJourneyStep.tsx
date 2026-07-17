@@ -7,7 +7,11 @@ interface GloxiniaJourneyStepProps {
 
 export const GloxiniaJourneyStep = ({ entry }: GloxiniaJourneyStepProps) => (
   <Flex direction="column" height="100%">
-    <Box minHeight={{ md: '174px', lg: '158px' }} paddingRight={{ md: '6px' }}>
+    <Box
+      height={{ lg: '220px', xl: '185px', '2xl': '175px' }}
+      minHeight={{ md: '142px', lg: 'unset' }}
+      paddingRight={{ md: '6px' }}
+    >
       <Text color="#34402f" fontSize="0.82rem" fontWeight={700} lineHeight={1.3}>{entry.date}</Text>
       <Text color="#283126" fontSize="0.94rem" fontWeight={700} lineHeight={1.35} marginTop="8px">{entry.title}</Text>
       <Text color="#50564d" fontSize="0.82rem" fontWeight={450} lineHeight={1.55} marginTop="10px">{entry.description}</Text>

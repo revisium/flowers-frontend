@@ -7,8 +7,14 @@ interface GloxiniaClosingProps {
   readonly text: GloxiniaStoryCopy;
 }
 
-export const GloxiniaClosing = ({ locale, text }: GloxiniaClosingProps) => (
-  <Box padding={{ base: '0 18px 22px', md: '0 34px 34px', xl: '0 40px 42px' }}>
+export const GloxiniaClosing = ({ locale, text }: GloxiniaClosingProps) => {
+  const breakAfter = locale === 'ru' ? 'всходов,' : 'seedlings,';
+  const breakIndex = text.quote.indexOf(breakAfter);
+  const quoteStart = breakIndex >= 0 ? text.quote.slice(0, breakIndex + breakAfter.length) : text.quote;
+  const quoteEnd = breakIndex >= 0 ? text.quote.slice(breakIndex + breakAfter.length).trimStart() : '';
+
+  return (
+    <Box padding={{ base: '0 18px 22px', md: '0 34px 34px', xl: '0 40px 42px' }}>
     <Flex
       alignItems="center"
       as="section"
@@ -36,7 +42,9 @@ export const GloxiniaClosing = ({ locale, text }: GloxiniaClosingProps) => (
           fontSize={{ base: '1.18rem', md: '1.52rem' }}
           lineHeight={1.4}
         >
-          «{text.quote}»
+          «{quoteStart}
+          <Box as="br" display={{ base: 'none', lg: 'initial' }} />
+          {quoteEnd ? ` ${quoteEnd}` : ''}»
         </Text>
         {locale === 'ru' ? (
           <Image
@@ -60,5 +68,6 @@ export const GloxiniaClosing = ({ locale, text }: GloxiniaClosingProps) => (
         )}
       </Flex>
     </Flex>
-  </Box>
-);
+    </Box>
+  );
+};

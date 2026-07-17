@@ -93,7 +93,7 @@ const storySource = {
     ['Путь от семени до цветка', 'From seed to flower'],
     ['Разноцветные глоксинии в первом осеннем цветении', 'Colourful gloxinias in their first autumn bloom'],
     ['Как всё начиналось', 'How it began'],
-    ['Самое красивое в этой истории — не двести всходов, а то, сколько домов они сделали немного зеленее.', 'The loveliest part of this story is not two hundred seedlings, but how many homes became a little greener.'],
+    ['Самое красивое в этой истории — не двести всходов, а то, сколько домов они сделали немного ярче.', 'The loveliest part of this story is not two hundred seedlings, but how many homes became a little brighter.'],
     ['Дарить радость', 'Sharing the joy'],
   ],
   originBody: [

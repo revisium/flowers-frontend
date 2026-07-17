@@ -19,7 +19,7 @@ export const GloxiniaFacts = ({ text }: GloxiniaFactsProps) => (
         <GloxiniaStoryHeading>{text.factsTitle}</GloxiniaStoryHeading>
       </Box>
       <Grid gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', md: 'repeat(4, minmax(0, 1fr))' }} marginTop="20px">
-        {text.stats.map(([value, label]) => <GloxiniaStat key={label} label={label} value={value} />)}
+        {text.stats.map(([value, label], index) => <GloxiniaStat index={index} key={label} label={label} value={value} />)}
       </Grid>
     </Box>
     <Grid

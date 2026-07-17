@@ -1,20 +1,24 @@
 import { Flex, Text } from '@chakra-ui/react';
 
 interface GloxiniaStatProps {
+  readonly index: number;
   readonly label: string;
   readonly value: string;
 }
 
-export const GloxiniaStat = ({ label, value }: GloxiniaStatProps) => (
+export const GloxiniaStat = ({ index, label, value }: GloxiniaStatProps) => (
   <Flex
     alignItems="center"
-    borderLeft="1px solid #e2dccf"
+    borderLeft={{
+      base: index % 2 === 0 ? 'none' : '1px solid #e2dccf',
+      md: index === 0 ? 'none' : '1px solid #e2dccf',
+    }}
+    borderTop={{ base: index >= 2 ? '1px solid #e2dccf' : 'none', md: 'none' }}
     direction="column"
     justifyContent="flex-start"
     minHeight={{ base: '112px', md: '124px' }}
     padding={{ base: '9px 8px', md: '9px 12px' }}
     textAlign="center"
-    _first={{ borderLeft: 'none' }}
   >
     <Text
       color="#384231"

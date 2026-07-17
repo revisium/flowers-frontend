@@ -22,16 +22,6 @@ export const GloxiniaSharing = ({ text }: GloxiniaSharingProps) => (
         <Box color="#444b41" fontSize="0.88rem" fontWeight={450} lineHeight={1.62} marginTop="20px">
           {text.sharingBody.map((paragraph) => <Text key={paragraph} marginTop="14px" _first={{ marginTop: 0 }}>{paragraph}</Text>)}
         </Box>
-        <Text
-          color="#66715b"
-          fontFamily="Georgia, 'Times New Roman', serif"
-          fontSize={{ base: '1.05rem', md: '1.15rem' }}
-          fontStyle="italic"
-          lineHeight={1.45}
-          marginTop="20px"
-        >
-          «{text.quote}»
-        </Text>
       </Box>
       <Grid columnGap="24px" gridTemplateColumns={{ base: '1fr', md: 'repeat(3, minmax(0, 1fr))' }} rowGap="12px">
         {text.gallery.map(([src, alt, caption]) => (
