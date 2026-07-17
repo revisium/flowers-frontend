@@ -8,13 +8,16 @@ interface AboutHeroProps {
 }
 
 export const AboutHero = ({ locale, text }: AboutHeroProps) => (
-  <>
+  <Box position="relative">
     <Flex
       alignItems="center"
       color="#66695f"
       fontSize="0.82rem"
       gap="10px"
-      padding={{ base: '18px', md: '20px 52px 18px' }}
+      left={{ base: '22px', md: '44px', lg: '52px' }}
+      position="absolute"
+      top={{ base: '20px', md: '22px' }}
+      zIndex={3}
     >
       <Link href="/">{locale === 'ru' ? 'Главная' : 'Home'}</Link>
       <Text aria-hidden="true">›</Text>
@@ -28,7 +31,7 @@ export const AboutHero = ({ locale, text }: AboutHeroProps) => (
         alignItems="flex-start"
         direction="column"
         justifyContent="center"
-        padding={{ base: '34px 22px 44px', md: '44px', lg: '38px 30px 44px 52px' }}
+        padding={{ base: '76px 22px 44px', md: '76px 44px 44px', lg: '72px 30px 44px 52px' }}
         position="relative"
         zIndex={2}
       >
@@ -95,5 +98,5 @@ export const AboutHero = ({ locale, text }: AboutHeroProps) => (
         />
       </Box>
     </Grid>
-  </>
+  </Box>
 );

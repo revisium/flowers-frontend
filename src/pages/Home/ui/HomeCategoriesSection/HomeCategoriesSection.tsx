@@ -91,30 +91,35 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
       >
         <Grid
           pt="2px"
-          gap={{ base: '12px', md: '16px' }}
-          gridAutoColumns={{ base: '262px', md: 'auto' }}
+          gap={{ base: '16px', md: '20px' }}
+          gridAutoColumns={{ base: '326px', md: 'auto' }}
           gridAutoFlow={{ base: 'column', md: 'row' }}
           gridTemplateColumns={{
             base: 'none',
             md: 'repeat(2, minmax(0, 1fr))',
             lg: 'repeat(3, minmax(0, 1fr))',
-            xl: 'repeat(4, minmax(0, 1fr))',
           }}
-          gridTemplateRows={{ base: 'repeat(2, auto)', md: 'none' }}
+          gridTemplateRows={{ base: '1fr', md: 'none' }}
           width={{ base: 'max-content', md: '100%' }}
         >
-          {homeCategories[locale].map((category) => (
-            <HomeCategoryCard
-              category={{
-                ...category,
-                count: formatPlantCount(
-                  getCollectionPlantCountByFamily(category.id as CollectionFamilyId),
-                ),
-              }}
-              key={category.id}
-              onOpen={handleCategoryOpen}
-            />
-          ))}
+          {homeCategories[locale].map((category) => {
+            const detail =
+              categoryDetailDataById[category.id as keyof typeof categoryDetailDataById][locale];
+
+            return (
+              <HomeCategoryCard
+                category={{
+                  ...category,
+                  count: formatPlantCount(
+                    getCollectionPlantCountByFamily(category.id as CollectionFamilyId),
+                  ),
+                }}
+                detail={detail}
+                key={category.id}
+                onOpen={handleCategoryOpen}
+              />
+            );
+          })}
         </Grid>
       </Flex>
 
