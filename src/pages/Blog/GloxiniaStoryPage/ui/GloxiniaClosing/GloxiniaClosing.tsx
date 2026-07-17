@@ -43,6 +43,7 @@ export const GloxiniaClosing = ({ locale, text }: GloxiniaClosingProps) => {
           direction="column"
           maxWidth="900px"
           position="relative"
+          pt={{ base: '30px', md: '0' }}
           zIndex={1}
         >
           <Text

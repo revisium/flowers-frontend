@@ -30,13 +30,9 @@ const copy = {
   },
 } as const;
 
-export const Header = ({
-  locale,
-  logoTone,
-  onCollectionOpen,
-  onLocaleChange,
-}: HeaderProps) => {
+export const Header = ({ locale, logoTone, onCollectionOpen, onLocaleChange }: HeaderProps) => {
   const text = copy[locale];
+  const plantCount = getCollectionPlantCount();
 
   return (
     <Flex
@@ -46,11 +42,11 @@ export const Header = ({
       backdropFilter="blur(14px) saturate(1.02)"
       borderBottom="1px solid rgba(119, 108, 83, 0.14)"
       boxShadow="0 10px 24px rgba(56, 48, 31, 0.035)"
-      flexWrap="nowrap"
+      flexWrap={{ base: 'wrap', md: 'nowrap' }}
       gap={{ base: '8px', md: '12px', lg: '14px' }}
       justifyContent="space-between"
       left={0}
-      marginBottom={{ base: '-66px', md: '-80px' }}
+      marginBottom={{ base: '-99px', md: '-80px' }}
       padding={{ base: '10px 14px 12px', md: '12px clamp(22px, 3vw, 40px)' }}
       position="sticky"
       right={0}
@@ -85,21 +81,27 @@ export const Header = ({
         minWidth={0}
       >
         <Button
+          aria-label={`${text.plantsLabel} · ${plantCount}`}
           background="#3f5737"
           borderRadius="999px"
           color="white"
-          display={{ base: 'none', lg: 'inline-flex' }}
+          display="inline-flex"
           fontSize="0.78rem"
           fontWeight={600}
-          gap="7px"
-          height="38px"
+          gap={{ base: '5px', lg: '7px' }}
+          height={{ base: '34px', md: '38px' }}
           onClick={onCollectionOpen}
-          paddingX={{ lg: '14px', xl: '18px' }}
+          paddingX={{ base: '10px', md: '11px', lg: '14px', xl: '18px' }}
           whiteSpace="nowrap"
           _hover={{ background: '#32472c' }}
         >
-          <Text aria-hidden="true" as="span" fontSize="0.95rem">❧</Text>
-          {text.plantsLabel} · {getCollectionPlantCount()}
+          <Text aria-hidden="true" as="span" fontSize="0.95rem">
+            ❧
+          </Text>
+          <Text as="span" display={{ base: 'none', lg: 'inline' }}>
+            {text.plantsLabel} ·
+          </Text>
+          <Text as="span">{plantCount}</Text>
         </Button>
         <HeaderLanguageSwitcher
           label={text.languageLabel}

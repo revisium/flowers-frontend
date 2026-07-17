@@ -15,6 +15,7 @@ export const GloxiniaFacts = ({ text }: GloxiniaFactsProps) => (
     rowGap="18px"
   >
     <Box
+      border="1px solid #ded8ca"
       background="#fffdf8"
       borderRadius="10px"
       minHeight={{ lg: '300px' }}

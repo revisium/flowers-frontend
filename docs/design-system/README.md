@@ -12,10 +12,12 @@ direction is chosen.
 - No custom tokens, palette, or component recipes exist yet; the app uses
   Chakra's `defaultConfig` as-is.
 - The persistent header wordmark uses medium-weight editorial lettering with a
-  compact descriptor and a softly muted greenhouse mark. Desktop navigation
-  adds the primary page links and a dark-green collection-count pill between
-  the wordmark and compact language controls. On smaller viewports the menu and
-  collection pill collapse, preserving the compact wordmark/language layout.
+  compact descriptor and a softly muted greenhouse mark. From tablet widths,
+  navigation adds the primary page links between the wordmark and compact
+  language controls. A dark-green collection-count pill always stays beside the
+  language switcher, using a compact icon-and-count treatment below desktop
+  widths and its full label on desktop. On mobile, the primary links move to a
+  compact second header row.
 - Editorial photographic heroes preserve the source image's intended scale and
   composition, using only a narrow warm contrast gradient behind the copy.
   Their content uses a compact uppercase eyebrow, a dark-green display heading,

@@ -9,7 +9,13 @@ export const BlogPage = () => {
   const text = blogCopy[locale];
 
   return (
-    <Box as="main" background="#fbf9f3" color="#343a31" paddingTop={{ base: '66px', md: '80px' }} width="100%">
+    <Box
+      as="main"
+      background="#fbf9f3"
+      color="#343a31"
+      paddingTop={{ base: '99px', md: '80px' }}
+      width="100%"
+    >
       <BlogHero locale={locale} text={text} />
       <BlogEntries text={text} />
     </Box>

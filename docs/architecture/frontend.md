@@ -26,7 +26,7 @@ Layers, from top to bottom, each depending only downward:
 - `pages` — route-level page slices.
 - `widgets` — reusable composed UI blocks shared by page slices. Current widget
   slice is `Layout`, which owns the shared inner-screen frame, persistent
-  header, brand mark, desktop navigation, collection action, and language
+  header, brand mark, responsive navigation, collection action, and language
   controls.
 - `features` — cross-page reusable behavior (none yet).
 - `entities` — domain types and data records. `collection` owns the canonical
@@ -59,11 +59,14 @@ the widget layout pattern used by sibling projects.
 renders the app background, applies the fixed `18px` viewport padding, hides
 outer overflow, and places page content inside a rounded scroll container that
 fills the remaining viewport width and height up to the current content max
-width. The header provides a linked brand mark, localized desktop navigation,
+width. The header provides a linked brand mark, localized responsive navigation,
 a collection-overlay action with the derived plant count, and compact language
-controls. Navigation collapses to the brand and language switcher below the
-desktop breakpoint. Route pages use this widget instead of adding their own
-outer viewport padding, top-level rounded frame, or duplicated header.
+controls. Navigation stays in the desktop row from the tablet breakpoint and
+moves below the brand and language controls as a second row on mobile. The
+collection action always stays beside the language controls, using an icon and
+count below the desktop breakpoint and its full label on desktop. Route pages
+use this widget instead of adding their own outer viewport padding, top-level
+rounded frame, or duplicated header.
 
 ## Home Prototype Contract
 

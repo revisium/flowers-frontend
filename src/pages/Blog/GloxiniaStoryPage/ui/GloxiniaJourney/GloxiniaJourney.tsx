@@ -13,11 +13,17 @@ export const GloxiniaJourney = ({ text }: GloxiniaJourneyProps) => (
     <Grid
       aria-labelledby="gloxinia-journey"
       columnGap={{ base: '28px', lg: '30px' }}
-      gridTemplateColumns={{ base: '1fr', md: 'repeat(3, minmax(0, 1fr))', lg: 'repeat(6, minmax(0, 1fr))' }}
+      gridTemplateColumns={{
+        base: '1fr',
+        md: 'repeat(3, minmax(0, 1fr))',
+        lg: 'repeat(6, minmax(0, 1fr))',
+      }}
       marginTop={{ base: '34px', md: '36px' }}
       rowGap={{ base: '36px', md: '52px', lg: '15px' }}
     >
-      {text.journey.map((entry) => <GloxiniaJourneyStep entry={entry} key={entry.title} />)}
+      {text.journey.map((entry) => (
+        <GloxiniaJourneyStep entry={entry} key={entry.title} />
+      ))}
     </Grid>
   </Box>
 );

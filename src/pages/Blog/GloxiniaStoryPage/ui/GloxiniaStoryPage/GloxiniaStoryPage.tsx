@@ -16,7 +16,7 @@ export const GloxiniaStoryPage = () => {
       as="main"
       background="#fbf9f3"
       color="#343a31"
-      paddingTop={{ base: '66px', md: '80px' }}
+      paddingTop={{ base: '99px', md: '80px' }}
       width="100%"
       direction="column"
       gap={{ base: '30px', md: '60px', xl: '80px' }}
