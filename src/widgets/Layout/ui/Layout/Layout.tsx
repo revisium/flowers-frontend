@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 
 import { useLayoutContext } from 'src/shared/config';
+import { Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
 
 interface LayoutProps {
@@ -31,6 +32,9 @@ export const Layout = ({ children }: LayoutProps) => {
         css={{
           msOverflowStyle: 'none',
           scrollbarWidth: 'none',
+          '& > main': {
+            flexShrink: 0,
+          },
           '&::-webkit-scrollbar': {
             display: 'none',
           },
@@ -43,6 +47,7 @@ export const Layout = ({ children }: LayoutProps) => {
           onLocaleChange={onLocaleChange}
         />
         {children}
+        <Footer locale={locale} onCollectionOpen={onCollectionOpen} />
       </Flex>
     </Flex>
   );

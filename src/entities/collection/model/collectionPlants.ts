@@ -2074,6 +2074,9 @@ const getCollectionEntryPlantCount = (plant: CollectionPlant) =>
 export const getCollectionPlantCount = () =>
   collectionPlants.reduce((total, plant) => total + getCollectionEntryPlantCount(plant), 0);
 
+export const getCollectionFamilyCount = () =>
+  new Set(collectionPlants.map((plant) => plant.familyId)).size;
+
 export const getCollectionPlantCountByFamily = (familyId: CollectionFamilyId) =>
   collectionPlants
     .filter((plant) => plant.familyId === familyId)

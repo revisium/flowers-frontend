@@ -18,6 +18,10 @@ direction is chosen.
   language switcher, using a compact icon-and-count treatment below desktop
   widths and its full label on desktop. On mobile, the primary links move to a
   compact second header row.
+- The shared footer closes every route with a dark-olive editorial surface,
+  warm ivory type, a quiet botanical watermark, canonical navigation, and a
+  bordered collection callout. Its three desktop columns collapse into a calm
+  vertical sequence on mobile.
 - Editorial photographic heroes preserve the source image's intended scale and
   composition, using only a narrow warm contrast gradient behind the copy.
   Their content uses a compact uppercase eyebrow, a dark-green display heading,

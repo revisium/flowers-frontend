@@ -26,8 +26,8 @@ Layers, from top to bottom, each depending only downward:
 - `pages` — route-level page slices.
 - `widgets` — reusable composed UI blocks shared by page slices. Current widget
   slice is `Layout`, which owns the shared inner-screen frame, persistent
-  header, brand mark, responsive navigation, collection action, and language
-  controls.
+  header and footer, brand mark, responsive navigation, collection action, and
+  language controls.
 - `features` — cross-page reusable behavior (none yet).
 - `entities` — domain types and data records. `collection` owns the canonical
   personal-plant list, its count helpers, and the localized content used by
@@ -55,7 +55,7 @@ collection overlay globally so the home hero action can open it without leaving
 the current route. Shared app chrome lives in `src/widgets/Layout`, following
 the widget layout pattern used by sibling projects.
 
-`src/widgets/Layout` owns the persistent viewport frame and shared header. It
+`src/widgets/Layout` owns the persistent viewport frame and shared page chrome. It
 renders the app background, applies the fixed `18px` viewport padding, hides
 outer overflow, and places page content inside a rounded scroll container that
 fills the remaining viewport width and height up to the current content max
@@ -66,7 +66,10 @@ moves below the brand and language controls as a second row on mobile. The
 collection action always stays beside the language controls, using an icon and
 count below the desktop breakpoint and its full label on desktop. Route pages
 use this widget instead of adding their own outer viewport padding, top-level
-rounded frame, or duplicated header.
+rounded frame, or duplicated header. The shared editorial footer repeats the
+canonical navigation, derives plant and represented-family counts from the
+collection entity, opens the global collection overlay, and stacks its brand,
+links, and collection callout on mobile.
 
 ## Home Prototype Contract
 
