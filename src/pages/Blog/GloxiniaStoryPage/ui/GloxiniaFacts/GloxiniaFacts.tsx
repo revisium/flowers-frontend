@@ -9,7 +9,7 @@ interface GloxiniaFactsProps {
 
 export const GloxiniaFacts = ({ text }: GloxiniaFactsProps) => (
   <Grid
-    columnGap="36px"
+    columnGap={{ base: '36px', lg: '18px' }}
     gridTemplateColumns={{ base: '1fr', lg: '0.93fr 1.07fr' }}
     padding={{ base: '26px 18px 0', md: '30px 34px 0', xl: '32px 40px 0' }}
     rowGap="18px"

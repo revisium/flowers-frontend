@@ -7,7 +7,7 @@ interface GloxiniaSharingProps {
 }
 
 export const GloxiniaSharing = ({ text }: GloxiniaSharingProps) => (
-  <Box padding={{ base: '18px', md: '18px 34px 34px', xl: '20px 40px 42px' }}>
+  <Box padding={{ base: '18px', md: '18px 34px 34px', lg: '34px', xl: '40px 40px 42px' }}>
     <Grid
       border="1px solid #ded8ca"
       borderRadius="10px"
@@ -20,10 +20,18 @@ export const GloxiniaSharing = ({ text }: GloxiniaSharingProps) => (
       <Box>
         <GloxiniaStoryHeading>{text.sharingTitle}</GloxiniaStoryHeading>
         <Box color="#444b41" fontSize="0.88rem" fontWeight={450} lineHeight={1.62} marginTop="20px">
-          {text.sharingBody.map((paragraph) => <Text key={paragraph} marginTop="14px" _first={{ marginTop: 0 }}>{paragraph}</Text>)}
+          {text.sharingBody.map((paragraph) => (
+            <Text key={paragraph} marginTop="14px" _first={{ marginTop: 0 }}>
+              {paragraph}
+            </Text>
+          ))}
         </Box>
       </Box>
-      <Grid columnGap="24px" gridTemplateColumns={{ base: '1fr', md: 'repeat(3, minmax(0, 1fr))' }} rowGap="12px">
+      <Grid
+        columnGap="24px"
+        gridTemplateColumns={{ base: '1fr', md: 'repeat(3, minmax(0, 1fr))' }}
+        rowGap="12px"
+      >
         {text.gallery.map(([src, alt, caption]) => (
           <Box alignSelf="start" as="figure" key={src} margin={0}>
             <Box position="relative">
