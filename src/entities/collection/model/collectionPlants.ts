@@ -282,6 +282,146 @@ const aglaonemaProfile = (
 
 export const collectionPlants: readonly CollectionPlant[] = [
   collectionPlant(
+    'asparagaceae',
+    'chlorophytum-comosum-bonnie',
+    '/plants/chlorophytum-curly-home-photo.jpg',
+    ['Curly spider plant', 'Хлорофитум кудрявый'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Bright indirect light keeps the white stripe clear and the leaves compact and curly. It tolerates medium light, but protect it from harsh midday sun.',
+            'Яркий рассеянный свет сохраняет белую полосу контрастной, а листья — компактными и кудрявыми. Растение переносит среднее освещение, но его нужно беречь от жёсткого полуденного солнца.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water after the top 2–3 cm of soil dries. Soak the root ball evenly, drain excess water and let the mix dry slightly before watering again.',
+            'Поливайте после просыхания верхних 2–3 см грунта. Равномерно промочите корневой ком, слейте лишнюю воду и дайте смеси немного подсохнуть перед следующим поливом.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Average room humidity is enough. Keep the arching leaves away from hot radiators and very dry air to reduce brown tips.',
+            'Обычной комнатной влажности достаточно. Держите изогнутые листья подальше от горячих батарей и очень сухого воздуха, чтобы кончики меньше подсыхали.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'A stable 16–27 °C is ideal. Protect the plant and its hanging plantlets from cold glass, draughts and temperatures below 10–12 °C.',
+            'Оптимальна стабильная температура 16–27 °C. Берегите растение и свисающие детки от холодного стекла, сквозняков и температуры ниже 10–12 °C.',
+          ],
+        ],
+      ),
+      1,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Asparagus family (Asparagaceae)', 'Спаржевые (Asparagaceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          [
+            'Cultivated form of a species native to southern Africa',
+            'Культурная форма вида из южной Африки',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          [
+            'Evergreen rosette perennial with stolons',
+            'Вечнозелёный розеточный многолетник со столонами',
+          ],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            "'Bonnie' has arching green-and-cream leaves that twist into loose curls.",
+            'Long stolons carry small white flowers and miniature daughter rosettes.',
+            'A mature plant forms a full cascading fountain of leaves and plantlets.',
+            'Spider plants are considered non-toxic to cats and dogs, although chewing may still upset digestion.',
+          ],
+          [
+            "У сорта 'Bonnie' зелёно-кремовые листья изгибаются и закручиваются в свободные локоны.",
+            'На длинных столонах появляются маленькие белые цветки и дочерние розетки.',
+            'Взрослое растение образует пышный каскад листьев и многочисленных деток.',
+            'Хлорофитум считается нетоксичным для кошек и собак, хотя поедание листьев может вызвать расстройство пищеварения.',
+          ],
+        ],
+        [
+          'Brown tips often come from salt buildup, hard water or irregular watering. Flush the soil periodically and use soft water when possible.',
+          'Сухие коричневые кончики часто появляются из-за накопления солей, жёсткой воды или нерегулярного полива. Периодически промывайте грунт и по возможности используйте мягкую воду.',
+        ],
+        [
+          [
+            'Brown tips — check water quality, dry air and watering regularity.',
+            'Pale or less curly growth — move the plant to brighter indirect light.',
+            'Soft yellow leaves at the base — let the substrate dry and check the roots for waterlogging.',
+          ],
+          [
+            'Сохнут кончики — проверьте качество воды, влажность воздуха и регулярность полива.',
+            'Новые листья бледнеют и меньше закручиваются — переставьте растение на более яркий рассеянный свет.',
+            'Нижние листья желтеют и размягчаются — просушите грунт и проверьте, не переувлажнены ли корни.',
+          ],
+        ],
+        [
+          'Separate a daughter rosette when it has small roots and plant it in a light, slightly moist mix. It can also be rooted in water or left attached to the mother plant until established.',
+          'Отделите дочернюю розетку, когда у неё появятся небольшие корни, и посадите в лёгкий слегка влажный грунт. Детку также можно укоренить в воде или оставить на столоне до укоренения рядом с материнским растением.',
+        ],
+      ),
+      "Chlorophytum comosum 'Bonnie'",
+      [
+        'This curly spider plant has grown into a generous green cascade and produces so many plantlets that each new rosette feels like a tiny ready-made plant.',
+        'Этот кудрявый хлорофитум превратился в пышный зелёный каскад и выпускает столько деток, что каждая новая розетка выглядит как маленькое самостоятельное растение.',
+      ],
+      [
+        "Curly spider plant 'Bonnie' is a compact cultivar of Chlorophytum comosum. Its striped leaves curl as they grow, while long flexible stolons carry flowers and young rosettes below the mother plant.",
+        "Хлорофитум кудрявый 'Bonnie' — компактный сорт Chlorophytum comosum. Полосатые листья закручиваются по мере роста, а на длинных гибких столонах ниже материнской розетки появляются цветки и многочисленные детки.",
+      ],
+      quickFacts(['Fast-growing', 'Быстрый'], ['Rosette 20–40 cm', 'Розетка 20–40 см']),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a loose, nutritious mix: about 70% peat-free houseplant compost, 20% perlite and 10% fine bark or coconut chips.',
+            'Используйте рыхлую питательную смесь: примерно 70% безторфяного грунта для комнатных растений, 20% перлита и 10% мелкой коры или кокосовых чипсов.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring when thick pale roots tightly fill the pot. Choose the next container only 2–3 cm wider.',
+            'Пересаживайте весной, когда толстые светлые корни плотно заполнят горшок. Следующая ёмкость должна быть шире всего на 2–3 см.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Feed once every 3–4 weeks from spring to early autumn with a balanced foliage fertiliser at half strength. Do not overfeed.',
+            'С весны до начала осени подкармливайте раз в 3–4 недели половинной дозой сбалансированного удобрения для декоративно-лиственных. Не перекармливайте.',
+          ],
+        ],
+        [
+          ['Grooming', 'Формировка'],
+          [
+            'Trim only dry tips and spent stolons. Leave healthy plantlets for a cascading look or remove them to keep the mother rosette compact.',
+            'Подрезайте только сухие кончики и отцветшие столоны. Оставляйте здоровые детки для каскадного вида или удаляйте их, чтобы материнская розетка оставалась компактной.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/chlorophytum-important.png',
+        propagationImage: '/plant-profile/chlorophytum-propagation.png',
+        saleImage: '/plant-profile/chlorophytum-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
     'vitaceae',
     'cissus-antarctica',
     '/plants/cissus-antarctica-home-photo.jpg',
