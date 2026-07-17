@@ -96,14 +96,14 @@ const storySource = {
     ['Немного цифр', 'A few numbers'],
     ['История моих глоксиний', 'The story of my gloxinias'],
     ['Путь от семени до цветка', 'From seed to flower'],
-    ['Разноцветные глоксинии в первом осеннем цветении', 'Colourful gloxinias in their first autumn bloom'],
+    ['Пять цветущих глоксиний в небольших горшках', 'Five flowering gloxinias in small pots'],
     ['Как всё начиналось', 'How it began'],
     ['Самое красивое в этой истории — не двести всходов, а то, сколько домов они сделали немного ярче.', 'The loveliest part of this story is not two hundred seedlings, but how many homes became a little brighter.'],
     ['Дарить радость', 'Sharing the joy'],
   ],
   originBody: [
-    ['На маркетплейсе это был самый обычный пакет с обещанием двадцати семян. Я посеяла их без больших ожиданий и каждый день заглядывала в контейнер. Через короткое время вместо редких ростков там появился настоящий зелёный ковёр.', 'On the marketplace it was an ordinary packet promising twenty seeds. I sowed them without great expectations and checked the container every day. Before long, a green carpet appeared instead of a few scattered sprouts.'],
-    ['Сначала радовало каждое новое растение. Потом стало понятно: места на всех не хватит. Выбросить крепкие живые сеянцы я не могла, поэтому началась большая раздача — знакомым, друзьям и маме. Так одна маленькая покупка превратилась в десятки домашних историй.', 'At first every new plant was a delight. Then it became obvious there would never be enough room. I could not throw away strong living seedlings, so the great giveaway began — to friends, acquaintances and my mother. One small purchase became dozens of home stories.'],
+    ['Семена я заказала на маркетплейсе, особо не надеясь на большой успех.', 'I ordered the seeds from a marketplace without expecting much success.'],
+    ['Но природа удивила — взошли практически все! Выкинуть столько малышей рука не поднялась. Я ухаживала, пересаживала, выращивала... А когда они зацвели осенью, я поняла: это было одно из лучших решений.', 'But nature surprised me — almost every seed sprouted. I could not bring myself to throw away so many little plants. I cared for them, transplanted them and watched them grow... When they flowered in autumn, I realised it had been one of my best decisions.'],
   ],
   sharingBody: [
     ['Когда осенью раскрылись первые бутоны, стало понятно, зачем были нужны все эти пересадки, стаканчики и занятые подоконники. Из одинаковых крошечных семян выросли растения с совершенно разными характерами.', 'When the first buds opened in autumn, every transplant, cup and occupied windowsill suddenly made sense. Identical tiny seeds had grown into plants with completely different personalities.'],

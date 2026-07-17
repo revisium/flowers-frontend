@@ -1,4 +1,4 @@
-import { Box, Grid, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Grid, Image, Text } from '@chakra-ui/react';
 import type { GloxiniaStoryCopy } from '../../model/gloxiniaStoryData';
 import { GloxiniaStat } from '../GloxiniaStat/GloxiniaStat';
 import { GloxiniaStoryHeading } from '../GloxiniaStoryHeading/GloxiniaStoryHeading';
@@ -9,41 +9,68 @@ interface GloxiniaFactsProps {
 
 export const GloxiniaFacts = ({ text }: GloxiniaFactsProps) => (
   <Grid
-    columnGap={{ base: '36px', lg: '18px' }}
-    gridTemplateColumns={{ base: '1fr', lg: '0.93fr 1.07fr' }}
+    columnGap="18px"
+    gridTemplateColumns={{ base: '1fr', lg: 'repeat(2, minmax(0, 1fr))' }}
     padding={{ base: '26px 18px 0', md: '30px 34px 0', xl: '32px 40px 0' }}
     rowGap="18px"
   >
-    <Box background="#fffdf8" border="1px solid #ded8ca" borderRadius="10px" padding={{ base: '26px 20px', md: '26px 24px' }}>
+    <Box
+      background="#fffdf8"
+      borderRadius="10px"
+      minHeight={{ lg: '300px' }}
+      padding={{ base: '26px 20px', md: '26px 24px' }}
+    >
       <Box borderBottom="1px solid #e8e2d7" paddingBottom="20px">
         <GloxiniaStoryHeading>{text.factsTitle}</GloxiniaStoryHeading>
       </Box>
-      <Grid gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', md: 'repeat(4, minmax(0, 1fr))' }} marginTop="20px">
-        {text.stats.map(([value, label], index) => <GloxiniaStat index={index} key={label} label={label} value={value} />)}
+      <Grid
+        gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', md: 'repeat(4, minmax(0, 1fr))' }}
+        marginTop={{ base: '20px', lg: '28px' }}
+      >
+        {text.stats.map(([value, label], index) => (
+          <GloxiniaStat index={index} key={label} label={label} value={value} />
+        ))}
       </Grid>
     </Box>
-    <Grid
+    <Flex
+      background="#fffdf8"
       border="1px solid #ded8ca"
       borderRadius="10px"
-      gridTemplateColumns={{ base: '1fr', md: 'minmax(0, 1.1fr) minmax(210px, .9fr)' }}
+      minHeight={{ lg: '300px' }}
       overflow="hidden"
+      position="relative"
+      direction={{ base: 'column', md: 'row', lg: 'column' }}
+      padding={{ base: '26px 20px 8px', md: '26px 24px 8px', lg: '26px 24px' }}
     >
-      <Box padding={{ base: '26px 20px', md: '26px 24px' }}>
+      <Box position="relative">
         <GloxiniaStoryHeading>{text.originTitle}</GloxiniaStoryHeading>
-        <Box color="#444b41" fontSize="0.88rem" fontWeight={450} lineHeight={1.62} marginTop="20px">
-          {text.originBody.map((paragraph) => <Text key={paragraph} marginTop="12px" _first={{ marginTop: 0 }}>{paragraph}</Text>)}
+        <Box
+          color="#444b41"
+          fontSize={{ base: '0.9rem', md: '0.94rem' }}
+          fontWeight={450}
+          lineHeight={1.62}
+          marginTop="20px"
+        >
+          {text.originBody.map((paragraph) => (
+            <Text key={paragraph} marginTop="8px" _first={{ marginTop: 0 }}>
+              {paragraph}
+            </Text>
+          ))}
         </Box>
       </Box>
       <Image
         alt={text.originImageAlt}
-        alignSelf="center"
-        aspectRatio="4 / 3"
-        background="#eee9dd"
-        height="auto"
-        objectFit="cover"
-        src="/blog/gloxinia-story/06-first-bloom.webp"
-        width="100%"
+        display="block"
+        marginLeft="auto"
+        marginTop={{ base: '-2px', lg: 0 }}
+        maxHeight={{ lg: '72%' }}
+        objectFit="contain"
+        objectPosition="right bottom"
+        right={{ lg: '-1px' }}
+        src="/blog/gloxinia-story/origin-pots.webp"
+        bottom={{ lg: 0 }}
+        width={{ base: '40%', lg: '39%' }}
       />
-    </Grid>
+    </Flex>
   </Grid>
 );

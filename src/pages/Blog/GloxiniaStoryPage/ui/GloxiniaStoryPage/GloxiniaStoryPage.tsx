@@ -19,7 +19,7 @@ export const GloxiniaStoryPage = () => {
       paddingTop={{ base: '66px', md: '80px' }}
       width="100%"
       direction="column"
-      gap="20px"
+      gap={{ base: '30px', md: '60px', xl: '80px' }}
     >
       <GloxiniaStoryHero locale={locale} text={text} />
       <GloxiniaJourney text={text} />
