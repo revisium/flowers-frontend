@@ -25,6 +25,7 @@ export interface CollectionPlant {
   readonly id: string;
   readonly image: string;
   readonly name: Record<Locale, string>;
+  readonly plantCount: number;
   readonly profile: CollectionPlantProfile;
 }
 
@@ -116,7 +117,8 @@ const collectionPlant = (
   image: string,
   name: LocalizedPair,
   profile: CollectionPlantProfile,
-): CollectionPlant => ({ familyId, id, image, name: localized(name), profile });
+  plantCount = 1 + (profile.variants?.items.length ?? 0),
+): CollectionPlant => ({ familyId, id, image, name: localized(name), plantCount, profile });
 
 const plantProfile = (
   care: readonly PlantProfileCareCard[],
@@ -281,6 +283,283 @@ const aglaonemaProfile = (
   );
 
 export const collectionPlants: readonly CollectionPlant[] = [
+  collectionPlant(
+    'amaryllidaceae',
+    'hippeastrum-red-white',
+    '/plants/hippeastrum-red-white-home-photo.jpg',
+    ['Red-and-white hippeastrum', 'Гиппеаструм красно-белый'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give the plant bright diffused light and a little gentle morning or evening sun. During active leaf growth, good light helps the bulb restore its strength for the next bloom.',
+            'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. В период роста листьев хорошее освещение помогает луковице восстановить силы для следующего цветения.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water moderately after the top layer of soil dries, directing water around the edge of the pot rather than onto the bulb neck. Reduce watering as the leaves naturally fade before dormancy.',
+            'Поливайте умеренно после просыхания верхнего слоя грунта, направляя воду по краю горшка, а не на шейку луковицы. Когда перед периодом покоя листья начнут естественно увядать, постепенно сократите полив.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Average room humidity is sufficient. Do not mist the flowers or keep the bulb neck constantly damp, as stagnant moisture encourages spotting and rot.',
+            'Обычной комнатной влажности достаточно. Не опрыскивайте цветки и не оставляйте шейку луковицы постоянно влажной: застойная сырость способствует пятнам и гнили.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep an actively growing plant at 18–24 °C. During dormancy, a cooler 12–16 °C position helps prepare the bulb for a new growth cycle.',
+            'В период активного роста содержите растение при 18–24 °C. Во время покоя более прохладное место с температурой 12–16 °C помогает луковице подготовиться к новому циклу роста.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Amaryllis family (Amaryllidaceae)', 'Амариллисовые (Amaryllidaceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          [
+            'Garden hybrid descended from South American species',
+            'Садовый гибрид видов из Южной Америки',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Bulbous flowering perennial', 'Луковичный цветущий многолетник'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'A strong flower stalk can carry several large funnel-shaped blooms.',
+            'The red petals are marked by a white star and fine contrasting veins.',
+            'After flowering, healthy green leaves feed the bulb and should not be cut too early.',
+            'With a distinct rest period, the same bulb can bloom again for many years.',
+          ],
+          [
+            'На крепком цветоносе может раскрыться сразу несколько крупных воронковидных цветков.',
+            'Красные лепестки украшены белой звездой и тонкими контрастными прожилками.',
+            'После цветения здоровые зелёные листья питают луковицу, поэтому их нельзя срезать слишком рано.',
+            'При выраженном периоде покоя одна и та же луковица способна цвести много лет подряд.',
+          ],
+        ],
+        [
+          'Leave the upper third of the bulb above the soil and keep water away from its neck to reduce the risk of rot. All parts, especially the bulb, are toxic if eaten, so keep the plant away from children and pets.',
+          'Оставляйте верхнюю треть луковицы над грунтом и не допускайте попадания воды на её шейку, чтобы снизить риск гнили. Все части растения, особенно луковица, ядовиты при попадании внутрь, поэтому держите его подальше от детей и животных.',
+        ],
+        [
+          [
+            'The bulb is soft or dark at the base — stop watering and inspect it for rot.',
+            'Leaves grow but the plant does not bloom — provide brighter light, regular feeding and a clear rest period.',
+            'Silvery streaks or distorted buds — inspect the plant for thrips.',
+          ],
+          [
+            'Луковица размягчилась или потемнела у основания — прекратите полив и проверьте её на гниль.',
+            'Листья растут, но цветения нет — обеспечьте более яркий свет, регулярные подкормки и выраженный период покоя.',
+            'Серебристые штрихи или деформированные бутоны — осмотрите растение на трипсов.',
+          ],
+        ],
+        [
+          'During repotting, gently separate daughter bulbs that have their own roots. Plant each offset into a small pot, leaving its upper third above the substrate, and expect the first bloom after the young bulb matures.',
+          'Во время пересадки аккуратно отделите дочерние луковицы с собственными корнями. Посадите каждую детку в небольшой горшок, оставив верхнюю треть над грунтом, и дождитесь цветения после того, как молодая луковица подрастёт.',
+        ],
+      ),
+      'Hippeastrum hybrid',
+      [
+        'The first open flower immediately became the centre of the room: the scarlet petals, white star and fine veins look as though they were painted by hand.',
+        'Первый раскрывшийся цветок сразу стал центром комнаты: алые лепестки, белая звезда и тонкие прожилки выглядят так, будто их расписали вручную.',
+      ],
+      [
+        'This red-and-white Hippeastrum is a bulbous hybrid with broad green leaves and spectacular star-shaped flowers on a tall leafless stalk. Its seasonal rhythm alternates active growth, flowering and a restorative rest period.',
+        'Этот красно-белый гиппеаструм — луковичный гибрид с широкими зелёными листьями и эффектными звёздчатыми цветками на высоком безлистном цветоносе. В его сезонном ритме чередуются активный рост, цветение и восстановительный период покоя.',
+      ],
+      quickFacts(
+        ['Moderate', 'Умеренный'],
+        ['Usually 40–70 cm in bloom', 'Обычно 40–70 см во время цветения'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a nutritious, airy and well-drained mix: about 60% houseplant compost, 25% perlite or pumice and 15% fine bark. A drainage hole is essential.',
+            'Используйте питательную, воздушную и хорошо дренированную смесь: примерно 60% грунта для комнатных растений, 25% перлита или пемзы и 15% мелкой коры. Дренажное отверстие обязательно.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot every 2–3 years after dormancy or before new growth begins. Choose a stable pot only 3–5 cm wider than the bulb.',
+            'Пересаживайте раз в 2–3 года после периода покоя или перед началом нового роста. Выбирайте устойчивый горшок всего на 3–5 см шире луковицы.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Feed every two weeks from the appearance of leaves until they begin to yellow, using a balanced fertiliser for flowering plants at half strength. Do not feed a dormant bulb.',
+            'С появления листьев и до начала их пожелтения подкармливайте раз в две недели половинной дозой сбалансированного удобрения для цветущих растений. Спящую луковицу не подкармливайте.',
+          ],
+        ],
+        [
+          ['After flowering', 'После цветения'],
+          [
+            'Cut the spent flower stalk above the bulb, but keep healthy leaves. Continue normal care so the foliage can replenish the bulb before its next rest period.',
+            'Срежьте отцветший цветонос над луковицей, но сохраните здоровые листья. Продолжайте обычный уход, чтобы листва успела наполнить луковицу перед следующим периодом покоя.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/hippeastrum-important.png',
+        propagationImage: '/plant-profile/hippeastrum-propagation.png',
+        saleImage: '/plant-profile/hippeastrum-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'arecaceae',
+    'chamaedorea-elegans',
+    '/plants/chamaedorea-elegans-home-photo.jpg',
+    ['Parlor palm', 'Хамедорея изящная'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Bright diffused light or light partial shade is ideal. The palm tolerates lower light, but direct midday sun can scorch its delicate leaflets.',
+            'Идеален яркий рассеянный свет или лёгкая полутень. Пальма переносит менее освещённые места, но прямое полуденное солнце может обжечь нежные листочки.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water when the top 2–3 cm of soil has dried. Moisten the root ball evenly, drain excess water and never leave the pot standing in water.',
+            'Поливайте после просыхания верхних 2–3 см грунта. Равномерно промочите корневой ком, слейте лишнюю воду и не оставляйте горшок в поддоне с водой.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Average room humidity is acceptable, but 50–60% helps keep the fine leaflet tips green. Keep the palm away from hot radiators.',
+            'Обычная комнатная влажность подходит, но при 50–60% тонкие кончики листьев дольше остаются зелёными. Держите пальму подальше от горячих батарей.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–27 °C and protect from cold draughts, sudden temperature changes and prolonged temperatures below 12–15 °C.',
+            'Содержите при 18–27 °C, защищая от холодных сквозняков, резких перепадов и длительного понижения температуры ниже 12–15 °C.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Palm family (Arecaceae)', 'Пальмовые (Arecaceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          ['Rainforests of Mexico and Guatemala', 'Влажные леса Мексики и Гватемалы'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen compact indoor palm', 'Вечнозелёная компактная комнатная пальма'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'The graceful pinnate fronds are made of many narrow, soft green leaflets.',
+            'Several young palms are often planted together to create a dense clump.',
+            'It grows slowly and adapts well to ordinary indoor light.',
+            'Parlor palm is considered non-toxic to cats and dogs, although chewing foliage may still upset digestion.',
+          ],
+          [
+            'Изящные перистые вайи состоят из множества узких мягко-зелёных листочков.',
+            'Для пышности в один горшок часто высаживают сразу несколько молодых пальм.',
+            'Она растёт медленно и хорошо приспосабливается к обычному комнатному освещению.',
+            'Хамедорея считается нетоксичной для кошек и собак, хотя поедание листвы может вызвать расстройство пищеварения.',
+          ],
+        ],
+        [
+          'Dry brown tips usually point to very dry air, irregular watering or salt buildup. Trim only the damaged edge and correct the cause instead of removing the whole healthy frond.',
+          'Сухие коричневые кончики обычно говорят о слишком сухом воздухе, нерегулярном поливе или накоплении солей. Подрежьте только повреждённый край и устраните причину, не удаляя всю здоровую вайю.',
+        ],
+        [
+          [
+            'Brown leaflet tips — check air humidity, water quality and watering regularity.',
+            'Pale scorched patches — move the palm away from direct sun.',
+            'Fine webbing and speckled leaves — inspect the underside for spider mites.',
+          ],
+          [
+            'Коричневые кончики — проверьте влажность воздуха, качество воды и регулярность полива.',
+            'Бледные выгоревшие пятна — переставьте пальму подальше от прямого солнца.',
+            'Тонкая паутинка и мелкие светлые точки — осмотрите изнанку листьев на паутинного клеща.',
+          ],
+        ],
+        [
+          'A pot containing several seedlings can be divided during spring repotting. Separate only sections with their own roots, pot them into a light moist mix and keep them warm in diffused light while they establish. Individual stem cuttings do not root.',
+          'Куртину из нескольких сеянцев можно разделить во время весенней пересадки. Отделяйте только части с собственными корнями, высаживайте их в лёгкий влажный грунт и держите в тепле при рассеянном свете до укоренения. Отдельные стеблевые черенки не укореняются.',
+        ],
+      ),
+      'Chamaedorea elegans',
+      [
+        'This palm has grown into a light green fountain of delicate fronds. I like how it brings a tropical rhythm to the room without taking over the space.',
+        'Эта пальма выросла в лёгкий зелёный фонтан из тонких вай. Мне нравится, как она добавляет комнате тропический ритм, но не перегружает пространство.',
+      ],
+      [
+        'Parlor palm is a compact understory palm with slender stems and elegant pinnate fronds. It is valued for its calm silhouette, tolerance of indoor conditions and unhurried growth.',
+        'Хамедорея изящная — компактная пальма нижнего яруса леса с тонкими стеблями и элегантными перистыми вайями. Её ценят за спокойный силуэт, терпимость к комнатным условиям и неторопливый рост.',
+      ],
+      quickFacts(
+        ['Slow-growing', 'Медленный'],
+        ['Usually 60–150 cm indoors', 'Обычно 60–150 см в комнате'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a loose, moisture-retentive but well-drained mix: about 65% houseplant compost, 25% perlite or fine pumice and 10% fine bark.',
+            'Используйте рыхлую, влагоёмкую, но хорошо дренированную смесь: примерно 65% грунта для комнатных растений, 25% перлита или мелкой пемзы и 10% мелкой коры.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot carefully every 2–3 years in spring. The roots dislike disturbance, so keep the root ball intact whenever division is not required.',
+            'Пересаживайте осторожно раз в 2–3 года весной. Корни не любят беспокойства, поэтому сохраняйте ком целым, если деление не требуется.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Feed once a month from spring to early autumn with half-strength palm or balanced foliage fertiliser. Do not feed in cold, dark conditions.',
+            'С весны до начала осени подкармливайте раз в месяц половинной дозой удобрения для пальм или декоративно-лиственных. В холоде и при недостатке света не подкармливайте.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листьями'],
+          [
+            'Remove only fully yellow or dry fronds at the base. Wipe dust gently or rinse the foliage with a lukewarm shower.',
+            'Удаляйте у основания только полностью пожелтевшие или сухие вайи. Аккуратно протирайте пыль или промывайте листву тёплым душем.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/chamaedorea-important.png',
+        propagationImage: '/plant-profile/chamaedorea-propagation.png',
+        saleImage: '/plant-profile/chamaedorea-for-sale.png',
+      },
+    ),
+  ),
   collectionPlant(
     'asparagaceae',
     'chlorophytum-comosum-bonnie',
@@ -1970,8 +2249,8 @@ export const collectionPlants: readonly CollectionPlant[] = [
         variants: profileVariants(
           ['My Phalaenopsis collection', 'Моя коллекция фаленопсисов'],
           [
-            'Ten more Phalaenopsis orchids, from warm copper and lemon tones to spotted and velvet-purple blooms. The pink cascade is featured as the main plant.',
-            'Ещё десять фаленопсисов: от тёплых медных и лимонных оттенков до крапчатых и бархатно-фиолетовых цветков. «Розовый каскад» вынесен в главное изображение.',
+            'Ten Phalaenopsis orchids in total: from warm copper and lemon tones to spotted and velvet-purple blooms. The pink cascade is featured in the main image.',
+            'Всего в коллекции десять фаленопсисов: от тёплых медных и лимонных оттенков до крапчатых и бархатно-фиолетовых цветков. «Розовый каскад» вынесен в главное изображение.',
           ],
           ['/plant-profile/orchid-variants/01-copper.webp', ['Copper orange', 'Медно-оранжевая']],
           ['/plant-profile/orchid-variants/02-yellow.webp', ['Lemon yellow', 'Лимонно-жёлтая']],
@@ -2004,6 +2283,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ),
       },
     ),
+    10,
   ),
   collectionPlant(
     'gesneriaceae',
@@ -2208,8 +2488,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
   ),
 ];
 
-const getCollectionEntryPlantCount = (plant: CollectionPlant) =>
-  1 + (plant.profile.variants?.items.length ?? 0);
+const getCollectionEntryPlantCount = (plant: CollectionPlant) => plant.plantCount;
 
 export const getCollectionPlantCount = () =>
   collectionPlants.reduce((total, plant) => total + getCollectionEntryPlantCount(plant), 0);

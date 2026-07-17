@@ -34,9 +34,9 @@ Layers, from top to bottom, each depending only downward:
   reusable plant profiles. It remains a domain slice while the prototype has a
   single Home consumer, so its intentional Steiger `insignificant-slice`
   exception is scoped in `steiger.config.ts`. Collection count helpers include
-  each nested profile variant as a separate plant, so grouped Tradescantia,
-  Callisia, Phalaenopsis, and gloxinia records contribute their full galleries
-  to total and family counts.
+  each nested profile variant as a separate plant by default. A grouped record
+  can provide an explicit total when its cover and gallery contain multiple
+  photographs of the same plants, as in the Phalaenopsis collection.
 - `shared` — cross-cutting UI, API/transport, config, and infrastructure
   helpers with no product-domain knowledge.
 
