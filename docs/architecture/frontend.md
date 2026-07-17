@@ -1,7 +1,7 @@
 # Frontend Architecture
 
 This repository has moved past the pure structural skeleton. The current
-product surface is an exploratory greenhouse prototype with four route-level
+product surface is an exploratory greenhouse prototype with five route-level
 page slices:
 
 - `src/pages/Home` renders the presentation-focused landing/dashboard view:
@@ -13,6 +13,9 @@ page slices:
 - `src/pages/About` renders the localized greenhouse story at `/about`: an
   editorial hero, collection features, personal story, milestone timeline, and
   collection call to action.
+- `src/pages/Blog` renders the localized experiment journal at `/blog`: an
+  editorial introduction, experiment previews, and a clear place for future
+  growing observations.
 - `src/pages/GloxiniaStory` renders the localized photographic story at
   `/gloxinia-story`: the February 2024 sowing, six-stage growth timeline,
   collection figures, sharing story, and first-flowering gallery.
@@ -25,7 +28,8 @@ Layers, from top to bottom, each depending only downward:
 - `pages` — route-level page slices.
 - `widgets` — reusable composed UI blocks shared by page slices. Current widget
   slice is `Layout`, which owns the shared inner-screen frame, persistent
-  header, brand mark, and language controls.
+  header, brand mark, desktop navigation, collection action, and language
+  controls.
 - `features` — cross-page reusable behavior (none yet).
 - `entities` — domain types and data records. `collection` owns the canonical
   personal-plant list, its count helpers, and the localized content used by
@@ -57,9 +61,11 @@ the widget layout pattern used by sibling projects.
 renders the app background, applies the fixed `18px` viewport padding, hides
 outer overflow, and places page content inside a rounded scroll container that
 fills the remaining viewport width and height up to the current content max
-width. The header provides a linked brand mark and compact language controls.
-Route pages use this widget instead of adding their own outer viewport padding,
-top-level rounded frame, or duplicated header.
+width. The header provides a linked brand mark, localized desktop navigation,
+a collection-overlay action with the derived plant count, and compact language
+controls. Navigation collapses to the brand and language switcher below the
+desktop breakpoint. Route pages use this widget instead of adding their own
+outer viewport padding, top-level rounded frame, or duplicated header.
 
 ## Home Prototype Contract
 
@@ -142,18 +148,36 @@ state, or speculative ViewModel/DataSource wiring.
   feature items, `ui/AboutIcon` supplies the line-icon family used by milestone
   items and compact controls, and `ui/BotanicalHeading` supplies the repeated
   editorial heading.
-- The `История цветения` / `Flowering history` feature provides the contextual
-  route into the gloxinia story at `/gloxinia-story`.
+- The `Ботанические эксперименты` / `Botanical experiments` feature provides
+  the contextual route into the experiment journal at `/blog`.
 - The closing action opens the global collection overlay through the shared
   layout context.
 
 About photography lives under `public/about/` and is referenced by the page
 sections.
 
+## Blog Prototype Contract
+
+`src/pages/Blog` is the static, localized index for personal growing
+experiments. It is reached from the persistent header and the About feature
+grid. Typed copy and experiment preview data live in `model/blogPageData.ts`;
+the current prototype introduces no remote data or speculative state layer.
+
+- `ui/BlogPage` is a composition shell only.
+- `ui/BlogHero` introduces the journal, while `ui/BlogEntries` owns the section
+  heading and future-experiment note.
+- `ui/BlogExperimentCard` owns the reusable preview presentation. The first
+  entry links to the gloxinia photo essay at `/gloxinia-story`; later growing
+  experiments should be added to the blog as peer entries rather than as new
+  About-page sections.
+
+The first preview reuses the edited gloxinia photography under
+`public/gloxinia-story/`.
+
 ## Gloxinia Story Prototype Contract
 
 `src/pages/GloxiniaStory` is a static, localized photo essay reached from the
-About feature grid. Its typed Russian and English copy, journey records,
+experiment journal. Its typed Russian and English copy, journey records,
 statistics, and gallery descriptors live in
 `model/gloxiniaStoryData.ts`. It introduces no remote data or product state.
 
@@ -162,6 +186,9 @@ statistics, and gallery descriptors live in
   `ui/GloxiniaSharing` own the responsive editorial sections.
 - `ui/GloxiniaJourneyStep` and `ui/GloxiniaStat` own repeated records, while
   `ui/GloxiniaStoryHeading` owns the shared botanical heading treatment.
+- At desktop width the hero, six-stage journey, paired fact cards, and sharing
+  gallery use the compact editorial proportions of the approved reference;
+  narrower layouts progressively stack without horizontal clipping.
 - Journey and gallery images use stable aspect-ratio frames. Wide journey
   sources are generatively extended into portrait photographs before display,
   avoiding both responsive cropping and empty letterbox bands.

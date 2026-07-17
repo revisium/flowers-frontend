@@ -7,7 +7,6 @@ type BilingualPair = readonly [Translation, Translation];
 type BilingualGalleryText = readonly [alt: Translation, caption: Translation];
 type BilingualJourneyText = readonly [alt: Translation, date: Translation, description: Translation, title: Translation];
 type BilingualLabels = readonly [
-  backToAbout: Translation,
   breadcrumb: Translation,
   factsTitle: Translation,
   heroTitle: Translation,
@@ -38,7 +37,6 @@ export interface GloxiniaJourneyEntry {
 }
 
 export interface GloxiniaStoryCopy {
-  readonly backToAbout: string;
   readonly breadcrumb: string;
   readonly factsTitle: string;
   readonly gallery: readonly (readonly [string, string, string])[];
@@ -77,8 +75,8 @@ const storySource = {
     [['Три розовые глоксинии разных оттенков', 'Three gloxinia flowers in different pink shades'], ['Розовые', 'Pink']],
   ],
   heroBody: [
-    ['В феврале 2024 года я заказала на маркетплейсе пакет семян. В карточке обещали двадцать — взошло почти двести.', 'In February 2024 I ordered a packet of seeds from an online marketplace. The listing promised twenty; almost two hundred sprouted.'],
-    ['То, что начиналось как маленький эксперимент, быстро заняло подоконники и стеллажи. Осенью появились первые бутоны — и каждый цветок оказался совершенно непохожим на соседний.', 'What began as a small experiment quickly occupied every windowsill and shelf. The first buds opened in autumn, and every flower looked completely different from the next.'],
+    ['Эта история началась в феврале 2024 года — с маленьких семян и большой веры в чудо.', 'This story began in February 2024, with tiny seeds and a great deal of faith in a small miracle.'],
+    ['С тех пор прошло больше года, и теперь моя коллекция глоксиний — одна из самых любимых частей оранжереи.', 'More than a year later, my gloxinia collection has become one of the most beloved parts of the greenhouse.'],
   ],
   journey: [
     [['Мелкие семена глоксинии на светлой поверхности', 'Tiny gloxinia seeds scattered on a pale surface'], ['Февраль 2024', 'February 2024'], ['На упаковке было заявлено двадцать семян. На столе они казались почти пылью.', 'The packet promised twenty seeds. On the table they looked almost like dust.'], ['Семена', 'Seeds']],
@@ -89,7 +87,6 @@ const storySource = {
     [['Разноцветные глоксинии в первом осеннем цветении', 'Colourful gloxinias in their first autumn bloom'], ['Осень 2024', 'Autumn 2024'], ['Розовые, сиреневые, фиолетовые и крапчатые — ни один цветок не повторял другой.', 'Pink, lavender, purple and speckled — no two flowers looked alike.'], ['Первое цветение', 'First flowers']],
   ],
   labels: [
-    ['Вернуться к истории оранжереи', 'Back to the greenhouse story'],
     ['История глоксиний', 'The gloxinia story'],
     ['Немного цифр', 'A few numbers'],
     ['История моих глоксиний', 'The story of my gloxinias'],
@@ -97,7 +94,7 @@ const storySource = {
     ['Разноцветные глоксинии в первом осеннем цветении', 'Colourful gloxinias in their first autumn bloom'],
     ['Как всё начиналось', 'How it began'],
     ['Самое красивое в этой истории — не двести всходов, а то, сколько домов они сделали немного зеленее.', 'The loveliest part of this story is not two hundred seedlings, but how many homes became a little greener.'],
-    ['Цветы, которыми хотелось делиться', 'Flowers made for sharing'],
+    ['Дарить радость', 'Sharing the joy'],
   ],
   originBody: [
     ['На маркетплейсе это был самый обычный пакет с обещанием двадцати семян. Я посеяла их без больших ожиданий и каждый день заглядывала в контейнер. Через короткое время вместо редких ростков там появился настоящий зелёный ковёр.', 'On the marketplace it was an ordinary packet promising twenty seeds. I sowed them without great expectations and checked the container every day. Before long, a green carpet appeared instead of a few scattered sprouts.'],
@@ -109,9 +106,9 @@ const storySource = {
   ],
   stats: [
     [['20', '20'], ['семян было заявлено', 'seeds advertised']],
-    [['≈200', '≈200'], ['сеянцев взошло', 'seedlings emerged']],
-    [['3 сезона', '3 seasons'], ['от посева до цветов', 'from sowing to bloom']],
-    [['Десятки', 'Dozens'], ['обрели новые дома', 'found new homes']],
+    [['~200', '~200'], ['сеянцев взошло', 'seedlings emerged']],
+    [['150+', '150+'], ['растений я раздала', 'plants I gave away']],
+    [['30+', '30+'], ['осталось в моей коллекции', 'remain in my collection']],
   ],
 } satisfies GloxiniaBilingualSource;
 
@@ -157,7 +154,6 @@ const buildJourney = (index: LocaleIndex): readonly GloxiniaJourneyEntry[] => st
 const buildCopy = (locale: Locale): GloxiniaStoryCopy => {
   const index = localeIndexes[locale];
   const [
-    backToAbout,
     breadcrumb,
     factsTitle,
     heroTitle,
@@ -169,7 +165,6 @@ const buildCopy = (locale: Locale): GloxiniaStoryCopy => {
   ] = storySource.labels;
 
   return {
-    backToAbout: translate(backToAbout, index),
     breadcrumb: translate(breadcrumb, index),
     factsTitle: translate(factsTitle, index),
     gallery: buildGallery(index),

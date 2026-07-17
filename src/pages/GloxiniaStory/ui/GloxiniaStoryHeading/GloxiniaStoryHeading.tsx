@@ -11,7 +11,7 @@ export const GloxiniaStoryHeading = ({ children, id }: GloxiniaStoryHeadingProps
       alt=""
       aria-hidden="true"
       flex="0 0 auto"
-      height={{ base: '30px', md: '38px' }}
+      height={{ base: '29px', md: '34px' }}
       objectFit="contain"
       src="/about/botanical-heading-sprig-v2.png"
       width="auto"
@@ -19,7 +19,7 @@ export const GloxiniaStoryHeading = ({ children, id }: GloxiniaStoryHeadingProps
     <Text
       as="span"
       fontFamily="Georgia, 'Times New Roman', serif"
-      fontSize={{ base: '1.7rem', md: '2.15rem' }}
+      fontSize={{ base: '1.65rem', md: '1.9rem' }}
       fontWeight={400}
       letterSpacing="-0.025em"
       lineHeight={1.08}

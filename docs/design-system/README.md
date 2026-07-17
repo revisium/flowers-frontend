@@ -13,8 +13,9 @@ direction is chosen.
   Chakra's `defaultConfig` as-is.
 - The persistent header wordmark uses medium-weight editorial lettering with a
   compact descriptor and a softly muted greenhouse mark. Desktop navigation
-  is intentionally limited to the linked wordmark and compact pill language
-  controls.
+  adds the primary page links and a dark-green collection-count pill between
+  the wordmark and compact language controls. On smaller viewports the menu and
+  collection pill collapse, preserving the compact wordmark/language layout.
 - Editorial photographic heroes preserve the source image's intended scale and
   composition, using only a narrow warm contrast gradient behind the copy.
   Their content uses a compact uppercase eyebrow, a dark-green display heading,
@@ -35,9 +36,16 @@ direction is chosen.
   restrained inset section margins, and generated natural-light photography.
   Its desktop sections alternate image and copy blocks; they stack vertically
   on narrow screens.
+- The Blog uses the same warm editorial family while acting as an index rather
+  than a second personal-story page: a photographic journal hero introduces the
+  section, and bordered experiment previews pair one responsive image with a
+  date, serif title, short narrative, compact figures, and a clear reading
+  action. A quiet continuation note leaves room for future experiments.
 - The Gloxinia story extends the About editorial language with a photographic
-  seed-to-flower timeline, thin warm-grey rules, restrained statistic cards,
-  and a compact flowering gallery. Its supplied photographs are shown in full
-  inside responsive aspect-ratio frames. Wide timeline sources are extended
-  into portrait compositions so they fill their cards without destructive
-  cropping or empty letterbox bands when the viewport narrows.
+  seed-to-flower timeline, thin warm-grey rules, restrained paired statistic
+  cards, and a compact flowering gallery. Desktop uses a shorter split hero,
+  one six-column journey row, two adjacent fact cards, and a text-plus-gallery
+  closing row. Its supplied photographs are shown in responsive aspect-ratio
+  frames. Wide timeline sources are extended into portrait compositions so
+  they fill their cards without destructive cropping or empty letterbox bands
+  when the viewport narrows.

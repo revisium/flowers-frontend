@@ -8,13 +8,14 @@ interface GloxiniaJourneyProps {
 }
 
 export const GloxiniaJourney = ({ text }: GloxiniaJourneyProps) => (
-  <Box padding={{ base: '54px 18px 26px', md: '68px 34px 34px', xl: '72px 48px 38px' }}>
+  <Box padding={{ base: '48px 18px 24px', md: '46px 34px 30px', xl: '48px 40px 34px' }}>
     <GloxiniaStoryHeading id="gloxinia-journey">{text.journeyTitle}</GloxiniaStoryHeading>
     <Grid
       aria-labelledby="gloxinia-journey"
-      gap={{ base: '38px 16px', md: '30px 14px', xl: '20px' }}
-      gridTemplateColumns={{ base: '1fr', md: 'repeat(2, minmax(0, 1fr))', lg: 'repeat(3, minmax(0, 1fr))', xl: 'repeat(6, minmax(0, 1fr))' }}
-      marginTop={{ base: '38px', md: '44px' }}
+      columnGap={{ base: '28px', lg: '30px' }}
+      gridTemplateColumns={{ base: '1fr', md: 'repeat(3, minmax(0, 1fr))', lg: 'repeat(6, minmax(0, 1fr))' }}
+      marginTop={{ base: '34px', md: '36px' }}
+      rowGap={{ base: '36px', md: '28px', lg: '15px' }}
     >
       {text.journey.map((entry) => <GloxiniaJourneyStep entry={entry} key={entry.title} />)}
     </Grid>

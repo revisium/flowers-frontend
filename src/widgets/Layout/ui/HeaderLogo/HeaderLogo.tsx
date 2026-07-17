@@ -15,9 +15,9 @@ export const HeaderLogo = ({ homeLabel, subtitle, title, tone }: HeaderLogoProps
   return (
     <Flex
       alignItems="center"
-      flex={{ base: '1 1 auto', md: '0 0 304px' }}
+      flex={{ base: '1 1 auto', md: '0 0 220px', xl: '0 0 260px' }}
       minWidth={0}
-      width={{ base: 'auto', md: '304px' }}
+      width={{ base: 'auto', md: '220px', xl: '260px' }}
     >
       <Link
         alignItems="center"
@@ -28,7 +28,7 @@ export const HeaderLogo = ({ homeLabel, subtitle, title, tone }: HeaderLogoProps
         href="/"
         lineHeight={1}
         maxWidth="100%"
-        minHeight={{ base: '44px', md: '52px' }}
+        minHeight={{ base: '44px', md: '54px' }}
         textDecoration="none"
         width="100%"
         _active={{ textDecoration: 'none' }}
@@ -56,12 +56,12 @@ export const HeaderLogo = ({ homeLabel, subtitle, title, tone }: HeaderLogoProps
           flex="1 1 auto"
           minWidth={0}
           overflow="hidden"
-          width={{ base: 'auto', md: '232px' }}
+          width={{ base: 'auto', md: '166px', xl: '202px' }}
         >
           <Text
             as="strong"
             display="block"
-            fontSize={{ base: '0.95rem', md: '1.45rem' }}
+            fontSize={{ base: '0.95rem', md: '1.12rem', xl: '1.3rem' }}
             fontWeight={500}
             letterSpacing="0.015em"
             lineHeight={1.05}

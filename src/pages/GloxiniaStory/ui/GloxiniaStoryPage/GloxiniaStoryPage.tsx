@@ -1,4 +1,4 @@
-import { Box, Link } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { useLayoutContext } from 'src/shared/config';
 import { gloxiniaStoryCopy } from '../../model/gloxiniaStoryData';
 import { GloxiniaFacts } from '../GloxiniaFacts/GloxiniaFacts';
@@ -16,11 +16,6 @@ export const GloxiniaStoryPage = () => {
       <GloxiniaJourney text={text} />
       <GloxiniaFacts text={text} />
       <GloxiniaSharing text={text} />
-      <Box padding={{ base: '4px 18px 44px', md: '4px 34px 54px' }} textAlign="center">
-        <Link color="#4d6242" fontSize="0.86rem" fontWeight={600} href="/about" textDecoration="underline" textUnderlineOffset="4px">
-          {text.backToAbout}
-        </Link>
-      </Box>
     </Box>
   );
 };

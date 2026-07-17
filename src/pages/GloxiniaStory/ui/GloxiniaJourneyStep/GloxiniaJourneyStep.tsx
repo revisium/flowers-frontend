@@ -7,12 +7,12 @@ interface GloxiniaJourneyStepProps {
 
 export const GloxiniaJourneyStep = ({ entry }: GloxiniaJourneyStepProps) => (
   <Flex direction="column" height="100%">
-    <Box minHeight={{ md: '152px', xl: '138px' }} paddingRight={{ md: '8px' }}>
-      <Text color="#3f473a" fontSize="0.76rem" fontWeight={700} lineHeight={1.25}>{entry.date}</Text>
-      <Text color="#30372e" fontSize="0.9rem" fontWeight={600} lineHeight={1.3} marginTop="8px">{entry.title}</Text>
-      <Text color="#66695f" fontSize="0.78rem" lineHeight={1.55} marginTop="9px">{entry.description}</Text>
+    <Box minHeight={{ md: '174px', lg: '158px' }} paddingRight={{ md: '6px' }}>
+      <Text color="#34402f" fontSize="0.82rem" fontWeight={700} lineHeight={1.3}>{entry.date}</Text>
+      <Text color="#283126" fontSize="0.94rem" fontWeight={700} lineHeight={1.35} marginTop="8px">{entry.title}</Text>
+      <Text color="#50564d" fontSize="0.82rem" fontWeight={450} lineHeight={1.55} marginTop="10px">{entry.description}</Text>
     </Box>
-    <Flex alignItems="center" height="28px" marginY="7px" position="relative">
+    <Flex alignItems="center" height="24px" marginY="5px" position="relative">
       <Box background="#ded7c8" height="1px" left={0} position="absolute" right={0} />
       <Box
         background="#fbf9f3"

@@ -9,26 +9,29 @@ interface GloxiniaFactsProps {
 
 export const GloxiniaFacts = ({ text }: GloxiniaFactsProps) => (
   <Grid
-    gap="18px"
-    gridTemplateColumns={{ base: '1fr', xl: '0.93fr 1.07fr' }}
-    padding={{ base: '28px 18px 0', md: '34px 34px 0', xl: '38px 48px 0' }}
+    columnGap="36px"
+    gridTemplateColumns={{ base: '1fr', lg: '0.93fr 1.07fr' }}
+    padding={{ base: '26px 18px 0', md: '30px 34px 0', xl: '32px 40px 0' }}
+    rowGap="18px"
   >
-    <Box border="1px solid #ded8ca" borderRadius="10px" padding={{ base: '28px 20px', md: '30px 26px' }}>
-      <GloxiniaStoryHeading>{text.factsTitle}</GloxiniaStoryHeading>
-      <Grid gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', md: 'repeat(4, minmax(0, 1fr))' }} marginTop="34px">
+    <Box background="#fffdf8" border="1px solid #ded8ca" borderRadius="10px" padding={{ base: '26px 20px', md: '26px 24px' }}>
+      <Box borderBottom="1px solid #e8e2d7" paddingBottom="20px">
+        <GloxiniaStoryHeading>{text.factsTitle}</GloxiniaStoryHeading>
+      </Box>
+      <Grid gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', md: 'repeat(4, minmax(0, 1fr))' }} marginTop="20px">
         {text.stats.map(([value, label]) => <GloxiniaStat key={label} label={label} value={value} />)}
       </Grid>
     </Box>
     <Grid
       border="1px solid #ded8ca"
       borderRadius="10px"
-      gridTemplateColumns={{ base: '1fr', md: 'minmax(0, 1.15fr) minmax(220px, .85fr)' }}
+      gridTemplateColumns={{ base: '1fr', md: 'minmax(0, 1.1fr) minmax(210px, .9fr)' }}
       overflow="hidden"
     >
-      <Box padding={{ base: '28px 20px', md: '30px 28px' }}>
+      <Box padding={{ base: '26px 20px', md: '26px 24px' }}>
         <GloxiniaStoryHeading>{text.originTitle}</GloxiniaStoryHeading>
-        <Box color="#555a51" fontSize="0.78rem" lineHeight={1.6} marginTop="24px">
-          {text.originBody.map((paragraph) => <Text key={paragraph} marginTop="9px" _first={{ marginTop: 0 }}>{paragraph}</Text>)}
+        <Box color="#444b41" fontSize="0.88rem" fontWeight={450} lineHeight={1.62} marginTop="20px">
+          {text.originBody.map((paragraph) => <Text key={paragraph} marginTop="12px" _first={{ marginTop: 0 }}>{paragraph}</Text>)}
         </Box>
       </Box>
       <Image
@@ -37,7 +40,7 @@ export const GloxiniaFacts = ({ text }: GloxiniaFactsProps) => (
         aspectRatio="4 / 3"
         background="#eee9dd"
         height="auto"
-        objectFit="contain"
+        objectFit="cover"
         src="/gloxinia-story/06-first-bloom.webp"
         width="100%"
       />
