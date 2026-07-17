@@ -1,2 +1,2 @@
-export { BlogPage } from './ui/BlogPage/BlogPage';
-export { GloxiniaStoryPage } from './ui/GloxiniaStoryPage/GloxiniaStoryPage';
+export { BlogPage } from './BlogPage/ui/BlogPage/BlogPage';
+export { GloxiniaStoryPage } from './GloxiniaStoryPage/ui/GloxiniaStoryPage/GloxiniaStoryPage';

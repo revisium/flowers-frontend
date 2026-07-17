@@ -1,4 +1,4 @@
-import { Button, Flex, Link } from '@chakra-ui/react';
+import { Flex, Link } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
 
 interface HeaderNavigationProps {
@@ -23,7 +23,7 @@ const links = {
   ],
 } as const;
 
-export const HeaderNavigation = ({ locale, onCollectionOpen }: HeaderNavigationProps) => (
+export const HeaderNavigation = ({ locale }: HeaderNavigationProps) => (
   <Flex
     alignItems="center"
     aria-label={locale === 'ru' ? 'Основная навигация' : 'Main navigation'}
@@ -37,21 +37,16 @@ export const HeaderNavigation = ({ locale, onCollectionOpen }: HeaderNavigationP
     <Link color="#343a31" fontSize="0.82rem" fontWeight={500} href="/" textDecoration="none">
       {locale === 'ru' ? 'Главная' : 'Home'}
     </Link>
-    <Button
-      background="transparent"
-      color="#343a31"
-      fontSize="0.82rem"
-      fontWeight={500}
-      height="auto"
-      minWidth={0}
-      onClick={onCollectionOpen}
-      padding={0}
-      _hover={{ color: '#536448' }}
-    >
-      {locale === 'ru' ? 'Мои растения' : 'My plants'}
-    </Button>
+
     {links[locale].slice(1).map(([label, href]) => (
-      <Link color="#343a31" fontSize="0.82rem" fontWeight={500} href={href} key={href} textDecoration="none">
+      <Link
+        color="#343a31"
+        fontSize="0.82rem"
+        fontWeight={500}
+        href={href}
+        key={href}
+        textDecoration="none"
+      >
         {label}
       </Link>
     ))}

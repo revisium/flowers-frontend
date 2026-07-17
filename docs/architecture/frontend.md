@@ -158,16 +158,19 @@ sections.
 
 `src/pages/Blog` is the static, localized index for personal growing
 experiments. It is reached from the persistent header and the About feature
-grid. Typed copy and experiment preview data live in `model/blogPageData.ts`;
-the current prototype introduces no remote data or speculative state layer.
+grid. The slice groups each route page with its own model and UI: the journal
+index lives in `BlogPage/`, while the first article lives in
+`GloxiniaStoryPage/`. Typed copy and experiment preview data live in
+`BlogPage/model/blogPageData.ts`; the current prototype introduces no remote
+data or speculative state layer.
 
-- `ui/BlogPage` is a composition shell only.
-- `ui/BlogHero` introduces the journal, while `ui/BlogEntries` owns the section
-  heading and future-experiment note.
-- `ui/BlogExperimentCard` owns the reusable preview presentation. The first
+- `BlogPage/ui/BlogPage` is a composition shell only.
+- `BlogPage/ui/BlogHero` introduces the journal, while
+  `BlogPage/ui/BlogEntries` owns the section heading and future-experiment note.
+- `BlogPage/ui/BlogExperimentCard` owns the reusable preview presentation. The first
   entry links to the gloxinia photo essay at `/blog/gloxinia-story`; later
-  growing experiments should be added to the Blog slice as peer entries rather
-  than as new page slices or About-page sections.
+  growing experiments should be added to the Blog slice as peer article-page
+  folders rather than as new FSD page slices or About-page sections.
 
 The first preview reuses the edited gloxinia photography under
 `public/blog/gloxinia-story/`.
@@ -175,17 +178,22 @@ The first preview reuses the edited gloxinia photography under
 ## Blog Article Contract: Gloxinia Story
 
 The gloxinia article is a static, localized photo essay inside
-`src/pages/Blog`, reached from the experiment journal at
+`src/pages/Blog/GloxiniaStoryPage`, reached from the experiment journal at
 `/blog/gloxinia-story`. Its typed Russian and English copy, journey records,
 statistics, and gallery descriptors live in
-`model/gloxiniaStoryData.ts`. It introduces no remote data or product state.
+`GloxiniaStoryPage/model/gloxiniaStoryData.ts`. It introduces no remote data or
+product state.
 
-- `ui/GloxiniaStoryPage` is a composition shell only.
-- `ui/GloxiniaStoryHero`, `ui/GloxiniaJourney`, `ui/GloxiniaFacts`,
-  `ui/GloxiniaSharing`, and `ui/GloxiniaClosing` own the responsive editorial
-  sections.
-- `ui/GloxiniaJourneyStep` and `ui/GloxiniaStat` own repeated records, while
-  `ui/GloxiniaStoryHeading` owns the shared botanical heading treatment.
+- `GloxiniaStoryPage/ui/GloxiniaStoryPage` is a composition shell only.
+- `GloxiniaStoryPage/ui/GloxiniaStoryHero`,
+  `GloxiniaStoryPage/ui/GloxiniaJourney`,
+  `GloxiniaStoryPage/ui/GloxiniaFacts`,
+  `GloxiniaStoryPage/ui/GloxiniaSharing`, and
+  `GloxiniaStoryPage/ui/GloxiniaClosing` own the responsive editorial sections.
+- `GloxiniaStoryPage/ui/GloxiniaJourneyStep` and
+  `GloxiniaStoryPage/ui/GloxiniaStat` own repeated records, while
+  `GloxiniaStoryPage/ui/GloxiniaStoryHeading` owns the shared botanical heading
+  treatment.
 - At desktop width the hero, six-stage journey, paired fact cards, and sharing
   gallery use the compact editorial proportions of the approved reference;
   narrower layouts progressively stack without horizontal clipping.
