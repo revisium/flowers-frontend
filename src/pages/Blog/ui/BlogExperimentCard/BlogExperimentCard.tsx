@@ -51,7 +51,7 @@ export const BlogExperimentCard = ({ entry, text }: BlogExperimentCardProps) => 
           fontSize="0.78rem"
           height="40px"
           marginTop="30px"
-          onClick={() => navigate('/gloxinia-story')}
+          onClick={() => navigate('/blog/gloxinia-story')}
           paddingX="20px"
           _hover={{ background: '#34482e' }}
         >

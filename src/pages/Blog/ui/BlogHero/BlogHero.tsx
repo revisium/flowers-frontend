@@ -10,8 +10,8 @@ interface BlogHeroProps {
 export const BlogHero = ({ locale, text }: BlogHeroProps) => (
   <Box
     backgroundImage={{
-      base: 'linear-gradient(180deg, rgba(251,249,243,.98) 0%, rgba(251,249,243,.91) 57%, rgba(251,249,243,.14) 78%), url(/gloxinia-story/hero.webp)',
-      lg: 'linear-gradient(90deg, rgba(251,249,243,.99) 0%, rgba(251,249,243,.94) 42%, rgba(251,249,243,.16) 70%), url(/gloxinia-story/hero.webp)',
+      base: 'linear-gradient(180deg, rgba(251,249,243,.98) 0%, rgba(251,249,243,.91) 57%, rgba(251,249,243,.14) 78%), url(/blog/gloxinia-story/hero.webp)',
+      lg: 'linear-gradient(90deg, rgba(251,249,243,.99) 0%, rgba(251,249,243,.94) 42%, rgba(251,249,243,.16) 70%), url(/blog/gloxinia-story/hero.webp)',
     }}
     backgroundPosition={{ base: '66% bottom', lg: 'center 58%' }}
     backgroundSize="cover"

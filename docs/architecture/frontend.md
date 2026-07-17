@@ -1,8 +1,8 @@
 # Frontend Architecture
 
 This repository has moved past the pure structural skeleton. The current
-product surface is an exploratory greenhouse prototype with five route-level
-page slices:
+product surface is an exploratory greenhouse prototype with four page slices
+supporting five routes:
 
 - `src/pages/Home` renders the presentation-focused landing/dashboard view:
   hero, collection summary, care actions, responsive category cards, and notes
@@ -13,12 +13,10 @@ page slices:
 - `src/pages/About` renders the localized greenhouse story at `/about`: an
   editorial hero, collection features, personal story, milestone timeline, and
   collection call to action.
-- `src/pages/Blog` renders the localized experiment journal at `/blog`: an
-  editorial introduction, experiment previews, and a clear place for future
-  growing observations.
-- `src/pages/GloxiniaStory` renders the localized photographic story at
-  `/gloxinia-story`: the February 2024 sowing, six-stage growth timeline,
-  collection figures, sharing story, and first-flowering gallery.
+- `src/pages/Blog` renders the localized experiment journal at `/blog` and its
+  photographic articles. The first article lives at `/blog/gloxinia-story` and
+  covers the February 2024 sowing, six-stage growth timeline, collection
+  figures, sharing story, and first-flowering gallery.
 
 ## FSD Layer Hierarchy
 
@@ -167,17 +165,18 @@ the current prototype introduces no remote data or speculative state layer.
 - `ui/BlogHero` introduces the journal, while `ui/BlogEntries` owns the section
   heading and future-experiment note.
 - `ui/BlogExperimentCard` owns the reusable preview presentation. The first
-  entry links to the gloxinia photo essay at `/gloxinia-story`; later growing
-  experiments should be added to the blog as peer entries rather than as new
-  About-page sections.
+  entry links to the gloxinia photo essay at `/blog/gloxinia-story`; later
+  growing experiments should be added to the Blog slice as peer entries rather
+  than as new page slices or About-page sections.
 
 The first preview reuses the edited gloxinia photography under
-`public/gloxinia-story/`.
+`public/blog/gloxinia-story/`.
 
-## Gloxinia Story Prototype Contract
+## Blog Article Contract: Gloxinia Story
 
-`src/pages/GloxiniaStory` is a static, localized photo essay reached from the
-experiment journal. Its typed Russian and English copy, journey records,
+The gloxinia article is a static, localized photo essay inside
+`src/pages/Blog`, reached from the experiment journal at
+`/blog/gloxinia-story`. Its typed Russian and English copy, journey records,
 statistics, and gallery descriptors live in
 `model/gloxiniaStoryData.ts`. It introduces no remote data or product state.
 
@@ -196,7 +195,8 @@ statistics, and gallery descriptors live in
 
 The edited photographic sequence, generated hero, closing banner, and
 handwritten closing artwork live under
-`public/gloxinia-story/`.
+`public/blog/gloxinia-story/`. The legacy `/gloxinia-story` route redirects to
+the canonical Blog URL so saved links remain valid.
 
 ## Target MVVM Contract
 

@@ -81,7 +81,7 @@ const buildCopy = (locale: Locale): BlogCopy => {
     entry: {
       date: translate(source.entry.date),
       excerpt: translate(source.entry.excerpt),
-      image: '/gloxinia-story/06-first-bloom.webp',
+      image: '/blog/gloxinia-story/06-first-bloom.webp',
       imageAlt: translate(source.entry.imageAlt),
       stats: source.entry.stats.map(([value, label]) => [translate(value), translate(label)]),
       title: translate(source.entry.title),

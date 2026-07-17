@@ -5,6 +5,7 @@ export default [
     index('app/routes/_index.tsx'),
     route('about', 'app/routes/about.tsx'),
     route('blog', 'app/routes/blog.tsx'),
+    route('blog/gloxinia-story', 'app/routes/blog-gloxinia-story.tsx'),
     route('care', 'app/routes/care.tsx'),
     route('gloxinia-story', 'app/routes/gloxinia-story.tsx'),
   ]),
