@@ -285,6 +285,143 @@ const aglaonemaProfile = (
 export const collectionPlants: readonly CollectionPlant[] = [
   collectionPlant(
     'amaryllidaceae',
+    'clivia-miniata-rescued',
+    '/plants/clivia-miniata-home-photo.jpg',
+    ['Clivia', 'Кливия'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Bright diffused light is ideal, with gentle morning or evening sun. Clivia tolerates partial shade, but a recovering young division needs steady light to rebuild a strong fan and eventually flower.',
+            'Идеален яркий рассеянный свет с мягким утренним или вечерним солнцем. Кливия переносит полутень, но восстанавливающейся молодой делёнке нужен стабильный свет, чтобы нарастить крепкий веер и со временем зацвести.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water only after the top 3–4 cm of soil dries. Moisten the mix evenly, drain all excess water and keep water out of the leaf fan and basal crown.',
+            'Поливайте только после просыхания верхних 3–4 см грунта. Равномерно увлажните смесь, полностью слейте лишнюю воду и не допускайте её попадания внутрь веера и на основание розетки.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Average room humidity is sufficient. Good air movement around the base is more important than misting, especially after a history of rot.',
+            'Обычной комнатной влажности достаточно. После перенесённого загнивания хорошее движение воздуха вокруг основания важнее опрыскиваний.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep a recovering plant at 18–24 °C without cold draughts. Once mature and healthy, a bright cool rest at about 10–15 °C can help initiate flower buds.',
+            'Восстанавливающееся растение содержите при 18–24 °C без холодных сквозняков. Когда кливия станет взрослой и крепкой, светлый прохладный период покоя при 10–15 °C поможет заложить цветочные почки.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Amaryllis family (Amaryllidaceae)', 'Амариллисовые (Amaryllidaceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          ['Woodland understory of South Africa', 'Лесной подлесок Южной Африки'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          [
+            'Evergreen rhizomatous flowering perennial',
+            'Вечнозелёный корневищный цветущий многолетник',
+          ],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Broad dark-green leaves grow in a neat two-sided fan.',
+            'Clivia stores moisture in thick, fleshy cream-coloured roots rather than in a true bulb.',
+            'Young offsets and recovering divisions can take several years to reach flowering size.',
+            'A mature healthy plant usually blooms after a bright, cool and relatively dry rest period.',
+          ],
+          [
+            'Широкие тёмно-зелёные листья растут аккуратным двусторонним веером.',
+            'Кливия запасает влагу в толстых мясистых светлых корнях, а не в настоящей луковице.',
+            'Молодым деткам и восстанавливающимся делёнкам может понадобиться несколько лет до первого цветения.',
+            'Взрослая здоровая кливия обычно зацветает после светлого, прохладного и относительно сухого периода покоя.',
+          ],
+        ],
+        [
+          'The fleshy roots and basal crown rot easily in constantly wet soil. If the base softens or darkens, remove damaged tissue, let the cuts dry and restart the healthy fan in a small pot with an airy mix. All parts are toxic if eaten, so keep the plant away from children and pets.',
+          'Мясистые корни и основание розетки легко загнивают в постоянно сыром грунте. Если основание размягчилось или потемнело, удалите повреждённые ткани, подсушите срезы и заново укорените здоровый веер в небольшом горшке с воздушной смесью. Все части растения ядовиты при попадании внутрь, поэтому держите его подальше от детей и животных.',
+        ],
+        [
+          [
+            'A soft dark base or sour-smelling soil — stop watering and inspect the roots for rot.',
+            'Yellow lower leaves with wet soil — improve drainage and allow the mix to dry.',
+            'No flowers — the plant may still be young or recovering; later provide brighter light and a cool rest period.',
+          ],
+          [
+            'Мягкое потемневшее основание или кислый запах грунта — прекратите полив и проверьте корни на гниль.',
+            'Нижние листья желтеют при влажном грунте — улучшите дренаж и дайте смеси просохнуть.',
+            'Нет цветения — растение может быть ещё молодым или восстанавливаться; позже обеспечьте более яркий свет и прохладный период покоя.',
+          ],
+        ],
+        [
+          'Separate an offset only when it has at least four or five leaves and several roots of its own. Cut the connecting rhizome with a sterile blade, let the wounds dry briefly and plant the division into a small snug pot with an airy substrate.',
+          'Отделяйте детку, когда у неё появятся хотя бы четыре-пять листьев и несколько собственных корней. Перережьте соединяющее корневище стерильным лезвием, немного подсушите срезы и посадите делёнку в небольшой тесный горшок с воздушным субстратом.',
+        ],
+      ),
+      'Clivia miniata',
+      [
+        'This clivia was given to me as a large bush, but then it became ill and began to rot. I spent a long time saving it, removing everything damaged and trying to preserve the living part. The small fan in the photograph is what finally took root. It has never flowered yet, but for me its new leaves already feel like a victory.',
+        'Эту кливию мне подарили большим кустиком, но потом она заболела и начала подгнивать. Я долго её спасала, убирала всё повреждённое и старалась сохранить живую часть. Маленький веер на фотографии — то, что наконец прижилось. Она ещё ни разу не цвела, но для меня её новые листья уже выглядят как победа.',
+      ],
+      [
+        'This is a young rescued division of Clivia miniata with a compact fan of broad dark-green leaves. Right now its main task is not flowering but rebuilding healthy roots and steady new growth after rot.',
+        'Это молодая спасённая делёнка кливии киноварной с компактным веером широких тёмно-зелёных листьев. Сейчас её главная задача — не цветение, а восстановление здоровых корней и стабильного нового роста после загнивания.',
+      ],
+      quickFacts(['Slow-growing', 'Медленный'], ['Usually 30–60 cm', 'Обычно 30–60 см']),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a very airy, well-drained mix: about 55% houseplant compost, 25% fine bark and 20% perlite or pumice. A drainage hole is essential.',
+            'Используйте очень воздушную, хорошо дренированную смесь: примерно 55% грунта для комнатных растений, 25% мелкой коры и 20% перлита или пемзы. Дренажное отверстие обязательно.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Clivia prefers a snug pot and dislikes frequent root disturbance. Repot only when roots crowd the container or the substrate has deteriorated, handling the fleshy roots gently.',
+            'Кливия предпочитает тесный горшок и не любит частого беспокойства корней. Пересаживайте только тогда, когда корни заполнят ёмкость или грунт испортится, осторожно обращаясь с мясистыми корнями.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Feed a rooted, actively growing plant every 3–4 weeks from spring to early autumn with half-strength balanced fertiliser. Do not feed while roots are damaged or growth has stopped.',
+            'Укоренившееся активно растущее растение с весны до начала осени подкармливайте раз в 3–4 недели половинной дозой сбалансированного удобрения. Не подкармливайте при повреждённых корнях или остановке роста.',
+          ],
+        ],
+        [
+          ['Flowering and rest', 'Цветение и покой'],
+          [
+            'Do not force a young recovering division to bloom. Once it forms a mature fan and a strong root system, give it six to eight weeks of cooler, drier rest before gradually resuming watering.',
+            'Не стимулируйте цветение у молодой восстанавливающейся делёнки. Когда она сформирует взрослый веер и крепкую корневую систему, устройте ей шесть-восемь недель более прохладного и сухого покоя, а затем постепенно возобновите полив.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/clivia-important.png',
+        propagationImage: '/plant-profile/clivia-propagation.png',
+        saleImage: '/plant-profile/clivia-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'amaryllidaceae',
     'hippeastrum-red-white',
     '/plants/hippeastrum-red-white-home-photo.jpg',
     ['Red-and-white hippeastrum', 'Гиппеаструм красно-белый'],
