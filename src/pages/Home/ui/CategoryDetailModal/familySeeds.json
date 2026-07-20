@@ -1097,9 +1097,9 @@
     "heroFilter": "drop-shadow(0 18px 14px rgba(72, 57, 37, 0.14))",
     "heroImage": "/plants/lamiaceae-modal/hero.png",
     "heroPosition": {
-      "base": "calc(100% + 155px) 205px",
-      "md": "calc(100% + 35px) 92px",
-      "lg": "calc(100% - 20px) 72px"
+      "base": "calc(100% + 155px) 180px",
+      "md": "calc(100% + 35px) 54px",
+      "lg": "calc(100% - 20px) 34px"
     },
     "heroSize": {
       "base": "560px auto",
@@ -1161,9 +1161,9 @@
     },
     "heroImage": "/plants/moraceae-modal/hero.png",
     "heroPosition": {
-      "base": "calc(100% + 110px) 175px",
-      "md": "calc(100% + 20px) 82px",
-      "lg": "calc(100% - 18px) 58px"
+      "base": "calc(100% + 110px) 150px",
+      "md": "calc(100% + 20px) 44px",
+      "lg": "calc(100% - 18px) 20px"
     },
     "heroSize": {
       "base": "560px auto",
