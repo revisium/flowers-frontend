@@ -838,6 +838,1010 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ),
   ),
   collectionPlant(
+    'asparagaceae',
+    'beaucarnea-recurvata',
+    '/plants/beaucarnea-recurvata-home-photo.jpg',
+    ['Ponytail palm', 'Нолина отогнутая'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give very bright light with several hours of gentle direct sun. Acclimatise gradually after a darker winter and rotate the pot between growth periods for an even crown.',
+            'Обеспечьте очень яркий свет и несколько часов мягкого прямого солнца. После тёмной зимы приучайте к нему постепенно, а между периодами роста поворачивайте горшок для ровной кроны.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Let at least half of the substrate, preferably nearly all of it, dry before watering thoroughly. Drain every drop of excess water; the swollen base stores moisture and tolerates drought far better than wet roots.',
+            'Перед обильным поливом давайте просохнуть как минимум половине, а лучше почти всему объёму грунта. Полностью сливайте лишнюю воду: утолщённое основание запасает влагу и переносит засуху гораздо лучше мокрых корней.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Average dry room air is suitable. Do not mist the crown routinely; good ventilation and occasional gentle cleaning of the long leaves are enough.',
+            'Подходит обычный сухой комнатный воздух. Не опрыскивайте центр розетки без необходимости: достаточно хорошего проветривания и редкой аккуратной очистки длинных листьев.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–28 °C during active growth. In winter it can rest brighter and cooler at about 10–15 °C with very sparse watering; protect from frost and cold wet soil.',
+            'В период активного роста содержите при 18–28 °C. Зимой растение может отдыхать в светлом прохладном месте при 10–15 °C и очень редком поливе; берегите от мороза и холодного мокрого грунта.',
+          ],
+        ],
+      ),
+      1,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Asparagus family (Asparagaceae)', 'Спаржевые (Asparagaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Dry regions of eastern Mexico', 'Засушливые районы восточной Мексики'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen caudex tree', 'Вечнозелёное каудексное дерево'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Despite its common name, the ponytail palm is not a true palm.',
+            'Its bottle-shaped caudex stores water for long dry periods.',
+            'Narrow recurved leaves form a loose fountain above the trunk.',
+            'Indoor growth is slow, but a well-kept plant can live for decades.',
+          ],
+          [
+            'Несмотря на распространённое название, нолина не является настоящей пальмой.',
+            'Бутылкообразный каудекс запасает воду на длительные засушливые периоды.',
+            'Узкие отогнутые листья образуют свободный фонтан над стволом.',
+            'В помещении нолина растёт медленно, но при хорошем уходе может жить десятилетиями.',
+          ],
+        ],
+        [
+          'Never bury the swollen caudex or leave the pot standing in water. Keep the base above the substrate in a container with a drainage hole: persistent moisture around the trunk can cause irreversible rot.',
+          'Никогда не заглубляйте утолщённый каудекс и не оставляйте горшок в воде. Основание должно находиться над грунтом, а в ёмкости обязательно нужно дренажное отверстие: постоянная влага вокруг ствола вызывает необратимую гниль.',
+        ],
+        [
+          [
+            'A soft or darkening caudex — stop watering and inspect the base and roots for rot.',
+            'Brown leaf tips — check for salt buildup, very dry hot air or irregular watering rather than increasing water automatically.',
+            'Pale weak new leaves — move gradually to a brighter position and rotate the plant less often while the new growth develops.',
+          ],
+          [
+            'Каудекс размягчается или темнеет — прекратите полив и проверьте основание и корни на гниль.',
+            'Кончики листьев коричневеют — проверьте накопление солей, горячий сухой воздух и нерегулярный полив, а не увеличивайте количество воды автоматически.',
+            'Новые листья бледные и слабые — постепенно переставьте растение на более яркий свет и реже поворачивайте его во время развития нового прироста.',
+          ],
+        ],
+        [
+          'Propagation is usually by seed or a rare side shoot. Separate a well-developed shoot with a sterile blade, let the cut dry for several days, then root it in warm, barely moist, very gritty substrate. Rooting can be slow and is not guaranteed.',
+          'Нолину обычно размножают семенами или редкими боковыми побегами. Хорошо развитый побег отделите стерильным лезвием, подсушите срез несколько дней и укореняйте в тепле в едва влажном очень минеральном субстрате. Корни образуются медленно и не всегда успешно.',
+        ],
+      ),
+      'Beaucarnea recurvata',
+      [
+        'This young nolina already has its characteristic fountain of long curved leaves, while the caudex is only beginning to gain volume. Watching that base slowly become stronger is part of the charm of such an unhurried plant.',
+        'У этой молодой нолины уже сформировался характерный фонтан длинных изогнутых листьев, а каудекс только начинает набирать объём. Наблюдать, как основание постепенно становится мощнее, — особое удовольствие у такого неторопливого растения.',
+      ],
+      [
+        'Ponytail palm is a drought-adapted Mexican tree with a swollen water-storing base and a crown of long, narrow, recurved leaves. Indoors it remains compact for many years and develops its sculptural silhouette very gradually.',
+        'Нолина отогнутая — приспособленное к засухе мексиканское дерево с утолщённым запасающим воду основанием и кроной из длинных узких отогнутых листьев. В комнате она долгие годы остаётся компактной и формирует скульптурный силуэт очень постепенно.',
+      ],
+      quickFacts(
+        ['Very slow', 'Очень медленный'],
+        ['Usually 60–180 cm indoors', 'Обычно 60–180 см в комнате'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a very free-draining mix: about 40% cactus or light houseplant compost and 60% pumice, perlite, lava grit or coarse sand.',
+            'Используйте очень быстро просыхающую смесь: примерно 40% грунта для кактусов или лёгкого грунта для комнатных растений и 60% пемзы, перлита, лавовой крошки или крупного песка.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot every 3–4 years in spring into a stable, fairly shallow pot only slightly wider than the caudex. Keep the swollen base at the same level and wait several days before watering.',
+            'Пересаживайте весной раз в 3–4 года в устойчивый достаточно неглубокий горшок лишь немного шире каудекса. Сохраняйте прежний уровень посадки и подождите несколько дней до полива.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From late spring to August, feed every 4–6 weeks with half-strength cactus or balanced fertiliser. Do not feed in winter or immediately after repotting.',
+            'С конца весны до августа подкармливайте раз в 4–6 недель половинной дозой удобрения для кактусов или сбалансированного состава. Не удобряйте зимой и сразу после пересадки.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листьями'],
+          [
+            'Trim only dry brown tips, following the natural leaf shape, and remove fully dead leaves gently. Do not cut healthy green leaves from the centre of the crown.',
+            'Подрезайте только сухие коричневые кончики по естественной форме листа и аккуратно удаляйте полностью отмершие листья. Не срезайте здоровую зелёную листву из центра розетки.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/beaucarnea-important.png',
+        propagationImage: '/plant-profile/beaucarnea-propagation.png',
+        saleImage: '/plant-profile/beaucarnea-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'asparagaceae',
+    'dracaena-sanderiana',
+    '/plants/dracaena-sanderiana-home-photo.jpg',
+    ['Lucky bamboo', 'Драцена Сандера'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light without harsh midday sun. It tolerates a shadier position, but growth becomes slower and new shoots can stretch toward the window.',
+            'Обеспечьте яркий рассеянный свет без жёсткого полуденного солнца. Растение переносит более тенистое место, но растёт медленнее, а новые побеги могут вытягиваться к окну.',
+          ],
+        ],
+        [
+          ['Water and moisture', 'Полив и вода'],
+          [
+            'In mineral substrate, keep clean filtered or settled water around the roots but not high around the cane. Refresh the water and rinse the vessel every 7–14 days; in soil, keep the mix lightly moist rather than saturated.',
+            'В минеральном субстрате держите чистую фильтрованную или отстоянную воду у корней, не поднимая уровень высоко по стволу. Раз в 7–14 дней обновляйте воду и промывайте ёмкость; в грунте поддерживайте лёгкую влажность без заболачивания.',
+          ],
+        ],
+        [
+          ['Humidity and air', 'Влажность и воздух'],
+          [
+            'Average to moderately high room humidity suits the leaves. Keep the plant away from a hot radiator or air-conditioner and provide gentle air movement without a cold draught.',
+            'Листьям подходит средняя или умеренно высокая комнатная влажность. Не ставьте растение у горячей батареи или кондиционера и обеспечьте лёгкое движение воздуха без холодного сквозняка.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at about 18–28 °C and preferably above 15 °C in winter. Protect the roots and canes from cold water, icy glass and sudden temperature changes.',
+            'Содержите примерно при 18–28 °C, а зимой желательно не ниже 15 °C. Берегите корни и стебли от холодной воды, ледяного стекла и резких перепадов температуры.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Asparagus family (Asparagaceae)', 'Спаржевые (Asparagaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          [
+            'West-central tropical Africa to north-eastern Angola',
+            'Запад Центральной Африки — северо-восток Анголы',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen tropical shrub', 'Вечнозелёный тропический кустарник'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Lucky bamboo is a Dracaena and is not closely related to true bamboo.',
+            'Distinct rings are nodes from which roots and leafy side shoots can develop.',
+            'Cut canes are often trained into straight, spiral or braided decorative forms.',
+            'A mature plant can flower, but this is very rare indoors.',
+          ],
+          [
+            '«Счастливый бамбук» — это драцена, не являющаяся близким родственником настоящего бамбука.',
+            'Хорошо заметные кольца — это узлы, из которых могут развиваться корни и боковые облиственные побеги.',
+            'Обрезанные стебли часто формируют прямыми, спиральными или переплетёнными композициями.',
+            'Взрослое растение способно зацвести, но в помещении это происходит крайне редко.',
+          ],
+        ],
+        [
+          'Do not keep the whole cane deeply submerged: stale water around the stem can cause yellowing and rot. Dracaena sap and foliage can also cause digestive upset if chewed, so keep the plant away from pets and small children.',
+          'Не погружайте весь стебель глубоко в воду: застойная вода вокруг ствола вызывает пожелтение и гниль. Сок и листва драцены могут вызвать расстройство пищеварения при жевании, поэтому держите растение подальше от животных и маленьких детей.',
+        ],
+        [
+          [
+            'The cane turns yellow or soft from the base — remove it from water, cut back to firm green tissue and inspect the roots for rot.',
+            'Brown leaf tips — use filtered or rain water and check dry hot air and fertiliser concentration.',
+            'Pale or bleached leaves — move away from hard direct sun.',
+            'Sticky leaves or fine webbing — inspect the nodes and leaf bases for scale insects, mealybugs or mites.',
+          ],
+          [
+            'Стебель желтеет или размягчается снизу — достаньте его из воды, обрежьте до плотной зелёной ткани и проверьте корни на гниль.',
+            'Кончики листьев коричневеют — используйте фильтрованную или дождевую воду и проверьте сухой горячий воздух и концентрацию удобрения.',
+            'Листья бледнеют или выгорают — уберите растение от жёсткого прямого солнца.',
+            'Листья липкие или появилась тонкая паутинка — проверьте узлы и основания листьев на щитовку, мучнистого червеца и клеща.',
+          ],
+        ],
+        [
+          'Cut a healthy cane section with at least one or two nodes, seal or dry the upper cut and place the lower node in clean filtered water. When several pale roots reach about 3–5 cm, keep the cutting in water or move it into a lightly moist airy mix.',
+          'Срежьте здоровый участок стебля минимум с одним-двумя узлами, подсушите или запечатайте верхний срез и поместите нижний узел в чистую фильтрованную воду. Когда несколько светлых корней достигнут примерно 3–5 см, оставьте черенок в воде или пересадите в слегка влажный воздушный субстрат.',
+        ],
+      ),
+      'Dracaena sanderiana',
+      [
+        'The main cane was cut back, but a dormant node woke up and produced a fresh leafy shoot. I like this visible moment of renewal: the simple green stem is gradually becoming a living branched plant again.',
+        'Основной ствол был обрезан, но спящая почка в узле проснулась и дала свежий облиственный побег. Мне нравится этот заметный момент обновления: простой зелёный стебель постепенно снова превращается в живое ветвящееся растение.',
+      ],
+      [
+        'Dracaena sanderiana is a slow-growing tropical shrub with slim ringed canes and narrow glossy leaves. It adapts well to bright indoor conditions and can live for years in soil, clean water or a stable mineral semi-hydro system.',
+        'Драцена Сандера — медленно растущий тропический кустарник с тонкими кольчатыми стеблями и узкими глянцевыми листьями. Она хорошо приспосабливается к комнатному освещению и может годами расти в грунте, чистой воде или стабильной минеральной полугидропонике.',
+      ],
+      quickFacts(
+        ['Slow', 'Медленный'],
+        ['Usually 30–100 cm indoors', 'Обычно 30–100 см в комнате'],
+      ),
+      careCards(
+        [
+          ['Substrate', 'Субстрат'],
+          [
+            'For semi-hydro, use rinsed inert mineral granules and a small clean-water reservoir that reaches the root zone, not the upper cane. For soil culture, choose an airy mix with bark and perlite.',
+            'Для полугидропоники используйте промытые инертные минеральные гранулы и небольшой резервуар чистой воды, доходящий до корней, но не до верхней части стебля. Для выращивания в грунте выбирайте воздушную смесь с корой и перлитом.',
+          ],
+        ],
+        [
+          ['Repotting and cleaning', 'Пересадка и промывка'],
+          [
+            'In water or mineral substrate, remove the plant every few months, rinse the roots and vessel and trim only soft dead roots. In soil, repot every 2–3 years into a pot with drainage.',
+            'В воде или минеральном субстрате раз в несколько месяцев доставайте растение, промывайте корни и ёмкость и удаляйте только мягкие отмершие корни. В грунте пересаживайте раз в 2–3 года в горшок с дренажом.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, use a complete hydroponic or foliage fertiliser at about one-quarter strength every 4–6 weeks. Flush the mineral substrate between feeds and pause in winter.',
+            'С весны до начала осени раз в 4–6 недель используйте полное гидропонное удобрение или состав для декоративно-лиственных примерно в четверти дозы. Между подкормками промывайте минеральный субстрат, а зимой сделайте паузу.',
+          ],
+        ],
+        [
+          ['Pruning', 'Формировка'],
+          [
+            'Trim an overlong leafy shoot just above a node with a sterile blade to encourage branching. Remove yellow leaves and wipe healthy foliage gently with a damp cloth.',
+            'Слишком длинный облиственный побег обрезайте стерильным лезвием чуть выше узла, чтобы стимулировать ветвление. Удаляйте жёлтые листья и аккуратно протирайте здоровую листву влажной тканью.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/dracaena-sanderiana-important.png',
+        propagationImage: '/plant-profile/dracaena-sanderiana-propagation.png',
+        saleImage: '/plant-profile/dracaena-sanderiana-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'asphodelaceae',
+    'haworthiopsis-attenuata',
+    '/plants/haworthiopsis-attenuata-home-photo.jpg',
+    ['Zebra haworthiopsis', 'Хавортиопсис оттянутый'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light with a little gentle morning or evening sun. Protect the rosette from intense midday rays behind glass, which can bleach or scorch the leaf tips.',
+            'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Защищайте розетку от жёстких полуденных лучей за стеклом: они могут обесцветить листья и обжечь кончики.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water thoroughly only after the gritty mix has dried completely. Drain all excess and keep the centre of the rosette dry; in cool, dark winter conditions water much less often.',
+            'Обильно поливайте только после полного просыхания минерального субстрата. Полностью сливайте лишнюю воду и не оставляйте её в центре розетки; прохладной тёмной зимой поливайте значительно реже.',
+          ],
+        ],
+        [
+          ['Humidity and airflow', 'Влажность и воздух'],
+          [
+            'Normal dry room air suits this succulent. Do not mist routinely: low humidity and steady ventilation are safer than a damp, stagnant position.',
+            'Этому суккуленту подходит обычный сухой комнатный воздух. Не опрыскивайте без необходимости: низкая влажность и стабильное проветривание безопаснее сырого застойного места.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at about 16–27 °C during active growth and preferably above 10 °C in winter. Protect the roots from cold wet soil and the leaves from contact with icy glass.',
+            'В период роста содержите примерно при 16–27 °C, а зимой желательно не ниже 10 °C. Берегите корни от холодного мокрого грунта, а листья — от контакта с ледяным стеклом.',
+          ],
+        ],
+      ),
+      1,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Asphodel family (Asphodelaceae)', 'Асфоделовые (Asphodelaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Cape Provinces of South Africa', 'Капская область Южной Африки'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Stemless rosette succulent', 'Бесстебельный розеточный суккулент'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'The accepted botanical name is Haworthiopsis attenuata; Haworthia attenuata is an older synonym still common in shops.',
+            'Raised white tubercles form the striped pattern that gives the plant its common name, zebra plant.',
+            'A mature rosette gradually produces offsets and can develop into a dense clump.',
+            'Small pale tubular flowers appear on a very thin stalk that may reach about 40 cm.',
+          ],
+          [
+            'Принятое ботаническое название — Haworthiopsis attenuata; старый синоним Haworthia attenuata до сих пор часто встречается в магазинах.',
+            'Рельефные белые бугорки образуют полосатый рисунок, из-за которого растение называют «зеброй».',
+            'Взрослая розетка постепенно образует деток и со временем превращается в плотный кустик.',
+            'Небольшие светлые трубчатые цветки появляются на очень тонком цветоносе высотой примерно до 40 см.',
+          ],
+        ],
+        [
+          'The main danger is water trapped in dense soil, an outer cachepot or the centre of the rosette. Use a pot with a drainage hole, empty the saucer after watering and let the mix dry completely before watering again.',
+          'Главная опасность — вода, застоявшаяся в плотном грунте, внешнем кашпо или центре розетки. Используйте горшок с дренажным отверстием, сливайте воду из поддона и давайте субстрату полностью просохнуть перед следующим поливом.',
+        ],
+        [
+          [
+            'Soft translucent lower leaves or a loose dark base — stop watering and inspect the roots for rot.',
+            'Brown dry tips — check for hot direct sun, prolonged drought or salt buildup.',
+            'An elongated loose rosette with pale new growth — move gradually to brighter diffused light.',
+            'White cottony deposits between leaves — isolate the plant and inspect closely for mealybugs.',
+          ],
+          [
+            'Нижние листья размягчаются и становятся полупрозрачными, а основание темнеет — прекратите полив и проверьте корни на гниль.',
+            'Кончики высыхают и коричневеют — проверьте жаркое прямое солнце, слишком долгую засуху и накопление солей.',
+            'Розетка вытягивается и становится рыхлой, а новые листья бледнеют — постепенно добавьте яркого рассеянного света.',
+            'Между листьями появляются белые ватные комочки — изолируйте растение и внимательно проверьте на мучнистого червеца.',
+          ],
+        ],
+        [
+          'Separate an offset when it has reached about one third of the mother rosette and has begun to form its own roots. Let any damaged tissue dry for one or two days, then plant the pup in a small pot of dry gritty mix and wait several days before the first light watering.',
+          'Отделяйте детку, когда она достигнет примерно трети размера материнской розетки и начнёт формировать собственные корни. Подсушите повреждённое место один-два дня, посадите детку в маленький горшок с сухим минеральным субстратом и подождите несколько дней до первого лёгкого полива.',
+        ],
+      ),
+      'Haworthiopsis attenuata',
+      [
+        'This compact zebra plant has already formed a dense group of patterned rosettes. The white raised stripes make every leaf look carefully drawn, even though the plant asks for very little attention.',
+        'Этот компактный хавортиопсис уже сформировал плотный кустик из узорчатых розеток. Рельефные белые полоски делают каждый лист словно нарисованным, хотя само растение требует совсем немного внимания.',
+      ],
+      [
+        'Haworthiopsis attenuata is a compact South African succulent with firm triangular leaves covered in raised white tubercles. It grows slowly, stays small indoors and gradually surrounds the main rosette with young offsets.',
+        'Хавортиопсис оттянутый — компактный южноафриканский суккулент с плотными треугольными листьями, покрытыми рельефными белыми бугорками. Он растёт медленно, остаётся небольшим в комнате и постепенно окружает основную розетку молодыми детками.',
+      ],
+      quickFacts(['Slow', 'Медленный'], ['Rosette 8–15 cm', 'Розетка 8–15 см']),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a very free-draining mix with about 60–75% pumice, perlite, lava grit or coarse sand and 25–40% light cactus compost.',
+            'Используйте быстро просыхающий субстрат: примерно 60–75% пемзы, перлита, лавовой крошки или крупного песка и 25–40% лёгкого грунта для кактусов.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 2–3 years or when offsets fill the pot. Choose a small shallow container with a drainage hole and keep the base of the rosette above the substrate.',
+            'Пересаживайте весной раз в 2–3 года или когда детки заполнят горшок. Выбирайте небольшую неглубокую ёмкость с дренажным отверстием и не заглубляйте основание розетки.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Feed once or twice from late spring to summer with a quarter- or half-strength low-nitrogen cactus fertiliser. Do not feed in winter or in completely dry soil.',
+            'С конца весны до лета подкормите один-два раза четвертью или половиной дозы низкоазотного удобрения для кактусов. Не удобряйте зимой и по полностью сухому грунту.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за розеткой'],
+          [
+            'Remove only fully dry lower leaves and spent flower stalks with clean tools. Brush dust from the grooves gently and never polish the textured leaves.',
+            'Удаляйте чистым инструментом только полностью высохшие нижние листья и отцветшие цветоносы. Осторожно вычищайте пыль из углублений и не используйте полироль на фактурной листве.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/haworthiopsis-attenuata-important.png',
+        propagationImage: '/plant-profile/haworthiopsis-attenuata-propagation.png',
+        saleImage: '/plant-profile/haworthiopsis-attenuata-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'bromeliaceae',
+    'tillandsia-thai-composition',
+    '/plants/tillandsia-composition-home-photo.png',
+    ['Air-plant composition', 'Композиция из тилландсий'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light with a little gentle morning or evening sun. Strong midday rays can scorch dry silver leaves, while deep shade weakens the rosettes and slows the Spanish moss.',
+            'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Жёсткие полуденные лучи могут обжечь сухие серебристые листья, а глубокая тень ослабляет розетки и замедляет рост испанского мха.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Thoroughly wet the plants with soft rain, filtered or settled water once or twice a week, adjusting to heat and dryness. Soak or rinse the rosettes and Spanish moss separately, then shake off excess water.',
+            'Один-два раза в неделю полностью смачивайте растения мягкой дождевой, фильтрованной или отстоянной водой, корректируя частоту по жаре и сухости воздуха. Замачивайте или промывайте розетки и испанский мох отдельно, после чего стряхивайте лишнюю воду.',
+          ],
+        ],
+        [
+          ['Drying and airflow', 'Просушка и воздух'],
+          [
+            'After watering, place rosettes upside down until their centres are completely dry and hang Spanish moss loosely. Constant air movement matters more than very high humidity; never return the plants wet to a tight holder.',
+            'После полива переворачивайте розетки и оставляйте до полного высыхания центра, а испанский мох развешивайте свободно. Постоянное движение воздуха важнее очень высокой влажности; не возвращайте мокрые растения в тесный держатель.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at about 18–30 °C with no cold draughts or contact with icy glass. In a cooler, darker season reduce wetting frequency but do not let the fine Spanish moss remain dry for many weeks.',
+            'Содержите примерно при 18–30 °C без холодных сквозняков и контакта с ледяным стеклом. В прохладный тёмный сезон сокращайте частоту намокания, но не оставляйте тонкий испанский мох сухим на много недель.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Bromeliad family (Bromeliaceae)', 'Бромелиевые (Bromeliaceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          ['Composition brought from Thailand', 'Композиция привезена из Таиланда'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Soil-free evergreen epiphytes', 'Вечнозелёные эпифиты без грунта'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'The long silver tail is Tillandsia usneoides, commonly called Spanish moss, although it is neither Spanish nor a moss.',
+            'Its surface scales, or trichomes, take up moisture and dissolved nutrients directly from the air and water.',
+            'Mature Spanish moss has no functional roots and can simply hang from a support without soil.',
+            'The upper rosette-form Tillandsias produce pups around their bases, gradually turning one plant into a cluster.',
+          ],
+          [
+            'Длинный серебристый хвост — Tillandsia usneoides, которую называют испанским мхом, хотя это не мох и происходит она не из Испании.',
+            'Поверхностные чешуйки — трихомы — поглощают влагу и растворённые питательные вещества прямо из воздуха и воды.',
+            'У взрослого испанского мха нет функционирующих корней: он может просто свободно висеть на опоре без грунта.',
+            'Верхние розеточные тилландсии образуют у основания деток и постепенно превращаются из одного растения в целую группу.',
+          ],
+        ],
+        [
+          'The greatest risk is water trapped inside a rosette or a dense wet bundle. After every soak, shake the plants carefully, dry the rosettes upside down and spread Spanish moss loosely. Do not seal wet Tillandsias inside glass or press them against a damp mount.',
+          'Главный риск — вода, застоявшаяся внутри розетки или плотного мокрого пучка. После каждого замачивания аккуратно стряхивайте растения, сушите розетки вверх дном и свободно расправляйте испанский мох. Не закрывайте мокрые тилландсии в стекле и не прижимайте их к сырой основе.',
+        ],
+        [
+          [
+            'Dry tightly curled tips and brittle Spanish moss — increase watering frequency and check hot direct sun.',
+            'A dark soft base or musty smell — remove the plant from its holder, dry it quickly and inspect for rot.',
+            'Pale stretched rosettes with little growth — move gradually to brighter diffused light.',
+            'White cottony clusters or sticky patches — isolate the composition and inspect for mealybugs or scale.',
+          ],
+          [
+            'Сухие сильно скрученные кончики и ломкий испанский мох — поливайте чаще и проверьте, нет ли жаркого прямого солнца.',
+            'Тёмное мягкое основание или затхлый запах — выньте растение из держателя, быстро просушите и проверьте на гниль.',
+            'Бледные вытянутые розетки без заметного роста — постепенно переставьте на более яркий рассеянный свет.',
+            'Белые ватные комочки или липкие участки — изолируйте композицию и проверьте её на мучнистого червеца или щитовку.',
+          ],
+        ],
+        [
+          'Separate a rosette pup when it reaches roughly one-third to one-half of the mother plant and releases with a gentle twist, or leave the pups together for a fuller cluster. Spanish moss is even simpler: divide a healthy strand into generous sections and hang each one where it receives light, water and moving air.',
+          'Отделяйте детку розеточной тилландсии, когда она достигнет примерно трети или половины размера материнского растения и легко отделится аккуратным поворотом, либо оставляйте деток вместе для пышной группы. Испанский мох размножается ещё проще: разделите здоровую прядь на достаточно крупные части и развесьте каждую там, где есть свет, вода и движение воздуха.',
+        ],
+      ),
+      'Tillandsia spp. with Tillandsia usneoides',
+      [
+        'This composition travelled home with me from Thailand. There it was sold as a finished hanging piece: a lush crest of rosette Tillandsias above, a long silver tail of Spanish moss below, all fixed to a coconut base. Because I could not take the coconut onto the plane, I carefully dismantled the arrangement and carried each part separately. At home, the Tillandsias received a new display — still without a pot or soil, but with the memory of their original Thai composition preserved.',
+        'Эта композиция приехала со мной из Таиланда. Там её продавали как готовый подвес: сверху — пышный хохолок из розеточных тилландсий, снизу — длинный серебристый хвост испанского мха, а всё вместе было закреплено на кокосовой основе. Поскольку взять кокос в самолёт было нельзя, перед дорогой мне пришлось аккуратно разобрать композицию и везти каждую часть отдельно. Уже дома у тилландсий появилось новое место — по-прежнему без горшка и грунта, но с сохранённой памятью об их первоначальном тайском образе.',
+      ],
+      [
+        'A living composition of soil-free epiphytes combines sculptural rosette Tillandsias with a long curtain of Tillandsia usneoides. Their silvery surface is covered in specialised scales that collect moisture, allowing the plants to live on open supports instead of in a flowerpot.',
+        'Живая композиция из эпифитов без грунта объединяет скульптурные розеточные тилландсии и длинную завесу Tillandsia usneoides. Их серебристая поверхность покрыта особыми чешуйками, собирающими влагу, поэтому растения способны жить на открытых опорах вместо цветочного горшка.',
+      ],
+      quickFacts(
+        ['Slow to moderate', 'Медленный или умеренный'],
+        ['Rosettes 10–30 cm; trails can exceed 1 m', 'Розетки 10–30 см; пряди длиннее 1 м'],
+      ),
+      careCards(
+        [
+          ['Mounting', 'Размещение'],
+          [
+            'Use an open wire holder, cork, dry branch or loose natural fibre that does not trap water. Avoid direct contact with bare copper and tight bindings, and make sure every rosette can be removed or turned for drying.',
+            'Используйте открытую проволочную подставку, пробку, сухую ветку или рыхлое натуральное волокно, не задерживающее воду. Избегайте прямого контакта с необработанной медью и тугих креплений; каждая розетка должна легко выниматься или переворачиваться для просушки.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'During active growth, add a quarter-strength bromeliad or orchid fertiliser to the water about once a month. Use little fertiliser and occasionally rinse the foliage with clean soft water.',
+            'В период активного роста примерно раз в месяц добавляйте в воду четверть дозы удобрения для бромелиевых или орхидей. Используйте минимум удобрения и иногда промывайте листву чистой мягкой водой.',
+          ],
+        ],
+        [
+          ['Cleaning', 'Очищение'],
+          [
+            'Remove dust with a gentle rinse rather than wiping the leaves: rubbing damages the moisture-absorbing trichomes. Pick out only loose dead fragments and never coat the plants with leaf shine.',
+            'Удаляйте пыль лёгким промыванием, а не протиранием: трение повреждает поглощающие влагу трихомы. Убирайте только свободные сухие фрагменты и никогда не покрывайте растения полиролью.',
+          ],
+        ],
+        [
+          ['Seasonal rhythm', 'Сезонный ритм'],
+          [
+            'In warm bright months, check the plants often and water more regularly. In winter, keep them in the brightest suitable position, wet less often and prioritise complete drying before night.',
+            'В тёплые светлые месяцы чаще проверяйте растения и регулярно увлажняйте. Зимой держите их в самом светлом подходящем месте, мочите реже и обязательно полностью просушивайте до ночи.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/tillandsia-composition-important.png',
+        propagationImage: '/plant-profile/tillandsia-composition-propagation.png',
+        saleImage: '/plant-profile/tillandsia-composition-for-sale.png',
+        variants: profileVariants(
+          ['From Thailand to home', 'Из Таиланда домой'],
+          [
+            'The gallery preserves the story of the composition: its rosette crest at purchase, the complete coconut-mounted form, the long Spanish-moss tail and the new display assembled at home.',
+            'Галерея сохраняет историю композиции: хохолок из розеток при покупке, первоначальный подвес на кокосе, длинный хвост испанского мха и новое оформление, собранное уже дома.',
+          ],
+          [
+            '/plant-profile/tillandsia-composition-gallery/01-at-purchase.png',
+            ['The crest at purchase', 'Хохолок при покупке'],
+          ],
+          [
+            '/plant-profile/tillandsia-composition-gallery/02-full-composition.png',
+            ['Original hanging composition', 'Первоначальная подвесная композиция'],
+          ],
+          [
+            '/plant-profile/tillandsia-composition-gallery/03-spanish-moss-tail.png',
+            ['The long silver tail', 'Длинный серебристый хвост'],
+          ],
+          [
+            '/plant-profile/tillandsia-composition-gallery/04-current-display.png',
+            ['How it looks now', 'Как выглядит сейчас'],
+          ],
+        ),
+      },
+    ),
+    2,
+  ),
+  collectionPlant(
+    'araceae',
+    'dieffenbachia-snow',
+    '/plants/dieffenbachia-snow-home-photo.png',
+    ["Dieffenbachia 'Snow'", "Диффенбахия 'Snow'"],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light without harsh midday sun. The plant tolerates medium light, but brighter filtered light keeps the cream-white speckling strong and the growth compact.',
+            'Обеспечьте яркий рассеянный свет без жёсткого полуденного солнца. Растение переносит среднее освещение, но на более ярком фильтрованном свету кремово-белый крап остаётся контрастным, а рост — компактным.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water thoroughly when the upper 3–5 cm of substrate has dried, then drain all excess. Keep the root ball lightly moist during active growth but never waterlogged.',
+            'Хорошо проливайте после просыхания верхних 3–5 см грунта, затем полностью сливайте лишнюю воду. В период активного роста поддерживайте корневой ком слегка влажным, но не заболоченным.',
+          ],
+        ],
+        [
+          ['Humidity and airflow', 'Влажность и воздух'],
+          [
+            'Average to moderately high room humidity, around 50–70%, suits the broad leaves. Provide gentle airflow and wipe dust away rather than leaving the foliage constantly wet.',
+            'Широким листьям подходит средняя или умеренно высокая комнатная влажность около 50–70%. Обеспечьте лёгкое движение воздуха и протирайте пыль, не оставляя листву постоянно мокрой.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at about 18–29 °C and preferably above 16 °C in winter. Protect the leaves and roots from cold draughts, icy glass and abrupt temperature changes.',
+            'Содержите примерно при 18–29 °C, а зимой желательно не ниже 16 °C. Берегите листья и корни от холодных сквозняков, ледяного стекла и резких перепадов температуры.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Aroid family (Araceae)', 'Ароидные (Araceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          [
+            'Cultivar of tropical American Dieffenbachia',
+            'Сорт тропической американской диффенбахии',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          [
+            'Evergreen cane-forming tropical subshrub',
+            'Вечнозелёный тропический полукустарник с тростниковыми стеблями',
+          ],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            "'Snow' is a large-growing Dieffenbachia cultivar with dark green leaves densely marked by silvery-green and cream-white speckles.",
+            'The upright stems gradually become cane-like and carry large arching leaf blades.',
+            'A bare healthy cane can produce new shoots from dormant nodes after pruning.',
+            'Like other aroids, a mature plant may occasionally form a spadix surrounded by a pale spathe, although flowering indoors is uncommon.',
+          ],
+          [
+            "'Snow' — крупный сорт диффенбахии с тёмно-зелёными листьями, густо покрытыми серебристо-зелёными и кремово-белыми крапинками.",
+            'Вертикальные стебли постепенно становятся тростниковыми и несут крупные дугообразно расположенные листовые пластины.',
+            'Здоровый оголившийся стебель после обрезки способен дать новые побеги из спящих узлов.',
+            'Как и другие ароидные, взрослое растение иногда образует початок со светлым покрывалом, хотя в комнате цветёт редко.',
+          ],
+        ],
+        [
+          'Dieffenbachia sap contains irritating calcium oxalate crystals. Wear gloves when pruning or propagating, keep the sap away from eyes and mouth, wash tools and hands afterwards, and place the plant where children and pets cannot chew it.',
+          'Сок диффенбахии содержит раздражающие кристаллы оксалата кальция. При обрезке и размножении надевайте перчатки, не допускайте попадания сока в глаза и рот, мойте инструменты и руки после работы и размещайте растение там, где его не смогут жевать дети и животные.',
+        ],
+        [
+          [
+            'Yellow soft lower leaves and wet substrate — reduce watering and inspect the roots and cane bases for rot.',
+            'Brown dry patches — check harsh direct sun, cold contact with glass and prolonged drought.',
+            'New leaves become smaller and greener — move gradually to brighter diffused light and review feeding.',
+            'Fine webbing, sticky residue or white cottony clusters — isolate and inspect for spider mites, scale or mealybugs.',
+          ],
+          [
+            'Нижние листья желтеют и размягчаются при мокром грунте — сократите полив и проверьте корни и основания стеблей на гниль.',
+            'Появляются сухие коричневые участки — проверьте жёсткое прямое солнце, контакт с холодным стеклом и длительную пересушку.',
+            'Новые листья становятся мельче и зеленее — постепенно добавьте яркого рассеянного света и проверьте режим подкормок.',
+            'Появились тонкая паутинка, липкий налёт или белые ватные комочки — изолируйте растение и проверьте на клеща, щитовку и мучнистого червеца.',
+          ],
+        ],
+        [
+          'Wear gloves and cut a healthy top section below a node, or divide a bare cane into pieces with at least one node each. Root top cuttings upright and lay cane sections horizontally on warm, lightly moist, airy substrate until new shoots and roots develop.',
+          'Наденьте перчатки и срежьте здоровую верхушку ниже узла либо разделите оголённый стебель на части минимум с одним узлом. Верхушечные черенки укореняйте вертикально, а отрезки стебля уложите горизонтально на тёплый слегка влажный воздушный субстрат до появления побегов и корней.',
+        ],
+      ),
+      "Dieffenbachia 'Snow'",
+      [
+        'This is one of the largest and most spectacular foliage plants in my collection. Every broad leaf has its own scattering of pale marks, and in sunlight the dense crown looks as though it has been dusted with snow.',
+        'Это одно из самых крупных и эффектных декоративно-лиственных растений в моей коллекции. На каждом широком листе свой рисунок из светлых крапинок, а на солнце густая крона выглядит так, словно её припорошило снегом.',
+      ],
+      [
+        "Dieffenbachia 'Snow' is a large upright cultivar with broad glossy dark green leaves scattered with silvery-green and cream-white markings. With warmth, filtered light and steady but careful watering, it develops into a dense architectural plant with strong cane-like stems.",
+        "Диффенбахия 'Snow' — крупный вертикально растущий сорт с широкими глянцевыми тёмно-зелёными листьями, покрытыми серебристо-зелёными и кремово-белыми отметинами. В тепле, на фильтрованном свету и при регулярном аккуратном поливе она превращается в густое архитектурное растение с крепкими тростниковыми стеблями.",
+      ],
+      quickFacts(
+        ['Moderate to fast', 'Умеренный или быстрый'],
+        ['Usually 1–1.8 m indoors', 'Обычно 1–1,8 м в комнате'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use an airy, moisture-retentive mix such as 50% light houseplant compost, 25% perlite or pumice and 25% fine orchid bark or coco chips.',
+            'Используйте воздушный, но влагоёмкий субстрат: например, 50% лёгкого грунта для комнатных растений, 25% перлита или пемзы и 25% мелкой орхидейной коры или кокосовых чипсов.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 1–2 years or when roots fill the container. Choose a stable pot with drainage only 3–5 cm wider and keep the cane bases at their previous level.',
+            'Пересаживайте весной раз в 1–2 года или когда корни заполнят ёмкость. Выбирайте устойчивый горшок с дренажом лишь на 3–5 см шире и сохраняйте прежний уровень посадки стеблей.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed every 3–4 weeks with a half-strength balanced fertiliser. Pause in winter and do not fertilise dry soil or a stressed plant.',
+            'С весны до начала осени подкармливайте раз в 3–4 недели половинной дозой сбалансированного удобрения. Зимой сделайте паузу и не удобряйте сухой грунт или ослабленное растение.',
+          ],
+        ],
+        [
+          ['Cleaning and pruning', 'Очищение и обрезка'],
+          [
+            'Wipe the broad leaves with a soft damp cloth, rotate the pot for even growth and remove yellow foliage with clean tools. Wear gloves whenever cutting stems or leaves.',
+            'Протирайте широкие листья мягкой влажной тканью, поворачивайте горшок для ровного роста и удаляйте пожелтевшую листву чистым инструментом. При любой обрезке стеблей и листьев надевайте перчатки.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/dieffenbachia-snow-important.png',
+        propagationImage: '/plant-profile/dieffenbachia-snow-propagation.png',
+        saleImage: '/plant-profile/dieffenbachia-snow-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'apocynaceae',
+    'hoya-pubicalyx-splash',
+    '/plants/hoya-pubicalyx-splash-home-photo.jpg',
+    ["Hoya pubicalyx 'Splash'", "Хойя пубикаликс 'Splash'"],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright filtered light and a little gentle morning or evening sun. Good light supports compact leaves, stronger silver flecking and future flowering, but harsh midday sun can scorch the foliage.',
+            'Обеспечьте яркий фильтрованный свет и немного мягкого утреннего или вечернего солнца. Хорошее освещение помогает сохранять компактные листья, заметный серебристый крап и стимулирует будущее цветение, но жёсткое полуденное солнце может обжечь листву.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water thoroughly after at least the upper third of the mix has dried, then empty the saucer or cachepot. Reduce watering in cooler, darker months and never keep the roots constantly wet.',
+            'Хорошо проливайте после просыхания как минимум верхней трети субстрата, затем сливайте воду из поддона или кашпо. В прохладные тёмные месяцы поливайте реже и никогда не держите корни постоянно мокрыми.',
+          ],
+        ],
+        [
+          ['Humidity and airflow', 'Влажность и воздух'],
+          [
+            'Moderate room humidity is suitable, while 50–70% encourages active growth. Steady airflow is more important than routine misting; keep wet leaves away from cold glass.',
+            'Подходит умеренная комнатная влажность, а уровень 50–70% поддерживает активный рост. Стабильное движение воздуха важнее регулярных опрыскиваний; не оставляйте мокрые листья у холодного стекла.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at about 18–29 °C and preferably above 15 °C in winter. Protect the tropical vine from cold draughts and sudden temperature changes.',
+            'Содержите примерно при 18–29 °C, а зимой желательно не ниже 15 °C. Берегите тропическую лиану от холодных сквозняков и резких перепадов температуры.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Dogbane family (Apocynaceae)', 'Кутровые (Apocynaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Luzon, Philippines', 'Остров Лусон, Филиппины'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen epiphytic climbing vine', 'Вечнозелёная эпифитная лиана'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Hoya pubicalyx is an accepted species native to the Philippine island of Luzon.',
+            "The silver 'splash' is natural colouring in the leaf tissue rather than damage or residue.",
+            'Long leafless searching vines are normal: they twine around a support before producing new leaves.',
+            'Mature plants form rounded umbels of waxy star-shaped flowers, often with a light fragrance.',
+          ],
+          [
+            'Hoya pubicalyx — признанный вид, происходящий с филиппинского острова Лусон.',
+            'Серебристый «сплэш» — естественная окраска тканей листа, а не повреждение или налёт.',
+            'Длинные ищущие плети без листьев нормальны: сначала они обвивают опору, а затем наращивают листву.',
+            'Взрослые растения образуют округлые зонтики восковых звёздчатых цветков, нередко с лёгким ароматом.',
+          ],
+        ],
+        [
+          'Do not leave the pot standing in water and do not cut old flower spurs after blooming. Hoyas can flower repeatedly from the same short peduncle, while persistently wet substrate quickly damages their epiphytic roots.',
+          'Не оставляйте горшок в воде и не срезайте старые цветоносы после цветения. Хойя способна цвести повторно на одном и том же коротком цветоносе, а постоянно мокрый грунт быстро повреждает её эпифитные корни.',
+        ],
+        [
+          [
+            'Soft yellowing leaves and wet substrate — stop watering and inspect the roots and stem base for rot.',
+            'Wrinkled flexible leaves — check whether the mix is too dry or the roots have stopped absorbing water.',
+            'Long weak growth with small pale leaves — move gradually to brighter filtered light.',
+            'Sticky residue, brown shields or white cottony clusters — isolate and inspect for scale or mealybugs.',
+          ],
+          [
+            'Листья желтеют и размягчаются при мокром грунте — прекратите полив и проверьте корни и основание стеблей на гниль.',
+            'Листья становятся гибкими и морщинистыми — проверьте, не пересушен ли субстрат и способны ли корни впитывать воду.',
+            'Плети слабые, а новые листья мелкие и бледные — постепенно добавьте яркого фильтрованного света.',
+            'Появились липкий налёт, коричневые щитки или белые ватные комочки — изолируйте растение и проверьте на щитовку и мучнистого червеца.',
+          ],
+        ],
+        [
+          'Take a healthy stem section with two or three nodes, remove the lowest leaf and root at least one node in water, moist sphagnum, perlite or an airy bark-based mix. Keep the cutting warm and bright, then pot it once several roots have formed.',
+          'Возьмите здоровый участок стебля с двумя-тремя узлами, удалите нижний лист и укореняйте как минимум один узел в воде, влажном сфагнуме, перлите или воздушной смеси с корой. Держите черенок в тепле и на свету, а после появления нескольких корней посадите в небольшой горшок.',
+        ],
+      ),
+      "Hoya pubicalyx 'Splash'",
+      [
+        'This mature hoya has grown into a dense cascade of long vines. I especially like the uneven silver speckles on its firm leaves and the curious bare tendrils that reach beyond the crown in search of a new support.',
+        'Эта взрослая хойя превратилась в густой каскад длинных плетей. Особенно мне нравятся неровные серебристые крапинки на плотных листьях и любопытные голые побеги, которые тянутся за пределы куста в поисках новой опоры.',
+      ],
+      [
+        "Hoya pubicalyx 'Splash' is a vigorous Philippine climber with firm pointed leaves scattered with silver flecks. Its flexible shoots can trail freely or wrap around a support, and a mature well-lit plant may produce rounded clusters of waxy star-shaped flowers.",
+        "Хойя пубикаликс 'Splash' — энергичная филиппинская лиана с плотными заострёнными листьями, покрытыми серебристым крапом. Гибкие побеги могут свободно свисать или обвивать опору, а взрослое растение при хорошем освещении способно образовывать округлые соцветия из восковых звёздчатых цветков.",
+      ],
+      quickFacts(
+        ['Moderate to fast', 'Умеренный или быстрый'],
+        ['Vines commonly 2–3 m indoors', 'Плети обычно 2–3 м в комнате'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a loose epiphytic mix: about 40% fine orchid bark, 30% coco or light peat-free compost and 30% perlite, pumice or other coarse mineral material.',
+            'Используйте рыхлую эпифитную смесь: примерно 40% мелкой орхидейной коры, 30% кокосового или лёгкого безторфяного грунта и 30% перлита, пемзы или другого крупного минерального компонента.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 2–3 years or when the mix has broken down. Hoyas flower well when slightly root-bound, so choose a stable pot only 2–3 cm wider and always provide drainage.',
+            'Пересаживайте весной раз в 2–3 года или когда субстрат начинает разрушаться. Хойи хорошо цветут в слегка тесном горшке, поэтому выбирайте устойчивую ёмкость лишь на 2–3 см шире и обязательно с дренажным отверстием.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'During active growth, feed every 3–4 weeks with a half-strength balanced fertiliser. Pause in winter and never fertilise a completely dry or recently repotted plant.',
+            'В период активного роста подкармливайте раз в 3–4 недели половинной дозой сбалансированного удобрения. Зимой сделайте паузу и не удобряйте полностью сухое или недавно пересаженное растение.',
+          ],
+        ],
+        [
+          ['Training and pruning', 'Опора и обрезка'],
+          [
+            'Guide young flexible shoots around a hoop or trellis without forcing sharp bends. Shorten an overgrown vine above a node if needed, but preserve every old flower peduncle.',
+            'Направляйте молодые гибкие плети по кольцу или шпалере без резких перегибов. При необходимости укорачивайте разросшийся побег над узлом, но сохраняйте каждый старый цветонос.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/hoya-pubicalyx-splash-important.png',
+        propagationImage: '/plant-profile/hoya-pubicalyx-splash-propagation.png',
+        saleImage: '/plant-profile/hoya-pubicalyx-splash-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'piperaceae',
+    'peperomia-caperata-santorini',
+    '/plants/peperomia-caperata-santorini-home-photo.jpg',
+    ["Peperomia 'Santorini'", "Пеперомия каперата 'Santorini'"],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light with a little gentle morning or evening sun. Protect the dark textured leaves from strong midday rays, which can bleach or scorch them.',
+            'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Берегите тёмные фактурные листья от жёстких полуденных лучей: они могут выцветать и получать ожоги.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Let the top 2–3 cm of substrate dry, then water thoroughly and drain all excess. The fine roots tolerate a short dry spell better than constantly wet soil.',
+            'Давайте верхним 2–3 см грунта просохнуть, затем хорошо проливайте и полностью сливайте лишнюю воду. Тонкие корни легче переносят короткую просушку, чем постоянно мокрый грунт.',
+          ],
+        ],
+        [
+          ['Humidity and airflow', 'Влажность и воздух'],
+          [
+            'Average room humidity is usually enough. Avoid routine misting and water trapped in the crown; gentle airflow helps the deeply ribbed foliage stay healthy.',
+            'Обычной комнатной влажности обычно достаточно. Не опрыскивайте без необходимости и не оставляйте воду в центре куста; лёгкое движение воздуха помогает глубоко рельефной листве оставаться здоровой.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at about 18–27 °C and preferably above 15 °C in winter. Protect the plant from cold draughts, icy glass and sudden temperature changes.',
+            'Содержите примерно при 18–27 °C, а зимой желательно не ниже 15 °C. Берегите растение от холодных сквозняков, ледяного стекла и резких перепадов температуры.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Pepper family (Piperaceae)', 'Перцевые (Piperaceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          ['Cultivar of a species native to Brazil', 'Сорт вида родом из Бразилии'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          [
+            'Compact evergreen semi-succulent perennial',
+            'Компактный вечнозелёный полусуккулентный многолетник',
+          ],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            "'Santorini' is a named cultivar of Peperomia caperata, also listed under the cultivar code 'EC-PEPE-2007'.",
+            'The elongated dark leaves are deeply corrugated and contrast with muted pink to reddish petioles.',
+            'The slender pale flower spikes are inflorescences made of many tiny flowers rather than separate decorative blooms.',
+            'Its compact habit makes it well suited to a small bright shelf or windowsill away from harsh sun.',
+          ],
+          [
+            "'Santorini' — именной сорт Peperomia caperata, который также встречается под кодом 'EC-PEPE-2007'.",
+            'Удлинённые тёмные листья глубоко гофрированы и контрастируют с приглушённо-розовыми или красноватыми черешками.',
+            'Тонкие светлые «колоски» — это соцветия из множества крошечных цветков, а не отдельные декоративные бутоны.',
+            'Компактный куст хорошо подходит для небольшой светлой полки или подоконника без жёсткого солнца.',
+          ],
+        ],
+        [
+          'The fine root system is easily damaged by dense, persistently wet substrate. Use a small pot with a drainage hole, an airy mix and never leave water inside the outer cachepot.',
+          'Тонкая корневая система легко страдает в плотном постоянно мокром грунте. Используйте небольшой горшок с дренажным отверстием, воздушный субстрат и никогда не оставляйте воду во внешнем кашпо.',
+        ],
+        [
+          [
+            'Soft yellowing lower leaves and wet soil — stop watering and inspect the roots and crown for rot.',
+            'Curling leaves or crisp edges — check prolonged drought, hot direct sun and very dry air.',
+            'Pale stretched new growth — move gradually to brighter diffused light.',
+            'White cottony clusters between petioles — isolate the plant and inspect for mealybugs.',
+          ],
+          [
+            'Нижние листья желтеют и размягчаются при мокром грунте — прекратите полив и проверьте корни и основание на гниль.',
+            'Листья скручиваются или края становятся сухими — проверьте длительную пересушку, жаркое прямое солнце и слишком сухой воздух.',
+            'Новый прирост бледный и вытянутый — постепенно переставьте растение на более яркий рассеянный свет.',
+            'Между черешками появились белые ватные комочки — изолируйте растение и проверьте на мучнистого червеца.',
+          ],
+        ],
+        [
+          'Root a healthy leaf with its petiole or a short stem cutting with at least one node in a warm, airy, barely moist mix. A mature clump can also be divided during repotting; keep every section supplied with its own roots.',
+          'Укореняйте здоровый лист с черешком или короткий стеблевой черенок хотя бы с одним узлом в тёплом воздушном едва влажном субстрате. Взрослый куст также можно разделить при пересадке, сохранив у каждой части собственные корни.',
+        ],
+      ),
+      "Peperomia caperata 'Santorini'",
+      [
+        'The long, almost black-green ribbed leaves make this peperomia especially graphic, while its pink petioles soften the dark colour. In the white textured cachepot, the compact bush looks even more expressive.',
+        'Длинные почти чёрно-зелёные рельефные листья делают эту пеперомию особенно графичной, а розовые черешки смягчают тёмную окраску. В белом фактурном кашпо компактный куст выглядит ещё выразительнее.',
+      ],
+      [
+        "Peperomia caperata 'Santorini' is a compact cultivar distinguished by elongated, strongly corrugated dark leaves on pinkish petioles. Its semi-succulent foliage stores some moisture, so steady warmth, diffused light and careful watering suit it better than a constantly damp position.",
+        "Пеперомия каперата 'Santorini' — компактный сорт с удлинёнными сильно гофрированными тёмными листьями на розоватых черешках. Полусуккулентная листва запасает немного влаги, поэтому растению лучше подходят стабильное тепло, рассеянный свет и аккуратный полив, чем постоянно сырой грунт.",
+      ],
+      quickFacts(
+        ['Slow to moderate', 'Медленный или умеренный'],
+        ['Usually 20–35 cm', 'Обычно 20–35 см'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use an airy mix such as 50% light houseplant or coco-based compost, 30% perlite or pumice and 20% fine orchid bark.',
+            'Используйте воздушную смесь: например, 50% лёгкого грунта для комнатных растений или кокосового субстрата, 30% перлита или пемзы и 20% мелкой коры.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 2–3 years or when the roots fill the pot. Choose a shallow container only 2–3 cm wider and keep the crown at its previous level.',
+            'Пересаживайте весной раз в 2–3 года или когда корни заполнят горшок. Выбирайте неглубокую ёмкость лишь на 2–3 см шире и сохраняйте прежний уровень посадки.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed every 4–6 weeks with a half-strength balanced fertiliser. Do not feed dry soil, newly repotted plants or in winter.',
+            'С весны до начала осени подкармливайте раз в 4–6 недель половинной дозой сбалансированного удобрения. Не удобряйте по сухому грунту, сразу после пересадки и зимой.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листьями'],
+          [
+            'Remove yellow leaves and spent flower spikes with clean scissors, rotate the pot for even growth and brush dust gently from the grooves. Do not use leaf shine.',
+            'Удаляйте жёлтые листья и отцветшие колоски чистыми ножницами, поворачивайте горшок для ровного роста и осторожно вычищайте пыль из бороздок. Не используйте полироль.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/peperomia-santorini-important.png',
+        propagationImage: '/plant-profile/peperomia-santorini-propagation.png',
+        saleImage: '/plant-profile/peperomia-santorini-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
     'vitaceae',
     'cissus-antarctica',
     '/plants/cissus-antarctica-home-photo.jpg',
@@ -967,6 +1971,148 @@ export const collectionPlants: readonly CollectionPlant[] = [
         propagationIcon: '/plant-profile/footer-propagation.png',
         propagationImage: '/plant-profile/propagation-cuttings.jpg',
         saleImage: '/plant-profile/cuttings-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'crassulaceae',
+    'sedum-burrito',
+    '/plants/sedum-burrito-home-photo.jpg',
+    ['Burro’s tail “Burrito”', 'Очиток Буррито'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give very bright light with several hours of gentle morning or evening sun. Acclimatise gradually: harsh midday rays can scorch the leaves, while low light makes the tails sparse and stretched.',
+            'Обеспечьте очень яркий свет и несколько часов мягкого утреннего или вечернего солнца. Приучайте постепенно: жёсткие полуденные лучи могут обжечь листья, а в тени побеги становятся редкими и вытянутыми.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Soak the mix thoroughly only after it has dried almost completely, then drain every drop of excess water. Water much less often in a cool, darker winter.',
+            'Обильно проливайте грунт только после почти полного просыхания, затем полностью сливайте лишнюю воду. В прохладную и тёмную зиму поливайте значительно реже.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Normal dry room air and steady ventilation suit this succulent. Do not mist or leave water between the tightly packed leaves.',
+            'Этому суккуленту подходит обычный сухой комнатный воздух и регулярное проветривание. Не опрыскивайте и не оставляйте воду между плотно расположенными листьями.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at about 16–28 °C during growth. A bright, drier winter can be cooler, but preferably above 10 °C; protect the fleshy leaves from cold glass and draughts.',
+            'В период роста держите примерно при 16–28 °C. Светлая и сухая зимовка может быть прохладнее, но желательно выше 10 °C; берегите мясистые листья от холодного стекла и сквозняков.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Stonecrop family (Crassulaceae)', 'Толстянковые (Crassulaceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          [
+            'Horticultural form related to the Mexican Sedum morganianum',
+            'Садовая форма, родственная мексиканскому Sedum morganianum',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen trailing succulent', 'Вечнозелёный ампельный суккулент'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'The compact cultivar has shorter, rounder leaves than the classic Sedum morganianum.',
+            'Closely overlapping leaves turn every hanging stem into a thick beaded tail.',
+            'A pale waxy bloom protects the foliage and should not be rubbed away.',
+            'Mature plants can produce small star-shaped pink flowers at the ends of their stems.',
+          ],
+          [
+            'У компактной формы листья короче и округлее, чем у классического Sedum morganianum.',
+            'Плотно налегающие друг на друга листья превращают каждый свисающий побег в толстую нитку бусин.',
+            'Светлый восковой налёт защищает листву, поэтому его не следует стирать.',
+            'Взрослое растение может выпустить на концах побегов небольшие розовые звёздчатые цветки.',
+          ],
+        ],
+        [
+          'The leaves detach at the slightest touch. Choose the final place before the stems grow long, handle the pot rather than the foliage, and never keep the roots in wet soil.',
+          'Листья осыпаются от малейшего прикосновения. Выберите постоянное место до того, как плети станут длинными, беритесь за горшок, а не за листву, и никогда не держите корни в мокром грунте.',
+        ],
+        [
+          [
+            'Soft translucent leaves or a dark stem base — stop watering and check immediately for rot.',
+            'Long bare gaps between leaves — move gradually to brighter light.',
+            'Wrinkled leaves after the mix is fully dry — water thoroughly and let the pot drain.',
+            'Many fresh leaves suddenly fall — check for rough handling, cold stress or excess moisture.',
+          ],
+          [
+            'Мягкие прозрачные листья или потемневшее основание побега — прекратите полив и сразу проверьте растение на гниль.',
+            'Длинные оголённые промежутки между листьями — постепенно добавьте света.',
+            'Листья сморщились после полного просыхания грунта — хорошо пролейте и дайте воде стечь.',
+            'Внезапно осыпалось много свежих листьев — проверьте, не было ли грубого касания, холода или лишней влаги.',
+          ],
+        ],
+        [
+          'Let an intact fallen leaf rest on dry gritty mix until roots and a tiny rosette appear, then water very sparingly. For a fuller plant, dry a healthy stem cutting for 3–7 days and place its bare end into a lightly moist mineral mix.',
+          'Положите целый опавший лист на сухой минеральный грунт и дождитесь корней и маленькой розетки, после чего поливайте очень умеренно. Для более пышного растения подсушите здоровый стеблевой черенок 3–7 дней и посадите оголённый конец в слегка влажную минеральную смесь.',
+        ],
+      ),
+      'Sedum burrito',
+      [
+        'Its long dense stems form a soft green waterfall on the shelf. I especially like how every shoot looks as if it has been woven from tiny succulent beads.',
+        'Его длинные густые плети образуют на полке настоящий зелёный водопад. Особенно нравится, что каждый побег выглядит так, словно сплетён из маленьких сочных бусин.',
+      ],
+      [
+        'Sedum burrito, also sold as Sedum morganianum “Burrito”, is a compact trailing succulent with tightly packed rounded blue-green leaves. In a bright position its stems gradually lengthen into a dense curtain and remain decorative throughout the year.',
+        'Sedum burrito, который также продают как Sedum morganianum «Burrito», — компактный ампельный суккулент с плотно расположенными округлыми сизо-зелёными листьями. На ярком месте его побеги постепенно вытягиваются в густой каскад и остаются декоративными круглый год.',
+      ],
+      quickFacts(
+        ['Moderate', 'Умеренный'],
+        ['Trailing stems 30–60 cm+', 'Свисающие побеги 30–60 см и более'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a very fast-draining mix with about 70–80% mineral material: pumice, fine lava grit, perlite or coarse sand, plus 20–30% light cactus compost.',
+            'Используйте очень быстро просыхающий субстрат с 70–80% минеральных компонентов: пемзы, мелкой лавовой крошки, перлита или крупного песка и 20–30% лёгкого грунта для кактусов.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot only when necessary, preferably in spring. Use a shallow, stable hanging pot with a drainage hole and support the stems from below while moving the root ball.',
+            'Пересаживайте только при необходимости, лучше весной. Используйте неглубокий устойчивый подвесной горшок с дренажным отверстием и поддерживайте плети снизу при переносе корневого кома.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Feed once or twice from late spring to summer with quarter- or half-strength low-nitrogen cactus fertiliser. Do not feed in winter or on completely dry roots.',
+            'С конца весны до лета подкормите один-два раза четвертью или половиной дозы низкоазотного удобрения для кактусов. Не удобряйте зимой и по полностью сухим корням.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за побегами'],
+          [
+            'Do not wipe or comb the stems. Remove only dry debris with tweezers, turn the pot infrequently, and use fallen healthy leaves for propagation.',
+            'Не протирайте и не расчёсывайте побеги. Удаляйте сухой мусор пинцетом, поворачивайте горшок как можно реже, а здоровые опавшие листья используйте для размножения.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/sedum-burrito-important.png',
+        propagationImage: '/plant-profile/sedum-burrito-propagation.png',
+        saleImage: '/plant-profile/sedum-burrito-for-sale.png',
       },
     ),
   ),
@@ -1904,6 +3050,1278 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ),
   ),
   collectionPlant(
+    'araceae',
+    'philodendron-white-wizard',
+    '/plants/philodendron-white-wizard-home-photo.jpg',
+    ["Philodendron 'White Wizard'", "Филодендрон 'White Wizard'"],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give very bright diffused light with a little gentle morning or evening sun. The white sectors scorch easily in harsh midday sun, while a dark position weakens growth and may reduce visible variegation.',
+            'Обеспечьте очень яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Белые участки легко обгорают под жёсткими полуденными лучами, а в тёмном месте рост ослабевает и заметной вариегатности может становиться меньше.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water after the upper 3–5 cm of the mix dries. Soak the root ball evenly, drain all excess water and let the airy substrate partially dry before watering again.',
+            'Поливайте после просыхания верхних 3–5 см грунта. Равномерно промочите корневой ком, полностью слейте лишнюю воду и дайте воздушному субстрату частично подсохнуть перед следующим поливом.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'A stable 50–70% humidity supports smooth new leaves, but good air movement is essential. Do not leave water sitting inside a newly unfurling leaf.',
+            'Стабильная влажность 50–70% помогает новым листьям раскрываться ровно, но при этом необходимо движение воздуха. Не оставляйте воду внутри разворачивающегося листа.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–28 °C and protect from cold glass, draughts and temperatures below about 15 °C. Warm roots help the plant grow steadily.',
+            'Содержите при 18–28 °C и берегите от холодного стекла, сквозняков и температуры ниже примерно 15 °C. Тёплая корневая система помогает растению расти стабильно.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          [
+            'Horticultural cultivar of a Colombian species',
+            'Садовый сорт вида, происходящего из Колумбии',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen variegated climbing aroid', 'Вечнозелёный вариегатный лазающий ароид'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Every leaf develops a unique pattern of white sectors, marbling and fine speckles.',
+            'White tissue contains no chlorophyll, so the plant needs enough green area to remain vigorous.',
+            'A vertical support helps the leaves become larger as the plant matures.',
+            'Aerial roots form at stem nodes and can attach to a moss pole or other support.',
+          ],
+          [
+            'Каждый лист получает уникальный рисунок из белых секторов, мраморных пятен и мелкого крапа.',
+            'В белой ткани нет хлорофилла, поэтому для сильного роста растению необходимо достаточно зелёной площади.',
+            'Вертикальная опора помогает листьям становиться крупнее по мере взросления растения.',
+            'Воздушные корни появляются в узлах побега и могут закрепляться на моховой опоре.',
+          ],
+        ],
+        [
+          'Philodendron tissue contains insoluble calcium oxalate crystals. The sap can irritate skin and eyes, and chewing causes painful mouth irritation. Wear gloves when pruning, wash tools and keep the plant out of reach of children and pets.',
+          'Ткани филодендрона содержат нерастворимые кристаллы оксалата кальция. Сок раздражает кожу и глаза, а при разжёвывании вызывает болезненное жжение во рту. Работайте в перчатках, мойте инструменты и держите растение вдали от детей и животных.',
+        ],
+        [
+          [
+            'Brown marks on white sectors — protect from harsh sun and check for dry air or irregular watering.',
+            'Several fully green leaves in succession — improve light and consider cutting back to the last clearly variegated node.',
+            'Soft yellow leaves with wet mix — let the substrate dry and inspect the roots for rot.',
+            'Silvery scratches or distorted new leaves — inspect closely for thrips and spider mites.',
+          ],
+          [
+            'Коричневые пятна на белых участках — защитите от жёсткого солнца и проверьте сухость воздуха и регулярность полива.',
+            'Несколько полностью зелёных листьев подряд — добавьте света и при необходимости обрежьте побег до последнего явно вариегатного узла.',
+            'Мягкие жёлтые листья при мокром грунте — просушите субстрат и проверьте корни на гниль.',
+            'Серебристые потёртости или деформированные новые листья — внимательно проверьте растение на трипса и паутинного клеща.',
+          ],
+        ],
+        [
+          'Cut a stem section with at least one healthy node and preferably an aerial root; a leaf without a node cannot produce a new plant. Let the cut dry briefly, then root it in lightly moist sphagnum, water or a fine airy aroid mix in warmth and bright diffused light.',
+          'Срежьте часть стебля как минимум с одним здоровым узлом и желательно с воздушным корнем: отдельный лист без узла не даст новое растение. Немного подсушите срез, затем укореняйте в слегка влажном сфагнуме, воде или мелком воздушном ароидном субстрате в тепле и при ярком рассеянном свете.',
+        ],
+      ),
+      "Philodendron 'White Wizard'",
+      [
+        'The most fascinating part of this young White Wizard is that no two leaves repeat one another: one carries fine pale flecks, another a broad white sector, and the next reveals its pattern only as it slowly unfurls.',
+        'Самое интересное в этом молодом White Wizard — ни один лист не повторяет другой: на одном рассыпаны светлые штрихи, на другом появляется крупный белый сектор, а следующий показывает свой рисунок только во время медленного раскрытия.',
+      ],
+      [
+        "Philodendron 'White Wizard' is a climbing aroid prized for glossy oval leaves patterned in deep green and creamy white. Its sectoral variegation is naturally unpredictable, so each new leaf becomes a small surprise.",
+        "Филодендрон 'White Wizard' — лазающий ароид с глянцевыми овальными листьями, расписанными тёмно-зелёным и кремово-белым. Секторальная вариегатность проявляется непредсказуемо, поэтому каждый новый лист становится маленьким сюрпризом.",
+      ],
+      quickFacts(
+        ['Moderate', 'Умеренный'],
+        ['Usually 60–150 cm with support', 'Обычно 60–150 см с опорой'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a chunky aroid mix: about 40% fine orchid bark, 30% coco coir or light houseplant compost, 20% perlite or pumice and 10% horticultural charcoal.',
+            'Используйте крупный ароидный субстрат: примерно 40% мелкой коры для орхидей, 30% кокосового волокна или лёгкого грунта для комнатных растений, 20% перлита или пемзы и 10% древесного угля.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 2–3 years or when roots densely fill the pot. Choose a container only 2–3 cm wider and keep the stem base at its previous level.',
+            'Пересаживайте весной раз в 2–3 года или когда корни плотно заполнят горшок. Выбирайте ёмкость шире всего на 2–3 см и сохраняйте прежний уровень посадки стебля.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed every 3–4 weeks with a balanced foliage fertiliser at half strength. Do not fertilise dry soil or a stressed plant.',
+            'С весны до начала осени подкармливайте раз в 3–4 недели половинной дозой сбалансированного удобрения для декоративно-лиственных. Не вносите удобрение в сухой грунт или ослабленному растению.',
+          ],
+        ],
+        [
+          ['Support and pruning', 'Опора и обрезка'],
+          [
+            'Guide the stem onto a moss pole or slim support and secure it loosely below a node. Remove damaged leaves with a sterile tool; prune reverted growth only after confirming several new leaves are fully green.',
+            'Направляйте стебель по моховой или тонкой опоре и свободно фиксируйте ниже узла. Повреждённые листья удаляйте стерильным инструментом; обрезайте реверсировавший побег только после того, как несколько новых листьев действительно вышли полностью зелёными.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/white-wizard-important.png',
+        propagationImage: '/plant-profile/white-wizard-propagation.png',
+        saleImage: '/plant-profile/white-wizard-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'alocasia-baginda-dragon-scale',
+    '/plants/alocasia-baginda-dragon-scale-home-photo.jpg',
+    ["Alocasia 'Dragon Scale'", "Алоказия 'Чешуя дракона'"],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light with a little gentle morning or evening sun. Harsh midday rays can scorch the thick leaves, while a dark position slows growth and produces weaker petioles.',
+            'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Жёсткие полуденные лучи могут обжечь плотные листья, а в тёмном месте рост замедляется и черешки становятся слабее.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water after the upper 3–4 cm of the mix dries. Moisten the small root ball evenly, drain all excess and let the airy substrate partially dry again; a constantly wet corm rots easily.',
+            'Поливайте после просыхания верхних 3–4 см грунта. Равномерно промочите небольшой корневой ком, полностью слейте лишнюю воду и снова дайте воздушному субстрату частично подсохнуть: постоянно мокрый клубень легко загнивает.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'A stable 60–75% humidity supports smooth new growth, but good air movement is essential. Avoid leaving water sitting on the deeply textured leaf surface or inside a new rolled leaf.',
+            'Стабильная влажность 60–75% помогает новым листьям раскрываться ровно, но при этом необходимо движение воздуха. Не оставляйте воду на глубоко фактурной поверхности или внутри нового свёрнутого листа.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 20–28 °C and protect from cold glass, draughts and temperatures below about 17 °C. In cool low-light conditions growth may pause, so reduce watering rather than forcing it.',
+            'Содержите при 20–28 °C и берегите от холодного стекла, сквозняков и температуры ниже примерно 17 °C. В прохладе и при слабом свете рост может остановиться — тогда сократите полив, а не пытайтесь стимулировать растение.',
+          ],
+        ],
+      ),
+      3,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          ['Cultivar of a species native to Borneo', 'Сорт вида, происходящего с острова Борнео'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Compact evergreen rhizomatous aroid', 'Компактный вечнозелёный корневищный ароид'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Thick bullate leaf tissue forms raised silvery panels that resemble overlapping dragon scales.',
+            'Deeply impressed charcoal-green veins create the sculptural pattern without variegation.',
+            'The species remains naturally compact, with only a few spreading leaves held at one time.',
+            'Small cormels can develop around the main corm and remain dormant until warmth and moisture trigger growth.',
+          ],
+          [
+            'Плотная пузырчатая ткань образует серебристые выпуклые участки, похожие на перекрывающиеся чешуйки дракона.',
+            'Глубоко утопленные угольно-зелёные жилки создают скульптурный рисунок без вариегатности.',
+            'Вид от природы остаётся компактным и одновременно держит лишь несколько раскидистых листьев.',
+            'Вокруг основного клубня могут образовываться маленькие клубеньки, которые остаются спящими до появления тепла и влаги.',
+          ],
+        ],
+        [
+          'Alocasia tissue contains insoluble calcium oxalate crystals. Sap can irritate skin and eyes, and chewing causes painful mouth irritation. Wear gloves when dividing or pruning, clean tools afterwards and keep the plant out of reach of children and pets.',
+          'Ткани алоказии содержат нерастворимые кристаллы оксалата кальция. Сок раздражает кожу и глаза, а при разжёвывании вызывает болезненное жжение во рту. Работайте в перчатках при делении и обрезке, мойте инструменты и держите растение вдали от детей и животных.',
+        ],
+        [
+          [
+            'Soft yellow leaves with wet substrate — let the mix dry and inspect the corm and roots for rot.',
+            'Dry brown tips — check dry air, irregular watering, hard water and excess fertiliser salts.',
+            'Fine pale stippling or webbing — isolate the plant and inspect both leaf surfaces for spider mites.',
+            'One old leaf fading as a new one opens can be normal; several collapsing leaves point to cold, low light or root stress.',
+          ],
+          [
+            'Мягкие жёлтые листья при мокром грунте — просушите субстрат и проверьте клубень и корни на гниль.',
+            'Сухие коричневые кончики — проверьте сухость воздуха, регулярность полива, жёсткость воды и избыток солей удобрения.',
+            'Мелкий светлый крап или паутинка — изолируйте растение и проверьте обе стороны листьев на паутинного клеща.',
+            'Отмирание одного старого листа при раскрытии нового может быть нормальным; массовое увядание указывает на холод, нехватку света или проблемы с корнями.',
+          ],
+        ],
+        [
+          'During repotting, separate a basal offset with its own roots or collect firm cormels from around the main corm. Sprout cormels in lightly moist sphagnum or perlite in warmth and high humidity, keeping the growing point above the medium. A detached leaf cannot produce a new plant.',
+          'При пересадке отделите дочернюю розетку с собственными корнями или соберите плотные клубеньки вокруг основного клубня. Проращивайте их в слегка влажном сфагнуме или перлите в тепле и высокой влажности, оставляя точку роста над субстратом. Отдельный лист не даст новое растение.',
+        ],
+      ),
+      "Alocasia baginda 'Dragon Scale'",
+      [
+        "The two broad leaves on this young 'Dragon Scale' already show the cultivar's defining relief: pale metallic panels rise between dark recessed veins, so the surface changes character with every shift of light.",
+        "Два широких листа этой молодой 'Чешуи дракона' уже показывают главный признак сорта: светлые металлические участки возвышаются между тёмными утопленными жилками, поэтому рельеф меняется при каждом повороте света.",
+      ],
+      [
+        "Alocasia baginda 'Dragon Scale' is a compact Bornean aroid cultivar valued for unusually thick, matte silver-green leaves divided by deeply impressed dark veins. Its strongly bullate surface resembles armour or reptile scales more than ordinary foliage.",
+        "Алоказия багинда 'Чешуя дракона' — компактный борнейский ароидный сорт с необычно плотными матовыми серебристо-зелёными листьями, разделёнными глубоко утопленными тёмными жилками. Их выпуклая поверхность больше напоминает доспех или чешую рептилии, чем обычную листву.",
+      ],
+      quickFacts(
+        ['Slow to moderate', 'Медленный или умеренный'],
+        ['Usually 25–40 cm indoors', 'Обычно 25–40 см в помещении'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a loose tropical aroid mix: about 40% fine orchid bark or coco chips, 30% coco coir or light houseplant compost, 20% perlite or pumice and 10% horticultural charcoal.',
+            'Используйте рыхлый тропический ароидный субстрат: примерно 40% мелкой коры для орхидей или кокосовых чипсов, 30% кокосового волокна или лёгкого грунта, 20% перлита или пемзы и 10% древесного угля.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 2–3 years or when roots closely fill the small container. Choose a pot only 2–3 cm wider, keep the main corm at its previous depth and avoid burying the crown.',
+            'Пересаживайте весной раз в 2–3 года или когда корни плотно заполнят небольшую ёмкость. Выбирайте горшок шире всего на 2–3 см, сохраняйте прежнюю глубину основного клубня и не заглубляйте основание розетки.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed every 3–4 weeks with a balanced foliage fertiliser at half strength. Stop or greatly reduce feeding whenever growth pauses.',
+            'С весны до начала осени подкармливайте раз в 3–4 недели половинной дозой сбалансированного удобрения для декоративно-лиственных. Прекратите или сильно сократите подкормки при остановке роста.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листьями'],
+          [
+            'Support each thick leaf from below while wiping it gently with a damp soft cloth. Inspect the recessed veins and leaf undersides for mites, remove only fully yellow foliage and never use leaf shine.',
+            'Поддерживайте каждый плотный лист снизу и осторожно протирайте мягкой влажной салфеткой. Проверяйте углублённые жилки и нижнюю сторону на клеща, удаляйте только полностью пожелтевшую листву и не используйте полироли.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/alocasia-dragon-scale-important.png',
+        propagationImage: '/plant-profile/alocasia-dragon-scale-propagation.png',
+        saleImage: '/plant-profile/alocasia-dragon-scale-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'alocasia-amazonica-bambino',
+    '/plants/alocasia-amazonica-bambino-home-photo.jpg',
+    ["Alocasia 'Bambino'", "Алоказия 'Бамбино'"],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light with protection from harsh midday sun. A little gentle morning or evening sun keeps the compact rosette sturdy and the silver veins distinct.',
+            'Обеспечьте яркий рассеянный свет с защитой от жёсткого полуденного солнца. Немного мягкого утреннего или вечернего света помогает компактной розетке оставаться крепкой, а серебристым жилкам — выразительными.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water after the upper 3–4 cm of the mix dries. Soak the root ball evenly, drain all excess and never leave the compact rhizome in permanently wet substrate.',
+            'Поливайте после просыхания верхних 3–4 см субстрата. Равномерно промочите корневой ком, слейте всю лишнюю воду и не оставляйте компактное корневище в постоянно мокром грунте.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Aim for a stable 55–70% humidity with gentle air movement. Dry air may curl the narrow leaf edges, but stagnant humid conditions increase the risk of leaf spots and rot.',
+            'Поддерживайте стабильную влажность 55–70% и лёгкое движение воздуха. В сухом воздухе края узких листьев могут скручиваться, а застойная сырость повышает риск пятнистостей и гнили.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 19–28 °C and away from cold glass, draughts and air-conditioner flow. When light and temperature fall in winter, growth may pause, so reduce watering.',
+            'Содержите при 19–28 °C вдали от холодного стекла, сквозняков и потока кондиционера. Зимой при снижении света и температуры рост может остановиться — тогда сократите полив.',
+          ],
+        ],
+      ),
+      3,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          ['Compact cultivated hybrid', 'Компактный культурный гибрид'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen rhizomatous perennial', 'Вечнозелёный корневищный многолетник'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Narrow arrow-shaped leaves distinguish Bambino from broader Alocasia × amazonica forms.',
+            'Silvery-white veins contrast sharply with the glossy deep-green blade, while the reverse can carry a purple tone.',
+            'Its short internodes and restrained height make it suitable for a windowsill or compact plant shelf.',
+            'The underground rhizome may form small cormels that can grow into separate plants.',
+          ],
+          [
+            'Узкие стреловидные листья отличают Бамбино от более широколистных форм Alocasia × amazonica.',
+            'Серебристо-белые жилки резко контрастируют с глянцевой тёмно-зелёной пластиной, а изнанка может иметь фиолетовый оттенок.',
+            'Короткие междоузлия и сдержанная высота позволяют разместить растение на подоконнике или компактной полке.',
+            'Подземное корневище способно образовывать маленькие клубеньки, из которых развиваются самостоятельные растения.',
+          ],
+        ],
+        [
+          'All parts contain irritating calcium oxalate crystals. Wear gloves when dividing or pruning, avoid contact between sap and eyes or mouth, clean tools afterwards and keep the plant away from children and pets.',
+          'Все части содержат раздражающие кристаллы оксалата кальция. При делении и обрезке надевайте перчатки, не допускайте попадания сока в глаза и рот, мойте инструменты и держите растение вдали от детей и животных.',
+        ],
+        [
+          [
+            'Yellow soft leaves with wet soil — reduce watering and inspect the rhizome and roots for rot.',
+            'Curled dry margins — check humidity, irregular watering, hot sun and fertiliser salts.',
+            'Fine pale stippling or webbing — isolate the plant and inspect for spider mites.',
+            'Long weak petioles and small leaves — move gradually to brighter diffused light.',
+          ],
+          [
+            'Мягкие жёлтые листья при мокром грунте — сократите полив и проверьте корневище и корни на гниль.',
+            'Скрученные сухие края — проверьте влажность воздуха, регулярность полива, жаркое солнце и избыток солей.',
+            'Мелкий светлый крап или паутинка — изолируйте растение и проверьте его на паутинного клеща.',
+            'Длинные слабые черешки и мелкие листья — постепенно переставьте растение на более яркий рассеянный свет.',
+          ],
+        ],
+        [
+          'During a warm-season repot, separate a basal offset that already has roots or collect firm cormels around the main rhizome. Sprout cormels in lightly moist sphagnum or perlite in warmth, keeping the growing point above the medium. A detached leaf does not reproduce this plant.',
+          'При пересадке в тёплый сезон отделите прикорневую детку с собственными корнями или соберите плотные клубеньки вокруг основного корневища. Проращивайте их в слегка влажном сфагнуме или перлите в тепле, оставляя точку роста над субстратом. Отдельным листом это растение не размножается.',
+        ],
+      ),
+      "Alocasia × amazonica 'Bambino'",
+      [
+        'This young Bambino already holds three neat arrow-shaped leaves. Their narrow silhouette and pale geometric veins make the compact plant look precise and graphic even before it gains a fuller rosette.',
+        'У этой молодой Бамбино уже три аккуратных стреловидных листа. Узкий силуэт и светлый геометричный рисунок жилок делают компактное растение выразительным ещё до формирования пышной розетки.',
+      ],
+      [
+        "Alocasia × amazonica 'Bambino' is a compact selection with narrow glossy leaves, contrasting silvery veins and often purple-toned undersides. It keeps the dramatic pattern of larger Amazonica hybrids while occupying much less space.",
+        "Алоказия × амазоника 'Бамбино' — компактная форма с узкими глянцевыми листьями, контрастными серебристыми жилками и нередко фиолетовой изнанкой. Она сохраняет эффектный рисунок крупных гибридов Amazonica, но занимает значительно меньше места.",
+      ],
+      quickFacts(
+        ['Moderate', 'Умеренный'],
+        ['Usually 30–45 cm indoors', 'Обычно 30–45 см в помещении'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a loose aroid mix: about 40% fine orchid bark or coco chips, 30% coco coir or light houseplant compost, 20% perlite or pumice and 10% horticultural charcoal.',
+            'Используйте рыхлый ароидный субстрат: примерно 40% мелкой коры или кокосовых чипсов, 30% кокосового волокна или лёгкого грунта, 20% перлита или пемзы и 10% древесного угля.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 1–2 years or when roots closely fill the pot. Choose a container only 2–3 cm wider and keep the rhizome at its previous depth.',
+            'Пересаживайте весной раз в 1–2 года или когда корни плотно заполнят горшок. Выбирайте ёмкость шире всего на 2–3 см и сохраняйте прежнюю глубину корневища.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed every 3–4 weeks with a balanced foliage fertiliser at half strength. Pause feeding when active growth stops.',
+            'С весны до начала осени подкармливайте раз в 3–4 недели половинной дозой сбалансированного удобрения для декоративно-лиственных. При остановке активного роста подкормки прекратите.',
+          ],
+        ],
+        [
+          ['Rotation and grooming', 'Поворот и уход'],
+          [
+            'Rotate the pot a quarter-turn every week or two for an even rosette. Support each narrow blade while wiping it gently and remove only leaves that have fully yellowed.',
+            'Раз в одну-две недели поворачивайте горшок на четверть оборота для ровной розетки. Поддерживайте узкий лист при осторожном протирании и удаляйте только полностью пожелтевшие листья.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/alocasia-bambino-important.png',
+        propagationImage: '/plant-profile/alocasia-bambino-propagation.png',
+        saleImage: '/plant-profile/alocasia-bambino-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'alocasia-black-velvet',
+    '/plants/alocasia-black-velvet-home-photo.jpg',
+    ["Alocasia 'Black Velvet'", "Алоказия 'Блэк Вельвет'"],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Place in bright diffused light without direct midday sun. The dark leaves absorb light efficiently, but a position that is too dim slows the already measured growth and weakens new foliage.',
+            'Разместите на ярком рассеянном свету без прямого полуденного солнца. Тёмные листья эффективно поглощают свет, но слишком тёмное место замедляет и без того неспешный рост и ослабляет новую листву.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Let the upper 4–5 cm of the substrate dry before watering. Moisten thoroughly, drain at once and avoid a large pot: the compact rhizome and fleshy roots are sensitive to prolonged wetness.',
+            'Перед поливом дайте просохнуть верхним 4–5 см субстрата. Поливайте обильно, сразу сливайте лишнюю воду и избегайте слишком большого горшка: компактное корневище и мясистые корни чувствительны к длительной сырости.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Keep around 60–75% humidity with steady air circulation. Do not mist the velvety blades heavily or leave droplets sitting on them, as marks and fungal spots can develop.',
+            'Поддерживайте влажность около 60–75% при постоянном движении воздуха. Не опрыскивайте бархатистые пластины обильно и не оставляйте на них капли — это может вызвать пятна и грибковые поражения.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Maintain 19–27 °C and protect from temperatures below 16 °C, cold windowsills and draughts. Reduce watering markedly if growth slows in winter.',
+            'Поддерживайте 19–27 °C и берегите растение от температуры ниже 16 °C, холодного подоконника и сквозняков. Если зимой рост замедляется, заметно сократите полив.',
+          ],
+        ],
+      ),
+      3,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          [
+            'Tropical Asian cultivated selection',
+            'Культурная форма тропического азиатского происхождения',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Compact evergreen rhizomatous aroid', 'Компактный вечнозелёный корневищный ароид'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'The almost black leaf surface is covered with minute hairs that create its velvet appearance.',
+            'Pale silver veins look especially bright against the matte rounded blade.',
+            'Black Velvet grows slowly and remains compact, usually holding a small architectural rosette.',
+            'A mature rhizome may form offsets or cormels below the substrate.',
+          ],
+          [
+            'Почти чёрная поверхность листа покрыта мельчайшими волосками, создающими бархатистый эффект.',
+            'Светлые серебристые жилки кажутся особенно яркими на фоне матовой округлой пластины.',
+            'Блэк Вельвет растёт медленно и остаётся компактной, формируя небольшую архитектурную розетку.',
+            'Зрелое корневище может образовывать под субстратом детки и клубеньки.',
+          ],
+        ],
+        [
+          'The sap and all plant tissues contain irritating calcium oxalate crystals. Use gloves for division and pruning, wash hands and tools afterwards, and keep the plant out of reach of children and pets.',
+          'Сок и все ткани растения содержат раздражающие кристаллы оксалата кальция. При делении и обрезке используйте перчатки, после работы мойте руки и инструменты и держите растение вдали от детей и животных.',
+        ],
+        [
+          [
+            'Soft yellow leaves and a sour-smelling mix — inspect roots and rhizome immediately for rot.',
+            'Round brown or translucent marks — keep the foliage dry and improve air circulation.',
+            'Faded stippling or fine webbing — inspect the velvet surface and leaf undersides for spider mites.',
+            'Crisp margins — check dry air, irregular watering, hard water and accumulated fertiliser salts.',
+          ],
+          [
+            'Мягкие жёлтые листья и кислый запах грунта — немедленно проверьте корни и корневище на гниль.',
+            'Округлые коричневые или полупрозрачные пятна — держите листву сухой и улучшите движение воздуха.',
+            'Обесцвеченный крап или тонкая паутинка — проверьте бархатистую поверхность и изнанку на паутинного клеща.',
+            'Хрустящие края — проверьте сухость воздуха, нерегулярный полив, жёсткую воду и накопление солей.',
+          ],
+        ],
+        [
+          'Separate rooted offsets or firm cormels during a spring or summer repot. Place cormels in barely moist sphagnum or perlite, keep them warm and humid, and ventilate regularly. Do not propagate from a detached leaf.',
+          'Во время весенней или летней пересадки отделите укоренённые детки или плотные клубеньки. Поместите клубеньки в едва влажный сфагнум или перлит, содержите в тепле и высокой влажности и регулярно проветривайте. Отдельным листом растение не размножается.',
+        ],
+      ),
+      "Alocasia 'Black Velvet'",
+      [
+        'The two young leaves already show why this Alocasia is called Black Velvet: the rounded dark blades absorb the light, while the pale veins appear almost drawn across their soft surface.',
+        'Два молодых листа уже объясняют название Блэк Вельвет: округлые тёмные пластины поглощают свет, а светлые жилки выглядят почти нарисованными на мягкой поверхности.',
+      ],
+      [
+        "Alocasia 'Black Velvet' is a slow-growing compact aroid valued for rounded, nearly black leaves with a soft matte texture and contrasting silver veins. Its restrained size and dramatic foliage make even a young specimen look complete.",
+        "Алоказия 'Блэк Вельвет' — медленно растущий компактный ароид с округлыми почти чёрными листьями, мягкой матовой фактурой и контрастными серебристыми жилками. Благодаря сдержанному размеру и эффектной листве даже молодое растение выглядит завершённым.",
+      ],
+      quickFacts(
+        ['Slow', 'Медленный'],
+        ['Usually 25–45 cm indoors', 'Обычно 25–45 см в помещении'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a very airy mix: about 35% fine orchid bark, 30% coco coir or light compost, 25% perlite or pumice and 10% horticultural charcoal.',
+            'Используйте очень воздушный субстрат: примерно 35% мелкой коры, 30% кокосового волокна или лёгкого грунта, 25% перлита или пемзы и 10% древесного угля.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot only when roots fill the container, usually every 2–3 years. Move up by no more than 2 cm and leave the crown and upper rhizome at their former level.',
+            'Пересаживайте только после заполнения ёмкости корнями, обычно раз в 2–3 года. Увеличивайте диаметр не более чем на 2 см и сохраняйте прежний уровень основания розетки и верхней части корневища.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Feed every 4 weeks from spring to early autumn with half-strength balanced foliage fertiliser. Flush the substrate occasionally and do not feed a dormant or stressed plant.',
+            'С весны до начала осени подкармливайте раз в 4 недели половинной дозой сбалансированного удобрения. Периодически промывайте субстрат и не удобряйте спящее или ослабленное растение.',
+          ],
+        ],
+        [
+          ['Velvet leaf care', 'Уход за бархатными листьями'],
+          [
+            'Remove dust with a very soft dry brush or a gentle stream of air. Avoid rubbing, leaf-shine products and frequent spraying, which can flatten the fine surface hairs or leave marks.',
+            'Удаляйте пыль очень мягкой сухой кистью или слабым потоком воздуха. Не трите листья, не используйте полироли и не опрыскивайте часто: это приминает мелкие волоски или оставляет пятна.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/alocasia-black-velvet-important.png',
+        propagationImage: '/plant-profile/alocasia-black-velvet-propagation.png',
+        saleImage: '/plant-profile/alocasia-black-velvet-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'alocasia-tandurusa-jacklyn',
+    '/plants/alocasia-tandurusa-jacklyn-home-photo.jpg',
+    ["Alocasia 'Jacklyn'", "Алоказия 'Жаклин'"],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Provide bright diffused light and a little gentle morning sun. Strong midday rays can bleach the raised texture, while low light produces smaller, less deeply divided leaves and elongated petioles.',
+            'Обеспечьте яркий рассеянный свет и немного мягкого утреннего солнца. Жёсткие полуденные лучи могут высветлить рельеф, а при нехватке света листья становятся мельче и слабее рассечёнными, черешки вытягиваются.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water after the upper 3–5 cm of the airy mix dries. Wet the root ball evenly, drain excess completely and reduce the frequency whenever cool or low-light conditions slow growth.',
+            'Поливайте после просыхания верхних 3–5 см воздушного субстрата. Равномерно промочите корневой ком, полностью слейте лишнюю воду и сократите частоту полива, если прохлада или слабый свет замедляют рост.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Maintain about 60–75% humidity with regular ventilation. The textured leaves appreciate stable moisture in the air, but standing droplets and stagnant conditions invite spotting.',
+            'Поддерживайте влажность около 60–75% при регулярном проветривании. Фактурным листьям полезна стабильная влажность воздуха, но застоявшиеся капли и неподвижный воздух провоцируют пятнистости.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 20–28 °C and protect from temperatures below about 17 °C, cold glass and draughts. Warm roots and stable conditions are especially important while a new leaf is unfurling.',
+            'Содержите при 20–28 °C и берегите от температуры ниже примерно 17 °C, холодного стекла и сквозняков. Тёплые корни и стабильные условия особенно важны во время раскрытия нового листа.',
+          ],
+        ],
+      ),
+      3,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          ['Sulawesi, Indonesia', 'Сулавеси, Индонезия'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen tropical rhizomatous aroid', 'Вечнозелёный тропический корневищный ароид'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Deep rounded lobes give the blade an unmistakable antler-like outline.',
+            'The leathery green surface is strongly textured and divided by dark sunken veins.',
+            'Mottled or striped petioles add a second ornamental pattern beneath the foliage.',
+            'The plant long circulated as Jacklyn before the species was formally described as Alocasia tandurusa in 2023.',
+          ],
+          [
+            'Глубокие округлые лопасти придают пластине узнаваемый силуэт, напоминающий рога.',
+            'Кожистая зелёная поверхность сильно фактурная и разделена тёмными утопленными жилками.',
+            'Пятнистые или полосатые черешки добавляют второй декоративный рисунок под листвой.',
+            'Растение долго продавалось под именем Жаклин, прежде чем в 2023 году вид был официально описан как Alocasia tandurusa.',
+          ],
+        ],
+        [
+          'Like other Alocasia, Jacklyn contains calcium oxalate crystals that irritate skin, eyes and the mouth. Wear gloves for repotting and pruning, clean tools afterwards and keep it away from children and pets.',
+          'Как и другие алоказии, Жаклин содержит кристаллы оксалата кальция, раздражающие кожу, глаза и слизистые. При пересадке и обрезке надевайте перчатки, мойте инструменты и держите растение вдали от детей и животных.',
+        ],
+        [
+          [
+            'Several yellowing leaves with wet substrate — check the roots and rhizome for rot.',
+            'Dry brown tips or a new leaf stuck while unfurling — stabilise watering and humidity.',
+            'Pale stippling, dull colour or webbing — inspect the textured surface and undersides for spider mites.',
+            'Small weakly lobed leaves — increase diffused light gradually and review feeding during active growth.',
+          ],
+          [
+            'Несколько желтеющих листьев при мокром субстрате — проверьте корни и корневище на гниль.',
+            'Сухие коричневые кончики или застрявший при раскрытии лист — стабилизируйте полив и влажность.',
+            'Светлый крап, тусклый цвет или паутинка — проверьте фактурную поверхность и изнанку на паутинного клеща.',
+            'Мелкие слабо рассечённые листья — постепенно увеличьте количество рассеянного света и проверьте режим подкормок в период роста.',
+          ],
+        ],
+        [
+          'At a warm-season repot, separate an offset with its own roots or collect firm cormels around the main rhizome. Sprout cormels in lightly moist sphagnum or perlite under warm, humid conditions with ventilation. A leaf without a piece of rhizome cannot form a new plant.',
+          'При пересадке в тёплый сезон отделите детку с собственными корнями или соберите плотные клубеньки вокруг основного корневища. Проращивайте их в слегка влажном сфагнуме или перлите в тепле и высокой влажности с проветриванием. Лист без части корневища не образует новое растение.',
+        ],
+      ),
+      "Alocasia tandurusa 'Jacklyn'",
+      [
+        "Even this very young Jacklyn already carries the plant's signature: the first elongated leaf is deeply divided, heavily textured and traced by a dark central vein. As the rhizome strengthens, the new blades should become larger and even more sculptural.",
+        'Даже у совсем молодой Жаклин уже заметен главный признак растения: первый вытянутый лист глубоко рассечён, сильно фактурен и подчёркнут тёмной центральной жилкой. По мере укрепления корневища новые пластины должны становиться крупнее и ещё скульптурнее.',
+      ],
+      [
+        "Alocasia tandurusa, widely known in cultivation as 'Jacklyn', is a Sulawesi aroid with deeply lobed, rugged green leaves and strikingly patterned petioles. Its unusual silhouette becomes increasingly dramatic as each successive leaf matures.",
+        "Алоказия тандуруса, широко известная в культуре как 'Жаклин', — ароид с острова Сулавеси с глубоко рассечёнными рельефными зелёными листьями и выразительно окрашенными черешками. Её необычный силуэт становится всё эффектнее с каждым взрослым листом.",
+      ],
+      quickFacts(
+        ['Moderate', 'Умеренный'],
+        ['Usually 60–120 cm indoors', 'Обычно 60–120 см в помещении'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a chunky tropical aroid mix: about 40% fine orchid bark or coco chips, 30% coco coir or light compost, 20% perlite or pumice and 10% horticultural charcoal.',
+            'Используйте крупный тропический ароидный субстрат: примерно 40% мелкой коры или кокосовых чипсов, 30% кокосового волокна или лёгкого грунта, 20% перлита или пемзы и 10% древесного угля.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 1–2 years or when roots fill the pot. Increase the diameter by only 2–4 cm, keep the rhizome at its original level and use a stable container as the leaves enlarge.',
+            'Пересаживайте весной раз в 1–2 года или когда корни заполнят горшок. Увеличивайте диаметр только на 2–4 см, сохраняйте прежний уровень корневища и по мере роста листьев выбирайте устойчивую ёмкость.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'During active growth, feed every 3–4 weeks with a balanced foliage fertiliser at half strength. Stop feeding when growth pauses and occasionally flush the substrate with soft water.',
+            'В период активного роста подкармливайте раз в 3–4 недели половинной дозой сбалансированного удобрения. При остановке роста прекратите подкормки и периодически промывайте субстрат мягкой водой.',
+          ],
+        ],
+        [
+          ['Leaf care', 'Уход за листьями'],
+          [
+            'Support the blade from below and clean between the raised veins with a soft damp cloth. Do not polish the textured surface; inspect the lobes and petiole bases regularly for pests.',
+            'Поддерживайте пластину снизу и очищайте пространство между выпуклыми жилками мягкой влажной салфеткой. Не полируйте фактурную поверхность; регулярно проверяйте лопасти и основания черешков на вредителей.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/alocasia-jacklyn-important.png',
+        propagationImage: '/plant-profile/alocasia-jacklyn-propagation.png',
+        saleImage: '/plant-profile/alocasia-jacklyn-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'spathiphyllum-wallisii',
+    '/plants/spathiphyllum-wallisii-home-photo.jpg',
+    ['Peace lily', 'Спатифиллум Уоллиса'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light without direct summer sun. The plant tolerates a dimmer position, but growth slows and flowering may become sparse; harsh rays can scorch the broad leaves.',
+            'Обеспечьте яркий рассеянный свет без прямого летнего солнца. Растение переносит более тёмное место, но растёт медленнее и может цвести слабее; жёсткие лучи обжигают широкие листья.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water when the upper 2–3 cm of the mix dries. Moisten the root ball evenly with room-temperature soft or filtered water, drain all excess and never leave the pot standing in water.',
+            'Поливайте после просыхания верхних 2–3 см грунта. Равномерно промочите корневой ком мягкой или фильтрованной водой комнатной температуры, полностью слейте излишки и не оставляйте горшок в воде.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Moderate room humidity of about 45–65% is usually enough. Keep the plant away from hot radiators, provide gentle air movement and wipe the broad leaves regularly.',
+            'Обычно достаточно умеренной комнатной влажности около 45–65%. Держите растение подальше от горячих батарей, обеспечьте лёгкое движение воздуха и регулярно протирайте широкие листья.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–27 °C and protect from cold glass, draughts and temperatures below about 15 °C. Chilling and cold wet substrate can damage both leaves and roots.',
+            'Содержите при 18–27 °C и берегите от холодного стекла, сквозняков и температуры ниже примерно 15 °C. Переохлаждение и холодный мокрый грунт повреждают листья и корни.',
+          ],
+        ],
+      ),
+      1,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          [
+            'Horticultural form of a Colombia–Venezuela species',
+            'Садовая форма вида из Колумбии и Венесуэлы',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          [
+            'Evergreen clump-forming rhizomatous perennial',
+            'Вечнозелёный кустящийся корневищный многолетник',
+          ],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'The white sail is a modified leaf called a spathe, not a flower petal.',
+            'Tiny true flowers are packed along the cream or greenish central spadix.',
+            'White spathes naturally become pale green as they age and may remain decorative for weeks.',
+            'Despite its common name, the peace lily is an aroid and not a true lily.',
+          ],
+          [
+            'Белый «парус» — это видоизменённый лист-покрывало, а не лепесток цветка.',
+            'Мелкие настоящие цветки плотно расположены вдоль кремового или зеленоватого початка.',
+            'Белые покрывала естественно становятся светло-зелёными по мере старения и могут сохранять декоративность ещё несколько недель.',
+            'Несмотря на английское название peace lily, спатифиллум относится к ароидным и не является настоящей лилией.',
+          ],
+        ],
+        [
+          'Peace lily tissue contains insoluble calcium oxalate crystals. Sap can irritate skin and eyes, and chewing causes painful mouth irritation. Wear gloves when dividing or pruning, clean tools afterwards and keep the plant out of reach of children and pets.',
+          'Ткани спатифиллума содержат нерастворимые кристаллы оксалата кальция. Сок раздражает кожу и глаза, а при разжёвывании вызывает болезненное жжение во рту. Работайте в перчатках при делении и обрезке, мойте инструменты и держите растение вдали от детей и животных.',
+        ],
+        [
+          [
+            'Soft yellow leaves with wet substrate — let the mix dry and inspect the roots for rot.',
+            'Brown leaf tips — check dry air, hard water, irregular watering and excess fertiliser salts.',
+            'Repeated dramatic wilting — water more consistently and check whether the root ball has become hydrophobic or overcrowded.',
+            'Healthy leaves but no spathes — provide brighter diffused light and allow a young division time to mature.',
+          ],
+          [
+            'Мягкие жёлтые листья при мокром грунте — просушите субстрат и проверьте корни на гниль.',
+            'Коричневые кончики — проверьте сухость воздуха, жёсткость воды, регулярность полива и избыток солей удобрения.',
+            'Регулярное сильное увядание — поливайте стабильнее и проверьте, не перестал ли корневой ком впитывать воду и не стал ли горшок тесным.',
+            'Здоровая листва без покрывал — добавьте яркого рассеянного света и дайте молодой делёнке время повзрослеть.',
+          ],
+        ],
+        [
+          'Divide a mature clump after flowering or during active growth. Separate only a side crown with several leaves and its own healthy roots, then pot it into a small container with airy moist substrate and keep it warm in bright diffused light while it establishes.',
+          'Делите взрослый куст после цветения или в период активного роста. Отделяйте только боковую розетку с несколькими листьями и собственными здоровыми корнями, затем посадите её в небольшой горшок с воздушным умеренно влажным грунтом и держите в тепле при ярком рассеянном свете до укоренения.',
+        ],
+      ),
+      'Spathiphyllum wallisii hybrid',
+      [
+        'My mother gave me this peace lily for my birthday. I noticed that its white spathes turn green when I place it on the windowsill. This colour change coincides with the brighter position, but it is also a normal stage of the spathe aging rather than necessarily a sign of too much light.',
+        'Этот спатифиллум подарила мне мама на день рождения. Я заметила, что на подоконнике его белые покрывала зеленеют. Изменение совпадает с более ярким местом, но это также нормальный этап старения покрывала, а не обязательно признак избытка света.',
+      ],
+      [
+        'Spathiphyllum wallisii and its compact hybrids form lush clumps of glossy lance-shaped leaves. Slender cream spadices are framed by white sail-like spathes that gradually fade to pale green as the inflorescence matures.',
+        'Спатифиллум Уоллиса и его компактные гибриды образуют пышные кусты из глянцевых ланцетных листьев. Тонкие кремовые початки окружены белыми покрывалами-парусами, которые по мере созревания соцветия постепенно становятся светло-зелёными.',
+      ],
+      quickFacts(
+        ['Moderate', 'Умеренный'],
+        ['Usually 30–60 cm indoors', 'Обычно 30–60 см в помещении'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a rich but airy mix: about 50% peat-free houseplant compost, 25% fine orchid bark and 25% perlite or pumice. It should hold moderate moisture while draining freely.',
+            'Используйте питательный, но воздушный субстрат: примерно 50% безторфяного грунта для комнатных растений, 25% мелкой коры для орхидей и 25% перлита или пемзы. Он должен удерживать умеренную влагу и свободно пропускать лишнюю воду.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 1–2 years or when roots tightly fill the pot and water passes through poorly. Choose a container only 2–3 cm wider; peace lilies often flower well when slightly snug.',
+            'Пересаживайте весной раз в 1–2 года или когда корни плотно заполнят горшок и вода начнёт плохо промачивать ком. Выбирайте ёмкость шире всего на 2–3 см: спатифиллумы часто хорошо цветут в немного тесном горшке.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed about once a month with a balanced foliage fertiliser at half strength. Apply only to moist substrate and flush the mix occasionally to limit salt buildup.',
+            'С весны до начала осени подкармливайте примерно раз в месяц половинной дозой сбалансированного удобрения для декоративно-лиственных. Вносите только по влажному грунту и иногда обильно промывайте субстрат от накопившихся солей.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листьями'],
+          [
+            'Wipe the broad leaves with a damp cloth. Once an aging green spathe is no longer decorative, cut the entire flower stalk near the base with a sterile tool; remove yellow leaves in the same way.',
+            'Протирайте широкие листья влажной салфеткой. Когда постаревшее зелёное покрывало потеряет декоративность, срежьте весь цветонос у основания стерильным инструментом; так же удаляйте пожелтевшие листья.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/spathiphyllum-important.png',
+        propagationImage: '/plant-profile/spathiphyllum-propagation.png',
+        saleImage: '/plant-profile/spathiphyllum-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'anthurium-andraeanum-red-hybrid',
+    '/plants/anthurium-andraeanum-red-hybrid-home-photo.jpg',
+    ['Red flamingo flower', 'Антуриум Андре, красный гибрид'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light with a little gentle morning or evening sun. Harsh midday rays can scorch the leaves and spathes, while a dark position often reduces flowering.',
+            'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Жёсткие полуденные лучи могут обжечь листья и покрывала, а в тёмном месте цветение часто становится слабее.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water when the upper 2–3 cm of the mix dries. Moisten the root ball evenly with room-temperature filtered or soft water, drain all excess and never leave the pot standing in water.',
+            'Поливайте после просыхания верхних 2–3 см грунта. Равномерно промочите корневой ком мягкой или фильтрованной водой комнатной температуры, полностью слейте излишки и не оставляйте горшок в воде.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'A stable 50–70% humidity supports glossy leaves and smooth growth. Provide gentle air movement and avoid leaving droplets on the colourful spathes.',
+            'Стабильная влажность 50–70% поддерживает глянцевую листву и ровный рост. Обеспечьте лёгкое движение воздуха и не оставляйте капли на цветных покрывалах.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–27 °C and protect from cold glass, draughts and temperatures below about 16 °C. Cold wet roots are especially vulnerable to rot.',
+            'Содержите при 18–27 °C и берегите от холодного стекла, сквозняков и температуры ниже примерно 16 °C. Холодные мокрые корни особенно уязвимы для гнили.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          [
+            'Horticultural hybrid derived from a Colombia–Ecuador species',
+            'Садовый гибрид вида из Колумбии и Эквадора',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          [
+            'Evergreen clump-forming epiphytic perennial',
+            'Вечнозелёный кустящийся эпифитный многолетник',
+          ],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'The glossy red heart-shaped structure is a modified leaf called a spathe, not a petal.',
+            'The tiny true flowers are arranged along the upright central spadix.',
+            'Individual spathes can remain decorative for many weeks and often deepen or green as they age.',
+            'Short stems and basal offsets gradually build a dense, rounded clump.',
+          ],
+          [
+            'Глянцевая красная сердцевидная часть — это видоизменённый лист-покрывало, а не лепесток.',
+            'Мелкие настоящие цветки расположены вдоль прямостоячего центрального початка.',
+            'Отдельные покрывала сохраняют декоративность много недель и с возрастом часто темнеют или зеленеют.',
+            'Короткие стебли и прикорневые отпрыски постепенно формируют плотный округлый куст.',
+          ],
+        ],
+        [
+          'All parts contain insoluble calcium oxalate crystals. Sap can irritate skin and eyes, and chewing causes painful mouth irritation. Wear gloves when dividing or pruning, clean tools afterwards and keep the plant out of reach of children and pets.',
+          'Все части содержат нерастворимые кристаллы оксалата кальция. Сок раздражает кожу и глаза, а при разжёвывании вызывает болезненное жжение во рту. Работайте в перчатках при делении и обрезке, мойте инструменты и держите растение вдали от детей и животных.',
+        ],
+        [
+          [
+            'Soft yellow leaves with wet substrate — let the mix dry and inspect the roots for rot.',
+            'Dry brown tips — check humidity, irregular watering and mineral buildup from hard water.',
+            'Healthy leaves but no new spathes — provide brighter diffused light and avoid an oversized pot.',
+            'Dark wet spots on leaves or spathes — keep foliage drier and improve warm air movement.',
+          ],
+          [
+            'Мягкие жёлтые листья при мокром грунте — просушите субстрат и проверьте корни на гниль.',
+            'Сухие коричневые кончики — проверьте влажность воздуха, регулярность полива и накопление солей от жёсткой воды.',
+            'Здоровая листва без новых покрывал — добавьте яркого рассеянного света и не используйте слишком большой горшок.',
+            'Тёмные мокнущие пятна на листьях или покрывалах — держите листву суше и улучшите движение тёплого воздуха.',
+          ],
+        ],
+        [
+          'In spring or summer, divide a mature clump only where an offset has its own roots, or root a short rhizome or stem section with a viable growing point. Pot the division into a small airy mix, keep it warm and humid, and water lightly until new growth confirms rooting.',
+          'Весной или летом делите взрослый куст только там, где у отпрыска уже есть собственные корни, либо укореняйте короткую часть корневища или стебля с живой точкой роста. Посадите делёнку в небольшой объём воздушного грунта, держите в тепле и повышенной влажности и поливайте умеренно до появления нового роста.',
+        ],
+      ),
+      'Anthurium Andraeanum Group',
+      [
+        'My mother gave me this anthurium for my birthday. Its red and deep burgundy spathes make it more than a flowering plant in the collection — it is a warm memory of that day and of her care.',
+        'Этот антуриум подарила мне мама на день рождения. Его красные и глубокие бордовые покрывала делают его не просто цветущим растением в коллекции, а тёплым напоминанием о том дне и о маминой заботе.',
+      ],
+      [
+        'This red-flowering Anthurium Andraeanum hybrid forms a dense clump of glossy heart-shaped leaves and long-lasting waxy spathes in shades from clear red to deep burgundy. Each spathe surrounds a contrasting yellow or greenish flower-bearing spadix.',
+        'Этот красноцветковый гибрид антуриума Андре формирует плотный куст из глянцевых сердцевидных листьев и долговечных восковых покрывал — от ярко-красных до глубоких бордовых. Каждое покрывало окружает контрастный жёлтый или зеленоватый початок с настоящими цветками.',
+      ],
+      quickFacts(
+        ['Moderate', 'Умеренный'],
+        ['Usually 30–60 cm indoors', 'Обычно 30–60 см в помещении'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a loose acidic mix: about two parts peat-free ericaceous compost, one part perlite and one part fine orchid bark. A little horticultural charcoal can help keep the structure open.',
+            'Используйте рыхлый слабокислый субстрат: примерно две части безторфяного грунта для кислолюбивых растений, одну часть перлита и одну часть мелкой коры для орхидей. Немного древесного угля поможет сохранить структуру воздушной.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 2–3 years or when roots densely fill the container. Choose a pot only 2–3 cm wider and keep the crown just above the surface.',
+            'Пересаживайте весной раз в 2–3 года или когда корни плотно заполнят ёмкость. Выбирайте горшок шире всего на 2–3 см и оставляйте основание розетки чуть выше поверхности грунта.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed every 2–4 weeks with a balanced or orchid fertiliser at half strength. Apply only to moist substrate and reduce feeding in winter.',
+            'С весны до начала осени подкармливайте раз в 2–4 недели половинной дозой сбалансированного удобрения или удобрения для орхидей. Вносите только по влажному грунту и сокращайте подкормки зимой.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листьями'],
+          [
+            'Wipe the leaves gently and remove yellow foliage or faded flower stems at the base with a sterile tool. Do not polish the leaves or mist the colourful spathes.',
+            'Осторожно протирайте листья и удаляйте пожелтевшую листву или отцветшие цветоносы у основания стерильным инструментом. Не используйте полироли для листьев и не опрыскивайте цветные покрывала.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/anthurium-red-important.png',
+        propagationImage: '/plant-profile/anthurium-red-propagation.png',
+        saleImage: '/plant-profile/anthurium-red-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'philodendron-erubescens-dark-hybrid',
+    '/plants/philodendron-erubescens-dark-hybrid-home-photo.jpg',
+    ['Dark red-leaf philodendron', 'Филодендрон краснеющий, тёмнолистный гибрид'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light with a little gentle morning or evening sun. The dark leaves tolerate medium light, but the plant keeps a denser shape and richer colour closer to a bright window without harsh midday rays.',
+            'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Тёмные листья переносят среднее освещение, но у светлого окна без жёстких полуденных лучей куст сохраняет более плотную форму и насыщенный цвет.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water after the upper 3–5 cm of the mix dries. Soak the root ball evenly, drain all excess water and let the airy substrate partially dry before watering again.',
+            'Поливайте после просыхания верхних 3–5 см грунта. Равномерно промочите корневой ком, полностью слейте лишнюю воду и дайте воздушному субстрату частично подсохнуть перед следующим поливом.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'A stable 50–70% humidity supports smooth new leaves, but good air movement is essential. Do not leave water sitting inside the central rosette or a newly unfurling leaf.',
+            'Стабильная влажность 50–70% помогает новым листьям раскрываться ровно, но при этом необходимо движение воздуха. Не оставляйте воду в центре розетки или внутри разворачивающегося листа.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–28 °C and protect from cold glass, draughts and temperatures below about 15 °C. Cold wet roots are especially vulnerable to rot.',
+            'Содержите при 18–28 °C и берегите от холодного стекла, сквозняков и температуры ниже примерно 15 °C. Холодные мокрые корни особенно уязвимы для гнили.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          [
+            'Horticultural hybrid related to red-leaf philodendrons',
+            'Садовый гибрид из группы краснеющих филодендронов',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen self-heading aroid hybrid', 'Вечнозелёный кустовой ароидный гибрид'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Young petioles and protective cataphylls emerge in rich burgundy tones.',
+            'The broad oval leaves mature to a deep, almost black-green colour.',
+            'New leaves open lighter and often redder, then darken as their tissue hardens.',
+            'Short internodes give the plant a compact, architectural rosette rather than a long trailing habit.',
+          ],
+          [
+            'Молодые черешки и защитные катафиллы появляются в насыщенных бордовых тонах.',
+            'Широкие овальные листья по мере взросления становятся глубокого, почти чёрно-зелёного цвета.',
+            'Новые листья раскрываются более светлыми и часто красноватыми, а затем темнеют по мере затвердевания ткани.',
+            'Короткие междоузлия формируют компактную архитектурную розетку, а не длинный свисающий побег.',
+          ],
+        ],
+        [
+          'Philodendron tissue contains insoluble calcium oxalate crystals. Sap can irritate skin and eyes, and chewing causes painful mouth irritation. Wear gloves when pruning, clean tools afterwards and keep the plant out of reach of children and pets.',
+          'Ткани филодендрона содержат нерастворимые кристаллы оксалата кальция. Сок раздражает кожу и глаза, а при разжёвывании вызывает болезненное жжение во рту. Работайте в перчатках, мойте инструменты после обрезки и держите растение вдали от детей и животных.',
+        ],
+        [
+          [
+            'Soft yellow leaves with wet substrate — let the mix dry and inspect the roots for rot.',
+            'Pale, stretched or one-sided growth — provide brighter diffused light and rotate the pot regularly.',
+            'Brown leaf margins — check for harsh sun, salt buildup, dry air or irregular watering.',
+            'Silvery scars or distorted new leaves — inspect closely for thrips and spider mites.',
+          ],
+          [
+            'Мягкие жёлтые листья при мокром грунте — просушите субстрат и проверьте корни на гниль.',
+            'Бледный, вытянутый или односторонний рост — добавьте яркого рассеянного света и регулярно поворачивайте горшок.',
+            'Коричневые края листьев — проверьте избыток солнца, накопление солей, сухость воздуха и регулярность полива.',
+            'Серебристые потёртости или деформированные новые листья — внимательно проверьте растение на трипса и паутинного клеща.',
+          ],
+        ],
+        [
+          'Separate a healthy basal offset once it has its own roots, or take a short stem section with at least one viable node; a detached leaf without a node cannot produce a new plant. Let the cut dry briefly, then root it in lightly moist sphagnum or a fine airy aroid mix in warmth and bright diffused light.',
+          'Отделяйте здоровый прикорневой отпрыск, когда у него появятся собственные корни, либо возьмите короткую часть стебля как минимум с одним живым узлом: отдельный лист без узла не даст новое растение. Немного подсушите срез, затем укореняйте в слегка влажном сфагнуме или мелком воздушном ароидном субстрате в тепле и при ярком рассеянном свете.',
+        ],
+      ),
+      'Philodendron erubescens hybrid',
+      [
+        'This young philodendron is especially striking for the contrast between almost black-green leaf blades and wine-burgundy petioles. The central cataphyll shows that another leaf is already forming.',
+        'Этот молодой филодендрон особенно выразителен благодаря контрасту почти чёрно-зелёных листовых пластин и винно-бордовых черешков. Центральный катафилл показывает, что внутри уже формируется следующий лист.',
+      ],
+      [
+        'This compact dark-leaved philodendron belongs to the horticultural group related to red-leaf philodendrons. It forms a self-heading rosette of glossy elongated oval leaves on burgundy petioles; the exact cultivar cannot be confirmed from foliage alone.',
+        'Этот компактный тёмнолистный филодендрон относится к садовой группе, близкой краснеющим филодендронам. Он формирует кустовую розетку из глянцевых удлинённо-овальных листьев на бордовых черешках; по одной листве надёжно подтвердить точное сортовое имя нельзя.',
+      ],
+      quickFacts(
+        ['Moderate', 'Умеренный'],
+        ['Usually 50–100 cm indoors', 'Обычно 50–100 см в помещении'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a chunky aroid mix: about 40% fine orchid bark, 30% coco coir or light houseplant compost, 20% perlite or pumice and 10% horticultural charcoal.',
+            'Используйте крупный ароидный субстрат: примерно 40% мелкой коры для орхидей, 30% кокосового волокна или лёгкого грунта для комнатных растений, 20% перлита или пемзы и 10% древесного угля.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 2–3 years or when roots densely fill the pot. Choose a container only 2–3 cm wider and keep the central crown above the substrate.',
+            'Пересаживайте весной раз в 2–3 года или когда корни плотно заполнят горшок. Выбирайте ёмкость шире всего на 2–3 см и не заглубляйте центральную розетку в субстрат.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed every 3–4 weeks with a balanced foliage fertiliser at half strength. Do not fertilise dry soil or a stressed plant.',
+            'С весны до начала осени подкармливайте раз в 3–4 недели половинной дозой сбалансированного удобрения для декоративно-лиственных. Не вносите удобрение в сухой грунт или ослабленному растению.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листьями'],
+          [
+            'Wipe the broad leaves gently, remove only yellow or badly damaged foliage with a sterile tool and rotate the pot for even growth. Never pull or force a new leaf out of its cataphyll.',
+            'Осторожно протирайте широкие листья, стерильным инструментом удаляйте только пожелтевшую или сильно повреждённую листву и поворачивайте горшок для равномерного роста. Не вытягивайте новый лист из катафилла и не раскрывайте его силой.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/philodendron-dark-important.png',
+        propagationImage: '/plant-profile/philodendron-dark-propagation.png',
+        saleImage: '/plant-profile/philodendron-dark-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'monstera-adansonii',
+    '/plants/monstera-adansonii-home-photo.jpg',
+    ['Swiss cheese vine', 'Монстера адансони'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light with a little gentle morning or evening sun. Harsh midday rays can scorch the thin leaves, while a dark position produces longer internodes and smaller, less perforated growth.',
+            'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Жёсткие полуденные лучи могут обжечь тонкие листья, а в тёмном месте междоузлия вытягиваются и новые листья становятся мельче и менее перфорированными.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water after the upper 3–5 cm of the mix dries. Moisten the root ball evenly, drain all excess and let the airy substrate partially dry before the next watering.',
+            'Поливайте после просыхания верхних 3–5 см грунта. Равномерно промочите корневой ком, полностью слейте лишнюю воду и дайте воздушному субстрату частично подсохнуть перед следующим поливом.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'A stable 50–70% humidity supports smooth leaves and aerial roots. Good air movement is essential, and water should not remain trapped in unfolding growth.',
+            'Стабильная влажность 50–70% помогает листьям раскрываться ровно и поддерживает воздушные корни. При этом необходимо движение воздуха, а вода не должна оставаться внутри разворачивающегося прироста.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–28 °C and protect from cold glass, draughts and temperatures below about 15 °C. Growth slows sharply in cool wet conditions.',
+            'Содержите при 18–28 °C и берегите от холодного стекла, сквозняков и температуры ниже примерно 15 °C. В прохладе и мокром грунте рост резко замедляется.',
+          ],
+        ],
+      ),
+      1,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Tropical America', 'Тропическая Америка'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen climbing hemiepiphyte', 'Вечнозелёный лазающий полуэпифит'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'The oval holes are natural fenestrations, not insect or mechanical damage.',
+            'Leaves usually become larger and more perforated when the vine climbs in strong diffused light.',
+            'Aerial roots emerge from stem nodes and help the plant attach to support.',
+            'It stays much smaller and more delicate than Monstera deliciosa.',
+          ],
+          [
+            'Овальные отверстия — естественные фенестрации, а не следы насекомых или механические повреждения.',
+            'При подъёме по опоре и ярком рассеянном свете листья обычно становятся крупнее и получают больше отверстий.',
+            'Воздушные корни появляются в узлах стебля и помогают растению закрепляться на опоре.',
+            'Эта монстера остаётся значительно мельче и изящнее Monstera deliciosa.',
+          ],
+        ],
+        [
+          'Monstera tissue contains insoluble calcium oxalate crystals. Sap can irritate skin and eyes, and chewing causes painful mouth irritation. Wear gloves when pruning, clean tools afterwards and keep the plant out of reach of children and pets.',
+          'Ткани монстеры содержат нерастворимые кристаллы оксалата кальция. Сок раздражает кожу и глаза, а при разжёвывании вызывает болезненное жжение во рту. Работайте в перчатках, мойте инструменты после обрезки и держите растение вдали от детей и животных.',
+        ],
+        [
+          [
+            'Soft yellow leaves with wet substrate — let the mix dry and inspect the roots for rot.',
+            'Crisp brown edges — check for excessive sun, dry air, salt buildup or irregular watering.',
+            'Long bare stems and small solid leaves — provide brighter diffused light and a vertical support.',
+            'Silvery scars or distorted new leaves — inspect closely for thrips and spider mites.',
+          ],
+          [
+            'Мягкие жёлтые листья при мокром грунте — просушите субстрат и проверьте корни на гниль.',
+            'Сухие коричневые края — проверьте избыток солнца, сухость воздуха, накопление солей и регулярность полива.',
+            'Длинные оголённые побеги и мелкие цельные листья — добавьте яркого рассеянного света и вертикальную опору.',
+            'Серебристые потёртости или деформированные новые листья — внимательно проверьте растение на трипса и паутинного клеща.',
+          ],
+        ],
+        [
+          'Take a stem section with at least one healthy node and preferably a short aerial root; a detached leaf without a node cannot grow into a new vine. Root the cutting in lightly moist sphagnum, water or a fine airy aroid mix in warmth and bright diffused light.',
+          'Возьмите часть стебля как минимум с одним здоровым узлом и желательно с коротким воздушным корнем: отдельный лист без узла не вырастет в новую лиану. Укореняйте черенок в слегка влажном сфагнуме, воде или мелком воздушном ароидном субстрате в тепле и при ярком рассеянном свете.',
+        ],
+      ),
+      'Monstera adansonii',
+      [
+        'This young monstera already has expressive perforations on nearly every leaf. The new leaf in the centre is still soft and folded, so its final pattern will only become clear after it fully unfurls and hardens.',
+        'У этой молодой монстеры выразительные отверстия есть уже почти на каждом листе. Новый лист в центре пока мягкий и сложенный, поэтому его окончательный рисунок станет понятен только после полного раскрытия и затвердевания.',
+      ],
+      [
+        'Monstera adansonii is a tropical climbing aroid with thin oval leaves pierced by characteristic internal fenestrations. Because of this unusual pattern, it is often called the Swiss cheese vine. It can trail from a pot, but develops larger, more mature foliage when guided upward on a support.',
+        'Монстера адансони — тропический лазающий ароид с тонкими овальными листьями, пронизанными характерными внутренними фенестрациями. Из-за этого необычного рисунка её часто называют «швейцарским сыром». Она может свисать из горшка, но на вертикальной опоре формирует более крупную и взрослую листву.',
+      ],
+      quickFacts(
+        ['Moderate to fast', 'Умеренный или быстрый'],
+        ['Usually 60–200 cm with support', 'Обычно 60–200 см с опорой'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a loose aroid mix: about 40% fine orchid bark, 30% coco coir or light houseplant compost, 20% perlite or pumice and 10% horticultural charcoal.',
+            'Используйте рыхлый ароидный субстрат: примерно 40% мелкой коры для орхидей, 30% кокосового волокна или лёгкого грунта для комнатных растений, 20% перлита или пемзы и 10% древесного угля.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 1–2 years or when roots densely fill the pot. Choose a container only 2–3 cm wider and keep the stem base at its previous level.',
+            'Пересаживайте весной раз в 1–2 года или когда корни плотно заполнят горшок. Выбирайте ёмкость шире всего на 2–3 см и сохраняйте прежний уровень посадки стебля.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed every 3–4 weeks with a balanced foliage fertiliser at half strength. Do not fertilise dry soil or a stressed plant.',
+            'С весны до начала осени подкармливайте раз в 3–4 недели половинной дозой сбалансированного удобрения для декоративно-лиственных. Не вносите удобрение в сухой грунт или ослабленному растению.',
+          ],
+        ],
+        [
+          ['Support and pruning', 'Опора и обрезка'],
+          [
+            'Guide the vine onto a moss pole, coir pole or narrow plank and secure it loosely below the nodes. Trim overly long stems with a sterile tool and replant rooted cuttings into the same pot for a fuller base.',
+            'Направляйте лиану по моховой, кокосовой или деревянной опоре и свободно фиксируйте ниже узлов. Слишком длинные побеги обрезайте стерильным инструментом, а укоренённые черенки подсаживайте в тот же горшок для более густого основания.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/monstera-adansonii-important.png',
+        propagationImage: '/plant-profile/monstera-adansonii-propagation.png',
+        saleImage: '/plant-profile/monstera-adansonii-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
     'commelinaceae',
     'tradescantia-collection',
     '/plant-profile/tradescantia-cover.webp',
@@ -2338,7 +4756,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ),
       'Phalaenopsis hybrids',
       [
-        'My collection includes 11 orchids with distinctly different flowers.',
+        'My collection includes 10 orchids with distinctly different flowers.',
         'В моей коллекции 10 орхидей с заметно разными цветками.',
       ],
       [
@@ -2421,6 +4839,417 @@ export const collectionPlants: readonly CollectionPlant[] = [
       },
     ),
     10,
+  ),
+  collectionPlant(
+    'cactaceae',
+    'echinopsis-sp',
+    '/plants/echinopsis-sp-home-photo.jpg',
+    ['Echinopsis cactus', 'Эхинопсис'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give the brightest position available with several hours of direct sun. Acclimatise gradually after winter or relocation so the dark-green skin does not scorch.',
+            'Поставьте на самое светлое место с несколькими часами прямого солнца. После зимы или перестановки приучайте к яркому свету постепенно, чтобы тёмно-зелёная кожица не получила ожогов.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'During active growth, water thoroughly only after the mix has dried all the way through, then empty the saucer. In a cool winter rest, keep almost completely dry.',
+            'В период активного роста обильно поливайте только после полного просыхания грунта, затем сливайте воду из поддона. Во время прохладной зимовки держите почти полностью сухим.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Dry room air suits this cactus. It needs ventilation rather than misting; water lingering around the ribs or crown increases the risk of rot.',
+            'Кактусу подходит сухой комнатный воздух. Ему важнее проветривание, чем опрыскивание: вода между рёбрами или на верхушке повышает риск гнили.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–30 °C while growing. A bright, dry winter rest around 8–12 °C encourages compact growth and can support future flowering.',
+            'Во время роста содержите при 18–30 °C. Светлая сухая зимовка примерно при 8–12 °C помогает сохранить компактную форму и может стимулировать будущее цветение.',
+          ],
+        ],
+      ),
+      1,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Cactus family (Cactaceae)', 'Кактусовые (Cactaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['South America', 'Южная Америка'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Ribbed stem succulent cactus', 'Ребристый стеблевой суккулентный кактус'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Deep ribs allow the water-storing stem to expand and contract.',
+            'Each woolly areole carries a star-shaped cluster of long ivory spines.',
+            'Echinopsis flowers are often large and funnel-shaped, but flowering is needed for reliable species identification.',
+            'The body can become more columnar as the plant matures.',
+          ],
+          [
+            'Глубокие рёбра позволяют запасающему воду стеблю расширяться и сжиматься.',
+            'Из каждой опушённой ареолы растёт звездообразный пучок длинных светлых колючек.',
+            'У эхинопсисов часто бывают крупные воронковидные цветки, но для надёжного определения вида нужно увидеть цветение.',
+            'С возрастом тело растения может становиться более вытянутым и колонновидным.',
+          ],
+        ],
+        [
+          'The long rigid spines can puncture skin. Keep the cactus away from children and pets, and handle it with thick gloves, folded cardboard or tongs that do not crush the ribs.',
+          'Длинные жёсткие колючки могут проколоть кожу. Держите кактус вдали от детей и животных, а при пересадке используйте плотные перчатки, сложенный картон или щипцы, которые не сдавливают рёбра.',
+        ],
+        [
+          [
+            'A soft, dark or translucent base — stop watering and inspect immediately for rot.',
+            'A narrow pale top — move gradually to stronger light; this is stretched growth and will not widen later.',
+            'White cottony deposits or small brown shields — isolate and check for mealybugs or scale insects.',
+          ],
+          [
+            'Мягкое, потемневшее или полупрозрачное основание — прекратите полив и сразу проверьте растение на гниль.',
+            'Узкая бледная верхушка — постепенно переставьте на более яркий свет; вытянувшаяся часть уже не станет шире.',
+            'Белые ватные комочки или мелкие коричневые щитки — изолируйте растение и проверьте на мучнистого червеца или щитовку.',
+          ],
+        ],
+        [
+          'When a basal offset is large enough, detach it with a sterile blade or gentle twist. Let the cut dry and callus for several days, then place the offset on dry gritty mix. Begin light watering only after roots start to form.',
+          'Когда прикорневая детка достаточно подрастёт, отделите её стерильным лезвием или аккуратным поворотом. Подсушите срез несколько дней до образования каллуса, затем поставьте детку на сухой минеральный субстрат. Начинайте понемногу поливать только после появления корней.',
+        ],
+      ),
+      'Echinopsis sp.',
+      [
+        'The exact species of this cactus is still a small mystery. Its dark body, strongly sculpted ribs and unusually long pale spines already make it distinctive; the first flower may provide the clue needed for a more precise identification.',
+        'Точный вид этого кактуса пока остаётся небольшой загадкой. Тёмный стебель, выразительные рёбра и необычно длинные светлые колючки уже делают его узнаваемым, а первое цветение может дать подсказку для более точного определения.',
+      ],
+      [
+        'This Echinopsis-type cactus has a dark-green ribbed body, woolly areoles and long ivory spines. Its rounded young form gradually becomes more columnar, while the fleshy stem stores water for dry periods.',
+        'Этот кактус из группы эхинопсисов отличается тёмно-зелёным ребристым стеблем, опушёнными ареолами и длинными светлыми колючками. Молодая округлая форма постепенно становится более колонновидной, а мясистый стебель запасает воду на сухие периоды.',
+      ],
+      quickFacts(
+        ['Slow to moderate', 'Медленный или умеренный'],
+        ['Often 20–80 cm indoors', 'Часто 20–80 см в комнате'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a very fast-draining mix with roughly 60–70% mineral material such as pumice, lava grit, coarse sand or fine gravel and 30–40% cactus compost.',
+            'Используйте очень быстро просыхающую смесь: примерно 60–70% минеральных компонентов — пемзы, лавовой крошки, крупного песка или мелкого гравия — и 30–40% грунта для кактусов.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring every 2–3 years into a pot with a drainage hole, only slightly wider than the root system. Wait about a week before the first watering.',
+            'Пересаживайте весной раз в 2–3 года в горшок с дренажным отверстием, лишь немного шире корневой системы. После пересадки подождите около недели до первого полива.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From late spring to August, use a low-nitrogen cactus fertiliser at half strength about once a month. Do not feed during the winter rest.',
+            'С конца весны до августа примерно раз в месяц используйте половинную дозу удобрения для кактусов с низким содержанием азота. Во время зимнего покоя не подкармливайте.',
+          ],
+        ],
+        [
+          ['Flowering', 'Цветение'],
+          [
+            'Strong summer light and a cool, dry winter rest give the best chance of buds. Once buds appear, avoid repeatedly rotating or relocating the pot.',
+            'Яркий летний свет и прохладная сухая зимовка дают лучшие шансы на появление бутонов. После их формирования не поворачивайте и не переставляйте горшок без необходимости.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/echinopsis-important.png',
+        propagationImage: '/plant-profile/echinopsis-propagation.png',
+        saleImage: '/plant-profile/echinopsis-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'cycadaceae',
+    'cycas-revoluta',
+    '/plants/cycas-revoluta-home-photo.jpg',
+    ['Sago palm', 'Цикас поникающий'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give very bright diffused light with a few hours of gentle morning or evening sun. Rotate the pot between growth flushes, but do not move it while soft new fronds are unfolding.',
+            'Обеспечьте очень яркий рассеянный свет и несколько часов мягкого утреннего или вечернего солнца. Поворачивайте горшок между волнами роста, но не переставляйте его, пока раскрываются мягкие молодые листья.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Let at least the upper third of the mix dry, then water thoroughly and drain all excess. Keep water away from the crown and never leave the roots standing in a wet saucer.',
+            'Давайте просохнуть как минимум верхней трети грунта, затем хорошо проливайте и полностью сливайте лишнюю воду. Не лейте воду в центр розетки и не оставляйте корни в мокром поддоне.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Average room humidity is enough. Good air movement and clean leaves are more important than misting; moisture trapped in the crown can cause rot.',
+            'Обычной комнатной влажности достаточно. Хорошее движение воздуха и чистые листья важнее опрыскиваний: влага, задержавшаяся в центре розетки, может вызвать гниль.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–27 °C during active growth. Protect from cold draughts and prolonged temperatures below 10–12 °C.',
+            'В период активного роста содержите при 18–27 °C. Берегите от холодных сквозняков и длительного понижения температуры ниже 10–12 °C.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Cycad family (Cycadaceae)', 'Саговниковые (Cycadaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Southern Japan and Fujian, China', 'Юг Японии и провинция Фуцзянь в Китае'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen gymnosperm cycad', 'Вечнозелёный голосеменной саговник'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Despite its common name, it is not a true palm but an ancient cycad.',
+            'New fronds emerge as a tight upright flush and slowly unfold into a crown.',
+            'Growth is very slow, and long pauses between new flushes are normal.',
+            'Rigid pinnate fronds grow from a thick, textured caudex.',
+          ],
+          [
+            'Несмотря на распространённое название, это не настоящая пальма, а древний саговник.',
+            'Новые листья появляются плотным вертикальным пучком и постепенно раскрываются в крону.',
+            'Цикас растёт очень медленно, и долгие паузы между волнами роста для него нормальны.',
+            'Жёсткие перистые листья растут из толстого фактурного каудекса.',
+          ],
+        ],
+        [
+          'Every part of the plant is highly toxic if swallowed, and the seeds are especially dangerous. Keep it completely out of reach of children and pets; if ingestion is suspected, contact a veterinarian or poison service immediately.',
+          'Все части растения очень ядовиты при проглатывании, особенно опасны семена. Держите цикас в полностью недоступном для детей и животных месте; при подозрении на проглатывание немедленно обратитесь к ветеринару или в токсикологическую службу.',
+        ],
+        [
+          [
+            'Yellowing, soft lower fronds with wet soil — reduce watering and inspect the roots for rot.',
+            'Pale, stretched or distorted new growth — the plant lacked stable bright light during the flush.',
+            'White or brown scales on fronds and stems — isolate the plant and inspect closely for scale insects.',
+          ],
+          [
+            'Желтеющие мягкие нижние листья при мокром грунте — сократите полив и проверьте корни на гниль.',
+            'Бледный, вытянутый или искривлённый молодой прирост — во время раскрытия листьям не хватало стабильного яркого света.',
+            'Белые или коричневые щитки на листьях и черешках — изолируйте растение и внимательно проверьте его на щитовку.',
+          ],
+        ],
+        [
+          'Separate a basal offset only when it is large enough to have stored energy. Cut it away with a sterile blade, let the wound dry for one to two days, then set it in a coarse, barely moist mix in warmth and bright diffused light. Seed propagation is possible but very slow.',
+          'Отделяйте прикорневую детку только тогда, когда она достаточно выросла и накопила силы. Срежьте её стерильным лезвием, подсушите ранку один-два дня, затем посадите в крупнозернистый едва влажный субстрат и держите в тепле при ярком рассеянном свете. Размножение семенами возможно, но занимает много времени.',
+        ],
+      ),
+      'Cycas revoluta',
+      [
+        'The most striking moment is a new flush: tightly rolled upright fronds slowly open into a fresh symmetrical crown. Its measured pace makes every new leaf feel significant.',
+        'Самый впечатляющий момент — новая волна роста: туго свёрнутые вертикальные листья постепенно раскрываются в свежую симметричную крону. Из-за неторопливого роста каждый новый лист ощущается настоящим событием.',
+      ],
+      [
+        'Sago palm is a compact, exceptionally slow-growing cycad with stiff dark-green pinnate fronds and a rough caudex. Its architectural crown gives the plant the appearance of a miniature palm.',
+        'Цикас поникающий — компактный и исключительно медленно растущий саговник с жёсткими тёмно-зелёными перистыми листьями и фактурным каудексом. Архитектурная крона делает его похожим на миниатюрную пальму.',
+      ],
+      quickFacts(
+        ['Very slow', 'Очень медленный'],
+        ['Usually 60–150 cm indoors', 'Обычно 60–150 см в комнате'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a coarse, fast-draining mix: about 50% cactus or light houseplant compost, 30% pumice or perlite and 20% fine bark or grit.',
+            'Используйте крупнозернистую быстро просыхающую смесь: примерно 50% грунта для кактусов или лёгкого грунта для комнатных растений, 30% пемзы или перлита и 20% мелкой коры или гравия.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot only every 3–4 years into a stable pot with drainage. Keep the caudex above the substrate and disturb the fleshy roots as little as possible.',
+            'Пересаживайте только раз в 3–4 года в устойчивый горшок с дренажными отверстиями. Оставляйте каудекс над поверхностью грунта и как можно меньше тревожьте мясистые корни.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to late summer, feed once a month at half strength. Do not fertilise dry soil or a plant that is resting without active growth.',
+            'С весны до конца лета подкармливайте раз в месяц половинной дозой. Не вносите удобрение в сухой грунт или во время покоя без активного роста.',
+          ],
+        ],
+        [
+          ['Grooming and new growth', 'Уход за кроной и новый рост'],
+          [
+            'Remove only fully yellow or brown fronds; green leaves still feed the caudex. Do not touch, tie or reposition the soft new flush until it hardens.',
+            'Удаляйте только полностью пожелтевшие или коричневые листья: зелёные продолжают питать каудекс. Не трогайте, не подвязывайте и не переставляйте мягкий молодой прирост, пока он не затвердеет.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/cycas-important.png',
+        propagationImage: '/plant-profile/cycas-propagation.png',
+        saleImage: '/plant-profile/cycas-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'gesneriaceae',
+    'nematanthus-strigillosus',
+    '/plants/nematanthus-strigillosus-home-photo.jpg',
+    ['Small-bristled nematanthus', 'Нематантус мелкощетинистый'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Bright diffused light with a little gentle morning or evening sun keeps growth compact and supports flowering. Protect the glossy leaves from harsh midday sun.',
+            'Яркий рассеянный свет с небольшим количеством мягкого утреннего или вечернего солнца сохраняет куст компактным и помогает цветению. Берегите глянцевые листья от жёсткого полуденного солнца.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water after the top 2–3 cm of soil dries. Moisten the root ball evenly, drain excess water and let the airy substrate dry slightly before watering again.',
+            'Поливайте после просыхания верхних 2–3 см грунта. Равномерно промочите корневой ком, слейте лишнюю воду и дайте воздушному субстрату немного подсохнуть перед следующим поливом.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Average room humidity of about 40–60% is suitable. Good air movement is more useful than frequent misting, especially while a newly delivered plant adapts.',
+            'Подходит обычная комнатная влажность около 40–60%. Хорошее движение воздуха полезнее частых опрыскиваний, особенно пока недавно доставленное растение адаптируется.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–25 °C during active growth and protect from cold glass and draughts. A brighter, slightly cooler winter at 15–18 °C can encourage future flowering.',
+            'В период активного роста содержите при 18–25 °C и защищайте от холодного стекла и сквозняков. Более светлая и прохладная зимовка при 15–18 °C может стимулировать будущее цветение.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Gesneriad family (Gesneriaceae)', 'Геснериевые (Gesneriaceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          ['Humid forests of Brazil', 'Влажные леса Бразилии'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          [
+            'Evergreen branching epiphytic subshrub',
+            'Вечнозелёный ветвящийся эпифитный полукустарник',
+          ],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Thick glossy leaves grow in opposite pairs along branching stems.',
+            'The characteristic orange tubular flowers resemble tiny goldfish.',
+            'Pinching young shoots encourages a denser crown and more flowering tips.',
+            'The slightly fleshy leaves tolerate brief drying better than constantly wet roots.',
+          ],
+          [
+            'Толстые глянцевые листья расположены попарно на ветвящихся побегах.',
+            'Характерные оранжевые трубчатые цветки напоминают маленьких золотых рыбок.',
+            'Прищипка молодых побегов помогает сформировать более густую крону и больше цветущих верхушек.',
+            'Слегка мясистые листья переносят короткое просыхание лучше, чем постоянно мокрые корни.',
+          ],
+        ],
+        [
+          'Keep a marketplace plant separate from the collection for two to three weeks and inspect the undersides of leaves and stem nodes. Existing dry tan patches will not turn green again; watch whether they remain stable. Rapidly spreading, wet or soft spots require isolation and a check of the roots and growing conditions.',
+          'Растение с маркетплейса держите отдельно от коллекции две-три недели и осматривайте изнанку листьев и узлы побегов. Уже появившиеся сухие светло-коричневые пятна не позеленеют; важно наблюдать, остаются ли они стабильными. Быстро увеличивающиеся, мокрые или мягкие пятна требуют изоляции и проверки корней и условий содержания.',
+        ],
+        [
+          [
+            'Stable dry patches — usually transport, cold or sun damage; monitor the new growth.',
+            'Leaves fall while the soil is wet — check for cold exposure and root problems.',
+            'Long sparse shoots without flowers — provide brighter diffused light and pinch the tips.',
+          ],
+          [
+            'Стабильные сухие пятна — обычно следствие транспортировки, холода или солнца; наблюдайте за новым ростом.',
+            'Листья опадают при влажном грунте — проверьте, не переохладилось ли растение и здоровы ли корни.',
+            'Длинные редкие побеги без цветения — обеспечьте более яркий рассеянный свет и прищипните верхушки.',
+          ],
+        ],
+        [
+          'Take 6–10 cm terminal cuttings, remove the lower pair of leaves and root the nodes in water or a light, slightly moist mix. Keep warm in bright diffused light; planting several rooted cuttings together creates a fuller pot.',
+          'Возьмите верхушечные черенки длиной 6–10 см, удалите нижнюю пару листьев и укорените узлы в воде или лёгкой слегка влажной смеси. Держите в тепле при ярком рассеянном свете; несколько укоренённых черенков в одном горшке образуют более пышный куст.',
+        ],
+      ),
+      'Nematanthus strigillosus',
+      [
+        'This nematanthus is a completely new plant in my collection. I bought it on a marketplace, so for now I am giving it time to settle in, watching the damaged leaves and waiting for healthy new growth. Its first orange flowers at home are still ahead.',
+        'Этот нематантус — совсем новое растение в моей коллекции. Я приобрела его на маркетплейсе, поэтому сейчас даю ему время освоиться, наблюдаю за повреждёнными листьями и жду здорового нового роста. Его первое оранжевое цветение у меня дома ещё впереди.',
+      ],
+      [
+        'Small-bristled nematanthus is a compact Brazilian relative of African violets with branching stems, glossy fleshy leaves and bright orange pouch-shaped flowers. This young specimen is currently adapting after delivery.',
+        'Нематантус мелкощетинистый — компактный бразильский родственник сенполий с ветвящимися побегами, глянцевыми мясистыми листьями и яркими оранжевыми цветками-мешочками. Этот молодой экземпляр сейчас адаптируется после доставки.',
+      ],
+      quickFacts(['Moderate', 'Умеренный'], ['Shoots usually 30–60 cm', 'Побеги обычно 30–60 см']),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a loose epiphytic mix: about 55% light houseplant compost, 25% fine bark and 20% perlite or pumice. The pot must drain freely.',
+            'Используйте рыхлую эпифитную смесь: примерно 55% лёгкого грунта для комнатных растений, 25% мелкой коры и 20% перлита или пемзы. Вода должна свободно уходить из горшка.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Do not rush to repot a new arrival unless the substrate is waterlogged or roots are failing. After quarantine and adaptation, move it into a pot only slightly larger than the root ball.',
+            'Не спешите пересаживать новое растение, если грунт не переувлажнён и корни не страдают. После карантина и адаптации перевалите его в горшок лишь немного больше корневого кома.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'After new growth begins, feed every 3–4 weeks from spring to early autumn with half-strength fertiliser for flowering houseplants.',
+            'После начала нового роста с весны до начала осени подкармливайте раз в 3–4 недели половинной дозой удобрения для цветущих комнатных растений.',
+          ],
+        ],
+        [
+          ['Pruning and flowering', 'Формировка и цветение'],
+          [
+            'After flowering or during active growth, pinch long shoot tips to encourage branching. Avoid heavy pruning immediately after delivery; first let the plant adapt and produce healthy growth.',
+            'После цветения или в период активного роста прищипывайте кончики длинных побегов для ветвления. Не проводите сильную обрезку сразу после доставки: сначала дайте растению адаптироваться и выпустить здоровый прирост.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/nematanthus-important.png',
+        propagationImage: '/plant-profile/nematanthus-propagation.png',
+        saleImage: '/plant-profile/nematanthus-for-sale.png',
+      },
+    ),
   ),
   collectionPlant(
     'gesneriaceae',

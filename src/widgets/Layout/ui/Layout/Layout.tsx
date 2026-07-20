@@ -1,4 +1,6 @@
 import { Flex } from '@chakra-ui/react';
+import { useLayoutEffect, useRef } from 'react';
+import { useLocation } from 'react-router';
 
 import { useLayoutContext } from 'src/shared/config';
 import { Footer } from '../Footer/Footer';
@@ -10,6 +12,12 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   const { locale, onCollectionOpen, onLocaleChange } = useLayoutContext();
+  const { pathname } = useLocation();
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+
+  useLayoutEffect(() => {
+    scrollContainerRef.current?.scrollTo({ behavior: 'auto', top: 0 });
+  }, [pathname]);
 
   return (
     <Flex
@@ -20,6 +28,7 @@ export const Layout = ({ children }: LayoutProps) => {
       padding="18px"
     >
       <Flex
+        ref={scrollContainerRef}
         background="#f2eadb"
         borderRadius="20px"
         boxShadow="0 24px 80px rgba(52, 43, 28, 0.16)"

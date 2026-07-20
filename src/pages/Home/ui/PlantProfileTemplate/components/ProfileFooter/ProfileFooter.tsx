@@ -94,9 +94,9 @@ const FooterCard = ({
               borderRadius="8px"
               flexShrink={0}
               height="132px"
-              objectFit="cover"
+              objectFit="contain"
               src={photo}
-              width={{ base: '92px', lg: '100px' }}
+              width={{ base: '104px', lg: '132px' }}
               h={{ base: '110px', lg: '128px' }}
             />
           ) : null}

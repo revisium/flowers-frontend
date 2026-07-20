@@ -59,7 +59,9 @@ the widget layout pattern used by sibling projects.
 renders the app background, applies the fixed `18px` viewport padding, hides
 outer overflow, and places page content inside a rounded scroll container that
 fills the remaining viewport width and height up to the current content max
-width. The header provides a linked brand mark, localized responsive navigation,
+width. The inner scroll container resets to the top whenever the route pathname
+changes, so editorial pages always open from their beginning even when navigation
+starts from a deeply scrolled page. The header provides a linked brand mark, localized responsive navigation,
 a collection-overlay action with the derived plant count, and compact language
 controls. Navigation stays in the desktop row from the tablet breakpoint and
 moves below the brand and language controls as a second row on mobile. The
@@ -96,7 +98,8 @@ derived from one source.
   records and the count from `entities/collection`, supports local search
   filtering, and has both a horizontally scrollable family list and an explicit
   `All families` chooser so none of the available families are hidden behind the
-  initial viewport.
+  initial viewport. Opening a plant profile resets the overlay scroll position to
+  the top so the profile begins with its title and hero on every breakpoint.
 - `ui/PlantProfileTemplate` is the reusable detailed-profile layout opened
   from a catalog card. It renders an individual plant's localized entity data:
   title, taxonomy, photos, difficulty, practical care, and a note. Profiles can

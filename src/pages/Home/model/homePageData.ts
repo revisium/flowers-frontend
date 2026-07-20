@@ -1,5 +1,5 @@
 import type { Locale } from 'src/shared/config';
-import { getCollectionPlantCount } from 'src/entities/collection';
+import { getCollectionFamilyCount, getCollectionPlantCount } from 'src/entities/collection';
 
 export interface HomeHeroStat {
   readonly label: string;
@@ -204,7 +204,7 @@ export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
   })),
 };
 
-const homeFamilyCount = String(homeCategoryDefinitions.length);
+const homeFamilyCount = String(getCollectionFamilyCount());
 
 export const homeHeroStats: Record<Locale, readonly HomeHeroStat[]> = {
   ru: [
