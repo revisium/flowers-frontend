@@ -11,6 +11,7 @@ import {
 import {
   collectionPlants,
   formatCollectionPlantCount,
+  getCollectionPlantCount,
   type CollectionFamilyId,
   type CollectionPlant,
 } from 'src/entities/collection';
@@ -198,7 +199,7 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
               {text.title}
             </Flex>
             <Text color="#64705f" textStyle="medium-sm" transform="translateY(3px)">
-              {formatCollectionPlantCount(catalogByLocale[locale].length, locale)}
+              {formatCollectionPlantCount(getCollectionPlantCount(), locale)}
             </Text>
           </Flex>
           <Flex alignItems="center" gap="10px" width={{ base: '100%', lg: 'min(480px, 52%)' }}>
