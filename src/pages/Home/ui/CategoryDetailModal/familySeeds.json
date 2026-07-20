@@ -1068,5 +1068,69 @@
       "/plants/crassulaceae-modal/trait-drainage.png",
       "/plants/crassulaceae-modal/trait-bright-light.png"
     ]
+  },
+  "moraceae": {
+    "closingNote": {
+      "en": "Moraceae unite familiar indoor trees with extraordinary tropical fruit plants. Their quiet green leaves conceal some of the most inventive flowers and pollination systems in nature.",
+      "ru": "Тутовые объединяют знакомые комнатные деревья и удивительные тропические плодовые растения. За спокойной зеленью их листьев скрываются одни из самых необычных цветков и способов опыления в природе."
+    },
+    "description": {
+      "en": "Moraceae are trees, shrubs, climbers and a few herbs from tropical and warm-temperate regions. The family includes figs, mulberries and breadfruit, and is recognised by milky latex, stipules and tiny flowers gathered into complex inflorescences.",
+      "ru": "Тутовые — это деревья, кустарники, лианы и некоторые травы тропических и тёплых умеренных областей. К семейству относятся фикусы, шелковица и хлебное дерево; его узнают по млечному соку, прилистникам и крошечным цветкам, собранным в сложные соцветия."
+    },
+    "facts": {
+      "en": [
+        "The family contains about 40–50 genera and roughly 1,100 species worldwide.",
+        "A fig is not a single fruit: it is a hollow syconium lined with many tiny flowers.",
+        "Many Ficus species have a highly specialised partnership with their own pollinating fig wasps.",
+        "Mulberries and breadfruit are compound structures formed from many flowers growing together.",
+        "Some tropical figs begin life high on another tree and later form dramatic aerial-root trunks."
+      ],
+      "ru": [
+        "Семейство включает около 40–50 родов и примерно 1 100 видов по всему миру.",
+        "Инжир — не один плод, а полый сиконий, внутри которого расположено множество крошечных цветков.",
+        "У многих фикусов существует узкая специализация с собственными видами ос-опылителей.",
+        "Шелковица и хлебное дерево образуют сложные соплодия из множества сросшихся цветков.",
+        "Некоторые тропические фикусы начинают жизнь высоко на другом дереве, а затем формируют впечатляющие стволы из воздушных корней."
+      ]
+    },
+    "heroImage": "/plants/moraceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 80px) bottom",
+      "md": "calc(100% + 30px) bottom",
+      "lg": "right bottom"
+    },
+    "heroSize": {
+      "base": "560px auto",
+      "md": "760px auto",
+      "lg": "920px auto"
+    },
+    "latinName": "Moraceae",
+    "origin": {
+      "en": "Mostly tropical worldwide, with representatives extending into warm-temperate Asia, Europe, Africa, Australia and the Americas.",
+      "ru": "Преимущественно тропические регионы всего мира; отдельные представители заходят в тёплые умеренные области Азии, Европы, Африки, Австралии и Америки."
+    },
+    "originMapImage": "/plants/moraceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "White milky latex is present in the stems and leaves of most family members.",
+        "Leaves are usually simple and alternate; protective stipules often leave a ring-like scar around the twig.",
+        "Tiny flowers combine into specialised structures such as figs, mulberries and breadfruit.",
+        "Trees range from compact shrubs to huge banyans supported by pillar-like aerial roots."
+      ],
+      "ru": [
+        "В стеблях и листьях большинства представителей содержится белый млечный сок.",
+        "Листья обычно простые и очередные; защитные прилистники часто оставляют кольцевой рубец вокруг побега.",
+        "Крошечные цветки объединяются в особые структуры — инжир, ягоды шелковицы и соплодия хлебного дерева.",
+        "Среди Тутовых есть и компактные кустарники, и огромные баньяны с колоннами воздушных корней."
+      ]
+    },
+    "traitImages": [
+      "/plants/moraceae-modal/trait-latex.png",
+      "/plants/moraceae-modal/trait-stipule.png",
+      "/plants/moraceae-modal/trait-fruits.png",
+      "/plants/moraceae-modal/trait-aerial-roots.png"
+    ]
   }
 }

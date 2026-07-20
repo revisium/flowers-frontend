@@ -15,6 +15,7 @@ export type CollectionFamilyId =
   | 'cycadaceae'
   | 'gesneriaceae'
   | 'marantaceae'
+  | 'moraceae'
   | 'nephrolepidaceae'
   | 'orchidaceae'
   | 'piperaceae'
@@ -1117,6 +1118,148 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ),
   ),
   collectionPlant(
+    'moraceae',
+    'ficus-benjamina',
+    '/plants/ficus-benjamina-home-photo.png',
+    ['Weeping fig', 'Фикус Бенджамина'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright indirect light and protect the foliage from harsh midday sun. Avoid frequent moves: a sudden change in light often triggers leaf drop while the plant adapts.',
+            'Обеспечьте яркий рассеянный свет и защищайте листву от жёсткого полуденного солнца. Не переставляйте растение без необходимости: резкая смена освещения часто вызывает листопад во время адаптации.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water thoroughly when the upper 3–5 cm of substrate has dried, then drain the saucer. Do not let the root ball dry completely, but never keep it continuously wet.',
+            'Поливайте обильно, когда верхние 3–5 см субстрата просохнут, и сливайте воду из поддона. Не пересушивайте земляной ком полностью, но и не держите его постоянно мокрым.',
+          ],
+        ],
+        [
+          ['Humidity and air', 'Влажность и воздух'],
+          [
+            'Average room humidity is acceptable, though 45–60% keeps the crown fresher. Keep the tree away from hot radiators, air-conditioners and cold draughts.',
+            'Обычная комнатная влажность подходит, но при 45–60% крона выглядит свежее. Держите дерево подальше от горячих батарей, кондиционеров и холодных сквозняков.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Maintain about 18–27 °C and preferably no lower than 15 °C in winter. Protect the roots from a cold windowsill and abrupt temperature changes.',
+            'Поддерживайте примерно 18–27 °C, а зимой желательно не ниже 15 °C. Берегите корни от холодного подоконника и резких перепадов температуры.',
+          ],
+        ],
+      ),
+      3,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Mulberry family (Moraceae)', 'Тутовые (Moraceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          [
+            'Tropical and subtropical Asia to northern Australia',
+            'Тропическая и субтропическая Азия — север Австралии',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen tropical tree', 'Вечнозелёное тропическое дерево'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'The common name “weeping fig” refers to its gracefully arching twigs and drooping leaves.',
+            'In the wild it becomes a large tree, while regular pruning keeps an indoor specimen compact and branched.',
+            'Like other figs, it can form aerial roots in warm, humid conditions.',
+            'Its tiny enclosed flowers develop inside fig-like syconia, although indoor plants rarely fruit.',
+          ],
+          [
+            'Название «плакучий фикус» связано с изящно поникающими веточками и листьями.',
+            'В природе это крупное дерево, а в помещении регулярная обрезка помогает сохранять компактную ветвистую форму.',
+            'Как и другие фикусы, в тёплом влажном воздухе он способен образовывать воздушные корни.',
+            'Его крошечные цветки скрыты внутри похожих на инжир сикониев, но в комнате растение плодоносит редко.',
+          ],
+        ],
+        [
+          'The milky latex can irritate skin and eyes, and chewed foliage may cause digestive upset. Wear gloves when pruning and keep cuttings away from children and pets.',
+          'Млечный сок может раздражать кожу и глаза, а при жевании листьев вызвать расстройство пищеварения. Работайте в перчатках и держите обрезанные части подальше от детей и животных.',
+        ],
+        [
+          [
+            'Sudden leaf drop — check recent moves, draughts, cold roots or a sharp change in watering.',
+            'Yellow soft leaves — allow the upper substrate to dry and inspect drainage and roots.',
+            'Dry brown edges — check hot dry air, irregular watering and salt buildup.',
+            'Sticky leaves, bumps or fine webbing — inspect for scale, mealybugs and spider mites.',
+          ],
+          [
+            'Резко опадают листья — вспомните о недавней перестановке, сквозняке, охлаждении корней или изменении полива.',
+            'Листья желтеют и размягчаются — дайте верхнему слою просохнуть и проверьте дренаж и корни.',
+            'Края сохнут и коричневеют — проверьте горячий сухой воздух, нерегулярный полив и накопление солей.',
+            'Листья липкие, появились бугорки или паутинка — осмотрите растение на щитовку, мучнистого червеца и клеща.',
+          ],
+        ],
+        [
+          'Take a healthy 10–15 cm tip cutting with two or three leaves just below a node. Rinse the latex, root it in water or a warm airy mix, and pot it when several pale roots are 3–5 cm long.',
+          'Срежьте здоровый верхушечный черенок длиной 10–15 см с двумя-тремя листьями чуть ниже узла. Смойте млечный сок, укореняйте в воде или тёплом воздушном субстрате и посадите, когда несколько светлых корней достигнут 3–5 см.',
+        ],
+      ),
+      'Ficus benjamina',
+      [
+        'This is one of the largest plants in my collection: a full indoor tree with several trunks and a loose, living crown. Its scale makes the room feel like a real greenhouse.',
+        'Это одно из самых крупных растений в моей коллекции: настоящее комнатное дерево с несколькими стволами и свободной живой кроной. Благодаря его масштабу комната становится похожа на настоящую оранжерею.',
+      ],
+      [
+        'Ficus benjamina is an evergreen tree with slender woody stems and a crown of small, pointed, glossy leaves. It grows steadily in stable bright conditions but reacts noticeably to abrupt changes in place, temperature and watering.',
+        'Фикус Бенджамина — вечнозелёное дерево с тонкими древеснеющими стволами и кроной из небольших заострённых глянцевых листьев. В стабильных светлых условиях он растёт уверенно, но заметно реагирует на резкую смену места, температуры и полива.',
+      ],
+      quickFacts(
+        ['Moderate to fast', 'Умеренный или быстрый'],
+        ['Usually 1.5–3 m indoors', 'Обычно 1,5–3 м в комнате'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a fertile airy mix: about 60% quality houseplant substrate, 20% fine bark and 20% perlite or pumice, always in a pot with drainage.',
+            'Используйте питательную воздушную смесь: примерно 60% качественного грунта для комнатных растений, 20% мелкой коры и 20% перлита или пемзы, обязательно в горшке с дренажом.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot a young tree every 1–2 years in spring; for a large mature specimen, replace the upper substrate annually and move up only one pot size when roots fill the container.',
+            'Молодое дерево пересаживайте весной раз в 1–2 года; у крупного взрослого экземпляра ежегодно обновляйте верхний слой и увеличивайте горшок только на один размер, когда корни освоят объём.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From March to September, feed every 3–4 weeks with a balanced foliage fertiliser at half strength. Pause in winter unless the plant is actively growing under additional light.',
+            'С марта по сентябрь подкармливайте раз в 3–4 недели половинной дозой сбалансированного удобрения для декоративно-лиственных. Зимой сделайте паузу, если растение не растёт под досветкой.',
+          ],
+        ],
+        [
+          ['Pruning and support', 'Формировка'],
+          [
+            'Shorten long shoots above an outward-facing node in spring and rotate the pot gradually for an even crown. Support heavy trunks if needed and wipe dust from the leaves.',
+            'Весной укорачивайте длинные побеги над направленным наружу узлом и понемногу поворачивайте горшок для ровной кроны. При необходимости поддерживайте тяжёлые стволы и протирайте листья от пыли.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/ficus-benjamina-important.png',
+        propagationImage: '/plant-profile/ficus-benjamina-propagation.png',
+        saleImage: '/plant-profile/ficus-benjamina-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
     'asphodelaceae',
     'haworthiopsis-attenuata',
     '/plants/haworthiopsis-attenuata-home-photo.jpg',
@@ -2115,6 +2258,152 @@ export const collectionPlants: readonly CollectionPlant[] = [
         saleImage: '/plant-profile/sedum-burrito-for-sale.png',
       },
     ),
+  ),
+  collectionPlant(
+    'crassulaceae',
+    'succulent-groundcover-mix',
+    '/plants/succulent-mix-home-photo.jpg',
+    ['Succulent groundcover mix', 'Микс почвопокровных суккулентов'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give the composition as much light as possible, including several hours of direct morning or evening sun. Acclimatise it gradually after shade so the rosettes colour up without scorching.',
+            'Дайте композиции максимум света, включая несколько часов прямого утреннего или вечернего солнца. После тени приучайте постепенно, чтобы розетки набрали окраску без ожогов.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water thoroughly only after the gritty substrate has dried completely. Drain every drop of excess water; Sempervivum and both stonecrops tolerate a short dry spell far better than constantly wet roots.',
+            'Обильно поливайте только после полного просыхания минерального субстрата. Полностью сливайте лишнюю воду: молодило и оба очитка гораздо легче переносят короткую засуху, чем постоянную сырость у корней.',
+          ],
+        ],
+        [
+          ['Air & humidity', 'Воздух и влажность'],
+          [
+            'Dry room air and steady ventilation suit the mix. Do not mist the rosettes or let water remain in their centres, especially in cool weather.',
+            'Композиции подходит сухой комнатный воздух и регулярное проветривание. Не опрыскивайте розетки и не оставляйте воду в их центре, особенно в прохладную погоду.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'During active growth, 15–27 °C is comfortable. A bright, cool and nearly dry winter helps the plants stay compact; protect a container-grown mix from prolonged severe frost and winter waterlogging.',
+            'В период роста комфортны 15–27 °C. Светлая, прохладная и почти сухая зимовка помогает сохранить компактность; композицию в контейнере защищайте от длительного сильного мороза и зимнего переувлажнения.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Stonecrop family (Crassulaceae)', 'Толстянковые (Crassulaceae)'],
+        ],
+        [
+          ['Plants in the mix', 'Растения в миксе'],
+          [
+            'Sedum, Phedimus (Sedum spurium), and Sempervivum',
+            'Очиток, очиток ложный (Phedimus/Sedum spurium) и молодило',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          [
+            'Low-growing rosette and mat-forming succulents',
+            'Розеточные и стелющиеся почвопокровные суккуленты',
+          ],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Sedum forms the fine green carpet and fills gaps with rapidly rooting stems.',
+            'Phedimus spurium has broader leaves and can take on reddish tones in bright light or cool weather.',
+            'Sempervivum produces firm rosettes whose lime, green and burgundy colouring changes with light and season.',
+            'All three components store water in their leaves and prefer a lean, mineral and fast-drying substrate.',
+          ],
+          [
+            'Очиток образует тонкий зелёный коврик и быстро заполняет промежутки укореняющимися побегами.',
+            'Очиток ложный отличается более широкими листьями и на ярком свету или в прохладе приобретает красноватые оттенки.',
+            'Молодило формирует плотные розетки, чья лаймовая, зелёная и бордовая окраска меняется в зависимости от света и сезона.',
+            'Все три компонента запасают воду в листьях и предпочитают бедный, минеральный и быстро просыхающий субстрат.',
+          ],
+        ],
+        [
+          'The greatest risk is stagnant moisture around the roots and inside the Sempervivum rosettes. Use a drainage hole, keep the crown above the substrate and never leave the tray full of water.',
+          'Главный риск — застой влаги у корней и внутри розеток молодила. Используйте ёмкость с дренажным отверстием, не заглубляйте центр розеток и никогда не оставляйте поддон наполненным водой.',
+        ],
+        [
+          [
+            'Soft translucent leaves or blackened rosette bases — stop watering and remove rotting tissue.',
+            'Long pale stems and loose rosettes — move the composition gradually to brighter light.',
+            'Dry lower leaves on Sempervivum — remove only those that detach easily; a small amount is natural.',
+            'Bare patches — pin healthy Sedum or Phedimus cuttings onto the substrate and let them root.',
+          ],
+          [
+            'Мягкие прозрачные листья или почерневшие основания розеток — прекратите полив и удалите гниющие ткани.',
+            'Длинные бледные побеги и рыхлые розетки — постепенно переставьте композицию на более яркий свет.',
+            'Сухие нижние листья у молодила — убирайте только те, что легко отделяются; небольшое их количество естественно.',
+            'Появились пустые участки — прижмите к грунту здоровые черенки очитка или очитка ложного и дайте им укорениться.',
+          ],
+        ],
+        [
+          'Separate a rooted Sempervivum daughter rosette, or take short Sedum and Phedimus stem cuttings. Let damaged ends dry briefly, place them on dry gritty substrate and begin light watering only after they have started to root.',
+          'Отделите укоренённую дочернюю розетку молодила или возьмите короткие черенки очитка и очитка ложного. Немного подсушите повреждённые места, разложите растения по сухому минеральному грунту и начинайте понемногу поливать только после начала укоренения.',
+        ],
+      ),
+      'Sedum spp. · Phedimus spurius · Sempervivum spp.',
+      [
+        'In this shared container I am growing three different groundcover succulents. The Sempervivum rosettes repeat in several colours, but they remain one of the three plant types rather than separate varieties in the collection count.',
+        'В одной ёмкости у меня растут три разных почвопокровных суккулента. Розетки молодила повторяются в нескольких оттенках.',
+      ],
+      [
+        'This living succulent carpet combines three members of the stonecrop family with different growth habits: fine creeping Sedum, broader-leaved Phedimus spurium and compact multicoloured Sempervivum rosettes. Together they gradually close the soil into a textured mosaic.',
+        'Этот живой ковёр объединяет три представителя семейства Толстянковые с разным характером роста: тонкий стелющийся очиток, более широколистный очиток ложный и компактные разноцветные розетки молодила. Вместе они постепенно закрывают грунт фактурной мозаикой.',
+      ],
+      quickFacts(
+        ['Fast groundcover', 'Быстрый почвопокровный'],
+        ['5–20 cm, spreading', '5–20 см, разрастается вширь'],
+      ),
+      careCards(
+        [
+          ['Sedum', 'Очиток (Sedum)'],
+          [
+            'The fine needle-like shoots are the quickest component of the mix. They creep across the surface, root at touching nodes and create a bright green filler between larger rosettes.',
+            'Тонкие игольчатые побеги — самый быстрый компонент микса. Они стелются по поверхности, укореняются в местах соприкосновения с грунтом и образуют ярко-зелёное заполнение между крупными розетками.',
+          ],
+        ],
+        [
+          ['Caucasian stonecrop', 'Очиток ложный (Phedimus/Sedum spurium)'],
+          [
+            'This stonecrop grows on creeping stems with broader, flatter leaves. In strong light and cooler weather, its green foliage develops pink, red or bronze edging and becomes a contrasting middle layer.',
+            'Этот очиток растёт ползучими побегами с более широкими и плоскими листьями. На ярком свету и в прохладе зелень приобретает розовую, красную или бронзовую кайму и создаёт контрастный средний ярус.',
+          ],
+        ],
+        [
+          ['Houseleek', 'Молодило (Sempervivum)'],
+          [
+            'The firm geometric rosettes are the focal points of the composition. Lime, green and burgundy plants are colour forms of the same component; mature rosettes gradually produce daughter offsets around themselves.',
+            'Плотные геометричные розетки служат главными акцентами композиции. Лаймовые, зелёные и бордовые растения — цветовые формы одного компонента; взрослые розетки постепенно образуют вокруг себя дочерние розетки.',
+          ],
+        ],
+        [
+          ['Substrate & renewal', 'Грунт и обновление'],
+          [
+            'Use a shallow wide container with a drainage hole and a mix containing about 70–80% pumice, lava grit, perlite or coarse sand. Thin overly dense Sedum stems and remove spent Sempervivum rosettes after flowering.',
+            'Используйте широкую неглубокую ёмкость с дренажным отверстием и смесь с 70–80% пемзы, лавовой крошки, перлита или крупного песка. Прореживайте слишком густые побеги очитка и удаляйте отцветшие розетки молодила.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/succulent-mix-important.png',
+        propagationImage: '/plant-profile/succulent-mix-propagation.png',
+        saleImage: '/plant-profile/succulent-mix-for-sale.png',
+      },
+    ),
+    3,
   ),
   collectionPlant(
     'marantaceae',
@@ -4974,6 +5263,142 @@ export const collectionPlants: readonly CollectionPlant[] = [
         importantImage: '/plant-profile/echinopsis-important.png',
         propagationImage: '/plant-profile/echinopsis-propagation.png',
         saleImage: '/plant-profile/echinopsis-for-sale.png',
+      },
+    ),
+  ),
+  collectionPlant(
+    'cactaceae',
+    'epiphyllum-oxypetalum',
+    '/plants/epiphyllum-oxypetalum-home-photo.jpg',
+    ['Queen of the night cactus', 'Эпифиллум остролепестный'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light with a little gentle morning or evening sun. Protect the flat stems from harsh midday rays, especially while the recovering plant is adapting to a new position.',
+            'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Защищайте плоские побеги от жёстких полуденных лучей, особенно пока восстанавливающееся растение привыкает к новому месту.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water thoroughly after roughly the upper half of the airy mix has dried, then drain all excess. Keep it slightly more evenly moist during active summer growth, but never leave the roots standing in water.',
+            'Поливайте обильно после просыхания примерно верхней половины воздушного субстрата и полностью сливайте лишнюю воду. Во время активного летнего роста поддерживайте чуть более равномерную влажность, но не оставляйте корни в воде.',
+          ],
+        ],
+        [
+          ['Humidity and air', 'Влажность и воздух'],
+          [
+            'Average to moderately high room humidity suits this forest cactus. Gentle air movement is essential after watering; avoid keeping water on damaged tips and around the base.',
+            'Этому лесному кактусу подходит средняя или умеренно высокая комнатная влажность. После полива особенно важно лёгкое движение воздуха; не оставляйте воду на повреждённых кончиках и у основания.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at about 18–27 °C during growth and above 12–15 °C in winter. Stable conditions without cold draughts help weakened roots and stems recover.',
+            'В период роста содержите примерно при 18–27 °C, а зимой — выше 12–15 °C. Стабильные условия без холодных сквозняков помогают ослабленным корням и побегам восстановиться.',
+          ],
+        ],
+      ),
+      3,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Cactus family (Cactaceae)', 'Кактусовые (Cactaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          ['Central Mexico to Nicaragua', 'Центральная Мексика — Никарагуа'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Succulent tropical epiphyte', 'Суккулентный тропический эпифит'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Its leaf-like ribbons are flattened green stems called cladodes, not true leaves.',
+            'Mature plants can open very large fragrant white flowers at night, often for only one evening.',
+            'It is a forest epiphyte rather than a desert cactus, so it prefers an airy organic mix and filtered light.',
+            'Small areoles along the stem margins reveal its relationship to other cacti.',
+          ],
+          [
+            'Похожие на листья ленты — это уплощённые зелёные стебли, или кладодии, а не настоящие листья.',
+            'Взрослое растение способно раскрывать ночью очень крупные ароматные белые цветки, часто всего на один вечер.',
+            'Это лесной эпифит, а не пустынный кактус, поэтому ему нужны воздушный органический субстрат и рассеянный свет.',
+            'Маленькие ареолы по краям побегов выдают его родство с другими кактусами.',
+          ],
+        ],
+        [
+          'Soft brown tissue must not remain wet. Cut a spreading rotten tip back to firm green tissue with a sterile tool, dust or dry the cut and keep it dry until callused. Standing water around oxygen-starved roots can restart rot.',
+          'Мягкие коричневые ткани нельзя оставлять мокрыми. Распространяющуюся гниль на кончике срежьте стерильным инструментом до плотной зелёной ткани, присыпьте или подсушите срез и не мочите его до образования каллуса. Застой воды вокруг лишённых кислорода корней может снова вызвать гниль.',
+        ],
+        [
+          [
+            'Tips become soft, translucent or spread brown tissue — cut back to healthy green tissue and keep the wound dry.',
+            'Flat stems wrinkle while the mix is wet — inspect the roots for rot instead of adding more water.',
+            'Long thin pale growth — move gradually to brighter diffused light.',
+            'White cottony deposits or brown shields — inspect areoles and stem joints for mealybugs or scale.',
+          ],
+          [
+            'Кончики размягчаются, становятся полупрозрачными или коричневая ткань распространяется — срежьте до здоровой зелени и держите ранку сухой.',
+            'Плоские побеги сморщиваются при мокром грунте — вместо нового полива проверьте корни на гниль.',
+            'Новые побеги длинные, тонкие и бледные — постепенно переставьте растение на более яркий рассеянный свет.',
+            'Появились белые ватные комочки или коричневые щитки — проверьте ареолы и места соединения побегов на червеца и щитовку.',
+          ],
+        ],
+        [
+          'Cut a healthy flat segment about 15–20 cm long and let the cut end dry for 3–7 days. Insert it only a few centimetres into a barely moist airy mix, support it upright and begin normal watering after roots and fresh growth appear.',
+          'Срежьте здоровый плоский сегмент длиной около 15–20 см и подсушивайте срез 3–7 дней. Заглубите его всего на несколько сантиметров в едва влажный воздушный субстрат, закрепите вертикально и переходите к обычному поливу после появления корней и нового роста.',
+        ],
+      ),
+      'Epiphyllum oxypetalum',
+      [
+        'I brought this plant home from my mother. For several years it had lived simply in water, and by the time I took it the ends of some segments had already begun to rot. Now it has moved into an airy mineral mix, and I hope that stable care, patience and fresh growth will help it recover.',
+        'Это растение я забрала у мамы. Несколько лет оно простояло просто в воде, и к моменту переезда кончики некоторых побегов уже начали подгнивать. Теперь эпифиллум растёт в воздушном минеральном субстрате, и я надеюсь, что стабильный уход, терпение и новый рост помогут ему восстановиться.',
+      ],
+      [
+        'Epiphyllum oxypetalum is a tropical epiphytic cactus with long arching, flattened green stems. Mature specimens are famous for enormous fragrant white flowers that open after dark, giving the plant its popular name “queen of the night”.',
+        'Эпифиллум остролепестный — тропический эпифитный кактус с длинными дуговидными уплощёнными зелёными побегами. Взрослые растения знамениты огромными ароматными белыми цветками, раскрывающимися после наступления темноты, за что вид называют «царицей ночи».',
+      ],
+      quickFacts(['Moderate', 'Умеренный'], ['Trailing stems 1–3 m', 'Свисающие побеги 1–3 м']),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a very airy epiphytic mix: about 40% fine orchid bark, 30% light houseplant substrate or coco coir, 20% perlite or pumice and 10% horticultural charcoal.',
+            'Используйте очень воздушную смесь для эпифитов: примерно 40% мелкой коры для орхидей, 30% лёгкого грунта или кокосового волокна, 20% перлита или пемзы и 10% древесного угля.',
+          ],
+        ],
+        [
+          ['Recovery and repotting', 'Восстановление и пересадка'],
+          [
+            'After years in water, inspect and remove only soft hollow roots, keeping every firm living root. Use a small pot with drainage, keep the crown above the mix and avoid another repot until fresh roots or stems appear.',
+            'После нескольких лет в воде удалите только мягкие и пустые корни, сохраняя все плотные живые. Посадите в небольшой горшок с дренажом, не заглубляйте основание и не пересаживайте снова до появления свежих корней или побегов.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Wait for clear new growth before feeding a recovering plant. Afterwards, from spring to late summer use a balanced or bloom fertiliser at quarter to half strength every 4 weeks.',
+            'Не подкармливайте восстанавливающееся растение до появления заметного нового роста. Затем с весны до конца лета раз в 4 недели используйте четверть или половину дозы сбалансированного удобрения либо состава для цветущих.',
+          ],
+        ],
+        [
+          ['Support and flowering', 'Опора и цветение'],
+          [
+            'Let mature stems trail from a stable raised pot or tie them loosely to a broad support. Bright filtered light, maturity and a slightly cooler, drier winter rest improve the chance of buds.',
+            'Позвольте взрослым побегам свободно свисать из устойчивого высокого кашпо или мягко закрепите их на широкой опоре. Яркий рассеянный свет, зрелость растения и чуть более прохладный сухой зимний период повышают шанс цветения.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/epiphyllum-oxypetalum-important.png',
+        propagationImage: '/plant-profile/epiphyllum-oxypetalum-propagation.png',
+        saleImage: '/plant-profile/epiphyllum-oxypetalum-for-sale.png',
       },
     ),
   ),

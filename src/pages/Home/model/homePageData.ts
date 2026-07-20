@@ -184,6 +184,14 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     name: { en: 'Cycads', ru: 'Саговниковые' },
   },
   {
+    count: { en: '1 plant', ru: '1 растение' },
+    id: 'moraceae',
+    image: '/plants/categories/studio/moraceae.jpg',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Mulberry family', ru: 'Тутовые' },
+  },
+  {
     count: { en: '0 plants', ru: '0 растений' },
     id: 'crassulaceae',
     image: '/plants/categories/studio/crassulaceae.jpg',

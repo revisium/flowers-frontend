@@ -190,6 +190,7 @@ const familyTitles: Record<CategoryId, LocalizedText> = {
   cycadaceae: { en: 'Cycads', ru: 'Саговниковые' },
   gesneriaceae: { en: 'Gesneriad family', ru: 'Геснериевые' },
   marantaceae: { en: 'Prayer plant family', ru: 'Марантовые' },
+  moraceae: { en: 'Mulberry family', ru: 'Тутовые' },
   nephrolepidaceae: { en: 'Ferns', ru: 'Папоротники' },
   orchidaceae: { en: 'Orchids', ru: 'Орхидные' },
   piperaceae: { en: 'Pepper family', ru: 'Перцевые' },
@@ -251,6 +252,7 @@ export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryD
     familyTitles.marantaceae,
     familySeeds.marantaceae,
   ),
+  moraceae: createFamilyDataByLocale('moraceae', familyTitles.moraceae, familySeeds.moraceae),
   nephrolepidaceae: createFamilyDataByLocale(
     'nephrolepidaceae',
     familyTitles.nephrolepidaceae,
