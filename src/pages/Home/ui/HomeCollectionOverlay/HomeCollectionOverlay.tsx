@@ -1,8 +1,17 @@
 import { Box, Button, Flex, Grid, Image, Input, Text } from '@chakra-ui/react';
-import { useEffect, useMemo, useRef, useState, type KeyboardEvent, type MouseEvent } from 'react';
+import {
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+  type KeyboardEvent,
+  type MouseEvent,
+} from 'react';
 import {
   collectionPlants,
   formatCollectionPlantCount,
+  getCollectionPlantCount,
   type CollectionFamilyId,
   type CollectionPlant,
 } from 'src/entities/collection';
@@ -64,6 +73,7 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
   const [query, setQuery] = useState('');
   const [selectedPlant, setSelectedPlant] = useState<CollectionPlant | null>(null);
   const [showAllFamilies, setShowAllFamilies] = useState(false);
+  const overlayRef = useRef<HTMLDivElement | null>(null);
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
   const text = copy[locale];
@@ -87,6 +97,12 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
       previousFocus?.focus();
     };
   }, []);
+
+  useLayoutEffect(() => {
+    if (selectedPlant) {
+      overlayRef.current?.scrollTo({ behavior: 'auto', top: 0 });
+    }
+  }, [selectedPlant]);
 
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'Escape') {
@@ -129,6 +145,7 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
 
   return (
     <Flex
+      ref={overlayRef}
       alignItems="center"
       aria-labelledby="my-plants-title"
       aria-modal="true"
@@ -182,7 +199,7 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
               {text.title}
             </Flex>
             <Text color="#64705f" textStyle="medium-sm" transform="translateY(3px)">
-              {formatCollectionPlantCount(catalogByLocale[locale].length, locale)}
+              {formatCollectionPlantCount(getCollectionPlantCount(), locale)}
             </Text>
           </Flex>
           <Flex alignItems="center" gap="10px" width={{ base: '100%', lg: 'min(480px, 52%)' }}>

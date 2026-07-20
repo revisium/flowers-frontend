@@ -9,7 +9,11 @@ interface HomeNoteProps {
 export const HomeNote = ({ text }: HomeNoteProps) => {
   return (
     <Flex
-      margin={{ base: ' 18px', md: '28px clamp(18px, 3vw, 38px)' }}
+      margin={{
+        base: ' 18px',
+        md: '28px clamp(18px, 3vw, 38px)',
+        xl: '90px clamp(18px, 3vw, 38px)',
+      }}
       padding={{ base: '30px 24px', md: '34px 42px' }}
       alignItems="flex-start"
       background="linear-gradient(90deg, rgba(43, 55, 39, .88) 0%, rgba(55, 67, 51, .72) 38%, rgba(55, 67, 51, .08) 70%), url('/about/about-hero.webp')"
@@ -18,16 +22,17 @@ export const HomeNote = ({ text }: HomeNoteProps) => {
       borderRadius="12px"
       direction="column"
       justify="center"
-      minHeight={{ base: '210px', md: '190px' }}
+      minHeight={{ base: '210px', md: '490px' }}
       overflow="hidden"
+      gap="40px"
     >
       <Text
         color="#fffdf7"
         fontFamily="Georgia, 'Times New Roman', serif"
-        fontSize={{ base: '1.55rem', md: '2rem' }}
-        fontWeight={400}
+        fontSize={{ base: '2rem', md: '3rem' }}
+        fontWeight={700}
         lineHeight={1.08}
-        maxWidth={{ base: '260px', md: '390px' }}
+        maxWidth={{ base: '260px', md: '510px' }}
         textShadow="0 2px 12px rgba(23, 30, 20, .25)"
       >
         {text.noteText[0]}

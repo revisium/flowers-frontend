@@ -1,5 +1,9 @@
+import {
+  getCollectionPlantCountByFamily,
+  getCollectionPlantsByFamily,
+  type CollectionFamilyId,
+} from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
-import { getCollectionPlantsByFamily, type CollectionFamilyId } from 'src/entities/collection';
 
 import familySeedsJson from './familySeeds.json';
 import { type CategoryDetailData, type CategoryTrait } from './types';
@@ -132,6 +136,7 @@ const createFamilyCategoryData = (
 ): CategoryDetailData => {
   const image = categoryImage(id);
   const plants = getCollectionPlantsByFamily(id, locale);
+  const plantCount = getCollectionPlantCountByFamily(id);
 
   return {
     backLabel: modalCopy[locale].backLabel,
@@ -139,8 +144,8 @@ const createFamilyCategoryData = (
     collectionPlants: plants,
     collectionTitle:
       locale === 'ru'
-        ? `Растения из моей коллекции (${plants.length})`
-        : `Plants in my collection (${plants.length})`,
+        ? `Растения из моей коллекции (${plantCount})`
+        : `Plants in my collection (${plantCount})`,
     description: seed.description[locale],
     facts: seed.facts[locale],
     factsTitle: modalCopy[locale].factsTitle,
@@ -189,7 +194,9 @@ const familyTitles: Record<CategoryId, LocalizedText> = {
   crassulaceae: { en: 'Stonecrop family', ru: 'Толстянковые' },
   cycadaceae: { en: 'Cycads', ru: 'Саговниковые' },
   gesneriaceae: { en: 'Gesneriad family', ru: 'Геснериевые' },
+  lamiaceae: { en: 'Mint family', ru: 'Яснотковые' },
   marantaceae: { en: 'Prayer plant family', ru: 'Марантовые' },
+  moraceae: { en: 'Mulberry family', ru: 'Тутовые' },
   nephrolepidaceae: { en: 'Ferns', ru: 'Папоротники' },
   orchidaceae: { en: 'Orchids', ru: 'Орхидные' },
   piperaceae: { en: 'Pepper family', ru: 'Перцевые' },
@@ -246,11 +253,13 @@ export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryD
     familyTitles.gesneriaceae,
     familySeeds.gesneriaceae,
   ),
+  lamiaceae: createFamilyDataByLocale('lamiaceae', familyTitles.lamiaceae, familySeeds.lamiaceae),
   marantaceae: createFamilyDataByLocale(
     'marantaceae',
     familyTitles.marantaceae,
     familySeeds.marantaceae,
   ),
+  moraceae: createFamilyDataByLocale('moraceae', familyTitles.moraceae, familySeeds.moraceae),
   nephrolepidaceae: createFamilyDataByLocale(
     'nephrolepidaceae',
     familyTitles.nephrolepidaceae,

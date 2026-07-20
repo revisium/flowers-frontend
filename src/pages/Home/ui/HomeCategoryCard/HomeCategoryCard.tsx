@@ -1,16 +1,17 @@
 import { Box, Button, Flex, Image, Text } from '@chakra-ui/react';
 
 import type { HomeCategory } from '../../model/homePageData';
+import type { CategoryDetailData } from '../CategoryDetailModal/types';
 
 interface HomeCategoryCardProps {
   readonly category: HomeCategory;
+  readonly detail: Pick<CategoryDetailData, 'description' | 'latinName'>;
   readonly onOpen: (category: HomeCategory) => void;
 }
 
-const imagePanelMask =
-  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath fill='black' d='M0 0H78C88 0 86 15 84 25C81 38 88 44 89 54C90 66 81 72 83 84C85 93 80 100 74 100H0Z'/%3E%3C/svg%3E\")";
+export const HomeCategoryCard = ({ category, detail, onOpen }: HomeCategoryCardProps) => {
+  const hasLongName = category.name.length > 12;
 
-export const HomeCategoryCard = ({ category, onOpen }: HomeCategoryCardProps) => {
   const handleClick = () => {
     onOpen(category);
   };
@@ -19,21 +20,17 @@ export const HomeCategoryCard = ({ category, onOpen }: HomeCategoryCardProps) =>
     <Button
       aria-label={category.name}
       width="100%"
-      height={{ base: '126px', md: '142px', xl: '156px' }}
+      aspectRatio={{ md: '1.25' }}
+      height={{ base: '370px', md: 'auto' }}
       display="grid"
-      gridTemplateColumns={{
-        base: '86px minmax(0, 1fr)',
-        md: '102px minmax(0, 1fr)',
-        xl: '112px minmax(0, 1fr)',
-      }}
-      gap={{ base: '2px', md: '3px', xl: '3px' }}
-      alignItems="center"
-      background="linear-gradient(135deg, rgba(255, 252, 245, 0.94), rgba(250, 244, 234, 0.82))"
-      border="1px solid rgba(126, 104, 69, 0.14)"
-      borderRadius="8px"
-      boxShadow="0 10px 28px rgba(91, 76, 54, 0.055)"
+      gridTemplateColumns="50% minmax(0, 1fr)"
+      alignItems="stretch"
+      background="linear-gradient(135deg, #fffdf8 0%, #fbf7ee 100%)"
+      border="1px solid rgba(151, 175, 126, 0.7)"
+      borderRadius={{ base: '18px', md: '22px' }}
+      boxShadow="0 12px 34px rgba(91, 76, 54, 0.045)"
       overflow="hidden"
-      padding={{ base: '8px 10px 8px 8px', md: '8px 14px 8px 8px', xl: '8px 12px 8px 8px' }}
+      padding={0}
       position="relative"
       scrollSnapAlign={{ base: 'start', xl: 'none' }}
       textDecoration="none"
@@ -45,51 +42,63 @@ export const HomeCategoryCard = ({ category, onOpen }: HomeCategoryCardProps) =>
       _active={{ textDecoration: 'none' }}
       _focus={{ textDecoration: 'none' }}
       _hover={{
-        borderColor: 'rgba(105, 145, 69, 0.52)',
-        boxShadow: '0 14px 34px rgba(91, 76, 54, 0.085)',
+        borderColor: 'rgba(105, 145, 69, 0.72)',
+        boxShadow: '0 18px 42px rgba(91, 76, 54, 0.11)',
         textDecoration: 'none',
         transform: 'translateY(-2px)',
       }}
     >
       <Box
-        alignSelf="stretch"
         background="rgba(225, 215, 196, 0.6)"
-        borderRadius="7px"
-        display="grid"
-        minHeight="100%"
+        borderRadius={{ base: '0 28px 28px 0', md: '0 34px 34px 0' }}
         overflow="hidden"
-        placeItems="center"
-        css={{
-          maskImage: imagePanelMask,
-          maskRepeat: 'no-repeat',
-          maskSize: '100% 100%',
-          WebkitMaskImage: imagePanelMask,
-          WebkitMaskRepeat: 'no-repeat',
-          WebkitMaskSize: '100% 100%',
-        }}
+        position="relative"
       >
         <Image
           alt=""
+          inset={0}
           height="100%"
           objectFit="cover"
           objectPosition={category.imageObjectPosition ?? 'left center'}
+          position="absolute"
           src={category.image}
-          transform={`scale(${category.imageScale ?? '1.3'})`}
-          transformOrigin="left center"
+          transform={`scale(${category.imageScale ?? '1.04'})`}
+          transformOrigin="center"
+          transition="transform 300ms ease"
           width="100%"
         />
       </Box>
 
-      <Box minWidth={0} transform={{ base: 'translateY(-6px)', md: 'translateY(-8px)' }}>
+      <Flex
+        alignItems="flex-start"
+        direction="column"
+        minWidth={0}
+        padding={{ base: '20px 16px 18px', md: '22px 18px 20px', xl: '24px 20px 22px' }}
+        textAlign="left"
+      >
+        <Image
+          alt=""
+          aria-hidden="true"
+          height={{ base: '20px', md: '22px', xl: '24px' }}
+          objectFit="contain"
+          opacity={0.72}
+          src="/about/botanical-heading-sprig-v2.png"
+          width="auto"
+        />
         <Text
           as="strong"
           color="#314034"
           display="block"
-          fontSize={{ base: '0.96rem', md: '1rem' }}
-          fontWeight={720}
+          fontFamily="Georgia, 'Times New Roman', serif"
+          fontSize={
+            hasLongName
+              ? { base: '0.95rem', md: '1.05rem', xl: '1.15rem' }
+              : { base: '1.18rem', md: '1.28rem', xl: '1.4rem' }
+          }
+          fontWeight={400}
           lineClamp={2}
-          lineHeight={1.16}
-          marginBottom="6px"
+          lineHeight={1.08}
+          marginTop={{ base: '11px', md: '13px' }}
           overflowWrap="normal"
           wordBreak="normal"
         >
@@ -97,27 +106,57 @@ export const HomeCategoryCard = ({ category, onOpen }: HomeCategoryCardProps) =>
         </Text>
         <Text
           as="span"
-          color="#5b655a"
-          fontSize={{ base: '0.88rem', md: '0.9rem' }}
-          lineHeight="20px"
+          color="#687066"
+          fontFamily="Georgia, 'Times New Roman', serif"
+          fontSize={{ base: '0.82rem', md: '0.9rem', xl: '1rem' }}
+          fontWeight={400}
+          lineHeight={1.2}
+          marginTop="5px"
+        >
+          {detail.latinName}
+        </Text>
+        <Box
+          background="rgba(107, 116, 96, 0.22)"
+          height="1px"
+          marginTop={{ base: '15px', md: '18px' }}
+          width="100%"
+        />
+        <Text
+          as="span"
+          color="#5d7355"
+          fontSize={{ base: '0.82rem', md: '0.9rem', xl: '0.96rem' }}
+          fontWeight={700}
+          lineHeight={1.2}
+          marginTop={{ base: '14px', md: '16px' }}
         >
           {category.count}
         </Text>
-      </Box>
+        <Text
+          as="span"
+          color="#5f625b"
+          fontSize={{ base: '0.68rem', md: '0.72rem', xl: '0.76rem' }}
+          lineClamp={{ base: 4, md: 3, '2xl': 4 }}
+          lineHeight={1.45}
+          marginTop={{ base: '9px', md: '11px' }}
+          maxWidth="95%"
+        >
+          {detail.description}
+        </Text>
+      </Flex>
 
       <Flex
         alignItems="center"
-        border="1px solid rgba(86, 93, 76, 0.32)"
+        background="#486042"
         borderRadius="999px"
-        color="#3c4b38"
-        fontSize="20px"
-        height={{ base: '32px', md: '36px' }}
+        color="#fffdf7"
+        fontSize={{ base: '19px', md: '21px', xl: '23px' }}
+        height={{ base: '38px', md: '42px', xl: '46px' }}
         justify="center"
         lineHeight={1}
-        bottom={{ base: '14px', md: '18px' }}
+        bottom={{ base: '16px', md: '18px', xl: '20px' }}
         position="absolute"
-        right={{ base: '14px', md: '16px' }}
-        width={{ base: '32px', md: '36px' }}
+        right={{ base: '16px', md: '18px', xl: '20px' }}
+        width={{ base: '38px', md: '42px', xl: '46px' }}
       >
         <Box as="span" marginTop="-2px">
           →

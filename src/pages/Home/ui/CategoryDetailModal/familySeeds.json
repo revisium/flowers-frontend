@@ -70,13 +70,13 @@
       "en": [
         "The family includes more than 1,600 species in roughly 75 genera.",
         "Hippeastrum is a beloved houseplant, though in nature it comes from South America.",
-        "Narcissus and Hippeastrum are also members of this family.",
+        "Narcissus is another familiar member of the family and a favourite in spring gardens.",
         "Some species, such as Clivia, bloom in winter and brighten the home during colder months."
       ],
       "ru": [
         "В семейство входит более 1600 видов в 75 родах.",
         "Гиппеаструм - популярное комнатное растение, хотя в природе он произрастает только в Южной Америке.",
-        "Нарцисс и гиппеаструм - тоже представители этого семейства.",
+        "Нарцисс — ещё один хорошо знакомый представитель семейства и любимец весенних садов.",
         "Некоторые виды, например, кливия, цветут зимой, украшая дом в холодное время года."
       ]
     },
@@ -1067,6 +1067,135 @@
       "/plants/crassulaceae-modal/trait-rosette.png",
       "/plants/crassulaceae-modal/trait-drainage.png",
       "/plants/crassulaceae-modal/trait-bright-light.png"
+    ]
+  },
+  "lamiaceae": {
+    "closingNote": {
+      "en": "The mint family combines fragrance, texture and remarkable resilience. Its members reward regular trimming with fresh branching and a fuller silhouette.",
+      "ru": "Яснотковые объединяют аромат, выразительную фактуру и удивительную выносливость. На регулярную обрезку они отвечают свежим ветвлением и более пышным силуэтом."
+    },
+    "description": {
+      "en": "Lamiaceae are herbs, shrubs and occasional trees recognised by opposite leaves, often square stems and two-lipped flowers. The family includes mint, lavender, rosemary, sage, basil, coleus and creeping ground ivy.",
+      "ru": "Яснотковые — травы, кустарники и изредка деревья, которые часто узнают по супротивным листьям, четырёхгранным стеблям и двугубым цветкам. К семейству относятся мята, лаванда, розмарин, шалфей, базилик, колеус и стелющаяся будра."
+    },
+    "facts": {
+      "en": [
+        "Many family members contain aromatic oils in glandular hairs on their leaves and stems.",
+        "Opposite leaf pairs are commonly arranged at right angles to the pairs above and below.",
+        "The corolla is often divided into an upper and lower lip that guides pollinating insects.",
+        "Mint, basil, rosemary, thyme, sage and lavender all belong to the same botanical family.",
+        "Some members are upright aromatic shrubs, while others root at their nodes and spread as groundcovers."
+      ],
+      "ru": [
+        "У многих представителей ароматические масла находятся в железистых волосках на листьях и стеблях.",
+        "Пары супротивных листьев часто располагаются под прямым углом к соседним парам.",
+        "Венчик нередко разделён на верхнюю и нижнюю губу, направляющую насекомых-опылителей.",
+        "Мята, базилик, розмарин, тимьян, шалфей и лаванда принадлежат к одному ботаническому семейству.",
+        "Среди Яснотковых есть и прямостоячие ароматные кустарники, и стелющиеся почвопокровники, укореняющиеся в узлах."
+      ]
+    },
+    "heroFilter": "drop-shadow(0 18px 14px rgba(72, 57, 37, 0.14))",
+    "heroImage": "/plants/lamiaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 155px) 180px",
+      "md": "calc(100% + 35px) 54px",
+      "lg": "calc(100% - 20px) 34px"
+    },
+    "heroSize": {
+      "base": "560px auto",
+      "md": "750px auto",
+      "lg": "840px auto"
+    },
+    "latinName": "Lamiaceae",
+    "origin": {
+      "en": "Distributed almost worldwide, with especially rich diversity in the Mediterranean region, Central Asia and other seasonally dry temperate and subtropical habitats.",
+      "ru": "Распространены почти по всему миру; особенно разнообразны в Средиземноморье, Центральной Азии и других сезонно сухих умеренных и субтропических областях."
+    },
+    "originMapImage": "/plants/lamiaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Stems are often four-angled rather than round.",
+        "Leaves usually grow in opposite pairs and frequently have a textured surface.",
+        "Glandular hairs release familiar minty, resinous or floral aromas when touched.",
+        "Small flowers often form layered whorls and have a distinct two-lipped shape."
+      ],
+      "ru": [
+        "Стебли часто четырёхгранные, а не округлые.",
+        "Листья обычно растут супротивными парами и нередко имеют фактурную поверхность.",
+        "Железистые волоски при прикосновении выделяют знакомые мятные, смолистые или цветочные ароматы.",
+        "Небольшие цветки часто собраны ярусами и имеют характерную двугубую форму."
+      ]
+    },
+    "traitImages": [
+      "/plants/lamiaceae-modal/trait-square-stem.png",
+      "/plants/lamiaceae-modal/trait-opposite-leaves.png",
+      "/plants/lamiaceae-modal/trait-glandular-hairs.png",
+      "/plants/lamiaceae-modal/trait-two-lipped-flower.png"
+    ]
+  },
+  "moraceae": {
+    "closingNote": {
+      "en": "Moraceae unite familiar indoor trees with extraordinary tropical fruit plants. Their quiet green leaves conceal some of the most inventive flowers and pollination systems in nature.",
+      "ru": "Тутовые объединяют знакомые комнатные деревья и удивительные тропические плодовые растения. За спокойной зеленью их листьев скрываются одни из самых необычных цветков и способов опыления в природе."
+    },
+    "description": {
+      "en": "Moraceae are trees, shrubs, climbers and a few herbs from tropical and warm-temperate regions. The family includes figs, mulberries and breadfruit, and is recognised by milky latex, stipules and tiny flowers gathered into complex inflorescences.",
+      "ru": "Тутовые — это деревья, кустарники, лианы и некоторые травы тропических и тёплых умеренных областей. К семейству относятся фикусы, шелковица и хлебное дерево; его узнают по млечному соку, прилистникам и крошечным цветкам, собранным в сложные соцветия."
+    },
+    "facts": {
+      "en": [
+        "The family contains about 40–50 genera and roughly 1,100 species worldwide.",
+        "A fig is not a single fruit: it is a hollow syconium lined with many tiny flowers.",
+        "Many Ficus species have a highly specialised partnership with their own pollinating fig wasps.",
+        "Mulberries and breadfruit are compound structures formed from many flowers growing together.",
+        "Some tropical figs begin life high on another tree and later form dramatic aerial-root trunks."
+      ],
+      "ru": [
+        "Семейство включает около 40–50 родов и примерно 1 100 видов по всему миру.",
+        "Инжир — не один плод, а полый сиконий, внутри которого расположено множество крошечных цветков.",
+        "У многих фикусов существует узкая специализация с собственными видами ос-опылителей.",
+        "Шелковица и хлебное дерево образуют сложные соплодия из множества сросшихся цветков.",
+        "Некоторые тропические фикусы начинают жизнь высоко на другом дереве, а затем формируют впечатляющие стволы из воздушных корней."
+      ]
+    },
+    "heroImage": "/plants/moraceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 110px) 150px",
+      "md": "calc(100% + 20px) 44px",
+      "lg": "calc(100% - 18px) 20px"
+    },
+    "heroSize": {
+      "base": "560px auto",
+      "md": "770px auto",
+      "lg": "880px auto"
+    },
+    "latinName": "Moraceae",
+    "origin": {
+      "en": "Mostly tropical worldwide, with representatives extending into warm-temperate Asia, Europe, Africa, Australia and the Americas.",
+      "ru": "Преимущественно тропические регионы всего мира; отдельные представители заходят в тёплые умеренные области Азии, Европы, Африки, Австралии и Америки."
+    },
+    "originMapImage": "/plants/moraceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "White milky latex is present in the stems and leaves of most family members.",
+        "Leaves are usually simple and alternate; protective stipules often leave a ring-like scar around the twig.",
+        "Tiny flowers combine into specialised structures such as figs, mulberries and breadfruit.",
+        "Trees range from compact shrubs to huge banyans supported by pillar-like aerial roots."
+      ],
+      "ru": [
+        "В стеблях и листьях большинства представителей содержится белый млечный сок.",
+        "Листья обычно простые и очередные; защитные прилистники часто оставляют кольцевой рубец вокруг побега.",
+        "Крошечные цветки объединяются в особые структуры — инжир, ягоды шелковицы и соплодия хлебного дерева.",
+        "Среди Тутовых есть и компактные кустарники, и огромные баньяны с колоннами воздушных корней."
+      ]
+    },
+    "traitImages": [
+      "/plants/moraceae-modal/trait-latex.png",
+      "/plants/moraceae-modal/trait-stipule.png",
+      "/plants/moraceae-modal/trait-fruits.png",
+      "/plants/moraceae-modal/trait-aerial-roots.png"
     ]
   }
 }

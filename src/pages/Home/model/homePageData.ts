@@ -1,5 +1,5 @@
 import type { Locale } from 'src/shared/config';
-import { getCollectionPlantCount } from 'src/entities/collection';
+import { getCollectionFamilyCount, getCollectionPlantCount } from 'src/entities/collection';
 
 export interface HomeHeroStat {
   readonly label: string;
@@ -184,6 +184,22 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     name: { en: 'Cycads', ru: 'Саговниковые' },
   },
   {
+    count: { en: '1 plant', ru: '1 растение' },
+    id: 'lamiaceae',
+    image: '/plants/categories/studio/lamiaceae.jpg',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Mint family', ru: 'Яснотковые' },
+  },
+  {
+    count: { en: '1 plant', ru: '1 растение' },
+    id: 'moraceae',
+    image: '/plants/categories/studio/moraceae.jpg',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Mulberry family', ru: 'Тутовые' },
+  },
+  {
     count: { en: '0 plants', ru: '0 растений' },
     id: 'crassulaceae',
     image: '/plants/categories/studio/crassulaceae.jpg',
@@ -204,7 +220,7 @@ export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
   })),
 };
 
-const homeFamilyCount = String(homeCategoryDefinitions.length);
+const homeFamilyCount = String(getCollectionFamilyCount());
 
 export const homeHeroStats: Record<Locale, readonly HomeHeroStat[]> = {
   ru: [
