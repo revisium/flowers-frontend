@@ -14,6 +14,7 @@ export type CollectionFamilyId =
   | 'crassulaceae'
   | 'cycadaceae'
   | 'gesneriaceae'
+  | 'lamiaceae'
   | 'marantaceae'
   | 'moraceae'
   | 'nephrolepidaceae'
@@ -2404,6 +2405,148 @@ export const collectionPlants: readonly CollectionPlant[] = [
       },
     ),
     3,
+  ),
+  collectionPlant(
+    'lamiaceae',
+    'glechoma-hederacea-variegata',
+    '/plants/glechoma-hederacea-variegata-home-photo.jpg',
+    ['Variegated ground ivy', 'Будра плющевидная пестролистная'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Give bright diffused light or gentle morning sun. A brighter position keeps the cream edging clear, while harsh midday sun can scorch young leaves and deep shade gradually reduces the variegation.',
+            'Нужен яркий рассеянный свет или мягкое утреннее солнце. На светлом месте кремовая кайма остаётся заметной, жёсткие полуденные лучи могут обжечь молодые листья, а в глубокой тени пестрота постепенно ослабевает.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water when the upper 1–2 cm of substrate has dried. Moisten the root ball evenly, drain all excess and do not leave the young plant standing in water.',
+            'Поливайте после просыхания верхних 1–2 см грунта. Равномерно промачивайте корневой ком, полностью сливайте лишнюю воду и не оставляйте молодое растение стоять в поддоне с водой.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Average room humidity is suitable. Good airflow matters more than misting; wet leaves crowded together can develop spots or rot.',
+            'Подходит обычная комнатная влажность. Хорошая циркуляция воздуха важнее опрыскивания: мокрые листья в густой кроне могут покрыться пятнами или подгнить.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'A cool to moderately warm position around 12–24 °C keeps growth compact. Protect a newly moved young plant from sudden heat, cold drafts and abrupt changes while it adapts indoors.',
+            'Прохладное или умеренно тёплое место около 12–24 °C помогает сохранить компактность. Пока молодое растение привыкает к дому, защищайте его от жары, холодных сквозняков и резких перепадов.',
+          ],
+        ],
+      ),
+      2,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Mint family (Lamiaceae)', 'Яснотковые (Lamiaceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          ['Europe to Siberia and Xinjiang', 'От Европы до Сибири и Синьцзяна'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          [
+            'Creeping perennial rooting at the nodes',
+            'Стелющийся многолетник, укореняющийся в узлах',
+          ],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Ground ivy is not a true ivy; it belongs to the mint family.',
+            'Its creeping stems readily form roots wherever a node touches moist substrate.',
+            'Rounded kidney-shaped leaves have scalloped edges and grow in opposite pairs.',
+            'The variegated form combines green leaf centres with irregular cream-white margins.',
+          ],
+          [
+            'Будра не является настоящим плющом: она относится к семейству Яснотковые.',
+            'Её стелющиеся побеги легко образуют корни там, где узел касается влажного грунта.',
+            'Округлые почковидные листья имеют волнистый край и располагаются супротивными парами.',
+            'У пестролистной формы зелёная середина листа сочетается с неровной кремово-белой каймой.',
+          ],
+        ],
+        [
+          'The plant spreads quickly after rooting. Keep it in its own pot, pinch the tips to encourage branching and do not let the outer cachepot collect water.',
+          'После укоренения будра быстро разрастается. Держите её в отдельном горшке, прищипывайте верхушки для ветвления и не допускайте скопления воды во внешнем кашпо.',
+        ],
+        [
+          [
+            'Long bare gaps between leaves — move gradually to brighter diffused light and pinch the tips.',
+            'Cream margins turn brown — protect from harsh sun and check that the root ball is not drying completely.',
+            'Soft dark stems at soil level — reduce watering and inspect the roots for rot.',
+            'Green shoots without cream markings — remove them so they do not outgrow the variegated stems.',
+          ],
+          [
+            'Между листьями появились длинные пустые участки — постепенно добавьте рассеянного света и прищипните верхушки.',
+            'Кремовая кайма буреет — защитите от жёсткого солнца и не пересушивайте корневой ком полностью.',
+            'Стебли у грунта стали мягкими и тёмными — сократите полив и проверьте корни на гниль.',
+            'Появились полностью зелёные побеги — удаляйте их, чтобы они не вытеснили пестролистные.',
+          ],
+        ],
+        [
+          'Cut a healthy 7–10 cm shoot just below a node, remove the lowest leaves and place at least one node in water or a light, slightly moist substrate. Pot several rooted cuttings together for a fuller plant.',
+          'Срежьте здоровый побег длиной 7–10 см сразу под узлом, удалите нижние листья и поместите хотя бы один узел в воду или лёгкий слегка влажный грунт. Для более пышного кустика посадите вместе несколько укоренённых черенков.',
+        ],
+      ),
+      "Glechoma hederacea 'Variegata'",
+      [
+        'This is still a very young plant that I brought home from the dacha. For now it is only settling into its pot and beginning its indoor life, so I am giving it time to root, branch and turn into a fuller trailing cushion.',
+        'Это совсем молодое растение, которое я привезла с дачи. Пока оно только осваивается в горшке и начинает свою домашнюю жизнь, поэтому я даю ему время укорениться, разветвиться и превратиться в более пышную свисающую подушку.',
+      ],
+      [
+        'Variegated ground ivy is a fast-rooting creeping perennial with rounded scalloped leaves marked by irregular cream-white edges. Its thin stems spill over a pot beautifully and branch readily after pinching.',
+        'Пестролистная будра плющевидная — быстро укореняющийся стелющийся многолетник с округлыми волнистыми листьями и неровной кремово-белой каймой. Тонкие побеги красиво свисают из горшка и охотно ветвятся после прищипки.',
+      ],
+      quickFacts(
+        ['Fast after rooting', 'Быстрый после укоренения'],
+        ['10–20 cm tall, long trailing stems', '10–20 см высотой, длинные свисающие побеги'],
+      ),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a light moisture-retentive but airy mix: about 60% houseplant substrate, 25% perlite or fine pumice and 15% fine bark or coarse sand. A drainage hole is essential.',
+            'Используйте лёгкую влагоёмкую, но воздухопроницаемую смесь: около 60% грунта для комнатных растений, 25% перлита или мелкой пемзы и 15% мелкой коры либо крупного песка. Дренажное отверстие обязательно.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Let the young roots fill the current pot before moving up. Repot in spring into a shallow container only 2–3 cm wider, keeping the rooted nodes at the same depth.',
+            'Дайте молодым корням освоить нынешний горшок. Весной пересаживайте в неглубокую ёмкость лишь на 2–3 см шире, сохраняя прежнюю глубину укоренённых узлов.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed every 4–6 weeks with a balanced foliage fertiliser at half strength. Do not feed immediately after the move from the dacha or while roots are still adapting.',
+            'С весны до начала осени подкармливайте раз в 4–6 недель половинной дозой сбалансированного удобрения для декоративно-лиственных растений. Не удобряйте сразу после переезда с дачи и пока корни адаптируются.',
+          ],
+        ],
+        [
+          ['Shaping', 'Формировка'],
+          [
+            'Pinch long tips above a leaf pair and lay a few stems back onto the substrate so their nodes can root. This quickly turns a sparse young plant into a dense rounded cascade.',
+            'Прищипывайте длинные верхушки над парой листьев и укладывайте несколько побегов обратно на грунт, чтобы их узлы укоренились. Так редкое молодое растение быстрее превратится в густой округлый каскад.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/glechoma-variegata-important.png',
+        propagationImage: '/plant-profile/glechoma-variegata-propagation.png',
+        saleImage: '/plant-profile/glechoma-variegata-for-sale.png',
+      },
+    ),
   ),
   collectionPlant(
     'marantaceae',

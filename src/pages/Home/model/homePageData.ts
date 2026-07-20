@@ -185,6 +185,14 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
   },
   {
     count: { en: '1 plant', ru: '1 растение' },
+    id: 'lamiaceae',
+    image: '/plants/categories/studio/lamiaceae.jpg',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Mint family', ru: 'Яснотковые' },
+  },
+  {
+    count: { en: '1 plant', ru: '1 растение' },
     id: 'moraceae',
     image: '/plants/categories/studio/moraceae.jpg',
     imageObjectPosition: 'center',

@@ -189,6 +189,7 @@ const familyTitles: Record<CategoryId, LocalizedText> = {
   crassulaceae: { en: 'Stonecrop family', ru: 'Толстянковые' },
   cycadaceae: { en: 'Cycads', ru: 'Саговниковые' },
   gesneriaceae: { en: 'Gesneriad family', ru: 'Геснериевые' },
+  lamiaceae: { en: 'Mint family', ru: 'Яснотковые' },
   marantaceae: { en: 'Prayer plant family', ru: 'Марантовые' },
   moraceae: { en: 'Mulberry family', ru: 'Тутовые' },
   nephrolepidaceae: { en: 'Ferns', ru: 'Папоротники' },
@@ -247,6 +248,7 @@ export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryD
     familyTitles.gesneriaceae,
     familySeeds.gesneriaceae,
   ),
+  lamiaceae: createFamilyDataByLocale('lamiaceae', familyTitles.lamiaceae, familySeeds.lamiaceae),
   marantaceae: createFamilyDataByLocale(
     'marantaceae',
     familyTitles.marantaceae,

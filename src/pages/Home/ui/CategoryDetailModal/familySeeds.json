@@ -1069,6 +1069,65 @@
       "/plants/crassulaceae-modal/trait-bright-light.png"
     ]
   },
+  "lamiaceae": {
+    "closingNote": {
+      "en": "The mint family combines fragrance, texture and remarkable resilience. Its members reward regular trimming with fresh branching and a fuller silhouette.",
+      "ru": "Яснотковые объединяют аромат, выразительную фактуру и удивительную выносливость. На регулярную обрезку они отвечают свежим ветвлением и более пышным силуэтом."
+    },
+    "description": {
+      "en": "Lamiaceae are herbs, shrubs and occasional trees recognised by opposite leaves, often square stems and two-lipped flowers. The family includes mint, lavender, rosemary, sage, basil, coleus and creeping ground ivy.",
+      "ru": "Яснотковые — травы, кустарники и изредка деревья, которые часто узнают по супротивным листьям, четырёхгранным стеблям и двугубым цветкам. К семейству относятся мята, лаванда, розмарин, шалфей, базилик, колеус и стелющаяся будра."
+    },
+    "facts": {
+      "en": [
+        "Many family members contain aromatic oils in glandular hairs on their leaves and stems.",
+        "Opposite leaf pairs are commonly arranged at right angles to the pairs above and below.",
+        "The corolla is often divided into an upper and lower lip that guides pollinating insects.",
+        "Mint, basil, rosemary, thyme, sage and lavender all belong to the same botanical family.",
+        "Some members are upright aromatic shrubs, while others root at their nodes and spread as groundcovers."
+      ],
+      "ru": [
+        "У многих представителей ароматические масла находятся в железистых волосках на листьях и стеблях.",
+        "Пары супротивных листьев часто располагаются под прямым углом к соседним парам.",
+        "Венчик нередко разделён на верхнюю и нижнюю губу, направляющую насекомых-опылителей.",
+        "Мята, базилик, розмарин, тимьян, шалфей и лаванда принадлежат к одному ботаническому семейству.",
+        "Среди Яснотковых есть и прямостоячие ароматные кустарники, и стелющиеся почвопокровники, укореняющиеся в узлах."
+      ]
+    },
+    "heroFilter": "drop-shadow(0 18px 14px rgba(72, 57, 37, 0.14))",
+    "heroImage": "/plants/lamiaceae-modal/hero.png",
+    "heroPosition": {
+      "base": "calc(100% + 105px) bottom",
+      "md": "calc(100% + 50px) bottom",
+      "lg": "right bottom"
+    },
+    "heroSize": {
+      "base": "560px auto",
+      "md": "760px auto",
+      "lg": "900px auto"
+    },
+    "latinName": "Lamiaceae",
+    "origin": {
+      "en": "Distributed almost worldwide, with especially rich diversity in the Mediterranean region, Central Asia and other seasonally dry temperate and subtropical habitats.",
+      "ru": "Распространены почти по всему миру; особенно разнообразны в Средиземноморье, Центральной Азии и других сезонно сухих умеренных и субтропических областях."
+    },
+    "originMapImage": "/plants/lamiaceae-modal/origin-map.png",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Stems are often four-angled rather than round.",
+        "Leaves usually grow in opposite pairs and frequently have a textured surface.",
+        "Glandular hairs release familiar minty, resinous or floral aromas when touched.",
+        "Small flowers often form layered whorls and have a distinct two-lipped shape."
+      ],
+      "ru": [
+        "Стебли часто четырёхгранные, а не округлые.",
+        "Листья обычно растут супротивными парами и нередко имеют фактурную поверхность.",
+        "Железистые волоски при прикосновении выделяют знакомые мятные, смолистые или цветочные ароматы.",
+        "Небольшие цветки часто собраны ярусами и имеют характерную двугубую форму."
+      ]
+    }
+  },
   "moraceae": {
     "closingNote": {
       "en": "Moraceae unite familiar indoor trees with extraordinary tropical fruit plants. Their quiet green leaves conceal some of the most inventive flowers and pollination systems in nature.",
