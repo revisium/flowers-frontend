@@ -2,7 +2,7 @@
 
 This repository has moved past the pure structural skeleton. The current
 product surface is an exploratory greenhouse prototype with four page slices
-supporting five routes:
+supporting eight routes:
 
 - `src/pages/Home` renders the presentation-focused landing/dashboard view:
   hero, collection summary, care actions, responsive category cards, and notes
@@ -14,9 +14,10 @@ supporting five routes:
   editorial hero, collection features, personal story, milestone timeline, and
   collection call to action.
 - `src/pages/Blog` renders the localized experiment journal at `/blog` and its
-  photographic articles. The first article lives at `/blog/gloxinia-story` and
-  covers the February 2024 sowing, six-stage growth timeline, collection
-  figures, sharing story, and first-flowering gallery.
+  photographic articles. The journal links to the gloxinia story at
+  `/blog/gloxinia-story` and the Russian Hoya pubicalyx care infographic at
+  `/blog/hoya-pubicalyx-care`. Legacy top-level article URLs redirect to their
+  canonical Blog routes.
 
 ## FSD Layer Hierarchy
 
@@ -71,7 +72,9 @@ use this widget instead of adding their own outer viewport padding, top-level
 rounded frame, or duplicated header. The shared editorial footer repeats the
 canonical navigation, derives plant and represented-family counts from the
 collection entity, opens the global collection overlay, and stacks its brand,
-links, and collection callout on mobile.
+links, and collection callout on mobile. Its automatic top margin consumes any
+unused vertical space so the footer stays against the bottom edge on unusually
+tall viewports while continuing to follow long page content normally.
 
 ## Home Prototype Contract
 
@@ -141,6 +144,37 @@ or speculative ViewModel/DataSource wiring.
 Care photography lives under `public/care/` and is referenced by the typed
 page-local descriptors.
 
+## Blog Article Contract: Hoya Guide
+
+`src/pages/Blog/HoyaGuide` renders the static Russian care infographic at
+`/blog/hoya-pubicalyx-care`. It recreates the supplied 1024 × 1536 editorial
+artwork as a responsive, full-width Blog article. Its hero starts directly
+below the shared header and carries the same Home / Blog / article breadcrumb
+pattern as the gloxinia story. The original supplied artwork is retained under
+`public/blog/hoya-pubicalyx-care/` and used as the exact visual source for
+photographic regions and the intricate decorative treatments that must remain
+pixel-faithful: botanical dividers and care pictograms. Advice bars, the
+recommendations/flowering panels, and the closing band use live, scalable
+typography with reusable transparent image icons so their copy stays readable.
+Three generated macro photographs provide the burgundy, ivory, and blush flower
+portraits while preserving the reference's circular composition. The legacy
+`/hoya-pubicalyx-care` route redirects to the canonical Blog URL.
+
+- `ui/HoyaGuidePage` is a composition shell only.
+- `ui/HoyaGuideHero`, `ui/HoyaMethodsSection`, and `ui/HoyaGuideFooter` own the
+  three principal bands of the infographic.
+- At tablet width the hero's translucent blur is scoped to the text group only;
+  the photograph remains unobscured outside that compact rounded reading panel.
+- The article shell has no additional outer gutter, width cap, or poster shadow;
+  its internal bands scale to the full width supplied by the shared layout.
+- `ui/HoyaMethodCard` renders one typed record from `model/hoyaGuideData.ts` and
+  pairs its live advice copy with the shared leaf image asset.
+- `ui/ReferenceCrop` consistently exposes the supplied reference's photographic
+  regions without creating approximated replacement images.
+- Recommendation pictograms are separate generated PNG assets with transparent
+  backgrounds. The closing band is composed from CSS, live text, and a clean
+  transparent botanical illustration positioned over the flowering panel.
+
 ## About Prototype Contract
 
 `src/pages/About` is a static, localized editorial page opened by the home
@@ -168,19 +202,25 @@ sections.
 `src/pages/Blog` is the static, localized index for personal growing
 experiments. It is reached from the persistent header and the About feature
 grid. The slice groups each route page with its own model and UI: the journal
-index lives in `BlogPage/`, while the first article lives in
-`GloxiniaStoryPage/`. Typed copy and experiment preview data live in
+index lives in `BlogPage/`, while the two articles live in
+`GloxiniaStoryPage/` and `HoyaGuide/`. Typed copy and experiment preview data live in
 `BlogPage/model/blogPageData.ts`; the current prototype introduces no remote
 data or speculative state layer.
 
 - `BlogPage/ui/BlogPage` is a composition shell only.
 - `BlogPage/ui/BlogHero` introduces the journal, while
-  `BlogPage/ui/BlogEntries` owns the section heading and featured experiment,
+  `BlogPage/ui/BlogEntries` owns the section heading and experiment list,
   and `BlogPage/ui/BlogQuote` closes the index with a personal botanical quote.
-- `BlogPage/ui/BlogExperimentCard` owns the reusable preview presentation. The
-  first entry links to the gloxinia photo essay at `/blog/gloxinia-story`; later
-  growing experiments should be added to the Blog slice as peer article-page
-  folders rather than as new FSD page slices or About-page sections.
+- `BlogPage/ui/BlogExperimentCard` owns the reusable preview presentation and
+  navigates through each entry's typed canonical URL. The current entries link
+  to the Hoya care infographic and the gloxinia photo essay; later growing
+  experiments should be added to the Blog slice as peer article-page folders
+  rather than as new FSD page slices or About-page sections.
+- Every experiment preview uses the shared card's fixed 455 px desktop height;
+  source-image proportions must be handled with `object-fit: cover` and must
+  never change an individual card's height. Below desktop the card returns to
+  content-driven height and a stable 320 px image frame so copy remains fully
+  readable.
 
 `BlogPage/` and the article-page folders are intentional internal route groups,
 not FSD slices. `steiger.config.ts` narrowly disables the segment and nested
@@ -188,8 +228,8 @@ public-API rules only below `src/pages/Blog`; the `Blog` slice itself continues
 to expose both route pages through its root `index.ts`.
 
 The journal hero and first preview use generated editorial photography under
-`public/blog/`; the article's photographic sequence remains under
-`public/blog/gloxinia-story/`.
+`public/blog/`; article-specific imagery remains under the corresponding
+`public/blog/<article>/` folder.
 
 ## Blog Article Contract: Gloxinia Story
 

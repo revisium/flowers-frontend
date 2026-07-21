@@ -54,6 +54,7 @@ export const Footer = ({ locale, onCollectionOpen }: FooterProps) => {
       color="#fff8e9"
       direction="column"
       flex="0 0 auto"
+      marginTop="auto"
       overflow="hidden"
       padding={{ base: '40px 22px 22px', md: '46px 38px 24px', lg: '52px 48px 26px' }}
       position="relative"
