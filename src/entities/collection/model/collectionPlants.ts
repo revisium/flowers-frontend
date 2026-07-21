@@ -980,7 +980,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
     'asparagaceae',
     'dracaena-sanderiana',
     '/plants/dracaena-sanderiana-home-photo.jpg',
-    ['Lucky bamboo', 'Драцена Сандера'],
+    ['Lucky bamboo', 'Бамбук счастья'],
     plantProfile(
       careCards(
         [
@@ -1075,7 +1075,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ],
       [
         'Dracaena sanderiana is a slow-growing tropical shrub with slim ringed canes and narrow glossy leaves. It adapts well to bright indoor conditions and can live for years in soil, clean water or a stable mineral semi-hydro system.',
-        'Драцена Сандера — медленно растущий тропический кустарник с тонкими кольчатыми стеблями и узкими глянцевыми листьями. Она хорошо приспосабливается к комнатному освещению и может годами расти в грунте, чистой воде или стабильной минеральной полугидропонике.',
+        'Бамбук счастья — медленно растущий тропический кустарник с тонкими кольчатыми стеблями и узкими глянцевыми листьями. Он хорошо приспосабливается к комнатному освещению и может годами расти в грунте, чистой воде или стабильной минеральной полугидропонике.',
       ],
       quickFacts(
         ['Slow', 'Медленный'],
