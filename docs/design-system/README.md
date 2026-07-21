@@ -46,7 +46,10 @@ direction is chosen.
   than a second personal-story page: a photographic journal hero introduces the
   section, and bordered experiment previews pair one responsive image with a
   date, serif title, short narrative, compact figures, and a clear reading
-  action. A quiet continuation note leaves room for future experiments.
+  action. All current and future previews share one 455 px desktop card height,
+  with photography cropped inside that frame; tablet and mobile cards remain
+  content-driven with a 320 px image frame. A quiet continuation note leaves
+  room for future experiments.
 - The Gloxinia story extends the About editorial language with a photographic
   seed-to-flower timeline, thin warm-grey rules, restrained paired statistic
   cards, and a compact flowering gallery. Desktop uses a shorter split hero,
@@ -56,3 +59,21 @@ direction is chosen.
   they fill their cards without destructive cropping or empty letterbox bands
   when the viewport narrows. A generated panoramic gloxinia photograph and
   transparent handwritten sign-off form the final reflective quote banner.
+- The Hoya care infographic at `/blog/hoya-pubicalyx-care` uses a full-width
+  ivory editorial article with the same breadcrumb treatment as the Gloxinia
+  story, dark botanical serif headings, olive numbered methods,
+  fine botanical rules, leaf-image tip markers beside scalable live advice
+  copy, exact photographic crops from its supplied reference, and a composed
+  soft-olive closing band with live handwritten copy and an overlapping
+  transparent branch. Below
+  desktop width the three-column method grid becomes two columns and then a
+  single readable column without shrinking the body copy. The hero keeps its
+  right-side photograph at tablet widths and places only the main copy group on
+  an airy, translucent blurred ivory panel; on mobile the photograph is removed so the
+  introduction remains compact and readable. Its flowering panel uses three
+  generated natural-light macro photographs of spherical burgundy, ivory, and
+  blush Hoya umbels inside crisp white circular frames. A responsive ivory
+  breathing gap separates the article's decorative closing band from the shared
+  dark footer. Major Hoya article bands use doubled responsive spacing: 36 px
+  between desktop sections and 84 px before the shared footer, with proportional
+  48/44 px mobile and 36/68 px tablet values.

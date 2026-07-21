@@ -29,7 +29,12 @@ export const BlogQuote = ({ text }: BlogQuoteProps) => (
       src="/about/quote-botanical-sketch.png"
     />
     <Box maxWidth="720px" position="relative" textAlign="center" zIndex={1}>
-      <Text color="#43503d" fontFamily="Georgia, 'Times New Roman', serif" fontSize={{ base: '1.16rem', md: '1.42rem' }} lineHeight={1.45}>
+      <Text
+        color="#43503d"
+        fontFamily="Georgia, 'Times New Roman', serif"
+        fontSize={{ base: '1.16rem', md: '1.42rem' }}
+        lineHeight={1.45}
+      >
         {text.quote}
       </Text>
       <Box height="30px" margin="16px auto 0" overflow="hidden" width="134px">
@@ -50,8 +55,9 @@ export const BlogQuote = ({ text }: BlogQuoteProps) => (
       color="#7f8877"
       fontFamily="Georgia, 'Times New Roman', serif"
       fontSize={{ base: '1.8rem', md: '2rem' }}
+      pointerEvents="none"
       position="absolute"
-      right={{ base: '22px', md: '18%' }}
+      right={{ base: '18px', md: '56px', xl: '72px' }}
       top={{ base: '8px', md: '50%' }}
       transform={{ md: 'translateY(-50%)' }}
     >
