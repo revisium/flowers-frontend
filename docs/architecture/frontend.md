@@ -275,9 +275,13 @@ remote data or product state.
 - `ui/SucculentLeavesStoryPage` is a composition shell only.
 - `ui/SucculentStoryHero`, `ui/SucculentStoryJournal`, and
   `ui/SucculentStoryClosing` own the responsive editorial sections.
-- The author's arrival and planting photographs are identified as documentary
-  images in their captions; generated editorial photography supplies the hero,
-  expected-rooting illustration, and closing banner.
+- The author's arrival, planting, cell-progress, and composition photographs
+  are identified as documentary images in their captions; generated editorial
+  photography supplies the hero, expected-rooting illustration, and closing
+  banner.
+- `ui/SucculentStoryUpdate` owns the later progress chapter, pairing two cell
+  close-ups with an asymmetric three-image composition gallery and cautious
+  plant identifications where the photographs show recognisable traits.
 - Desktop alternates image and copy columns, while the mobile article stacks
   without horizontal clipping. The portrait planting photograph retains its
   original framing.

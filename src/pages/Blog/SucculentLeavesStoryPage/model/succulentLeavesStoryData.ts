@@ -10,6 +10,25 @@ interface SucculentLeavesStorySource {
   readonly heroTitle: Translation;
   readonly intro: readonly Translation[];
   readonly introTitle: Translation;
+  readonly update: {
+    readonly compositions: readonly {
+      readonly caption: Translation;
+      readonly image: string;
+      readonly imageAlt: Translation;
+      readonly plantName: Translation;
+    }[];
+    readonly eyebrow: Translation;
+    readonly lead: readonly Translation[];
+    readonly progress: readonly {
+      readonly caption: Translation;
+      readonly image: string;
+      readonly imageAlt: Translation;
+      readonly title: Translation;
+    }[];
+    readonly progressTitle: Translation;
+    readonly resultTitle: Translation;
+    readonly title: Translation;
+  };
   readonly journal: readonly {
     readonly body: readonly Translation[];
     readonly image: string;
@@ -46,15 +65,34 @@ export interface SucculentLeavesStoryCopy {
   readonly nextTitle: string;
   readonly quote: string;
   readonly stats: readonly (readonly [string, string])[];
+  readonly update: {
+    readonly compositions: readonly {
+      readonly caption: string;
+      readonly image: string;
+      readonly imageAlt: string;
+      readonly plantName: string;
+    }[];
+    readonly eyebrow: string;
+    readonly lead: readonly string[];
+    readonly progress: readonly {
+      readonly caption: string;
+      readonly image: string;
+      readonly imageAlt: string;
+      readonly title: string;
+    }[];
+    readonly progressTitle: string;
+    readonly resultTitle: string;
+    readonly title: string;
+  };
 }
 
 const source = {
   breadcrumb: ['Листики суккулентов', 'Succulent leaves'],
   closing: [
-    'Теперь остаётся самое сложное — не торопить их. Буду наблюдать, какие листики дадут корни и у кого первой появится крошечная розетка.',
-    'Now comes the hardest part: not rushing them. I will watch to see which leaves grow roots and which one produces the first tiny rosette.',
+    'Самые быстрые уже стали частью новых композиций, а самые медленные всё ещё учат меня терпению. Теперь хочется увидеть, как все эти разные характеры будут расти вместе.',
+    'The fastest growers are already part of new arrangements, while the slowest are still teaching me patience. Now I want to see how all these different characters will grow together.',
   ],
-  closingEyebrow: ['Продолжение следует', 'To be continued'],
+  closingEyebrow: ['История продолжается', 'The story continues'],
   heroLead: [
     'Как ко мне приехала коробка разных суккулентов, почему подсохшие кончики оказались кстати и как я устроила каждому листику собственное место для нового старта.',
     'How a box of assorted succulents arrived, why the dry ends were useful, and how I gave every leaf its own place for a new start.',
@@ -71,6 +109,89 @@ const source = {
     ],
   ],
   introTitle: ['Маленькая ботаническая лотерея', 'A small botanical lottery'],
+  update: {
+    compositions: [
+      {
+        caption: [
+          'В одной большой композиции встретились растения с совсем разной фактурой: гладкие, бархатистые, зубчатые и вариегатные. Пока между ними много воздуха, но я надеюсь, что со временем они красиво заполнят поверхность.',
+          'One large arrangement now brings together very different textures: smooth, velvety, toothed and variegated. There is plenty of space between them for now, but I hope they will gradually fill the surface.',
+        ],
+        image: '/blog/succulent-leaves-story/composition-overview.webp',
+        imageAlt: [
+          'Большая композиция из укоренившихся суккулентов в белом кашпо',
+          'A large arrangement of rooted succulents in a white planter',
+        ],
+        plantName: ['Первая общая композиция', 'The first shared arrangement'],
+      },
+      {
+        caption: [
+          'Самые узнаваемые здесь — бархатистое каланхоэ войлочное и фаукария с характерными зубчатыми листьями. Тонкий зелёный побег рядом похож на крассулу плауновидную, но это определение пока оставляю предварительным.',
+          'The easiest to recognise here are the velvety panda plant and a Faucaria with its characteristic toothed leaves. The fine green shoot beside them resembles a watch-chain crassula, though I am keeping that identification tentative.',
+        ],
+        image: '/blog/succulent-leaves-story/composition-kalanchoe-faucaria.webp',
+        imageAlt: [
+          'Каланхоэ войлочное, фаукария и другие суккуленты в общей композиции',
+          'Panda plant, Faucaria and other succulents in a shared arrangement',
+        ],
+        plantName: [
+          'Kalanchoe tomentosa · Faucaria sp. · Crassula cf. muscosa',
+          'Kalanchoe tomentosa · Faucaria sp. · Crassula cf. muscosa',
+        ],
+      },
+      {
+        caption: [
+          'В меньшей композиции хорошо заметен очиток с длинными мясистыми листьями. Рядом — несколько ещё совсем молодых розеток и вариегатный черенок: им оставлено место на будущий рост.',
+          'A stonecrop with long fleshy leaves stands out in the smaller arrangement. Beside it are several very young rosettes and a variegated cutting, all with room left for future growth.',
+        ],
+        image: '/blog/succulent-leaves-story/composition-sedum.webp',
+        imageAlt: [
+          'Молодые суккуленты и очиток в небольшой белой композиции',
+          'Young succulents and stonecrop in a small white arrangement',
+        ],
+        plantName: ['Очиток · Sedum sp.', 'Stonecrop · Sedum sp.'],
+      },
+    ],
+    eyebrow: ['Продолжение эксперимента', 'Experiment update'],
+    lead: [
+      [
+        'Через некоторое время стало видно, насколько разным оказался темп у растений из одной коробки. Некоторые листики по-прежнему сидят в ячейках и только начинают новую жизнь. Другие быстро дали корни, окрепли и уже переехали в общие композиции.',
+        'After a while, it became clear how different the pace could be among plants from the same box. Some leaves are still sitting in their cells and only just beginning a new life. Others rooted quickly, grew stronger and have already moved into shared arrangements.',
+      ],
+      [
+        'Я не стала торопить медленных и не выбрасывала материнские листья, пока они остаются плотными. А тех, кто уверенно пошёл в рост, собрала вместе, оставив между растениями место для будущего объёма.',
+        'I did not rush the slower leaves or remove their parent leaves while they remained firm. The confident growers were planted together with space left between them for future volume.',
+      ],
+    ],
+    progress: [
+      {
+        caption: [
+          'У основания одного листа уже раскрылась маленькая розетка. Соседний пока выглядит почти без изменений, но у самой точки роста появилась новая зелёная почка.',
+          'A tiny rosette has already opened at the base of one leaf. Its neighbour still looks almost unchanged, but a new green bud has appeared at the growth point.',
+        ],
+        image: '/blog/succulent-leaves-story/progress-rosette.webp',
+        imageAlt: [
+          'Молодая розетка у основания листа суккулента в посадочной ячейке',
+          'A young rosette at the base of a succulent leaf in a propagation cell',
+        ],
+        title: ['Первая настоящая розетка', 'The first true rosette'],
+      },
+      {
+        caption: [
+          'В соседней ячейке перемены пока почти микроскопические. Эти зелёные точки я оставляю под наблюдением: по такому раннему росту ещё рано уверенно определять растение.',
+          'Changes in the neighbouring cell are still almost microscopic. I am keeping these green points under observation: it is too early to identify the plant confidently from growth this young.',
+        ],
+        image: '/blog/succulent-leaves-story/progress-sprouts.webp',
+        imageAlt: [
+          'Крошечные зелёные точки роста между листьями суккулентов в ячейке',
+          'Tiny green growth points between succulent leaves in a propagation cell',
+        ],
+        title: ['Самые неторопливые', 'The unhurried ones'],
+      },
+    ],
+    progressTitle: ['Не все спешат покидать ячейки', 'Not everyone is ready to leave the cells'],
+    resultTitle: ['Те, кто уже переехал', 'Those that have already moved'],
+    title: ['Несколько недель спустя', 'Several weeks later'],
+  },
   journal: [
     {
       body: [
@@ -140,15 +261,15 @@ const source = {
   ],
   nextBody: [
     [
-      'Я буду отмечать первые корни, новые розетки и потери, чтобы позже сравнить, какие формы пережили пересылку лучше всего.',
-      'I will record the first roots, new rosettes and losses so I can later compare which forms handled shipping best.',
+      'Теперь я буду наблюдать уже за двумя историями одновременно: за листиками, которые только собираются стать растениями, и за композициями, где молодым суккулентам предстоит найти собственную форму.',
+      'Now I will be following two stories at once: the leaves that are only beginning to become plants, and the arrangements in which the young succulents must find their own shape.',
     ],
     [
-      'А пока на подоконнике стоит несколько маленьких зелёных лотков. В каждом — не готовое растение, а возможность.',
-      'For now, several little green trays sit on the windowsill. Each one holds not a finished plant, but a possibility.',
+      'Когда посадки разрастутся, можно будет оценить их соседство и, если понадобится, дать самым активным больше места.',
+      'Once the plantings fill out, I will be able to judge how well they share the space and give the fastest growers more room if needed.',
     ],
   ],
-  nextTitle: ['Что будет дальше', 'What happens next'],
+  nextTitle: ['Теперь — расти', 'Now, to grow'],
   quote: [
     'Иногда коллекция начинается не с растения, а с одного листика и терпения.',
     'Sometimes a collection begins not with a plant, but with a single leaf and patience.',
@@ -195,6 +316,25 @@ const buildCopy = (locale: Locale): SucculentLeavesStoryCopy => {
     nextTitle: translate(source.nextTitle),
     quote: translate(source.quote),
     stats: source.stats.map(([value, label]) => [translate(value), translate(label)]),
+    update: {
+      compositions: source.update.compositions.map((entry) => ({
+        caption: translate(entry.caption),
+        image: entry.image,
+        imageAlt: translate(entry.imageAlt),
+        plantName: translate(entry.plantName),
+      })),
+      eyebrow: translate(source.update.eyebrow),
+      lead: source.update.lead.map(translate),
+      progress: source.update.progress.map((entry) => ({
+        caption: translate(entry.caption),
+        image: entry.image,
+        imageAlt: translate(entry.imageAlt),
+        title: translate(entry.title),
+      })),
+      progressTitle: translate(source.update.progressTitle),
+      resultTitle: translate(source.update.resultTitle),
+      title: translate(source.update.title),
+    },
   };
 };
 

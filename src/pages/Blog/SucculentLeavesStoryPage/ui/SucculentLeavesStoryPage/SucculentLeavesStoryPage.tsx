@@ -4,6 +4,7 @@ import { succulentLeavesStoryCopy } from '../../model/succulentLeavesStoryData';
 import { SucculentStoryClosing } from '../SucculentStoryClosing/SucculentStoryClosing';
 import { SucculentStoryHero } from '../SucculentStoryHero/SucculentStoryHero';
 import { SucculentStoryJournal } from '../SucculentStoryJournal/SucculentStoryJournal';
+import { SucculentStoryUpdate } from '../SucculentStoryUpdate/SucculentStoryUpdate';
 
 export const SucculentLeavesStoryPage = () => {
   const { locale } = useLayoutContext();
@@ -21,6 +22,7 @@ export const SucculentLeavesStoryPage = () => {
     >
       <SucculentStoryHero locale={locale} text={text} />
       <SucculentStoryJournal locale={locale} text={text} />
+      <SucculentStoryUpdate text={text} />
       <SucculentStoryClosing text={text} />
     </Flex>
   );
