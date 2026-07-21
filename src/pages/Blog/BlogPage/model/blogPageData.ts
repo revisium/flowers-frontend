@@ -49,6 +49,38 @@ const source = {
   entriesTitle: ['Эксперименты и наблюдения', 'Experiments and observations'],
   entries: [
     {
+      date: ['Июль 2026 · новый эксперимент', 'July 2026 · new experiment'],
+      excerpt: [
+        'Листики и небольшие черенки разных суккулентов провели около недели в пути. Рассказываю, как они приехали, почему я сразу посадила их в грунт и чего жду теперь.',
+        'Assorted succulent leaves and small cuttings spent about a week in transit. Here is how they arrived, why I planted them straight away and what I am waiting for now.',
+      ],
+      href: '/blog/succulent-leaves-story',
+      image: '/blog/succulent-leaves-story/hero.webp',
+      imageAlt: [
+        'Разные листья суккулентов перед посадкой',
+        'Assorted succulent leaves before planting',
+      ],
+      imagePosition: 'center',
+      stats: [
+        [
+          ['≈ 1 неделя', '≈ 1 week'],
+          ['в пути', 'in transit'],
+        ],
+        [
+          ['3 группы', '3 groups'],
+          ['листьев и черенков', 'of leaves and cuttings'],
+        ],
+        [
+          ['Сразу', 'Same day'],
+          ['после распаковки', 'after unboxing'],
+        ],
+      ],
+      title: [
+        'Листики суккулентов: распаковка и посадка',
+        'Succulent leaves: unboxing and planting',
+      ],
+    },
+    {
       date: ['Практическое руководство', 'Practical guide'],
       excerpt: [
         'Шесть красивых способов справиться с длинными побегами хойи пубикаликс: оставить свободно свисать, направить по опоре, обрезать, укоренить, сформировать арку или аккуратно заплести.',

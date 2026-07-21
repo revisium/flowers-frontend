@@ -50,6 +50,11 @@ direction is chosen.
   with photography cropped inside that frame; tablet and mobile cards remain
   content-driven with a 320 px image frame. A quiet continuation note leaves
   room for future experiments.
+- The succulent-leaf story extends that language with an airy split hero,
+  alternating documentary image and copy blocks, sage statistic bands, quiet
+  note callouts, and a generated panoramic closing image. Its own photographs
+  retain their natural portrait or landscape proportions, while the generated
+  images use warm cream, sage, moss, and dusty-pink botanical styling.
 - The Gloxinia story extends the About editorial language with a photographic
   seed-to-flower timeline, thin warm-grey rules, restrained paired statistic
   cards, and a compact flowering gallery. Desktop uses a shorter split hero,
