@@ -2,4 +2,6 @@
 import './theme/fonts.css';
 
 export { chakraSystem } from './theme/theme';
+export { EditorialBreadcrumbs } from './EditorialBreadcrumbs/EditorialBreadcrumbs';
+export { EditorialHeroTitle } from './EditorialHeroTitle/EditorialHeroTitle';
 export { PlantCollectionIcon } from './PlantCollectionIcon/PlantCollectionIcon';

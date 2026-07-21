@@ -2,7 +2,7 @@
 
 This repository has moved past the pure structural skeleton. The current
 product surface is an exploratory greenhouse prototype with four page slices
-supporting eight routes:
+supporting nine routes:
 
 - `src/pages/Home` renders the presentation-focused landing/dashboard view:
   hero, collection summary, care actions, responsive category cards, and notes
@@ -16,8 +16,9 @@ supporting eight routes:
 - `src/pages/Blog` renders the localized experiment journal at `/blog` and its
   photographic articles. The journal links to the gloxinia story at
   `/blog/gloxinia-story` and the Russian Hoya pubicalyx care infographic at
-  `/blog/hoya-pubicalyx-care`. Legacy top-level article URLs redirect to their
-  canonical Blog routes.
+  `/blog/hoya-pubicalyx-care`, plus the succulent-leaf propagation story at
+  `/blog/succulent-leaves-story`. Legacy top-level article URLs redirect to
+  their canonical Blog routes.
 
 ## FSD Layer Hierarchy
 
@@ -66,6 +67,9 @@ starts from a deeply scrolled page. The header provides a linked brand mark, loc
 a collection-overlay action with the derived plant count, and compact language
 controls. Navigation stays in the desktop row from the tablet breakpoint and
 moves below the brand and language controls as a second row on mobile. The
+active navigation destination uses a persistent visual indicator and
+`aria-current`; Blog articles keep Blog active, while the Home and Families
+section links remain mutually exclusive based on the current URL hash. The
 collection action always stays beside the language controls, using an icon and
 count below the desktop breakpoint and its full label on desktop. Route pages
 use this widget instead of adding their own outer viewport padding, top-level
@@ -202,15 +206,19 @@ sections.
 `src/pages/Blog` is the static, localized index for personal growing
 experiments. It is reached from the persistent header and the About feature
 grid. The slice groups each route page with its own model and UI: the journal
-index lives in `BlogPage/`, while the two articles live in
-`GloxiniaStoryPage/` and `HoyaGuide/`. Typed copy and experiment preview data live in
-`BlogPage/model/blogPageData.ts`; the current prototype introduces no remote
-data or speculative state layer.
+index lives in `BlogPage/`, while the three articles live in
+`GloxiniaStoryPage/`, `HoyaGuide/`, and `SucculentLeavesStoryPage/`. Typed copy
+and experiment preview data live in `BlogPage/model/blogPageData.ts`; the
+current prototype introduces no remote data or speculative state layer.
 
 - `BlogPage/ui/BlogPage` is a composition shell only.
 - `BlogPage/ui/BlogHero` introduces the journal, while
   `BlogPage/ui/BlogEntries` owns the section heading and experiment list,
   and `BlogPage/ui/BlogQuote` closes the index with a personal botanical quote.
+- Blog heroes reuse the localized `shared/ui/EditorialBreadcrumbs` primitive and
+  the common `shared/ui/EditorialHeroTitle` typography so the index and article
+  introductions keep one accessible editorial structure without duplicating
+  page-specific markup.
 - `BlogPage/ui/BlogExperimentCard` owns the reusable preview presentation and
   navigates through each entry's typed canonical URL. The current entries link
   to the Hoya care infographic and the gloxinia photo essay; later growing
@@ -261,6 +269,32 @@ The edited photographic sequence, generated hero, closing banner, and
 handwritten closing artwork live under
 `public/blog/gloxinia-story/`. The legacy `/gloxinia-story` route redirects to
 the canonical Blog URL so saved links remain valid.
+
+## Blog Article Contract: Succulent Leaves Story
+
+The succulent-leaf article is a static, localized photo essay inside
+`src/pages/Blog/SucculentLeavesStoryPage`, reached from the experiment journal
+at `/blog/succulent-leaves-story`. Its typed Russian and English copy, journal
+records, and statistics live in
+`SucculentLeavesStoryPage/model/succulentLeavesStoryData.ts`. It introduces no
+remote data or product state.
+
+- `ui/SucculentLeavesStoryPage` is a composition shell only.
+- `ui/SucculentStoryHero`, `ui/SucculentStoryJournal`, and
+  `ui/SucculentStoryClosing` own the responsive editorial sections.
+- The author's arrival, planting, cell-progress, and composition photographs
+  are identified as documentary images in their captions; generated editorial
+  photography supplies the hero, expected-rooting illustration, and closing
+  banner.
+- `ui/SucculentStoryUpdate` owns the later progress chapter, pairing two cell
+  close-ups with an asymmetric three-image composition gallery and cautious
+  plant identifications where the photographs show recognisable traits.
+- Desktop alternates image and copy columns, while the mobile article stacks
+  without horizontal clipping. The portrait planting photograph retains its
+  original framing.
+
+Article photography lives under `public/blog/succulent-leaves-story/` and is
+referenced by the typed page-local descriptors.
 
 ## Target MVVM Contract
 

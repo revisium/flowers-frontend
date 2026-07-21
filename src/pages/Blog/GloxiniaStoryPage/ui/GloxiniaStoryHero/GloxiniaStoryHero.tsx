@@ -1,5 +1,6 @@
-import { Box, Flex, Image, Link, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
+import { EditorialBreadcrumbs, EditorialHeroTitle } from 'src/shared/ui';
 import type { GloxiniaStoryCopy } from '../../model/gloxiniaStoryData';
 
 interface GloxiniaStoryHeroProps {
@@ -34,28 +35,13 @@ export const GloxiniaStoryHero = ({ locale, text }: GloxiniaStoryHeroProps) => (
       pointerEvents="none"
       position="absolute"
     />
-    <Flex
-      alignItems="center"
-      aria-label={locale === 'ru' ? 'Хлебные крошки' : 'Breadcrumbs'}
-      as="nav"
-      color="#66695f"
-      fontSize={{ base: '0.74rem', md: '0.82rem' }}
-      gap={{ base: '7px', md: '10px' }}
-      left={{ base: '20px', md: '52px' }}
-      position="absolute"
-      top={{ base: '18px', md: '21px' }}
-      zIndex={2}
-    >
-      <Link href="/" _hover={{ color: '#34402d', textDecoration: 'underline' }}>
-        {locale === 'ru' ? 'Главная' : 'Home'}
-      </Link>
-      <Text aria-hidden="true">›</Text>
-      <Link href="/blog" _hover={{ color: '#34402d', textDecoration: 'underline' }}>
-        {locale === 'ru' ? 'Блог' : 'Blog'}
-      </Link>
-      <Text aria-hidden="true">›</Text>
-      <Text aria-current="page" fontWeight={600}>{text.breadcrumb}</Text>
-    </Flex>
+    <EditorialBreadcrumbs
+      ariaLabel={locale === 'ru' ? 'Хлебные крошки' : 'Breadcrumbs'}
+      currentLabel={text.breadcrumb}
+      rootLabel={locale === 'ru' ? 'Главная' : 'Home'}
+      sectionHref="/blog"
+      sectionLabel={locale === 'ru' ? 'Блог' : 'Blog'}
+    />
     <Flex
       alignItems="flex-start"
       direction="column"
@@ -67,19 +53,14 @@ export const GloxiniaStoryHero = ({ locale, text }: GloxiniaStoryHeroProps) => (
       position="relative"
       zIndex={1}
     >
-      <Text
-        as="h1"
-        color="#2f3b2b"
-        fontFamily="Georgia, 'Times New Roman', serif"
+      <EditorialHeroTitle
         fontSize={{ base: '2.8rem', md: '3.55rem', xl: '3.9rem' }}
-        fontWeight={400}
         letterSpacing="-0.05em"
         lineHeight={0.96}
-        margin={0}
         maxWidth="500px"
       >
         {text.heroTitle}
-      </Text>
+      </EditorialHeroTitle>
       <Flex
         color="#343a31"
         direction="column"
@@ -89,7 +70,9 @@ export const GloxiniaStoryHero = ({ locale, text }: GloxiniaStoryHeroProps) => (
         marginTop={{ base: '25px', md: '27px' }}
         maxWidth="410px"
       >
-        {text.heroBody.map((paragraph) => <Text key={paragraph}>{paragraph}</Text>)}
+        {text.heroBody.map((paragraph) => (
+          <Text key={paragraph}>{paragraph}</Text>
+        ))}
       </Flex>
       <Image
         alt={locale === 'ru' ? 'Подпись Анастасии' : "Anastasia's signature"}
