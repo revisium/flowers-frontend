@@ -9,12 +9,39 @@ interface BlogHeroProps {
 
 export const BlogHero = ({ locale, text }: BlogHeroProps) => (
   <Box
-    aspectRatio={{ lg: 1774 / 887 }}
+    aspectRatio={{ base: 'auto', lg: '16 / 8.6' }}
     background="#fbf9f3"
+    minHeight={{ base: '720px', md: '650px', lg: 'unset' }}
     overflow="hidden"
     position="relative"
   >
+    <Image
+      alt={
+        locale === 'ru'
+          ? 'Открытый дневник с ботаническими зарисовками, гербарием и черенками растений'
+          : 'An open journal with botanical sketches, pressed leaves and plant cuttings'
+      }
+      height="100%"
+      inset={0}
+      objectFit="cover"
+      objectPosition={{ base: '54% center', md: 'center', lg: 'center' }}
+      position="absolute"
+      src="/blog/blog-hero-journal-v2.webp"
+      width="100%"
+    />
+    <Box
+      background={{
+        base: 'linear-gradient(180deg, rgba(251,249,243,.99) 0%, rgba(251,249,243,.96) 46%, rgba(251,249,243,.54) 64%, rgba(251,249,243,.08) 82%, rgba(251,249,243,0) 100%)',
+        lg: 'linear-gradient(90deg, rgba(251,249,243,.98) 0%, rgba(251,249,243,.93) 38%, rgba(251,249,243,.48) 53%, rgba(251,249,243,.08) 68%, rgba(251,249,243,0) 78%)',
+      }}
+      inset={0}
+      pointerEvents="none"
+      position="absolute"
+    />
     <Flex
+      alignItems="center"
+      aria-label={locale === 'ru' ? 'Хлебные крошки' : 'Breadcrumbs'}
+      as="nav"
       color="#66695f"
       fontSize="0.8rem"
       gap="10px"
@@ -28,11 +55,12 @@ export const BlogHero = ({ locale, text }: BlogHeroProps) => (
       <Text fontWeight={600}>{text.breadcrumb}</Text>
     </Flex>
     <Flex
+      alignItems="flex-start"
       direction="column"
-      justifyContent="center"
-      maxWidth={{ lg: '47%' }}
-      minHeight={{ lg: '100%' }}
-      padding={{ base: '92px 22px 40px', md: '96px 42px 48px', lg: '82px 24px 40px 42px' }}
+      justifyContent={{ base: 'flex-start', lg: 'center' }}
+      maxWidth={{ base: '100%', lg: '51%' }}
+      minHeight={{ base: '720px', md: '650px', lg: '100%' }}
+      padding={{ base: '112px 22px 350px', md: '118px 44px 310px', lg: '88px 30px 54px 42px' }}
       position="relative"
       zIndex={1}
     >
@@ -40,11 +68,12 @@ export const BlogHero = ({ locale, text }: BlogHeroProps) => (
         as="h1"
         color="#2f3b2b"
         fontFamily="Georgia, 'Times New Roman', serif"
-        fontSize={{ base: '2.9rem', md: '3.75rem' }}
+        fontSize={{ base: '2.75rem', md: '3.65rem', xl: '4.1rem' }}
         fontWeight={400}
         letterSpacing="-0.045em"
-        lineHeight={0.98}
+        lineHeight={0.97}
         margin={0}
+        maxWidth="650px"
       >
         {text.title}
       </Text>
@@ -60,14 +89,5 @@ export const BlogHero = ({ locale, text }: BlogHeroProps) => (
         width={{ base: '150px', md: '160px' }}
       />
     </Flex>
-    <Image
-      alt={locale === 'ru' ? 'Дневник с ботаническим рисунком рядом с комнатным растением' : 'A journal with a botanical drawing beside a houseplant'}
-      height={{ base: 'auto', lg: '100%' }}
-      inset={{ lg: 0 }}
-      objectFit="contain"
-      position={{ base: 'relative', lg: 'absolute' }}
-      src="/blog/blog-hero-journal.webp"
-      width="100%"
-    />
   </Box>
 );

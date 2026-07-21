@@ -44,12 +44,15 @@ direction is chosen.
   on narrow screens.
 - The Blog uses the same warm editorial family while acting as an index rather
   than a second personal-story page: a photographic journal hero introduces the
-  section, and bordered experiment previews pair one responsive image with a
-  date, serif title, short narrative, compact figures, and a clear reading
-  action. All current and future previews share one 455 px desktop card height,
-  with photography cropped inside that frame; tablet and mobile cards remain
-  content-driven with a 320 px image frame. A quiet continuation note leaves
-  room for future experiments.
+  section. Its regenerated journal photograph fills the hero at every
+  breakpoint, with botanical notes and cuttings extending into the left side;
+  responsive cream gradients blend live copy into the image instead of placing
+  text and photography in separate bands. Bordered experiment previews pair
+  one responsive image with a date, serif title, short narrative, compact
+  figures, and a clear reading action. All current and future previews share one
+  455 px desktop card height, with photography cropped inside that frame;
+  tablet and mobile cards remain content-driven with a 320 px image frame. A
+  quiet continuation note leaves room for future experiments.
 - The succulent-leaf story extends that language with an airy split hero,
   alternating documentary image and copy blocks, sage statistic bands, quiet
   note callouts, a pale-sage progress chapter, an asymmetric composition

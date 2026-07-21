@@ -67,6 +67,9 @@ starts from a deeply scrolled page. The header provides a linked brand mark, loc
 a collection-overlay action with the derived plant count, and compact language
 controls. Navigation stays in the desktop row from the tablet breakpoint and
 moves below the brand and language controls as a second row on mobile. The
+active navigation destination uses a persistent visual indicator and
+`aria-current`; Blog articles keep Blog active, while the Home and Families
+section links remain mutually exclusive based on the current URL hash. The
 collection action always stays beside the language controls, using an icon and
 count below the desktop breakpoint and its full label on desktop. Route pages
 use this widget instead of adding their own outer viewport padding, top-level
