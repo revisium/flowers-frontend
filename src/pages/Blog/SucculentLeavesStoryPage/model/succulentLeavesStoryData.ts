@@ -2,12 +2,30 @@ import type { Locale } from 'src/shared/config';
 
 type Translation = readonly [ru: string, en: string];
 
+interface JournalSourceEntry {
+  readonly body: readonly Translation[];
+  readonly image: string;
+  readonly imageAlt: Translation;
+  readonly label: Translation;
+  readonly note?: Translation;
+  readonly title: Translation;
+}
+
 const progressEntry = (
   caption: Translation,
   image: string,
   imageAlt: Translation,
   title: Translation,
 ) => ({ caption, image, imageAlt, title });
+
+const journalEntry = (
+  body: readonly Translation[],
+  image: string,
+  imageAlt: Translation,
+  label: Translation,
+  title: Translation,
+  note?: Translation,
+): JournalSourceEntry => ({ body, image, imageAlt, label, note, title });
 
 interface SucculentLeavesStorySource {
   readonly breadcrumb: Translation;
@@ -36,14 +54,7 @@ interface SucculentLeavesStorySource {
     readonly resultTitle: Translation;
     readonly title: Translation;
   };
-  readonly journal: readonly {
-    readonly body: readonly Translation[];
-    readonly image: string;
-    readonly imageAlt: Translation;
-    readonly label: Translation;
-    readonly note?: Translation;
-    readonly title: Translation;
-  }[];
+  readonly journal: readonly JournalSourceEntry[];
   readonly nextBody: readonly Translation[];
   readonly nextTitle: Translation;
   readonly quote: Translation;
@@ -200,8 +211,8 @@ const source = {
     title: ['Несколько недель спустя', 'Several weeks later'],
   },
   journal: [
-    {
-      body: [
+    journalEntry(
+      [
         [
           'Листики приехали в коробке, аккуратно переложенные салфетками. Я сразу разложила всё на светлом столе: отдельно крупные мясистые листья, отдельно миниатюрные фрагменты и веточки.',
           'The leaves arrived in a box, carefully layered with tissues. I spread everything out on a pale table straight away: large fleshy leaves in one group, tiny fragments and stems in another.',
@@ -211,20 +222,20 @@ const source = {
           'Some leaves looked tired after the journey, but most were still firm. I was especially pleased by the clean, dry ends: during the week, the cuts had naturally callused.',
         ],
       ],
-      image: '/blog/succulent-leaves-story/arrival.webp',
-      imageAlt: [
+      '/blog/succulent-leaves-story/arrival.webp',
+      [
         'Полученные листья и черенки суккулентов, разложенные на салфетках',
         'Delivered succulent leaves and cuttings arranged on tissues',
       ],
-      label: ['Моя фотография · распаковка', 'My photograph · unboxing'],
-      note: [
+      ['Моя фотография · распаковка', 'My photograph · unboxing'],
+      ['После недели в дороге', 'After a week on the road'],
+      [
         'Я убрала только явно повреждённые части. Плотные листья с чистым сухим основанием решила оставить — даже самые неприметные получили шанс.',
         'I removed only clearly damaged pieces. Firm leaves with a clean, dry base stayed — even the least impressive ones got a chance.',
       ],
-      title: ['После недели в дороге', 'After a week on the road'],
-    },
-    {
-      body: [
+    ),
+    journalEntry(
+      [
         [
           'Так как кончики уже подсохли, я не стала откладывать посадку. Подготовила ячейки с рыхлым грунтом и распределила растения так, чтобы потом было понятно, кто и как меняется.',
           'Because the ends were already dry, I did not postpone planting. I prepared cells with loose mix and separated the plants so I could later see how each one changed.',
@@ -234,20 +245,20 @@ const source = {
           'I laid the large leaves on the surface with their bases touching the mix. Small stem cuttings were anchored a little deeper. I wanted to support them without hiding the point where roots and a new rosette might appear.',
         ],
       ],
-      image: '/blog/succulent-leaves-story/planting.webp',
-      imageAlt: [
+      '/blog/succulent-leaves-story/planting.webp',
+      [
         'Листья и черенки суккулентов, распределённые по ячейкам с грунтом',
         'Succulent leaves and cuttings arranged in cells filled with potting mix',
       ],
-      label: ['Моя фотография · посадка', 'My photograph · planting'],
-      note: [
+      ['Моя фотография · посадка', 'My photograph · planting'],
+      ['Сразу в грунт', 'Straight into the mix'],
+      [
         'Это мой эксперимент, а не универсальная схема: листовые и стеблевые черенки разных суккулентов могут укореняться по-разному.',
         'This is my experiment rather than a universal method: leaf and stem cuttings from different succulents may root in different ways.',
       ],
-      title: ['Сразу в грунт', 'Straight into the mix'],
-    },
-    {
-      body: [
+    ),
+    journalEntry(
+      [
         [
           'Дальше начинается этап, в котором почти ничего нельзя ускорить. Я поставила контейнеры в светлое место без жёсткого полуденного солнца и решила наблюдать, а не проверять каждый листик руками.',
           'Next comes the stage that can hardly be hurried. I placed the trays in bright light away from harsh midday sun and decided to observe rather than pick up every leaf to check it.',
@@ -257,14 +268,14 @@ const source = {
           'The first changes may be very quiet: a fine root, a tiny rosette at the base, or a leaf slowly shrivelling instead. Not every traveller in this box will necessarily become a plant, and that is part of the experiment too.',
         ],
       ],
-      image: '/blog/succulent-leaves-story/first-roots.webp',
-      imageAlt: [
+      '/blog/succulent-leaves-story/first-roots.webp',
+      [
         'Молодые розетки и первые корни у листьев суккулентов на рыхлом субстрате',
         'Tiny rosettes and first roots on succulent leaves resting on gritty mix',
       ],
-      label: ['Иллюстрация · чего я жду', 'Illustration · what I hope to see'],
-      title: ['Тихое ожидание', 'The quiet wait'],
-    },
+      ['Иллюстрация · чего я жду', 'Illustration · what I hope to see'],
+      ['Тихое ожидание', 'The quiet wait'],
+    ),
   ],
   nextBody: [
     [

@@ -1,6 +1,6 @@
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
-import { EditorialBreadcrumbs } from 'src/shared/ui';
+import { EditorialBreadcrumbs, EditorialHeroTitle } from 'src/shared/ui';
 import type { SucculentLeavesStoryCopy } from '../../model/succulentLeavesStoryData';
 
 interface SucculentStoryHeroProps {
@@ -63,20 +63,15 @@ export const SucculentStoryHero = ({ locale, text }: SucculentStoryHeroProps) =>
       >
         {locale === 'ru' ? 'Новый эксперимент' : 'A new experiment'}
       </Text>
-      <Text
-        as="h1"
-        color="#2f3b2b"
-        fontFamily="Georgia, 'Times New Roman', serif"
+      <EditorialHeroTitle
         fontSize={{ base: '2.65rem', md: '3.7rem', xl: '4.25rem' }}
-        fontWeight={400}
         letterSpacing="-0.052em"
         lineHeight={0.97}
-        margin={0}
         marginTop="15px"
         maxWidth="620px"
       >
         {text.heroTitle}
-      </Text>
+      </EditorialHeroTitle>
       <Text
         color="#4f554c"
         fontSize={{ base: '0.9rem', md: '0.98rem' }}

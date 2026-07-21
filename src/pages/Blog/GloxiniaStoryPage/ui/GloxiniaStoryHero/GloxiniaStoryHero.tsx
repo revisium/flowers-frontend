@@ -1,6 +1,6 @@
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
-import { EditorialBreadcrumbs } from 'src/shared/ui';
+import { EditorialBreadcrumbs, EditorialHeroTitle } from 'src/shared/ui';
 import type { GloxiniaStoryCopy } from '../../model/gloxiniaStoryData';
 
 interface GloxiniaStoryHeroProps {
@@ -53,19 +53,14 @@ export const GloxiniaStoryHero = ({ locale, text }: GloxiniaStoryHeroProps) => (
       position="relative"
       zIndex={1}
     >
-      <Text
-        as="h1"
-        color="#2f3b2b"
-        fontFamily="Georgia, 'Times New Roman', serif"
+      <EditorialHeroTitle
         fontSize={{ base: '2.8rem', md: '3.55rem', xl: '3.9rem' }}
-        fontWeight={400}
         letterSpacing="-0.05em"
         lineHeight={0.96}
-        margin={0}
         maxWidth="500px"
       >
         {text.heroTitle}
-      </Text>
+      </EditorialHeroTitle>
       <Flex
         color="#343a31"
         direction="column"

@@ -1,6 +1,6 @@
 import { Box, Image, Stack, Text } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
-import { EditorialBreadcrumbs } from 'src/shared/ui';
+import { EditorialBreadcrumbs, EditorialHeroTitle } from 'src/shared/ui';
 import type { BlogCopy } from '../../model/blogPageData';
 
 interface BlogHeroProps {
@@ -54,19 +54,14 @@ export const BlogHero = ({ locale, text }: BlogHeroProps) => (
       position="relative"
       zIndex={1}
     >
-      <Text
-        as="h1"
-        color="#2f3b2b"
-        fontFamily="Georgia, 'Times New Roman', serif"
+      <EditorialHeroTitle
         fontSize={{ base: '2.75rem', md: '3.65rem', xl: '4.1rem' }}
-        fontWeight={400}
         letterSpacing="-0.045em"
         lineHeight={0.97}
-        margin={0}
         maxWidth="650px"
       >
         {text.title}
-      </Text>
+      </EditorialHeroTitle>
       <Text color="#4f544c" fontSize="0.92rem" lineHeight={1.6} marginTop="25px" maxWidth="460px">
         {text.lead}
       </Text>

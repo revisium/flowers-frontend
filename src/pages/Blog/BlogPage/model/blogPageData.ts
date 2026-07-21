@@ -5,18 +5,20 @@ type LocalizedStat = readonly [value: Translation, label: Translation];
 
 const localizedStat = (value: Translation, label: Translation): LocalizedStat => [value, label];
 
+interface BlogSourceEntry {
+  readonly date: Translation;
+  readonly excerpt: Translation;
+  readonly href: string;
+  readonly image: string;
+  readonly imageAlt: Translation;
+  readonly imagePosition?: string;
+  readonly stats: readonly LocalizedStat[];
+  readonly title: Translation;
+}
+
 interface BlogSource {
   readonly breadcrumb: Translation;
-  readonly entries: readonly {
-    readonly date: Translation;
-    readonly excerpt: Translation;
-    readonly href: string;
-    readonly image: string;
-    readonly imageAlt: Translation;
-    readonly imagePosition?: string;
-    readonly stats: readonly LocalizedStat[];
-    readonly title: Translation;
-  }[];
+  readonly entries: readonly BlogSourceEntry[];
   readonly entriesTitle: Translation;
   readonly lead: Translation;
   readonly quote: Translation;
@@ -24,6 +26,23 @@ interface BlogSource {
   readonly signatureAlt: Translation;
   readonly title: Translation;
 }
+
+const blogEntry = (
+  date: Translation,
+  excerpt: Translation,
+  image: readonly [src: string, alt: Translation, position?: string],
+  link: readonly [href: string, title: Translation],
+  stats: readonly LocalizedStat[],
+): BlogSourceEntry => ({
+  date,
+  excerpt,
+  href: link[0],
+  image: image[0],
+  imageAlt: image[1],
+  imagePosition: image[2],
+  stats,
+  title: link[1],
+});
 
 export interface BlogEntry {
   readonly date: string;
@@ -51,68 +70,68 @@ const source = {
   breadcrumb: ['Блог', 'Blog'],
   entriesTitle: ['Эксперименты и наблюдения', 'Experiments and observations'],
   entries: [
-    {
-      date: ['Июль 2026 · новый эксперимент', 'July 2026 · new experiment'],
-      excerpt: [
+    blogEntry(
+      ['Июль 2026 · новый эксперимент', 'July 2026 · new experiment'],
+      [
         'Листики и небольшие черенки разных суккулентов провели около недели в пути. Рассказываю, как они приехали, почему я сразу посадила их в грунт и чего жду теперь.',
         'Assorted succulent leaves and small cuttings spent about a week in transit. Here is how they arrived, why I planted them straight away and what I am waiting for now.',
       ],
-      href: '/blog/succulent-leaves-story',
-      image: '/blog/succulent-leaves-story/hero.webp',
-      imageAlt: [
-        'Разные листья суккулентов перед посадкой',
-        'Assorted succulent leaves before planting',
+      [
+        '/blog/succulent-leaves-story/hero.webp',
+        ['Разные листья суккулентов перед посадкой', 'Assorted succulent leaves before planting'],
+        'center',
       ],
-      imagePosition: 'center',
-      stats: [
+      [
+        '/blog/succulent-leaves-story',
+        ['Листики суккулентов: распаковка и посадка', 'Succulent leaves: unboxing and planting'],
+      ],
+      [
         localizedStat(['≈ 1 неделя', '≈ 1 week'], ['в пути', 'in transit']),
         localizedStat(['3 группы', '3 groups'], ['листьев и черенков', 'of leaves and cuttings']),
         localizedStat(['Сразу', 'Same day'], ['после распаковки', 'after unboxing']),
       ],
-      title: [
-        'Листики суккулентов: распаковка и посадка',
-        'Succulent leaves: unboxing and planting',
-      ],
-    },
-    {
-      date: ['Практическое руководство', 'Practical guide'],
-      excerpt: [
+    ),
+    blogEntry(
+      ['Практическое руководство', 'Practical guide'],
+      [
         'Шесть красивых способов справиться с длинными побегами хойи пубикаликс: оставить свободно свисать, направить по опоре, обрезать, укоренить, сформировать арку или аккуратно заплести.',
         'Six graceful ways to manage long Hoya pubicalyx vines: let them trail, train them on a support, prune, propagate, form an arch or braid them carefully.',
       ],
-      href: '/blog/hoya-pubicalyx-care',
-      image: '/plants/hoya-pubicalyx-splash-home-photo.jpg',
-      imageAlt: [
-        'Хойя пубикаликс с длинными зелёными побегами',
-        'Hoya pubicalyx with long green vines',
+      [
+        '/plants/hoya-pubicalyx-splash-home-photo.jpg',
+        ['Хойя пубикаликс с длинными зелёными побегами', 'Hoya pubicalyx with long green vines'],
+        'center 34%',
       ],
-      imagePosition: 'center 34%',
-      stats: [
+      [
+        '/blog/hoya-pubicalyx-care',
+        ['Хойя пубикаликс: что делать с длинными побегами', 'Hoya pubicalyx: managing long vines'],
+      ],
+      [
         localizedStat(['6', '6'], ['способов формировки', 'training ideas']),
         localizedStat(['18–28 °C', '18–28 °C'], ['комфортная температура', 'comfortable range']),
         localizedStat(['2–4 недели', '2–4 weeks'], ['между подкормками', 'between feedings']),
       ],
-      title: [
-        'Хойя пубикаликс: что делать с длинными побегами',
-        'Hoya pubicalyx: managing long vines',
-      ],
-    },
-    {
-      date: ['Февраль — осень 2024', 'February — autumn 2024'],
-      excerpt: [
+    ),
+    blogEntry(
+      ['Февраль — осень 2024', 'February — autumn 2024'],
+      [
         'История о том, как из пакета с двадцатью семенами выросло почти двести глоксиний: первые всходы, пикировка, новые дома и долгожданное осеннее цветение.',
         'How a packet of twenty seeds became almost two hundred gloxinias: first sprouts, transplanting, new homes and the long-awaited autumn flowers.',
       ],
-      href: '/blog/gloxinia-story',
-      image: '/blog/gloxinia-seedlings-feature.webp',
-      imageAlt: ['Молодые глоксинии, выращенные из семян', 'Young gloxinias grown from seed'],
-      stats: [
+      [
+        '/blog/gloxinia-seedlings-feature.webp',
+        ['Молодые глоксинии, выращенные из семян', 'Young gloxinias grown from seed'],
+      ],
+      [
+        '/blog/gloxinia-story',
+        ['Глоксинии: от семян до первого цветения', 'Gloxinias: from seed to first bloom'],
+      ],
+      [
         localizedStat(['20', '20'], ['семян заявлено', 'seeds advertised']),
         localizedStat(['≈200', '≈200'], ['сеянцев взошло', 'seedlings emerged']),
         localizedStat(['Осень 2024', 'Autumn 2024'], ['первое цветение', 'first flowers']),
       ],
-      title: ['Глоксинии: от семян до первого цветения', 'Gloxinias: from seed to first bloom'],
-    },
+    ),
   ],
   lead: [
     'Здесь я собираю настоящие истории выращивания: что получилось, что удивило и какие маленькие открытия хочется сохранить.',
