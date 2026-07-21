@@ -215,6 +215,9 @@ current prototype introduces no remote data or speculative state layer.
 - `BlogPage/ui/BlogHero` introduces the journal, while
   `BlogPage/ui/BlogEntries` owns the section heading and experiment list,
   and `BlogPage/ui/BlogQuote` closes the index with a personal botanical quote.
+- Blog heroes reuse the localized `shared/ui/EditorialBreadcrumbs` primitive so
+  the index and article trails keep one accessible structure without duplicating
+  page-specific markup.
 - `BlogPage/ui/BlogExperimentCard` owns the reusable preview presentation and
   navigates through each entry's typed canonical URL. The current entries link
   to the Hoya care infographic and the gloxinia photo essay; later growing

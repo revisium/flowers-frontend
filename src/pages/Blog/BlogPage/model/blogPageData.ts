@@ -1,6 +1,9 @@
 import type { Locale } from 'src/shared/config';
 
 type Translation = readonly [ru: string, en: string];
+type LocalizedStat = readonly [value: Translation, label: Translation];
+
+const localizedStat = (value: Translation, label: Translation): LocalizedStat => [value, label];
 
 interface BlogSource {
   readonly breadcrumb: Translation;
@@ -11,7 +14,7 @@ interface BlogSource {
     readonly image: string;
     readonly imageAlt: Translation;
     readonly imagePosition?: string;
-    readonly stats: readonly (readonly [Translation, Translation])[];
+    readonly stats: readonly LocalizedStat[];
     readonly title: Translation;
   }[];
   readonly entriesTitle: Translation;
@@ -62,18 +65,9 @@ const source = {
       ],
       imagePosition: 'center',
       stats: [
-        [
-          ['≈ 1 неделя', '≈ 1 week'],
-          ['в пути', 'in transit'],
-        ],
-        [
-          ['3 группы', '3 groups'],
-          ['листьев и черенков', 'of leaves and cuttings'],
-        ],
-        [
-          ['Сразу', 'Same day'],
-          ['после распаковки', 'after unboxing'],
-        ],
+        localizedStat(['≈ 1 неделя', '≈ 1 week'], ['в пути', 'in transit']),
+        localizedStat(['3 группы', '3 groups'], ['листьев и черенков', 'of leaves and cuttings']),
+        localizedStat(['Сразу', 'Same day'], ['после распаковки', 'after unboxing']),
       ],
       title: [
         'Листики суккулентов: распаковка и посадка',
@@ -94,18 +88,9 @@ const source = {
       ],
       imagePosition: 'center 34%',
       stats: [
-        [
-          ['6', '6'],
-          ['способов формировки', 'training ideas'],
-        ],
-        [
-          ['18–28 °C', '18–28 °C'],
-          ['комфортная температура', 'comfortable range'],
-        ],
-        [
-          ['2–4 недели', '2–4 weeks'],
-          ['между подкормками', 'between feedings'],
-        ],
+        localizedStat(['6', '6'], ['способов формировки', 'training ideas']),
+        localizedStat(['18–28 °C', '18–28 °C'], ['комфортная температура', 'comfortable range']),
+        localizedStat(['2–4 недели', '2–4 weeks'], ['между подкормками', 'between feedings']),
       ],
       title: [
         'Хойя пубикаликс: что делать с длинными побегами',
@@ -122,18 +107,9 @@ const source = {
       image: '/blog/gloxinia-seedlings-feature.webp',
       imageAlt: ['Молодые глоксинии, выращенные из семян', 'Young gloxinias grown from seed'],
       stats: [
-        [
-          ['20', '20'],
-          ['семян заявлено', 'seeds advertised'],
-        ],
-        [
-          ['≈200', '≈200'],
-          ['сеянцев взошло', 'seedlings emerged'],
-        ],
-        [
-          ['Осень 2024', 'Autumn 2024'],
-          ['первое цветение', 'first flowers'],
-        ],
+        localizedStat(['20', '20'], ['семян заявлено', 'seeds advertised']),
+        localizedStat(['≈200', '≈200'], ['сеянцев взошло', 'seedlings emerged']),
+        localizedStat(['Осень 2024', 'Autumn 2024'], ['первое цветение', 'first flowers']),
       ],
       title: ['Глоксинии: от семян до первого цветения', 'Gloxinias: from seed to first bloom'],
     },

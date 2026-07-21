@@ -1,5 +1,6 @@
-import { Box, Flex, Image, Link, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
+import { EditorialBreadcrumbs } from 'src/shared/ui';
 import type { SucculentLeavesStoryCopy } from '../../model/succulentLeavesStoryData';
 
 interface SucculentStoryHeroProps {
@@ -36,30 +37,13 @@ export const SucculentStoryHero = ({ locale, text }: SucculentStoryHeroProps) =>
       inset={0}
       position="absolute"
     />
-    <Flex
-      alignItems="center"
-      aria-label={locale === 'ru' ? 'Хлебные крошки' : 'Breadcrumbs'}
-      as="nav"
-      color="#62685d"
-      fontSize={{ base: '0.74rem', md: '0.82rem' }}
-      gap="9px"
-      left={{ base: '20px', md: '42px' }}
-      position="absolute"
-      top={{ base: '18px', md: '22px' }}
-      zIndex={2}
-    >
-      <Link href="/" _hover={{ color: '#34402d', textDecoration: 'underline' }}>
-        {locale === 'ru' ? 'Главная' : 'Home'}
-      </Link>
-      <Text aria-hidden="true">›</Text>
-      <Link href="/blog" _hover={{ color: '#34402d', textDecoration: 'underline' }}>
-        {locale === 'ru' ? 'Блог' : 'Blog'}
-      </Link>
-      <Text aria-hidden="true">›</Text>
-      <Text aria-current="page" fontWeight={600}>
-        {text.breadcrumb}
-      </Text>
-    </Flex>
+    <EditorialBreadcrumbs
+      ariaLabel={locale === 'ru' ? 'Хлебные крошки' : 'Breadcrumbs'}
+      currentLabel={text.breadcrumb}
+      rootLabel={locale === 'ru' ? 'Главная' : 'Home'}
+      sectionHref="/blog"
+      sectionLabel={locale === 'ru' ? 'Блог' : 'Blog'}
+    />
     <Flex
       alignItems="flex-start"
       direction="column"

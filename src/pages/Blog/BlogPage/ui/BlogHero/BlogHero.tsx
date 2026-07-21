@@ -1,5 +1,6 @@
-import { Box, Flex, Image, Link, Text } from '@chakra-ui/react';
+import { Box, Image, Stack, Text } from '@chakra-ui/react';
 import type { Locale } from 'src/shared/config';
+import { EditorialBreadcrumbs } from 'src/shared/ui';
 import type { BlogCopy } from '../../model/blogPageData';
 
 interface BlogHeroProps {
@@ -38,25 +39,14 @@ export const BlogHero = ({ locale, text }: BlogHeroProps) => (
       pointerEvents="none"
       position="absolute"
     />
-    <Flex
-      alignItems="center"
-      aria-label={locale === 'ru' ? 'Хлебные крошки' : 'Breadcrumbs'}
-      as="nav"
-      color="#66695f"
-      fontSize="0.8rem"
-      gap="10px"
-      left={{ base: '20px', md: '42px' }}
-      position="absolute"
-      top="20px"
-      zIndex={2}
-    >
-      <Link href="/">{locale === 'ru' ? 'Главная' : 'Home'}</Link>
-      <Text aria-hidden="true">›</Text>
-      <Text fontWeight={600}>{text.breadcrumb}</Text>
-    </Flex>
-    <Flex
-      alignItems="flex-start"
-      direction="column"
+    <EditorialBreadcrumbs
+      ariaLabel={locale === 'ru' ? 'Хлебные крошки' : 'Breadcrumbs'}
+      rootLabel={locale === 'ru' ? 'Главная' : 'Home'}
+      sectionLabel={text.breadcrumb}
+    />
+    <Stack
+      align="flex-start"
+      gap={0}
       justifyContent={{ base: 'flex-start', lg: 'center' }}
       maxWidth={{ base: '100%', lg: '51%' }}
       minHeight={{ base: '720px', md: '650px', lg: '100%' }}
@@ -88,6 +78,6 @@ export const BlogHero = ({ locale, text }: BlogHeroProps) => (
         src="/about/anastasia-signature-v2.png"
         width={{ base: '150px', md: '160px' }}
       />
-    </Flex>
+    </Stack>
   </Box>
 );

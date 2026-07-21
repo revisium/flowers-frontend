@@ -2,6 +2,13 @@ import type { Locale } from 'src/shared/config';
 
 type Translation = readonly [ru: string, en: string];
 
+const progressEntry = (
+  caption: Translation,
+  image: string,
+  imageAlt: Translation,
+  title: Translation,
+) => ({ caption, image, imageAlt, title });
+
 interface SucculentLeavesStorySource {
   readonly breadcrumb: Translation;
   readonly closing: Translation;
@@ -163,30 +170,30 @@ const source = {
       ],
     ],
     progress: [
-      {
-        caption: [
+      progressEntry(
+        [
           'У основания одного листа уже раскрылась маленькая розетка. Соседний пока выглядит почти без изменений, но у самой точки роста появилась новая зелёная почка.',
           'A tiny rosette has already opened at the base of one leaf. Its neighbour still looks almost unchanged, but a new green bud has appeared at the growth point.',
         ],
-        image: '/blog/succulent-leaves-story/progress-rosette.webp',
-        imageAlt: [
+        '/blog/succulent-leaves-story/progress-rosette.webp',
+        [
           'Молодая розетка у основания листа суккулента в посадочной ячейке',
           'A young rosette at the base of a succulent leaf in a propagation cell',
         ],
-        title: ['Первая настоящая розетка', 'The first true rosette'],
-      },
-      {
-        caption: [
+        ['Первая настоящая розетка', 'The first true rosette'],
+      ),
+      progressEntry(
+        [
           'В соседней ячейке перемены пока почти микроскопические. Эти зелёные точки я оставляю под наблюдением: по такому раннему росту ещё рано уверенно определять растение.',
           'Changes in the neighbouring cell are still almost microscopic. I am keeping these green points under observation: it is too early to identify the plant confidently from growth this young.',
         ],
-        image: '/blog/succulent-leaves-story/progress-sprouts.webp',
-        imageAlt: [
+        '/blog/succulent-leaves-story/progress-sprouts.webp',
+        [
           'Крошечные зелёные точки роста между листьями суккулентов в ячейке',
           'Tiny green growth points between succulent leaves in a propagation cell',
         ],
-        title: ['Самые неторопливые', 'The unhurried ones'],
-      },
+        ['Самые неторопливые', 'The unhurried ones'],
+      ),
     ],
     progressTitle: ['Не все спешат покидать ячейки', 'Not everyone is ready to leave the cells'],
     resultTitle: ['Те, кто уже переехал', 'Those that have already moved'],
