@@ -56,8 +56,10 @@ export const HomeCategoryCard = ({ category, detail, onOpen }: HomeCategoryCardP
       >
         <Image
           alt=""
+          decoding="async"
           inset={0}
           height="100%"
+          loading="lazy"
           objectFit="cover"
           objectPosition={category.imageObjectPosition ?? 'left center'}
           position="absolute"
@@ -79,10 +81,12 @@ export const HomeCategoryCard = ({ category, detail, onOpen }: HomeCategoryCardP
         <Image
           alt=""
           aria-hidden="true"
+          decoding="async"
           height={{ base: '20px', md: '22px', xl: '24px' }}
+          loading="lazy"
           objectFit="contain"
           opacity={0.72}
-          src="/about/botanical-heading-sprig-v2.png"
+          src="/about/botanical-heading-sprig-v2.webp"
           width="auto"
         />
         <Text

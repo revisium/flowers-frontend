@@ -26,7 +26,7 @@ export const BlogQuote = ({ text }: BlogQuoteProps) => (
       left={{ base: '-38px', md: '28px' }}
       opacity={0.62}
       position="absolute"
-      src="/about/quote-botanical-sketch.png"
+      src="/about/quote-botanical-sketch.webp"
     />
     <Box maxWidth="720px" position="relative" textAlign="center" zIndex={1}>
       <Text
@@ -44,7 +44,7 @@ export const BlogQuote = ({ text }: BlogQuoteProps) => (
           maxWidth="none"
           objectFit="contain"
           opacity={0.58}
-          src="/about/anastasia-signature-v2.png"
+          src="/about/anastasia-signature-v2.webp"
           transform="translateX(-23px)"
           width="154px"
         />

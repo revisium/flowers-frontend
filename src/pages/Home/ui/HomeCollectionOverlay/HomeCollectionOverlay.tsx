@@ -76,6 +76,8 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const catalogScrollTopRef = useRef(0);
+  const shouldRestoreCatalogScrollRef = useRef(false);
   const text = copy[locale];
   const families = homeCategories[locale];
   const normalizedQuery = query.trim().toLocaleLowerCase(locale);
@@ -101,8 +103,24 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
   useLayoutEffect(() => {
     if (selectedPlant) {
       overlayRef.current?.scrollTo({ behavior: 'auto', top: 0 });
+    } else if (shouldRestoreCatalogScrollRef.current) {
+      overlayRef.current?.scrollTo({
+        behavior: 'auto',
+        top: catalogScrollTopRef.current,
+      });
+      shouldRestoreCatalogScrollRef.current = false;
     }
   }, [selectedPlant]);
+
+  const openPlant = (plant: CollectionPlant) => {
+    catalogScrollTopRef.current = overlayRef.current?.scrollTop ?? 0;
+    setSelectedPlant(plant);
+  };
+
+  const returnToCatalog = () => {
+    shouldRestoreCatalogScrollRef.current = true;
+    setSelectedPlant(null);
+  };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'Escape') {
@@ -388,7 +406,7 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
                   variant="plain"
                   whiteSpace="normal"
                   width="100%"
-                  onClick={() => setSelectedPlant(plant.plant)}
+                  onClick={() => openPlant(plant.plant)}
                   _hover={{
                     borderColor: 'rgba(105, 145, 69, 0.58)',
                     boxShadow: '0 12px 24px rgba(91, 76, 54, 0.11)',
@@ -397,8 +415,10 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
                 >
                   <Image
                     alt=""
-                    aspectRatio="1 / 0.82"
+                    aspectRatio="4 / 5"
                     background="#f4ede0"
+                    decoding="async"
+                    loading="lazy"
                     objectFit="cover"
                     src={plant.image}
                     width="100%"
@@ -436,7 +456,7 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
           <PlantProfileTemplate
             locale={locale}
             plant={selectedPlant}
-            onBack={() => setSelectedPlant(null)}
+            onBack={returnToCatalog}
             onClose={onClose}
           />
         ) : null}

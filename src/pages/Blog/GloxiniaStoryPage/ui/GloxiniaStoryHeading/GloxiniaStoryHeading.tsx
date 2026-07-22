@@ -13,7 +13,7 @@ export const GloxiniaStoryHeading = ({ children, id }: GloxiniaStoryHeadingProps
       flex="0 0 auto"
       height={{ base: '29px', md: '34px' }}
       objectFit="contain"
-      src="/about/botanical-heading-sprig-v2.png"
+      src="/about/botanical-heading-sprig-v2.webp"
       width="auto"
     />
     <Text

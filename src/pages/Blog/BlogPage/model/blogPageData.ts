@@ -71,7 +71,7 @@ const entryExcerpts = [
 ] as const satisfies readonly Translation[];
 const entryImages = [
   ['/blog/succulent-leaves-story/hero.webp', 'center'],
-  ['/plants/hoya-pubicalyx-splash-home-photo.jpg', 'center 34%'],
+  ['/plants/hoya-pubicalyx-splash-home-photo.webp', 'center 34%'],
   ['/blog/gloxinia-seedlings-feature.webp', undefined],
 ] as const;
 const entryImageAlts = [

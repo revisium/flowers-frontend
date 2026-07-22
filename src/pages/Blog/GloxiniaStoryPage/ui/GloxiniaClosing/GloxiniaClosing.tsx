@@ -62,7 +62,7 @@ export const GloxiniaClosing = ({ locale, text }: GloxiniaClosingProps) => {
               aria-hidden="true"
               height="auto"
               marginTop={{ base: '14px', md: '10px' }}
-              src="/blog/gloxinia-story/story-continues-signature.png"
+              src="/blog/gloxinia-story/story-continues-signature.webp"
               width={{ base: '280px', md: '390px' }}
             />
           ) : (

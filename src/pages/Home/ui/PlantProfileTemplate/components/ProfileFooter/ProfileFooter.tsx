@@ -207,7 +207,7 @@ const SaleCard = ({
             borderRadius="50%"
             height="100%"
             objectFit="cover"
-            src="/plant-profile/contact-telegram.png"
+            src="/plant-profile/contact-telegram.webp"
             width="100%"
           />
         </Link>
@@ -229,7 +229,7 @@ const SaleCard = ({
             borderRadius="10px"
             height="100%"
             objectFit="cover"
-            src="/plant-profile/contact-max.png"
+            src="/plant-profile/contact-max.webp"
             width="100%"
           />
         </Link>
@@ -263,7 +263,7 @@ export const ProfileFooter = ({ locale, plant, text }: ProfileFooterProps) => {
         overflow="hidden"
       >
         <FooterCard
-          image={plant.profile.propagationIcon ?? '/plant-profile/footer-propagation.png'}
+          image={plant.profile.propagationIcon ?? '/plant-profile/footer-propagation.webp'}
           index={0}
           photo={plant.profile.propagationImage}
           title={text.propagation}
@@ -272,7 +272,7 @@ export const ProfileFooter = ({ locale, plant, text }: ProfileFooterProps) => {
           {footer.propagation[locale]}
         </FooterCard>
         <FooterCard
-          image="/plant-profile/footer-problems.png"
+          image="/plant-profile/footer-problems.webp"
           index={1}
           title={text.problems}
           unified
@@ -281,7 +281,7 @@ export const ProfileFooter = ({ locale, plant, text }: ProfileFooterProps) => {
             <Text key={item}>❧ {item}</Text>
           ))}
         </FooterCard>
-        <FooterCard image="/plant-profile/footer-facts.png" index={2} title={text.facts} unified>
+        <FooterCard image="/plant-profile/footer-facts.webp" index={2} title={text.facts} unified>
           {footer.facts[locale].map((item) => (
             <Text key={item}>› {item}</Text>
           ))}
@@ -289,13 +289,13 @@ export const ProfileFooter = ({ locale, plant, text }: ProfileFooterProps) => {
       </Grid>
       <Flex gap="10px" direction={{ base: 'column', lg: 'row' }} marginTop="10px">
         <ImportantCard
-          image={plant.profile.importantImage ?? '/plant-profile/important-vine.png'}
+          image={plant.profile.importantImage ?? '/plant-profile/important-vine.webp'}
           title={text.important}
         >
           {footer.important[locale]}
         </ImportantCard>
         <SaleCard
-          image={plant.profile.saleImage ?? '/plant-profile/cuttings-for-sale.png'}
+          image={plant.profile.saleImage ?? '/plant-profile/cuttings-for-sale.webp'}
           locale={locale}
           title={text.notes}
         />

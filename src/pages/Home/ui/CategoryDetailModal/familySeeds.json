@@ -22,7 +22,7 @@
         "У многих видов коробочки раскрываются от дождя и выпускают семена в подходящий момент."
       ]
     },
-    "heroImage": "/plants/categories/generated/aizoaceae.png",
+    "heroImage": "/plants/categories/generated/aizoaceae.webp",
     "heroPosition": "right top",
     "heroSize": {
       "base": "620px auto",
@@ -34,7 +34,7 @@
       "en": "Dry and semi-arid regions of southern Africa, especially the western parts of Namibia and South Africa.",
       "ru": "Засушливые и полузасушливые регионы юга Африки, особенно запад Намибии и Южной Африки."
     },
-    "originMapImage": "/plants/aizoaceae-modal/origin-map.png",
+    "originMapImage": "/plants/aizoaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -51,10 +51,10 @@
       ]
     },
     "traitImages": [
-      "/plants/aizoaceae-modal/trait-water-storage.png",
-      "/plants/aizoaceae-modal/trait-flowers.png",
-      "/plants/aizoaceae-modal/trait-lithops.png",
-      "/plants/aizoaceae-modal/trait-capsule.png"
+      "/plants/aizoaceae-modal/trait-water-storage.webp",
+      "/plants/aizoaceae-modal/trait-flowers.webp",
+      "/plants/aizoaceae-modal/trait-lithops.webp",
+      "/plants/aizoaceae-modal/trait-capsule.webp"
     ]
   },
   "amaryllidaceae": {
@@ -85,7 +85,7 @@
       "en": "The genera occur mainly in tropical and subtropical regions of the Americas, South Africa, and the Mediterranean.",
       "ru": "Представители семейства происходят преимущественно из тропических и субтропических регионов Америки, Южной Африки и Средиземноморья."
     },
-    "originMapImage": "/plants/amaryllidaceae-modal/origin-map.png",
+    "originMapImage": "/plants/amaryllidaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -102,10 +102,10 @@
       ]
     },
     "traitImages": [
-      "/plants/amaryllidaceae-modal/trait-bulb.jpg",
-      "/plants/amaryllidaceae-modal/trait-leaves.jpg",
-      "/plants/amaryllidaceae-modal/trait-flowers.jpg",
-      "/plants/amaryllidaceae-modal/trait-fragrance.jpg"
+      "/plants/amaryllidaceae-modal/trait-bulb.webp",
+      "/plants/amaryllidaceae-modal/trait-leaves.webp",
+      "/plants/amaryllidaceae-modal/trait-flowers.webp",
+      "/plants/amaryllidaceae-modal/trait-fragrance.webp"
     ]
   },
   "apocynaceae": {
@@ -133,7 +133,7 @@
         "Семена кутровых имеют шелковистый хохолок, благодаря которому они переносятся ветром."
       ]
     },
-    "heroImage": "/plants/apocynaceae-modal/hero.png",
+    "heroImage": "/plants/apocynaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 160px) top",
       "md": "calc(100% + 80px) top",
@@ -149,7 +149,7 @@
       "en": "Tropical and subtropical regions of Asia, Africa, Australia, Indian Ocean islands, and the Americas.",
       "ru": "Тропические и субтропические регионы Азии, Африки, Австралии, островов Индийского океана, а также Америки."
     },
-    "originMapImage": "/plants/apocynaceae-modal/origin-map.png",
+    "originMapImage": "/plants/apocynaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -168,11 +168,11 @@
       ]
     },
     "traitImages": [
-      "/plants/apocynaceae-modal/hoya-carnosa.png",
-      "/plants/apocynaceae-modal/stapelia-gigantea.png",
-      "/plants/apocynaceae-modal/plumeria-alba.png",
-      "/plants/apocynaceae-modal/euphorbia-trigona.png",
-      "/plants/apocynaceae-modal/mandevilla-splendens.png"
+      "/plants/apocynaceae-modal/hoya-carnosa.webp",
+      "/plants/apocynaceae-modal/stapelia-gigantea.webp",
+      "/plants/apocynaceae-modal/plumeria-alba.webp",
+      "/plants/apocynaceae-modal/euphorbia-trigona.webp",
+      "/plants/apocynaceae-modal/mandevilla-splendens.webp"
     ]
   },
   "arecaceae": {
@@ -200,7 +200,7 @@
         "Плоды пальм чаще всего представляют собой костянки, но сильно различаются по размеру, окраске и применению."
       ]
     },
-    "heroImage": "/plants/arecaceae-modal/hero.png",
+    "heroImage": "/plants/arecaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 150px) top",
       "md": "calc(100% + 70px) top",
@@ -216,7 +216,7 @@
       "en": "Tropical and subtropical regions of Central and South America, Africa, South and Southeast Asia, northern Australia, and the Pacific islands.",
       "ru": "Тропические и субтропические регионы Центральной и Южной Америки, Африки, Южной и Юго-Восточной Азии, севера Австралии и островов Тихого океана."
     },
-    "originMapImage": "/plants/arecaceae-modal/origin-map.png",
+    "originMapImage": "/plants/arecaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -235,11 +235,11 @@
       ]
     },
     "traitImages": [
-      "/plants/arecaceae-modal/trait-fan-leaf.png",
-      "/plants/arecaceae-modal/trait-feather-leaf.png",
-      "/plants/arecaceae-modal/trait-ringed-trunk.png",
-      "/plants/arecaceae-modal/trait-inflorescence.png",
-      "/plants/arecaceae-modal/trait-fruit-cluster.png"
+      "/plants/arecaceae-modal/trait-fan-leaf.webp",
+      "/plants/arecaceae-modal/trait-feather-leaf.webp",
+      "/plants/arecaceae-modal/trait-ringed-trunk.webp",
+      "/plants/arecaceae-modal/trait-inflorescence.webp",
+      "/plants/arecaceae-modal/trait-fruit-cluster.webp"
     ]
   },
   "bromeliaceae": {
@@ -265,7 +265,7 @@
         "В «чаше» растения может накапливаться дождевая вода, служащая домом для микроорганизмов и мелких животных."
       ]
     },
-    "heroImage": "/plants/bromeliaceae-modal/hero.png",
+    "heroImage": "/plants/bromeliaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 112px) top",
       "md": "calc(100% + 44px) top",
@@ -281,7 +281,7 @@
       "en": "Tropical and subtropical regions of Central and South America, from Mexico to Argentina and the Caribbean islands.",
       "ru": "Тропические и субтропические регионы Центральной и Южной Америки, от Мексики до Аргентины и Карибских островов."
     },
-    "originMapImage": "/plants/bromeliaceae-modal/origin-map.png",
+    "originMapImage": "/plants/bromeliaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -300,11 +300,11 @@
       ]
     },
     "traitImages": [
-      "/plants/bromeliaceae-modal/trait-water-cup.jpg",
-      "/plants/bromeliaceae-modal/trait-bracts.jpg",
-      "/plants/bromeliaceae-modal/trait-epiphyte.jpg",
-      "/plants/bromeliaceae-modal/trait-storage.jpg",
-      "/plants/bromeliaceae-modal/trait-fruit.jpg"
+      "/plants/bromeliaceae-modal/trait-water-cup.webp",
+      "/plants/bromeliaceae-modal/trait-bracts.webp",
+      "/plants/bromeliaceae-modal/trait-epiphyte.webp",
+      "/plants/bromeliaceae-modal/trait-storage.webp",
+      "/plants/bromeliaceae-modal/trait-fruit.webp"
     ]
   },
   "asparagaceae": {
@@ -332,7 +332,7 @@
         "Тонкие зеленые «листочки» декоративного аспарагуса часто являются уплощенными побегами — кладодиями."
       ]
     },
-    "heroImage": "/plants/asparagaceae-modal/hero.png",
+    "heroImage": "/plants/asparagaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 120px) top",
       "md": "calc(100% + 64px) top",
@@ -348,7 +348,7 @@
       "en": "Tropical and subtropical regions of Africa, Asia, Australia, Pacific islands, and South America.",
       "ru": "Тропические и субтропические регионы Африки, Азии, Австралии, островов Тихого океана и Южной Америки."
     },
-    "originMapImage": "/plants/asparagaceae-modal/origin-map.png",
+    "originMapImage": "/plants/asparagaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -367,11 +367,11 @@
       ]
     },
     "traitImages": [
-      "/plants/asparagaceae-modal/trait-leaf-variety.jpg",
-      "/plants/asparagaceae-modal/trait-small-flowers.jpg",
-      "/plants/asparagaceae-modal/trait-berries.jpg",
-      "/plants/asparagaceae-modal/trait-rhizomes.jpg",
-      "/plants/asparagaceae-modal/trait-adaptable.jpg"
+      "/plants/asparagaceae-modal/trait-leaf-variety.webp",
+      "/plants/asparagaceae-modal/trait-small-flowers.webp",
+      "/plants/asparagaceae-modal/trait-berries.webp",
+      "/plants/asparagaceae-modal/trait-rhizomes.webp",
+      "/plants/asparagaceae-modal/trait-adaptable.webp"
     ]
   },
   "asphodelaceae": {
@@ -398,7 +398,7 @@
       ]
     },
     "latinName": "Asphodelaceae",
-    "heroImage": "/plants/asphodelaceae-modal/hero.png",
+    "heroImage": "/plants/asphodelaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 150px) top",
       "md": "calc(100% + 70px) top",
@@ -413,7 +413,7 @@
       "en": "Mainly dry and sunny regions of southern and eastern Africa, Madagascar, and nearby Indian Ocean islands.",
       "ru": "Преимущественно сухие и солнечные регионы Южной и Восточной Африки, Мадагаскара и соседних островов Индийского океана."
     },
-    "originMapImage": "/plants/asphodelaceae-modal/origin-map.png",
+    "originMapImage": "/plants/asphodelaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -430,10 +430,10 @@
       ]
     },
     "traitImages": [
-      "/plants/asphodelaceae-modal/aloe-vera.png",
-      "/plants/asphodelaceae-modal/haworthia-fasciata.png",
-      "/plants/asphodelaceae-modal/kniphofia-uvaria.png",
-      "/plants/asphodelaceae-modal/gasteria-maculata.png"
+      "/plants/asphodelaceae-modal/aloe-vera.webp",
+      "/plants/asphodelaceae-modal/haworthia-fasciata.webp",
+      "/plants/asphodelaceae-modal/kniphofia-uvaria.webp",
+      "/plants/asphodelaceae-modal/gasteria-maculata.webp"
     ]
   },
   "cactaceae": {
@@ -461,7 +461,7 @@
         "Кактусы не только украшают, но и очищают воздух от вредных веществ."
       ]
     },
-    "heroImage": "/plants/cactaceae-modal/hero.png",
+    "heroImage": "/plants/cactaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 150px) top",
       "md": "calc(100% + 70px) top",
@@ -477,7 +477,7 @@
       "en": "Mostly the Americas, especially arid and seasonally dry landscapes.",
       "ru": "Преимущественно Америка, особенно засушливые и сезонно сухие ландшафты."
     },
-    "originMapImage": "/plants/cactaceae-modal/origin-map.png",
+    "originMapImage": "/plants/cactaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -494,10 +494,10 @@
       ]
     },
     "traitImages": [
-      "/plants/cactaceae-modal/echinocactus-grusonii.png",
-      "/plants/cactaceae-modal/astrophytum-asterias.png",
-      "/plants/cactaceae-modal/ferocactus-cylindraceus.png",
-      "/plants/cactaceae-modal/opuntia-microdasys.png"
+      "/plants/cactaceae-modal/echinocactus-grusonii.webp",
+      "/plants/cactaceae-modal/astrophytum-asterias.webp",
+      "/plants/cactaceae-modal/ferocactus-cylindraceus.webp",
+      "/plants/cactaceae-modal/opuntia-microdasys.webp"
     ]
   },
   "commelinaceae": {
@@ -523,7 +523,7 @@
         "Цветки многих представителей закрываются к полудню, поэтому их часто называют однодневными."
       ]
     },
-    "heroImage": "/plants/commelinaceae-modal/hero.png",
+    "heroImage": "/plants/commelinaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 150px) top",
       "md": "calc(100% + 70px) top",
@@ -539,7 +539,7 @@
       "en": "Mainly tropical and subtropical regions of the Americas, Africa, Asia, Australia, and the islands of Oceania, often along bright forest edges.",
       "ru": "Преимущественно тропические и субтропические регионы Америки, Африки, Азии, Австралии и островов Океании, часто светлые лесные опушки."
     },
-    "originMapImage": "/plants/commelinaceae-modal/origin-map.png",
+    "originMapImage": "/plants/commelinaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -556,11 +556,11 @@
       ]
     },
     "traitImages": [
-      "/plants/commelinaceae-modal/tradescantia-zebrina.png",
-      "/plants/commelinaceae-modal/tradescantia-pallida.png",
-      "/plants/commelinaceae-modal/tradescantia-sillamontana.png",
-      "/plants/commelinaceae-modal/commelina-communis.png",
-      "/plants/commelinaceae-modal/callisia-repens.png"
+      "/plants/commelinaceae-modal/tradescantia-zebrina.webp",
+      "/plants/commelinaceae-modal/tradescantia-pallida.webp",
+      "/plants/commelinaceae-modal/tradescantia-sillamontana.webp",
+      "/plants/commelinaceae-modal/commelina-communis.webp",
+      "/plants/commelinaceae-modal/callisia-repens.webp"
     ]
   },
   "cycadaceae": {
@@ -588,7 +588,7 @@
         "Все части саговников лучше держать вдали от домашних животных и маленьких детей."
       ]
     },
-    "heroImage": "/plants/cycadaceae-modal/hero.png",
+    "heroImage": "/plants/cycadaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 150px) top",
       "md": "calc(100% + 70px) top",
@@ -604,7 +604,7 @@
       "en": "Tropical and subtropical regions from East Africa and Madagascar through South and Southeast Asia to Australia and the western Pacific islands.",
       "ru": "Тропические и субтропические регионы от Восточной Африки и Мадагаскара через Южную и Юго-Восточную Азию до Австралии и западных островов Тихого океана."
     },
-    "originMapImage": "/plants/cycadaceae-modal/origin-map.png",
+    "originMapImage": "/plants/cycadaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -623,11 +623,11 @@
       ]
     },
     "traitImages": [
-      "/plants/cycadaceae-modal/trait-pinnate-frond.png",
-      "/plants/cycadaceae-modal/trait-caudeux.png",
-      "/plants/cycadaceae-modal/trait-female-cone.png",
-      "/plants/cycadaceae-modal/trait-male-cone.png",
-      "/plants/cycadaceae-modal/trait-young-flush.png"
+      "/plants/cycadaceae-modal/trait-pinnate-frond.webp",
+      "/plants/cycadaceae-modal/trait-caudeux.webp",
+      "/plants/cycadaceae-modal/trait-female-cone.webp",
+      "/plants/cycadaceae-modal/trait-male-cone.webp",
+      "/plants/cycadaceae-modal/trait-young-flush.webp"
     ]
   },
   "gesneriaceae": {
@@ -653,7 +653,7 @@
         "Многие геснериевые любят яркий рассеянный свет и не переносят переувлажнения."
       ]
     },
-    "heroImage": "/plants/gesneriaceae-modal/hero.png",
+    "heroImage": "/plants/gesneriaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 208px) top",
       "md": "calc(100% + 158px) top",
@@ -669,7 +669,7 @@
       "en": "Tropical and subtropical regions of Asia, Africa, Madagascar, Central America, and South America.",
       "ru": "Тропические и субтропические регионы Азии, Африки, Мадагаскара, Центральной и Южной Америки."
     },
-    "originMapImage": "/plants/gesneriaceae-modal/origin-map.png",
+    "originMapImage": "/plants/gesneriaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -686,10 +686,10 @@
       ]
     },
     "traitImages": [
-      "/plants/gesneriaceae-modal/trait-leaves.jpg",
-      "/plants/gesneriaceae-modal/trait-flowers.jpg",
-      "/plants/gesneriaceae-modal/trait-rosette.jpg",
-      "/plants/gesneriaceae-modal/trait-seed-capsule.jpg"
+      "/plants/gesneriaceae-modal/trait-leaves.webp",
+      "/plants/gesneriaceae-modal/trait-flowers.webp",
+      "/plants/gesneriaceae-modal/trait-rosette.webp",
+      "/plants/gesneriaceae-modal/trait-seed-capsule.webp"
     ]
   },
   "marantaceae": {
@@ -715,7 +715,7 @@
         "Марантовые отлично увлажняют воздух благодаря крупной площади листьев."
       ]
     },
-    "heroImage": "/plants/marantaceae-modal/hero.png",
+    "heroImage": "/plants/marantaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 210px) top",
       "md": "calc(100% + 150px) top",
@@ -731,7 +731,7 @@
       "en": "Tropical regions of Central and South America, especially the humid forests of Brazil.",
       "ru": "Тропические регионы Центральной и Южной Америки, особенно влажные леса Бразилии."
     },
-    "originMapImage": "/plants/marantaceae-modal/origin-map.png",
+    "originMapImage": "/plants/marantaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -750,11 +750,11 @@
       ]
     },
     "traitImages": [
-      "/plants/marantaceae-modal/trait-pattern.jpg",
-      "/plants/marantaceae-modal/trait-nyctinasty.jpg",
-      "/plants/marantaceae-modal/trait-underside.jpg",
-      "/plants/marantaceae-modal/trait-humidity.jpg",
-      "/plants/marantaceae-modal/trait-flowers.jpg"
+      "/plants/marantaceae-modal/trait-pattern.webp",
+      "/plants/marantaceae-modal/trait-nyctinasty.webp",
+      "/plants/marantaceae-modal/trait-underside.webp",
+      "/plants/marantaceae-modal/trait-humidity.webp",
+      "/plants/marantaceae-modal/trait-flowers.webp"
     ]
   },
   "nephrolepidaceae": {
@@ -774,7 +774,7 @@
         "В подвесном горшке вайи естественно расходятся во все стороны."
       ]
     },
-    "heroImage": "/plants/nephrolepidaceae-modal/hero.png",
+    "heroImage": "/plants/nephrolepidaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 150px) top",
       "md": "calc(100% + 70px) top",
@@ -790,7 +790,7 @@
       "en": "Humid tropical and subtropical forests across many regions.",
       "ru": "Влажные тропические и субтропические леса разных регионов."
     },
-    "originMapImage": "/plants/nephrolepidaceae-modal/origin-map.png",
+    "originMapImage": "/plants/nephrolepidaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -832,7 +832,7 @@
         "Семена орхидей настолько малы, что в одном плоде их может быть до нескольких миллионов."
       ]
     },
-    "heroImage": "/plants/orchidaceae-modal/hero.png",
+    "heroImage": "/plants/orchidaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 150px) top",
       "md": "calc(100% + 78px) top",
@@ -848,7 +848,7 @@
       "en": "Almost every continent except Antarctica, with the greatest diversity in tropical Asia, South America, Central America, Africa, Australia, and Pacific islands.",
       "ru": "Практически все континенты, кроме Антарктиды. Наибольшее разнообразие орхидных - в тропиках Азии, Южной и Центральной Америки, Африки, Австралии и островов Тихого океана."
     },
-    "originMapImage": "/plants/orchidaceae-modal/origin-map.png",
+    "originMapImage": "/plants/orchidaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -867,11 +867,11 @@
       ]
     },
     "traitImages": [
-      "/plants/orchidaceae-modal/phalaenopsis-schilleriana.png",
-      "/plants/orchidaceae-modal/cattleya-trianae.png",
-      "/plants/orchidaceae-modal/dendrobium-nobile.png",
-      "/plants/orchidaceae-modal/cymbidium-ensifolium.png",
-      "/plants/orchidaceae-modal/paphiopedilum-venustum.png"
+      "/plants/orchidaceae-modal/phalaenopsis-schilleriana.webp",
+      "/plants/orchidaceae-modal/cattleya-trianae.webp",
+      "/plants/orchidaceae-modal/dendrobium-nobile.webp",
+      "/plants/orchidaceae-modal/cymbidium-ensifolium.webp",
+      "/plants/orchidaceae-modal/paphiopedilum-venustum.webp"
     ]
   },
   "piperaceae": {
@@ -899,7 +899,7 @@
         "Многие пеперомии годами остаются компактными и хорошо подходят для небольших горшков."
       ]
     },
-    "heroImage": "/plants/piperaceae-modal/hero.png",
+    "heroImage": "/plants/piperaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 150px) top",
       "md": "calc(100% + 70px) top",
@@ -915,7 +915,7 @@
       "en": "Tropical regions of Central and South America, Africa, and Asia.",
       "ru": "Тропические регионы Центральной и Южной Америки, Африки и Азии."
     },
-    "originMapImage": "/plants/piperaceae-modal/origin-map.png",
+    "originMapImage": "/plants/piperaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -932,11 +932,11 @@
       ]
     },
     "traitImages": [
-      "/plants/piperaceae-modal/peperomia-obtusifolia.png?v=2",
-      "/plants/piperaceae-modal/peperomia-caperata.png?v=2",
-      "/plants/piperaceae-modal/peperomia-argyreia.png?v=2",
-      "/plants/piperaceae-modal/piper-nigrum.png?v=2",
-      "/plants/piperaceae-modal/peperomia-prostrata.png?v=2"
+      "/plants/piperaceae-modal/peperomia-obtusifolia.webp?v=2",
+      "/plants/piperaceae-modal/peperomia-caperata.webp?v=2",
+      "/plants/piperaceae-modal/peperomia-argyreia.webp?v=2",
+      "/plants/piperaceae-modal/piper-nigrum.webp?v=2",
+      "/plants/piperaceae-modal/peperomia-prostrata.webp?v=2"
     ]
   },
   "vitaceae": {
@@ -964,7 +964,7 @@
         "Циссус ромболистный ценят в интерьере за выносливость и пышные сложные листья."
       ]
     },
-    "heroImage": "/plants/vitaceae-modal/hero.png",
+    "heroImage": "/plants/vitaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 150px) top",
       "md": "calc(100% + 70px) top",
@@ -980,7 +980,7 @@
       "en": "Temperate and tropical regions worldwide, especially forest edges and climbing habitats.",
       "ru": "Умеренные и тропические регионы мира, особенно лесные опушки и места для лазания."
     },
-    "originMapImage": "/plants/vitaceae-modal/origin-map.png",
+    "originMapImage": "/plants/vitaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -999,11 +999,11 @@
       ]
     },
     "traitImages": [
-      "/plants/vitaceae-modal/trait-climbing-stems.png",
-      "/plants/vitaceae-modal/trait-tendrils.png",
-      "/plants/vitaceae-modal/trait-compound-leaves.png",
-      "/plants/vitaceae-modal/trait-branching.png",
-      "/plants/vitaceae-modal/trait-young-growth.png"
+      "/plants/vitaceae-modal/trait-climbing-stems.webp",
+      "/plants/vitaceae-modal/trait-tendrils.webp",
+      "/plants/vitaceae-modal/trait-compound-leaves.webp",
+      "/plants/vitaceae-modal/trait-branching.webp",
+      "/plants/vitaceae-modal/trait-young-growth.webp"
     ]
   },
   "crassulaceae": {
@@ -1030,7 +1030,7 @@
       ]
     },
     "heroFilter": "drop-shadow(0 18px 14px rgba(72, 57, 37, 0.16))",
-    "heroImage": "/plants/crassulaceae-modal/hero-cutout.png",
+    "heroImage": "/plants/crassulaceae-modal/hero-cutout.webp",
     "heroPosition": {
       "base": "72% bottom",
       "md": "right bottom",
@@ -1046,7 +1046,7 @@
       "en": "Dry and seasonally dry regions worldwide, especially southern Africa, Mexico, and the Mediterranean.",
       "ru": "Засушливые и сезонно сухие регионы мира, особенно Южная Африка, Мексика и Средиземноморье."
     },
-    "originMapImage": "/plants/crassulaceae-modal/origin-map.png",
+    "originMapImage": "/plants/crassulaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -1063,10 +1063,10 @@
       ]
     },
     "traitImages": [
-      "/plants/crassulaceae-modal/trait-water-storage.png",
-      "/plants/crassulaceae-modal/trait-rosette.png",
-      "/plants/crassulaceae-modal/trait-drainage.png",
-      "/plants/crassulaceae-modal/trait-bright-light.png"
+      "/plants/crassulaceae-modal/trait-water-storage.webp",
+      "/plants/crassulaceae-modal/trait-rosette.webp",
+      "/plants/crassulaceae-modal/trait-drainage.webp",
+      "/plants/crassulaceae-modal/trait-bright-light.webp"
     ]
   },
   "lamiaceae": {
@@ -1095,7 +1095,7 @@
       ]
     },
     "heroFilter": "drop-shadow(0 18px 14px rgba(72, 57, 37, 0.14))",
-    "heroImage": "/plants/lamiaceae-modal/hero.png",
+    "heroImage": "/plants/lamiaceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 155px) 180px",
       "md": "calc(100% + 35px) 54px",
@@ -1111,7 +1111,7 @@
       "en": "Distributed almost worldwide, with especially rich diversity in the Mediterranean region, Central Asia and other seasonally dry temperate and subtropical habitats.",
       "ru": "Распространены почти по всему миру; особенно разнообразны в Средиземноморье, Центральной Азии и других сезонно сухих умеренных и субтропических областях."
     },
-    "originMapImage": "/plants/lamiaceae-modal/origin-map.png",
+    "originMapImage": "/plants/lamiaceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -1128,10 +1128,10 @@
       ]
     },
     "traitImages": [
-      "/plants/lamiaceae-modal/trait-square-stem.png",
-      "/plants/lamiaceae-modal/trait-opposite-leaves.png",
-      "/plants/lamiaceae-modal/trait-glandular-hairs.png",
-      "/plants/lamiaceae-modal/trait-two-lipped-flower.png"
+      "/plants/lamiaceae-modal/trait-square-stem.webp",
+      "/plants/lamiaceae-modal/trait-opposite-leaves.webp",
+      "/plants/lamiaceae-modal/trait-glandular-hairs.webp",
+      "/plants/lamiaceae-modal/trait-two-lipped-flower.webp"
     ]
   },
   "moraceae": {
@@ -1159,7 +1159,7 @@
         "Некоторые тропические фикусы начинают жизнь высоко на другом дереве, а затем формируют впечатляющие стволы из воздушных корней."
       ]
     },
-    "heroImage": "/plants/moraceae-modal/hero.png",
+    "heroImage": "/plants/moraceae-modal/hero.webp",
     "heroPosition": {
       "base": "calc(100% + 110px) 150px",
       "md": "calc(100% + 20px) 44px",
@@ -1175,7 +1175,7 @@
       "en": "Mostly tropical worldwide, with representatives extending into warm-temperate Asia, Europe, Africa, Australia and the Americas.",
       "ru": "Преимущественно тропические регионы всего мира; отдельные представители заходят в тёплые умеренные области Азии, Европы, Африки, Австралии и Америки."
     },
-    "originMapImage": "/plants/moraceae-modal/origin-map.png",
+    "originMapImage": "/plants/moraceae-modal/origin-map.webp",
     "plants": [],
     "traits": {
       "en": [
@@ -1192,10 +1192,10 @@
       ]
     },
     "traitImages": [
-      "/plants/moraceae-modal/trait-latex.png",
-      "/plants/moraceae-modal/trait-stipule.png",
-      "/plants/moraceae-modal/trait-fruits.png",
-      "/plants/moraceae-modal/trait-aerial-roots.png"
+      "/plants/moraceae-modal/trait-latex.webp",
+      "/plants/moraceae-modal/trait-stipule.webp",
+      "/plants/moraceae-modal/trait-fruits.webp",
+      "/plants/moraceae-modal/trait-aerial-roots.webp"
     ]
   }
 }

@@ -64,7 +64,7 @@ export const AboutStory = ({ locale, text }: AboutStoryProps) => (
           opacity={0.48}
           position="absolute"
           right="14px"
-          src="/about/quote-botanical-sketch.png"
+          src="/about/quote-botanical-sketch.webp"
           width="92px"
         />
       </Box>

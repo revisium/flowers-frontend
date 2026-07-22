@@ -15,7 +15,7 @@ export const HomeHero = ({ onCollectionOpen, stats, text }: HomeHeroProps) => {
       as="section"
       aspectRatio={{ base: 'auto', md: '1535 / 924' }}
       backgroundColor="#f2eadb"
-      backgroundImage="url('/greenhouse-home-hero.png')"
+      backgroundImage="url('/greenhouse-home-hero.webp')"
       backgroundPosition="top center"
       backgroundRepeat="no-repeat"
       backgroundSize={{ base: 'cover', md: 'contain' }}

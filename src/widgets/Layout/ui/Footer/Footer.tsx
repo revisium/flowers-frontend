@@ -68,7 +68,7 @@ export const Footer = ({ locale, onCollectionOpen }: FooterProps) => {
         pointerEvents="none"
         position="absolute"
         right={{ base: '-54px', md: '26px' }}
-        src="/greenhouse-logo-mark.png"
+        src="/greenhouse-logo-mark.webp"
         width={{ base: '210px', md: '270px' }}
       />
 

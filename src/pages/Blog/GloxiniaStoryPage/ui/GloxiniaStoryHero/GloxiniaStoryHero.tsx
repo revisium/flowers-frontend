@@ -78,7 +78,7 @@ export const GloxiniaStoryHero = ({ locale, text }: GloxiniaStoryHeroProps) => (
         alt={locale === 'ru' ? 'Подпись Анастасии' : "Anastasia's signature"}
         height="auto"
         marginTop="16px"
-        src="/about/anastasia-signature-v2.png"
+        src="/about/anastasia-signature-v2.webp"
         width={{ base: '138px', md: '146px' }}
       />
     </Flex>

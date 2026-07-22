@@ -24,7 +24,7 @@ export const CareHero = ({ text }: CareHeroProps) => {
         objectFit="cover"
         objectPosition={{ base: '65% center', md: 'center' }}
         position="absolute"
-        src="/care/care-hero.jpg"
+        src="/care/care-hero.webp"
         width="100%"
       />
       <Box

@@ -48,7 +48,7 @@ export const HeaderLogo = ({ homeLabel, subtitle, title, tone }: HeaderLogoProps
           height={{ base: '38px', md: '54px' }}
           objectFit="contain"
           opacity={0.78}
-          src="/greenhouse-logo-mark.png"
+          src="/greenhouse-logo-mark.webp"
           width={{ base: '30px', md: '43px' }}
         />
         <Flex

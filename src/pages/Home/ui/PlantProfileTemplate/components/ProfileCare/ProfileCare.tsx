@@ -121,12 +121,12 @@ export const GrowthFacts = ({ locale, plant, text }: GrowthFactsProps) => (
     gridTemplateColumns="repeat(2, 1fr)"
   >
     <QuickFact
-      icon="/plant-profile/growth-icon.png"
+      icon="/plant-profile/growth-icon.webp"
       label={text.fastGrowth}
       value={plant.profile.quickFacts.growth[locale]}
     />
     <QuickFact
-      icon="/plant-profile/shoots-icon.png"
+      icon="/plant-profile/shoots-icon.webp"
       label={locale === 'ru' ? 'Побеги' : 'Shoots'}
       showDivider
       value={plant.profile.quickFacts.height[locale]}
@@ -149,10 +149,10 @@ export const ProfileCare = ({ locale, plant }: ProfileCareProps) => (
         body={care.body[locale]}
         icon={
           [
-            '/plant-profile/care-lighting.png',
-            '/plant-profile/care-watering.png',
-            '/plant-profile/care-humidity.png',
-            '/plant-profile/care-temperature.png',
+            '/plant-profile/care-lighting.webp',
+            '/plant-profile/care-watering.webp',
+            '/plant-profile/care-humidity.webp',
+            '/plant-profile/care-temperature.webp',
           ][index]!
         }
         index={index}
@@ -165,10 +165,10 @@ export const ProfileCare = ({ locale, plant }: ProfileCareProps) => (
         body={care.body[locale]}
         icon={
           [
-            '/plant-profile/care-soil.png',
-            '/plant-profile/care-repotting.png',
-            '/plant-profile/care-feeding.png',
-            '/plant-profile/care-support.png',
+            '/plant-profile/care-soil.webp',
+            '/plant-profile/care-repotting.webp',
+            '/plant-profile/care-feeding.webp',
+            '/plant-profile/care-support.webp',
           ][index]!
         }
         index={index + plant.profile.care.length}

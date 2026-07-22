@@ -13,6 +13,7 @@
     "lint:ci": "eslint \"src/**/*.{ts,tsx}\" --max-warnings 0",
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --max-warnings 0 --fix",
     "markdown:lint": "markdownlint-cli2",
+    "images:check": "node scripts/check-image-formats.mjs",
     "skills:lint": "node scripts/lint-skills.mjs",
     "ui:lint": "node scripts/lint-ui-structure.mjs",
     "fsd:check": "CHOKIDAR_USEPOLLING=1 steiger src",
@@ -20,7 +21,7 @@
     "sonar:local": "bash scripts/sonar-local.sh",
     "sonar:issues:local": "bash scripts/sonar-issues-local.sh",
     "ci:local:sonar": "bash scripts/ci-local-sonar.sh",
-    "verify": "npm run markdown:lint && npm run skills:lint && npm run ui:lint && npm run ts:check && npm run lint:ci && npm run fsd:check && npm run build"
+    "verify": "npm run markdown:lint && npm run images:check && npm run skills:lint && npm run ui:lint && npm run ts:check && npm run lint:ci && npm run fsd:check && npm run build"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.35.0",

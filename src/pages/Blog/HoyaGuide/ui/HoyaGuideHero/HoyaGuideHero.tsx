@@ -12,7 +12,7 @@ export const HoyaGuideHero = ({ locale }: HoyaGuideHeroProps) => {
     <Box minHeight={{ base: 'auto', md: '566px' }} position="relative">
       <Box
         aria-label="Пышная хойя пубикаликс с длинными побегами"
-        backgroundImage="url('/plants/hoya-pubicalyx-splash-home-photo.jpg')"
+        backgroundImage="url('/plants/hoya-pubicalyx-splash-home-photo.webp')"
         backgroundPosition="center 34%"
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
