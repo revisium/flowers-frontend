@@ -107,6 +107,8 @@ derived from one source.
   `All families` chooser so none of the available families are hidden behind the
   initial viewport. Opening a plant profile resets the overlay scroll position to
   the top so the profile begins with its title and hero on every breakpoint.
+  Returning from a profile restores the catalog scroll position from which that
+  plant was opened, while fully closing the overlay still resets its local state.
 - `ui/PlantProfileTemplate` is the reusable detailed-profile layout opened
   from a catalog card. It renders an individual plant's localized entity data:
   title, taxonomy, photos, difficulty, practical care, and a note. Profiles can
@@ -175,7 +177,7 @@ portraits while preserving the reference's circular composition. The legacy
   pairs its live advice copy with the shared leaf image asset.
 - `ui/ReferenceCrop` consistently exposes the supplied reference's photographic
   regions without creating approximated replacement images.
-- Recommendation pictograms are separate generated PNG assets with transparent
+- Recommendation pictograms are separate generated WebP assets with transparent
   backgrounds. The closing band is composed from CSS, live text, and a clean
   transparent botanical illustration positioned over the flowering panel.
 
@@ -316,6 +318,11 @@ beyond the route prototype or external data.
 Chakra UI is the styling system. Theme/system setup lives in
 `src/shared/ui/theme/`, including `theme.ts`, `globalCss.ts`, `textStyles.ts`,
 and `fonts.css`. The global font is loaded from `public/fonts`.
+
+Raster assets under `public/` use WebP consistently, including images with
+transparency. `npm run images:check` enforces the format during verification;
+SVG artwork and font files remain in their native formats. Images outside the
+initial viewport should use native lazy loading and asynchronous decoding.
 
 ## Component Folder Convention
 

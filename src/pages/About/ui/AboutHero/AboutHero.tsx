@@ -68,7 +68,7 @@ export const AboutHero = ({ locale, text }: AboutHeroProps) => (
             alt={text.name}
             flex="0 0 auto"
             height="auto"
-            src="/about/anastasia-signature-v2.png"
+            src="/about/anastasia-signature-v2.webp"
             width={{ base: '150px', md: '160px' }}
           />
         </Flex>

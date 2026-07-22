@@ -28,7 +28,7 @@ export const HoyaClosingBanner = () => {
             height={{ base: '27px', md: '38px' }}
             objectFit="contain"
             opacity={0.8}
-            src="/about/quote-botanical-sketch.png"
+            src="/about/quote-botanical-sketch.webp"
             width={{ base: '24px', md: '34px' }}
           />
           <Text
@@ -66,7 +66,7 @@ export const HoyaClosingBanner = () => {
         pointerEvents="none"
         position="absolute"
         right={{ base: '-8px', md: '7px' }}
-        src="/about/quote-botanical-sketch.png"
+        src="/about/quote-botanical-sketch.webp"
         transform="rotate(7deg)"
         transformOrigin="bottom right"
         zIndex={2}

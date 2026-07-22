@@ -13,12 +13,12 @@ import { LayoutProvider } from './shared/config';
 
 export const links: LinksFunction = () => [
   {
-    href: '/greenhouse-leaf-logo.png',
+    href: '/greenhouse-leaf-logo.webp',
     rel: 'icon',
     type: 'image/png',
   },
   {
-    href: '/greenhouse-leaf-logo.png',
+    href: '/greenhouse-leaf-logo.webp',
     rel: 'apple-touch-icon',
   },
   {

@@ -6,11 +6,11 @@ interface AboutFeatureArtworkProps {
 }
 
 const artworkByName: Record<AboutFeatureArtworkName, string> = {
-  camera: '/about/feature-growth-photos.png',
-  care: '/about/feature-care.png',
-  flower: '/about/feature-flowering.png',
-  note: '/about/feature-notes.png',
-  'plant-card': '/about/feature-plant-card.png',
+  camera: '/about/feature-growth-photos.webp',
+  care: '/about/feature-care.webp',
+  flower: '/about/feature-flowering.webp',
+  note: '/about/feature-notes.webp',
+  'plant-card': '/about/feature-plant-card.webp',
 };
 
 export const AboutFeatureArtwork = ({ name }: AboutFeatureArtworkProps) => (

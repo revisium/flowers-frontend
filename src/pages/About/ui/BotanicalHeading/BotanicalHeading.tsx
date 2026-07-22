@@ -13,7 +13,7 @@ export const BotanicalHeading = ({ children, id }: BotanicalHeadingProps) => (
       flex="0 0 auto"
       height={{ base: '32px', md: '38px' }}
       objectFit="contain"
-      src="/about/botanical-heading-sprig-v2.png"
+      src="/about/botanical-heading-sprig-v2.webp"
       width="auto"
     />
     <Text

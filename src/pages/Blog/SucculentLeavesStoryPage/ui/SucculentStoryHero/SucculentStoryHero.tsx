@@ -85,7 +85,7 @@ export const SucculentStoryHero = ({ locale, text }: SucculentStoryHeroProps) =>
         alt={locale === 'ru' ? 'Подпись Анастасии' : "Anastasia's signature"}
         height="auto"
         marginTop="18px"
-        src="/about/anastasia-signature-v2.png"
+        src="/about/anastasia-signature-v2.webp"
         width={{ base: '140px', md: '150px' }}
       />
     </Flex>

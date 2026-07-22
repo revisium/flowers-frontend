@@ -70,7 +70,7 @@ export const BlogHero = ({ locale, text }: BlogHeroProps) => (
         flex="0 0 auto"
         height="auto"
         marginTop="24px"
-        src="/about/anastasia-signature-v2.png"
+        src="/about/anastasia-signature-v2.webp"
         width={{ base: '150px', md: '160px' }}
       />
     </Stack>

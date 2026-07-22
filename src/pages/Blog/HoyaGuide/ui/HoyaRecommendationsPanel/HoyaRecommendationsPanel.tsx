@@ -3,11 +3,11 @@ import { Flex, Image, Text } from '@chakra-ui/react';
 import { hoyaRecommendations } from '../../model/hoyaGuideData';
 
 const recommendationIcons = [
-  '/blog/hoya-pubicalyx-care/recommendation-light-icon.png',
-  '/blog/hoya-pubicalyx-care/recommendation-water-icon.png',
-  '/blog/hoya-pubicalyx-care/recommendation-feed-icon.png',
-  '/blog/hoya-pubicalyx-care/recommendation-support-icon.png',
-  '/blog/hoya-pubicalyx-care/recommendation-stability-icon.png',
+  '/blog/hoya-pubicalyx-care/recommendation-light-icon.webp',
+  '/blog/hoya-pubicalyx-care/recommendation-water-icon.webp',
+  '/blog/hoya-pubicalyx-care/recommendation-feed-icon.webp',
+  '/blog/hoya-pubicalyx-care/recommendation-support-icon.webp',
+  '/blog/hoya-pubicalyx-care/recommendation-stability-icon.webp',
 ] as const;
 
 export const HoyaRecommendationsPanel = () => {

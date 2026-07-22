@@ -71,6 +71,7 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
           id="greenhouse-categories-title"
           lineHeight={1.08}
           margin={0}
+          scrollMarginTop={{ base: '138px', md: '126px' }}
         >
           {text.categoriesTitle}
         </Text>

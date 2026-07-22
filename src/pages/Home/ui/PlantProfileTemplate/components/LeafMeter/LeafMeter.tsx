@@ -12,7 +12,7 @@ export const LeafMeter = ({ level }: LeafMeterProps) => (
         height="28px"
         key={index}
         objectFit="contain"
-        src={index < level ? '/plant-profile/difficulty-leaf-filled.png' : '/plant-profile/difficulty-leaf-outline.png'}
+        src={index < level ? '/plant-profile/difficulty-leaf-filled.webp' : '/plant-profile/difficulty-leaf-outline.webp'}
         width="25px"
       />
     ))}

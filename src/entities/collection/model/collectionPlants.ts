@@ -285,6 +285,7 @@ const aglaonemaProfile = (
   );
 
 interface TillandsiaProfileDefinition {
+  readonly assets: ProfileAssets;
   readonly facts: LocalizedListPair;
   readonly height: LocalizedPair;
   readonly latinName: string;
@@ -294,6 +295,7 @@ interface TillandsiaProfileDefinition {
 }
 
 const tillandsiaProfile = ({
+  assets,
   facts,
   height,
   latinName,
@@ -403,14 +405,14 @@ const tillandsiaProfile = ({
         ],
       ],
     ),
-    {},
+    assets,
   );
 
 export const collectionPlants: readonly CollectionPlant[] = [
   collectionPlant(
     'amaryllidaceae',
     'clivia-miniata-rescued',
-    '/plants/clivia-miniata-home-photo.jpg',
+    '/plants/clivia-miniata-home-photo.webp',
     ['Clivia', 'Кливия'],
     plantProfile(
       careCards(
@@ -538,16 +540,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/clivia-important.png',
-        propagationImage: '/plant-profile/clivia-propagation.png',
-        saleImage: '/plant-profile/clivia-for-sale.png',
+        importantImage: '/plant-profile/clivia-important.webp',
+        propagationImage: '/plant-profile/clivia-propagation.webp',
+        saleImage: '/plant-profile/clivia-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'amaryllidaceae',
     'hippeastrum-red-white',
-    '/plants/hippeastrum-red-white-home-photo.jpg',
+    '/plants/hippeastrum-red-white-home-photo.webp',
     ['Red-and-white hippeastrum', 'Гиппеаструм красно-белый'],
     plantProfile(
       careCards(
@@ -678,16 +680,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/hippeastrum-important.png',
-        propagationImage: '/plant-profile/hippeastrum-propagation.png',
-        saleImage: '/plant-profile/hippeastrum-for-sale.png',
+        importantImage: '/plant-profile/hippeastrum-important.webp',
+        propagationImage: '/plant-profile/hippeastrum-propagation.webp',
+        saleImage: '/plant-profile/hippeastrum-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'arecaceae',
     'chamaedorea-elegans',
-    '/plants/chamaedorea-elegans-home-photo.jpg',
+    '/plants/chamaedorea-elegans-home-photo.webp',
     ['Parlor palm', 'Хамедорея изящная'],
     plantProfile(
       careCards(
@@ -815,16 +817,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/chamaedorea-important.png',
-        propagationImage: '/plant-profile/chamaedorea-propagation.png',
-        saleImage: '/plant-profile/chamaedorea-for-sale.png',
+        importantImage: '/plant-profile/chamaedorea-important.webp',
+        propagationImage: '/plant-profile/chamaedorea-propagation.webp',
+        saleImage: '/plant-profile/chamaedorea-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'asparagaceae',
     'chlorophytum-comosum-bonnie',
-    '/plants/chlorophytum-curly-home-photo.jpg',
+    '/plants/chlorophytum-curly-home-photo.webp',
     ['Curly spider plant', 'Хлорофитум кудрявый'],
     plantProfile(
       careCards(
@@ -955,16 +957,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/chlorophytum-important.png',
-        propagationImage: '/plant-profile/chlorophytum-propagation.png',
-        saleImage: '/plant-profile/chlorophytum-for-sale.png',
+        importantImage: '/plant-profile/chlorophytum-important.webp',
+        propagationImage: '/plant-profile/chlorophytum-propagation.webp',
+        saleImage: '/plant-profile/chlorophytum-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'asparagaceae',
     'beaucarnea-recurvata',
-    '/plants/beaucarnea-recurvata-home-photo.jpg',
+    '/plants/beaucarnea-recurvata-home-photo.webp',
     ['Ponytail palm', 'Нолина отогнутая'],
     plantProfile(
       careCards(
@@ -1092,16 +1094,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/beaucarnea-important.png',
-        propagationImage: '/plant-profile/beaucarnea-propagation.png',
-        saleImage: '/plant-profile/beaucarnea-for-sale.png',
+        importantImage: '/plant-profile/beaucarnea-important.webp',
+        propagationImage: '/plant-profile/beaucarnea-propagation.webp',
+        saleImage: '/plant-profile/beaucarnea-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'asparagaceae',
     'dracaena-sanderiana',
-    '/plants/dracaena-sanderiana-home-photo.jpg',
+    '/plants/dracaena-sanderiana-home-photo.webp',
     ['Lucky bamboo', 'Бамбук счастья'],
     plantProfile(
       careCards(
@@ -1234,16 +1236,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/dracaena-sanderiana-important.png',
-        propagationImage: '/plant-profile/dracaena-sanderiana-propagation.png',
-        saleImage: '/plant-profile/dracaena-sanderiana-for-sale.png',
+        importantImage: '/plant-profile/dracaena-sanderiana-important.webp',
+        propagationImage: '/plant-profile/dracaena-sanderiana-propagation.webp',
+        saleImage: '/plant-profile/dracaena-sanderiana-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'moraceae',
     'ficus-benjamina',
-    '/plants/ficus-benjamina-home-photo.png',
+    '/plants/ficus-benjamina-home-photo.webp',
     ['Weeping fig', 'Фикус Бенджамина'],
     plantProfile(
       careCards(
@@ -1376,16 +1378,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/ficus-benjamina-important.png',
-        propagationImage: '/plant-profile/ficus-benjamina-propagation.png',
-        saleImage: '/plant-profile/ficus-benjamina-for-sale.png',
+        importantImage: '/plant-profile/ficus-benjamina-important.webp',
+        propagationImage: '/plant-profile/ficus-benjamina-propagation.webp',
+        saleImage: '/plant-profile/ficus-benjamina-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'asphodelaceae',
     'haworthiopsis-attenuata',
-    '/plants/haworthiopsis-attenuata-home-photo.jpg',
+    '/plants/haworthiopsis-attenuata-home-photo.webp',
     ['Zebra haworthiopsis', 'Хавортиопсис оттянутый'],
     plantProfile(
       careCards(
@@ -1512,16 +1514,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/haworthiopsis-attenuata-important.png',
-        propagationImage: '/plant-profile/haworthiopsis-attenuata-propagation.png',
-        saleImage: '/plant-profile/haworthiopsis-attenuata-for-sale.png',
+        importantImage: '/plant-profile/haworthiopsis-attenuata-important.webp',
+        propagationImage: '/plant-profile/haworthiopsis-attenuata-propagation.webp',
+        saleImage: '/plant-profile/haworthiopsis-attenuata-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'asphodelaceae',
     'haworthia-cymbiformis-rescue',
-    '/plants/haworthia-cymbiformis-rescue-home-photo.jpg',
+    '/plants/haworthia-cymbiformis-rescue-home-photo-clean.webp',
     ['Boat-formed haworthia', 'Хавортия ладьевидная'],
     plantProfile(
       careCards(
@@ -1650,13 +1652,17 @@ export const collectionPlants: readonly CollectionPlant[] = [
           ],
         ],
       ),
-      {},
+      {
+        importantImage: '/plant-profile/haworthia-cymbiformis-important.webp',
+        propagationImage: '/plant-profile/haworthia-cymbiformis-propagation.webp',
+        saleImage: '/plant-profile/haworthia-cymbiformis-for-sale.webp',
+      },
     ),
   ),
   collectionPlant(
     'bromeliaceae',
     'tillandsia-usneoides-thai-composition',
-    '/plant-profile/tillandsia-composition-gallery/03-spanish-moss-tail.png',
+    '/plant-profile/tillandsia-composition-gallery/03-spanish-moss-tail.webp',
     ['Spanish moss', 'Тилландсия уснеевидная'],
     plantProfile(
       careCards(
@@ -1786,9 +1792,9 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/tillandsia-composition-important.png',
-        propagationImage: '/plant-profile/tillandsia-composition-propagation.png',
-        saleImage: '/plant-profile/tillandsia-composition-for-sale.png',
+        importantImage: '/plant-profile/tillandsia-usneoides-important.webp',
+        propagationImage: '/plant-profile/tillandsia-usneoides-propagation.webp',
+        saleImage: '/plant-profile/tillandsia-usneoides-for-sale.webp',
         variants: profileVariants(
           ['The Thai composition', 'Композиция из Таиланда'],
           [
@@ -1796,15 +1802,15 @@ export const collectionPlants: readonly CollectionPlant[] = [
             'Галерея показывает, как уснеевидная тилландсия образовывала длинный серебристый хвост первоначальной композиции на кокосе и как обе тилландсии были оформлены после возвращения домой.',
           ],
           [
-            '/plant-profile/tillandsia-composition-gallery/02-full-composition.png',
+            '/plant-profile/tillandsia-composition-gallery/02-full-composition.webp',
             ['Original hanging composition', 'Первоначальная подвесная композиция'],
           ],
           [
-            '/plant-profile/tillandsia-composition-gallery/03-spanish-moss-tail.png',
+            '/plant-profile/tillandsia-composition-gallery/03-spanish-moss-tail.webp',
             ['Spanish moss in the composition', 'Уснеевидная тилландсия в композиции'],
           ],
           [
-            '/plant-profile/tillandsia-composition-gallery/04-current-display.png',
+            '/plant-profile/tillandsia-composition-gallery/04-current-display.webp',
             ['The new display at home', 'Новое оформление дома'],
           ],
         ),
@@ -1815,9 +1821,14 @@ export const collectionPlants: readonly CollectionPlant[] = [
   collectionPlant(
     'bromeliaceae',
     'tillandsia-ionantha-thai-composition',
-    '/plant-profile/tillandsia-composition-gallery/01-at-purchase.png',
+    '/plant-profile/tillandsia-composition-gallery/01-at-purchase.webp',
     ['Tillandsia ionantha', 'Тилландсия ионанта'],
     tillandsiaProfile({
+      assets: {
+        importantImage: '/plant-profile/tillandsia-ionantha-important.webp',
+        propagationImage: '/plant-profile/tillandsia-ionantha-propagation.webp',
+        saleImage: '/plant-profile/tillandsia-ionantha-for-sale.webp',
+      },
       facts: [
         [
           'The identification as Tillandsia ionantha is based on the compact silvery rosettes and the red blush of the central leaves; the original Thai composition had no surviving species label.',
@@ -1849,9 +1860,14 @@ export const collectionPlants: readonly CollectionPlant[] = [
   collectionPlant(
     'bromeliaceae',
     'tillandsia-andreana',
-    '/plants/tillandsia-andreana-home-photo.jpg',
+    '/plants/tillandsia-andreana-home-photo.webp',
     ['Tillandsia andreana', 'Тилландсия Андреана'],
     tillandsiaProfile({
+      assets: {
+        importantImage: '/plant-profile/tillandsia-andreana-important.webp',
+        propagationImage: '/plant-profile/tillandsia-andreana-propagation.webp',
+        saleImage: '/plant-profile/tillandsia-andreana-for-sale.webp',
+      },
       facts: [
         [
           'Tillandsia andreana is an accepted species rather than a horticultural hybrid.',
@@ -1882,9 +1898,14 @@ export const collectionPlants: readonly CollectionPlant[] = [
   collectionPlant(
     'bromeliaceae',
     'tillandsia-melanocrater',
-    '/plants/tillandsia-melanocrater-home-photo.jpg',
+    '/plants/tillandsia-melanocrater-home-photo.webp',
     ["Tillandsia 'Melanocrater'", 'Тилландсия Меланократер'],
     tillandsiaProfile({
+      assets: {
+        importantImage: '/plant-profile/tillandsia-melanocrater-important.webp',
+        propagationImage: '/plant-profile/tillandsia-melanocrater-propagation.webp',
+        saleImage: '/plant-profile/tillandsia-melanocrater-for-sale.webp',
+      },
       facts: [
         [
           'Plants of the World Online treats Tillandsia melanocrater as a synonym of the accepted Tillandsia tricolor.',
@@ -1915,7 +1936,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
   collectionPlant(
     'araceae',
     'dieffenbachia-snow',
-    '/plants/dieffenbachia-snow-home-photo.png',
+    '/plants/dieffenbachia-snow-home-photo.webp',
     ["Dieffenbachia 'Snow'", "Диффенбахия 'Snow'"],
     plantProfile(
       careCards(
@@ -2051,16 +2072,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/dieffenbachia-snow-important.png',
-        propagationImage: '/plant-profile/dieffenbachia-snow-propagation.png',
-        saleImage: '/plant-profile/dieffenbachia-snow-for-sale.png',
+        importantImage: '/plant-profile/dieffenbachia-snow-important.webp',
+        propagationImage: '/plant-profile/dieffenbachia-snow-propagation.webp',
+        saleImage: '/plant-profile/dieffenbachia-snow-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'apocynaceae',
     'hoya-pubicalyx-splash',
-    '/plants/hoya-pubicalyx-splash-home-photo.jpg',
+    '/plants/hoya-pubicalyx-splash-home-photo.webp',
     ["Hoya pubicalyx 'Splash'", "Хойя пубикаликс 'Splash'"],
     plantProfile(
       careCards(
@@ -2190,16 +2211,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/hoya-pubicalyx-splash-important.png',
-        propagationImage: '/plant-profile/hoya-pubicalyx-splash-propagation.png',
-        saleImage: '/plant-profile/hoya-pubicalyx-splash-for-sale.png',
+        importantImage: '/plant-profile/hoya-pubicalyx-splash-important.webp',
+        propagationImage: '/plant-profile/hoya-pubicalyx-splash-propagation.webp',
+        saleImage: '/plant-profile/hoya-pubicalyx-splash-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'piperaceae',
     'peperomia-caperata-santorini',
-    '/plants/peperomia-caperata-santorini-home-photo.jpg',
+    '/plants/peperomia-caperata-santorini-home-photo.webp',
     ["Peperomia 'Santorini'", "Пеперомия каперата 'Santorini'"],
     plantProfile(
       careCards(
@@ -2332,16 +2353,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/peperomia-santorini-important.png',
-        propagationImage: '/plant-profile/peperomia-santorini-propagation.png',
-        saleImage: '/plant-profile/peperomia-santorini-for-sale.png',
+        importantImage: '/plant-profile/peperomia-santorini-important.webp',
+        propagationImage: '/plant-profile/peperomia-santorini-propagation.webp',
+        saleImage: '/plant-profile/peperomia-santorini-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'vitaceae',
     'cissus-antarctica',
-    '/plants/cissus-antarctica-home-photo.jpg',
+    '/plants/cissus-antarctica-home-photo.webp',
     ['Kangaroo vine', 'Циссус антарктический'],
     plantProfile(
       careCards(
@@ -2464,17 +2485,17 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/important-vine.png',
-        propagationIcon: '/plant-profile/footer-propagation.png',
-        propagationImage: '/plant-profile/propagation-cuttings.jpg',
-        saleImage: '/plant-profile/cuttings-for-sale.png',
+        importantImage: '/plant-profile/important-vine.webp',
+        propagationIcon: '/plant-profile/footer-propagation.webp',
+        propagationImage: '/plant-profile/propagation-cuttings.webp',
+        saleImage: '/plant-profile/cuttings-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'crassulaceae',
     'sedum-burrito',
-    '/plants/sedum-burrito-home-photo.jpg',
+    '/plants/sedum-burrito-home-photo.webp',
     ['Burro’s tail “Burrito”', 'Очиток Буррито'],
     plantProfile(
       careCards(
@@ -2607,16 +2628,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/sedum-burrito-important.png',
-        propagationImage: '/plant-profile/sedum-burrito-propagation.png',
-        saleImage: '/plant-profile/sedum-burrito-for-sale.png',
+        importantImage: '/plant-profile/sedum-burrito-important.webp',
+        propagationImage: '/plant-profile/sedum-burrito-propagation.webp',
+        saleImage: '/plant-profile/sedum-burrito-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'crassulaceae',
     'succulent-groundcover-mix',
-    '/plants/succulent-mix-home-photo.jpg',
+    '/plants/succulent-mix-home-photo-portrait.webp',
     ['Succulent groundcover mix', 'Микс почвопокровных суккулентов'],
     plantProfile(
       careCards(
@@ -2752,9 +2773,9 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/succulent-mix-important.png',
-        propagationImage: '/plant-profile/succulent-mix-propagation.png',
-        saleImage: '/plant-profile/succulent-mix-for-sale.png',
+        importantImage: '/plant-profile/succulent-mix-important.webp',
+        propagationImage: '/plant-profile/succulent-mix-propagation.webp',
+        saleImage: '/plant-profile/succulent-mix-for-sale.webp',
       },
     ),
     3,
@@ -2762,7 +2783,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
   collectionPlant(
     'lamiaceae',
     'glechoma-hederacea-variegata',
-    '/plants/glechoma-hederacea-variegata-home-photo.jpg',
+    '/plants/glechoma-hederacea-variegata-home-photo.webp',
     ['Variegated ground ivy', 'Будра плющевидная пестролистная'],
     plantProfile(
       careCards(
@@ -2895,16 +2916,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/glechoma-variegata-important.png',
-        propagationImage: '/plant-profile/glechoma-variegata-propagation.png',
-        saleImage: '/plant-profile/glechoma-variegata-for-sale.png',
+        importantImage: '/plant-profile/glechoma-variegata-important.webp',
+        propagationImage: '/plant-profile/glechoma-variegata-propagation.webp',
+        saleImage: '/plant-profile/glechoma-variegata-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'marantaceae',
     'goeppertia-insignis',
-    '/plants/calathea-lancifolia-home-photo.jpg',
+    '/plants/calathea-lancifolia-home-photo.webp',
     ['Rattlesnake plant', 'Калатея лансифолия'],
     plantProfile(
       careCards(
@@ -3029,17 +3050,17 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/calathea-important-leaves.png',
-        propagationIcon: '/plant-profile/calathea-propagation-icon.png',
-        propagationImage: '/plant-profile/calathea-propagation.jpg',
-        saleImage: '/plant-profile/calathea-for-sale.png',
+        importantImage: '/plant-profile/calathea-important-leaves.webp',
+        propagationIcon: '/plant-profile/calathea-propagation-icon.webp',
+        propagationImage: '/plant-profile/calathea-propagation.webp',
+        saleImage: '/plant-profile/calathea-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'aizoaceae',
     'faucaria-tigrina',
-    '/plants/faucaria-tigrina-home-photo.jpg',
+    '/plants/faucaria-tigrina-home-photo.webp',
     ['Tiger jaws', 'Фаукария тигровая'],
     plantProfile(
       careCards(
@@ -3164,17 +3185,17 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/faucaria-important-leaves.png',
-        propagationIcon: '/plant-profile/faucaria-propagation-icon.png',
-        propagationImage: '/plant-profile/faucaria-propagation.jpg',
-        saleImage: '/plant-profile/faucaria-for-sale.png',
+        importantImage: '/plant-profile/faucaria-important-leaves.webp',
+        propagationIcon: '/plant-profile/faucaria-propagation-icon.webp',
+        propagationImage: '/plant-profile/faucaria-propagation.webp',
+        saleImage: '/plant-profile/faucaria-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'crassulaceae',
     'kalanchoe-tomentosa',
-    '/plants/kalanchoe-tomentosa-home-photo.jpg',
+    '/plants/kalanchoe-tomentosa-home-photo.webp',
     ['Panda plant', 'Каланхоэ войлочное'],
     plantProfile(
       careCards(
@@ -3302,17 +3323,17 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/kalanchoe-important-leaves.png',
-        propagationIcon: '/plant-profile/kalanchoe-propagation-icon.png',
-        propagationImage: '/plant-profile/kalanchoe-propagation.jpg',
-        saleImage: '/plant-profile/kalanchoe-for-sale.png',
+        importantImage: '/plant-profile/kalanchoe-important-leaves.webp',
+        propagationIcon: '/plant-profile/kalanchoe-propagation-icon.webp',
+        propagationImage: '/plant-profile/kalanchoe-propagation.webp',
+        saleImage: '/plant-profile/kalanchoe-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'marantaceae',
     'goeppertia-rufibarba',
-    '/plants/goeppertia-rufibarba-home-photo.jpg',
+    '/plants/goeppertia-rufibarba-home-photo.webp',
     ['Velvet calathea', 'Калатея руфибарба'],
     plantProfile(
       careCards(
@@ -3437,17 +3458,17 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/rufibarba-important-leaves.png',
-        propagationIcon: '/plant-profile/rufibarba-propagation-icon.png',
-        propagationImage: '/plant-profile/rufibarba-propagation.jpg',
-        saleImage: '/plant-profile/rufibarba-for-sale.png',
+        importantImage: '/plant-profile/rufibarba-important-leaves.webp',
+        propagationIcon: '/plant-profile/rufibarba-propagation-icon.webp',
+        propagationImage: '/plant-profile/rufibarba-propagation.webp',
+        saleImage: '/plant-profile/rufibarba-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'marantaceae',
     'goeppertia-elliptica-vittata',
-    '/plants/goeppertia-elliptica-vittata-home-photo.jpg',
+    '/plants/goeppertia-elliptica-vittata-home-photo.webp',
     ['Vittata calathea', 'Калатея виттата'],
     plantProfile(
       careCards(
@@ -3572,17 +3593,17 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/vittata-important-leaves.png',
-        propagationIcon: '/plant-profile/vittata-propagation-icon.png',
-        propagationImage: '/plant-profile/vittata-propagation.jpg',
-        saleImage: '/plant-profile/vittata-for-sale.png',
+        importantImage: '/plant-profile/vittata-important-leaves.webp',
+        propagationIcon: '/plant-profile/vittata-propagation-icon.webp',
+        propagationImage: '/plant-profile/vittata-propagation.webp',
+        saleImage: '/plant-profile/vittata-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'aglaonema-red-valentine',
-    '/plant-profile/aglaonema-red-valentine.jpg',
+    '/plant-profile/aglaonema-red-valentine.webp',
     ["Aglaonema 'Red Valentine'", "Аглаонема 'Red Valentine'"],
     plantProfile(
       careCards(
@@ -3714,16 +3735,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/aglaonema-red-valentine-important.png',
-        propagationImage: '/plant-profile/aglaonema-red-valentine-propagation.png',
-        saleImage: '/plant-profile/aglaonema-red-valentine-for-sale.png',
+        importantImage: '/plant-profile/aglaonema-red-valentine-important.webp',
+        propagationImage: '/plant-profile/aglaonema-red-valentine-propagation.webp',
+        saleImage: '/plant-profile/aglaonema-red-valentine-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'aglaonema-red-peacock',
-    '/plant-profile/aglaonema-red-peacock.jpg',
+    '/plant-profile/aglaonema-red-peacock.webp',
     ["Aglaonema 'Red Peacock'", "Аглаонема 'Red Peacock'"],
     aglaonemaProfile(
       'Red Peacock',
@@ -3752,16 +3773,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ],
       ['Compact, about 40–60 cm', 'Компактная, около 40–60 см'],
       {
-        importantImage: '/plant-profile/aglaonema-red-peacock-important.png',
-        propagationImage: '/plant-profile/aglaonema-red-peacock-propagation.png',
-        saleImage: '/plant-profile/aglaonema-red-peacock-for-sale.png',
+        importantImage: '/plant-profile/aglaonema-red-peacock-important.webp',
+        propagationImage: '/plant-profile/aglaonema-red-peacock-propagation.webp',
+        saleImage: '/plant-profile/aglaonema-red-peacock-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'aglaonema-siam-aurora',
-    '/plant-profile/aglaonema-siam-aurora.jpg',
+    '/plant-profile/aglaonema-siam-aurora.webp',
     ["Aglaonema 'Siam Aurora'", "Аглаонема 'Сиам Аврора'"],
     aglaonemaProfile(
       'Siam Aurora',
@@ -3790,16 +3811,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ],
       ['Compact, about 35–50 cm', 'Компактная, около 35–50 см'],
       {
-        importantImage: '/plant-profile/aglaonema-siam-aurora-important.png',
-        propagationImage: '/plant-profile/aglaonema-siam-aurora-propagation.png',
-        saleImage: '/plant-profile/aglaonema-siam-aurora-for-sale.png',
+        importantImage: '/plant-profile/aglaonema-siam-aurora-important.webp',
+        propagationImage: '/plant-profile/aglaonema-siam-aurora-propagation.webp',
+        saleImage: '/plant-profile/aglaonema-siam-aurora-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'aglaonema-silver-queen',
-    '/plant-profile/aglaonema-silver-queen.jpg',
+    '/plant-profile/aglaonema-silver-queen.webp',
     ["Aglaonema 'Silver Queen'", "Аглаонема 'Silver Queen'"],
     aglaonemaProfile(
       'Silver Queen',
@@ -3828,16 +3849,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ],
       ['Moderate, clump-forming', 'Умеренная, кустящаяся'],
       {
-        importantImage: '/plant-profile/aglaonema-silver-queen-important.png',
-        propagationImage: '/plant-profile/aglaonema-silver-queen-propagation.png',
-        saleImage: '/plant-profile/aglaonema-silver-queen-for-sale.png',
+        importantImage: '/plant-profile/aglaonema-silver-queen-important.webp',
+        propagationImage: '/plant-profile/aglaonema-silver-queen-propagation.webp',
+        saleImage: '/plant-profile/aglaonema-silver-queen-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'philodendron-white-wizard',
-    '/plants/philodendron-white-wizard-home-photo.jpg',
+    '/plants/philodendron-white-wizard-home-photo.webp',
     ["Philodendron 'White Wizard'", "Филодендрон 'White Wizard'"],
     plantProfile(
       careCards(
@@ -3970,16 +3991,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/white-wizard-important.png',
-        propagationImage: '/plant-profile/white-wizard-propagation.png',
-        saleImage: '/plant-profile/white-wizard-for-sale.png',
+        importantImage: '/plant-profile/white-wizard-important.webp',
+        propagationImage: '/plant-profile/white-wizard-propagation.webp',
+        saleImage: '/plant-profile/white-wizard-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'alocasia-baginda-dragon-scale',
-    '/plants/alocasia-baginda-dragon-scale-home-photo.jpg',
+    '/plants/alocasia-baginda-dragon-scale-home-photo.webp',
     ["Alocasia 'Dragon Scale'", "Алоказия 'Чешуя дракона'"],
     plantProfile(
       careCards(
@@ -4109,16 +4130,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/alocasia-dragon-scale-important.png',
-        propagationImage: '/plant-profile/alocasia-dragon-scale-propagation.png',
-        saleImage: '/plant-profile/alocasia-dragon-scale-for-sale.png',
+        importantImage: '/plant-profile/alocasia-dragon-scale-important.webp',
+        propagationImage: '/plant-profile/alocasia-dragon-scale-propagation.webp',
+        saleImage: '/plant-profile/alocasia-dragon-scale-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'alocasia-amazonica-bambino',
-    '/plants/alocasia-amazonica-bambino-home-photo.jpg',
+    '/plants/alocasia-amazonica-bambino-home-photo.webp',
     ["Alocasia 'Bambino'", "Алоказия 'Бамбино'"],
     plantProfile(
       careCards(
@@ -4248,16 +4269,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/alocasia-bambino-important.png',
-        propagationImage: '/plant-profile/alocasia-bambino-propagation.png',
-        saleImage: '/plant-profile/alocasia-bambino-for-sale.png',
+        importantImage: '/plant-profile/alocasia-bambino-important.webp',
+        propagationImage: '/plant-profile/alocasia-bambino-propagation.webp',
+        saleImage: '/plant-profile/alocasia-bambino-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'alocasia-black-velvet',
-    '/plants/alocasia-black-velvet-home-photo.jpg',
+    '/plants/alocasia-black-velvet-home-photo.webp',
     ["Alocasia 'Black Velvet'", "Алоказия 'Блэк Вельвет'"],
     plantProfile(
       careCards(
@@ -4390,16 +4411,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/alocasia-black-velvet-important.png',
-        propagationImage: '/plant-profile/alocasia-black-velvet-propagation.png',
-        saleImage: '/plant-profile/alocasia-black-velvet-for-sale.png',
+        importantImage: '/plant-profile/alocasia-black-velvet-important.webp',
+        propagationImage: '/plant-profile/alocasia-black-velvet-propagation.webp',
+        saleImage: '/plant-profile/alocasia-black-velvet-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'alocasia-tandurusa-jacklyn',
-    '/plants/alocasia-tandurusa-jacklyn-home-photo.jpg',
+    '/plants/alocasia-tandurusa-jacklyn-home-photo.webp',
     ["Alocasia 'Jacklyn'", "Алоказия 'Жаклин'"],
     plantProfile(
       careCards(
@@ -4529,16 +4550,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/alocasia-jacklyn-important.png',
-        propagationImage: '/plant-profile/alocasia-jacklyn-propagation.png',
-        saleImage: '/plant-profile/alocasia-jacklyn-for-sale.png',
+        importantImage: '/plant-profile/alocasia-jacklyn-important.webp',
+        propagationImage: '/plant-profile/alocasia-jacklyn-propagation.webp',
+        saleImage: '/plant-profile/alocasia-jacklyn-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'spathiphyllum-wallisii',
-    '/plants/spathiphyllum-wallisii-home-photo.jpg',
+    '/plants/spathiphyllum-wallisii-home-photo.webp',
     ['Peace lily', 'Спатифиллум Уоллиса'],
     plantProfile(
       careCards(
@@ -4674,16 +4695,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/spathiphyllum-important.png',
-        propagationImage: '/plant-profile/spathiphyllum-propagation.png',
-        saleImage: '/plant-profile/spathiphyllum-for-sale.png',
+        importantImage: '/plant-profile/spathiphyllum-important.webp',
+        propagationImage: '/plant-profile/spathiphyllum-propagation.webp',
+        saleImage: '/plant-profile/spathiphyllum-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'anthurium-andraeanum-red-hybrid',
-    '/plants/anthurium-andraeanum-red-hybrid-home-photo.jpg',
+    '/plants/anthurium-andraeanum-red-hybrid-home-photo.webp',
     ['Red flamingo flower', 'Антуриум Андре, красный гибрид'],
     plantProfile(
       careCards(
@@ -4819,16 +4840,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/anthurium-red-important.png',
-        propagationImage: '/plant-profile/anthurium-red-propagation.png',
-        saleImage: '/plant-profile/anthurium-red-for-sale.png',
+        importantImage: '/plant-profile/anthurium-red-important.webp',
+        propagationImage: '/plant-profile/anthurium-red-propagation.webp',
+        saleImage: '/plant-profile/anthurium-red-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'philodendron-erubescens-dark-hybrid',
-    '/plants/philodendron-erubescens-dark-hybrid-home-photo.jpg',
+    '/plants/philodendron-erubescens-dark-hybrid-home-photo.webp',
     ['Dark red-leaf philodendron', 'Филодендрон краснеющий, тёмнолистный гибрид'],
     plantProfile(
       careCards(
@@ -4961,16 +4982,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/philodendron-dark-important.png',
-        propagationImage: '/plant-profile/philodendron-dark-propagation.png',
-        saleImage: '/plant-profile/philodendron-dark-for-sale.png',
+        importantImage: '/plant-profile/philodendron-dark-important.webp',
+        propagationImage: '/plant-profile/philodendron-dark-propagation.webp',
+        saleImage: '/plant-profile/philodendron-dark-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'araceae',
     'monstera-adansonii',
-    '/plants/monstera-adansonii-home-photo.jpg',
+    '/plants/monstera-adansonii-home-photo.webp',
     ['Swiss cheese vine', 'Монстера адансони'],
     plantProfile(
       careCards(
@@ -5100,9 +5121,9 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/monstera-adansonii-important.png',
-        propagationImage: '/plant-profile/monstera-adansonii-propagation.png',
-        saleImage: '/plant-profile/monstera-adansonii-for-sale.png',
+        importantImage: '/plant-profile/monstera-adansonii-important.webp',
+        propagationImage: '/plant-profile/monstera-adansonii-propagation.webp',
+        saleImage: '/plant-profile/monstera-adansonii-for-sale.webp',
       },
     ),
   ),
@@ -5237,9 +5258,9 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/tradescantia-important.png',
-        propagationImage: '/plant-profile/tradescantia-propagation.png',
-        saleImage: '/plant-profile/tradescantia-for-sale.png',
+        importantImage: '/plant-profile/tradescantia-important.webp',
+        propagationImage: '/plant-profile/tradescantia-propagation.webp',
+        saleImage: '/plant-profile/tradescantia-for-sale.webp',
         variants: profileVariants(
           ['My Tradescantia collection', 'Моя коллекция традесканций'],
           [
@@ -5433,9 +5454,9 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/callisia-important.png',
-        propagationImage: '/plant-profile/callisia-propagation.png',
-        saleImage: '/plant-profile/callisia-for-sale.png',
+        importantImage: '/plant-profile/callisia-important.webp',
+        propagationImage: '/plant-profile/callisia-propagation.webp',
+        saleImage: '/plant-profile/callisia-for-sale.webp',
         variants: profileVariants(
           ['My Callisia collection', 'Моя коллекция каллизий'],
           [
@@ -5583,9 +5604,9 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/orchid-important.png',
-        propagationImage: '/plant-profile/orchid-propagation.png',
-        saleImage: '/plant-profile/orchid-for-sale.png',
+        importantImage: '/plant-profile/orchid-important.webp',
+        propagationImage: '/plant-profile/orchid-propagation.webp',
+        saleImage: '/plant-profile/orchid-for-sale.webp',
         variants: profileVariants(
           ['My Phalaenopsis collection', 'Моя коллекция фаленопсисов'],
           [
@@ -5628,7 +5649,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
   collectionPlant(
     'cactaceae',
     'echinopsis-sp',
-    '/plants/echinopsis-sp-home-photo.jpg',
+    '/plants/echinopsis-sp-home-photo.webp',
     ['Echinopsis cactus', 'Эхинопсис'],
     plantProfile(
       careCards(
@@ -5756,16 +5777,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/echinopsis-important.png',
-        propagationImage: '/plant-profile/echinopsis-propagation.png',
-        saleImage: '/plant-profile/echinopsis-for-sale.png',
+        importantImage: '/plant-profile/echinopsis-important.webp',
+        propagationImage: '/plant-profile/echinopsis-propagation.webp',
+        saleImage: '/plant-profile/echinopsis-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'cactaceae',
     'epiphyllum-oxypetalum',
-    '/plants/epiphyllum-oxypetalum-home-photo.jpg',
+    '/plants/epiphyllum-oxypetalum-home-photo.webp',
     ['Queen of the night cactus', 'Эпифиллум остролепестный'],
     plantProfile(
       careCards(
@@ -5892,16 +5913,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/epiphyllum-oxypetalum-important.png',
-        propagationImage: '/plant-profile/epiphyllum-oxypetalum-propagation.png',
-        saleImage: '/plant-profile/epiphyllum-oxypetalum-for-sale.png',
+        importantImage: '/plant-profile/epiphyllum-oxypetalum-important.webp',
+        propagationImage: '/plant-profile/epiphyllum-oxypetalum-propagation.webp',
+        saleImage: '/plant-profile/epiphyllum-oxypetalum-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'cycadaceae',
     'cycas-revoluta',
-    '/plants/cycas-revoluta-home-photo.jpg',
+    '/plants/cycas-revoluta-home-photo.webp',
     ['Sago palm', 'Цикас поникающий'],
     plantProfile(
       careCards(
@@ -6029,16 +6050,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/cycas-important.png',
-        propagationImage: '/plant-profile/cycas-propagation.png',
-        saleImage: '/plant-profile/cycas-for-sale.png',
+        importantImage: '/plant-profile/cycas-important.webp',
+        propagationImage: '/plant-profile/cycas-propagation.webp',
+        saleImage: '/plant-profile/cycas-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'gesneriaceae',
     'nematanthus-strigillosus',
-    '/plants/nematanthus-strigillosus-home-photo.jpg',
+    '/plants/nematanthus-strigillosus-home-photo.webp',
     ['Small-bristled nematanthus', 'Нематантус мелкощетинистый'],
     plantProfile(
       careCards(
@@ -6166,16 +6187,16 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/nematanthus-important.png',
-        propagationImage: '/plant-profile/nematanthus-propagation.png',
-        saleImage: '/plant-profile/nematanthus-for-sale.png',
+        importantImage: '/plant-profile/nematanthus-important.webp',
+        propagationImage: '/plant-profile/nematanthus-propagation.webp',
+        saleImage: '/plant-profile/nematanthus-for-sale.webp',
       },
     ),
   ),
   collectionPlant(
     'gesneriaceae',
     'sinningia-speciosa',
-    '/plant-profile/gloxinia-cover.jpg',
+    '/plant-profile/gloxinia-cover-portrait.webp',
     ["Florist's gloxinia", 'Глоксиния'],
     plantProfile(
       careCards(
@@ -6300,9 +6321,9 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
       ),
       {
-        importantImage: '/plant-profile/gloxinia-important.png',
-        propagationImage: '/plant-profile/gloxinia-propagation.png',
-        saleImage: '/plant-profile/gloxinia-for-sale.png',
+        importantImage: '/plant-profile/gloxinia-important.webp',
+        propagationImage: '/plant-profile/gloxinia-propagation.webp',
+        saleImage: '/plant-profile/gloxinia-for-sale.webp',
         variants: profileVariants(
           ['My collection of colours', 'Моя коллекция расцветок'],
           [

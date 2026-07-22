@@ -61,7 +61,9 @@ export const CategoryCollectionSection = ({
               <Image
                 alt=""
                 background="#fffaf1"
+                decoding="async"
                 flexShrink={0}
+                loading="lazy"
                 objectFit="contain"
                 src={plant.image}
                 width="100%"

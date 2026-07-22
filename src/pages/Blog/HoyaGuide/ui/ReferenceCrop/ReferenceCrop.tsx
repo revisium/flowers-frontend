@@ -17,7 +17,7 @@ export const ReferenceCrop = ({ alt, crop, rounded = '20px' }: ReferenceCropProp
   return (
     <Box
       aria-label={alt}
-      backgroundImage="url('/blog/hoya-pubicalyx-care/hoya-pubicalyx-reference.png')"
+      backgroundImage="url('/blog/hoya-pubicalyx-care/hoya-pubicalyx-reference.webp')"
       backgroundPosition={`${xPosition}% ${yPosition}%`}
       backgroundRepeat="no-repeat"
       backgroundSize={`${(SOURCE_WIDTH / width) * 100}% auto`}

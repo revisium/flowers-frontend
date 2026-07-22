@@ -57,7 +57,7 @@ const guideDefinitions: readonly CareGuideDefinition[] = [
     accent: '#8a9b69',
     eyebrow: localized('Water · 2 minutes', 'Полив · 2 минуты'),
     id: 'watering',
-    image: '/care/care-watering.jpg',
+    image: '/care/care-watering.webp',
     summary: localized(
       'Check the potting mix first, and only then reach for the watering can.',
       'Сначала проверьте грунт, и только потом беритесь за лейку.',
@@ -76,7 +76,7 @@ const guideDefinitions: readonly CareGuideDefinition[] = [
     accent: '#c8a96a',
     eyebrow: localized('Light · every day', 'Свет · каждый день'),
     id: 'light',
-    image: '/care/care-light.jpg',
+    image: '/care/care-light.webp',
     summary: localized(
       'Most houseplants thrive in plenty of bright, indirect light.',
       'Большинству комнатных растений подходит яркий рассеянный свет.',
@@ -99,7 +99,7 @@ const guideDefinitions: readonly CareGuideDefinition[] = [
     accent: '#ad7755',
     eyebrow: localized('Repot · when needed', 'Пересадка · по сигналу'),
     id: 'repotting',
-    image: '/care/care-repotting.jpg',
+    image: '/care/care-repotting.webp',
     imagePosition: 'center 58%',
     summary: localized(
       'A new pot is useful when the roots have truly run out of room.',

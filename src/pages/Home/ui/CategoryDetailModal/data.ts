@@ -22,18 +22,18 @@ interface LocalizedPlant extends LocalizedText {
 }
 
 const assets = {
-  aglaonema: '/plants/araceae-modal/aglaonema.jpg',
-  alocasia: '/plants/araceae-modal/alocasia.jpg',
-  anthurium: '/plants/araceae-modal/anthurium.jpg',
-  hero: '/plants/araceae-modal/hero-cutout-transparent.png',
-  map: '/plants/araceae-modal/origin-map-transparent.png',
-  monstera: '/plants/araceae-modal/monstera.jpg',
-  philodendron: '/plants/araceae-modal/philodendron.jpg',
-  spathiphyllum: '/plants/araceae-modal/spathiphyllum.jpg',
+  aglaonema: '/plants/araceae-modal/aglaonema.webp',
+  alocasia: '/plants/araceae-modal/alocasia.webp',
+  anthurium: '/plants/araceae-modal/anthurium.webp',
+  hero: '/plants/araceae-modal/hero-cutout-transparent.webp',
+  map: '/plants/araceae-modal/origin-map-transparent.webp',
+  monstera: '/plants/araceae-modal/monstera.webp',
+  philodendron: '/plants/araceae-modal/philodendron.webp',
+  spathiphyllum: '/plants/araceae-modal/spathiphyllum.webp',
 } as const;
 
-const categoryImage = (id: CategoryId) => `/plants/categories/studio/${id}.jpg`;
-const categoryCutout = (id: CategoryId) => `/plants/categories/generated/${id}.png`;
+const categoryImage = (id: CategoryId) => `/plants/categories/studio/${id}.webp`;
+const categoryCutout = (id: CategoryId) => `/plants/categories/generated/${id}.webp`;
 
 const createTrait = (body: string, image: string): CategoryTrait => ({ body, image });
 

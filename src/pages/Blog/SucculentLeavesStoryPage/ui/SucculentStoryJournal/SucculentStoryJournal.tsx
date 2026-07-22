@@ -23,7 +23,7 @@ export const SucculentStoryJournal = ({ locale, text }: SucculentStoryJournalPro
           alt=""
           aria-hidden="true"
           height="34px"
-          src="/about/botanical-heading-sprig-v2.png"
+          src="/about/botanical-heading-sprig-v2.webp"
           width="auto"
         />
         <Text
