@@ -1520,37 +1520,37 @@ export const collectionPlants: readonly CollectionPlant[] = [
   ),
   collectionPlant(
     'bromeliaceae',
-    'tillandsia-thai-composition',
-    '/plants/tillandsia-composition-home-photo.png',
-    ['Air-plant composition', 'Композиция из тилландсий'],
+    'tillandsia-usneoides-thai-composition',
+    '/plant-profile/tillandsia-composition-gallery/03-spanish-moss-tail.png',
+    ['Spanish moss', 'Тилландсия уснеевидная'],
     plantProfile(
       careCards(
         [
           ['Light', 'Освещение'],
           [
-            'Give bright diffused light with a little gentle morning or evening sun. Strong midday rays can scorch dry silver leaves, while deep shade weakens the rosettes and slows the Spanish moss.',
-            'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Жёсткие полуденные лучи могут обжечь сухие серебристые листья, а глубокая тень ослабляет розетки и замедляет рост испанского мха.',
+            'Give bright diffused light with a little gentle morning or evening sun. Strong midday rays can scorch the fine silver strands, while deep shade causes weak, sparse growth.',
+            'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Жёсткие полуденные лучи могут обжечь тонкие серебристые пряди, а глубокая тень приводит к слабому и редкому росту.',
           ],
         ],
         [
           ['Watering', 'Полив'],
           [
-            'Thoroughly wet the plants with soft rain, filtered or settled water once or twice a week, adjusting to heat and dryness. Soak or rinse the rosettes and Spanish moss separately, then shake off excess water.',
-            'Один-два раза в неделю полностью смачивайте растения мягкой дождевой, фильтрованной или отстоянной водой, корректируя частоту по жаре и сухости воздуха. Замачивайте или промывайте розетки и испанский мох отдельно, после чего стряхивайте лишнюю воду.',
+            'Thoroughly wet the entire strand with soft rain, filtered or settled water once or twice a week, and more often in hot, dry air. A generous rinse or short soak should reach the inner stems, not only the outer surface.',
+            'Один-два раза в неделю полностью смачивайте всю прядь мягкой дождевой, фильтрованной или отстоянной водой, а в жарком сухом воздухе — чаще. Обильное промывание или короткое замачивание должно увлажнить внутренние стебли, а не только наружный слой.',
           ],
         ],
         [
           ['Drying and airflow', 'Просушка и воздух'],
           [
-            'After watering, place rosettes upside down until their centres are completely dry and hang Spanish moss loosely. Constant air movement matters more than very high humidity; never return the plants wet to a tight holder.',
-            'После полива переворачивайте розетки и оставляйте до полного высыхания центра, а испанский мох развешивайте свободно. Постоянное движение воздуха важнее очень высокой влажности; не возвращайте мокрые растения в тесный держатель.',
+            'After watering, shake the strand gently, spread it out and hang it loosely so air reaches the centre. Constant air movement matters more than very high humidity; never leave the plant compressed into a dense wet bundle.',
+            'После полива аккуратно встряхните прядь, расправьте и свободно развесьте, чтобы воздух проходил к центру. Постоянное движение воздуха важнее очень высокой влажности; не оставляйте растение сжатым в плотный мокрый пучок.',
           ],
         ],
         [
           ['Temperature', 'Температура'],
           [
-            'Keep at about 18–30 °C with no cold draughts or contact with icy glass. In a cooler, darker season reduce wetting frequency but do not let the fine Spanish moss remain dry for many weeks.',
-            'Содержите примерно при 18–30 °C без холодных сквозняков и контакта с ледяным стеклом. В прохладный тёмный сезон сокращайте частоту намокания, но не оставляйте тонкий испанский мох сухим на много недель.',
+            'Keep at about 15–30 °C with no cold draughts or contact with icy glass. In a cooler, darker season reduce wetting frequency, but do not let the fine strands remain dry and brittle for many weeks.',
+            'Содержите примерно при 15–30 °C без холодных сквозняков и контакта с ледяным стеклом. В прохладный тёмный сезон сокращайте частоту намокания, но не оставляйте тонкие пряди сухими и ломкими на много недель.',
           ],
         ],
       ),
@@ -1562,91 +1562,91 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ],
         [
           ['Origin', 'Происхождение'],
-          ['Composition brought from Thailand', 'Композиция привезена из Таиланда'],
+          ['Tropical and subtropical America', 'Тропическая и субтропическая Америка'],
         ],
         [
           ['Plant type', 'Тип растения'],
-          ['Soil-free evergreen epiphytes', 'Вечнозелёные эпифиты без грунта'],
+          ['Trailing rootless epiphyte', 'Свисающий эпифит без взрослых корней'],
         ],
       ),
       profileFooter(
         [
           [
-            'The long silver tail is Tillandsia usneoides, commonly called Spanish moss, although it is neither Spanish nor a moss.',
-            'Its surface scales, or trichomes, take up moisture and dissolved nutrients directly from the air and water.',
-            'Mature Spanish moss has no functional roots and can simply hang from a support without soil.',
-            'The upper rosette-form Tillandsias produce pups around their bases, gradually turning one plant into a cluster.',
+            'Spanish moss is a flowering bromeliad rather than a true moss, and it comes from the Americas rather than Spain.',
+            'Its surface scales, or trichomes, take up moisture and dissolved nutrients directly from air and water.',
+            'Mature plants have no functional roots and simply tangle around branches or other open supports.',
+            'A long curtain is formed by many short overlapping shoots rather than one continuous stem.',
           ],
           [
-            'Длинный серебристый хвост — Tillandsia usneoides, которую называют испанским мхом, хотя это не мох и происходит она не из Испании.',
+            '«Испанский мох» — цветковое растение из семейства бромелиевых, а не настоящий мох; родом оно из Америки, а не из Испании.',
             'Поверхностные чешуйки — трихомы — поглощают влагу и растворённые питательные вещества прямо из воздуха и воды.',
-            'У взрослого испанского мха нет функционирующих корней: он может просто свободно висеть на опоре без грунта.',
-            'Верхние розеточные тилландсии образуют у основания деток и постепенно превращаются из одного растения в целую группу.',
+            'У взрослого растения нет функционирующих корней: оно просто цепляется перепутанными побегами за ветви или открытые опоры.',
+            'Длинная завеса состоит из множества коротких перекрывающихся побегов, а не из одного непрерывного стебля.',
           ],
         ],
         [
-          'The greatest risk is water trapped inside a rosette or a dense wet bundle. After every soak, shake the plants carefully, dry the rosettes upside down and spread Spanish moss loosely. Do not seal wet Tillandsias inside glass or press them against a damp mount.',
-          'Главный риск — вода, застоявшаяся внутри розетки или плотного мокрого пучка. После каждого замачивания аккуратно стряхивайте растения, сушите розетки вверх дном и свободно расправляйте испанский мох. Не закрывайте мокрые тилландсии в стекле и не прижимайте их к сырой основе.',
+          'The greatest risk is a dense wet bundle with no air in its centre. After every soak, shake the strand carefully and spread it loosely. At the same time, do not let the fine living tips remain completely dry until they become brittle.',
+          'Главный риск — плотный мокрый пучок без воздуха в центре. После каждого замачивания аккуратно встряхивайте и свободно расправляйте прядь. При этом не оставляйте тонкие живые кончики полностью сухими до состояния ломкости.',
         ],
         [
           [
             'Dry tightly curled tips and brittle Spanish moss — increase watering frequency and check hot direct sun.',
-            'A dark soft base or musty smell — remove the plant from its holder, dry it quickly and inspect for rot.',
-            'Pale stretched rosettes with little growth — move gradually to brighter diffused light.',
-            'White cottony clusters or sticky patches — isolate the composition and inspect for mealybugs or scale.',
+            'Dark soft stems or a musty smell — separate the bundle, dry it quickly and remove decaying sections.',
+            'Sparse pale new growth — move gradually to brighter diffused light.',
+            'White cottony clusters or sticky patches — isolate the strand and inspect for mealybugs or scale.',
           ],
           [
             'Сухие сильно скрученные кончики и ломкий испанский мох — поливайте чаще и проверьте, нет ли жаркого прямого солнца.',
-            'Тёмное мягкое основание или затхлый запах — выньте растение из держателя, быстро просушите и проверьте на гниль.',
-            'Бледные вытянутые розетки без заметного роста — постепенно переставьте на более яркий рассеянный свет.',
-            'Белые ватные комочки или липкие участки — изолируйте композицию и проверьте её на мучнистого червеца или щитовку.',
+            'Тёмные мягкие стебли или затхлый запах — разделите пучок, быстро просушите и удалите загнивающие участки.',
+            'Редкий бледный новый рост — постепенно переставьте на более яркий рассеянный свет.',
+            'Белые ватные комочки или липкие участки — изолируйте прядь и проверьте её на мучнистого червеца или щитовку.',
           ],
         ],
         [
-          'Separate a rosette pup when it reaches roughly one-third to one-half of the mother plant and releases with a gentle twist, or leave the pups together for a fuller cluster. Spanish moss is even simpler: divide a healthy strand into generous sections and hang each one where it receives light, water and moving air.',
-          'Отделяйте детку розеточной тилландсии, когда она достигнет примерно трети или половины размера материнского растения и легко отделится аккуратным поворотом, либо оставляйте деток вместе для пышной группы. Испанский мох размножается ещё проще: разделите здоровую прядь на достаточно крупные части и развесьте каждую там, где есть свет, вода и движение воздуха.',
+          'Divide a healthy strand into generous sections rather than tiny fragments. Hang each section where it receives bright light, regular wetting and moving air; the overlapping shoots will continue branching and tangling together.',
+          'Разделите здоровую прядь на достаточно крупные части, а не на мелкие обрывки. Развесьте каждую там, где есть яркий свет, регулярное увлажнение и движение воздуха: перекрывающиеся побеги продолжат ветвиться и переплетаться.',
         ],
       ),
-      'Tillandsia spp. with Tillandsia usneoides',
+      'Tillandsia usneoides',
       [
-        'This composition travelled home with me from Thailand. There it was sold as a finished hanging piece: a lush crest of rosette Tillandsias above, a long silver tail of Spanish moss below, all fixed to a coconut base. Because I could not take the coconut onto the plane, I carefully dismantled the arrangement and carried each part separately. At home, the Tillandsias received a new display — still without a pot or soil, but with the memory of their original Thai composition preserved.',
-        'Эта композиция приехала со мной из Таиланда. Там её продавали как готовый подвес: сверху — пышный хохолок из розеточных тилландсий, снизу — длинный серебристый хвост испанского мха, а всё вместе было закреплено на кокосовой основе. Поскольку взять кокос в самолёт было нельзя, перед дорогой мне пришлось аккуратно разобрать композицию и везти каждую часть отдельно. Уже дома у тилландсий появилось новое место — по-прежнему без горшка и грунта, но с сохранённой памятью об их первоначальном тайском образе.',
+        'I brought this Spanish moss home from Thailand as the long silver tail of a finished hanging composition. Above it, a group of rosette Tillandsias was fixed to a coconut base. I could not take the coconut onto the plane, so I carefully dismantled the arrangement and carried both plants separately. At home, this Tillandsia kept its cascading shape in a new soil-free display.',
+        'Эту уснеевидную тилландсию я привезла из Таиланда как длинный серебристый хвост готовой подвесной композиции. Над ней на кокосовой основе была закреплена группа розеточных тилландсий. Взять кокос в самолёт было нельзя, поэтому перед дорогой я аккуратно разобрала композицию и везла оба растения отдельно. Дома тилландсия сохранила свою каскадную форму уже в новом оформлении без грунта.',
       ],
       [
-        'A living composition of soil-free epiphytes combines sculptural rosette Tillandsias with a long curtain of Tillandsia usneoides. Their silvery surface is covered in specialised scales that collect moisture, allowing the plants to live on open supports instead of in a flowerpot.',
-        'Живая композиция из эпифитов без грунта объединяет скульптурные розеточные тилландсии и длинную завесу Tillandsia usneoides. Их серебристая поверхность покрыта особыми чешуйками, собирающими влагу, поэтому растения способны жить на открытых опорах вместо цветочного горшка.',
+        'Tillandsia usneoides is a rootless trailing epiphyte that forms long silver-grey curtains of branching, overlapping shoots. Specialised scales cover its narrow leaves and stems, collecting water directly from rain, mist and humid air.',
+        'Тилландсия уснеевидная — свисающий эпифит без взрослых корней, образующий длинные серебристо-серые завесы из ветвящихся перекрывающихся побегов. Узкие листья и стебли покрыты особыми чешуйками, собирающими воду прямо из дождя, тумана и влажного воздуха.',
       ],
       quickFacts(
-        ['Slow to moderate', 'Медленный или умеренный'],
-        ['Rosettes 10–30 cm; trails can exceed 1 m', 'Розетки 10–30 см; пряди длиннее 1 м'],
+        ['Moderate', 'Умеренный'],
+        ['Trailing strands can exceed 1 m', 'Свисающие пряди могут быть длиннее 1 м'],
       ),
       careCards(
         [
           ['Mounting', 'Размещение'],
           [
-            'Use an open wire holder, cork, dry branch or loose natural fibre that does not trap water. Avoid direct contact with bare copper and tight bindings, and make sure every rosette can be removed or turned for drying.',
-            'Используйте открытую проволочную подставку, пробку, сухую ветку или рыхлое натуральное волокно, не задерживающее воду. Избегайте прямого контакта с необработанной медью и тугих креплений; каждая розетка должна легко выниматься или переворачиваться для просушки.',
+            'Hang the strand from a dry branch, hook or other open support that does not trap water. Spread it over several contact points rather than compressing it under a tight tie, and avoid direct contact with bare copper.',
+            'Развесьте прядь на сухой ветке, крючке или другой открытой опоре, не задерживающей воду. Распределите её по нескольким точкам опоры вместо сжатия тугой завязкой и избегайте прямого контакта с необработанной медью.',
           ],
         ],
         [
           ['Feeding', 'Подкормки'],
           [
-            'During active growth, add a quarter-strength bromeliad or orchid fertiliser to the water about once a month. Use little fertiliser and occasionally rinse the foliage with clean soft water.',
-            'В период активного роста примерно раз в месяц добавляйте в воду четверть дозы удобрения для бромелиевых или орхидей. Используйте минимум удобрения и иногда промывайте листву чистой мягкой водой.',
+            'During active growth, add a quarter-strength bromeliad or orchid fertiliser to the water about once a month. Use very little fertiliser and regularly rinse the strand with clean soft water.',
+            'В период активного роста примерно раз в месяц добавляйте в воду четверть дозы удобрения для бромелиевых или орхидей. Используйте минимум удобрения и регулярно промывайте прядь чистой мягкой водой.',
           ],
         ],
         [
           ['Cleaning', 'Очищение'],
           [
-            'Remove dust with a gentle rinse rather than wiping the leaves: rubbing damages the moisture-absorbing trichomes. Pick out only loose dead fragments and never coat the plants with leaf shine.',
-            'Удаляйте пыль лёгким промыванием, а не протиранием: трение повреждает поглощающие влагу трихомы. Убирайте только свободные сухие фрагменты и никогда не покрывайте растения полиролью.',
+            'Remove dust with a gentle rinse rather than rubbing the fine shoots. Tease apart compacted sections, remove only fully dead brown fragments and never coat the plant with leaf shine.',
+            'Удаляйте пыль лёгким промыванием, не растирая тонкие побеги. Осторожно распутывайте уплотнившиеся участки, убирайте только полностью отмершие коричневые фрагменты и никогда не покрывайте растение полиролью.',
           ],
         ],
         [
           ['Seasonal rhythm', 'Сезонный ритм'],
           [
-            'In warm bright months, check the plants often and water more regularly. In winter, keep them in the brightest suitable position, wet less often and prioritise complete drying before night.',
-            'В тёплые светлые месяцы чаще проверяйте растения и регулярно увлажняйте. Зимой держите их в самом светлом подходящем месте, мочите реже и обязательно полностью просушивайте до ночи.',
+            'In warm bright months, check the strand often and wet it more regularly. In winter, keep it in the brightest suitable position, water less often and prioritise complete drying before night.',
+            'В тёплые светлые месяцы чаще проверяйте прядь и регулярно увлажняйте. Зимой держите её в самом светлом подходящем месте, мочите реже и обязательно полностью просушивайте до ночи.',
           ],
         ],
       ),
@@ -1655,14 +1655,10 @@ export const collectionPlants: readonly CollectionPlant[] = [
         propagationImage: '/plant-profile/tillandsia-composition-propagation.png',
         saleImage: '/plant-profile/tillandsia-composition-for-sale.png',
         variants: profileVariants(
-          ['From Thailand to home', 'Из Таиланда домой'],
+          ['The Thai composition', 'Композиция из Таиланда'],
           [
-            'The gallery preserves the story of the composition: its rosette crest at purchase, the complete coconut-mounted form, the long Spanish-moss tail and the new display assembled at home.',
-            'Галерея сохраняет историю композиции: хохолок из розеток при покупке, первоначальный подвес на кокосе, длинный хвост испанского мха и новое оформление, собранное уже дома.',
-          ],
-          [
-            '/plant-profile/tillandsia-composition-gallery/01-at-purchase.png',
-            ['The crest at purchase', 'Хохолок при покупке'],
+            'The gallery shows how this Spanish moss formed the long silver tail of the original coconut-mounted composition and how the two Tillandsias were displayed after the journey home.',
+            'Галерея показывает, как уснеевидная тилландсия образовывала длинный серебристый хвост первоначальной композиции на кокосе и как обе тилландсии были оформлены после возвращения домой.',
           ],
           [
             '/plant-profile/tillandsia-composition-gallery/02-full-composition.png',
@@ -1670,16 +1666,50 @@ export const collectionPlants: readonly CollectionPlant[] = [
           ],
           [
             '/plant-profile/tillandsia-composition-gallery/03-spanish-moss-tail.png',
-            ['The long silver tail', 'Длинный серебристый хвост'],
+            ['Spanish moss in the composition', 'Уснеевидная тилландсия в композиции'],
           ],
           [
             '/plant-profile/tillandsia-composition-gallery/04-current-display.png',
-            ['How it looks now', 'Как выглядит сейчас'],
+            ['The new display at home', 'Новое оформление дома'],
           ],
         ),
       },
     ),
-    2,
+    1,
+  ),
+  collectionPlant(
+    'bromeliaceae',
+    'tillandsia-ionantha-thai-composition',
+    '/plant-profile/tillandsia-composition-gallery/01-at-purchase.png',
+    ['Tillandsia ionantha', 'Тилландсия ионанта'],
+    tillandsiaProfile({
+      facts: [
+        [
+          'The identification as Tillandsia ionantha is based on the compact silvery rosettes and the red blush of the central leaves; the original Thai composition had no surviving species label.',
+          'The accepted species is native from Mexico through Central America.',
+          'The narrow green leaves are densely packed and covered with silvery moisture-absorbing scales, especially near the base.',
+          'Before flowering, mature rosettes can blush red and produce tubular violet flowers, then form pups around the base.',
+        ],
+        [
+          'Определение как Tillandsia ionantha сделано по компактным серебристым розеткам и краснеющим центральным листьям; исходная тайская композиция не сохранила бирку с видом.',
+          'Признанный вид в природе распространён от Мексики до Центральной Америки.',
+          'Узкие зелёные листья плотно собраны и покрыты серебристыми поглощающими влагу чешуйками, особенно у основания.',
+          'Перед цветением взрослые розетки могут краснеть и выпускать трубчатые фиолетовые цветки, а затем образуют деток у основания.',
+        ],
+      ],
+      height: ['Rosettes usually up to 10 cm', 'Розетки обычно до 10 см'],
+      latinName: 'Tillandsia cf. ionantha',
+      notes: [
+        'I brought this group home from Thailand as the upper crest of a finished hanging composition. The rosettes were fixed above a long curtain of Tillandsia usneoides on a coconut base. I could not take the coconut onto the plane, so I carefully dismantled the arrangement and carried both plants separately. At home, the rosettes became their own collection plant while keeping the story of that composition.',
+        'Эту группу розеток я привезла из Таиланда как верхний хохолок готовой подвесной композиции. Розетки были закреплены на кокосовой основе над длинной завесой Tillandsia usneoides. Взять кокос в самолёт было нельзя, поэтому перед дорогой я аккуратно разобрала композицию и везла оба растения отдельно. Дома розетки стали самостоятельным растением коллекции, сохранив историю того тайского подвеса.',
+      ],
+      origin: ['Mexico to Central America', 'Мексика и Центральная Америка'],
+      overview: [
+        'A compact air plant that grows as dense silver-green rosettes and readily forms a cluster of offsets. The red blush visible on the central leaves is characteristic of Tillandsia ionantha approaching bloom, which makes this the most likely identification from the surviving photographs.',
+        'Компактная атмосферная тилландсия, образующая плотные серебристо-зелёные розетки и группу деток. Красный румянец на центральных листьях характерен для Tillandsia ionantha перед цветением, поэтому по сохранившимся фотографиям это наиболее вероятное определение.',
+      ],
+    }),
+    1,
   ),
   collectionPlant(
     'bromeliaceae',

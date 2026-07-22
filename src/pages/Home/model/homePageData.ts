@@ -140,7 +140,7 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     name: { en: 'Asphodel family', ru: 'Асфоделовые' },
   },
   {
-    count: { en: '7 plants', ru: '7 растений' },
+    count: { en: '4 plants', ru: '4 растения' },
     id: 'bromeliaceae',
     image: '/plants/categories/studio/bromeliaceae.jpg',
     imageObjectPosition: 'center',
