@@ -134,7 +134,7 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     name: { en: 'Dogbane family', ru: 'Кутровые' },
   },
   {
-    count: { en: '1 plant', ru: '1 растение' },
+    count: { en: '2 plants', ru: '2 растения' },
     id: 'asphodelaceae',
     image: '/plants/categories/studio/asphodelaceae.jpg',
     name: { en: 'Asphodel family', ru: 'Асфоделовые' },

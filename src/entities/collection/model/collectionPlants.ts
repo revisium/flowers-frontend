@@ -1519,6 +1519,141 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ),
   ),
   collectionPlant(
+    'asphodelaceae',
+    'haworthia-cymbiformis-rescue',
+    '/plants/haworthia-cymbiformis-rescue-home-photo.jpg',
+    ['Boat-formed haworthia', 'Хавортия ладьевидная'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Place in bright diffused light with a little gentle morning or evening sun. The translucent leaf windows look clearest in good light, but harsh midday rays behind glass can leave dry pale burns.',
+            'Поставьте на яркий рассеянный свет с небольшим количеством мягкого утреннего или вечернего солнца. При хорошем освещении полупрозрачные «окошки» на листьях особенно выразительны, а жёсткие полуденные лучи за стеклом могут оставить сухие светлые ожоги.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Water thoroughly when the substrate is almost completely dry, then drain every drop of excess water. During recovery, do not try to compensate for wrinkled leaves with frequent watering: healthy roots and a steady wet-dry rhythm matter more.',
+            'Поливайте обильно, когда субстрат почти полностью просохнет, и обязательно сливайте всю лишнюю воду. Во время восстановления не пытайтесь компенсировать сморщенные листья частыми поливами: здоровые корни и спокойный ритм «намокло — просохло» важнее.',
+          ],
+        ],
+        [
+          ['Humidity and airflow', 'Влажность и воздух'],
+          [
+            'Normal room humidity and regular airflow are ideal. Do not mist the rosette and do not leave water between the leaves, especially in cool weather.',
+            'Подходят обычная комнатная влажность и регулярное движение воздуха. Не опрыскивайте розетку и не оставляйте воду между листьями, особенно в прохладную погоду.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at about 16–26 °C during active growth. A brighter, cooler winter at roughly 10–16 °C is suitable if the substrate is kept much drier; protect the plant from frost and cold wet roots.',
+            'В период роста содержите примерно при 16–26 °C. Зимой подойдёт более светлое и прохладное место около 10–16 °C при значительно более сухом содержании; защищайте растение от заморозков и холодных мокрых корней.',
+          ],
+        ],
+      ),
+      1,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Asphodel family (Asphodelaceae)', 'Асфоделовые (Asphodelaceae)'],
+        ],
+        [
+          ['Origin', 'Родина'],
+          [
+            'Southern and south-eastern Cape Provinces of South Africa',
+            'Юг и юго-восток Капской области Южной Африки',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Compact rosette succulent', 'Компактный розеточный суккулент'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'The identification is provisional: the broad boat-shaped leaves with translucent windowed tips most closely match Haworthia cymbiformis.',
+            'The species name cymbiformis means “boat-shaped” and refers to the leaf form.',
+            'The clear areas at the leaf tips transmit light deeper into the leaf when the plant grows partly sheltered in its native habitat.',
+            'A healthy mature rosette readily produces offsets and slowly forms a compact group.',
+          ],
+          [
+            'Определение предварительное: широкие ладьевидные листья с полупрозрачными «окошками» на концах больше всего соответствуют Haworthia cymbiformis.',
+            'Видовое название cymbiformis означает «ладьевидная» и описывает форму листьев.',
+            'Прозрачные участки на концах листьев проводят свет вглубь тканей, когда растение частично укрыто в естественной среде.',
+            'Здоровая взрослая розетка охотно образует деток и постепенно превращается в компактную группу.',
+          ],
+        ],
+        [
+          'For a recently rescued, dehydrated plant, inspect the roots before increasing watering. Remove only dead tissue, use a small pot with a drainage hole and wait for firm new growth rather than expecting damaged leaves to become perfect again.',
+          'У недавно спасённого и обезвоженного растения сначала проверьте корни и только потом увеличивайте полив. Удалите лишь отмершие ткани, используйте небольшой горшок с дренажным отверстием и ориентируйтесь на крепкий новый рост: повреждённые листья уже не станут идеальными.',
+        ],
+        [
+          [
+            'Soft translucent leaves and a dark loose base — stop watering and inspect the roots for rot.',
+            'Deep wrinkles with a dry, firm base — check whether the roots are alive and adjust watering gradually.',
+            'A stretched pale rosette — move the plant gradually into brighter diffused light.',
+            'Dry bleached patches — protect from abrupt exposure to strong direct sun.',
+          ],
+          [
+            'Листья размягчаются и становятся водянисто-прозрачными, основание темнеет — прекратите полив и проверьте корни на гниль.',
+            'Листья сильно сморщены, но основание сухое и плотное — проверьте состояние корней и корректируйте полив постепенно.',
+            'Розетка вытягивается и бледнеет — постепенно переставьте растение на более яркий рассеянный свет.',
+            'Появились сухие выбеленные пятна — защитите от резкого попадания сильного прямого солнца.',
+          ],
+        ],
+        [
+          'Separate a well-rooted offset in the warm growing season. Let any damaged surface dry for one or two days, then place the offset in a small pot of dry gritty mix and begin light watering only after several days.',
+          'Отделяйте детку с собственными корнями в тёплый период роста. Подсушите повреждённое место один-два дня, посадите детку в маленький горшок с сухим минеральным субстратом и начинайте осторожно поливать лишь через несколько дней.',
+        ],
+      ),
+      'Haworthia cf. cymbiformis',
+      [
+        'I found this haworthia at Lemana PRO in a half-dried state. It looked as though it had been waiting quietly for someone to notice it; I felt sorry for the little rosette and brought it home. Now it has a calm place to recover, and every firm new leaf feels like a small sign that the rescue was worthwhile.',
+        'Эту хавортию я увидела в «Лемана ПРО» уже полузасохшей. Казалось, она тихо ждала, пока кто-нибудь наконец её заметит; мне стало жалко маленькую розетку, и я забрала её домой. Теперь у неё есть спокойное место для восстановления, а каждый новый крепкий лист становится маленьким подтверждением того, что спасение было не напрасным.',
+      ],
+      [
+        'Haworthia cymbiformis is a compact South African succulent that forms soft green rosettes. Its broad, slightly concave leaves end in translucent patterned windows that catch the light, while young offsets gradually gather around the mother plant.',
+        'Хавортия ладьевидная — компактный южноафриканский суккулент с мягкой зелёной розеткой. Её широкие, слегка вогнутые листья заканчиваются узорчатыми полупрозрачными «окошками», которые красиво ловят свет, а вокруг материнского растения со временем появляются молодые детки.',
+      ],
+      quickFacts(['Slow', 'Медленный'], ['Rosette 5–10 cm', 'Розетка 5–10 см']),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a loose fast-drying mix with about 60–75% pumice, perlite, lava grit or coarse sand and 25–40% light cactus compost.',
+            'Используйте рыхлый быстро просыхающий субстрат: примерно 60–75% пемзы, перлита, лавовой крошки или крупного песка и 25–40% лёгкого грунта для кактусов.',
+          ],
+        ],
+        [
+          ['Repotting and recovery', 'Пересадка и восстановление'],
+          [
+            'After purchase, inspect the root system and repot only if the nursery mix is exhausted, compacted or stays wet too long. Choose a small shallow pot with drainage and keep the base of the rosette above the substrate.',
+            'После покупки осмотрите корни и пересаживайте, только если магазинный субстрат истощён, слежался или слишком долго остаётся мокрым. Выберите небольшой неглубокий горшок с дренажом и не заглубляйте основание розетки.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Wait for visible healthy growth before feeding a recovering plant. Then feed once or twice from late spring to summer with a quarter-strength low-nitrogen cactus fertiliser.',
+            'Не подкармливайте восстанавливающееся растение, пока не появится заметный здоровый рост. Затем с конца весны до лета внесите один-два раза четверть дозы низкоазотного удобрения для кактусов.',
+          ],
+        ],
+        [
+          ['Seasonal rhythm', 'Сезонный ритм'],
+          [
+            'In brighter warm months, check the dry substrate more often and watch for new offsets. In winter, maximise gentle light, stop feeding and extend the dry interval between waterings.',
+            'В тёплые светлые месяцы чаще проверяйте просохший субстрат и наблюдайте за появлением деток. Зимой обеспечьте максимум мягкого света, отмените подкормки и увеличьте сухой интервал между поливами.',
+          ],
+        ],
+      ),
+      {},
+    ),
+  ),
+  collectionPlant(
     'bromeliaceae',
     'tillandsia-usneoides-thai-composition',
     '/plant-profile/tillandsia-composition-gallery/03-spanish-moss-tail.png',
