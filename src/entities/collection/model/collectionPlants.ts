@@ -284,6 +284,128 @@ const aglaonemaProfile = (
     assets,
   );
 
+interface TillandsiaProfileDefinition {
+  readonly facts: LocalizedListPair;
+  readonly height: LocalizedPair;
+  readonly latinName: string;
+  readonly notes: LocalizedPair;
+  readonly origin: LocalizedPair;
+  readonly overview: LocalizedPair;
+}
+
+const tillandsiaProfile = ({
+  facts,
+  height,
+  latinName,
+  notes,
+  origin,
+  overview,
+}: TillandsiaProfileDefinition): CollectionPlantProfile =>
+  plantProfile(
+    careCards(
+      [
+        ['Light', 'Освещение'],
+        [
+          'Give bright diffused light with gentle morning or evening sun. Introduce direct light gradually: harsh midday rays can scorch the leaves, while deep shade weakens the rosette.',
+          'Нужен яркий рассеянный свет с мягким утренним или вечерним солнцем. К прямому свету приучайте постепенно: жёсткие полуденные лучи обжигают листья, а глубокая тень ослабляет розетку.',
+        ],
+      ],
+      [
+        ['Watering', 'Полив'],
+        [
+          'Wet the whole plant thoroughly with soft rain, filtered or settled water about once or twice a week, adjusting to heat and airflow. A short soak or a generous rinse is more reliable than light misting alone.',
+          'Один-два раза в неделю полностью смачивайте растение мягкой дождевой, фильтрованной или отстоянной водой, корректируя частоту по жаре и движению воздуха. Короткое замачивание или обильное промывание надёжнее одних лёгких опрыскиваний.',
+        ],
+      ],
+      [
+        ['Drying and airflow', 'Просушка и воздух'],
+        [
+          'Shake off excess water after every rinse and dry the plant upside down until no water remains at the base of the leaves. Good air movement and complete drying within a few hours are essential.',
+          'После каждого промывания стряхивайте лишнюю воду и сушите растение вверх дном, пока у основания листьев не останется воды. Необходимы хорошее движение воздуха и полная просушка за несколько часов.',
+        ],
+      ],
+      [
+        ['Temperature', 'Температура'],
+        [
+          'Keep at about 18–30 °C and protect from cold draughts or icy glass. In a cooler, darker season, wet less often and make sure the plant is dry before night.',
+          'Содержите примерно при 18–30 °C, защищая от холодных сквозняков и ледяного стекла. В прохладный тёмный сезон смачивайте реже и обязательно просушивайте растение до ночи.',
+        ],
+      ],
+    ),
+    2,
+    profileFacts(
+      [
+        ['Family', 'Семейство'],
+        ['Bromeliad family (Bromeliaceae)', 'Бромелиевые (Bromeliaceae)'],
+      ],
+      [['Origin', 'Происхождение'], origin],
+      [
+        ['Plant type', 'Тип растения'],
+        ['Soil-free evergreen epiphyte', 'Вечнозелёный эпифит без грунта'],
+      ],
+    ),
+    profileFooter(
+      facts,
+      [
+        'Never leave water trapped inside the leaf bases. After soaking, shake the plant carefully and dry it upside down before returning it to a holder.',
+        'Не оставляйте воду между основаниями листьев. После замачивания аккуратно стряхните растение и высушите вверх дном, прежде чем возвращать в держатель.',
+      ],
+      [
+        [
+          'Dry curled tips — increase watering frequency and check for hot direct sun.',
+          'A dark soft base or musty smell — improve airflow, dry immediately and inspect for rot.',
+          'Pale stretched growth — move gradually to brighter diffused light.',
+          'White cottony clusters or scale-like bumps — isolate and inspect for pests.',
+        ],
+        [
+          'Сухие скрученные кончики — увеличьте частоту полива и проверьте, нет ли жаркого прямого солнца.',
+          'Тёмное мягкое основание или затхлый запах — улучшите движение воздуха, сразу просушите и проверьте на гниль.',
+          'Бледный вытянутый рост — постепенно переставьте на более яркий рассеянный свет.',
+          'Белые ватные комочки или бугорки, похожие на щитки, — изолируйте растение и проверьте на вредителей.',
+        ],
+      ],
+      [
+        'Leave pups with the mother plant for a fuller cluster, or separate one when it reaches about one-third to one-half of the mother rosette and releases with a gentle twist.',
+        'Оставляйте деток с материнским растением для пышной группы или отделяйте, когда они достигнут примерно трети–половины размера материнской розетки и легко отделятся аккуратным поворотом.',
+      ],
+    ),
+    latinName,
+    notes,
+    overview,
+    quickFacts(['Slow to moderate', 'Медленный или умеренный'], height),
+    careCards(
+      [
+        ['Mounting', 'Размещение'],
+        [
+          'Place on cork, a dry branch or an open holder that does not trap water. Avoid bare copper, tight wire and glue over the living base; the plant should remain easy to remove for watering and drying.',
+          'Разместите на пробке, сухой ветке или в открытом держателе, не задерживающем воду. Избегайте необработанной меди, тугой проволоки и клея на живом основании; растение должно легко сниматься для полива и просушки.',
+        ],
+      ],
+      [
+        ['Feeding', 'Подкормки'],
+        [
+          'During active growth, add a quarter-strength bromeliad or orchid fertiliser to the water about once a month. Occasionally rinse the foliage with clean soft water to prevent salt buildup.',
+          'В период активного роста примерно раз в месяц добавляйте в воду четверть дозы удобрения для бромелиевых или орхидей. Иногда промывайте листву чистой мягкой водой, чтобы не накапливались соли.',
+        ],
+      ],
+      [
+        ['Cleaning', 'Очищение'],
+        [
+          'Rinse away dust instead of wiping the leaves, because rubbing damages their moisture-absorbing trichomes. Remove only loose, completely dry leaf fragments and never use leaf shine.',
+          'Смывайте пыль водой вместо протирания: трение повреждает поглощающие влагу трихомы. Удаляйте только свободные, полностью высохшие фрагменты листьев и не используйте полироль.',
+        ],
+      ],
+      [
+        ['Seasonal rhythm', 'Сезонный ритм'],
+        [
+          'In warm bright months, check the plant often and water more regularly. In winter, use the brightest suitable position, wet less often and prioritise complete drying.',
+          'В тёплые светлые месяцы чаще проверяйте растение и регулярно увлажняйте. Зимой держите в самом светлом подходящем месте, мочите реже и особое внимание уделяйте полной просушке.',
+        ],
+      ],
+    ),
+    {},
+  );
+
 export const collectionPlants: readonly CollectionPlant[] = [
   collectionPlant(
     'amaryllidaceae',
@@ -1558,6 +1680,72 @@ export const collectionPlants: readonly CollectionPlant[] = [
       },
     ),
     2,
+  ),
+  collectionPlant(
+    'bromeliaceae',
+    'tillandsia-andreana',
+    '/plants/tillandsia-andreana-home-photo.jpg',
+    ['Tillandsia andreana', 'Тилландсия Андреана'],
+    tillandsiaProfile({
+      facts: [
+        [
+          'Tillandsia andreana is an accepted species rather than a horticultural hybrid.',
+          'Its many thread-thin leaves form a light, almost spherical tuft.',
+          'Silvery trichomes over the leaves collect water and dissolved nutrients.',
+          'A mature plant can produce a vivid red tubular flower from the centre of the tuft.',
+        ],
+        [
+          'Тилландсия Андреана — самостоятельный природный вид, а не садовый гибрид.',
+          'Множество тонких, как нити, листьев образуют лёгкий, почти шаровидный пучок.',
+          'Серебристые трихомы на листьях собирают воду и растворённые в ней питательные вещества.',
+          'Взрослое растение может выпустить из центра пучка ярко-красный трубчатый цветок.',
+        ],
+      ],
+      height: ['Usually about 10–15 cm', 'Обычно около 10–15 см'],
+      latinName: 'Tillandsia andreana',
+      notes: [
+        'Its airy silhouette is unlike the denser rosettes in my collection: the fine leaves turn the whole plant into a soft silver-green cloud.',
+        'Её воздушный силуэт не похож на более плотные розетки в моей коллекции: тонкие листья превращают всё растение в мягкое серебристо-зелёное облако.',
+      ],
+      origin: ['Colombia to north-western Venezuela', 'Колумбия и северо-запад Венесуэлы'],
+      overview: [
+        'A compact air plant with exceptionally fine, flexible leaves radiating into a loose rounded tuft. The pale surface is densely covered with moisture-absorbing trichomes, so the plant lives without potting soil and needs careful wetting followed by fast drying.',
+        'Компактная атмосферная тилландсия с необычайно тонкими гибкими листьями, расходящимися в рыхлый округлый пучок. Светлая поверхность густо покрыта поглощающими влагу трихомами, поэтому растение живёт без грунта и нуждается в обильном смачивании с быстрой последующей просушкой.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'bromeliaceae',
+    'tillandsia-melanocrater',
+    '/plants/tillandsia-melanocrater-home-photo.jpg',
+    ["Tillandsia 'Melanocrater'", 'Тилландсия Меланократер'],
+    tillandsiaProfile({
+      facts: [
+        [
+          'Plants of the World Online treats Tillandsia melanocrater as a synonym of the accepted Tillandsia tricolor.',
+          'The trade name Melanocrater is retained here because it identifies this particular plant in the collection.',
+          'Its upright, narrow leaves form a taller and more architectural rosette than Tillandsia andreana.',
+          'After flowering, a mature rosette can form pups around its base and gradually become a cluster.',
+        ],
+        [
+          'Plants of the World Online считает Tillandsia melanocrater синонимом признанного вида Tillandsia tricolor.',
+          'Торговое название «Меланократер» сохранено здесь, потому что именно так это растение обозначено в коллекции.',
+          'Прямые узкие листья образуют более высокую и архитектурную розетку, чем у тилландсии Андреана.',
+          'После цветения взрослая розетка может образовать деток у основания и постепенно превратиться в группу.',
+        ],
+      ],
+      height: ['Usually about 20–40 cm', 'Обычно около 20–40 см'],
+      latinName: 'Tillandsia tricolor (syn. Tillandsia melanocrater)',
+      notes: [
+        'I keep its familiar Melanocrater name in the collection, while the profile also records the currently accepted botanical name Tillandsia tricolor.',
+        'В коллекции я сохраняю знакомое название «Меланократер», а в профиле одновременно указано современное признанное ботаническое имя Tillandsia tricolor.',
+      ],
+      origin: ['Southern Mexico to Central America', 'Юг Мексики и Центральная Америка'],
+      overview: [
+        'A strong upright air plant with a vase-shaped rosette of narrow green leaves and darker overlapping bases. It is commonly sold as Tillandsia melanocrater, a name now treated as a synonym of Tillandsia tricolor.',
+        'Крепкая вертикальная атмосферная тилландсия с вазообразной розеткой из узких зелёных листьев с более тёмными налегающими основаниями. Её часто продают как Tillandsia melanocrater, но сейчас это название считается синонимом Tillandsia tricolor.',
+      ],
+    }),
   ),
   collectionPlant(
     'araceae',
