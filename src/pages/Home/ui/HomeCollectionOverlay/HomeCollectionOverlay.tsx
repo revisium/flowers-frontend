@@ -390,7 +390,7 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
                 xl: 'repeat(5, minmax(0, 1fr))',
               }}
             >
-              {visiblePlants.map((plant) => (
+              {visiblePlants.map((plant, index) => (
                 <Button
                   alignItems="stretch"
                   background="rgba(255, 253, 247, 0.9)"
@@ -418,7 +418,8 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
                     aspectRatio="4 / 5"
                     background="#f4ede0"
                     decoding="async"
-                    loading="lazy"
+                    fetchPriority={index < 5 ? 'high' : 'auto'}
+                    loading={index < 5 ? 'eager' : 'lazy'}
                     objectFit="cover"
                     src={plant.image}
                     width="100%"
@@ -501,7 +502,7 @@ function createCatalog(locale: Locale): readonly CatalogPlant[] {
         categoryId,
         categoryName: family.name,
         id: `${categoryId}-${index}`,
-        image: plant.image,
+        image: plant.image.replace(/\.webp$/, '-catalog.webp'),
         name: plant.name[locale],
         plant,
       }));
