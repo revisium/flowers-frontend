@@ -74,7 +74,6 @@ interface ProfileAssets {
   readonly importantImage?: string;
   readonly propagationIcon?: string;
   readonly propagationImage?: string;
-  readonly saleImage?: string;
   readonly variants?: PlantProfileVariants;
 }
 
@@ -158,7 +157,6 @@ export interface CollectionPlantProfile {
   readonly propagationIcon?: string;
   readonly propagationImage?: string;
   readonly quickFacts: PlantProfileQuickFacts;
-  readonly saleImage?: string;
   readonly secondaryCare: readonly PlantProfileCareCard[];
   readonly variants?: PlantProfileVariants;
 }
@@ -542,7 +540,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/clivia-important.webp',
         propagationImage: '/plant-profile/clivia-propagation.webp',
-        saleImage: '/plant-profile/clivia-for-sale.webp',
       },
     ),
   ),
@@ -682,7 +679,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/hippeastrum-important.webp',
         propagationImage: '/plant-profile/hippeastrum-propagation.webp',
-        saleImage: '/plant-profile/hippeastrum-for-sale.webp',
       },
     ),
   ),
@@ -819,7 +815,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/chamaedorea-important.webp',
         propagationImage: '/plant-profile/chamaedorea-propagation.webp',
-        saleImage: '/plant-profile/chamaedorea-for-sale.webp',
       },
     ),
   ),
@@ -959,7 +954,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/chlorophytum-important.webp',
         propagationImage: '/plant-profile/chlorophytum-propagation.webp',
-        saleImage: '/plant-profile/chlorophytum-for-sale.webp',
       },
     ),
   ),
@@ -1096,7 +1090,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/beaucarnea-important.webp',
         propagationImage: '/plant-profile/beaucarnea-propagation.webp',
-        saleImage: '/plant-profile/beaucarnea-for-sale.webp',
       },
     ),
   ),
@@ -1238,7 +1231,144 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/dracaena-sanderiana-important.webp',
         propagationImage: '/plant-profile/dracaena-sanderiana-propagation.webp',
-        saleImage: '/plant-profile/dracaena-sanderiana-for-sale.webp',
+      },
+    ),
+  ),
+  collectionPlant(
+    'asparagaceae',
+    'sansevieria-blue-star',
+    '/plants/sansevieria-blue-star-home-photo.webp',
+    ['Blue Star snake plant', 'Сансевиерия Блю Стар'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Bright diffused light keeps the compact rosette and silvery-blue pattern at their best. The plant tolerates lower light, but protect it from sudden harsh midday sun.',
+            'Яркий рассеянный свет лучше всего сохраняет компактную розетку и серебристо-голубой рисунок. Растение переносит менее яркое освещение, но его нужно беречь от резкого полуденного солнца.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Let the substrate dry completely or almost completely, then water thoroughly and drain every drop of excess water. Water much less often in cool, dark winter conditions.',
+            'Давайте грунту просохнуть полностью или почти полностью, затем обильно поливайте и сливайте всю лишнюю воду. В прохладе и при слабом зимнем освещении поливайте значительно реже.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Normal dry room air is suitable. Do not leave water in the centre of the rosette and avoid routine misting, especially when the room is cool.',
+            'Подходит обычный сухой комнатный воздух. Не оставляйте воду в центре розетки и не опрыскивайте растение без необходимости, особенно в прохладном помещении.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–28 °C during active growth and preferably above 15 °C in winter. Protect the fleshy leaves and roots from cold glass, draughts and chilled wet soil.',
+            'В период роста содержите при 18–28 °C, а зимой желательно не ниже 15 °C. Берегите мясистые листья и корни от холодного стекла, сквозняков и переохлаждённого мокрого грунта.',
+          ],
+        ],
+      ),
+      1,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Asparagus family (Asparagaceae)', 'Спаржевые (Asparagaceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          [
+            'Cultivated sansevieria; the group originates from tropical Africa',
+            'Культурная сансевиерия; группа происходит из тропической Африки',
+          ],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen rhizomatous leaf succulent', 'Вечнозелёный корневищный листовой суккулент'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            "'Blue Star' forms a low sculptural rosette of broad, firm leaves.",
+            'The blue-green surface is marked with darker horizontal mottling and pale margins.',
+            'Thick leaves and rhizomes store water, so the plant copes with short dry periods well.',
+            'An established plant can gradually produce daughter rosettes from underground rhizomes.',
+          ],
+          [
+            "'Blue Star' образует невысокую скульптурную розетку из широких плотных листьев.",
+            'На голубовато-зелёной поверхности заметны более тёмные поперечные пятна и светлая кайма.',
+            'Толстые листья и корневища запасают воду, поэтому растение хорошо переносит короткие периоды засухи.',
+            'Взрослое растение постепенно выпускает дочерние розетки из подземных корневищ.',
+          ],
+        ],
+        [
+          'Overwatering is the main danger: soft leaves, a loose rosette or a dark base require an immediate root and rhizome check. The foliage can cause digestive upset if chewed, so keep it away from pets and small children.',
+          'Главная опасность — перелив: мягкие листья, шаткая розетка или потемневшее основание требуют немедленной проверки корней и корневища. Листья могут вызвать расстройство пищеварения при жевании, поэтому держите растение подальше от животных и маленьких детей.',
+        ],
+        [
+          [
+            'Leaves soften or yellow from the base — stop watering and inspect the roots and rhizome for rot.',
+            'Dry brown patches — check for harsh direct sun, cold contact or physical damage.',
+            'New growth becomes narrow and dark — move the plant gradually to brighter diffused light.',
+            'Cottony clusters or sticky marks — inspect leaf bases for mealybugs or scale insects.',
+          ],
+          [
+            'Листья размягчаются или желтеют от основания — прекратите полив и проверьте корни и корневище на гниль.',
+            'Сухие коричневые пятна — проверьте, нет ли жёсткого прямого солнца, контакта с холодом или механических повреждений.',
+            'Новый прирост становится узким и тёмным — постепенно переставьте растение на более яркий рассеянный свет.',
+            'Ватные скопления или липкие следы — осмотрите основания листьев на мучнистого червеца и щитовку.',
+          ],
+        ],
+        [
+          'Divide a daughter rosette when it has its own roots. Cut the connecting rhizome with a sterile blade, let the cuts dry for a day or two and pot both sections into a dry, airy mix before watering sparingly.',
+          'Отделяйте дочернюю розетку, когда у неё появятся собственные корни. Разрежьте соединяющее корневище стерильным лезвием, подсушите срезы один-два дня и посадите обе части в сухую воздушную смесь, после чего поливайте умеренно.',
+        ],
+      ),
+      "Sansevieria 'Blue Star'",
+      [
+        'This young Blue Star already has a strong architectural shape: the broad mottled leaves unfold from the centre like a compact silver-green sculpture.',
+        'У этой молодой «Блю Стар» уже выразительная архитектурная форма: широкие пятнистые листья раскрываются из центра, словно компактная серебристо-зелёная скульптура.',
+      ],
+      [
+        "Sansevieria 'Blue Star' is a compact snake plant with broad, sturdy blue-green leaves gathered into a spreading rosette. Its restrained colour, pale edging and slow growth make it an easy sculptural accent for a bright room.",
+        'Сансевиерия «Блю Стар» — компактное растение с широкими плотными голубовато-зелёными листьями, собранными в раскидистую розетку. Сдержанная окраска, светлая кайма и медленный рост делают её выразительным и неприхотливым акцентом для светлой комнаты.',
+      ],
+      quickFacts(['Slow', 'Медленный'], ['Usually 20–40 cm indoors', 'Обычно 20–40 см в комнате']),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a very loose, fast-draining mix: about 40% cactus or light houseplant compost and 60% pumice, perlite, lava grit or coarse sand.',
+            'Используйте очень рыхлую быстро просыхающую смесь: примерно 40% грунта для кактусов или лёгкого грунта для комнатных растений и 60% пемзы, перлита, лавовой крошки или крупного песка.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot in spring only when the rhizomes crowd the container or distort it. Choose a sturdy pot with a drainage hole only 2–3 cm wider than the root ball and keep the rosette base above the soil line.',
+            'Пересаживайте весной, только когда корневища заполнят или начнут деформировать горшок. Выбирайте устойчивую ёмкость с дренажным отверстием всего на 2–3 см шире корневого кома и не заглубляйте основание розетки.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'Feed every 6–8 weeks from late spring to August with cactus fertiliser at half strength. Do not feed in winter or while the substrate stays wet for a long time.',
+            'С конца весны до августа подкармливайте раз в 6–8 недель половинной дозой удобрения для кактусов. Не удобряйте зимой и пока грунт долго остаётся влажным.',
+          ],
+        ],
+        [
+          ['Leaf care', 'Уход за листьями'],
+          [
+            'Wipe dust from both sides of the leaves with a soft damp cloth. Remove a badly damaged leaf at the base with a sterile blade; cut edges do not regrow.',
+            'Протирайте пыль с обеих сторон листьев мягкой влажной тканью. Сильно повреждённый лист удаляйте у основания стерильным лезвием: срезанный край не восстанавливается.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/sansevieria-blue-star-important.webp',
+        propagationImage: '/plant-profile/sansevieria-blue-star-propagation.webp',
       },
     ),
   ),
@@ -1380,7 +1510,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/ficus-benjamina-important.webp',
         propagationImage: '/plant-profile/ficus-benjamina-propagation.webp',
-        saleImage: '/plant-profile/ficus-benjamina-for-sale.webp',
       },
     ),
   ),
@@ -1516,7 +1645,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/haworthiopsis-attenuata-important.webp',
         propagationImage: '/plant-profile/haworthiopsis-attenuata-propagation.webp',
-        saleImage: '/plant-profile/haworthiopsis-attenuata-for-sale.webp',
       },
     ),
   ),
@@ -1655,7 +1783,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/haworthia-cymbiformis-important.webp',
         propagationImage: '/plant-profile/haworthia-cymbiformis-propagation.webp',
-        saleImage: '/plant-profile/haworthia-cymbiformis-for-sale.webp',
       },
     ),
   ),
@@ -1794,7 +1921,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/tillandsia-usneoides-important.webp',
         propagationImage: '/plant-profile/tillandsia-usneoides-propagation.webp',
-        saleImage: '/plant-profile/tillandsia-usneoides-for-sale.webp',
         variants: profileVariants(
           ['The Thai composition', 'Композиция из Таиланда'],
           [
@@ -1827,7 +1953,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       assets: {
         importantImage: '/plant-profile/tillandsia-ionantha-important.webp',
         propagationImage: '/plant-profile/tillandsia-ionantha-propagation.webp',
-        saleImage: '/plant-profile/tillandsia-ionantha-for-sale.webp',
       },
       facts: [
         [
@@ -1866,7 +1991,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       assets: {
         importantImage: '/plant-profile/tillandsia-andreana-important.webp',
         propagationImage: '/plant-profile/tillandsia-andreana-propagation.webp',
-        saleImage: '/plant-profile/tillandsia-andreana-for-sale.webp',
       },
       facts: [
         [
@@ -1904,7 +2028,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       assets: {
         importantImage: '/plant-profile/tillandsia-melanocrater-important.webp',
         propagationImage: '/plant-profile/tillandsia-melanocrater-propagation.webp',
-        saleImage: '/plant-profile/tillandsia-melanocrater-for-sale.webp',
       },
       facts: [
         [
@@ -2074,7 +2197,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/dieffenbachia-snow-important.webp',
         propagationImage: '/plant-profile/dieffenbachia-snow-propagation.webp',
-        saleImage: '/plant-profile/dieffenbachia-snow-for-sale.webp',
       },
     ),
   ),
@@ -2213,7 +2335,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/hoya-pubicalyx-splash-important.webp',
         propagationImage: '/plant-profile/hoya-pubicalyx-splash-propagation.webp',
-        saleImage: '/plant-profile/hoya-pubicalyx-splash-for-sale.webp',
       },
     ),
   ),
@@ -2355,7 +2476,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/peperomia-santorini-important.webp',
         propagationImage: '/plant-profile/peperomia-santorini-propagation.webp',
-        saleImage: '/plant-profile/peperomia-santorini-for-sale.webp',
       },
     ),
   ),
@@ -2488,7 +2608,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
         importantImage: '/plant-profile/important-vine.webp',
         propagationIcon: '/plant-profile/footer-propagation.webp',
         propagationImage: '/plant-profile/propagation-cuttings.webp',
-        saleImage: '/plant-profile/cuttings-for-sale.webp',
       },
     ),
   ),
@@ -2630,7 +2749,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/sedum-burrito-important.webp',
         propagationImage: '/plant-profile/sedum-burrito-propagation.webp',
-        saleImage: '/plant-profile/sedum-burrito-for-sale.webp',
       },
     ),
   ),
@@ -2775,7 +2893,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/succulent-mix-important.webp',
         propagationImage: '/plant-profile/succulent-mix-propagation.webp',
-        saleImage: '/plant-profile/succulent-mix-for-sale.webp',
       },
     ),
     3,
@@ -2918,7 +3035,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/glechoma-variegata-important.webp',
         propagationImage: '/plant-profile/glechoma-variegata-propagation.webp',
-        saleImage: '/plant-profile/glechoma-variegata-for-sale.webp',
       },
     ),
   ),
@@ -3053,7 +3169,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
         importantImage: '/plant-profile/calathea-important-leaves.webp',
         propagationIcon: '/plant-profile/calathea-propagation-icon.webp',
         propagationImage: '/plant-profile/calathea-propagation.webp',
-        saleImage: '/plant-profile/calathea-for-sale.webp',
       },
     ),
   ),
@@ -3188,7 +3303,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
         importantImage: '/plant-profile/faucaria-important-leaves.webp',
         propagationIcon: '/plant-profile/faucaria-propagation-icon.webp',
         propagationImage: '/plant-profile/faucaria-propagation.webp',
-        saleImage: '/plant-profile/faucaria-for-sale.webp',
       },
     ),
   ),
@@ -3326,7 +3440,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
         importantImage: '/plant-profile/kalanchoe-important-leaves.webp',
         propagationIcon: '/plant-profile/kalanchoe-propagation-icon.webp',
         propagationImage: '/plant-profile/kalanchoe-propagation.webp',
-        saleImage: '/plant-profile/kalanchoe-for-sale.webp',
       },
     ),
   ),
@@ -3461,7 +3574,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
         importantImage: '/plant-profile/rufibarba-important-leaves.webp',
         propagationIcon: '/plant-profile/rufibarba-propagation-icon.webp',
         propagationImage: '/plant-profile/rufibarba-propagation.webp',
-        saleImage: '/plant-profile/rufibarba-for-sale.webp',
       },
     ),
   ),
@@ -3596,7 +3708,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
         importantImage: '/plant-profile/vittata-important-leaves.webp',
         propagationIcon: '/plant-profile/vittata-propagation-icon.webp',
         propagationImage: '/plant-profile/vittata-propagation.webp',
-        saleImage: '/plant-profile/vittata-for-sale.webp',
       },
     ),
   ),
@@ -3737,7 +3848,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/aglaonema-red-valentine-important.webp',
         propagationImage: '/plant-profile/aglaonema-red-valentine-propagation.webp',
-        saleImage: '/plant-profile/aglaonema-red-valentine-for-sale.webp',
       },
     ),
   ),
@@ -3775,7 +3885,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/aglaonema-red-peacock-important.webp',
         propagationImage: '/plant-profile/aglaonema-red-peacock-propagation.webp',
-        saleImage: '/plant-profile/aglaonema-red-peacock-for-sale.webp',
       },
     ),
   ),
@@ -3813,7 +3922,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/aglaonema-siam-aurora-important.webp',
         propagationImage: '/plant-profile/aglaonema-siam-aurora-propagation.webp',
-        saleImage: '/plant-profile/aglaonema-siam-aurora-for-sale.webp',
       },
     ),
   ),
@@ -3851,7 +3959,141 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/aglaonema-silver-queen-important.webp',
         propagationImage: '/plant-profile/aglaonema-silver-queen-propagation.webp',
-        saleImage: '/plant-profile/aglaonema-silver-queen-for-sale.webp',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'zamioculcas-zamiifolia',
+    '/plants/zamioculcas-zamiifolia-home-photo.webp',
+    ['ZZ plant', 'Замиокулькас'],
+    plantProfile(
+      careCards(
+        [
+          ['Light', 'Освещение'],
+          [
+            'Bright diffused light gives the most compact growth, though the plant tolerates a dimmer room. Protect it from harsh midday sun and rotate the pot occasionally so the stems do not all lean toward the window.',
+            'Яркий рассеянный свет даёт самый компактный рост, хотя растение мирится и с более тёмной комнатой. Защищайте его от жёсткого полуденного солнца и иногда поворачивайте горшок, чтобы все побеги не наклонялись к окну.',
+          ],
+        ],
+        [
+          ['Watering', 'Полив'],
+          [
+            'Let the mix dry almost completely before watering. Then soak it thoroughly, empty the saucer and wait for another full drying cycle; in winter this can take several weeks.',
+            'Перед поливом давайте грунту просохнуть почти полностью. Затем хорошо промочите его, слейте воду из поддона и снова дождитесь полного цикла просушки; зимой это может занять несколько недель.',
+          ],
+        ],
+        [
+          ['Humidity', 'Влажность'],
+          [
+            'Normal room humidity is enough. The plant does not need misting; wiping the leaflets with a damp soft cloth is more useful and makes pests easier to notice.',
+            'Обычной комнатной влажности достаточно. Опрыскивания растению не нужны; полезнее протирать листочки мягкой влажной тканью, заодно проверяя их на вредителей.',
+          ],
+        ],
+        [
+          ['Temperature', 'Температура'],
+          [
+            'Keep at 18–28 °C and away from cold draughts. Temperatures below about 15 °C make wet roots especially vulnerable to rot.',
+            'Содержите при 18–28 °C и берегите от холодных сквозняков. При температуре ниже примерно 15 °C влажные корни особенно легко загнивают.',
+          ],
+        ],
+      ),
+      1,
+      profileFacts(
+        [
+          ['Family', 'Семейство'],
+          ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+        ],
+        [
+          ['Origin', 'Происхождение'],
+          ['Tropical eastern Africa', 'Тропическая Восточная Африка'],
+        ],
+        [
+          ['Plant type', 'Тип растения'],
+          ['Evergreen rhizomatous perennial', 'Вечнозелёный корневищный многолетник'],
+        ],
+      ),
+      profileFooter(
+        [
+          [
+            'Thick potato-like rhizomes and fleshy petioles store water for long dry periods.',
+            'What looks like a stem is actually one compound leaf made of many glossy leaflets.',
+            'Fresh shoots emerge pale green and gradually darken as they harden.',
+            'Growth is naturally slow, especially away from a bright window.',
+          ],
+          [
+            'Толстые корневища, похожие на маленькие картофелины, и мясистые черешки запасают воду на долгий сухой период.',
+            'То, что выглядит как стебель, на самом деле является одним сложным листом из множества глянцевых листочков.',
+            'Новые побеги появляются светло-зелёными и постепенно темнеют по мере взросления.',
+            'Замиокулькас от природы растёт медленно, особенно вдали от яркого окна.',
+          ],
+        ],
+        [
+          'Overwatering is the main danger: a soft dark rhizome must be cut back to firm tissue and replanted into fresh dry mix. The sap contains calcium oxalate crystals, so wear gloves when dividing the plant and keep it away from children and pets.',
+          'Главная опасность — перелив: мягкое потемневшее корневище нужно обрезать до плотной здоровой ткани и посадить растение в свежий сухой грунт. Сок содержит кристаллы оксалата кальция, поэтому при делении надевайте перчатки и держите растение подальше от детей и животных.',
+        ],
+        [
+          [
+            'Yellow lower leaves while the mix stays wet — pause watering and inspect the rhizomes for rot.',
+            'Soft dark rhizomes or a sour smell — remove damaged tissue, dry the cuts and repot into an airy mix.',
+            'Long sparse leaves leaning strongly to one side — move the plant closer to bright diffused light and rotate it regularly.',
+            'Wrinkled leaflets and petioles after a long dry spell — water deeply once, rather than giving small frequent sips.',
+          ],
+          [
+            'Нижние листья желтеют, пока грунт остаётся мокрым, — остановите полив и проверьте корневища на гниль.',
+            'Мягкие тёмные корневища или кислый запах — удалите повреждённые ткани, подсушите срезы и пересадите растение в воздушный грунт.',
+            'Длинные редкие листья сильно тянутся в одну сторону — поставьте растение ближе к яркому рассеянному свету и регулярно поворачивайте.',
+            'Листочки и черешки сморщились после долгой просушки — один раз хорошо промочите грунт вместо частых маленьких порций воды.',
+          ],
+        ],
+        [
+          'Division is the quickest method. During repotting, gently separate a section with at least one firm rhizome, healthy roots and a leaf, let damaged areas dry briefly, then pot it into a small container with barely moist airy mix. Individual leaflets can also form a new rhizome, but this often takes many months and requires patience.',
+          'Деление — самый быстрый способ. При пересадке аккуратно отделите часть хотя бы с одним плотным корневищем, здоровыми корнями и листом, немного подсушите повреждённые места и посадите в маленький горшок с едва влажным воздушным грунтом. Отдельные листочки тоже способны образовать новое корневище, но на это часто уходят многие месяцы.',
+        ],
+      ),
+      'Zamioculcas zamiifolia',
+      [
+        'Mine is not a showroom-perfect ZZ plant: a few stems lean toward the window, dust returns to the leaves far too quickly and an occasional lower leaflet turns yellow after an overgenerous watering. Fortunately, its sturdy rhizomes forgive these beginner mistakes surprisingly well.',
+        'Мой замиокулькас совсем не выставочный: несколько побегов тянутся к окну, на листьях слишком быстро снова появляется пыль, а после чересчур щедрого полива иногда желтеет нижний листочек. К счастью, крепкие корневища удивительно терпеливо прощают такие ошибки новичка.',
+      ],
+      [
+        'Zamioculcas zamiifolia is an exceptionally resilient East African aroid with glossy compound leaves and underground water-storing rhizomes. It grows slowly, copes with ordinary room conditions and is much more likely to suffer from too much attention than from a short period of neglect.',
+        'Замиокулькас — исключительно выносливый восточноафриканский ароид с глянцевыми сложными листьями и подземными корневищами, запасающими воду. Он медленно растёт, спокойно переносит обычные комнатные условия и гораздо чаще страдает от избытка заботы, чем от короткого периода невнимания.',
+      ],
+      quickFacts(['Slow', 'Медленный'], ['Usually 45–90 cm indoors', 'Обычно 45–90 см в комнате']),
+      careCards(
+        [
+          ['Soil', 'Грунт'],
+          [
+            'Use a fast-draining mix: about 50% light houseplant soil, 30% perlite or pumice and 20% fine bark or mineral grit. A drainage hole is essential.',
+            'Используйте быстро просыхающий грунт: примерно 50% лёгкого субстрата для комнатных растений, 30% перлита или пемзы и 20% мелкой коры либо минеральной крошки. Дренажное отверстие обязательно.',
+          ],
+        ],
+        [
+          ['Repotting', 'Пересадка'],
+          [
+            'Repot every 2–3 years or when the rhizomes begin to distort the pot. Choose a sturdy container only slightly wider than the root mass; an oversized pot stays wet for too long.',
+            'Пересаживайте раз в 2–3 года или когда корневища начинают деформировать горшок. Выбирайте устойчивую ёмкость лишь немного шире корневого кома: слишком большой горшок слишком долго остаётся мокрым.',
+          ],
+        ],
+        [
+          ['Feeding', 'Подкормки'],
+          [
+            'From spring to early autumn, feed every 4–6 weeks with a balanced foliage fertiliser at half strength. Skip feeding in winter and after repotting.',
+            'С весны до начала осени подкармливайте раз в 4–6 недель половинной дозой сбалансированного удобрения для декоративно-лиственных. Зимой и сразу после пересадки подкормки не нужны.',
+          ],
+        ],
+        [
+          ['Grooming', 'Уход за листьями'],
+          [
+            'Wipe dusty leaflets, rotate the pot for balanced growth and cut fully yellow leaves cleanly at soil level. Do not polish the foliage with oil or leaf-shine products.',
+            'Протирайте пыль с листочков, поворачивайте горшок для равномерного роста и срезайте полностью пожелтевшие листья у уровня грунта. Не натирайте листву маслом или средствами для блеска.',
+          ],
+        ],
+      ),
+      {
+        importantImage: '/plant-profile/zamioculcas-important.webp',
+        propagationImage: '/plant-profile/zamioculcas-propagation.webp',
       },
     ),
   ),
@@ -3993,7 +4235,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/white-wizard-important.webp',
         propagationImage: '/plant-profile/white-wizard-propagation.webp',
-        saleImage: '/plant-profile/white-wizard-for-sale.webp',
       },
     ),
   ),
@@ -4132,7 +4373,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/alocasia-dragon-scale-important.webp',
         propagationImage: '/plant-profile/alocasia-dragon-scale-propagation.webp',
-        saleImage: '/plant-profile/alocasia-dragon-scale-for-sale.webp',
       },
     ),
   ),
@@ -4271,7 +4511,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/alocasia-bambino-important.webp',
         propagationImage: '/plant-profile/alocasia-bambino-propagation.webp',
-        saleImage: '/plant-profile/alocasia-bambino-for-sale.webp',
       },
     ),
   ),
@@ -4413,7 +4652,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/alocasia-black-velvet-important.webp',
         propagationImage: '/plant-profile/alocasia-black-velvet-propagation.webp',
-        saleImage: '/plant-profile/alocasia-black-velvet-for-sale.webp',
       },
     ),
   ),
@@ -4552,7 +4790,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/alocasia-jacklyn-important.webp',
         propagationImage: '/plant-profile/alocasia-jacklyn-propagation.webp',
-        saleImage: '/plant-profile/alocasia-jacklyn-for-sale.webp',
       },
     ),
   ),
@@ -4697,7 +4934,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/spathiphyllum-important.webp',
         propagationImage: '/plant-profile/spathiphyllum-propagation.webp',
-        saleImage: '/plant-profile/spathiphyllum-for-sale.webp',
       },
     ),
   ),
@@ -4842,7 +5078,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/anthurium-red-important.webp',
         propagationImage: '/plant-profile/anthurium-red-propagation.webp',
-        saleImage: '/plant-profile/anthurium-red-for-sale.webp',
       },
     ),
   ),
@@ -4984,7 +5219,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/philodendron-dark-important.webp',
         propagationImage: '/plant-profile/philodendron-dark-propagation.webp',
-        saleImage: '/plant-profile/philodendron-dark-for-sale.webp',
       },
     ),
   ),
@@ -5123,7 +5357,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/monstera-adansonii-important.webp',
         propagationImage: '/plant-profile/monstera-adansonii-propagation.webp',
-        saleImage: '/plant-profile/monstera-adansonii-for-sale.webp',
       },
     ),
   ),
@@ -5260,7 +5493,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/tradescantia-important.webp',
         propagationImage: '/plant-profile/tradescantia-propagation.webp',
-        saleImage: '/plant-profile/tradescantia-for-sale.webp',
         variants: profileVariants(
           ['My Tradescantia collection', 'Моя коллекция традесканций'],
           [
@@ -5456,7 +5688,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/callisia-important.webp',
         propagationImage: '/plant-profile/callisia-propagation.webp',
-        saleImage: '/plant-profile/callisia-for-sale.webp',
         variants: profileVariants(
           ['My Callisia collection', 'Моя коллекция каллизий'],
           [
@@ -5606,7 +5837,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/orchid-important.webp',
         propagationImage: '/plant-profile/orchid-propagation.webp',
-        saleImage: '/plant-profile/orchid-for-sale.webp',
         variants: profileVariants(
           ['My Phalaenopsis collection', 'Моя коллекция фаленопсисов'],
           [
@@ -5779,7 +6009,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/echinopsis-important.webp',
         propagationImage: '/plant-profile/echinopsis-propagation.webp',
-        saleImage: '/plant-profile/echinopsis-for-sale.webp',
       },
     ),
   ),
@@ -5915,7 +6144,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/epiphyllum-oxypetalum-important.webp',
         propagationImage: '/plant-profile/epiphyllum-oxypetalum-propagation.webp',
-        saleImage: '/plant-profile/epiphyllum-oxypetalum-for-sale.webp',
       },
     ),
   ),
@@ -6052,7 +6280,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/cycas-important.webp',
         propagationImage: '/plant-profile/cycas-propagation.webp',
-        saleImage: '/plant-profile/cycas-for-sale.webp',
       },
     ),
   ),
@@ -6189,7 +6416,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/nematanthus-important.webp',
         propagationImage: '/plant-profile/nematanthus-propagation.webp',
-        saleImage: '/plant-profile/nematanthus-for-sale.webp',
       },
     ),
   ),
@@ -6323,7 +6549,6 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/gloxinia-important.webp',
         propagationImage: '/plant-profile/gloxinia-propagation.webp',
-        saleImage: '/plant-profile/gloxinia-for-sale.webp',
         variants: profileVariants(
           ['My collection of colours', 'Моя коллекция расцветок'],
           [

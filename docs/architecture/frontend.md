@@ -197,8 +197,9 @@ state, or speculative ViewModel/DataSource wiring.
   editorial heading.
 - The `Ботанические эксперименты` / `Botanical experiments` feature provides
   the contextual route into the experiment journal at `/blog`.
-- The closing action opens the global collection overlay through the shared
-  layout context.
+- The closing section offers a non-commercial invitation to ask questions or
+  exchange plant observations through Telegram or MAX, while its secondary
+  action opens the global collection overlay through the shared layout context.
 
 About photography lives under `public/about/` and is referenced by the page
 sections.

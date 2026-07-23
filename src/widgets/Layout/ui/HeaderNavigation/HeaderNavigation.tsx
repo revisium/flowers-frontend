@@ -1,5 +1,6 @@
 import { Flex, Link } from '@chakra-ui/react';
-import { useLocation } from 'react-router';
+import { useEffect, useState } from 'react';
+import { Link as RouterLink, useLocation } from 'react-router';
 import type { Locale } from 'src/shared/config';
 
 import { layoutNavigationLinks } from '../../model/layoutNavigation';
@@ -8,7 +9,7 @@ interface HeaderNavigationProps {
   readonly locale: Locale;
 }
 
-const isNavigationLinkActive = (href: string, pathname: string, hash: string) => {
+const isNavigationLinkActive = (href: string, pathname: string, hash: string | null) => {
   const [hrefPathname, hrefHash] = href.split('#');
 
   if (hrefHash) {
@@ -24,6 +25,16 @@ const isNavigationLinkActive = (href: string, pathname: string, hash: string) =>
 
 export const HeaderNavigation = ({ locale }: HeaderNavigationProps) => {
   const { hash, pathname } = useLocation();
+  const [currentHash, setCurrentHash] = useState<string | null>(null);
+
+  useEffect(() => {
+    const syncHash = () => setCurrentHash(window.location.hash);
+
+    syncHash();
+    window.addEventListener('hashchange', syncHash);
+
+    return () => window.removeEventListener('hashchange', syncHash);
+  }, [hash, pathname]);
 
   return (
     <Flex
@@ -41,15 +52,15 @@ export const HeaderNavigation = ({ locale }: HeaderNavigationProps) => {
       width={{ base: '100%', md: 'auto' }}
     >
       {layoutNavigationLinks[locale].map(([label, href]) => {
-        const isActive = isNavigationLinkActive(href, pathname, hash);
+        const isActive = isNavigationLinkActive(href, pathname, currentHash);
 
         return (
           <Link
             aria-current={isActive ? 'location' : undefined}
+            asChild
             color={isActive ? '#4f603f' : '#343a31'}
             fontSize={{ base: '0.84rem', md: '0.92rem', lg: '0.96rem' }}
             fontWeight={isActive ? 700 : 600}
-            href={href}
             key={href}
             lineHeight={1.35}
             position="relative"
@@ -80,7 +91,7 @@ export const HeaderNavigation = ({ locale }: HeaderNavigationProps) => {
               _after: { transform: 'scaleX(1)' },
             }}
           >
-            {label}
+            <RouterLink to={href}>{label}</RouterLink>
           </Link>
         );
       })}

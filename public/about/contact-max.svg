@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="MAX">
+  <defs>
+    <linearGradient id="max-background" x1="8" y1="94" x2="92" y2="6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#29c6ed" />
+      <stop offset="0.48" stop-color="#2355f4" />
+      <stop offset="1" stop-color="#a334e5" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#max-background)" />
+  <path
+    fill="#fff"
+    fill-rule="evenodd"
+    transform="translate(12 12) scale(.76)"
+    d="M50.757 0.262c27.536 0 49.129 22.335 49.129 49.885 0 27.55-22.279 49.343-48.865 49.343-9.435 0-14.007-1.328-21.371-6.543a1.25 1.25 0 0 0-1.629.193c-5.664 6.043-20.171 10.286-20.835 2.036 0-14.386-7.186-23.729-7.186-45.3C0 21.555 23.221.262 50.757.262Zm.772 24.55c-13.065-.686-23.265 8.385-25.515 22.571-1.864 11.75 1.436 26.071 4.265 26.793 1.2.307 4.078-1.9 6.178-3.879a1.25 1.25 0 0 1 1.45-.15c3.272 2 6.972 3.5 11.05 3.714 13.414.7 25.3-9.8 26.007-23.214.7-13.414-10.022-25.143-23.435-25.843v.008Z"
+  />
+</svg>

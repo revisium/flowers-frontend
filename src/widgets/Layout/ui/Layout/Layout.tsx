@@ -12,12 +12,25 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   const { locale, onCollectionOpen, onLocaleChange } = useLayoutContext();
-  const { pathname } = useLocation();
+  const { hash, pathname } = useLocation();
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   useLayoutEffect(() => {
-    scrollContainerRef.current?.scrollTo({ behavior: 'auto', top: 0 });
-  }, [pathname]);
+    const scrollContainer = scrollContainerRef.current;
+
+    if (!scrollContainer) {
+      return;
+    }
+
+    const hashTarget = hash ? document.getElementById(hash.slice(1)) : null;
+
+    if (hashTarget) {
+      hashTarget.scrollIntoView({ behavior: 'auto', block: 'start' });
+      return;
+    }
+
+    scrollContainer.scrollTo({ behavior: 'auto', top: 0 });
+  }, [hash, pathname]);
 
   return (
     <Flex
