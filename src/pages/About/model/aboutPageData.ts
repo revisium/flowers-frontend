@@ -16,6 +16,8 @@ export type AboutFeatureArtworkName = 'camera' | 'care' | 'flower' | 'note' | 'p
 
 export interface AboutCopy {
   readonly breadcrumb: string;
+  readonly contactMax: string;
+  readonly contactTelegram: string;
   readonly cta: string;
   readonly footer: string;
   readonly footerTitle: string;
@@ -38,14 +40,22 @@ export const aboutFeatures: Record<
     ['camera', 'Фотографии роста', 'История роста и развития в фотографиях.'],
     ['care', 'Рекомендации по уходу', 'Проверенные советы по уходу, которые работают у меня.'],
     ['note', 'Личные заметки', 'Мои наблюдения, опыт и маленькие открытия.'],
-    ['flower', 'Ботанические эксперименты', 'Посевы, наблюдения и истории растений — от семян до цветения.'],
+    [
+      'flower',
+      'Ботанические эксперименты',
+      'Посевы, наблюдения и истории растений — от семян до цветения.',
+    ],
   ],
   en: [
     ['plant-card', 'Plant profiles', 'Detailed notes about every plant in my collection.'],
     ['camera', 'Growth photos', 'A visual history of growth and development.'],
     ['care', 'Care advice', 'Tried-and-tested care tips that work for me.'],
     ['note', 'Personal notes', 'My observations, experience and small discoveries.'],
-    ['flower', 'Botanical experiments', 'Sowing, observations and plant stories, from seed to flower.'],
+    [
+      'flower',
+      'Botanical experiments',
+      'Sowing, observations and plant stories, from seed to flower.',
+    ],
   ],
 };
 
@@ -112,9 +122,12 @@ export const aboutMilestones: Record<
 export const aboutCopy: Record<Locale, AboutCopy> = {
   ru: {
     breadcrumb: 'Обо мне',
+    contactMax: 'Написать в MAX',
+    contactTelegram: 'Написать в Telegram',
     cta: 'Перейти к коллекции растений',
-    footer: 'Надеюсь, вам здесь будет так же уютно, как и мне.',
-    footerTitle: 'Добро пожаловать в мою оранжерею!',
+    footer:
+      'Если хотите спросить об уходе, поделиться наблюдением или просто поговорить о любимых растениях — напишите мне. Буду рада живому разговору.',
+    footerTitle: 'Давайте говорить о растениях',
     history: 'Как появлялась оранжерея',
     lead: [
       'Эта оранжерея появилась не за один день.',
@@ -132,9 +145,12 @@ export const aboutCopy: Record<Locale, AboutCopy> = {
   },
   en: {
     breadcrumb: 'About me',
+    contactMax: 'Message me on MAX',
+    contactTelegram: 'Message me on Telegram',
     cta: 'View the plant collection',
-    footer: 'I hope it feels as warm and welcoming to you as it does to me.',
-    footerTitle: 'Welcome to my greenhouse!',
+    footer:
+      'If you have a care question, want to share an observation, or simply feel like talking about favourite plants, send me a message. I would love to hear from you.',
+    footerTitle: "Let's talk about plants",
     history: 'How the greenhouse grew',
     lead: [
       'This greenhouse did not appear overnight.',
