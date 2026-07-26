@@ -90,7 +90,9 @@ export const AboutHero = ({ locale, text }: AboutHeroProps) => (
       >
         <Image
           alt={locale === 'ru' ? 'Вариегатные монстеры у окна рядом с открытым блокнотом' : 'Variegated monsteras by a window beside an open notebook'}
+          fetchPriority="high"
           height="100%"
+          loading="eager"
           objectFit="cover"
           objectPosition="62% center"
           src="/about/about-hero.webp"
