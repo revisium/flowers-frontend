@@ -199,7 +199,7 @@ export const ProfileFooter = ({ locale, plant, text }: ProfileFooterProps) => {
         </FooterCard>
         <FooterCard image="/plant-profile/footer-facts.webp" index={2} title={text.facts} unified>
           {footer.facts[locale].map((item) => (
-            <Text key={item}>› {item}</Text>
+            <Text key={item}>❧ {item}</Text>
           ))}
         </FooterCard>
       </Grid>

@@ -77,7 +77,11 @@ const CareCard = ({
       background:
         'linear-gradient(90deg, transparent 0%, #e8dece 12%, #e8dece 88%, transparent 100%)',
       content: '""',
-      display: { base: index >= 2 ? 'block' : 'none', lg: index >= 4 ? 'block' : 'none' },
+      display: {
+        base: index >= 1 ? 'block' : 'none',
+        md: index >= 2 ? 'block' : 'none',
+        lg: index >= 4 ? 'block' : 'none',
+      },
       height: '1px',
       left: '16px',
       position: 'absolute',
@@ -89,7 +93,11 @@ const CareCard = ({
         'linear-gradient(180deg, transparent 0%, #e8dece 12%, #e8dece 88%, transparent 100%)',
       bottom: '16px',
       content: '""',
-      display: { base: index % 2 === 1 ? 'block' : 'none', lg: index % 4 === 0 ? 'none' : 'block' },
+      display: {
+        base: 'none',
+        md: index % 2 === 1 ? 'block' : 'none',
+        lg: index % 4 === 0 ? 'none' : 'block',
+      },
       left: 0,
       position: 'absolute',
       top: '16px',
@@ -140,7 +148,7 @@ export const ProfileCare = ({ locale, plant }: ProfileCareProps) => (
     border="1px solid #e8dece"
     borderRadius="10px"
     gap="0"
-    gridTemplateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
+    gridTemplateColumns={{ base: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
     marginTop="12px"
     overflow="hidden"
   >
