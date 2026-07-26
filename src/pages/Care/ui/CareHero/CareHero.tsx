@@ -14,7 +14,7 @@ export const CareHero = ({ text }: CareHeroProps) => {
       background="#e8e3d5"
       minHeight={{ base: '720px', md: '680px', lg: '700px' }}
       overflow="hidden"
-      padding={{ base: '106px 18px 24px', md: '128px 36px 34px', lg: '132px 46px 38px' }}
+      padding={{ base: '24px 18px', md: '34px 36px', lg: '38px 46px' }}
       position="relative"
     >
       <Image
