@@ -22,8 +22,10 @@ export const BlogHero = ({ locale, text }: BlogHeroProps) => (
           ? 'Открытый дневник с ботаническими зарисовками, гербарием и черенками растений'
           : 'An open journal with botanical sketches, pressed leaves and plant cuttings'
       }
+      fetchPriority="high"
       height="100%"
       inset={0}
+      loading="eager"
       objectFit="cover"
       objectPosition={{ base: '54% center', md: 'center', lg: 'center top' }}
       position="absolute"

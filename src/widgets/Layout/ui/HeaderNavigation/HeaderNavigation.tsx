@@ -91,7 +91,7 @@ export const HeaderNavigation = ({ locale }: HeaderNavigationProps) => {
               _after: { transform: 'scaleX(1)' },
             }}
           >
-            <RouterLink to={href}>{label}</RouterLink>
+            <RouterLink prefetch="render" to={href}>{label}</RouterLink>
           </Link>
         );
       })}
