@@ -11,7 +11,7 @@ interface BlogHeroProps {
 export const BlogHero = ({ locale, text }: BlogHeroProps) => (
   <Box
     aspectRatio={{ base: 'auto', lg: '16 / 7.525' }}
-    background="#fbf9f3"
+    backgroundColor="#fbf9f3"
     minHeight={{ base: '720px', md: '650px', lg: 'unset' }}
     overflow="hidden"
     position="relative"
