@@ -15,6 +15,7 @@ import {
   getLocaleTitle,
   getRequestLocale,
   LayoutProvider,
+  localeBootstrapScript,
 } from './shared/config';
 
 export const loader = ({ request }: { readonly request: Request }) => ({
@@ -72,6 +73,7 @@ export const Layout = ({ children }: LayoutProps) => {
     <html lang={locale}>
       <head>
         <meta charSet="utf-8" />
+        <script dangerouslySetInnerHTML={{ __html: localeBootstrapScript }} />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>{getLocaleTitle(locale)}</title>
         <Meta />

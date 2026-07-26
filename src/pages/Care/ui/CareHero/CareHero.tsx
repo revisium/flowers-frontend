@@ -19,8 +19,10 @@ export const CareHero = ({ text }: CareHeroProps) => {
     >
       <Image
         alt=""
+        fetchPriority="high"
         height="100%"
         inset={0}
+        loading="eager"
         objectFit="cover"
         objectPosition={{ base: '65% center', md: 'center' }}
         position="absolute"

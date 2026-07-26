@@ -10,6 +10,48 @@ const localeTitles: Record<Locale, string> = {
   ru: 'Оранжерея. Моя личная коллекция.',
 };
 
+export const localeBootstrapScript = `
+(() => {
+  try {
+    const key = '${localeStorageKey}';
+    const storedLocale = window.localStorage.getItem(key);
+    const isLocale = (value) => value === 'ru' || value === 'en';
+
+    if (!isLocale(storedLocale)) return;
+
+    const readCookie = () => document.cookie
+      .split('; ')
+      .find((cookie) => cookie.startsWith(key + '='))
+      ?.split('=')[1];
+    let cookieLocale = readCookie();
+
+    if (!isLocale(cookieLocale)) {
+      document.cookie = key + '=' + storedLocale + '; Path=/; Max-Age=31536000; SameSite=Lax';
+      cookieLocale = readCookie();
+    }
+
+    const preferredLocale = isLocale(cookieLocale) ? cookieLocale : storedLocale;
+    const reloadKey = key + '.reload';
+
+    if (
+      document.documentElement.lang !== preferredLocale &&
+      cookieLocale === preferredLocale &&
+      window.sessionStorage.getItem(reloadKey) !== preferredLocale
+    ) {
+      window.sessionStorage.setItem(reloadKey, preferredLocale);
+      window.location.reload();
+      return;
+    }
+
+    if (document.documentElement.lang === preferredLocale) {
+      window.sessionStorage.removeItem(reloadKey);
+    }
+  } catch {
+    // The app falls back to the server locale when browser storage is unavailable.
+  }
+})();
+`;
+
 const isLocale = (value: string | null): value is Locale => {
   return value === 'ru' || value === 'en';
 };
@@ -59,6 +101,12 @@ const readBrowserLocale = (fallbackLocale: Locale) => {
     return fallbackLocale;
   }
 
+  const cookieLocale = readLocaleCookie(document.cookie);
+
+  if (cookieLocale) {
+    return cookieLocale;
+  }
+
   try {
     const storedLocale = window.localStorage.getItem(localeStorageKey);
 
@@ -67,12 +115,6 @@ const readBrowserLocale = (fallbackLocale: Locale) => {
     }
   } catch {
     // Browser language detection still works when storage is unavailable.
-  }
-
-  const cookieLocale = readLocaleCookie(document.cookie);
-
-  if (cookieLocale) {
-    return cookieLocale;
   }
 
   return window.navigator.languages.length > 0
@@ -97,6 +139,7 @@ export const usePreferredLocale = (initialLocale: Locale = defaultLocale) => {
     const preferredLocale = readBrowserLocale(initialLocale);
 
     setLocale(preferredLocale);
+    persistLocale(preferredLocale);
     applyDocumentLocale(preferredLocale);
   }, [initialLocale]);
 
