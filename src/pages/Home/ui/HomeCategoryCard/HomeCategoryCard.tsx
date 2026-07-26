@@ -42,10 +42,20 @@ export const HomeCategoryCard = ({ category, detail, onOpen }: HomeCategoryCardP
       _active={{ textDecoration: 'none' }}
       _focus={{ textDecoration: 'none' }}
       _hover={{
+        '& [data-category-arrow]': {
+          opacity: 1,
+          transform: 'translateY(0)',
+        },
         borderColor: 'rgba(105, 145, 69, 0.72)',
         boxShadow: '0 18px 42px rgba(91, 76, 54, 0.11)',
         textDecoration: 'none',
         transform: 'translateY(-2px)',
+      }}
+      _focusVisible={{
+        '& [data-category-arrow]': {
+          opacity: 1,
+          transform: 'translateY(0)',
+        },
       }}
     >
       <Box
@@ -150,19 +160,24 @@ export const HomeCategoryCard = ({ category, detail, onOpen }: HomeCategoryCardP
 
       <Flex
         alignItems="center"
-        background="#486042"
+        background="transparent"
+        border="1px solid #486042"
         borderRadius="999px"
-        color="#fffdf7"
+        color="#486042"
+        data-category-arrow=""
         fontSize={{ base: '19px', md: '21px', xl: '23px' }}
         height={{ base: '38px', md: '42px', xl: '46px' }}
         justify="center"
         lineHeight={1}
         bottom={{ base: '16px', md: '18px', xl: '20px' }}
+        opacity={{ base: 1, lg: 0 }}
         position="absolute"
         right={{ base: '16px', md: '18px', xl: '20px' }}
+        transform={{ base: 'none', lg: 'translateY(4px)' }}
+        transition="opacity 180ms ease, transform 180ms ease"
         width={{ base: '38px', md: '42px', xl: '46px' }}
       >
-        <Box as="span" marginTop="-2px">
+        <Box as="span" transform="translateY(-2px)">
           →
         </Box>
       </Flex>
