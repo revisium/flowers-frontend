@@ -42,10 +42,15 @@ Layers, from top to bottom, each depending only downward:
 - `shared` — cross-cutting UI, API/transport, config, and infrastructure
   helpers with no product-domain knowledge.
 
-`src/shared/config/locale.ts` owns the prototype locale type and best-effort
-localStorage persistence. `src/shared/config/layoutContext.tsx` owns shared
-locale and catalog-open state, while page-local copy remains in each page slice
-model.
+`src/shared/config/locale.ts` owns the prototype locale type, automatic locale
+detection, and preference persistence. On the initial SSR request, an explicit
+locale cookie wins; otherwise `Accept-Language` selects Russian for a primary
+Russian browser language and English for every other language. The client keeps
+the existing localStorage preference as a compatibility fallback, uses
+`navigator.languages` when no preference exists, and persists manual RU / EN
+changes to both localStorage and the server-readable cookie.
+`src/shared/config/layoutContext.tsx` owns shared locale and catalog-open state,
+while page-local copy remains in each page slice model.
 
 `features/` does not exist yet. An FSD layer should contain only slice folders;
 create a feature only when its behavior is needed across pages.

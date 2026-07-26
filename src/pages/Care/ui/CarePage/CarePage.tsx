@@ -11,7 +11,14 @@ export const CarePage = () => {
   const text = careCopy[locale];
 
   return (
-    <Flex as="main" color="#2d3c2d" direction="column" minHeight="100%" width="100%">
+    <Flex
+      as="main"
+      color="#2d3c2d"
+      direction="column"
+      minHeight="100%"
+      paddingTop={{ base: '99px', md: '80px' }}
+      width="100%"
+    >
       <CareHero text={text} />
       <CareGuidesSection text={text} />
       <CareRoutine text={text} />

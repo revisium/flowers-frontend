@@ -51,7 +51,11 @@ export const HomeCategoriesSection = ({ locale, text }: HomeCategoriesSectionPro
         alignItems="flex-start"
         direction="column"
         gap={{ base: '4px', md: '6px' }}
-        padding={{ base: '22px 18px 18px', md: '30px clamp(18px, 3vw, 38px) 22px' }}
+        padding={{
+          base: '18px 18px 18px',
+          md: '28px clamp(18px, 3vw, 38px) 22px',
+          xl: '90px clamp(18px, 3vw, 38px) 22px',
+        }}
       >
         <Text
           color="#718064"

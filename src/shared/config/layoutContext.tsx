@@ -14,11 +14,12 @@ const LayoutContext = createContext<LayoutContextValue | null>(null);
 
 interface LayoutProviderProps {
   readonly children: ReactNode;
+  readonly initialLocale?: Locale;
 }
 
-export const LayoutProvider = ({ children }: LayoutProviderProps) => {
+export const LayoutProvider = ({ children, initialLocale }: LayoutProviderProps) => {
   const [isCollectionOpen, setIsCollectionOpen] = useState(false);
-  const [locale, changeLocale] = usePreferredLocale();
+  const [locale, changeLocale] = usePreferredLocale(initialLocale);
   const openCollection = useCallback(() => {
     setIsCollectionOpen(true);
   }, []);

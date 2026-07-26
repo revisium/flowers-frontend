@@ -6,10 +6,20 @@ import {
   Scripts,
   ScrollRestoration,
   type LinksFunction,
+  useRouteLoaderData,
 } from 'react-router';
 
 import { AppProvider } from './app/providers/AppProvider';
-import { LayoutProvider } from './shared/config';
+import {
+  defaultLocale,
+  getLocaleTitle,
+  getRequestLocale,
+  LayoutProvider,
+} from './shared/config';
+
+export const loader = ({ request }: { readonly request: Request }) => ({
+  locale: getRequestLocale(request),
+});
 
 export const links: LinksFunction = () => [
   {
@@ -56,18 +66,20 @@ interface LayoutProps {
 }
 
 export const Layout = ({ children }: LayoutProps) => {
+  const locale = useRouteLoaderData<typeof loader>('root')?.locale ?? defaultLocale;
+
   return (
-    <html lang="ru">
+    <html lang={locale}>
       <head>
         <meta charSet="utf-8" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <title>Оранжерея. Моя личная коллекция.</title>
+        <title>{getLocaleTitle(locale)}</title>
         <Meta />
         <Links />
       </head>
       <body>
         <AppProvider>
-          <LayoutProvider>{children}</LayoutProvider>
+          <LayoutProvider initialLocale={locale}>{children}</LayoutProvider>
         </AppProvider>
         <ScrollRestoration />
         <Scripts />

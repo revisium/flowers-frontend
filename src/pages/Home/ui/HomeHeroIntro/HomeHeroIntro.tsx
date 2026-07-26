@@ -16,7 +16,7 @@ export const HomeHeroIntro = ({ onCollectionOpen, stats, text }: HomeHeroIntroPr
       direction="column"
       justify="center"
       maxWidth={{ base: '580px', md: '610px', lg: '680px' }}
-      padding={{ base: '120px 22px 42px', md: '96px 34px 28px', lg: '116px 58px 54px' }}
+      padding={{ base: '42px 22px', md: '28px 34px', lg: '54px 58px' }}
       width="100%"
     >
       <HomeHeroContent onCollectionOpen={onCollectionOpen} stats={stats} text={text} />
