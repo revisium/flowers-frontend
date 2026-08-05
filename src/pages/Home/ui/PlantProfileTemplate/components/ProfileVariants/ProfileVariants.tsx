@@ -47,7 +47,7 @@ export const ProfileVariants = ({ locale, plant }: ProfileVariantsProps) => {
         {variants.items.map((variant) => (
           <Box
             as="figure"
-            background="#fffaf3"
+            background={variants.captionsEmbedded ? '#1d1d1b' : '#fffaf3'}
             border="1px solid rgba(190, 169, 140, 0.52)"
             borderRadius="9px"
             boxShadow="0 8px 22px rgba(78, 62, 42, 0.08)"
@@ -57,23 +57,26 @@ export const ProfileVariants = ({ locale, plant }: ProfileVariantsProps) => {
           >
             <Image
               alt={variant.name[locale]}
-              aspectRatio="4 / 5"
+              aspectRatio={variants.captionsEmbedded ? '3 / 4' : '4 / 5'}
               loading="lazy"
               objectFit="cover"
+              objectPosition={variants.captionsEmbedded ? 'center bottom' : 'center'}
               src={variant.image}
               width="100%"
             />
-            <Text
-              as="figcaption"
-              color="#3f4d3d"
-              fontSize={{ base: '0.72rem', md: '0.78rem' }}
-              fontWeight={700}
-              lineHeight={1.3}
-              minHeight={{ base: '48px', md: '52px' }}
-              padding="10px 11px"
-            >
-              {variant.name[locale]}
-            </Text>
+            {variants.captionsEmbedded ? null : (
+              <Text
+                as="figcaption"
+                color="#3f4d3d"
+                fontSize={{ base: '0.72rem', md: '0.78rem' }}
+                fontWeight={700}
+                lineHeight={1.3}
+                minHeight={{ base: '48px', md: '52px' }}
+                padding="10px 11px"
+              >
+                {variant.name[locale]}
+              </Text>
+            )}
           </Box>
         ))}
       </Grid>
