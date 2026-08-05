@@ -59,6 +59,7 @@ interface PlantProfileVariant {
 }
 
 interface PlantProfileVariants {
+  readonly captionsEmbedded?: boolean;
   readonly description: Record<Locale, string>;
   readonly items: readonly PlantProfileVariant[];
   readonly title: Record<Locale, string>;
@@ -6805,73 +6806,128 @@ export const collectionPlants: readonly CollectionPlant[] = [
       {
         importantImage: '/plant-profile/gloxinia-important.webp',
         propagationImage: '/plant-profile/gloxinia-propagation.webp',
-        variants: profileVariants(
-          ['My collection of colours', 'Моя коллекция расцветок'],
-          [
-            'Gloxinias can look completely different while sharing the same velvety leaves and generous flowering. Here are the distinct colours and flower forms that have bloomed in my collection.',
-            'Глоксинии могут выглядеть совершенно по-разному, сохраняя бархатистую листву и щедрое цветение. Здесь собраны разные расцветки и формы цветка, которые цвели в моей коллекции.',
-          ],
-          [
-            '/plant-profile/gloxinia-variants/raspberry.webp',
-            ['Raspberry with a pale throat', 'Малиновая со светлым горлом'],
-          ],
-          [
-            '/plant-profile/gloxinia-variants/lilac-white.webp',
-            ['White and lilac', 'Бело-лиловая'],
-          ],
-          [
-            '/plant-profile/gloxinia-variants/burgundy-speckles.webp',
-            ['Burgundy speckles', 'Бордовый крап'],
-          ],
-          [
-            '/plant-profile/gloxinia-variants/lavender-double.webp',
-            ['Double lavender', 'Лавандовая махровая'],
-          ],
-          [
-            '/plant-profile/gloxinia-variants/pink-speckled-double.webp',
-            ['Double pink speckles', 'Розовая крапчатая махровая'],
-          ],
-          [
-            '/plant-profile/gloxinia-variants/deep-purple.webp',
-            ['Deep purple', 'Глубокая фиолетовая'],
-          ],
-          ['/plant-profile/gloxinia-variants/crimson.webp', ['Crimson', 'Малиновая']],
-          [
-            '/plant-profile/gloxinia-variants/plum-speckles.webp',
-            ['Plum speckles', 'Сливовый крап'],
-          ],
-          [
-            '/plant-profile/gloxinia-variants/white-pink-ring.webp',
-            ['White with a pink ring', 'Белая с розовым кольцом'],
-          ],
-          [
-            '/plant-profile/gloxinia-variants/white-speckled-double.webp',
-            ['Double white speckles', 'Белая крапчатая махровая'],
-          ],
-          ['/plant-profile/gloxinia-variants/hot-pink.webp', ['Hot pink', 'Ярко-розовая']],
-          [
-            '/plant-profile/gloxinia-variants/raspberry-white-edge.webp',
-            ['Raspberry with a white edge', 'Малиновая с белым кантом'],
-          ],
-          ['/plant-profile/gloxinia-variants/velvet-red.webp', ['Velvet red', 'Бархатная красная']],
-          [
-            '/plant-profile/gloxinia-variants/violet-stippled.webp',
-            ['Violet stippling', 'Фиолетовая крапчатая'],
-          ],
-          [
-            '/plant-profile/gloxinia-variants/pink-white-edge.webp',
-            ['Pink with a white edge', 'Розовая с белым кантом'],
-          ],
-          [
-            '/plant-profile/gloxinia-variants/lilac-speckled-double.webp',
-            ['Double lilac speckles', 'Лиловая крапчатая махровая'],
-          ],
-          ['/plant-profile/gloxinia-variants/pure-white.webp', ['Pure white', 'Чисто-белая']],
-          [
-            '/plant-profile/gloxinia-variants/pale-lilac-throat.webp',
-            ['Pale lilac with a violet throat', 'Светло-лиловая с фиолетовым горлом'],
-          ],
-        ),
+        variants: {
+          ...profileVariants(
+            ['My collection of colours', 'Моя коллекция расцветок'],
+            [
+              'Gloxinias can look completely different while sharing the same velvety leaves and generous flowering. Here are the distinct colours and flower forms that have bloomed in my collection.',
+              'Глоксинии могут выглядеть совершенно по-разному, сохраняя бархатистую листву и щедрое цветение. Здесь собраны разные расцветки и формы цветка, которые цвели в моей коллекции.',
+            ],
+            [
+              '/plant-profile/gloxinia-variants/01-lilac-twilight.webp',
+              ['Lilac Twilight', 'Сиреневые Сумерки'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/02-ruby-heart.webp',
+              ['Ruby Heart', 'Рубиновое Сердце'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/03-pink-cloud.webp',
+              ['Pink Cloud', 'Розовое Облако'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/04-amethyst-dust.webp',
+              ['Amethyst Dust', 'Аметистовая Пыль'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/05-powder-dawn.webp',
+              ['Powder Dawn', 'Пудровый Рассвет'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/06-lavender-dawn.webp',
+              ['Lavender Dawn', 'Лавандовый Рассвет'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/07-velvet-night.webp',
+              ['Velvet Night', 'Бархатная Ночь'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/08-raspberry-sprinkle.webp',
+              ['Raspberry Sprinkle', 'Малиновая Россыпь'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/09-porcelain-pearl.webp',
+              ['Porcelain Pearl', 'Фарфоровая Жемчужина'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/10-violet-lace.webp',
+              ['Violet Lace', 'Фиалковое Кружево'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/11-carmine-crown.webp',
+              ['Carmine Crown', 'Карминовая Корона'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/12-pearl-veil.webp',
+              ['Pearl Veil', 'Жемчужная Вуаль'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/13-raspberry-heart.webp',
+              ['Raspberry Heart', 'Малиновое Сердце'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/14-royal-velvet.webp',
+              ['Royal Velvet', 'Королевский Бархат'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/15-amethyst-constellation.webp',
+              ['Amethyst Constellation', 'Созвездие Аметиста'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/16-garnet-flame.webp',
+              ['Garnet Flame', 'Гранатовое Пламя'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/17-snow-veil.webp',
+              ['Snow Veil', 'Снежная Вуаль'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/18-pink-opal.webp',
+              ['Pink Opal', 'Розовый Опал'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/19-lavender-lace.webp',
+              ['Lavender Lace', 'Лавандовое Кружево'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/20-ink-constellation.webp',
+              ['Ink Constellation', 'Чернильное Созвездие'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/21-amethyst-night.webp',
+              ['Amethyst Night', 'Аметистовая Ночь'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/22-ruby-velvet.webp',
+              ['Ruby Velvet', 'Рубиновый Бархат'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/23-pearl-dawn.webp',
+              ['Pearl Dawn', 'Жемчужный Рассвет'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/24-violet-symphony.webp',
+              ['Violet Symphony', 'Фиолетовая Симфония'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/25-peony-watercolor.webp',
+              ['Peony Watercolor', 'Пионовая Акварель'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/26-twilight-viola.webp',
+              ['Twilight Viola', 'Сумеречная Виола'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/27-carmine-velvet.webp',
+              ['Carmine Velvet', 'Карминовый Бархат'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/28-midnight-amethyst.webp',
+              ['Midnight Amethyst', 'Полночный Аметист'],
+            ],
+          ),
+          captionsEmbedded: true,
+        },
       },
     ),
   ),
