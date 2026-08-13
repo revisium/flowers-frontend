@@ -1851,6 +1851,103 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ),
   ),
   collectionPlant(
+    'asparagaceae',
+    'dracaena-angolensis-boncel',
+    '/plants/dracaena-angolensis-boncel-home-photo.webp',
+    ['Starfish snake plant', 'Сансевиерия Старфиш'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/sansevieria-blue-star-important.webp',
+        propagationImage: '/plant-profile/sansevieria-blue-star-propagation.webp',
+      },
+      difficulty: 1,
+      facts: [
+        [
+          'Thick cylindrical leaves radiate from the base like the arms of a starfish.',
+          'Dark transverse bands circle each spear-shaped leaf.',
+          'The compact fan develops slowly and spreads by underground rhizomes.',
+        ],
+        [
+          'Толстые цилиндрические листья расходятся от основания, словно лучи морской звезды.',
+          'Каждый копьевидный лист покрыт тёмными поперечными полосами.',
+          'Компактный веер растёт медленно и разрастается подземными корневищами.',
+        ],
+      ],
+      family: ['Asparagus family (Asparagaceae)', 'Спаржевые (Asparagaceae)'],
+      feeding: [
+        'Feed every six to eight weeks from late spring to August with cactus fertiliser at half strength. Do not feed in winter or while the substrate remains damp.',
+        'С конца весны до августа подкармливайте раз в шесть-восемь недель половинной дозой удобрения для кактусов. Не удобряйте зимой и пока грунт остаётся влажным.',
+      ],
+      growth: ['Slow', 'Медленный'],
+      height: ['Usually 20–45 cm indoors', 'Обычно 20–45 см в комнате'],
+      humidity: [
+        'Normal dry room air is suitable. Do not mist routinely or leave water between the tightly grouped leaf bases.',
+        'Подходит обычный сухой комнатный воздух. Не опрыскивайте без необходимости и не оставляйте воду между плотно собранными основаниями листьев.',
+      ],
+      important: [
+        'Overwatering is the main danger. Let the mineral-rich substrate dry completely, keep the leaf bases above the soil and never leave water in the cachepot.',
+        'Главная опасность — перелив. Полностью просушивайте минеральный грунт, не заглубляйте основания листьев и никогда не оставляйте воду в кашпо.',
+      ],
+      latinName: "Dracaena angolensis 'Boncel'",
+      light: [
+        'Give bright diffused light with gentle morning or evening sun. It tolerates lower light, but the fan stays denser and the banding clearer in a bright position.',
+        'Нужен яркий рассеянный свет с мягким утренним или вечерним солнцем. Растение переносит менее яркое освещение, но на светлом месте веер остаётся плотнее, а полосы — заметнее.',
+      ],
+      notes: [
+        'This is one plant photographed from two sides. Its leaves do not make a perfectly even fan: several lean outward at different angles, giving the rosette a lively star-like silhouette.',
+        'Это одно растение, сфотографированное с двух сторон. Его листья не образуют идеально ровный веер: несколько расходятся под разными углами и создают живой звёздный силуэт.',
+      ],
+      origin: [
+        'Cultivated form of a species native to Angola, Zambia and Zimbabwe',
+        'Культурная форма вида из Анголы, Замбии и Зимбабве',
+      ],
+      overview: [
+        "'Boncel', often sold as Starfish, is a compact form of Dracaena angolensis with rigid cylindrical leaves arranged in a spreading fan. The older familiar botanical name is Sansevieria cylindrica 'Boncel'.",
+        '«Бонсел», часто продаваемая как Старфиш, — компактная форма Dracaena angolensis с жёсткими цилиндрическими листьями, собранными в раскидистый веер. Прежнее привычное ботаническое название — Sansevieria cylindrica «Boncel».',
+      ],
+      plantType: ['Evergreen rhizomatous leaf succulent', 'Вечнозелёный корневищный листовой суккулент'],
+      problems: [
+        [
+          'Soft yellow leaf bases — stop watering and inspect the rhizome for rot.',
+          'Wrinkled leaves — check whether the mix has stayed dry for too long or the roots are damaged.',
+          'Leaning pale new growth — move gradually to brighter diffused light.',
+        ],
+        [
+          'Основания листьев желтеют и размягчаются — прекратите полив и проверьте корневище на гниль.',
+          'Листья сморщиваются — проверьте, не пересушен ли грунт слишком долго и не повреждены ли корни.',
+          'Новый прирост бледнеет и наклоняется — постепенно переставьте на более яркий рассеянный свет.',
+        ],
+      ],
+      propagation: [
+        'Separate a daughter fan only after it has its own roots. Cut the connecting rhizome with a sterile blade, let both cuts dry for one or two days and pot the divisions into dry gritty substrate.',
+        'Отделяйте дочерний веер только после появления собственных корней. Разрежьте соединяющее корневище стерильным лезвием, подсушите оба среза один-два дня и посадите делёнки в сухой минеральный грунт.',
+      ],
+      repotting: [
+        'Repot in spring only when rhizomes crowd or distort the container. Choose a sturdy pot with drainage just two or three centimetres wider than the root ball.',
+        'Пересаживайте весной, только когда корневища заполнят или начнут деформировать горшок. Выбирайте устойчивую ёмкость с дренажом всего на два-три сантиметра шире корневого кома.',
+      ],
+      secondaryCare: [
+        ['Leaf care', 'Уход за листьями'],
+        [
+          'Wipe each cylindrical leaf with a soft damp cloth while supporting it at the base. Remove a badly damaged spear completely; a cut tip will not regrow.',
+          'Протирайте каждый цилиндрический лист мягкой влажной тканью, придерживая у основания. Сильно повреждённый лист удаляйте целиком: срезанная верхушка не восстановится.',
+        ],
+      ],
+      soil: [
+        'Use a very fast-draining mix of about 35% cactus compost and 65% pumice, lava grit, perlite or coarse mineral material.',
+        'Используйте быстро просыхающую смесь примерно из 35% грунта для кактусов и 65% пемзы, лавовой крошки, перлита или другого крупного минерального материала.',
+      ],
+      temperature: [
+        'Keep at 18–30 °C during active growth and preferably above 15 °C in winter. Protect the roots from cold, wet windowsills.',
+        'В период роста содержите при 18–30 °C, а зимой желательно не ниже 15 °C. Защищайте корни от холодного мокрого подоконника.',
+      ],
+      watering: [
+        'Soak the substrate thoroughly only after it has dried completely, then drain every drop. Water much less often during cool, dark winter months.',
+        'Полностью промачивайте грунт только после полной просушки и сливайте всю лишнюю воду. В прохладные тёмные зимние месяцы поливайте значительно реже.',
+      ],
+    }),
+  ),
+  collectionPlant(
     'moraceae',
     'ficus-benjamina',
     '/plants/ficus-benjamina-home-photo.webp',
