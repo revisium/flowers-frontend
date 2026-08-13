@@ -178,7 +178,7 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     name: { en: 'Mulberry family', ru: 'Тутовые' },
   },
   {
-    count: { en: '0 plants', ru: '0 растений' },
+    count: { en: '3 plants', ru: '3 растения' },
     id: 'aizoaceae',
     image: '/plants/categories/studio/aizoaceae.webp',
     imageObjectPosition: 'right center',

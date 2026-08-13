@@ -3284,6 +3284,103 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ),
   ),
   collectionPlant(
+    'aizoaceae',
+    'mesembryanthemum-cordifolium-forms',
+    '/plants/mesembryanthemum-cordifolium-forms-home-photo.webp',
+    ['Heartleaf ice plant: green and variegated', 'Аптения: зелёная и вариегатная'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/aptenia-important.webp',
+        propagationImage: '/plant-profile/aptenia-propagation.webp',
+      },
+      difficulty: 1,
+      facts: [
+        [
+          'Its current accepted botanical name is Mesembryanthemum cordifolium; Aptenia cordifolia remains common in cultivation.',
+          'The green and variegated forms are the same species. Both have fleshy opposite leaves and a creeping habit.',
+          'With enough light, mature shoots may produce small magenta, daisy-like flowers.',
+          'Long shoots root readily at the nodes and can be pinched to keep the planting compact.',
+        ],
+        [
+          'Современное принятое ботаническое название — Mesembryanthemum cordifolium; в цветоводстве по-прежнему часто используют имя Aptenia cordifolia.',
+          'Зелёная и вариегатная формы относятся к одному виду. У обеих мясистые супротивные листья и стелющиеся побеги.',
+          'При хорошем освещении взрослые побеги могут цвести небольшими пурпурными цветками, похожими на маргаритки.',
+          'Длинные побеги легко укореняются в узлах; прищипка помогает сохранить композицию компактной.',
+        ],
+      ],
+      family: ['Ice plant family (Aizoaceae)', 'Аизовые (Aizoaceae)'],
+      feeding: [
+        'Feed once every 4–6 weeks in spring and summer with a half-strength fertiliser for succulents. Do not feed in winter.',
+        'Весной и летом подкармливайте раз в 4–6 недель половинной дозой удобрения для суккулентов. Зимой не подкармливайте.',
+      ],
+      growth: ['Fast', 'Быстрый'],
+      height: ['Trailing shoots 30–60 cm', 'Стелющиеся побеги 30–60 см'],
+      humidity: [
+        'Normal dry room air is suitable. Good airflow is more important than extra humidity.',
+        'Подходит обычный сухой комнатный воздух. Хорошая циркуляция воздуха важнее повышенной влажности.',
+      ],
+      important: [
+        'The solid-green form usually grows faster and can shade or crowd the variegated one. Pinch it back so both forms remain visible, and never leave water in the saucer.',
+        'Однотонно-зелёная форма обычно растёт быстрее и может затенить вариегатную. Прищипывайте её, чтобы сохранить обе формы в композиции, и не оставляйте воду в поддоне.',
+      ],
+      latinName: 'Mesembryanthemum cordifolium',
+      light: [
+        'Give very bright light with several hours of gentle direct sun after gradual acclimatisation. The variegated form needs especially good light to stay compact.',
+        'Нужен очень яркий свет и несколько часов мягкого прямого солнца после постепенного привыкания. Вариегатной форме особенно важно хорошее освещение, чтобы не вытягиваться.',
+      ],
+      notes: [
+        'These two forms began as tiny cuttings from a mixed succulent set and now grow together in one pot.',
+        'Эти две формы начинались с маленьких черенков из набора суккулентов и теперь растут вместе в одном горшке.',
+      ],
+      origin: ['South Africa', 'Южная Африка'],
+      overview: [
+        'Heartleaf ice plant is a creeping succulent with glossy, water-storing leaves. This pot combines the vigorous green form and the cream-edged variegated form.',
+        'Мезембриантемум сердцелистный, или аптения, — стелющийся суккулент с глянцевыми листьями, запасающими воду. В одном горшке растут сильная зелёная и кремово-окаймлённая вариегатная формы.',
+      ],
+      plantType: ['Creeping succulent herb', 'Стелющийся травянистый суккулент'],
+      problems: [
+        [
+          'Soft, translucent stems — stop watering and inspect the roots for rot.',
+          'Long gaps between leaves — move the plant to brighter light gradually.',
+          'Dry brown patches — protect it from sudden harsh midday sun.',
+        ],
+        [
+          'Мягкие полупрозрачные стебли — прекратите полив и проверьте корни на гниль.',
+          'Большие промежутки между листьями — постепенно переставьте растение на более яркий свет.',
+          'Сухие коричневые пятна — защищайте от резкого полуденного солнца без адаптации.',
+        ],
+      ],
+      propagation: [
+        'Take a healthy 6–10 cm stem cutting, remove the lowest leaf pair and let the cut dry briefly. Insert one or two nodes into a lightly moist gritty mix; keep it warm and bright without harsh sun until rooted.',
+        'Срежьте здоровый побег длиной 6–10 см, удалите нижнюю пару листьев и немного подсушите срез. Заглубите один-два узла в слегка влажную минеральную смесь и держите в тепле на ярком рассеянном свету до укоренения.',
+      ],
+      repotting: [
+        'Repot in spring when roots fill the pot. A shallow, wide container with a drainage hole suits the creeping shoots.',
+        'Пересаживайте весной, когда корни освоят горшок. Стелющимся побегам подходит неглубокая широкая ёмкость с дренажным отверстием.',
+      ],
+      secondaryCare: [
+        ['Pinching', 'Прищипка'],
+        [
+          'Pinch long green shoots more often than variegated ones to encourage branching and keep the two forms balanced.',
+          'Прищипывайте длинные зелёные побеги чаще вариегатных: это усилит ветвление и сохранит баланс двух форм.',
+        ],
+      ],
+      soil: [
+        'Use a fast-draining succulent mix with plenty of pumice, perlite or fine gravel. The pot must have a drainage hole.',
+        'Используйте быстро просыхающую смесь для суккулентов с большим количеством пемзы, перлита или мелкого гравия. В горшке обязательно дренажное отверстие.',
+      ],
+      temperature: [
+        'Keep at 18–27°C in active growth. In winter, a bright and drier position around 12–18°C helps maintain compact growth; protect from frost.',
+        'В период роста держите при 18–27 °C. Зимой светлое и более сухое содержание при 12–18 °C помогает сохранить компактность; берегите от заморозков.',
+      ],
+      watering: [
+        'Water thoroughly after most of the mix has dried, then drain excess water. Reduce watering sharply in cool, low-light conditions.',
+        'Поливайте обильно после просыхания большей части смеси и сливайте лишнюю воду. В прохладе и при слабом освещении полив резко сокращайте.',
+      ],
+    }),
+    2,
+  ),
+  collectionPlant(
     'crassulaceae',
     'sedum-burrito',
     '/plants/sedum-burrito-home-photo.webp',

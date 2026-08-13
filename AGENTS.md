@@ -75,6 +75,12 @@ replace these templates when they already contain the repo-specific truth.
 
 - Inspect existing structure before editing.
 - Keep changes scoped.
+- For every plant profile, the illustrations in the `Important` and
+  `Propagation` blocks must depict the exact species or cultivar named in that
+  profile. Do not reuse an asset merely because it shows a visually similar
+  plant or another member of the same family. Generate or prepare a matching
+  asset when none exists, and keep these illustrations background-free with a
+  validated alpha channel.
 - Run local verification before commit.
 - Check CI after push.
 - Prefer `VERIFICATION.md`; if it is absent, derive checks from repo scripts and
