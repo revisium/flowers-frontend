@@ -21,16 +21,19 @@ npm run verify
 `verify` runs the gates in order and fails fast:
 
 1. `markdown:lint` - `markdownlint-cli2` over repo Markdown and `.mdc` files.
-2. `skills:lint` - validates `.agents/skills/*/SKILL.md` frontmatter and shape.
-3. `ui:lint` - enforces the same-named component-folder convention under
+2. `images:check` - requires WebP for raster assets under `public/` and
+   verifies that every collection `*-home-photo.webp` has its matching
+   `*-home-photo-catalog.webp` derivative.
+3. `skills:lint` - validates `.agents/skills/*/SKILL.md` frontmatter and shape.
+4. `ui:lint` - enforces the same-named component-folder convention under
    `src/**/ui/` (no loose component files, no barrel `index.ts` inside a
    component folder).
-4. `ts:check` - `tsc --noEmit`, run twice: once against `tsconfig.json` and
+5. `ts:check` - `tsc --noEmit`, run twice: once against `tsconfig.json` and
    once against `tsconfig.node.json`.
-5. `lint:ci` - `eslint "src/**/*.{ts,tsx}" --max-warnings 0` (zero warnings
+6. `lint:ci` - `eslint "src/**/*.{ts,tsx}" --max-warnings 0` (zero warnings
    allowed).
-6. `fsd:check` - `steiger src` (Feature-Sliced Design boundary checks).
-7. `build` - `react-router build`; must produce both `build/server` and
+7. `fsd:check` - `steiger src` (Feature-Sliced Design boundary checks).
+8. `build` - `react-router build`; must produce both `build/server` and
    `build/client`.
 
 ## Required Local Gates
@@ -63,8 +66,8 @@ Run these only when the touched surface makes them relevant.
 - Infrastructure checks: not applicable to local verification. The Docker
   image and Kubernetes deploy are exercised by the `build.yml` and
   `deploy.yml` GitHub Actions workflows, not by local commands.
-- GraphQL/codegen drift: `npm run gql:codegen`, then `git diff --
-  src/__generated__`. Run after any `.graphql` document or schema change.
+- GraphQL/codegen drift: `npm run gql:codegen`, then inspect
+  `git diff -- src/__generated__`. Run after any `.graphql` document or schema change.
   Codegen is configured but currently unused - there is no backend or
   GraphQL schema wired up yet, so this gate has nothing to exercise until
   that lands.

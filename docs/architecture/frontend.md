@@ -327,8 +327,11 @@ and `fonts.css`. The global font is loaded from `public/fonts`.
 
 Raster assets under `public/` use WebP consistently, including images with
 transparency. `npm run images:check` enforces the format during verification;
-SVG artwork and font files remain in their native formats. Images outside the
-initial viewport should use native lazy loading and asynchronous decoding.
+the same check also requires a `*-home-photo-catalog.webp` derivative for every
+collection `*-home-photo.webp`, because the collection overlay loads the
+smaller catalog asset. SVG artwork and font files remain in their native
+formats. Images outside the initial viewport should use native lazy loading
+and asynchronous decoding.
 
 ## Component Folder Convention
 
