@@ -205,6 +205,12 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     imageScale: '1',
     name: { en: 'Mint family', ru: 'Яснотковые' },
   },
+  {
+    count: { en: '1 plant', ru: '1 растение' },
+    id: 'podocarpaceae',
+    image: '/plants/categories/studio/podocarpaceae.webp',
+    name: { en: 'Podocarp family', ru: 'Подокарповые' },
+  },
 ];
 
 export const homeCategories: Record<Locale, readonly HomeCategory[]> = {

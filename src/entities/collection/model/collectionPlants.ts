@@ -20,6 +20,7 @@ export type CollectionFamilyId =
   | 'nephrolepidaceae'
   | 'orchidaceae'
   | 'piperaceae'
+  | 'podocarpaceae'
   | 'vitaceae';
 
 export interface CollectionPlant {
@@ -7592,6 +7593,106 @@ export const collectionPlants: readonly CollectionPlant[] = [
       watering: [
         'Soak the substrate thoroughly, then wait until it is completely dry before watering again. Water much less often in cool low-light months.',
         'Полностью промочите грунт, затем дождитесь его полной просушки до следующего полива. В прохладные тёмные месяцы поливайте значительно реже.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'podocarpaceae',
+    'podocarpus-macrophyllus',
+    '/plants/podocarpus-macrophyllus-home-photo.webp',
+    ['Buddhist pine bonsai', 'Подокарпус крупнолистный'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/podocarpus-macrophyllus-important.webp',
+        propagationImage: '/plant-profile/podocarpus-macrophyllus-propagation.webp',
+      },
+      difficulty: 3,
+      facts: [
+        [
+          'Despite its common name, Buddhist pine is not a true pine.',
+          'Its flat strap-like leaves are arranged spirally around the shoots.',
+          'Regular pinching keeps the crown compact without hiding the trained trunk.',
+        ],
+        [
+          'Несмотря на обиходное название, подокарпус не относится к настоящим соснам.',
+          'Плоские ремневидные листья расположены по спирали вокруг побегов.',
+          'Регулярная прищипка сохраняет компактную крону и не скрывает сформированный ствол.',
+        ],
+      ],
+      family: ['Podocarp family (Podocarpaceae)', 'Подокарповые (Podocarpaceae)'],
+      feeding: [
+        'Feed every three to four weeks from spring to early autumn with a balanced fertiliser at half strength. Do not feed a stressed or freshly repotted tree.',
+        'С весны до начала осени подкармливайте раз в три-четыре недели половинной дозой сбалансированного удобрения. Не удобряйте ослабленное или недавно пересаженное дерево.',
+      ],
+      growth: ['Slow to moderate', 'Медленный или умеренный'],
+      height: ['30–100 cm as an indoor bonsai', '30–100 см в форме комнатного бонсай'],
+      humidity: [
+        'Average room humidity is suitable, but keep the tree away from hot dry radiators. Good air movement is more useful than constant misting.',
+        'Подходит обычная комнатная влажность, но дерево нужно держать подальше от горячих батарей. Хорошее движение воздуха полезнее постоянных опрыскиваний.',
+      ],
+      important: [
+        'A shallow bonsai pot can swing quickly from dry to waterlogged. Check the substrate by touch, water thoroughly only when the surface begins to dry, and never leave water in the tray.',
+        'Неглубокий горшок бонсай может быстро переходить от пересушки к переувлажнению. Проверяйте грунт пальцем, обильно поливайте после начала просыхания поверхности и никогда не оставляйте воду в поддоне.',
+      ],
+      latinName: 'Podocarpus macrophyllus',
+      light: [
+        'Give very bright diffused light with gentle morning or evening sun. Rotate the pot regularly so the crown does not grow only towards the window.',
+        'Нужен очень яркий рассеянный свет с мягким утренним или вечерним солнцем. Регулярно поворачивайте горшок, чтобы крона не росла только в сторону окна.',
+      ],
+      notes: [
+        'My tree already has a strongly curved trunk and an informal crown with several uneven leaf pads. I am keeping that personal, slightly untidy character while gradually removing only shoots that hide the trunk line.',
+        'У моего дерева уже сформирован сильно изогнутый ствол и свободная крона из нескольких неровных пучков листвы. Я сохраняю этот живой, немного небрежный характер и постепенно убираю только побеги, скрывающие линию ствола.',
+      ],
+      origin: [
+        'Southern and south-eastern China, northern Myanmar, Taiwan and Japan',
+        'Юг и юго-восток Китая, север Мьянмы, Тайвань и Япония',
+      ],
+      overview: [
+        'Podocarpus macrophyllus is an evergreen East Asian conifer with narrow glossy leaves rather than needles. Its flexible shoots, textured bark and tolerance of pruning make it a classic bonsai subject with a calm, architectural silhouette.',
+        'Подокарпус крупнолистный — вечнозелёное восточноазиатское хвойное растение с узкими глянцевыми листьями вместо иголок. Гибкие побеги, фактурная кора и хорошая переносимость обрезки делают его классическим бонсай со спокойным архитектурным силуэтом.',
+      ],
+      plantType: [
+        'Evergreen conifer trained as bonsai',
+        'Вечнозелёное хвойное дерево, сформированное как бонсай',
+      ],
+      problems: [
+        [
+          'Yellowing lower leaves — check for stagnant moisture or an abrupt light change.',
+          'Dry brittle tips — the root ball may have dried too far or stood near hot air.',
+          'White cottony clusters or brown shields — isolate and inspect for mealybugs or scale.',
+        ],
+        [
+          'Желтеющие нижние листья — проверьте застой влаги и резкую смену освещения.',
+          'Сухие ломкие кончики — корневой ком мог сильно пересохнуть или стоять у горячего воздуха.',
+          'Белые ватные комочки или коричневые щитки — изолируйте растение и проверьте на червеца или щитовку.',
+        ],
+      ],
+      propagation: [
+        'In late summer, take a 10–15 cm semi-ripe heel cutting, remove the lower leaves and root it in a lightly moist mix of perlite and fine bark under high humidity. Rooting is slow and may take several months.',
+        'В конце лета возьмите полуодревесневший черенок с пяткой длиной 10–15 см, удалите нижние листья и укореняйте в слегка влажной смеси перлита и мелкой коры при высокой влажности. Корни образуются медленно, иногда несколько месяцев.',
+      ],
+      repotting: [
+        'Repot in spring every two to three years as growth begins. Prune roots moderately, keep part of the old root ball intact and return the tree to a stable shallow pot with drainage mesh.',
+        'Пересаживайте весной раз в два-три года в начале роста. Умеренно подрежьте корни, сохраните часть старого кома и посадите дерево в устойчивую неглубокую ёмкость с сеткой на дренажных отверстиях.',
+      ],
+      secondaryCare: [
+        ['Bonsai shaping', 'Формирование бонсай'],
+        [
+          'Pinch fresh shoots after they lengthen, leaving a few leaves on each branch. Prune selectively to reveal the trunk line; wire only flexible young branches and remove wire before it marks the bark.',
+          'Прищипывайте вытянувшийся молодой прирост, оставляя на каждой ветви несколько листьев. Выборочно открывайте линию ствола; проволоку накладывайте только на гибкие молодые ветви и снимайте до появления следов на коре.',
+        ],
+      ],
+      soil: [
+        'Use a free-draining bonsai mix with akadama or fired clay, pumice and fine bark. The mix should hold a little moisture while allowing air to reach the fine roots.',
+        'Используйте дренированный грунт для бонсай из акадамы или обожжённой глины, пемзы и мелкой коры. Смесь должна удерживать немного влаги и пропускать воздух к тонким корням.',
+      ],
+      temperature: [
+        'Keep at 16–26 °C during active growth. A bright cooler winter around 10–16 °C is helpful; protect the shallow root ball from frost and cold draughts.',
+        'В период роста содержите при 16–26 °C. Полезна светлая прохладная зимовка при 10–16 °C; защищайте неглубокий корневой ком от мороза и холодных сквозняков.',
+      ],
+      watering: [
+        'Water thoroughly when the top layer has just begun to dry, until water runs from the drainage holes. Do not let the whole root ball become bone-dry or remain constantly saturated.',
+        'Обильно поливайте, когда верхний слой только начал подсыхать, пока вода не выйдет из дренажных отверстий. Не пересушивайте ком полностью и не держите его постоянно мокрым.',
       ],
     }),
   ),

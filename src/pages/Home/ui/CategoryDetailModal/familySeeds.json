@@ -1197,5 +1197,67 @@
       "/plants/moraceae-modal/trait-fruits.webp",
       "/plants/moraceae-modal/trait-aerial-roots.webp"
     ]
+  },
+  "podocarpaceae": {
+    "closingNote": {
+      "en": "Podocarps carry the quiet structure of an ancient conifer lineage into the home: evergreen, patient and especially expressive when shaped as bonsai.",
+      "ru": "Подокарповые привносят в дом спокойную структуру древней линии хвойных: они вечнозелёные, терпеливые и особенно выразительные в форме бонсай."
+    },
+    "description": {
+      "en": "Podocarpaceae are evergreen coniferous trees and shrubs, most diverse in tropical and Southern Hemisphere forests. Unlike familiar pines, many have broad, flat leaves and seeds carried above a fleshy receptacle rather than inside a woody cone.",
+      "ru": "Подокарповые — вечнозелёные хвойные деревья и кустарники, наиболее разнообразные в тропических лесах и Южном полушарии. В отличие от привычных сосен, у многих видов плоские широкие листья, а семена располагаются над мясистым цветоложем, а не внутри древесной шишки."
+    },
+    "facts": {
+      "en": [
+        "Podocarpaceae are gymnosperms, so their seeds are not enclosed inside true fruits.",
+        "The family includes about 18 genera, with Podocarpus as its largest genus.",
+        "Many species have flat leaves that resemble those of flowering trees more than pine needles.",
+        "Podocarpus macrophyllus has been trained as bonsai for its flexible branches, textured bark and response to pruning."
+      ],
+      "ru": [
+        "Подокарповые относятся к голосеменным, поэтому их семена не заключены внутри настоящих плодов.",
+        "Семейство включает около 18 родов, а Подокарпус — самый крупный из них.",
+        "У многих видов плоские листья, больше похожие на листья цветковых деревьев, чем на хвойные иголки.",
+        "Подокарпус крупнолистный выращивают как бонсай благодаря гибким ветвям, фактурной коре и хорошей реакции на обрезку."
+      ]
+    },
+    "heroImage": "/plants/categories/generated/podocarpaceae.webp",
+    "heroPosition": {
+      "base": "calc(100% + 105px) 45px",
+      "md": "calc(100% + 20px) 20px",
+      "lg": "calc(100% - 15px) top"
+    },
+    "heroSize": {
+      "base": "540px auto",
+      "md": "690px auto",
+      "lg": "790px auto"
+    },
+    "latinName": "Podocarpaceae",
+    "origin": {
+      "en": "The collection representative, Podocarpus macrophyllus, is native to southern and south-eastern China, northern Myanmar, Taiwan and Japan.",
+      "ru": "Представитель семейства в моей коллекции, подокарпус крупнолистный, происходит с юга и юго-востока Китая, севера Мьянмы, Тайваня и Японии."
+    },
+    "originMapImage": "/plants/podocarpaceae-modal/origin-map.webp",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Persistent flat linear or lanceolate leaves carry a clearly visible central midrib.",
+        "Older trunks develop fibrous or slightly scaly bark that gives bonsai an aged texture.",
+        "A single seed sits above a swollen fleshy receptacle rather than inside a woody cone.",
+        "New shoots open pale lime green and darken as their leaves harden."
+      ],
+      "ru": [
+        "Вечнозелёные плоские линейные или ланцетные листья имеют хорошо заметную центральную жилку.",
+        "На старых стволах развивается волокнистая или слегка чешуйчатая кора, придающая бонсай возрастную фактуру.",
+        "Одиночное семя располагается над утолщённым мясистым цветоложем, а не внутри древесной шишки.",
+        "Молодые побеги раскрываются светло-лаймовыми и темнеют по мере созревания листьев."
+      ]
+    },
+    "traitImages": [
+      "/plants/podocarpaceae-modal/trait-leaves.webp",
+      "/plants/podocarpaceae-modal/trait-bark.webp",
+      "/plants/podocarpaceae-modal/trait-seed.webp",
+      "/plants/podocarpaceae-modal/trait-new-growth.webp"
+    ]
   }
 }
