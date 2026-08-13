@@ -152,7 +152,7 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     name: { en: 'Amaryllis family', ru: 'Амариллисовые' },
   },
   {
-    count: { en: '11 plants', ru: '11 растений' },
+    count: { en: '12 plants', ru: '12 растений' },
     id: 'asparagaceae',
     image: '/plants/categories/studio/asparagaceae.webp',
     name: { en: 'Asparagus family', ru: 'Спаржевые' },

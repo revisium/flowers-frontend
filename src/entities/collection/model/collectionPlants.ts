@@ -1948,6 +1948,103 @@ export const collectionPlants: readonly CollectionPlant[] = [
     }),
   ),
   collectionPlant(
+    'asparagaceae',
+    'dracaena-trifasciata-moonshine',
+    '/plants/dracaena-trifasciata-moonshine-home-photo.webp',
+    ['Moonshine snake plant', 'Сансевиерия Муншайн'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/sansevieria-blue-star-important.webp',
+        propagationImage: '/plant-profile/sansevieria-blue-star-propagation.webp',
+      },
+      difficulty: 1,
+      facts: [
+        [
+          'New leaves open almost silvery-white and deepen to muted sage green with age.',
+          'A fine dark green margin outlines each broad sword-shaped leaf.',
+          'Daughter rosettes emerge slowly from underground rhizomes.',
+        ],
+        [
+          'Новые листья раскрываются почти серебристо-белыми и с возрастом становятся приглушённо-шалфейными.',
+          'Каждый широкий мечевидный лист очерчен тонкой тёмно-зелёной каймой.',
+          'Дочерние розетки медленно появляются из подземных корневищ.',
+        ],
+      ],
+      family: ['Asparagus family (Asparagaceae)', 'Спаржевые (Asparagaceae)'],
+      feeding: [
+        'Feed every six to eight weeks from late spring to August with cactus fertiliser at half strength. Skip feeding in winter and after repotting.',
+        'С конца весны до августа подкармливайте раз в шесть-восемь недель половинной дозой удобрения для кактусов. Зимой и после пересадки подкормки не нужны.',
+      ],
+      growth: ['Slow', 'Медленный'],
+      height: ['Usually 40–70 cm indoors', 'Обычно 40–70 см в комнате'],
+      humidity: [
+        'Normal dry room air is suitable. Do not mist routinely and never leave water standing between the upright leaf bases.',
+        'Подходит обычный сухой комнатный воздух. Не опрыскивайте без необходимости и не оставляйте воду между вертикальными основаниями листьев.',
+      ],
+      important: [
+        'The silver colour does not mean the plant needs more water. Let the substrate dry completely and judge watering by the pot weight, not by the pale foliage.',
+        'Серебристая окраска не означает, что растению не хватает воды. Полностью просушивайте грунт и ориентируйтесь на вес горшка, а не на светлый цвет листвы.',
+      ],
+      latinName: "Dracaena trifasciata 'Moonshine'",
+      light: [
+        'Give bright diffused light with gentle morning or evening sun to preserve the pale silver colour. In deep shade the foliage gradually becomes darker green.',
+        'Нужен яркий рассеянный свет с мягким утренним или вечерним солнцем, чтобы сохранить светлую серебристую окраску. В глубокой тени листва постепенно становится темнее и зеленее.',
+      ],
+      notes: [
+        'My young Moonshine began with only a few tall leaves beside other plants on the windowsill. I am giving the rosette room to add new shoots naturally rather than forcing a perfectly even fan.',
+        'Мой молодой Муншайн начинался всего с нескольких высоких листьев среди других растений на подоконнике. Я оставляю розетке пространство для естественного роста и не пытаюсь сформировать идеально ровный веер.',
+      ],
+      origin: [
+        'Cultivated form of a species native to West-Central tropical Africa',
+        'Культурная форма вида из западной части Центральной тропической Африки',
+      ],
+      overview: [
+        "'Moonshine' is a silver-leaved cultivar of Dracaena trifasciata with broad upright blades in muted mint, sage and pale grey-green tones. It was formerly known as Sansevieria trifasciata 'Moonshine'.",
+        '«Муншайн» — серебристолистный сорт Dracaena trifasciata с широкими вертикальными листьями приглушённых мятных, шалфейных и светло-серо-зелёных оттенков. Прежнее название — Sansevieria trifasciata «Moonshine».',
+      ],
+      plantType: ['Evergreen rhizomatous leaf succulent', 'Вечнозелёный корневищный листовой суккулент'],
+      problems: [
+        [
+          'Soft yellow leaf bases — stop watering and inspect the roots and rhizome for rot.',
+          'Leaves turn dark green — move gradually to brighter diffused light.',
+          'Dry bleached patches — protect the foliage from harsh midday sun.',
+        ],
+        [
+          'Основания листьев желтеют и размягчаются — прекратите полив и проверьте корни и корневище на гниль.',
+          'Листья становятся тёмно-зелёными — постепенно переставьте на более яркий рассеянный свет.',
+          'Появляются сухие выбеленные пятна — защитите листву от жёсткого полуденного солнца.',
+        ],
+      ],
+      propagation: [
+        'Divide a daughter rosette with its own roots to preserve the silver cultivar colour. Cut the connecting rhizome with a sterile blade, dry the cuts for one or two days and pot into dry gritty mix.',
+        'Чтобы сохранить серебристую окраску сорта, отделяйте дочернюю розетку с собственными корнями. Разрежьте корневище стерильным лезвием, подсушите срезы один-два дня и посадите в сухую минеральную смесь.',
+      ],
+      repotting: [
+        'Repot in spring when rhizomes fill or distort the container. Use a sturdy pot with drainage only two or three centimetres wider than the root ball.',
+        'Пересаживайте весной, когда корневища заполнят или начнут деформировать горшок. Берите устойчивую ёмкость с дренажом всего на два-три сантиметра шире корневого кома.',
+      ],
+      secondaryCare: [
+        ['Leaf care', 'Уход за листьями'],
+        [
+          'Wipe dust gently with a soft damp cloth, supporting each leaf at the base. Remove a severely damaged leaf entirely because a trimmed tip will not regrow.',
+          'Аккуратно протирайте пыль мягкой влажной тканью, придерживая каждый лист у основания. Сильно повреждённый лист удаляйте целиком: срезанная верхушка не восстановится.',
+        ],
+      ],
+      soil: [
+        'Use a very fast-draining mix of about 35% cactus compost and 65% pumice, lava grit, perlite or another coarse mineral component.',
+        'Используйте быстро просыхающую смесь примерно из 35% грунта для кактусов и 65% пемзы, лавовой крошки, перлита или другого крупного минерального компонента.',
+      ],
+      temperature: [
+        'Keep at 18–30 °C during active growth and preferably above 15 °C in winter. Protect the roots from cold, wet windowsills.',
+        'В период роста содержите при 18–30 °C, а зимой желательно не ниже 15 °C. Защищайте корни от холодного мокрого подоконника.',
+      ],
+      watering: [
+        'Water thoroughly only after the substrate has dried completely, then drain every drop. Reduce watering sharply in cool, dark winter conditions.',
+        'Обильно поливайте только после полной просушки грунта и сливайте всю лишнюю воду. В прохладных тёмных зимних условиях резко сокращайте полив.',
+      ],
+    }),
+  ),
+  collectionPlant(
     'moraceae',
     'ficus-benjamina',
     '/plants/ficus-benjamina-home-photo.webp',
