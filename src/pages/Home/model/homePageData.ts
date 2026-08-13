@@ -209,6 +209,8 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     count: { en: '1 plant', ru: '1 растение' },
     id: 'podocarpaceae',
     image: '/plants/categories/studio/podocarpaceae.webp',
+    imageObjectPosition: 'center',
+    imageScale: '1',
     name: { en: 'Podocarp family', ru: 'Подокарповые' },
   },
 ];
