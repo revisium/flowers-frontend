@@ -7271,6 +7271,100 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ),
   ),
   collectionPlant(
+    'asparagaceae',
+    'chlorophytum-orchidastrum-green-orange',
+    '/plants/chlorophytum-orchidastrum-green-orange-home-photo.webp',
+    ['Green Orange spider plant', 'Хлорофитум Грин Оранж'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/clivia-important.webp',
+        propagationImage: '/plant-profile/clivia-propagation.webp',
+      },
+      difficulty: 2,
+      facts: [
+        [
+          'Broad glossy leaves form a compact upright rosette rather than a loose fountain.',
+          'Orange petioles and midribs become brightest in strong diffused light.',
+          'Unlike Chlorophytum comosum, this species does not make hanging plantlets on long runners.',
+        ],
+        [
+          'Широкие глянцевые листья образуют компактную вертикальную розетку, а не свободный фонтан.',
+          'Оранжевые черешки и центральные жилки ярче всего проявляются при хорошем рассеянном свете.',
+          'В отличие от Chlorophytum comosum, этот вид не образует свисающих деток на длинных столонах.',
+        ],
+      ],
+      family: ['Asparagus family (Asparagaceae)', 'Спаржевые (Asparagaceae)'],
+      feeding: [
+        'Feed every four weeks from spring to early autumn with a balanced foliage fertiliser at half strength. Flush the substrate occasionally to prevent salt buildup.',
+        'С весны до начала осени подкармливайте раз в четыре недели половинной дозой удобрения для декоративно-лиственных. Иногда промывайте грунт, чтобы соли не накапливались.',
+      ],
+      growth: ['Moderate', 'Умеренный'],
+      height: ['20–40 cm', '20–40 см'],
+      humidity: [
+        'Moderate humidity around 50–60% keeps the broad leaves neat. Keep the plant away from hot radiators, but do not leave water standing in the crown.',
+        'Умеренная влажность около 50–60% помогает сохранить широкие листья аккуратными. Держите растение подальше от горячих батарей, но не оставляйте воду в центре розетки.',
+      ],
+      important: [
+        'Keep the orange leaf bases above the soil and out of standing water. A buried or constantly wet crown can rot even while the outer leaves still look healthy.',
+        'Не заглубляйте оранжевые основания листьев и не оставляйте их в воде. Заглублённая или постоянно мокрая розетка может загнить, даже когда внешние листья ещё выглядят здоровыми.',
+      ],
+      latinName: "Chlorophytum orchidastrum 'Green Orange'",
+      light: [
+        'Give bright diffused light with a little gentle morning sun. Harsh midday rays can scorch the broad leaves, while deep shade dulls the orange colour.',
+        'Нужен яркий рассеянный свет с небольшим количеством мягкого утреннего солнца. Жёсткие полуденные лучи обжигают широкие листья, а глубокая тень приглушает оранжевую окраску.',
+      ],
+      notes: [
+        'My plant has a low, slightly uneven rosette with broad wavy leaves and warm orange bases. I am keeping its natural asymmetry rather than trying to make every leaf point in the same direction.',
+        'У моего растения невысокая, немного неровная розетка с широкими волнистыми листьями и тёплыми оранжевыми основаниями. Я сохраняю её естественную асимметрию и не пытаюсь направить все листья одинаково.',
+      ],
+      origin: ['West tropical Africa to Zambia', 'Западная тропическая Африка до Замбии'],
+      overview: [
+        "'Green Orange' is a broad-leaved form of Chlorophytum orchidastrum, valued for glossy green foliage and vivid orange petioles gathered into a dense upright rosette.",
+        '«Грин Оранж» — широколистная форма Chlorophytum orchidastrum с глянцевой зелёной листвой и яркими оранжевыми черешками, собранными в плотную вертикальную розетку.',
+      ],
+      plantType: ['Evergreen clump-forming perennial', 'Вечнозелёный кустящийся многолетник'],
+      problems: [
+        [
+          'Brown tips — raise humidity slightly and check water quality.',
+          'Pale orange petioles — move gradually to brighter diffused light.',
+          'Soft yellow leaf bases — stop watering and inspect the crown and roots for rot.',
+        ],
+        [
+          'Сухие коричневые кончики — немного повысьте влажность и проверьте качество воды.',
+          'Оранжевые черешки бледнеют — постепенно переставьте на более яркий рассеянный свет.',
+          'Основания листьев желтеют и размягчаются — прекратите полив и проверьте розетку и корни на гниль.',
+        ],
+      ],
+      propagation: [
+        'Propagate during spring repotting by dividing a mature clump. Separate an outer rosette only when it has its own roots, then plant it at the same depth in a small pot with airy substrate.',
+        'Размножайте при весенней пересадке делением взрослого куста. Отделяйте боковую розетку только с собственными корнями и высаживайте на прежнюю глубину в небольшой горшок с воздушным грунтом.',
+      ],
+      repotting: [
+        'Repot in spring every one to two years or when roots fill the container. Choose a pot only slightly wider and keep the orange crown at its previous level.',
+        'Пересаживайте весной раз в один-два года или когда корни заполнят горшок. Выбирайте ёмкость лишь немного шире и сохраняйте прежний уровень оранжевой розетки.',
+      ],
+      secondaryCare: [
+        ['Leaf care', 'Уход за листьями'],
+        [
+          'Wipe the broad leaves with a soft damp cloth and remove only fully yellow outer foliage at the base with a clean blade.',
+          'Протирайте широкие листья мягкой влажной тканью, а полностью пожелтевшие внешние листья срезайте у основания чистым лезвием.',
+        ],
+      ],
+      soil: [
+        'Use a loose loamy mix with about 65% houseplant compost, 20% perlite or pumice and 15% fine bark, in a pot with drainage holes.',
+        'Используйте рыхлую суглинистую смесь примерно из 65% грунта для комнатных растений, 20% перлита или пемзы и 15% мелкой коры, обязательно в горшке с дренажными отверстиями.',
+      ],
+      temperature: [
+        'Keep at 18–27 °C and protect from cold glass, draughts and temperatures below 15 °C.',
+        'Содержите при 18–27 °C и защищайте от холодного стекла, сквозняков и температуры ниже 15 °C.',
+      ],
+      watering: [
+        'Water when the top 2–3 cm of substrate has dried. Moisten evenly, drain excess completely and let the mix breathe before watering again.',
+        'Поливайте после просыхания верхних 2–3 см грунта. Равномерно промочите смесь, полностью слейте лишнюю воду и дайте грунту подышать перед следующим поливом.',
+      ],
+    }),
+  ),
+  collectionPlant(
     'araceae',
     'epipremnum-aureum-marble-queen',
     '/plants/epipremnum-marble-queen-home-photo.webp',
