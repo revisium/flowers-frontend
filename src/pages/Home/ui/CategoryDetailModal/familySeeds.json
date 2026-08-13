@@ -1,4 +1,67 @@
 {
+  "acanthaceae": {
+    "closingNote": {
+      "en": "Acanthaceae unite dramatic foliage and architectural flowers. Even without bloom, their opposite leaves, strong veins and vivid patterns give a collection a lively tropical rhythm.",
+      "ru": "Акантовые объединяют выразительную листву и архитектурные цветки. Даже без цветения супротивные листья, заметные жилки и яркие узоры задают коллекции живой тропический ритм."
+    },
+    "description": {
+      "en": "Acanthaceae are mainly tropical herbs and shrubs. The family includes foliage plants such as Hypoestes and Aphelandra as well as flowering Justicia, Ruellia and Thunbergia, many recognised by opposite leaves and showy bracts or two-lipped flowers.",
+      "ru": "Акантовые — преимущественно тропические травы и кустарники. К семейству относятся декоративнолистные гипоэстесы и афеландры, а также цветущие юстиции, руэллии и тунбергии; многие узнаются по супротивным листьям, ярким прицветникам или двугубым цветкам."
+    },
+    "facts": {
+      "en": [
+        "The family contains several thousand species, with its greatest diversity in tropical regions.",
+        "Many members bear leaves in opposite pairs and have conspicuous veins or colourful patterns.",
+        "In some genera, overlapping bracts remain decorative much longer than the individual flowers.",
+        "Many Acanthaceae have specialised capsules that help disperse seeds away from the parent plant."
+      ],
+      "ru": [
+        "Семейство насчитывает несколько тысяч видов и особенно разнообразно в тропических регионах.",
+        "У многих представителей листья расположены супротивными парами и выделяются заметным жилкованием или цветным рисунком.",
+        "У некоторых родов черепитчатые прицветники сохраняют декоративность значительно дольше отдельных цветков.",
+        "Для многих Акантовых характерны специализированные коробочки, помогающие разбрасывать семена дальше от материнского растения."
+      ]
+    },
+    "heroFilter": "drop-shadow(0 18px 14px rgba(72, 57, 37, 0.14))",
+    "heroImage": "/plants/acanthaceae-modal/hero.webp",
+    "heroPosition": {
+      "base": "calc(100% + 120px) 125px",
+      "md": "calc(100% + 28px) 36px",
+      "lg": "calc(100% - 12px) 24px"
+    },
+    "heroSize": {
+      "base": "520px auto",
+      "md": "690px auto",
+      "lg": "780px auto"
+    },
+    "latinName": "Acanthaceae",
+    "origin": {
+      "en": "Tropical and subtropical regions worldwide, especially Central and South America, sub-Saharan Africa and Madagascar, South and Southeast Asia, and northern Australia.",
+      "ru": "Тропические и субтропические области по всему миру, особенно Центральная и Южная Америка, Африка южнее Сахары и Мадагаскар, Южная и Юго-Восточная Азия, а также север Австралии."
+    },
+    "originMapImage": "/plants/acanthaceae-modal/origin-map.webp",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Leaves are commonly arranged in opposite pairs along the stem.",
+        "Veins, spots and contrasting patches often make the foliage ornamental.",
+        "Overlapping coloured bracts can form long-lasting cone- or spike-like displays.",
+        "Flowers are often tubular or two-lipped and adapted to particular pollinators."
+      ],
+      "ru": [
+        "Листья часто располагаются на стебле супротивными парами.",
+        "Жилки, крап и контрастные пятна нередко делают листву особенно декоративной.",
+        "Налегающие друг на друга цветные прицветники могут образовывать долговечные колосовидные соцветия.",
+        "Цветки часто трубчатые или двугубые и приспособлены к определённым опылителям."
+      ]
+    },
+    "traitImages": [
+      "/plants/acanthaceae-modal/trait-opposite-leaves.webp",
+      "/plants/acanthaceae-modal/trait-speckled-leaves.webp",
+      "/plants/acanthaceae-modal/trait-showy-bracts.webp",
+      "/plants/acanthaceae-modal/trait-two-lipped-flowers.webp"
+    ]
+  },
   "aizoaceae": {
     "closingNote": {
       "en": "Aizoaceae bring the quiet geometry of dry landscapes into a collection: compact, sculptural and unexpectedly bright in flower.",
@@ -1196,6 +1259,68 @@
       "/plants/moraceae-modal/trait-stipule.webp",
       "/plants/moraceae-modal/trait-fruits.webp",
       "/plants/moraceae-modal/trait-aerial-roots.webp"
+    ]
+  },
+  "podocarpaceae": {
+    "closingNote": {
+      "en": "Podocarps carry the quiet structure of an ancient conifer lineage into the home: evergreen, patient and especially expressive when shaped as bonsai.",
+      "ru": "Подокарповые привносят в дом спокойную структуру древней линии хвойных: они вечнозелёные, терпеливые и особенно выразительные в форме бонсай."
+    },
+    "description": {
+      "en": "Podocarpaceae are evergreen coniferous trees and shrubs, most diverse in tropical and Southern Hemisphere forests. Unlike familiar pines, many have broad, flat leaves and seeds carried above a fleshy receptacle rather than inside a woody cone.",
+      "ru": "Подокарповые — вечнозелёные хвойные деревья и кустарники, наиболее разнообразные в тропических лесах и Южном полушарии. В отличие от привычных сосен, у многих видов плоские широкие листья, а семена располагаются над мясистым цветоложем, а не внутри древесной шишки."
+    },
+    "facts": {
+      "en": [
+        "Podocarpaceae are gymnosperms, so their seeds are not enclosed inside true fruits.",
+        "The family includes about 18 genera, with Podocarpus as its largest genus.",
+        "Many species have flat leaves that resemble those of flowering trees more than pine needles.",
+        "Podocarpus macrophyllus has been trained as bonsai for its flexible branches, textured bark and response to pruning."
+      ],
+      "ru": [
+        "Подокарповые относятся к голосеменным, поэтому их семена не заключены внутри настоящих плодов.",
+        "Семейство включает около 18 родов, а Подокарпус — самый крупный из них.",
+        "У многих видов плоские листья, больше похожие на листья цветковых деревьев, чем на хвойные иголки.",
+        "Подокарпус крупнолистный выращивают как бонсай благодаря гибким ветвям, фактурной коре и хорошей реакции на обрезку."
+      ]
+    },
+    "heroImage": "/plants/categories/generated/podocarpaceae.webp",
+    "heroPosition": {
+      "base": "calc(100% + 105px) 45px",
+      "md": "calc(100% + 20px) 20px",
+      "lg": "calc(100% - 15px) top"
+    },
+    "heroSize": {
+      "base": "540px auto",
+      "md": "690px auto",
+      "lg": "790px auto"
+    },
+    "latinName": "Podocarpaceae",
+    "origin": {
+      "en": "Mostly the Southern Hemisphere: from South-East Asia, the Pacific and Australasia to Central and South America and tropical montane Africa.",
+      "ru": "Преимущественно Южное полушарие: от Юго-Восточной Азии, островов Тихого океана и Австралазии до Центральной и Южной Америки и горных тропиков Африки."
+    },
+    "originMapImage": "/plants/podocarpaceae-modal/origin-map.webp",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Persistent flat linear or lanceolate leaves carry a clearly visible central midrib.",
+        "Older trunks develop fibrous or slightly scaly bark that gives bonsai an aged texture.",
+        "A single seed sits above a swollen fleshy receptacle rather than inside a woody cone.",
+        "New shoots open pale lime green and darken as their leaves harden."
+      ],
+      "ru": [
+        "Вечнозелёные плоские линейные или ланцетные листья имеют хорошо заметную центральную жилку.",
+        "На старых стволах развивается волокнистая или слегка чешуйчатая кора, придающая бонсай возрастную фактуру.",
+        "Одиночное семя располагается над утолщённым мясистым цветоложем, а не внутри древесной шишки.",
+        "Молодые побеги раскрываются светло-лаймовыми и темнеют по мере созревания листьев."
+      ]
+    },
+    "traitImages": [
+      "/plants/podocarpaceae-modal/trait-leaves.webp",
+      "/plants/podocarpaceae-modal/trait-bark.webp",
+      "/plants/podocarpaceae-modal/trait-seed.webp",
+      "/plants/podocarpaceae-modal/trait-new-growth.webp"
     ]
   }
 }

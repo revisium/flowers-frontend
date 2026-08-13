@@ -181,6 +181,7 @@ const createFamilyDataByLocale = (
 });
 
 const familyTitles: Record<CategoryId, LocalizedText> = {
+  acanthaceae: { en: 'Acanthus family', ru: 'Акантовые' },
   aizoaceae: { en: 'Ice plant family', ru: 'Аизовые' },
   amaryllidaceae: { en: 'Amaryllis family', ru: 'Амариллисовые' },
   apocynaceae: { en: 'Dogbane family', ru: 'Кутровые' },
@@ -200,10 +201,16 @@ const familyTitles: Record<CategoryId, LocalizedText> = {
   nephrolepidaceae: { en: 'Ferns', ru: 'Папоротники' },
   orchidaceae: { en: 'Orchids', ru: 'Орхидные' },
   piperaceae: { en: 'Pepper family', ru: 'Перцевые' },
+  podocarpaceae: { en: 'Podocarp family', ru: 'Подокарповые' },
   vitaceae: { en: 'Grape family', ru: 'Виноградовые' },
 };
 
 export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryDetailData>> = {
+  acanthaceae: createFamilyDataByLocale(
+    'acanthaceae',
+    familyTitles.acanthaceae,
+    familySeeds.acanthaceae,
+  ),
   aizoaceae: createFamilyDataByLocale('aizoaceae', familyTitles.aizoaceae, familySeeds.aizoaceae),
   araceae: createFamilyDataByLocale('araceae', familyTitles.araceae, familySeeds.araceae),
   amaryllidaceae: createFamilyDataByLocale(
@@ -274,6 +281,11 @@ export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryD
     'piperaceae',
     familyTitles.piperaceae,
     familySeeds.piperaceae,
+  ),
+  podocarpaceae: createFamilyDataByLocale(
+    'podocarpaceae',
+    familyTitles.podocarpaceae,
+    familySeeds.podocarpaceae,
   ),
   vitaceae: createFamilyDataByLocale('vitaceae', familyTitles.vitaceae, familySeeds.vitaceae),
 };

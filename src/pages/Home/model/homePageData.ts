@@ -84,7 +84,15 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 
 const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
   {
-    count: { en: '10 plants', ru: '10 растений' },
+    count: { en: '3 plants', ru: '3 растения' },
+    id: 'acanthaceae',
+    image: '/plants/categories/studio/acanthaceae.webp',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Acanthus family', ru: 'Акантовые' },
+  },
+  {
+    count: { en: '12 plants', ru: '12 растений' },
     id: 'araceae',
     image: '/plants/categories/studio/araceae.webp',
     name: { en: 'Aroids', ru: 'Ароидные' },
@@ -152,7 +160,7 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     name: { en: 'Amaryllis family', ru: 'Амариллисовые' },
   },
   {
-    count: { en: '9 plants', ru: '9 растений' },
+    count: { en: '12 plants', ru: '12 растений' },
     id: 'asparagaceae',
     image: '/plants/categories/studio/asparagaceae.webp',
     name: { en: 'Asparagus family', ru: 'Спаржевые' },
@@ -178,7 +186,7 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     name: { en: 'Mulberry family', ru: 'Тутовые' },
   },
   {
-    count: { en: '0 plants', ru: '0 растений' },
+    count: { en: '3 plants', ru: '3 растения' },
     id: 'aizoaceae',
     image: '/plants/categories/studio/aizoaceae.webp',
     imageObjectPosition: 'right center',
@@ -204,6 +212,14 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     imageObjectPosition: 'center',
     imageScale: '1',
     name: { en: 'Mint family', ru: 'Яснотковые' },
+  },
+  {
+    count: { en: '1 plant', ru: '1 растение' },
+    id: 'podocarpaceae',
+    image: '/plants/categories/studio/podocarpaceae.webp',
+    imageObjectPosition: '40% center',
+    imageScale: '1',
+    name: { en: 'Podocarp family', ru: 'Подокарповые' },
   },
 ];
 
