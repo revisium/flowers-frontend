@@ -663,7 +663,227 @@ const epipremnumCollectionProfile = (
     ],
   });
 
+const syngoniumCollectionProfile = (
+  latinName: string,
+  leafDescription: LocalizedPair,
+  notes: LocalizedPair,
+  overview: LocalizedPair,
+  assets: ProfileAssets,
+): CollectionPlantProfile =>
+  simplePlantProfile({
+    assets,
+    difficulty: 2,
+    facts: [
+      [
+        `Every leaf develops its own ${leafDescription[0]}.`,
+        'Juvenile arrowhead leaves may become more divided as the vine matures.',
+        'Several rooted cuttings in one pot create a fuller, naturally irregular plant.',
+      ],
+      [
+        `${leafDescription[1]} на каждом листе складывается по-своему.`,
+        'Ювенильные стреловидные листья по мере взросления лианы могут становиться более рассечёнными.',
+        'Несколько укоренённых черенков в одном горшке образуют более пышный и естественно неровный куст.',
+      ],
+    ],
+    family: ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+    feeding: [
+      'Feed every three to four weeks in spring and summer with a balanced foliage fertiliser at half strength.',
+      'Весной и летом подкармливайте раз в три-четыре недели половинной дозой удобрения для декоративно-лиственных.',
+    ],
+    growth: ['Fast', 'Быстрый'],
+    height: ['Vines 60–150 cm indoors', 'Побеги 60–150 см в комнате'],
+    humidity: [
+      'Average room humidity is suitable. Keep the plant away from hot radiators and very dry draughts.',
+      'Подходит обычная комнатная влажность. Держите растение подальше от горячих батарей и очень сухих сквозняков.',
+    ],
+    important: [
+      'The sap contains irritating calcium oxalate crystals. Wear gloves when pruning and keep the plant and cuttings away from children and pets.',
+      'Сок содержит раздражающие кристаллы оксалата кальция. При обрезке надевайте перчатки и держите растение и черенки подальше от детей и животных.',
+    ],
+    latinName,
+    light: [
+      'Give bright diffused light without harsh midday sun. Variegated leaves keep their characteristic colour best in steady filtered light.',
+      'Нужен яркий рассеянный свет без жёсткого полуденного солнца. Пестролистные сорта лучше сохраняют характерную окраску при стабильном фильтрованном освещении.',
+    ],
+    notes,
+    origin: [
+      'Cultivated form; the genus is native to tropical Central and South America',
+      'Культурная форма; род происходит из тропиков Центральной и Южной Америки',
+    ],
+    overview,
+    plantType: ['Evergreen tropical climber', 'Вечнозелёная тропическая лиана'],
+    problems: [
+      [
+        'Yellow soft leaves — let the substrate dry and inspect the roots.',
+        'Long bare internodes — increase diffused light and prune above a node.',
+        'Brown dry edges — check watering regularity, hot air and salt buildup.',
+      ],
+      [
+        'Мягкие жёлтые листья — просушите грунт и проверьте корни.',
+        'Длинные голые междоузлия — добавьте рассеянного света и обрежьте побег над узлом.',
+        'Сухие коричневые края — проверьте регулярность полива, горячий воздух и накопление солей.',
+      ],
+    ],
+    propagation: [
+      'Take a stem section with at least one healthy node. Root the node in water or a lightly moist airy mix, then plant several rooted cuttings together for a fuller pot.',
+      'Возьмите часть стебля хотя бы с одним здоровым узлом. Укорените узел в воде или слегка влажном воздушном грунте, затем посадите несколько черенков вместе для пышного куста.',
+    ],
+    repotting: [
+      'Repot in spring when roots fill the pot, choosing a container only slightly larger and keeping the stem bases at their previous depth.',
+      'Пересаживайте весной после заполнения горшка корнями, выбирая ёмкость лишь немного больше и сохраняя прежнюю глубину основания побегов.',
+    ],
+    secondaryCare: [
+      ['Shaping a full plant', 'Формирование пышного куста'],
+      [
+        'Trim stretched stems above a node, root the tops and return them to the same pot. Leave a few stems at different lengths so the plant keeps a natural silhouette.',
+        'Обрезайте вытянувшиеся побеги над узлом, укореняйте верхушки и подсаживайте их в тот же горшок. Оставляйте стебли разной длины, чтобы куст сохранял естественный силуэт.',
+      ],
+    ],
+    soil: [
+      'Use an airy mix of about 55% houseplant compost, 25% fine bark and 20% perlite or pumice.',
+      'Используйте воздушную смесь примерно из 55% грунта для комнатных растений, 25% мелкой коры и 20% перлита или пемзы.',
+    ],
+    temperature: [
+      'Keep at 18–28 °C and protect from cold glass, draughts and temperatures below 15 °C.',
+      'Содержите при 18–28 °C, защищая от холодного стекла, сквозняков и температуры ниже 15 °C.',
+    ],
+    watering: [
+      'Water after the top 3–4 cm of substrate dries. Moisten evenly, drain completely and do not water again while the pot still feels heavy.',
+      'Поливайте после просыхания верхних 3–4 см грунта. Равномерно промочите смесь, полностью слейте лишнюю воду и не поливайте снова, пока горшок остаётся тяжёлым.',
+    ],
+  });
+
 export const collectionPlants: readonly CollectionPlant[] = [
+  collectionPlant(
+    'araceae',
+    'syngonium-iron-brown',
+    '/plant-profile/syngonium-iron-brown.webp',
+    ["Syngonium 'Iron Brown'", 'Сингониум Айрон Браун'],
+    syngoniumCollectionProfile(
+      "Syngonium podophyllum 'Iron Brown'",
+      ['smoky olive-brown colour with muted bronze undertones', 'дымчато-оливковая окраска с приглушённым бронзовым оттенком'],
+      ['My plant began as one modest dark shoot. I am gradually rooting its tops back into the pot so it can become an informal layered bush without losing its deep colour.', 'Моё растение начиналось с одного скромного тёмного побега. Я постепенно укореняю его верхушки обратно в горшок, чтобы получить свободный многоярусный куст и сохранить глубокую окраску.'],
+      ['Iron Brown is a dark-leaved arrowhead vine whose mature foliage combines olive, cocoa and bronze tones. Its restrained colour and softly quilted leaves make it quieter than bright variegated syngoniums.', 'Айрон Браун — темнолистная лиана со стреловидными листьями, в окраске которых сочетаются оливковые, шоколадные и бронзовые тона. Сдержанный цвет и мягко фактурные листья отличают её от ярких пестролистных сингониумов.'],
+      { importantImage: '/plant-profile/syngonium-iron-brown-important.webp', propagationImage: '/plant-profile/syngonium-iron-brown-propagation.webp' },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'syngonium-mottled',
+    '/plant-profile/syngonium-mottled.webp',
+    ["Syngonium 'Mottled'", 'Сингониум Мотлед'],
+    syngoniumCollectionProfile(
+      "Syngonium podophyllum 'Mottled'",
+      ['dense, non-repeating lime-and-green marbling', 'густой неповторяющийся лаймово-зелёный мраморный рисунок'],
+      ['The young plant already shows a different pattern on every leaf. I want to build its future crown from several cuttings while keeping a few longer, freer stems.', 'У молодого растения уже нет двух одинаковых листьев. Будущую крону я хочу собрать из нескольких черенков, сохранив пару более длинных свободных побегов.'],
+      ['Mottled is valued for arrowhead leaves covered with irregular lime speckles, strokes and green islands. Light and leaf age change the balance of the pattern, so the whole plant looks lively rather than uniform.', 'Мотлед ценят за стреловидные листья с хаотичными лаймовыми крапинами, штрихами и зелёными островками. Свет и возраст листа меняют рисунок, поэтому весь куст выглядит живым и неоднородным.'],
+      { importantImage: '/plant-profile/syngonium-mottled-important.webp', propagationImage: '/plant-profile/syngonium-mottled-propagation.webp' },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'syngonium-lime-soda',
+    '/plant-profile/syngonium-lime-soda.webp',
+    ["Syngonium 'Lime Soda'", 'Сингониум Лайм Сода'],
+    syngoniumCollectionProfile(
+      "Syngonium podophyllum 'Lime Soda'",
+      ['fresh lime colour and delicate rosy veins on pale young leaves', 'свежая лаймовая окраска и нежные розоватые жилки на светлых молодых листьях'],
+      ['I am letting this light little plant gain strength before its first shaping. Later, rooted tops will return to the same pot and form an airy lime crown.', 'Я даю этому светлому малышу набраться сил до первой формировки. Позже укоренённые верхушки вернутся в тот же горшок и соберут воздушную лаймовую крону.'],
+      ['Lime Soda has luminous yellow-green foliage: young leaves can show a soft pink flush along the veins while older leaves settle into deeper green. The changing tones give the plant depth even without strong variegation.', 'У Лайм Соды светящаяся жёлто-зелёная листва: на молодых листьях вдоль жилок может появляться нежный розовый оттенок, а старые становятся глубже зелёными. Смена тонов придаёт кусту объём даже без контрастной вариегатности.'],
+      { importantImage: '/plant-profile/syngonium-lime-soda-important.webp', propagationImage: '/plant-profile/syngonium-lime-soda-propagation.webp' },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'syngonium-auritum',
+    '/plant-profile/syngonium-auritum.webp',
+    ['Eared syngonium', 'Сингониум Ауритум'],
+    syngoniumCollectionProfile(
+      'Syngonium auritum',
+      ['age-dependent transition from simple arrowheads to divided three-lobed leaves', 'возрастной переход от простых стреловидных к рассечённым трёхлопастным листьям'],
+      ['The smallest leaves still look simple, so this plant is especially interesting to observe. I am waiting for stronger divided foliage and will keep the stems at different heights.', 'Самые маленькие листья пока выглядят просто, поэтому за растением особенно интересно наблюдать. Я жду более выраженной рассечённой листвы и буду сохранять побеги разной высоты.'],
+      ['Syngonium auritum is a green climbing species whose leaves change markedly with age. Juvenile blades are arrow-shaped, while established climbing growth develops distinctive lateral lobes.', 'Сингониум Ауритум — зелёный вьющийся вид, листья которого заметно меняются с возрастом. Ювенильные пластинки стреловидные, а на окрепших лазящих побегах появляются характерные боковые лопасти.'],
+      { importantImage: '/plant-profile/syngonium-auritum-important.webp', propagationImage: '/plant-profile/syngonium-auritum-propagation.webp' },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'syngonium-pink-splash',
+    '/plant-profile/syngonium-pink-splash.webp',
+    ["Syngonium 'Pink Splash'", 'Сингониум Пинк Сплэш'],
+    syngoniumCollectionProfile(
+      "Syngonium podophyllum 'Pink Splash'",
+      ['scattered pink splashes and freckles over a green base', 'разбросанные розовые мазки и крапины по зелёному фону'],
+      ['The original vine is still rather loose, but its leaves already vary beautifully. I will root selected nodes together instead of forcing a perfectly round crown.', 'Исходная лиана пока довольно свободная, но листья уже красиво отличаются друг от друга. Я укореню выбранные узлы вместе, не пытаясь сделать крону идеально круглой.'],
+      ['Pink Splash produces an unpredictable pink pattern: one leaf may carry only a few freckles while the next opens with a broad blush. Good light supports the colour, but every new leaf remains a surprise.', 'Пинк Сплэш даёт непредсказуемый розовый рисунок: на одном листе бывает лишь несколько крапин, а следующий раскрывается с широким румянцем. Хороший свет поддерживает окраску, но каждый новый лист остаётся сюрпризом.'],
+      { importantImage: '/plant-profile/syngonium-pink-splash-important.webp', propagationImage: '/plant-profile/syngonium-pink-splash-propagation.webp' },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'syngonium-silver-pearl',
+    '/plant-profile/syngonium-silver-pearl.webp',
+    ["Syngonium 'Silver Pearl'", 'Сингониум Сильвер Перл'],
+    syngoniumCollectionProfile(
+      "Syngonium podophyllum 'Silver Pearl'",
+      ['soft pearl-silver surface with narrow green margins', 'мягкая жемчужно-серебристая поверхность с узкой зелёной каймой'],
+      ['This plant arrived as a few pale leaves on long petioles. A group of rooted tops should make it fuller while leaving enough space for the silver blades to remain readable.', 'Растение досталось мне с несколькими светлыми листьями на длинных черешках. Группа укоренённых верхушек сделает его пышнее, но оставит достаточно воздуха, чтобы серебристые пластины не терялись.'],
+      ['Silver Pearl is a calm, luminous cultivar with matte silvery leaves, fine green edging and greener young growth. Its beauty is in subtle texture rather than dramatic patches.', 'Сильвер Перл — спокойный светящийся сорт с матовыми серебристыми листьями, тонкой зелёной каймой и более зелёным молодым приростом. Его красота строится на тонкой фактуре, а не на резких пятнах.'],
+      { importantImage: '/plant-profile/syngonium-silver-pearl-important.webp', propagationImage: '/plant-profile/syngonium-silver-pearl-propagation.webp' },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'syngonium-white-panda',
+    '/plant-profile/syngonium-white-panda.webp',
+    ["Syngonium 'White Panda'", 'Сингониум Панда белая'],
+    syngoniumCollectionProfile(
+      "Syngonium podophyllum 'White Panda'",
+      ['large irregular dark-green sectors over milky mint foliage', 'крупные хаотичные тёмно-зелёные секторы по молочно-мятной листве'],
+      ['The pale plant is still compact, so I am especially careful not to rush it with water. I will keep greener shoots in the future bush to support steady growth.', 'Светлое растение пока компактное, поэтому я особенно не тороплю его лишним поливом. В будущем кусте я сохраню более зелёные побеги, чтобы поддерживать стабильный рост.'],
+      ['White Panda combines very pale mint leaves with strong green sectors and speckling. Because highly pale leaves contain less chlorophyll, a balanced mix of light and greener foliage is important.', 'Панда белая сочетает очень светлые мятные листья с контрастными зелёными секторами и крапом. Поскольку в сильно осветлённых участках меньше хлорофилла, важны баланс света и наличие более зелёной листвы.'],
+      { importantImage: '/plant-profile/syngonium-white-panda-important.webp', propagationImage: '/plant-profile/syngonium-white-panda-propagation.webp' },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'syngonium-confetti-milk',
+    '/plant-profile/syngonium-confetti-milk.webp',
+    ["Syngonium 'Confetti Milk'", 'Сингониум Конфетти Милк'],
+    syngoniumCollectionProfile(
+      "Syngonium podophyllum 'Confetti Milk'",
+      ['milky mint base scattered with fine dusty-pink confetti', 'молочно-мятный фон с мелким пыльно-розовым конфетти'],
+      ['The young leaves are already softly speckled rather than loudly variegated. I plan to preserve that delicate look in a loose bush made from several cuttings.', 'Молодые листья уже покрыты мягким крапом без слишком резкой пестроты. Я хочу сохранить эту деликатность в свободном кусте из нескольких черенков.'],
+      ['Confetti Milk has pale creamy-mint foliage dusted with fine pink marks and occasional larger splashes. Greener and paler leaves together create its characteristic milky depth.', 'У Конфетти Милк светлая кремово-мятная листва с мелкими розовыми отметинами и редкими крупными мазками. Сочетание более зелёных и более светлых листьев создаёт характерную молочную глубину.'],
+      { importantImage: '/plant-profile/syngonium-confetti-milk-important.webp', propagationImage: '/plant-profile/syngonium-confetti-milk-propagation.webp' },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'syngonium-flexid',
+    '/plant-profile/syngonium-flexid.webp',
+    ["Syngonium 'Flexid'", 'Сингониум Флексид'],
+    syngoniumCollectionProfile(
+      "Syngonium podophyllum 'Flexid'",
+      ['muted salmon, beige-green and olive marbling', 'приглушённая лососёвая, бежево-зелёная и оливковая мраморность'],
+      ['This plant changes noticeably from leaf to leaf: some blades are warm and pink, others remain olive. I will let that uneven rhythm guide the shape of the future bush.', 'Это растение заметно меняется от листа к листу: одни пластины тёплые и розоватые, другие остаются оливковыми. Этому неровному ритму я позволю определить форму будущего куста.'],
+      ['Flexid is a warm-toned syngonium with dusty salmon, beige and olive-green areas flowing into one another. Its subdued palette looks especially natural when leaves of different ages are kept together.', 'Флексид — сингониум тёплых тонов, в котором пыльно-лососёвые, бежевые и оливково-зелёные участки переходят друг в друга. Сдержанная палитра особенно естественно выглядит, когда в кусте остаются листья разного возраста.'],
+      { importantImage: '/plant-profile/syngonium-flexid-important.webp', propagationImage: '/plant-profile/syngonium-flexid-propagation.webp' },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'syngonium-panda',
+    '/plant-profile/syngonium-panda.webp',
+    ["Syngonium 'Panda'", 'Сингониум Панда'],
+    syngoniumCollectionProfile(
+      "Syngonium podophyllum 'Panda'",
+      ['irregular silver-mint brush strokes over deep green', 'хаотичные серебристо-мятные мазки по глубокому зелёному фону'],
+      ['The current plant has only a few broad leaves, each marked differently. I will return rooted tops to its pot and keep the crown slightly sprawling rather than overly tidy.', 'Сейчас у растения всего несколько широких листьев, и каждый размечен по-своему. Я верну укоренённые верхушки в его горшок и сохраню крону немного раскидистой, а не чрезмерно аккуратной.'],
+      ['Panda has deep green arrowhead leaves crossed by irregular silver-mint strokes near the veins. Unlike White Panda, the green field remains dominant and gives the plant a darker, more graphic character.', 'У Панды глубокие зелёные стреловидные листья с хаотичными серебристо-мятными мазками возле жилок. В отличие от Панды белой, зелёный фон остаётся главным и придаёт растению более тёмный графичный характер.'],
+      { importantImage: '/plant-profile/syngonium-panda-important.webp', propagationImage: '/plant-profile/syngonium-panda-propagation.webp' },
+    ),
+  ),
   collectionPlant(
     'amaryllidaceae',
     'clivia-miniata-rescued',
