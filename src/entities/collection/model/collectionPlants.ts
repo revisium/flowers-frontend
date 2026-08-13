@@ -800,9 +800,9 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ['Eared syngonium', 'Сингониум Ауритум'],
     syngoniumCollectionProfile(
       'Syngonium auritum',
-      ['age-dependent transition from simple arrowheads to divided three-lobed leaves', 'возрастной переход от простых стреловидных к рассечённым трёхлопастным листьям'],
-      ['The smallest leaves still look simple, so this plant is especially interesting to observe. I am waiting for stronger divided foliage and will keep the stems at different heights.', 'Самые маленькие листья пока выглядят просто, поэтому за растением особенно интересно наблюдать. Я жду более выраженной рассечённой листвы и буду сохранять побеги разной высоты.'],
-      ['Syngonium auritum is a green climbing species whose leaves change markedly with age. Juvenile blades are arrow-shaped, while established climbing growth develops distinctive lateral lobes.', 'Сингониум Ауритум — зелёный вьющийся вид, листья которого заметно меняются с возрастом. Ювенильные пластинки стреловидные, а на окрепших лазящих побегах появляются характерные боковые лопасти.'],
+      ['broad glossy green blades with an irregular lime glow along the central vein', 'широкие глянцевые зелёные пластины с неровным лаймовым свечением вдоль центральной жилки'],
+      ['The plant currently grows broad, almost entire leaves with a lighter centre and a softly quilted surface. I will root its tops together and preserve this recognisable loose shape rather than forcing a perfectly even crown.', 'Сейчас растение выпускает широкие почти цельные листья со светлой серединой и мягко рельефной поверхностью. Я укореню его верхушки вместе и сохраню эту узнаваемую свободную форму, не стремясь к идеально ровной кроне.'],
+      ['My Syngonium auritum has broad green foliage with shallow basal shoulders and a luminous lime zone following the midrib and lateral veins. Smaller young leaves open paler, creating a layered green crown as several cuttings grow together.', 'У моего Сингониума Ауритум широкая зелёная листва с неглубокими базальными выемками и светящейся лаймовой зоной вдоль центральной и боковых жилок. Маленькие молодые листья раскрываются светлее и создают многослойную зелёную крону, когда несколько черенков растут вместе.'],
       { importantImage: '/plant-profile/syngonium-auritum-important.webp', propagationImage: '/plant-profile/syngonium-auritum-propagation.webp' },
     ),
   ),
