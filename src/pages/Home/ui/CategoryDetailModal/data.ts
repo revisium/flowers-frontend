@@ -181,6 +181,7 @@ const createFamilyDataByLocale = (
 });
 
 const familyTitles: Record<CategoryId, LocalizedText> = {
+  acanthaceae: { en: 'Acanthus family', ru: 'Акантовые' },
   aizoaceae: { en: 'Ice plant family', ru: 'Аизовые' },
   amaryllidaceae: { en: 'Amaryllis family', ru: 'Амариллисовые' },
   apocynaceae: { en: 'Dogbane family', ru: 'Кутровые' },
@@ -205,6 +206,11 @@ const familyTitles: Record<CategoryId, LocalizedText> = {
 };
 
 export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryDetailData>> = {
+  acanthaceae: createFamilyDataByLocale(
+    'acanthaceae',
+    familyTitles.acanthaceae,
+    familySeeds.acanthaceae,
+  ),
   aizoaceae: createFamilyDataByLocale('aizoaceae', familyTitles.aizoaceae, familySeeds.aizoaceae),
   araceae: createFamilyDataByLocale('araceae', familyTitles.araceae, familySeeds.araceae),
   amaryllidaceae: createFamilyDataByLocale(

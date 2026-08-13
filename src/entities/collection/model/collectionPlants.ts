@@ -1,6 +1,7 @@
 import type { Locale } from 'src/shared/config';
 
 export type CollectionFamilyId =
+  | 'acanthaceae'
   | 'aizoaceae'
   | 'amaryllidaceae'
   | 'apocynaceae'
@@ -3282,6 +3283,103 @@ export const collectionPlants: readonly CollectionPlant[] = [
         propagationImage: '/plant-profile/propagation-cuttings.webp',
       },
     ),
+  ),
+  collectionPlant(
+    'acanthaceae',
+    'hypoestes-phyllostachya-three-forms',
+    '/plants/hypoestes-phyllostachya-three-forms-home-photo.webp',
+    ['Polka dot plant: three colour forms', 'Гипоэстес: три цветовые формы'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/hypoestes-important.webp',
+        propagationImage: '/plant-profile/hypoestes-propagation.webp',
+      },
+      difficulty: 2,
+      facts: [
+        [
+          'The coloured spots are part of the leaf tissue rather than damage or residue.',
+          'All three colour forms belong to the same species, Hypoestes phyllostachya.',
+          'Regular pinching encourages side shoots and keeps the plants compact.',
+          'Small lilac flowers may appear, but the patterned foliage is the main feature.',
+        ],
+        [
+          'Цветные пятна — естественная часть ткани листа, а не повреждение или налёт.',
+          'Все три цветовые формы относятся к одному виду — Hypoestes phyllostachya.',
+          'Регулярная прищипка стимулирует боковые побеги и сохраняет кустики компактными.',
+          'Могут появляться мелкие сиреневые цветки, но главная ценность растения — узорчатая листва.',
+        ],
+      ],
+      family: ['Acanthus family (Acanthaceae)', 'Акантовые (Acanthaceae)'],
+      feeding: [
+        'Feed every 3–4 weeks from spring to early autumn with a balanced liquid fertiliser at half strength. Do not feed dry roots.',
+        'С весны до начала осени подкармливайте раз в 3–4 недели сбалансированным жидким удобрением в половинной дозе. Не вносите удобрение по сухим корням.',
+      ],
+      growth: ['Fast', 'Быстрый'],
+      height: ['20–40 cm indoors', '20–40 см в помещении'],
+      humidity: [
+        'Average to moderately humid room air suits it. Keep it away from hot radiators and drying draughts.',
+        'Подходит обычная или умеренно повышенная влажность воздуха. Держите растение подальше от горячих батарей и иссушающих сквозняков.',
+      ],
+      important: [
+        'Do not let the root ball dry out completely: leaves wilt quickly. Pinch all three forms regularly, especially the most vigorous shoots, so one plant does not shade the others.',
+        'Не допускайте полного пересыхания земляного кома: листья быстро теряют тургор. Регулярно прищипывайте все три формы, особенно самые сильные побеги, чтобы один куст не затенял остальные.',
+      ],
+      latinName: 'Hypoestes phyllostachya',
+      light: [
+        'Provide bright diffused light. A little gentle morning or evening sun strengthens the pattern, while harsh midday sun can scorch the leaves.',
+        'Обеспечьте яркий рассеянный свет. Немного мягкого утреннего или вечернего солнца делает рисунок выразительнее, а жёсткое полуденное солнце может обжечь листья.',
+      ],
+      notes: [
+        'The collection contains three plants: a large white-green form, a pink-speckled green form and a raspberry-pink form with dark green markings.',
+        'В коллекции три растения: крупная бело-зелёная форма, розово-зелёная с ярким крапом и малиново-розовая с тёмно-зелёным рисунком.',
+      ],
+      origin: ['Madagascar', 'Мадагаскар'],
+      overview: [
+        'Polka dot plant is a soft-stemmed Madagascan subshrub grown for leaves covered in contrasting spots and splashes. These three forms differ in how much white, pink and green remains on the blade.',
+        'Гипоэстес листоколосниковый — мягкостебельный полукустарник с Мадагаскара, который выращивают ради листьев с контрастными пятнами и крапом. Три формы различаются соотношением белого, розового и зелёного на листовой пластинке.',
+      ],
+      plantType: ['Evergreen tropical subshrub', 'Вечнозелёный тропический полукустарник'],
+      problems: [
+        [
+          'Drooping leaves — check the mix immediately and water if it is dry.',
+          'Faded colour and long internodes — move to brighter diffused light.',
+          'Crisp brown edges — check for dry air, irregular watering or sun scorch.',
+        ],
+        [
+          'Поникшие листья — сразу проверьте грунт и полейте, если он сухой.',
+          'Бледная окраска и длинные междоузлия — переставьте на более яркий рассеянный свет.',
+          'Сухие коричневые края — проверьте влажность воздуха, регулярность полива и защиту от ожогов.',
+        ],
+      ],
+      propagation: [
+        'Cut a healthy 7–10 cm shoot just below a node, remove the lowest leaf pair and place the bare node in water or a light moist mix. Keep warm in bright diffused light and plant several rooted cuttings together for a fuller bush.',
+        'Срежьте здоровый побег длиной 7–10 см сразу под узлом, удалите нижнюю пару листьев и поместите оголённый узел в воду или лёгкий влажный грунт. Держите в тепле на ярком рассеянном свету; для пышного куста посадите вместе несколько укоренённых черенков.',
+      ],
+      repotting: [
+        'Repot in spring when roots fill the pot. A modest pot encourages even moisture without leaving a large volume of wet soil.',
+        'Пересаживайте весной, когда корни освоят горшок. Умеренный объём помогает поддерживать равномерную влажность без лишней сырой земли.',
+      ],
+      secondaryCare: [
+        ['Pinching and flowering', 'Прищипка и цветение'],
+        [
+          'Pinch the tips after every few leaf pairs. Flower spikes can be removed if compact foliage is more important than bloom.',
+          'Прищипывайте верхушки после каждых нескольких пар листьев. Цветоносы можно удалить, если компактная листва важнее цветения.',
+        ],
+      ],
+      soil: [
+        'Use an airy moisture-retentive mix: about 60% houseplant compost, 20% fine bark or coco chips and 20% perlite. The pot needs a drainage hole.',
+        'Используйте воздушную влагоёмкую смесь: около 60% грунта для комнатных растений, 20% мелкой коры или кокосовых чипсов и 20% перлита. В горшке нужно дренажное отверстие.',
+      ],
+      temperature: [
+        'Keep at 18–26°C and protect from temperatures below 15°C, cold glass and sudden draughts.',
+        'Держите при 18–26 °C и защищайте от температуры ниже 15 °C, холодного стекла и резких сквозняков.',
+      ],
+      watering: [
+        'Water when the top 1–2 cm of mix has dried, keeping the root ball lightly and evenly moist but never waterlogged. Drain the saucer after watering.',
+        'Поливайте после просыхания верхних 1–2 см грунта, поддерживая ком слегка и равномерно влажным, но не заболоченным. После полива сливайте воду из поддона.',
+      ],
+    }),
+    3,
   ),
   collectionPlant(
     'aizoaceae',

@@ -84,6 +84,14 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 
 const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
   {
+    count: { en: '3 plants', ru: '3 растения' },
+    id: 'acanthaceae',
+    image: '/plants/categories/studio/acanthaceae.webp',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Acanthus family', ru: 'Акантовые' },
+  },
+  {
     count: { en: '12 plants', ru: '12 растений' },
     id: 'araceae',
     image: '/plants/categories/studio/araceae.webp',

@@ -1,4 +1,67 @@
 {
+  "acanthaceae": {
+    "closingNote": {
+      "en": "Acanthaceae unite dramatic foliage and architectural flowers. Even without bloom, their opposite leaves, strong veins and vivid patterns give a collection a lively tropical rhythm.",
+      "ru": "Акантовые объединяют выразительную листву и архитектурные цветки. Даже без цветения супротивные листья, заметные жилки и яркие узоры задают коллекции живой тропический ритм."
+    },
+    "description": {
+      "en": "Acanthaceae are mainly tropical herbs and shrubs. The family includes foliage plants such as Hypoestes and Aphelandra as well as flowering Justicia, Ruellia and Thunbergia, many recognised by opposite leaves and showy bracts or two-lipped flowers.",
+      "ru": "Акантовые — преимущественно тропические травы и кустарники. К семейству относятся декоративнолистные гипоэстесы и афеландры, а также цветущие юстиции, руэллии и тунбергии; многие узнаются по супротивным листьям, ярким прицветникам или двугубым цветкам."
+    },
+    "facts": {
+      "en": [
+        "The family contains several thousand species, with its greatest diversity in tropical regions.",
+        "Many members bear leaves in opposite pairs and have conspicuous veins or colourful patterns.",
+        "In some genera, overlapping bracts remain decorative much longer than the individual flowers.",
+        "Many Acanthaceae have specialised capsules that help disperse seeds away from the parent plant."
+      ],
+      "ru": [
+        "Семейство насчитывает несколько тысяч видов и особенно разнообразно в тропических регионах.",
+        "У многих представителей листья расположены супротивными парами и выделяются заметным жилкованием или цветным рисунком.",
+        "У некоторых родов черепитчатые прицветники сохраняют декоративность значительно дольше отдельных цветков.",
+        "Для многих Акантовых характерны специализированные коробочки, помогающие разбрасывать семена дальше от материнского растения."
+      ]
+    },
+    "heroFilter": "drop-shadow(0 18px 14px rgba(72, 57, 37, 0.14))",
+    "heroImage": "/plants/acanthaceae-modal/hero.webp",
+    "heroPosition": {
+      "base": "calc(100% + 120px) 125px",
+      "md": "calc(100% + 28px) 36px",
+      "lg": "calc(100% - 12px) 24px"
+    },
+    "heroSize": {
+      "base": "520px auto",
+      "md": "690px auto",
+      "lg": "780px auto"
+    },
+    "latinName": "Acanthaceae",
+    "origin": {
+      "en": "Tropical and subtropical regions worldwide, especially Central and South America, sub-Saharan Africa and Madagascar, South and Southeast Asia, and northern Australia.",
+      "ru": "Тропические и субтропические области по всему миру, особенно Центральная и Южная Америка, Африка южнее Сахары и Мадагаскар, Южная и Юго-Восточная Азия, а также север Австралии."
+    },
+    "originMapImage": "/plants/acanthaceae-modal/origin-map.webp",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Leaves are commonly arranged in opposite pairs along the stem.",
+        "Veins, spots and contrasting patches often make the foliage ornamental.",
+        "Overlapping coloured bracts can form long-lasting cone- or spike-like displays.",
+        "Flowers are often tubular or two-lipped and adapted to particular pollinators."
+      ],
+      "ru": [
+        "Листья часто располагаются на стебле супротивными парами.",
+        "Жилки, крап и контрастные пятна нередко делают листву особенно декоративной.",
+        "Налегающие друг на друга цветные прицветники могут образовывать долговечные колосовидные соцветия.",
+        "Цветки часто трубчатые или двугубые и приспособлены к определённым опылителям."
+      ]
+    },
+    "traitImages": [
+      "/plants/acanthaceae-modal/trait-opposite-leaves.webp",
+      "/plants/acanthaceae-modal/trait-speckled-leaves.webp",
+      "/plants/acanthaceae-modal/trait-showy-bracts.webp",
+      "/plants/acanthaceae-modal/trait-two-lipped-flowers.webp"
+    ]
+  },
   "aizoaceae": {
     "closingNote": {
       "en": "Aizoaceae bring the quiet geometry of dry landscapes into a collection: compact, sculptural and unexpectedly bright in flower.",
