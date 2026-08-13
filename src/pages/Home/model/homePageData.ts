@@ -84,7 +84,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
 
 const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
   {
-    count: { en: '10 plants', ru: '10 растений' },
+    count: { en: '12 plants', ru: '12 растений' },
     id: 'araceae',
     image: '/plants/categories/studio/araceae.webp',
     name: { en: 'Aroids', ru: 'Ароидные' },

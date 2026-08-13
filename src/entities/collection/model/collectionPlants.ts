@@ -4221,6 +4221,80 @@ export const collectionPlants: readonly CollectionPlant[] = [
   ),
   collectionPlant(
     'araceae',
+    'aglaonema-green-bowl',
+    '/plant-profile/aglaonema-green-bowl.webp',
+    ["Aglaonema 'Green Bowl'", "Аглаонема 'Green Bowl'"],
+    aglaonemaProfile(
+      'Green Bowl',
+      ['the silvery green pattern', 'серебристо-зелёный рисунок'],
+      [
+        [
+          'Broad oval leaves curve gently upward at the edges, giving them a shallow bowl-like shape.',
+          'A broad silvery green field fills the centre of each leaf and meets an irregular deep-green margin.',
+          'Fine pale flecks and darker brushstrokes make the pattern of every leaf unique.',
+          'Short petioles keep the young plant compact and neatly layered.',
+        ],
+        [
+          'Широкие овальные листья слегка загибаются вверх по краям и напоминают неглубокую чашу.',
+          'Серебристо-зелёный центр каждого листа обрамлён неровной тёмно-зелёной каймой.',
+          'Светлый крап и тёмные штрихи делают рисунок каждого листа неповторимым.',
+          'Короткие черешки сохраняют молодой куст компактным и аккуратно ярусным.',
+        ],
+      ],
+      [
+        'This new aglaonema immediately stood out for its calm layered greens and broad, almost horizontal leaves.',
+        'Эта новая аглаонема сразу выделилась спокойными переливами зелени и широкими, почти горизонтальными листьями.',
+      ],
+      [
+        "'Green Bowl' is a compact aglaonema cultivar with broad cupped leaves, silvery green centres and irregular dark-green margins.",
+        "'Green Bowl' — компактный сорт аглаонемы с широкими чашевидными листьями, серебристо-зелёным центром и неровной тёмно-зелёной каймой.",
+      ],
+      ['Compact, about 35–50 cm', 'Компактная, около 35–50 см'],
+      {
+        importantImage: '/plant-profile/aglaonema-green-bowl-important.webp',
+        propagationImage: '/plant-profile/aglaonema-green-bowl-propagation.webp',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
+    'aglaonema-red-anjamani',
+    '/plant-profile/aglaonema-red-anjamani.webp',
+    ["Aglaonema 'Red Anjamani'", "Аглаонема 'Red Anjamani'"],
+    aglaonemaProfile(
+      'Red Anjamani',
+      ['the intense red coloring', 'насыщенную красную окраску'],
+      [
+        [
+          'The broad pointed leaves are almost completely raspberry red, with only a narrow dark-green edge.',
+          'Small green flecks along the margins make each leaf slightly different.',
+          'New leaves rise upright from the centre before opening into a dense layered rosette.',
+          'The compact habit makes the saturated foliage look especially vivid.',
+        ],
+        [
+          'Широкие заострённые листья почти полностью окрашены в малиново-красный цвет и обведены тонкой тёмно-зелёной каймой.',
+          'Мелкие зелёные вкрапления по краям делают каждый лист немного разным.',
+          'Новые листья поднимаются вертикально из центра, а затем раскрываются в плотную ярусную розетку.',
+          'Компактная форма делает насыщенную окраску особенно выразительной.',
+        ],
+      ],
+      [
+        'Its almost solid red foliage makes this newcomer one of the brightest accents in the collection.',
+        'Почти полностью красная листва делает эту новинку одним из самых ярких акцентов коллекции.',
+      ],
+      [
+        "'Red Anjamani' is a vivid compact aglaonema cultivar with raspberry-red leaves edged by a fine irregular line of green.",
+        "'Red Anjamani' — яркий компактный сорт аглаонемы с малиново-красными листьями и тонкой неровной зелёной каймой.",
+      ],
+      ['Compact, about 30–50 cm', 'Компактная, около 30–50 см'],
+      {
+        importantImage: '/plant-profile/aglaonema-red-anjamani-important.webp',
+        propagationImage: '/plant-profile/aglaonema-red-anjamani-propagation.webp',
+      },
+    ),
+  ),
+  collectionPlant(
+    'araceae',
     'zamioculcas-zamiifolia',
     '/plants/zamioculcas-zamiifolia-home-photo.webp',
     ['ZZ plant', 'Замиокулькас'],

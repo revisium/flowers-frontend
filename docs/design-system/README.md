@@ -35,6 +35,14 @@ direction is chosen.
 - Family detail views use layered depth: a tall botanical hero continues behind
   softly translucent information panels, which overlap the image with generous
   spacing instead of creating a hard section boundary.
+- Every plant profile supplies cultivar- or species-appropriate generated
+  botanical imagery for both the `Propagation` and `Important` blocks. These
+  assets are transparent WebP cutouts with no photographic background, room,
+  table, container, decorative scene, cast shadow, or text. The propagation
+  cutout shows the actual method described by the copy, such as rooted
+  divisions, offsets, or cuttings; the important cutout shows a healthy,
+  recognisable specimen or plant detail relevant to the warning. Generic
+  fallback artwork is not used for completed plant profiles.
 - The About editorial uses a warm ivory page surface, Georgia display headings,
   olive timeline icons, pale generated watercolor miniatures inside feature
   badges, a pale generated watercolor sprig beside each section heading,
