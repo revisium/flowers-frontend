@@ -43,6 +43,16 @@ direction is chosen.
   divisions, offsets, or cuttings; the important cutout shows a healthy,
   recognisable specimen or plant detail relevant to the warning. Generic
   fallback artwork is not used for completed plant profiles.
+- Plant-profile photographs use a consistent zoom interaction. Activating the
+  main photograph or a variants-gallery image opens it against a dark blurred
+  backdrop with contained, uncropped framing. Multi-image profiles add large
+  previous and next controls, a position counter, wraparound arrow-key
+  navigation, Escape-to-close behavior, and focus restoration; single-image
+  profiles omit carousel controls. A main photograph that represents a named
+  gallery variant opens at that variant and appears only once in the carousel.
+  In the profile itself, photographs fill their rounded frames edge to edge;
+  the frame is overlaid rather than taking space from the image, and hover zoom
+  is clipped inside the unchanged frame.
 - The About editorial uses a warm ivory page surface, Georgia display headings,
   olive timeline icons, pale generated watercolor miniatures inside feature
   badges, a pale generated watercolor sprig beside each section heading,

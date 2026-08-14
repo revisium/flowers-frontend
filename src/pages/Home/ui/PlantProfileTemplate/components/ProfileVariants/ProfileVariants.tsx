@@ -1,13 +1,14 @@
-import { Box, Flex, Grid, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Grid, Image, Text } from '@chakra-ui/react';
 import type { CollectionPlant } from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
 
 interface ProfileVariantsProps {
   readonly locale: Locale;
+  readonly onImageOpen: (index: number) => void;
   readonly plant: CollectionPlant;
 }
 
-export const ProfileVariants = ({ locale, plant }: ProfileVariantsProps) => {
+export const ProfileVariants = ({ locale, onImageOpen, plant }: ProfileVariantsProps) => {
   const variants = plant.profile.variants;
 
   if (!variants) {
@@ -44,26 +45,61 @@ export const ProfileVariants = ({ locale, plant }: ProfileVariantsProps) => {
         gap={{ base: '10px', md: '14px' }}
         gridTemplateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(4, 1fr)' }}
       >
-        {variants.items.map((variant) => (
+        {variants.items.map((variant, index) => (
           <Box
             as="figure"
-            background={variants.captionsEmbedded ? '#1d1d1b' : '#fffaf3'}
-            border="1px solid rgba(190, 169, 140, 0.52)"
+            background="#fffaf3"
+            border={0}
             borderRadius="9px"
             boxShadow="0 8px 22px rgba(78, 62, 42, 0.08)"
             key={variant.image}
             margin={0}
             overflow="hidden"
+            position="relative"
+            _after={{
+              border: '1px solid rgba(190, 169, 140, 0.52)',
+              borderRadius: 'inherit',
+              content: '""',
+              inset: 0,
+              pointerEvents: 'none',
+              position: 'absolute',
+              zIndex: 2,
+            }}
           >
-            <Image
-              alt={variant.name[locale]}
-              aspectRatio={variants.captionsEmbedded ? '3 / 4' : '4 / 5'}
-              loading="lazy"
-              objectFit="cover"
-              objectPosition={variants.captionsEmbedded ? 'center bottom' : 'center'}
-              src={variant.image}
+            <Button
+              aria-label={
+                locale === 'ru'
+                  ? `Открыть фотографию: ${variant.name[locale]}`
+                  : `Open photo: ${variant.name[locale]}`
+              }
+              borderRadius={0}
+              cursor="zoom-in"
+              display="block"
+              height="auto"
+              lineHeight={0}
+              minWidth={0}
+              overflow="hidden"
+              padding={0}
+              type="button"
+              variant="plain"
               width="100%"
-            />
+              onClick={() => onImageOpen(index)}
+              _focusVisible={{ outline: '3px solid #718d4f', outlineOffset: '-3px' }}
+              _hover={{ '& img': { transform: 'scale(1.04)' } }}
+            >
+              <Image
+                alt={variant.name[locale]}
+                aspectRatio={variants.captionsEmbedded ? '3 / 4' : '4 / 5'}
+                display="block"
+                loading="lazy"
+                objectFit="cover"
+                objectPosition={variants.captionsEmbedded ? 'center bottom' : 'center'}
+                src={variant.image}
+                transform="scale(1.02)"
+                transition="transform 180ms ease"
+                width="100%"
+              />
+            </Button>
             {variants.captionsEmbedded ? null : (
               <Text
                 as="figcaption"

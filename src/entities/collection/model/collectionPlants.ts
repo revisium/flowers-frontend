@@ -79,6 +79,7 @@ type VariantDefinition = readonly [image: string, name: LocalizedPair];
 
 interface ProfileAssets {
   readonly importantImage?: string;
+  readonly mainImageVariantIndex?: number;
   readonly propagationIcon?: string;
   readonly propagationImage?: string;
   readonly variants?: PlantProfileVariants;
@@ -161,6 +162,7 @@ export interface CollectionPlantProfile {
   readonly notes: Record<Locale, string>;
   readonly overview: Record<Locale, string>;
   readonly importantImage?: string;
+  readonly mainImageVariantIndex?: number;
   readonly propagationIcon?: string;
   readonly propagationImage?: string;
   readonly quickFacts: PlantProfileQuickFacts;
@@ -759,7 +761,7 @@ const syngoniumCollectionProfile = (
     ],
   });
 
-export const collectionPlants: readonly CollectionPlant[] = [
+const allCollectionPlants: readonly CollectionPlant[] = [
   collectionPlant(
     'araceae',
     'syngonium-iron-brown',
@@ -2824,6 +2826,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ),
       {
         importantImage: '/plant-profile/tillandsia-usneoides-important.webp',
+        mainImageVariantIndex: 1,
         propagationImage: '/plant-profile/tillandsia-usneoides-propagation.webp',
         variants: profileVariants(
           ['The Thai composition', 'Композиция из Таиланда'],
@@ -3808,7 +3811,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
         'Поливайте обильно после просыхания большей части смеси и сливайте лишнюю воду. В прохладе и при слабом освещении полив резко сокращайте.',
       ],
     }),
-    2,
+    1,
   ),
   collectionPlant(
     'aizoaceae',
@@ -3905,7 +3908,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
         'В прохладный период активного роста обильно поливайте только после полного просыхания смеси. В летнюю жару поливайте значительно реже и никогда не оставляйте воду в поддоне.',
       ],
     }),
-    2,
+    1,
   ),
   collectionPlant(
     'crassulaceae',
@@ -6862,6 +6865,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ),
       {
         importantImage: '/plant-profile/tradescantia-important.webp',
+        mainImageVariantIndex: 0,
         propagationImage: '/plant-profile/tradescantia-propagation.webp',
         variants: profileVariants(
           ['My Tradescantia collection', 'Моя коллекция традесканций'],
@@ -6927,6 +6931,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ),
       },
     ),
+    16,
   ),
   collectionPlant(
     'commelinaceae',
@@ -7057,6 +7062,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
       ),
       {
         importantImage: '/plant-profile/callisia-important.webp',
+        mainImageVariantIndex: 2,
         propagationImage: '/plant-profile/callisia-propagation.webp',
         variants: profileVariants(
           ['My Callisia collection', 'Моя коллекция каллизий'],
@@ -7073,6 +7079,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
         ),
       },
     ),
+    3,
   ),
   collectionPlant(
     'orchidaceae',
@@ -7898,6 +7905,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
     simplePlantProfile({
       assets: {
         importantImage: '/plant-profile/episcia-three-cultivars-important.webp',
+        mainImageVariantIndex: 0,
         propagationImage: '/plant-profile/episcia-three-cultivars-propagation.webp',
         variants: profileVariants(
           ['Three cultivars in my collection', 'Три сорта в моей коллекции'],
@@ -8262,6 +8270,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
         },
       },
     ),
+    28,
   ),
   collectionPlant(
     'asparagaceae',
@@ -9558,6 +9567,12 @@ export const collectionPlants: readonly CollectionPlant[] = [
     }),
   ),
 ];
+
+const hiddenCollectionPlantIds = new Set(['succulent-groundcover-mix']);
+
+export const collectionPlants: readonly CollectionPlant[] = allCollectionPlants.filter(
+  (plant) => !hiddenCollectionPlantIds.has(plant.id),
+);
 
 const getCollectionEntryPlantCount = (plant: CollectionPlant) => plant.plantCount;
 
