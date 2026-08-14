@@ -8109,6 +8109,31 @@ export const collectionPlants: readonly CollectionPlant[] = [
   ),
   collectionPlant(
     'asparagaceae',
+    'chlorophytum-comosum-variegatum',
+    '/plants/chlorophytum-variegatum-home-photo.webp',
+    ["Spider plant 'Variegatum'", 'Хлорофитум Вариегатум'],
+    chlorophytumCollectionProfile(
+      "Chlorophytum comosum 'Variegatum'",
+      [
+        'Green arching leaves with narrow cream-white margins',
+        'Зелёные дуговидные листья с узкими кремово-белыми краями',
+      ],
+      [
+        'Two young rosettes are growing side by side, giving the plant a lively, slightly asymmetric fountain shape. The pale margins trace every curve and remain clearly visible even on the youngest leaves.',
+        'Две молодые розетки растут рядом и образуют живой, слегка асимметричный фонтан. Светлая кайма подчёркивает каждый изгиб и хорошо заметна даже на самых молодых листьях.',
+      ],
+      [
+        "'Variegatum' is the reverse-variegated form of the familiar spider plant: each narrow leaf has a green centre framed by cream-white marginal stripes. Mature plants produce small white flowers and plantlets on long arching runners.",
+        '«Вариегатум» — форма хлорофитума с обратной вариегатностью: у каждого узкого листа зелёная середина обрамлена кремово-белыми краевыми полосами. Взрослые растения выпускают длинные дуговидные побеги с мелкими белыми цветками и детками.',
+      ],
+      {
+        importantImage: '/plant-profile/chlorophytum-variegatum-important.webp',
+        propagationImage: '/plant-profile/chlorophytum-variegatum-propagation.webp',
+      },
+    ),
+  ),
+  collectionPlant(
+    'asparagaceae',
     'chlorophytum-orchidastrum-green-orange',
     '/plants/chlorophytum-orchidastrum-green-orange-home-photo.webp',
     ['Green Orange spider plant', 'Хлорофитум Грин Оранж'],
