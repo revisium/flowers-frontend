@@ -2316,6 +2316,107 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ),
   ),
   collectionPlant(
+    'moraceae',
+    'ficus-elastica-tineke',
+    '/plants/ficus-elastica-tineke-home-photo.webp',
+    ["Rubber plant 'Tineke'", 'Фикус каучуконосный «Тинеке»'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/ficus-elastica-tineke-important.webp',
+        propagationImage: '/plant-profile/ficus-elastica-tineke-propagation.webp',
+      },
+      difficulty: 2,
+      facts: [
+        [
+          "'Tineke' has broad leathery leaves with irregular cream margins and several shades of green.",
+          'Fresh leaves emerge with a bronze or burgundy flush that gradually softens as they mature.',
+          'The white latex once made rubber figs commercially interesting, although modern natural rubber comes mainly from Hevea brasiliensis.',
+          'Like other figs, its tiny flowers are hidden inside specialised hollow inflorescences called syconia.',
+        ],
+        [
+          'У сорта «Тинеке» широкие кожистые листья с неровной кремовой каймой и несколькими оттенками зелёного.',
+          'Новые листья разворачиваются с бронзовым или бордовым оттенком, который постепенно смягчается.',
+          'Белый латекс когда-то делал каучуконосный фикус промышленно интересным, хотя современный натуральный каучук получают преимущественно из гевеи бразильской.',
+          'Как и у других фикусов, его крошечные цветки скрыты внутри особых полых соцветий — сикониев.',
+        ],
+      ],
+      family: ['Mulberry family (Moraceae)', 'Тутовые (Moraceae)'],
+      feeding: [
+        'Feed every four weeks from spring to early autumn with a balanced foliage fertiliser at half strength. Pause during slow winter growth.',
+        'С весны до начала осени подкармливайте раз в четыре недели половинной дозой сбалансированного удобрения для декоративно-лиственных. На время медленного зимнего роста сделайте паузу.',
+      ],
+      growth: ['Moderate', 'Умеренный'],
+      height: ['Usually 1.5–3 m indoors', 'Обычно 1,5–3 м в комнате'],
+      humidity: [
+        'Average room humidity is acceptable, though 45–60% helps new leaves unfurl cleanly. Keep away from radiators and cold draughts.',
+        'Подходит обычная комнатная влажность, но при 45–60% новые листья разворачиваются аккуратнее. Держите растение подальше от батарей и холодных сквозняков.',
+      ],
+      important: [
+        'Milky latex from a cut stem can irritate skin and eyes, and chewed leaves may cause digestive upset. Wear gloves when pruning and keep cut pieces away from children and pets.',
+        'Млечный сок из срезанного стебля может раздражать кожу и глаза, а разжёванные листья — вызвать расстройство пищеварения. Работайте в перчатках и держите срезанные части подальше от детей и животных.',
+      ],
+      latinName: "Ficus elastica 'Tineke'",
+      light: [
+        'Give bright filtered light and a little gentle morning or evening sun. Good light preserves the cream pattern; harsh midday sun can scorch the pale margins.',
+        'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Хорошее освещение сохраняет кремовый рисунок, а жёсткое полуденное солнце может обжечь светлую кайму.',
+      ],
+      notes: [
+        'A compact young tree with a strong cream-and-green pattern and a warm bronze growing point. As the stem matures, each new leaf will enlarge the upright layered crown.',
+        'Компактное молодое деревце с выразительным кремово-зелёным рисунком и тёплой бронзовой точкой роста. По мере взросления стебля каждый новый лист будет дополнять вертикальную ярусную крону.',
+      ],
+      origin: [
+        'Cultivar of a tropical Asian species native from Nepal and southern China to western Malesia',
+        'Сорт тропического азиатского вида, происходящего от Непала и юга Китая до западной Малезии',
+      ],
+      overview: [
+        "Ficus elastica 'Tineke' is a variegated evergreen tree with large glossy leaves patterned in deep green, sage and cream. Its broad foliage and upright habit create a calm architectural silhouette, while bronze-red new growth adds a changing colour accent.",
+        'Фикус каучуконосный «Тинеке» — пестролистное вечнозелёное дерево с крупными глянцевыми листьями глубокого зелёного, шалфейного и кремового оттенков. Широкая листва и вертикальный рост создают спокойный архитектурный силуэт, а бронзово-красный молодой прирост добавляет меняющийся цветовой акцент.',
+      ],
+      plantType: ['Evergreen tropical tree', 'Вечнозелёное тропическое дерево'],
+      problems: [
+        [
+          'Yellow soft lower leaves — let the upper substrate dry and check drainage and roots.',
+          'Dry brown margins — check for hot direct sun, irregular watering or salt buildup.',
+          'Sudden leaf drop — protect from cold draughts, abrupt moves and temperature changes.',
+          'Sticky leaves, raised bumps or fine webbing — isolate and inspect for scale, mealybugs or mites.',
+        ],
+        [
+          'Нижние листья желтеют и размягчаются — дайте верхнему слою грунта просохнуть и проверьте дренаж и корни.',
+          'Края сохнут и коричневеют — проверьте прямое жаркое солнце, нерегулярный полив и накопление солей.',
+          'Листья внезапно опадают — защитите от холодного сквозняка, резкой перестановки и перепадов температуры.',
+          'Листья стали липкими, появились бугорки или тонкая паутинка — изолируйте и проверьте на щитовку, мучнистого червеца или клеща.',
+        ],
+      ],
+      propagation: [
+        'Take a healthy 10–15 cm tip cutting just below a node, leaving two leaves. Rinse away the latex, root in water or a warm airy mix, and pot when several pale roots reach 3–5 cm. Air layering is another reliable method for a thicker stem.',
+        'Срежьте здоровый верхушечный черенок длиной 10–15 см чуть ниже узла и оставьте два листа. Смойте млечный сок, укореняйте в воде или тёплом воздушном субстрате и посадите, когда несколько светлых корней достигнут 3–5 см. Для толстого стебля также надёжно воздушное отводкование.',
+      ],
+      repotting: [
+        'Repot a young plant every one to two years in spring, moving up only one pot size. Keep the stem at its previous depth and use a container with a drainage hole.',
+        'Молодое растение пересаживайте весной раз в один-два года, увеличивая горшок только на один размер. Сохраняйте прежнюю глубину стебля и используйте ёмкость с дренажным отверстием.',
+      ],
+      secondaryCare: [
+        ['Leaf care and shaping', 'Уход за листьями и формировка'],
+        [
+          'Wipe each leaf with a soft damp cloth while supporting it from below. Rotate the pot gradually for even growth and prune above a node in spring when branching is desired.',
+          'Протирайте каждый лист мягкой влажной тканью, поддерживая его снизу. Понемногу поворачивайте горшок для ровного роста и при необходимости ветвления обрезайте весной над узлом.',
+        ],
+      ],
+      soil: [
+        'Use an airy fertile mix such as 60% quality houseplant substrate, 20% fine bark and 20% perlite or pumice, always with reliable drainage.',
+        'Используйте питательную воздушную смесь: например, 60% качественного грунта для комнатных растений, 20% мелкой коры и 20% перлита или пемзы, обязательно с надёжным дренажом.',
+      ],
+      temperature: [
+        'Keep at 18–27 °C and preferably above 15 °C in winter. Protect the roots from cold windowsills and avoid sudden temperature changes.',
+        'Содержите при 18–27 °C и желательно не ниже 15 °C зимой. Защищайте корни от холодного подоконника и избегайте резких перепадов температуры.',
+      ],
+      watering: [
+        'Water thoroughly when the upper 3–5 cm of substrate has dried, then empty the saucer. Do not let the root ball stay wet or dry out completely for long.',
+        'Поливайте обильно, когда верхние 3–5 см грунта просохнут, затем сливайте воду из поддона. Не держите корневой ком постоянно мокрым и не оставляйте его полностью сухим надолго.',
+      ],
+    }),
+  ),
+  collectionPlant(
     'asphodelaceae',
     'haworthiopsis-attenuata',
     '/plants/haworthiopsis-attenuata-home-photo.webp',
