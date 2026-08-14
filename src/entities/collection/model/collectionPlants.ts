@@ -3013,6 +3013,104 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ),
   ),
   collectionPlant(
+    'apocynaceae',
+    'dischidia-oiantha',
+    '/plants/dischidia-oiantha-home-photo.webp',
+    ['Dischidia oiantha', 'Дисхидия оианта'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/dischidia-oiantha-important.webp',
+        propagationImage: '/plant-profile/dischidia-oiantha-propagation.webp',
+      },
+      difficulty: 2,
+      facts: [
+        [
+          'Dischidia oiantha is an accepted species native to the Philippines.',
+          'In nature it grows as an epiphyte, using tree trunks and branches for support rather than feeding on them.',
+          'The small waxy leaves grow in opposite pairs and store some water.',
+          'Mature plants can produce tiny pale flowers at the nodes, although flowering indoors is not guaranteed.',
+        ],
+        [
+          'Дисхидия оианта — признанный вид, происходящий с Филиппин.',
+          'В природе она растёт как эпифит, используя стволы и ветви деревьев только в качестве опоры.',
+          'Мелкие восковые листья расположены супротивными парами и запасают немного воды.',
+          'Взрослое растение может образовывать в узлах маленькие светлые цветки, хотя в комнате цветение не гарантировано.',
+        ],
+      ],
+      family: ['Dogbane family (Apocynaceae)', 'Кутровые (Apocynaceae)'],
+      feeding: [
+        'From spring to early autumn, feed every 4 weeks with a balanced fertiliser diluted to quarter or half strength. Do not feed a dry, stressed or freshly repotted plant.',
+        'С весны до начала осени подкармливайте раз в четыре недели сбалансированным удобрением в четвертной или половинной дозировке. Не удобряйте сухое, ослабленное или недавно пересаженное растение.',
+      ],
+      growth: ['Moderate', 'Умеренный'],
+      height: ['Trailing stems can reach about 50–100 cm', 'Свисающие побеги могут достигать примерно 50–100 см'],
+      humidity: [
+        'Average room humidity is tolerated, while 50–70% supports steadier growth. Gentle airflow is essential; routine misting is unnecessary.',
+        'Растение переносит обычную комнатную влажность, а уровень 50–70% поддерживает более стабильный рост. Важно лёгкое движение воздуха; регулярные опрыскивания не нужны.',
+      ],
+      important: [
+        'Epiphytic roots need both moisture and air. Use a small pot with a drainage hole and a coarse airy mix, let it dry well between waterings and never leave water in the saucer.',
+        'Эпифитным корням нужны и влага, и воздух. Используйте небольшой горшок с дренажным отверстием и крупный воздушный субстрат, хорошо просушивайте его между поливами и не оставляйте воду в поддоне.',
+      ],
+      latinName: 'Dischidia oiantha Schltr.',
+      light: [
+        'Give bright diffused light with a little gentle morning or evening sun. Protect the small leaves from hot midday rays behind glass.',
+        'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Берегите мелкие листья от жарких полуденных лучей через стекло.',
+      ],
+      notes: [
+        'I bought this dischidia as a small rooted starter in a clear cup. It already has several flexible shoots with fresh growth at the tips. The main photograph shows a believable moderately mature form after the plant has filled out.',
+        'Я купила эту дисхидию небольшим укоренённым растением в прозрачном стаканчике. У неё уже несколько гибких побегов со свежим приростом на концах. Главная фотография показывает реалистичную умеренно взрослую форму после разрастания.',
+      ],
+      origin: ['Philippines', 'Филиппины'],
+      overview: [
+        'Dischidia oiantha is a tropical epiphytic vine with slender trailing or twining stems and pairs of small fleshy oval leaves. In a pot it forms a light, uneven cascade rather than a rigid compact crown.',
+        'Дисхидия оианта — тропическая эпифитная лиана с тонкими свисающими или вьющимися побегами и парами мелких мясистых овальных листьев. В горшке она образует лёгкий неровный каскад, а не плотную жёсткую крону.',
+      ],
+      plantType: ['Evergreen epiphytic vine', 'Вечнозелёная эпифитная лиана'],
+      problems: [
+        [
+          'Yellow soft leaves or a dark stem base — stop watering and inspect the roots for rot.',
+          'Wrinkled leaves in a dry mix — water thoroughly and let all excess drain.',
+          'Long bare sections and very small new leaves — move gradually to brighter diffused light.',
+          'White cottony clusters at the nodes — isolate and inspect for mealybugs.',
+        ],
+        [
+          'Листья желтеют и размягчаются, а основание темнеет — прекратите полив и проверьте корни на гниль.',
+          'Листья сморщились при сухом субстрате — хорошо полейте и дайте всей лишней воде стечь.',
+          'Появились длинные голые участки и очень мелкие новые листья — постепенно добавьте яркого рассеянного света.',
+          'В узлах заметны белые ватные комочки — изолируйте растение и проверьте на мучнистого червеца.',
+        ],
+      ],
+      propagation: [
+        'Cut healthy stem sections with two to four nodes. Remove the lowest pair of leaves, lay or pin one or two nodes onto a lightly moist airy mix and keep warm in bright diffused light until rooted.',
+        'Нарежьте здоровые части побега с двумя-четырьмя узлами. Удалите нижнюю пару листьев, уложите или закрепите один-два узла на слегка влажном воздушном субстрате и держите в тепле на ярком рассеянном свету до укоренения.',
+      ],
+      repotting: [
+        'Repot in spring only when roots fill the container or the mix breaks down. Move to a shallow pot just 2–3 cm wider and keep the stems at their previous level.',
+        'Пересаживайте весной, только когда корни заполнят ёмкость или субстрат разрушится. Выбирайте неглубокий горшок лишь на 2–3 см шире и сохраняйте прежний уровень посадки побегов.',
+      ],
+      secondaryCare: [
+        ['Shaping', 'Формирование'],
+        [
+          'Pinch an overlong shoot above a node and root several cuttings back into the same pot for a fuller but naturally uneven cascade.',
+          'Прищипывайте слишком длинный побег над узлом и подсаживайте несколько укоренённых черенков обратно, чтобы получить более пышный, но естественно неровный каскад.',
+        ],
+      ],
+      soil: [
+        'Use a loose epiphytic mix, for example 40% fine orchid bark, 30% coco chips or light compost and 30% perlite or pumice.',
+        'Используйте рыхлую эпифитную смесь: например, 40% мелкой орхидейной коры, 30% кокосовых чипсов или лёгкого грунта и 30% перлита или пемзы.',
+      ],
+      temperature: [
+        'Keep at 18–28 °C and preferably above 15 °C in winter. Protect from cold draughts and a chilled wet windowsill.',
+        'Содержите при 18–28 °C, зимой желательно не ниже 15 °C. Защищайте от холодных сквозняков и сырого переохлаждённого подоконника.',
+      ],
+      watering: [
+        'Water thoroughly after most of the mix has dried, then drain completely. Water less often in cool or cloudy weather, but do not keep the fine roots bone-dry for long.',
+        'Хорошо поливайте после просыхания большей части субстрата, затем полностью сливайте лишнюю воду. В прохладе и пасмурную погоду поливайте реже, но не держите тонкие корни полностью сухими слишком долго.',
+      ],
+    }),
+  ),
+  collectionPlant(
     'piperaceae',
     'peperomia-caperata-santorini',
     '/plants/peperomia-caperata-santorini-home-photo.webp',
