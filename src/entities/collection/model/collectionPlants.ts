@@ -3708,6 +3708,103 @@ export const collectionPlants: readonly CollectionPlant[] = [
     2,
   ),
   collectionPlant(
+    'aizoaceae',
+    'glottiphyllum-longum',
+    '/plants/glottiphyllum-longum-home-photo.webp',
+    ['Long-leaf tongue plant', 'Глоттифиллум длиннолистный'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/glottiphyllum-longum-important.webp',
+        propagationImage: '/plant-profile/glottiphyllum-longum-propagation.webp',
+      },
+      difficulty: 2,
+      facts: [
+        [
+          'The accepted species name is Glottiphyllum longum.',
+          'Its smooth strap-shaped leaves grow in opposite pairs and form a low clump.',
+          'Mature plants open solitary yellow flowers, usually in the cooler growing season.',
+          'The species is native to the Cape Provinces of South Africa.',
+        ],
+        [
+          'Принятое видовое название — Glottiphyllum longum.',
+          'Гладкие ремневидные листья растут супротивными парами и образуют низкую куртину.',
+          'Взрослые растения раскрывают одиночные жёлтые цветки, обычно в прохладный период роста.',
+          'Вид происходит из Капских провинций Южной Африки.',
+        ],
+      ],
+      family: ['Ice plant family (Aizoaceae)', 'Аизовые (Aizoaceae)'],
+      feeding: [
+        'Feed once every 4–6 weeks during active cool-season growth with a quarter-strength succulent fertiliser. Do not feed during the hot summer rest.',
+        'В период активного роста в прохладное время подкармливайте раз в 4–6 недель четвертью дозы удобрения для суккулентов. Во время летнего покоя не подкармливайте.',
+      ],
+      growth: ['Moderate', 'Умеренный'],
+      height: ['Clump 8–15 cm', 'Куртина 8–15 см'],
+      humidity: [
+        'Normal dry room air with good ventilation is ideal. Do not mist or allow water to remain between the paired leaves.',
+        'Подходит обычный сухой комнатный воздух с хорошей вентиляцией. Не опрыскивайте и не оставляйте воду между парными листьями.',
+      ],
+      important: [
+        'Overwatering is the main danger. Soft, translucent or yellowing lower leaves mean the mix is staying wet too long: stop watering, inspect the base and roots, and keep the crown dry.',
+        'Главная опасность — перелив. Мягкие, полупрозрачные или желтеющие нижние листья означают, что смесь слишком долго остаётся влажной: прекратите полив, проверьте основание и корни и держите центр розетки сухим.',
+      ],
+      latinName: 'Glottiphyllum longum',
+      light: [
+        'Give very bright light with gentle direct sun after gradual acclimatisation. Insufficient light makes new leaves longer, thinner and weaker.',
+        'Обеспечьте очень яркий свет и мягкое прямое солнце после постепенного привыкания. При недостатке света новые листья становятся длиннее, тоньше и слабее.',
+      ],
+      notes: [
+        'A rooted top is already producing a fresh central pair of leaves. Once the base is established, side shoots will gradually turn it into a low, irregular clump.',
+        'Укоренившаяся макушка уже выпускает свежую центральную пару листьев. После укрепления основания боковые побеги постепенно превратят её в низкую, неровную куртину.',
+      ],
+      origin: ['Cape Provinces, South Africa', 'Капские провинции, Южная Африка'],
+      overview: [
+        'Glottiphyllum longum is a compact succulent subshrub with smooth fleshy tongue-shaped leaves arranged in opposite pairs. With age it branches into a low clump and can produce vivid yellow flowers.',
+        'Глоттифиллум длиннолистный — компактный суккулентный полукустарник с гладкими мясистыми языковидными листьями, расположенными супротивными парами. С возрастом он ветвится в низкую куртину и может цвести ярко-жёлтыми цветками.',
+      ],
+      plantType: ['Clumping succulent subshrub', 'Кустящийся суккулентный полукустарник'],
+      problems: [
+        [
+          'Soft translucent leaves — stop watering and inspect the base and roots for rot.',
+          'Long, narrow and weak leaves — gradually increase light.',
+          'Deep wrinkling in completely dry mix — water once thoroughly, then let the mix dry again.',
+        ],
+        [
+          'Мягкие полупрозрачные листья — прекратите полив и проверьте основание и корни на гниль.',
+          'Длинные узкие слабые листья — постепенно увеличьте освещение.',
+          'Сильные морщины в полностью сухой смеси — один раз хорошо полейте и снова дайте грунту просохнуть.',
+        ],
+      ],
+      propagation: [
+        'Separate a healthy side shoot or take a top cutting, let the cut dry for 2–4 days, then set it shallowly in a dry gritty mix. Begin light watering only after the cutting anchors and shows new growth.',
+        'Отделите здоровый боковой побег или срежьте макушку, подсушите срез 2–4 дня и неглубоко закрепите в сухой минеральной смеси. Начинайте понемногу поливать только после закрепления черенка и появления нового роста.',
+      ],
+      repotting: [
+        'Repot at the beginning of active growth when the clump fills its container. Use a wide, shallow pot with an unobstructed drainage hole.',
+        'Пересаживайте в начале активного роста, когда куртина заполнит ёмкость. Используйте широкий неглубокий горшок со свободным дренажным отверстием.',
+      ],
+      secondaryCare: [
+        ['Seasonal rest', 'Сезонный покой'],
+        [
+          'Growth is most active in cooler months. In summer heat, reduce watering and do not force new growth with fertiliser.',
+          'Активнее всего растение растёт в прохладные месяцы. В летнюю жару сократите полив и не стимулируйте новый рост удобрениями.',
+        ],
+      ],
+      soil: [
+        'Use a very fast-draining mix with about 70–80% pumice, perlite, lava or fine gravel and 20–30% fine succulent compost.',
+        'Используйте очень быстро просыхающую смесь: около 70–80% пемзы, перлита, лавы или мелкого гравия и 20–30% мелкого грунта для суккулентов.',
+      ],
+      temperature: [
+        'Keep at about 12–26°C during active growth with bright light and airflow. Protect from frost; in summer heat provide a much drier rest.',
+        'В период активного роста держите примерно при 12–26 °C на ярком свету и с хорошей вентиляцией. Берегите от заморозков; в летнюю жару устройте значительно более сухой покой.',
+      ],
+      watering: [
+        'During active cool-season growth, water thoroughly only after the mix has dried completely. Water much less in summer heat and never leave water in the saucer.',
+        'В прохладный период активного роста обильно поливайте только после полного просыхания смеси. В летнюю жару поливайте значительно реже и никогда не оставляйте воду в поддоне.',
+      ],
+    }),
+    2,
+  ),
+  collectionPlant(
     'crassulaceae',
     'sedum-burrito',
     '/plants/sedum-burrito-home-photo.webp',
