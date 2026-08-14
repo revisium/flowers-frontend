@@ -22,6 +22,7 @@ export type CollectionFamilyId =
   | 'nephrolepidaceae'
   | 'orchidaceae'
   | 'piperaceae'
+  | 'polypodiaceae'
   | 'podocarpaceae'
   | 'vitaceae';
 
@@ -8690,6 +8691,108 @@ export const collectionPlants: readonly CollectionPlant[] = [
       watering: [
         'Soak the substrate thoroughly, then let it dry completely before watering again. Water much less often during cool, dark months.',
         'Полностью промочите субстрат, затем дождитесь его полной просушки до следующего полива. В прохладные тёмные месяцы поливайте значительно реже.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'polypodiaceae',
+    'phlebodium-aureum-davana',
+    '/plants/phlebodium-aureum-davana-home-photo.webp',
+    ['Phlebodium Davana', 'Плебодиум Давана'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/phlebodium-aureum-davana-important.webp',
+        propagationImage: '/plant-profile/phlebodium-aureum-davana-propagation.webp',
+      },
+      difficulty: 2,
+      facts: [
+        [
+          "'Davana' is recognised by broad, frilled and deeply lobed green to blue-green fronds.",
+          'Round golden sori on the underside of mature fronds produce spores and are not pests.',
+          'The species name aureum refers to the golden scales covering its creeping rhizome.',
+        ],
+        [
+          'Сорт «Давана» узнают по широким, волнистым и глубоко рассечённым зелёным или сизо-зелёным вайям.',
+          'Круглые золотистые сорусы на нижней стороне зрелых вай образуют споры и не являются вредителями.',
+          'Видовое название aureum связано с золотистыми чешуйками на ползучем корневище.',
+        ],
+      ],
+      family: ['Polypody family (Polypodiaceae)', 'Многоножковые (Polypodiaceae)'],
+      feeding: [
+        'Feed every four to six weeks in spring and summer with a balanced fertiliser at half strength. Do not feed dry or stressed roots.',
+        'Весной и летом подкармливайте раз в четыре-шесть недель половинной дозой сбалансированного удобрения. Не удобряйте сухие или ослабленные корни.',
+      ],
+      growth: ['Moderate', 'Умеренный'],
+      height: ['Usually 20–50 cm indoors', 'Обычно 20–50 см в комнате'],
+      humidity: [
+        'Aim for 50–70% humidity with gentle air movement. Keep away from radiators; a humidifier is safer than constantly wetting the fronds.',
+        'Поддерживайте влажность 50–70% и мягкое движение воздуха. Держите подальше от батарей; увлажнитель безопаснее постоянного смачивания вай.',
+      ],
+      important: [
+        'Keep the creeping golden-scaled rhizome on the substrate surface: burying it in a wet mix can cause rot. Neat rows of round sori beneath mature fronds are a normal part of the fern life cycle.',
+        'Оставляйте ползучее золотисто-чешуйчатое корневище на поверхности: в сыром грунте заглублённое корневище может загнить. Ровные ряды круглых сорусов под зрелыми вайями — нормальная часть жизни папоротника.',
+      ],
+      latinName: "Phlebodium aureum 'Davana'",
+      light: [
+        'Give bright filtered light or light partial shade. Protect the fronds from harsh midday sun, especially behind hot glass.',
+        'Обеспечьте яркий рассеянный свет или лёгкую полутень. Защищайте вайи от жёсткого полуденного солнца, особенно за нагретым стеклом.',
+      ],
+      notes: [
+        'The crown is already dense and lively, with fronds of different ages spreading freely around the pot. The irregular outline suits this naturally architectural fern.',
+        'Крона уже густая и живая: вайи разного возраста свободно расходятся вокруг горшка. Неровный силуэт хорошо подходит этому естественно архитектурному папоротнику.',
+      ],
+      origin: [
+        'The species is native from the south-eastern United States and the Caribbean to tropical South America',
+        'Вид происходит с юго-востока США, Карибских островов и из тропической Южной Америки',
+      ],
+      overview: [
+        "Phlebodium aureum 'Davana' is an evergreen rhizomatous fern with broad frilled fronds growing from a creeping golden-scaled rhizome. It does not flower: its ornamental value comes from the sculptural foliage and the changing texture of new growth.",
+        'Плебодиум золотистый «Давана» — вечнозелёный корневищный папоротник с широкими волнистыми вайями, растущими из ползучего золотисто-чешуйчатого корневища. Он не цветёт: его декоративность создают скульптурная листва и меняющаяся фактура молодого прироста.',
+      ],
+      plantType: [
+        'Evergreen rhizomatous epiphytic fern',
+        'Вечнозелёный корневищный эпифитный папоротник',
+      ],
+      problems: [
+        [
+          'Brown crisp edges — raise humidity and check for drought or excess fertiliser salts.',
+          'Yellow soft fronds or a dark soft rhizome — reduce watering and inspect for rot.',
+          'Pale sparse growth — move gradually to brighter filtered light.',
+          'Distorted new fronds or silvery marks — isolate and inspect for thrips or mites.',
+        ],
+        [
+          'Коричневые сухие края — повысьте влажность и проверьте пересушку или избыток солей удобрения.',
+          'Жёлтые мягкие вайи или потемневшее мягкое корневище — сократите полив и проверьте на гниль.',
+          'Бледный редкий прирост — постепенно переставьте на более яркий рассеянный свет.',
+          'Деформированные молодые вайи или серебристые следы — изолируйте и проверьте на трипса или клеща.',
+        ],
+      ],
+      propagation: [
+        'In warm active growth, divide the creeping rhizome so each section has roots and at least one active bud or frond. Lay every piece on the surface of a loose moist mix, secure it gently and never bury the rhizome.',
+        'В тёплый период активного роста разделите ползучее корневище так, чтобы у каждой части остались корни и хотя бы одна активная почка или вайя. Уложите части на поверхность рыхлого влажного грунта, аккуратно закрепите и не заглубляйте корневище.',
+      ],
+      repotting: [
+        'Repot in spring when the rhizome reaches the pot edge or the mix breaks down. Choose a shallow wide pot with drainage and keep the rhizome at the same surface level.',
+        'Пересаживайте весной, когда корневище достигнет края горшка или грунт потеряет структуру. Выбирайте неглубокую широкую ёмкость с дренажом и сохраняйте корневище на прежнем уровне поверхности.',
+      ],
+      secondaryCare: [
+        ['Frond and rhizome care', 'Уход за вайями и корневищем'],
+        [
+          'Remove only fully dry fronds at their base with clean scissors. Do not scrape the natural golden scales from the rhizome, and keep its growing tips uncovered.',
+          'Срезайте чистыми ножницами только полностью высохшие вайи у основания. Не счищайте естественные золотистые чешуйки с корневища и оставляйте его растущие кончики открытыми.',
+        ],
+      ],
+      soil: [
+        'Use a loose epiphytic mix of about 45% peat-free houseplant compost or coco, 30% fine bark or coco chips and 25% perlite or pumice.',
+        'Используйте рыхлую эпифитную смесь примерно из 45% безторфяного грунта или кокоса, 30% мелкой коры или кокосовых чипсов и 25% перлита или пемзы.',
+      ],
+      temperature: [
+        'Keep at 18–26 °C during growth and preferably above 15 °C in winter. Protect from cold draughts and chilled wet roots.',
+        'В период роста содержите при 18–26 °C, зимой желательно выше 15 °C. Защищайте от холодных сквозняков и переохлаждённых мокрых корней.',
+      ],
+      watering: [
+        'Water thoroughly when the top 1–2 cm of the mix begins to dry. Keep it lightly and evenly moist, but never waterlogged, and do not allow the root ball to dry completely for long.',
+        'Обильно поливайте, когда верхние 1–2 см смеси начинают подсыхать. Поддерживайте лёгкую равномерную влажность без заболачивания и не оставляйте ком полностью сухим надолго.',
       ],
     }),
   ),

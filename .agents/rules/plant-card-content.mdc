@@ -19,3 +19,6 @@ alwaysApply: false
   or cultivars from the current card. Do not substitute generic plants or other
   species.
 - `Propagation` and `Important` image assets must have a transparent background.
+- A family card cover must be a separate generated composition showing several
+  characteristic representatives of that family. It must not reuse the
+  owner's plant photo or present a single personal specimen as the whole family.

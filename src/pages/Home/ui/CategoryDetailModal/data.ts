@@ -202,6 +202,7 @@ const familyTitles: Record<CategoryId, LocalizedText> = {
   nephrolepidaceae: { en: 'Ferns', ru: 'Папоротники' },
   orchidaceae: { en: 'Orchids', ru: 'Орхидные' },
   piperaceae: { en: 'Pepper family', ru: 'Перцевые' },
+  polypodiaceae: { en: 'Polypody family', ru: 'Многоножковые' },
   podocarpaceae: { en: 'Podocarp family', ru: 'Подокарповые' },
   vitaceae: { en: 'Grape family', ru: 'Виноградовые' },
 };
@@ -287,6 +288,11 @@ export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryD
     'piperaceae',
     familyTitles.piperaceae,
     familySeeds.piperaceae,
+  ),
+  polypodiaceae: createFamilyDataByLocale(
+    'polypodiaceae',
+    familyTitles.polypodiaceae,
+    familySeeds.polypodiaceae,
   ),
   podocarpaceae: createFamilyDataByLocale(
     'podocarpaceae',

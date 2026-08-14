@@ -870,6 +870,62 @@
       ]
     }
   },
+  "polypodiaceae": {
+    "description": {
+      "en": "Polypody ferns are a diverse family of mostly creeping, often epiphytic ferns. Their beauty comes from varied frond shapes, textured rhizomes and sori rather than flowers.",
+      "ru": "Многоножковые — разнообразное семейство преимущественно ползучих, часто эпифитных папоротников. Их красота — в форме вай, фактурных корневищах и сорусах, а не в цветках."
+    },
+    "facts": {
+      "en": [
+        "The family includes epiphytes, rock-dwellers and terrestrial ferns.",
+        "Many species spread by creeping rhizomes covered with protective scales.",
+        "Ferns do not flower or set seeds: new generations begin from spores."
+      ],
+      "ru": [
+        "В семействе есть эпифиты, обитатели скал и наземные папоротники.",
+        "Многие виды разрастаются ползучими корневищами, покрытыми защитными чешуйками.",
+        "Папоротники не цветут и не образуют семян: новое поколение начинается со спор."
+      ]
+    },
+    "heroImage": "/plants/polypodiaceae-modal/hero.webp",
+    "heroPosition": {
+      "base": "center top",
+      "md": "center top",
+      "lg": "center top"
+    },
+    "heroSize": {
+      "base": "cover",
+      "md": "cover",
+      "lg": "cover"
+    },
+    "latinName": "Polypodiaceae",
+    "origin": {
+      "en": "Distributed worldwide, especially in tropical and subtropical forests of the Americas, Africa, Asia and Oceania.",
+      "ru": "Распространены по всему миру, особенно в тропических и субтропических лесах Америки, Африки, Азии и Океании."
+    },
+    "originMapImage": "/plants/polypodiaceae-modal/origin-map.webp",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Fronds range from entire straps to deeply lobed and antler-like forms.",
+        "Many species creep on scaled rhizomes that sit on bark, rock or the substrate surface.",
+        "Round or elongated sori develop on the underside of mature fronds.",
+        "Epiphytic species anchor to trunks without parasitising their host."
+      ],
+      "ru": [
+        "Вайи бывают цельными ремневидными, глубоко рассечёнными и похожими на оленьи рога.",
+        "Многие виды ползут чешуйчатыми корневищами по коре, камням или поверхности субстрата.",
+        "На нижней стороне зрелых вай развиваются круглые или вытянутые сорусы.",
+        "Эпифитные виды закрепляются на стволах, но не паразитируют на растении-опоре."
+      ]
+    },
+    "traitImages": [
+      "/plants/categories/studio/polypodiaceae-family.webp",
+      "/plant-profile/phlebodium-aureum-davana-propagation.webp",
+      "/plant-profile/phlebodium-aureum-davana-important.webp",
+      "/plants/polypodiaceae-modal/hero.webp"
+    ]
+  },
   "orchidaceae": {
     "closingNote": {
       "en": "Orchids are a symbol of elegance and nature's perfection. Their extraordinary blooms inspire collectors all over the world.",

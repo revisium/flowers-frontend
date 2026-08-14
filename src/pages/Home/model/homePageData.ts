@@ -223,6 +223,14 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
   },
   {
     count: { en: '1 plant', ru: '1 растение' },
+    id: 'polypodiaceae',
+    image: '/plants/categories/studio/polypodiaceae-family.webp',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Polypody family', ru: 'Многоножковые' },
+  },
+  {
+    count: { en: '1 plant', ru: '1 растение' },
     id: 'podocarpaceae',
     image: '/plants/categories/studio/podocarpaceae.webp',
     imageObjectPosition: '40% center',
