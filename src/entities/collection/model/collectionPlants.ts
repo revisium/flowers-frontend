@@ -7191,6 +7191,104 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ),
   ),
   collectionPlant(
+    'cactaceae',
+    'hatiora-salicornoides',
+    '/plants/hatiora-salicornoides-home-photo.webp',
+    ['Bottle cactus', 'Хатиора солеросовидная'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/hatiora-salicornoides-important.webp',
+        propagationImage: '/plant-profile/hatiora-salicornoides-propagation.webp',
+      },
+      difficulty: 2,
+      facts: [
+        [
+          'Hatiora salicornoides is an accepted species native to eastern and southern Brazil.',
+          'The green bottle-shaped segments are jointed stems that photosynthesise in place of true leaves.',
+          'It grows naturally as an epiphyte on trees or as a lithophyte on rocks.',
+          'A mature plant may produce small yellow to orange funnel-shaped flowers at the stem tips.',
+        ],
+        [
+          'Хатиора солеросовидная — признанный вид, происходящий из восточной и южной Бразилии.',
+          'Зелёные бутылковидные членики — это соединённые стебли, которые фотосинтезируют вместо настоящих листьев.',
+          'В природе она растёт как эпифит на деревьях или как литофит на камнях.',
+          'Взрослое растение может образовывать на концах побегов небольшие жёлтые или оранжевые воронковидные цветки.',
+        ],
+      ],
+      family: ['Cactus family (Cactaceae)', 'Кактусовые (Cactaceae)'],
+      feeding: [
+        'From spring to early autumn, feed monthly with a balanced or epiphytic-cactus fertiliser at half strength. Pause during the cooler, darker rest period.',
+        'С весны до начала осени раз в месяц подкармливайте половинной дозой сбалансированного удобрения или состава для эпифитных кактусов. В прохладный тёмный период сделайте паузу.',
+      ],
+      growth: ['Moderate', 'Умеренный'],
+      height: ['Usually about 20–40 cm indoors', 'Обычно около 20–40 см в комнате'],
+      humidity: [
+        'Average to moderately high room humidity is suitable. Gentle airflow is more useful than frequent misting, especially around the dense crown.',
+        'Подходит обычная или умеренно высокая комнатная влажность. Лёгкое движение воздуха полезнее частых опрыскиваний, особенно внутри густой кроны.',
+      ],
+      important: [
+        'This is a forest epiphytic cactus, not a desert cactus. Its roots need a small pot, a drainage hole and a loose bark-rich mix; dense wet peat quickly causes rot.',
+        'Это лесной эпифитный, а не пустынный кактус. Его корням нужны небольшой горшок, дренажное отверстие и рыхлый субстрат с корой; плотный мокрый торф быстро вызывает гниль.',
+      ],
+      latinName: 'Hatiora salicornoides (Haw.) Britton & Rose',
+      light: [
+        'Give bright diffused light with a little gentle morning or evening sun. Harsh midday rays behind glass can bleach or scorch the green segments.',
+        'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Жёсткие полуденные лучи через стекло могут обесцветить или обжечь зелёные членики.',
+      ],
+      notes: [
+        'My hatiora has already formed a broad dense crown with many fresh green tips. It is still growing in a clear nursery cup, so the main photograph shows the same plant habit in a tidy stable pot without the surrounding shelf clutter.',
+        'Моя хатиора уже сформировала широкую густую крону со множеством свежих зелёных кончиков. Она пока растёт в прозрачном рассадном стакане, поэтому главная фотография показывает ту же форму растения в аккуратном устойчивом горшке без окружающего беспорядка на полке.',
+      ],
+      origin: ['Eastern and southern Brazil', 'Восточная и южная Бразилия'],
+      overview: [
+        'Hatiora salicornoides is a densely branching epiphytic cactus whose narrow glossy segments resemble tiny bottles or coral branches. The upright young growth gradually arches outward and creates a loose sculptural crown.',
+        'Хатиора солеросовидная — густо ветвящийся эпифитный кактус, чьи узкие глянцевые членики напоминают маленькие бутылочки или ветви коралла. Молодые побеги растут вверх, а затем постепенно отклоняются наружу и образуют свободную скульптурную крону.',
+      ],
+      plantType: ['Evergreen epiphytic or lithophytic cactus', 'Вечнозелёный эпифитный или литофитный кактус'],
+      problems: [
+        [
+          'Soft yellowing segments or a dark stem base — stop watering and inspect for rot.',
+          'Thin pale new segments — move gradually to brighter diffused light.',
+          'Wrinkled segments in dry substrate — water thoroughly and let all excess drain.',
+          'White cottony clusters at the joints — isolate and inspect for mealybugs.',
+        ],
+        [
+          'Членики желтеют и размягчаются, а основание темнеет — прекратите полив и проверьте растение на гниль.',
+          'Новые членики тонкие и бледные — постепенно добавьте яркого рассеянного света.',
+          'Членики сморщились при сухом субстрате — хорошо полейте и дайте всей лишней воде стечь.',
+          'В местах соединения появились белые ватные комочки — изолируйте растение и проверьте на мучнистого червеца.',
+        ],
+      ],
+      propagation: [
+        'Twist or cut off a healthy branched section with several joints. Let the cut end dry for one or two days, then insert it shallowly into a barely moist airy epiphytic-cactus mix and keep warm in bright diffused light.',
+        'Открутите или срежьте здоровую разветвлённую часть с несколькими сочленениями. Подсушите срез один-два дня, затем неглубоко посадите черенок в едва влажный воздушный субстрат для эпифитных кактусов и держите в тепле на ярком рассеянном свету.',
+      ],
+      repotting: [
+        'Repot in spring every 2–3 years or when roots fill the container. Choose a stable pot with drainage only slightly larger than the root ball and keep the stem bases at the same depth.',
+        'Пересаживайте весной раз в 2–3 года или когда корни заполнят ёмкость. Выбирайте устойчивый горшок с дренажом лишь немного шире корневого кома и сохраняйте прежнюю глубину посадки стеблей.',
+      ],
+      secondaryCare: [
+        ['Shaping', 'Формирование'],
+        [
+          'After flowering or during active growth, shorten only the longest outer branches at a joint. Root the removed pieces and rotate the pot periodically for a balanced but natural crown.',
+          'После цветения или во время активного роста укорачивайте только самые длинные внешние ветви по месту сочленения. Укореняйте снятые части и периодически поворачивайте горшок, чтобы крона оставалась равномерной, но естественной.',
+        ],
+      ],
+      soil: [
+        'Use a loose epiphytic-cactus mix, for example 40% fine orchid bark, 30% light compost or coco and 30% perlite or pumice.',
+        'Используйте рыхлую смесь для эпифитных кактусов: например, 40% мелкой орхидейной коры, 30% лёгкого грунта или кокоса и 30% перлита или пемзы.',
+      ],
+      temperature: [
+        'Keep at 18–27 °C during growth and preferably above 12 °C in winter. Protect from cold draughts and chilled wet substrate.',
+        'В период роста содержите при 18–27 °C, зимой желательно не ниже 12 °C. Защищайте от холодных сквозняков и сырого переохлаждённого субстрата.',
+      ],
+      watering: [
+        'Water thoroughly after the upper half of the airy mix has dried, then drain completely. Reduce watering in cooler low-light months without leaving the root ball dry for many weeks.',
+        'Хорошо поливайте после просыхания верхней половины воздушного субстрата, затем полностью сливайте лишнюю воду. В прохладные тёмные месяцы поливайте реже, но не оставляйте корневой ком сухим на много недель.',
+      ],
+    }),
+  ),
+  collectionPlant(
     'cycadaceae',
     'cycas-revoluta',
     '/plants/cycas-revoluta-home-photo.webp',
