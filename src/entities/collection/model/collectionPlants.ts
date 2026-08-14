@@ -8,6 +8,7 @@ export type CollectionFamilyId =
   | 'araceae'
   | 'arecaceae'
   | 'asparagaceae'
+  | 'aspleniaceae'
   | 'asphodelaceae'
   | 'asteraceae'
   | 'bromeliaceae'
@@ -8942,6 +8943,110 @@ export const collectionPlants: readonly CollectionPlant[] = [
       watering: [
         'Soak the substrate thoroughly, then let it dry completely before watering again. Water much less often during cool, dark months.',
         'Полностью промочите субстрат, затем дождитесь его полной просушки до следующего полива. В прохладные тёмные месяцы поливайте значительно реже.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'aspleniaceae',
+    'asplenium-nidus-variegata',
+    '/plants/asplenium-nidus-variegata-home-photo.webp',
+    ["Variegated bird's-nest fern", 'Асплениум гнездовой «Вариегата»'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/asplenium-nidus-variegata-important.webp',
+        propagationImage: '/plant-profile/asplenium-nidus-variegata-propagation.webp',
+      },
+      difficulty: 3,
+      facts: [
+        [
+          "The cultivar's cream-white pinstripes follow the veins of each undivided frond.",
+          'New fronds unfurl from the central nest and become more strongly waved as they mature.',
+          'Like other true ferns, it produces spores rather than flowers or seeds.',
+          'Asplenium nidus naturally grows as an epiphyte or lithophyte in wet tropical forests.',
+        ],
+        [
+          'Кремово-белые полосы сорта идут вдоль жилок каждой цельной вайи.',
+          'Новые вайи разворачиваются из центра розетки и с возрастом становятся более волнистыми.',
+          'Как настоящий папоротник, он образует споры, а не цветки и семена.',
+          'В природе Asplenium nidus растёт эпифитом или литофитом во влажных тропических лесах.',
+        ],
+      ],
+      family: ['Spleenwort family (Aspleniaceae)', 'Костенцовые (Aspleniaceae)'],
+      feeding: [
+        'Feed monthly in spring and summer with one-quarter to one-half strength balanced fern fertiliser, applied only to moist substrate.',
+        'Весной и летом подкармливайте раз в месяц четвертью или половиной дозы сбалансированного удобрения для папоротников, только по влажному грунту.',
+      ],
+      growth: ['Slow to moderate', 'Медленный или умеренный'],
+      height: ['Rosette usually 30–60 cm indoors', 'Розетка обычно 30–60 см в комнате'],
+      humidity: [
+        'Prefer humidity above 60% with gentle airflow. Dry air often causes brown, crisp frond tips.',
+        'Предпочитает влажность выше 60% и мягкое движение воздуха. В сухом воздухе кончики вай часто коричневеют и подсыхают.',
+      ],
+      important: [
+        'Never pour water into the central nest: stagnant moisture can rot the growing point. Water the substrate around the pot edge and keep the crown open.',
+        'Не лейте воду в центр розетки: застой влаги может погубить точку роста. Поливайте грунт по краю горшка и сохраняйте центр открытым.',
+      ],
+      latinName: "Asplenium nidus 'Variegata'",
+      light: [
+        'Give bright filtered light without direct midday sun. Too little light weakens the striping, while hot sun burns the pale tissue.',
+        'Нужен яркий рассеянный свет без прямого полуденного солнца. В тени полосы бледнеют, а жаркое солнце обжигает светлые ткани.',
+      ],
+      notes: [
+        'The striped, strongly waved fronds form a loose sculptural rosette; fresh growth may emerge paler before its pattern settles.',
+        'Полосатые сильно волнистые вайи образуют свободную скульптурную розетку; молодой прирост может быть светлее, пока рисунок не проявится полностью.',
+      ],
+      origin: [
+        'A cultivated form of a wet-tropical species native from Malesia to northern and north-eastern Queensland',
+        'Культурная форма влажнотропического вида из Малезии, севера и северо-востока Квинсленда',
+      ],
+      overview: [
+        "Asplenium nidus 'Variegata' is a variegated bird's-nest fern with long glossy fronds marked by fine cream stripes along the veins. The undivided but strongly waved foliage rises from a central nest and gives the plant an airy fountain-like silhouette.",
+        'Асплениум гнездовой «Вариегата» — пестролистный папоротник с длинными глянцевыми вайями, покрытыми тонкими кремовыми полосами вдоль жилок. Цельная, но сильно волнистая листва выходит из центральной розетки и образует воздушный фонтанный силуэт.',
+      ],
+      plantType: [
+        'Evergreen epiphytic rosette fern',
+        'Вечнозелёный эпифитный розеточный папоротник',
+      ],
+      problems: [
+        [
+          'Brown crisp tips — increase humidity and check for dry substrate or cold draughts.',
+          'Yellow soft fronds or a dark crown — stop watering and inspect the crown and roots for rot.',
+          'Faded striping — provide brighter filtered light; bleached dry patches indicate sun scorch.',
+          'Sticky fronds, pale stippling or distorted growth — isolate and inspect for scale, mites or thrips.',
+        ],
+        [
+          'Коричневые сухие кончики — повысьте влажность и проверьте пересушку грунта или холодный сквозняк.',
+          'Жёлтые мягкие вайи или потемневший центр — прекратите полив и проверьте розетку и корни на гниль.',
+          'Бледные полосы — добавьте яркого рассеянного света; выцветшие сухие пятна говорят о солнечном ожоге.',
+          'Липкость, светлый крап или деформированный прирост — изолируйте растение и проверьте на щитовку, клеща и трипса.',
+        ],
+      ],
+      propagation: [
+        'Propagate from freshly collected spores at about 21 °C in a sterile, constantly humid medium. Divide only a mature plant that has naturally formed separate rooted crowns; never cut the single central rosette.',
+        'Размножайте свежими спорами при температуре около 21 °C в стерильной постоянно влажной среде. Делите только взрослое растение, которое само образовало отдельные укоренённые розетки; единственный центр разрезать нельзя.',
+      ],
+      repotting: [
+        'Repot every two to three years or when roots fill the pot. Choose a container only slightly larger and keep the crown above the substrate.',
+        'Пересаживайте раз в два-три года или когда корни заполнят горшок. Берите ёмкость лишь немного больше и оставляйте центр розетки над грунтом.',
+      ],
+      secondaryCare: [
+        ['Crown care', 'Уход за центром розетки'],
+        [
+          'Keep the central nest free of fallen leaves and substrate. Remove debris carefully without touching the tender coiled new fronds.',
+          'Не допускайте скопления опавших листьев и грунта в центре розетки. Убирайте мусор осторожно, не задевая нежные свёрнутые молодые вайи.',
+        ],
+      ],
+      soil: [
+        'Use an airy, moisture-retentive mix such as 50% fine bark or coco chips, 30% fern compost and 20% perlite, with reliable drainage.',
+        'Используйте воздушный влагоёмкий грунт: например, 50% мелкой коры или кокосовых чипсов, 30% грунта для папоротников и 20% перлита, с надёжным дренажем.',
+      ],
+      temperature: [
+        'Keep at 18–27 °C and above 15 °C in winter. Protect the crown from cold glass, air-conditioners and sharp temperature changes.',
+        'Содержите при 18–27 °C и не ниже 15 °C зимой. Защищайте розетку от холодного стекла, кондиционера и резких перепадов температуры.',
+      ],
+      watering: [
+        'Keep the mix lightly and evenly moist, letting the top 1–2 cm dry first. Water around the pot rim and drain all excess from the saucer.',
+        'Поддерживайте грунт слегка и равномерно влажным, давая верхним 1–2 см подсохнуть. Поливайте по краю горшка и сливайте лишнюю воду из поддона.',
       ],
     }),
   ),

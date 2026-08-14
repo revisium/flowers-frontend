@@ -223,6 +223,14 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
   },
   {
     count: { en: '1 plant', ru: '1 растение' },
+    id: 'aspleniaceae',
+    image: '/plants/categories/studio/aspleniaceae.webp',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Spleenwort family', ru: 'Костенцовые' },
+  },
+  {
+    count: { en: '1 plant', ru: '1 растение' },
     id: 'polypodiaceae',
     image: '/plants/categories/studio/polypodiaceae-family.webp',
     imageObjectPosition: 'center',

@@ -1,4 +1,66 @@
 {
+  "aspleniaceae": {
+    "closingNote": {
+      "en": "Aspleniaceae combine calm rosettes, delicate divided fronds and a remarkable ability to settle on tree trunks and rocks. Their character comes from foliage and spores rather than flowers.",
+      "ru": "Костенцовые объединяют спокойные розетки, ажурные рассечённые вайи и удивительную способность селиться на стволах и камнях. Их выразительность создают листва и споры, а не цветки."
+    },
+    "description": {
+      "en": "Aspleniaceae are a worldwide family of ferns with fronds ranging from broad undivided straps to finely divided lace. Its members grow on forest soil, tree trunks and rocks, and are recognised by narrow linear sori on the underside of mature fronds.",
+      "ru": "Костенцовые — распространённое по всему миру семейство папоротников с вайями от широких цельных лент до тонко рассечённого кружева. Его представители растут на лесной почве, стволах и скалах и узнаются по узким линейным сорусам на нижней стороне зрелых вай."
+    },
+    "facts": {
+      "en": [
+        "The family is centred on the large cosmopolitan genus Asplenium.",
+        "Its narrow sori usually lie obliquely beside the veins and are covered by slim indusia while young.",
+        "Some species form nest-like rosettes that collect organic debris high in forest canopies.",
+        "Like all true ferns, Aspleniaceae reproduce by spores and never form flowers or seeds."
+      ],
+      "ru": [
+        "Основу семейства составляет крупный космополитный род Asplenium.",
+        "Узкие сорусы обычно расположены косо вдоль жилок и в молодости прикрыты тонкими индузиями.",
+        "Некоторые виды образуют гнездовидные розетки, собирающие органические остатки высоко в кронах леса.",
+        "Как и все настоящие папоротники, Костенцовые размножаются спорами и не образуют цветков и семян."
+      ]
+    },
+    "heroImage": "/plants/aspleniaceae-modal/hero.webp",
+    "heroPosition": {
+      "base": "68% top",
+      "md": "center top",
+      "lg": "center top"
+    },
+    "heroSize": {
+      "base": "cover",
+      "md": "cover",
+      "lg": "cover"
+    },
+    "latinName": "Aspleniaceae",
+    "origin": {
+      "en": "Worldwide, from humid tropical forests to temperate rocks and cliffs, with the greatest diversity in warm, moist regions.",
+      "ru": "По всему миру — от влажных тропических лесов до скал и утёсов умеренного пояса; наибольшее разнообразие сосредоточено в тёплых влажных регионах."
+    },
+    "originMapImage": "/plants/aspleniaceae-modal/origin-map.webp",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Fronds may be broad and undivided, forked or finely divided into many small segments.",
+        "Mature fronds bear narrow linear sori arranged obliquely beside the veins.",
+        "Short rhizomes often produce compact tufts or symmetrical nest-like rosettes.",
+        "Family members can be epiphytes, rock dwellers or terrestrial ferns."
+      ],
+      "ru": [
+        "Вайи бывают широкими и цельными, вильчатыми или тонко рассечёнными на множество мелких сегментов.",
+        "На зрелых вайях узкие линейные сорусы располагаются косо вдоль жилок.",
+        "Короткие корневища часто образуют компактные пучки или симметричные гнездовидные розетки.",
+        "Представители семейства могут быть эпифитами, обитателями скал или наземными папоротниками."
+      ]
+    },
+    "traitImages": [
+      "/plants/categories/studio/aspleniaceae.webp",
+      "/plant-profile/asplenium-nidus-variegata-propagation.webp",
+      "/plants/aspleniaceae-modal/hero.webp",
+      "/plant-profile/asplenium-nidus-variegata-important.webp"
+    ]
+  },
   "acanthaceae": {
     "closingNote": {
       "en": "Acanthaceae unite dramatic foliage and architectural flowers. Even without bloom, their opposite leaves, strong veins and vivid patterns give a collection a lively tropical rhythm.",
