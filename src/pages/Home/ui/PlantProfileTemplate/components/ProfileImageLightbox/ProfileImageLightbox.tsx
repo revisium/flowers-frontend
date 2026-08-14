@@ -9,7 +9,6 @@ export interface ProfileImageLightboxItem {
 interface ProfileImageLightboxProps {
   readonly activeIndex: number;
   readonly closeLabel: string;
-  readonly imageLabel: string;
   readonly images: readonly ProfileImageLightboxItem[];
   readonly nextLabel: string;
   readonly previousLabel: string;
@@ -34,7 +33,6 @@ const CarouselChevron = ({ direction }: { readonly direction: 'left' | 'right' }
 export const ProfileImageLightbox = ({
   activeIndex,
   closeLabel,
-  imageLabel,
   images,
   nextLabel,
   onClose,
@@ -46,7 +44,6 @@ export const ProfileImageLightbox = ({
   const returnFocusRef = useRef<HTMLElement | null>(null);
   const activeImage = images[activeIndex];
   const hasMultipleImages = images.length > 1;
-  const titleId = 'plant-image-lightbox-title';
 
   useEffect(() => {
     returnFocusRef.current = document.activeElement as HTMLElement | null;
@@ -113,7 +110,7 @@ export const ProfileImageLightbox = ({
       <Flex
         ref={dialogRef}
         alignItems="center"
-        aria-labelledby={titleId}
+        aria-label={activeImage.alt}
         aria-modal="true"
         background="rgba(19, 24, 18, 0.9)"
         backdropFilter="blur(9px)"
@@ -141,48 +138,6 @@ export const ProfileImageLightbox = ({
         >
           <Flex
             alignItems="center"
-            justifyContent="space-between"
-            minHeight={{ base: '58px', md: '68px' }}
-            padding={{ base: '8px 10px 8px 16px', md: '10px 14px 10px 22px' }}
-            width="100%"
-          >
-            <Text
-              id={titleId}
-              color="#334632"
-              fontSize={{ base: '0.92rem', md: '1.05rem' }}
-              fontWeight={700}
-              lineClamp={1}
-            >
-              {activeImage.alt}
-            </Text>
-            <Flex alignItems="center" gap="10px">
-              {hasMultipleImages ? (
-                <Text color="#687164" fontSize="0.85rem" whiteSpace="nowrap">
-                  {activeIndex + 1} / {images.length}
-                </Text>
-              ) : null}
-              <Button
-                ref={closeButtonRef}
-                aria-label={closeLabel}
-                border="1px solid rgba(75, 94, 67, 0.38)"
-                borderRadius="999px"
-                color="#334632"
-                fontSize="24px"
-                height={{ base: '40px', md: '44px' }}
-                minWidth={{ base: '40px', md: '44px' }}
-                padding={0}
-                type="button"
-                variant="plain"
-                onClick={onClose}
-                _hover={{ background: '#eee5d7' }}
-              >
-                ×
-              </Button>
-            </Flex>
-          </Flex>
-
-          <Flex
-            alignItems="center"
             background="#e9e5da"
             flex={1}
             justifyContent="center"
@@ -191,6 +146,40 @@ export const ProfileImageLightbox = ({
             position="relative"
             width="100%"
           >
+            <Flex alignItems="center" gap="8px" position="absolute" right="12px" top="12px" zIndex={1}>
+              {hasMultipleImages ? (
+                <Text
+                  background="rgba(253, 250, 243, 0.92)"
+                  borderRadius="999px"
+                  color="#4b5b48"
+                  fontSize="0.85rem"
+                  padding="7px 11px"
+                  whiteSpace="nowrap"
+                >
+                  {activeIndex + 1} / {images.length}
+                </Text>
+              ) : null}
+              <Button
+                ref={closeButtonRef}
+                aria-label={closeLabel}
+                background="rgba(253, 250, 243, 0.92)"
+                border="1px solid rgba(75, 94, 67, 0.38)"
+                borderRadius="999px"
+                boxShadow="0 5px 18px rgba(24, 34, 22, 0.2)"
+                color="#334632"
+                fontSize="24px"
+                height={{ base: '40px', md: '44px' }}
+                minWidth={{ base: '40px', md: '44px' }}
+                padding={0}
+                type="button"
+                variant="plain"
+                onClick={onClose}
+                _hover={{ background: '#fffaf3' }}
+              >
+                ×
+              </Button>
+            </Flex>
+
             <Image
               alt={activeImage.alt}
               height="100%"
@@ -253,7 +242,7 @@ export const ProfileImageLightbox = ({
             width="100%"
           >
             <Text color="#4b5b48" fontSize={{ base: '0.86rem', md: '0.96rem' }} lineHeight={1.4}>
-              {imageLabel}: {activeImage.alt}
+              {activeImage.alt}
             </Text>
           </Box>
         </Flex>

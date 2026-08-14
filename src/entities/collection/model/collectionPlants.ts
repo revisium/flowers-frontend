@@ -6865,7 +6865,6 @@ const allCollectionPlants: readonly CollectionPlant[] = [
       ),
       {
         importantImage: '/plant-profile/tradescantia-important.webp',
-        mainImageVariantIndex: 0,
         propagationImage: '/plant-profile/tradescantia-propagation.webp',
         variants: profileVariants(
           ['My Tradescantia collection', 'Моя коллекция традесканций'],
@@ -6874,45 +6873,25 @@ const allCollectionPlants: readonly CollectionPlant[] = [
             'Эти растения начинались с маленьких черенков с совершенно разными листьями. В галерее показано, как каждый из них может выглядеть взрослым пышным растением в горшке.',
           ],
           [
-            '/plant-profile/tradescantia-variants/nanouk.webp',
-            ["'Nanouk' (likely)", "'Nanouk' (предположительно)"],
-          ],
-          [
             '/plant-profile/tradescantia-variants/dark-broad.webp',
-            ['Dark broad-leaved form', 'Тёмная широколистная форма'],
+            ['Zebrina Burgundy — burgundy coloration', 'Зебрина Бургунди — бордовая окраска'],
           ],
           [
-            '/plant-profile/tradescantia-variants/fine-striped.webp',
-            ['Fine-striped form', 'Тонкополосатая форма'],
+            '/plant-profile/tradescantia-variants/zebrina-silver.webp',
+            ['Zebrina Burgundy — silver coloration', 'Зебрина Бургунди — серебристая окраска'],
           ],
           ['/plant-profile/tradescantia-variants/green.webp', ['Green form', 'Зелёная форма']],
           [
-            '/plant-profile/tradescantia-variants/tricolor.webp',
-            ["'Tricolor' (likely)", "'Tricolor' (предположительно)"],
-          ],
-          [
-            '/plant-profile/tradescantia-variants/baby-bunny.webp',
-            ["'Baby Bunny Bellies' (likely)", "'Baby Bunny Bellies' (предположительно)"],
-          ],
-          [
             '/plant-profile/tradescantia-variants/purpurea.webp',
-            ["Tradescantia pallida 'Purpurea' (Purple Heart)", "Традесканция бледная 'Purpurea'"],
-          ],
-          [
-            '/plant-profile/tradescantia-variants/zebrina-burgundy.webp',
-            ['T. zebrina, burgundy form', 'T. zebrina, бордовая форма'],
+            ['Pallida', 'Паллида'],
           ],
           [
             '/plant-profile/tradescantia-variants/white-pinstripe.webp',
-            ['White pinstripe form', 'Бело-полосатая форма'],
+            ['Elegance', 'Элеганс'],
           ],
           [
             '/plant-profile/tradescantia-variants/green-purple.webp',
             ['Green-purple form', 'Зелёно-пурпурная форма'],
-          ],
-          [
-            '/plant-profile/tradescantia-variants/zebrina-silver.webp',
-            ['T. zebrina, silver form', 'T. zebrina, серебристая форма'],
           ],
           [
             '/plant-profile/tradescantia-variants/variegated.webp',
@@ -6922,16 +6901,39 @@ const allCollectionPlants: readonly CollectionPlant[] = [
             '/plant-profile/tradescantia-variants/dark-green-striped.webp',
             ['Dark green striped form', 'Тёмно-зелёная полосатая форма'],
           ],
-          ['/plant-profile/tradescantia-variants/white.webp', ['White', 'Белая']],
+          [
+            '/plant-profile/tradescantia-variants/white.webp',
+            ['White Albiflora', 'Белая Альбифлора'],
+          ],
           ['/plant-profile/tradescantia-variants/gold.webp', ['Gold', 'Голд']],
           [
             '/plant-profile/tradescantia-variants/sillamontana.webp',
             ['T. sillamontana', 'Силламонтана'],
           ],
+          [
+            '/plant-profile/tradescantia-variants/hijau-bari.webp',
+            ['Hijau Bari', 'Хиджау Бари'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/purpuza.webp',
+            ['Purpuza', 'Пурпуза'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/unnamed-pink-01.webp',
+            ['Unicorn', 'Юникорн'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/unnamed-pink-02.webp',
+            ['Pink Furry', 'Пинк Фурри'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/pink-paradise.webp',
+            ['Pink Paradise', 'Пинк Парадайз'],
+          ],
         ),
       },
     ),
-    16,
+    17,
   ),
   collectionPlant(
     'commelinaceae',
@@ -8266,7 +8268,6 @@ const allCollectionPlants: readonly CollectionPlant[] = [
               ['Midnight Amethyst', 'Полночный Аметист'],
             ],
           ),
-          captionsEmbedded: true,
         },
       },
     ),

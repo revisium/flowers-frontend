@@ -77,7 +77,6 @@ export const PlantProfileTemplate = ({
         <ProfileImageLightbox
           activeIndex={activeImageIndex}
           closeLabel={locale === 'ru' ? 'Закрыть просмотр фотографии' : 'Close photo viewer'}
-          imageLabel={locale === 'ru' ? 'Фотография' : 'Photo'}
           images={galleryImages}
           nextLabel={locale === 'ru' ? 'Следующая фотография' : 'Next photo'}
           previousLabel={locale === 'ru' ? 'Предыдущая фотография' : 'Previous photo'}
