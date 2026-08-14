@@ -8597,6 +8597,103 @@ export const collectionPlants: readonly CollectionPlant[] = [
     }),
   ),
   collectionPlant(
+    'asphodelaceae',
+    'aloe-vera',
+    '/plants/aloe-vera-home-photo.webp',
+    ['Aloe vera', 'Алоэ вера'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/aloe-vera-important.webp',
+        propagationImage: '/plant-profile/aloe-vera-propagation.webp',
+      },
+      difficulty: 1,
+      facts: [
+        [
+          'The clear inner gel is generally well tolerated on intact skin and may cool and moisturise minor irritation or mild sunburn; patch-test it first.',
+          'Evidence for treating acne, hair loss or accelerating hair growth is limited, so aloe should not replace proven treatment.',
+          'The bitter yellow latex directly beneath the rind contains aloin and is different from the clear gel.',
+        ],
+        [
+          'Прозрачный внутренний гель обычно хорошо переносится неповреждённой кожей и может охлаждать и увлажнять при лёгком раздражении или небольшом солнечном ожоге; сначала сделайте пробу на маленьком участке.',
+          'Доказательств пользы при акне, выпадении волос и для ускорения их роста мало, поэтому алоэ не заменяет полноценное лечение.',
+          'Горький жёлтый латекс сразу под кожицей содержит алоин и отличается от прозрачного геля.',
+        ],
+      ],
+      family: ['Asphodel family (Asphodelaceae)', 'Асфоделовые (Asphodelaceae)'],
+      feeding: [
+        'Feed once every six to eight weeks in spring and summer with a cactus fertiliser at quarter strength.',
+        'Весной и летом подкармливайте раз в шесть-восемь недель удобрением для кактусов в четвертной дозировке.',
+      ],
+      growth: ['Moderate', 'Умеренный'],
+      height: ['Usually 50–90 cm indoors', 'Обычно 50–90 см в комнате'],
+      humidity: [
+        'Normal dry room air and steady ventilation are ideal. Do not mist the rosettes or leave water between the leaves.',
+        'Идеальны обычный сухой комнатный воздух и стабильное проветривание. Не опрыскивайте розетки и не оставляйте воду между листьями.',
+      ],
+      important: [
+        'Do not eat a home-grown leaf or drink its juice. Aloe latex can cause severe cramps and diarrhoea and may interact with medicines. Use gel only on intact skin; serious burns, deep wounds and infected areas need medical care.',
+        'Не ешьте домашний лист и не пейте его сок. Латекс алоэ может вызвать сильные спазмы и диарею, а также взаимодействовать с лекарствами. Наносите гель только на неповреждённую кожу; серьёзные ожоги, глубокие раны и инфекции требуют медицинской помощи.',
+      ],
+      latinName: 'Aloe vera',
+      light: [
+        'Give very bright diffused light with several hours of gentle morning or evening sun. Acclimate gradually after winter or a move from a darker place.',
+        'Обеспечьте очень яркий рассеянный свет с несколькими часами мягкого утреннего или вечернего солнца. После зимы или тёмного места приучайте к солнцу постепенно.',
+      ],
+      notes: [
+        'This specimen is already a clump of several rosettes rather than a single plant. New basal offsets can remain for a fuller group or be separated to start more aloes.',
+        'Этот экземпляр уже представляет собой куртину из нескольких розеток, а не одиночное растение. Новые прикорневые детки можно оставлять для пышной группы или отделять, получая новые алоэ.',
+      ],
+      origin: [
+        'Northern Oman; now widely cultivated and naturalised',
+        'Север Омана; сейчас широко выращивается и натурализовано во многих регионах',
+      ],
+      overview: [
+        'Aloe vera is a clump-forming succulent with thick, gel-filled leaves arranged in upright rosettes. It stores water efficiently, produces offsets freely and is valued mainly for the clear inner leaf gel.',
+        'Алоэ вера — кустящийся суккулент с толстыми наполненными гелем листьями, собранными в вертикальные розетки. Оно хорошо запасает воду, охотно образует деток и ценится прежде всего за прозрачный гель внутри листа.',
+      ],
+      plantType: ['Clump-forming rosette succulent', 'Куртинный розеточный суккулент'],
+      problems: [
+        [
+          'Soft translucent leaf bases — stop watering and inspect the roots and crowns for rot.',
+          'Long weak leaves leaning towards the window — increase light gradually.',
+          'Flat wrinkled leaves — check for prolonged drought or damaged roots before watering again.',
+        ],
+        [
+          'Мягкие полупрозрачные основания листьев — прекратите полив и проверьте корни и розетки на гниль.',
+          'Длинные слабые листья тянутся к окну — постепенно увеличьте освещение.',
+          'Плоские сморщенные листья — перед новым поливом проверьте длительную пересушку и состояние корней.',
+        ],
+      ],
+      propagation: [
+        'Separate a basal offset after it has several leaves and its own roots. Let damaged tissue dry for a day, then pot it into dry gritty mix and wait several days before the first light watering.',
+        'Отделяйте прикорневую детку после появления нескольких листьев и собственных корней. Подсушите повреждённое место сутки, посадите в сухую минеральную смесь и подождите несколько дней до первого лёгкого полива.',
+      ],
+      repotting: [
+        'Repot in spring when offsets crowd the container. Use a stable pot with a drainage hole and keep every rosette at its previous depth.',
+        'Пересаживайте весной, когда деткам становится тесно. Используйте устойчивый горшок с дренажным отверстием и сохраняйте прежнюю глубину каждой розетки.',
+      ],
+      secondaryCare: [
+        ['Using a leaf externally', 'Наружное применение листа'],
+        [
+          'Use only clear inner gel from a clean mature leaf. Drain and rinse away the yellow latex, patch-test the gel, and stop if burning, itching or a rash appears.',
+          'Используйте только прозрачный внутренний гель из чистого зрелого листа. Дайте стечь жёлтому латексу, тщательно смойте его, сделайте кожную пробу и прекратите применение при жжении, зуде или сыпи.',
+        ],
+      ],
+      soil: [
+        'Use a fast-draining mix with about 30–40% cactus compost and 60–70% pumice, lava, perlite or coarse mineral material.',
+        'Используйте быстро просыхающую смесь примерно из 30–40% грунта для кактусов и 60–70% пемзы, лавы, перлита или другого крупного минерального материала.',
+      ],
+      temperature: [
+        'Keep at 18–30 °C during active growth and above 10 °C in winter. Protect from frost, cold glass and wet chilled soil.',
+        'В период роста содержите при 18–30 °C, зимой — выше 10 °C. Защищайте от мороза, холодного стекла и сырого переохлаждённого грунта.',
+      ],
+      watering: [
+        'Soak the substrate thoroughly, then let it dry completely before watering again. Water much less often during cool, dark months.',
+        'Полностью промочите субстрат, затем дождитесь его полной просушки до следующего полива. В прохладные тёмные месяцы поливайте значительно реже.',
+      ],
+    }),
+  ),
+  collectionPlant(
     'podocarpaceae',
     'podocarpus-macrophyllus',
     '/plants/podocarpus-macrophyllus-home-photo.webp',
