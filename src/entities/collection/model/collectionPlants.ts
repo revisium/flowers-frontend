@@ -9,6 +9,7 @@ export type CollectionFamilyId =
   | 'arecaceae'
   | 'asparagaceae'
   | 'asphodelaceae'
+  | 'asteraceae'
   | 'bromeliaceae'
   | 'cactaceae'
   | 'commelinaceae'
@@ -6463,7 +6464,10 @@ export const collectionPlants: readonly CollectionPlant[] = [
           ],
           [
             '/plant-profile/tradescantia-variants/purpurea.webp',
-            ["T. pallida 'Purpurea'", "T. pallida 'Purpurea'"],
+            [
+              "Tradescantia pallida 'Purpurea' (Purple Heart)",
+              "Традесканция бледная 'Purpurea'",
+            ],
           ],
           [
             '/plant-profile/tradescantia-variants/zebrina-burgundy.webp',
@@ -7888,6 +7892,202 @@ export const collectionPlants: readonly CollectionPlant[] = [
       watering: [
         'Water after the upper half of the substrate dries. Soak evenly, drain completely and never leave water in the saucer.',
         'Поливайте после просыхания верхней половины грунта. Равномерно промочите смесь, полностью слейте лишнюю воду и не оставляйте её в поддоне.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'asteraceae',
+    'curio-sp',
+    '/plants/curio-sp-home-photo.webp',
+    ['Trailing Curio', 'Крестовник ампельный'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/curio-sp-important.webp',
+        propagationImage: '/plant-profile/curio-sp-propagation.webp',
+      },
+      difficulty: 2,
+      facts: [
+        [
+          'Curio is part of the daisy family, even though many species look more like leaf succulents than familiar daisies.',
+          'The narrow fleshy leaves store water, while the flexible stems naturally spill over the edge of the pot.',
+          'The notation “sp.” means that the genus is known but the exact species has not yet been established.',
+        ],
+        [
+          'Curio относится к семейству Астровые, хотя многие виды больше похожи на листовые суккуленты, чем на привычные ромашки.',
+          'Узкие мясистые листья запасают воду, а гибкие побеги естественно свешиваются через край горшка.',
+          'Обозначение «sp.» означает, что род установлен, но точный вид пока не определён.',
+        ],
+      ],
+      family: ['Daisy family (Asteraceae)', 'Астровые (Asteraceae)'],
+      feeding: [
+        'Feed once a month from spring to early autumn with a cactus fertiliser diluted to quarter strength. Skip feeding in cool, low-light conditions.',
+        'С весны до начала осени подкармливайте раз в месяц удобрением для кактусов в четвертной дозировке. В прохладе и при слабом освещении подкормки не нужны.',
+      ],
+      growth: ['Moderate to active in bright light', 'Умеренный, на ярком свету активный'],
+      height: [
+        'Trailing shoots; final length depends on species',
+        'Ампельные побеги; конечная длина зависит от вида',
+      ],
+      humidity: [
+        'Normal dry room air is suitable. Do not mist routinely; good airflow around the crown is more useful.',
+        'Подходит обычный сухой комнатный воздух. Регулярные опрыскивания не нужны; лёгкое движение воздуха вокруг кроны полезнее.',
+      ],
+      important: [
+        'The exact species is not confirmed, so the profile uses safe care shared by trailing succulent Curio: abundant light, a fast-draining mineral mix and no standing water. Empty the saucer after every watering.',
+        'Точный вид не подтверждён, поэтому в карточке указан безопасный общий уход для ампельных суккулентных Curio: много света, быстро просыхающий минеральный грунт и никакой воды в поддоне.',
+      ],
+      latinName: 'Curio (Senecio) sp.',
+      light: [
+        'Provide the brightest available window with several hours of gentle direct sun. Acclimatise gradually; too little light makes the shoots thin and sparse.',
+        'Поставьте на самое светлое окно с несколькими часами мягкого прямого солнца. Приучайте постепенно: при нехватке света побеги становятся тонкими и редкими.',
+      ],
+      notes: [
+        'I grew this plant from one detached leaf received in a succulent set. It is now in active growth and has formed several loose trailing shoots. The genus is clear from its succulent leaves and growth habit, but I am keeping the species open until flowering or another reliable diagnostic feature appears.',
+        'Я вырастила это растение из одного отдельного листика, полученного в наборе суккулентов. Сейчас оно активно растёт и сформировало несколько свободно свисающих побегов. Род понятен по суккулентным листьям и форме роста, но точный вид оставляю открытым до цветения или появления другого надёжного признака.',
+      ],
+      origin: [
+        'Not established for this specimen; Curio is primarily African',
+        'Для этого экземпляра не установлено; род Curio преимущественно африканский',
+      ],
+      overview: [
+        'This is an unidentified trailing Curio, still widely encountered in collections under the older name Senecio. Its flexible green stems carry smooth narrow succulent leaves and naturally spread over the edge of the pot. The exact species is deliberately left unspecified.',
+        'Это неопределённый ампельный Curio, который в коллекциях всё ещё часто встречается под прежним названием Senecio. На гибких зелёных побегах расположены гладкие узкие суккулентные листья, а стебли естественно свешиваются через край горшка. Точный вид намеренно не указан.',
+      ],
+      plantType: ['Trailing succulent perennial', 'Ампельный суккулентный многолетник'],
+      problems: [
+        [
+          'Soft translucent leaves or a dark stem base — stop watering and inspect for rot.',
+          'Thin stretched shoots with wide gaps — increase light gradually.',
+          'Wrinkled flexible leaves in completely dry soil — water thoroughly and drain fully.',
+        ],
+        [
+          'Мягкие полупрозрачные листья или потемневшее основание стебля — прекратите полив и проверьте растение на гниль.',
+          'Тонкие вытянутые побеги с большими промежутками — постепенно увеличьте освещение.',
+          'Гибкие сморщенные листья при полностью сухом грунте — хорошо полейте и полностью слейте лишнюю воду.',
+        ],
+      ],
+      propagation: [
+        'For reliable propagation, cut a healthy 8–10 cm shoot, remove the lower leaves and let the cut dry for one or two days. Insert one or two nodes into a dry gritty mix, wait several days before the first light watering and keep in bright diffused light.',
+        'Для надёжного размножения срежьте здоровый побег длиной 8–10 см, удалите нижние листья и подсушите срез один-два дня. Заглубите один-два узла в сухую минеральную смесь, первый раз слегка полейте через несколько дней и держите на ярком рассеянном свету.',
+      ],
+      repotting: [
+        'Repot in spring when roots fill the container or the mix compacts. Choose a stable pot with a drainage hole, only slightly wider than the root ball.',
+        'Пересаживайте весной, когда корни заполнят ёмкость или грунт уплотнится. Выбирайте устойчивый горшок с дренажным отверстием, лишь немного шире корневого кома.',
+      ],
+      secondaryCare: [
+        ['Shaping', 'Формирование'],
+        [
+          'Pinch the longest shoots above a node and root several cuttings back into the same pot for a fuller, naturally uneven cascade.',
+          'Прищипывайте самые длинные побеги над узлом и подсаживайте несколько укоренённых черенков обратно, чтобы получить более пышный, естественно неровный каскад.',
+        ],
+      ],
+      soil: [
+        'Use a fast-draining succulent mix with roughly 60–70% mineral material such as pumice, perlite or fine lava and 30–40% light organic compost.',
+        'Используйте быстро просыхающую смесь для суккулентов: примерно 60–70% пемзы, перлита или мелкой лавы и 30–40% лёгкого органического грунта.',
+      ],
+      temperature: [
+        'Keep at 18–27 °C and preferably above 12 °C in winter. Protect from cold wet soil and draughts.',
+        'Содержите при 18–27 °C, зимой желательно не ниже 12 °C. Защищайте от холодного мокрого грунта и сквозняков.',
+      ],
+      watering: [
+        'Water thoroughly only after the substrate has dried almost completely. Let all excess drain and reduce watering sharply during cool or cloudy periods.',
+        'Поливайте обильно только после почти полного просыхания субстрата. Дайте всей лишней воде стечь и резко сократите полив в прохладные или пасмурные периоды.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'asteraceae',
+    'curio-herreanus',
+    '/plants/curio-herreanus-home-photo.webp',
+    ['String of tears', 'Крестовник Геррейна'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/curio-herreanus-important.webp',
+        propagationImage: '/plant-profile/curio-herreanus-propagation.webp',
+      },
+      difficulty: 2,
+      facts: [
+        [
+          'The translucent stripe along each leaf is a window that lets light reach tissues inside the succulent leaf.',
+          'The species is also sold as string of tears or string of watermelons because of its pointed striped leaves.',
+          'Senecio herreanus is the older botanical name still commonly used in shops and private collections.',
+          'A stem node can form roots where it rests against a suitable gritty substrate.',
+        ],
+        [
+          'Полупрозрачная полоска вдоль листа — это световое окно, через которое свет проникает к тканям внутри суккулентного листа.',
+          'В продаже вид называют «нитью слёз» или «нитью арбузиков» из-за заострённых полосатых листьев.',
+          'Senecio herreanus — прежнее ботаническое название, которое до сих пор часто используют магазины и коллекционеры.',
+          'Узел побега способен образовать корни там, где соприкасается с подходящим минеральным субстратом.',
+        ],
+      ],
+      family: ['Daisy family (Asteraceae)', 'Астровые (Asteraceae)'],
+      feeding: [
+        'Feed monthly in spring and summer with a cactus fertiliser diluted to quarter strength. Do not feed during cool, low-light rest.',
+        'Весной и летом подкармливайте раз в месяц удобрением для кактусов в четвертной дозировке. В прохладе и при слабом освещении подкормки не нужны.',
+      ],
+      growth: ['Moderate, faster in bright light', 'Умеренный, на ярком свету более активный'],
+      height: ['Trailing stems usually 30–60 cm indoors', 'Свисающие побеги обычно 30–60 см в комнате'],
+      humidity: [
+        'Normal dry room air is suitable. Avoid routine misting and keep air moving gently around the crown.',
+        'Подходит обычный сухой комнатный воздух. Регулярные опрыскивания не нужны; обеспечьте лёгкое движение воздуха вокруг кроны.',
+      ],
+      important: [
+        'The plump leaves can stay present even while roots are suffering in wet soil. Use a pot with a drainage hole, let the mix dry almost completely and empty the saucer after every watering.',
+        'Мясистые листья могут ещё выглядеть наполненными, когда корни уже страдают в сыром грунте. Используйте горшок с дренажным отверстием, почти полностью просушивайте смесь и после каждого полива опорожняйте поддон.',
+      ],
+      latinName: 'Curio herreanus (syn. Senecio herreanus)',
+      light: [
+        'Give the brightest available position with several hours of gentle direct sun. Acclimatise gradually; low light lengthens the gaps between leaves and weakens their markings.',
+        'Поставьте на самое светлое место с несколькими часами мягкого прямого солнца. Приучайте постепенно: при нехватке света расстояния между листьями увеличиваются, а рисунок бледнеет.',
+      ],
+      notes: [
+        'I bought this plant as one rooted strip and laid the shoot on a gritty substrate. Its nodes are now rooting and producing new growth points. The main image shows the expected form after it fills out, not its current size.',
+        'Я купила это растение одной укоренённой полоской и уложила побег на минеральный субстрат. Сейчас узлы укореняются и дают новые точки роста. Основная фотография показывает ожидаемую форму после разрастания, а не его сегодняшний размер.',
+      ],
+      origin: ['Namibia', 'Намибия'],
+      overview: [
+        'Curio herreanus is a trailing succulent with flexible stems and pointed oval leaves marked by a translucent longitudinal window. With time it forms an airy uneven cascade and looks most natural when several rooted nodes grow from the same pot.',
+        'Curio herreanus — ампельный суккулент с гибкими побегами и заострённо-овальными листьями с полупрозрачным продольным окошком. Со временем он образует воздушный неровный каскад и особенно естественно выглядит, когда в одном горшке укоренено несколько узлов.',
+      ],
+      plantType: ['Trailing leaf succulent', 'Ампельный листовой суккулент'],
+      problems: [
+        [
+          'Soft translucent leaves or a dark stem base — stop watering and inspect the roots for rot.',
+          'Long sparse shoots with wide gaps — increase light gradually.',
+          'Wrinkled flexible leaves in completely dry mix — water thoroughly and let all excess drain.',
+        ],
+        [
+          'Мягкие полупрозрачные листья или потемневшее основание стебля — прекратите полив и проверьте корни на гниль.',
+          'Длинные редкие побеги с большими промежутками — постепенно увеличьте освещение.',
+          'Сморщенные гибкие листья при полностью сухой смеси — хорошо полейте и дайте всей лишней воде стечь.',
+        ],
+      ],
+      propagation: [
+        'Cut a healthy 8–10 cm shoot, remove the lowest leaves and let the cut dry for one or two days. Lay the stem on a dry gritty mix or press two or three nodes lightly into it, secure if needed and begin light watering after several days.',
+        'Срежьте здоровый побег длиной 8–10 см, удалите нижние листья и подсушите срез один-два дня. Уложите стебель на сухую минеральную смесь или слегка прижмите к ней два-три узла, при необходимости закрепите и начните понемногу поливать через несколько дней.',
+      ],
+      repotting: [
+        'Repot in spring when roots fill the container or the mix compacts. A stable shallow or moderately deep pot with a drainage hole suits the trailing crown.',
+        'Пересаживайте весной, когда корни заполнят ёмкость или грунт уплотнится. Свисающей кроне подойдёт устойчивый неглубокий или средней глубины горшок с дренажным отверстием.',
+      ],
+      secondaryCare: [
+        ['Shaping', 'Формирование'],
+        [
+          'Lay healthy sections of the longest stems back across the substrate and pin a few nodes in place. Once rooted, they create a fuller but still naturally uneven crown.',
+          'Укладывайте здоровые участки самых длинных побегов обратно на субстрат и закрепляйте несколько узлов. После укоренения они сделают крону пышнее, сохранив естественную неровность.',
+        ],
+      ],
+      soil: [
+        'Use a fast-draining succulent mix with about 60–70% mineral material such as pumice, perlite, fine lava or coarse grit.',
+        'Используйте быстро просыхающую смесь для суккулентов с 60–70% минеральных компонентов: пемзы, перлита, мелкой лавы или крупного песка.',
+      ],
+      temperature: [
+        'Keep at 18–27 °C and preferably above 12 °C in winter. Protect roots from cold wet soil and draughts.',
+        'Содержите при 18–27 °C, зимой желательно не ниже 12 °C. Защищайте корни от холодного мокрого грунта и сквозняков.',
+      ],
+      watering: [
+        'Water thoroughly only after the substrate has dried almost completely. Drain all excess and water much less often in cool or cloudy conditions.',
+        'Поливайте обильно только после почти полного просыхания субстрата. Полностью сливайте лишнюю воду и в прохладе или пасмурную погоду поливайте значительно реже.',
       ],
     }),
   ),

@@ -172,6 +172,14 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     name: { en: 'Pepper family', ru: 'Перцевые' },
   },
   {
+    count: { en: '2 plants', ru: '2 растения' },
+    id: 'asteraceae',
+    image: '/plants/categories/studio/asteraceae.webp',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Daisy family', ru: 'Астровые' },
+  },
+  {
     count: { en: '1 plant', ru: '1 растение' },
     id: 'arecaceae',
     image: '/plants/categories/studio/arecaceae.webp',

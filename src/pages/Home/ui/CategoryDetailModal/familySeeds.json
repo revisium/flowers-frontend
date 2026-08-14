@@ -1261,6 +1261,70 @@
       "/plants/moraceae-modal/trait-aerial-roots.webp"
     ]
   },
+  "asteraceae": {
+    "closingNote": {
+      "en": "The daisy family joins familiar flowers, medicinal herbs, weeds and remarkable succulents through one shared idea: many tiny florets working together as a single flower head.",
+      "ru": "Астровые объединяют знакомые цветы, лекарственные травы, сорняки и необычные суккуленты одной общей идеей: множество крошечных цветков работают вместе как единое соцветие."
+    },
+    "description": {
+      "en": "Asteraceae are one of the largest families of flowering plants. They range from annual herbs and meadow perennials to shrubs, trees and leaf succulents, and are recognised by composite flower heads surrounded by a protective involucre.",
+      "ru": "Астровые — одно из крупнейших семейств цветковых растений. Среди них есть однолетние травы, луговые многолетники, кустарники, деревья и листовые суккуленты; семейство узнают по соцветиям-корзинкам, окружённым защитной обёрткой."
+    },
+    "facts": {
+      "en": [
+        "What looks like one daisy flower is usually a head made from many tiny florets.",
+        "Sunflowers, chamomile, dandelions, asters, gerberas and many succulent Curio species belong to this family.",
+        "The green bracts beneath the flower head form an involucre that protects developing florets.",
+        "In many members the calyx becomes a pappus of hairs or scales that helps the fruit travel on the wind.",
+        "The family occurs on every continent except Antarctica and is especially diverse in open, seasonally dry habitats."
+      ],
+      "ru": [
+        "То, что выглядит одним цветком ромашки, обычно является корзинкой из множества крошечных цветков.",
+        "Подсолнечник, ромашка, одуванчик, астры, герберы и многие суккулентные Curio относятся к одному семейству.",
+        "Зелёные листочки под корзинкой образуют обёртку, защищающую развивающиеся цветки.",
+        "У многих представителей чашечка превращается в хохолок из волосков или чешуек, помогающий плоду разноситься ветром.",
+        "Семейство встречается на всех континентах, кроме Антарктиды, и особенно разнообразно в открытых сезонно сухих местах."
+      ]
+    },
+    "heroImage": "/plants/categories/generated/asteraceae.webp",
+    "heroPosition": {
+      "base": "calc(100% + 105px) 55px",
+      "md": "calc(100% + 35px) 30px",
+      "lg": "calc(100% - 10px) 22px"
+    },
+    "heroSize": {
+      "base": "520px auto",
+      "md": "650px auto",
+      "lg": "740px auto"
+    },
+    "latinName": "Asteraceae",
+    "origin": {
+      "en": "Cosmopolitan on every continent except Antarctica, with exceptional diversity in open temperate, subtropical and seasonally dry regions.",
+      "ru": "Распространены на всех континентах, кроме Антарктиды; особенно разнообразны в открытых умеренных, субтропических и сезонно сухих областях."
+    },
+    "originMapImage": "/plants/asteraceae-modal/origin-map.webp",
+    "plants": [],
+    "traits": {
+      "en": [
+        "A flower head combines many small florets on one shared receptacle.",
+        "Overlapping green bracts form a protective involucre beneath the head.",
+        "The dry one-seeded fruit often carries a feathery pappus for wind dispersal.",
+        "Growth forms range from soft meadow herbs to woody shrubs and water-storing succulents."
+      ],
+      "ru": [
+        "Корзинка объединяет множество мелких цветков на общем цветоложе.",
+        "Перекрывающиеся зелёные листочки образуют защитную обёртку под соцветием.",
+        "Сухой односемянный плод часто несёт пушистый хохолок для распространения ветром.",
+        "Формы роста варьируются от мягких луговых трав до древесных кустарников и запасающих воду суккулентов."
+      ]
+    },
+    "traitImages": [
+      "/plants/asteraceae-modal/feature-capitulum.webp",
+      "/plants/asteraceae-modal/feature-bracts.webp",
+      "/plants/asteraceae-modal/feature-achene.webp",
+      "/plants/asteraceae-modal/feature-diversity.webp"
+    ]
+  },
   "podocarpaceae": {
     "closingNote": {
       "en": "Podocarps carry the quiet structure of an ancient conifer lineage into the home: evergreen, patient and especially expressive when shaped as bonsai.",
