@@ -887,7 +887,7 @@
         "Папоротники не цветут и не образуют семян: новое поколение начинается со спор."
       ]
     },
-    "heroImage": "/plants/polypodiaceae-modal/hero.webp",
+    "heroImage": "/plants/polypodiaceae-modal/hero-v4.webp",
     "heroPosition": {
       "base": "center top",
       "md": "center top",
@@ -923,7 +923,7 @@
       "/plants/categories/studio/polypodiaceae-family.webp",
       "/plant-profile/phlebodium-aureum-davana-propagation.webp",
       "/plant-profile/phlebodium-aureum-davana-important.webp",
-      "/plants/polypodiaceae-modal/hero.webp"
+      "/plants/polypodiaceae-modal/hero-v4.webp"
     ]
   },
   "orchidaceae": {
