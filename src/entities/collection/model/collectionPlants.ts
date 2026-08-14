@@ -7562,6 +7562,127 @@ export const collectionPlants: readonly CollectionPlant[] = [
   ),
   collectionPlant(
     'gesneriaceae',
+    'episcia-three-cultivars',
+    '/plants/episcia-three-cultivars-home-photo.webp',
+    ['Episcias: three cultivars', 'Эписции: три сорта'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/episcia-three-cultivars-important.webp',
+        propagationImage: '/plant-profile/episcia-three-cultivars-propagation.webp',
+        variants: profileVariants(
+          ['Three cultivars in my collection', 'Три сорта в моей коллекции'],
+          [
+            'Each cultivar keeps the same creeping habit but has its own foliage and flowers: lilac blooms over dark pink-veined leaves, red blooms against strawberry foliage, and yellow blooms above the bronze-green Suomi.',
+            'У каждого сорта одинаковый стелющийся характер роста, но своя листва и цветение: сиреневые цветки над тёмными листьями с розовыми жилками, красные — на клубничной листве, а жёлтые — у бронзово-зелёной Суоми.',
+          ],
+          [
+            '/plant-profile/episcia-variants/01-lilac-evening.webp',
+            ['Lilac Evening', 'Сиреневый вечер'],
+          ],
+          [
+            '/plant-profile/episcia-variants/02-strawberry-haze.webp',
+            ['Strawberry Mist', 'Клубничная дымка'],
+          ],
+          ['/plant-profile/episcia-variants/03-suomi.webp', ['Suomi', 'Суоми']],
+        ),
+      },
+      difficulty: 2,
+      facts: [
+        [
+          'Episcias form two kinds of shoots: compact leafy crowns and long stolons carrying daughter rosettes.',
+          'The metallic sheen comes from the quilted surface and fine hairs reflecting light at different angles.',
+          'Strawberry Mist blooms red to orange-red, while Suomi is distinguished by creamy yellow flowers with a warm orange centre.',
+          'A single shallow pot becomes full quickly when several daughter rosettes are rooted back into the mix.',
+        ],
+        [
+          'Эписции образуют два типа побегов: компактные облиственные розетки и длинные столоны с дочерними розетками.',
+          'Металлический блеск создают рельефная поверхность и тонкие волоски, отражающие свет под разными углами.',
+          'Клубничная дымка цветёт красными или красно-оранжевыми цветками, а Суоми отличается кремово-жёлтыми цветками с тёплым оранжевым центром.',
+          'Неглубокий горшок быстро становится пышным, если укоренять в нём несколько дочерних розеток.',
+        ],
+      ],
+      family: ['Gesneriad family (Gesneriaceae)', 'Геснериевые (Gesneriaceae)'],
+      feeding: [
+        'From spring to early autumn, feed every 3–4 weeks with half-strength fertiliser for African violets or flowering houseplants. Avoid excess nitrogen, which weakens colour and flowering.',
+        'С весны до начала осени подкармливайте раз в 3–4 недели половинной дозой удобрения для сенполий или цветущих растений. Избыток азота ослабляет окраску и цветение.',
+      ],
+      growth: ['Fast in warmth and good light', 'Быстрый в тепле и при хорошем освещении'],
+      height: ['Rosettes 10–20 cm; stolons trail farther', 'Розетки 10–20 см; столоны свисают ниже'],
+      humidity: [
+        'Aim for about 50–70% humidity with gentle airflow. Do not mist the velvety leaves: trapped droplets can leave marks or encourage rot.',
+        'Поддерживайте влажность около 50–70% и лёгкое движение воздуха. Не опрыскивайте бархатистые листья: задержавшиеся капли оставляют пятна и могут вызвать гниль.',
+      ],
+      important: [
+        'Use a shallow pot with a drainage hole and keep the crown above the mix. Water the substrate rather than the fuzzy leaves, and never leave the fine roots standing in water.',
+        'Используйте неглубокий горшок с дренажным отверстием и не заглубляйте центр розетки. Поливайте грунт, а не опушённые листья, и не оставляйте тонкие корни в воде.',
+      ],
+      latinName: 'Episcia cultivars',
+      light: [
+        'Give bright diffused light with gentle morning or evening sun. Good light intensifies the pink and metallic foliage, but harsh midday sun bleaches and scorches it.',
+        'Обеспечьте яркий рассеянный свет с мягким утренним или вечерним солнцем. Хорошее освещение усиливает розовые и металлические оттенки, а жёсткое полуденное солнце обесцвечивает и обжигает листья.',
+      ],
+      notes: [
+        'My collection includes Lilac Evening, Strawberry Mist and Suomi. Their contrasting leaves and different flower colours make the three plants look distinct even though their care and cascading growth habit are similar.',
+        'В моей коллекции растут Сиреневый вечер, Клубничная дымка и Суоми. Контрастная листва и разные оттенки цветков делают их непохожими друг на друга, хотя уход и каскадный характер роста у них сходны.',
+      ],
+      origin: [
+        'Cultivated hybrids; the genus comes from tropical Central and South America',
+        'Культурные гибриды; род происходит из тропиков Центральной и Южной Америки',
+      ],
+      overview: [
+        'These three evergreen episcias combine velvety metallic foliage, slender stolons and small tubular flowers. As the daughter rosettes grow over the pot edge, each plant develops a loose colourful cascade rather than a rigid upright crown.',
+        'Эти три вечнозелёные эписции сочетают бархатистую металлическую листву, тонкие столоны и небольшие трубчатые цветки. Дочерние розетки постепенно спускаются за край горшка, и растение образует свободный цветной каскад, а не строгую вертикальную крону.',
+      ],
+      plantType: [
+        'Evergreen stolon-forming tropical perennial',
+        'Вечнозелёный тропический многолетник со столонами',
+      ],
+      problems: [
+        [
+          'Long internodes and dull colour — move gradually to brighter diffused light.',
+          'Bleached dry patches — protect the foliage from direct midday sun.',
+          'A soft crown or blackened stolons — reduce moisture, add airflow and inspect for rot.',
+          'White cottony clusters in leaf axils — isolate and check for mealybugs.',
+        ],
+        [
+          'Длинные междоузлия и тусклая окраска — постепенно добавьте яркого рассеянного света.',
+          'Выцветшие сухие пятна — защитите листву от прямого полуденного солнца.',
+          'Розетка размягчилась или столоны почернели — сократите полив, добавьте движение воздуха и проверьте растение на гниль.',
+          'В пазухах появились белые ватные комочки — изолируйте растение и проверьте на мучнистого червеца.',
+        ],
+      ],
+      propagation: [
+        'Pin a healthy daughter rosette on its stolon to lightly moist airy mix. Once it roots, cut the connection to the parent. Stem-tip cuttings with two or three nodes also root readily in warmth.',
+        'Прижмите здоровую дочернюю розетку на столоне к слегка влажному воздушному субстрату. После укоренения отделите её от материнского растения. Верхушечные черенки с двумя-тремя узлами тоже легко укореняются в тепле.',
+      ],
+      repotting: [
+        'Repot in spring when runners crowd the pot or roots fill it. Choose a shallow container only slightly wider than the root system and keep the crowns at their original depth.',
+        'Пересаживайте весной, когда розеткам становится тесно или корни заполняют горшок. Выбирайте неглубокую ёмкость лишь немного шире корневой системы и сохраняйте прежнюю глубину розеток.',
+      ],
+      secondaryCare: [
+        ['Shaping and flowering', 'Формировка и цветение'],
+        [
+          'Let a few stolons trail naturally and pin others back into the pot for fullness. Pinch bare tips, remove ageing leaves and rotate the pot occasionally; do not force the plant into a perfectly even dome.',
+          'Позвольте части столонов свободно свисать, а остальные укореняйте в том же горшке для пышности. Прищипывайте оголённые концы, удаляйте стареющие листья и иногда поворачивайте горшок, не пытаясь формировать идеально ровный шар.',
+        ],
+      ],
+      soil: [
+        'Use a light moisture-retentive mix: about 55% African-violet or fine houseplant compost, 25% perlite and 20% fine orchid bark or chopped sphagnum.',
+        'Используйте лёгкую влагоёмкую смесь: около 55% грунта для сенполий или мелкого грунта для комнатных растений, 25% перлита и 20% мелкой коры либо нарезанного сфагнума.',
+      ],
+      temperature: [
+        'Keep at 20–27 °C, preferably never below 16–18 °C. Protect the soft growth from cold glass, draughts and abrupt temperature changes.',
+        'Содержите при 20–27 °C, желательно не ниже 16–18 °C. Защищайте нежный прирост от холодного стекла, сквозняков и резких перепадов температуры.',
+      ],
+      watering: [
+        'Water when the top 1–2 cm of mix has dried, keeping the fine root ball lightly and evenly moist during active growth. Use lukewarm soft water and drain the saucer completely.',
+        'Поливайте после просыхания верхних 1–2 см грунта, во время активного роста сохраняя тонкий корневой ком слегка и равномерно влажным. Используйте мягкую тёплую воду и полностью сливайте её из поддона.',
+      ],
+    }),
+    3,
+  ),
+  collectionPlant(
+    'gesneriaceae',
     'sinningia-speciosa',
     '/plant-profile/gloxinia-cover-portrait.webp',
     ["Florist's gloxinia", 'Глоксиния'],
