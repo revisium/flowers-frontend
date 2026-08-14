@@ -1504,5 +1504,67 @@
       "/plants/podocarpaceae-modal/trait-seed.webp",
       "/plants/podocarpaceae-modal/trait-new-growth.webp"
     ]
+  },
+  "balsaminaceae": {
+    "closingNote": {
+      "en": "Balsams combine delicate flowers with remarkably energetic growth: soft stems, bright colour and seed capsules that release the next generation in an instant.",
+      "ru": "Бальзаминовые соединяют нежные цветки с удивительно энергичным ростом: мягкие стебли, яркие краски и коробочки, мгновенно выпускающие новое поколение семян."
+    },
+    "description": {
+      "en": "Balsaminaceae are mostly soft-stemmed herbs from humid forests and mountain habitats. Their irregular spurred flowers and spring-loaded seed capsules are the family's clearest signatures; the huge genus Impatiens contains nearly all of its ornamental diversity.",
+      "ru": "Бальзаминовые — преимущественно мягкостебельные травы влажных лесов и горных местообитаний. Главные признаки семейства — несимметричные цветки со шпорцем и коробочки с пружинно раскрывающимися створками; почти всё декоративное разнообразие сосредоточено в огромном роде Impatiens."
+    },
+    "facts": {
+      "en": [
+        "The family is dominated by the genus Impatiens, while the aquatic genus Hydrocera contains only a single species.",
+        "The botanical name Impatiens means ‘impatient’ and refers to capsules that burst at the slightest touch when ripe.",
+        "A nectar-filled spur guides pollinators into the asymmetric flower and helps different species specialise on different visitors.",
+        "Many balsams prefer continuously moist, humus-rich habitats, but their succulent stems still rot quickly in stagnant soil."
+      ],
+      "ru": [
+        "В семействе почти полностью доминирует род Impatiens, а водный род Hydrocera представлен всего одним видом.",
+        "Ботаническое название Impatiens означает «нетерпеливый» и связано с коробочками, которые в зрелости лопаются от лёгкого прикосновения.",
+        "Наполненный нектаром шпорец направляет опылителя внутрь несимметричного цветка и помогает видам специализироваться на разных посетителях.",
+        "Многие бальзамины растут во влажных богатых гумусом местах, но их сочные стебли быстро загнивают в застойном грунте."
+      ]
+    },
+    "heroImage": "/plants/balsaminaceae-modal/hero.webp",
+    "heroPosition": {
+      "base": "right top",
+      "md": "right top",
+      "lg": "right top"
+    },
+    "heroSize": {
+      "base": "cover",
+      "md": "cover",
+      "lg": "cover"
+    },
+    "latinName": "Balsaminaceae",
+    "origin": {
+      "en": "Distributed through tropical and subtropical regions, with exceptional diversity in tropical Africa, Madagascar, the Himalaya, South-East Asia and New Guinea; some species extend into temperate Eurasia and North America.",
+      "ru": "Распространены в тропиках и субтропиках, особенно разнообразны в тропической Африке, на Мадагаскаре, в Гималаях, Юго-Восточной Азии и Новой Гвинее; отдельные виды заходят в умеренные районы Евразии и Северной Америки."
+    },
+    "originMapImage": "/plants/balsaminaceae-modal/origin-map.webp",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Juicy translucent stems branch at swollen nodes and hold plenty of water in their soft tissues.",
+        "Leaves are usually simple, pointed and sharply serrated; many New Guinea hybrids show bronze colour and red veins.",
+        "The irregular five-part flower carries a conspicuous curved nectar spur behind the petals.",
+        "A ripe elongated capsule opens explosively, its five valves curling back and throwing the seeds away from the parent."
+      ],
+      "ru": [
+        "Сочные полупрозрачные стебли ветвятся в утолщённых узлах и запасают много воды в мягких тканях.",
+        "Листья обычно простые, заострённые и острозубчатые; у многих новогвинейских гибридов заметны бронзовая окраска и красные жилки.",
+        "Несимметричный пятичленный цветок несёт за лепестками хорошо заметный изогнутый нектарный шпорец.",
+        "Зрелая вытянутая коробочка раскрывается взрывом: пять створок скручиваются и отбрасывают семена от материнского растения."
+      ]
+    },
+    "traitImages": [
+      "/plants/balsaminaceae-modal/trait-succulent-stem.webp",
+      "/plants/balsaminaceae-modal/trait-serrated-leaves.webp",
+      "/plants/balsaminaceae-modal/trait-spurred-flower.webp",
+      "/plants/balsaminaceae-modal/trait-seed-capsule.webp"
+    ]
   }
 }

@@ -154,6 +154,14 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     name: { en: 'Bromeliads', ru: 'Бромелиевые' },
   },
   {
+    count: { en: '1 plant', ru: '1 растение' },
+    id: 'balsaminaceae',
+    image: '/plants/categories/studio/balsaminaceae.webp',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Balsam family', ru: 'Бальзаминовые' },
+  },
+  {
     count: { en: '5 plants', ru: '5 растений' },
     id: 'amaryllidaceae',
     image: '/plants/categories/studio/amaryllidaceae.webp',

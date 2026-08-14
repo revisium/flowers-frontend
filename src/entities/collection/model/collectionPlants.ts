@@ -11,6 +11,7 @@ export type CollectionFamilyId =
   | 'aspleniaceae'
   | 'asphodelaceae'
   | 'asteraceae'
+  | 'balsaminaceae'
   | 'bromeliaceae'
   | 'cactaceae'
   | 'commelinaceae'
@@ -9349,6 +9350,110 @@ export const collectionPlants: readonly CollectionPlant[] = [
       watering: [
         'Water thoroughly when the top 2–3 cm of mix has dried, then drain the saucer. Keep the root ball lightly and evenly moist during active growth, but never waterlogged; water less in winter.',
         'Обильно поливайте после просыхания верхних 2–3 см грунта и сливайте воду из поддона. Во время активного роста поддерживайте лёгкую равномерную влажность без заболачивания, зимой поливайте реже.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'balsaminaceae',
+    'impatiens-new-guinea-pink',
+    '/plants/impatiens-new-guinea-pink-home-photo.webp',
+    ['Pink New Guinea impatiens', 'Бальзамин новогвинейский, розовый'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/impatiens-new-guinea-pink-important.webp',
+        propagationImage: '/plant-profile/impatiens-new-guinea-pink-propagation.webp',
+      },
+      difficulty: 2,
+      facts: [
+        [
+          'The name Impatiens refers to ripe capsules that spring open and scatter their seeds when touched.',
+          'New Guinea impatiens are a garden hybrid group derived from several species, especially Impatiens hawkeri.',
+          'Their asymmetric flowers carry a curved nectar spur behind the petals.',
+          'Warmth and bright filtered light can support repeated flowering for much of the year indoors.',
+        ],
+        [
+          'Название Impatiens связано со зрелыми коробочками, которые при прикосновении мгновенно раскрываются и разбрасывают семена.',
+          'Новогвинейские бальзамины — садовая гибридная группа на основе нескольких видов, прежде всего Impatiens hawkeri.',
+          'У их несимметричных цветков за лепестками расположен изогнутый нектарный шпорец.',
+          'В тепле и при ярком рассеянном свете растение способно повторно цвести большую часть года.',
+        ],
+      ],
+      family: ['Balsam family (Balsaminaceae)', 'Бальзаминовые (Balsaminaceae)'],
+      feeding: [
+        'From spring to early autumn, feed every two to three weeks with a balanced flowering-plant fertiliser at half strength. Apply only to already moist soil.',
+        'С весны до начала осени подкармливайте раз в две-три недели половинной дозой сбалансированного удобрения для цветущих растений. Вносите его только по уже влажному грунту.',
+      ],
+      growth: ['Fast', 'Быстрый'],
+      height: ['Usually 30–60 cm indoors', 'Обычно 30–60 см в комнате'],
+      humidity: [
+        'Aim for moderate humidity around 45–65% with gentle airflow. Avoid repeatedly wetting flowers and crowded foliage, which encourages spotting and rot.',
+        'Поддерживайте умеренную влажность около 45–65% и мягкое движение воздуха. Не мочите постоянно цветки и густую листву: это провоцирует пятна и гниль.',
+      ],
+      important: [
+        'The juicy stems are brittle and snap easily. Turn, tie and pinch the plant gently, and never leave the soft root system standing in water.',
+        'Сочные стебли хрупкие и легко ломаются. Поворачивайте, подвязывайте и прищипывайте растение осторожно, а мягкие корни никогда не оставляйте в стоячей воде.',
+      ],
+      latinName: 'Impatiens New Guinea Group',
+      light: [
+        'Give bright filtered light with a little gentle morning or evening sun. Protect the dark leaves and flowers from hot midday rays behind glass.',
+        'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Защищайте тёмную листву и цветки от жарких полуденных лучей за стеклом.',
+      ],
+      notes: [
+        'This upright young plant has burgundy succulent stems, bronze-green serrated leaves and vivid pink buds. Pinching the growing tips after flowering will help it branch into a fuller, more relaxed crown.',
+        'У молодого прямостоячего растения бордовые сочные стебли, бронзово-зелёные зубчатые листья и ярко-розовые бутоны. Прищипка точек роста после цветения поможет сформировать более пышную свободную крону.',
+      ],
+      origin: [
+        'Cultivated hybrid group derived from species native to New Guinea and nearby Pacific islands',
+        'Садовая гибридная группа на основе видов из Новой Гвинеи и соседних островов Тихого океана',
+      ],
+      overview: [
+        'Pink New Guinea impatiens is a warm-growing evergreen perennial with glossy dark foliage, reddish succulent stems and broad vivid flowers. Compared with common bedding impatiens, it has larger, more architectural leaves and appreciates brighter filtered light.',
+        'Розовый новогвинейский бальзамин — теплолюбивый вечнозелёный многолетник с глянцевой тёмной листвой, красноватыми сочными стеблями и крупными яркими цветками. От обычного садового бальзамина он отличается более крупными архитектурными листьями и предпочитает более яркий рассеянный свет.',
+      ],
+      plantType: [
+        'Tender evergreen herbaceous perennial',
+        'Теплолюбивый вечнозелёный травянистый многолетник',
+      ],
+      problems: [
+        [
+          'Leaves hang limp while the mix is dry — water thoroughly and shield from excessive heat.',
+          'Yellow leaves and soft dark stems — reduce watering and inspect the roots for rot.',
+          'Pale stretched growth or few buds — increase filtered light and review feeding.',
+          'Distorted tips, sticky residue or fine webbing — isolate and inspect for aphids, thrips or spider mites.',
+        ],
+        [
+          'Листья повисли, а грунт сухой — обильно полейте и защитите растение от чрезмерной жары.',
+          'Листья желтеют, стебли темнеют и размягчаются — сократите полив и проверьте корни на гниль.',
+          'Прирост бледный и вытянутый, бутонов мало — добавьте рассеянного света и скорректируйте подкормки.',
+          'Верхушки деформируются, появились липкость или тонкая паутинка — изолируйте и проверьте на тлю, трипсов и клеща.',
+        ],
+      ],
+      propagation: [
+        'Take a healthy 7–10 cm tip cutting just below a node, remove the lower pair of leaves and root it in water or a lightly moist airy mix. Keep warm in bright filtered light and pot when several pale roots are 2–4 cm long.',
+        'Срежьте здоровый верхушечный черенок длиной 7–10 см сразу под узлом, удалите нижнюю пару листьев и укореняйте в воде или слегка влажной воздушной смеси. Держите в тепле на ярком рассеянном свету и посадите, когда несколько светлых корней достигнут 2–4 см.',
+      ],
+      repotting: [
+        'Repot in spring when roots fill the container, moving up only one size. Keep the stem bases at the same depth and always use a pot with open drainage holes.',
+        'Пересаживайте весной, когда корни заполнят ёмкость, увеличивая горшок лишь на один размер. Сохраняйте прежнюю глубину оснований стеблей и обязательно используйте открытые дренажные отверстия.',
+      ],
+      secondaryCare: [
+        ['Pinching and flowering', 'Прищипка и цветение'],
+        [
+          'Remove faded flowers and pinch long soft tips above a leaf node to encourage side shoots. Make small cuts regularly instead of one severe pruning of the fragile crown.',
+          'Удаляйте увядшие цветки и прищипывайте вытянувшиеся мягкие верхушки над листовым узлом, чтобы стимулировать боковые побеги. Лучше делать небольшие срезы регулярно, чем один раз сильно обрезать хрупкую крону.',
+        ],
+      ],
+      soil: [
+        'Use an airy moisture-retentive mix such as 60% houseplant compost or coco, 20% fine bark and 20% perlite. The pot must drain freely while the mix remains lightly moist.',
+        'Используйте воздушную влагоёмкую смесь: примерно 60% грунта для комнатных растений или кокоса, 20% мелкой коры и 20% перлита. Горшок должен свободно отводить воду, а смесь — сохранять лёгкую влажность.',
+      ],
+      temperature: [
+        'Keep at 18–26 °C and preferably above 15 °C. Protect the soft growth from cold glass, draughts and sudden temperature drops.',
+        'Содержите при 18–26 °C и желательно не ниже 15 °C. Защищайте мягкий прирост от холодного стекла, сквозняков и резких падений температуры.',
+      ],
+      watering: [
+        'Water thoroughly when the upper 1–2 cm of the mix begins to dry, then empty the saucer. Keep the root ball lightly and evenly moist without constant saturation or prolonged drought.',
+        'Обильно поливайте, когда верхние 1–2 см смеси начинают подсыхать, затем сливайте воду из поддона. Поддерживайте лёгкую равномерную влажность без постоянной сырости и длительной пересушки.',
       ],
     }),
   ),

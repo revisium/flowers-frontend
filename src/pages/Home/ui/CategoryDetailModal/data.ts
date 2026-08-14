@@ -191,6 +191,7 @@ const familyTitles: Record<CategoryId, LocalizedText> = {
   aspleniaceae: { en: 'Spleenwort family', ru: 'Костенцовые' },
   asphodelaceae: { en: 'Asphodel family', ru: 'Асфоделовые' },
   asteraceae: { en: 'Daisy family', ru: 'Астровые' },
+  balsaminaceae: { en: 'Balsam family', ru: 'Бальзаминовые' },
   bromeliaceae: { en: 'Bromeliads', ru: 'Бромелиевые' },
   cactaceae: { en: 'Cacti', ru: 'Кактусовые' },
   commelinaceae: { en: 'Spiderwort family', ru: 'Коммелиновые' },
@@ -246,6 +247,11 @@ export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryD
     'asteraceae',
     familyTitles.asteraceae,
     familySeeds.asteraceae,
+  ),
+  balsaminaceae: createFamilyDataByLocale(
+    'balsaminaceae',
+    familyTitles.balsaminaceae,
+    familySeeds.balsaminaceae,
   ),
   bromeliaceae: createFamilyDataByLocale(
     'bromeliaceae',
