@@ -7236,8 +7236,8 @@ export const collectionPlants: readonly CollectionPlant[] = [
         'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Жёсткие полуденные лучи через стекло могут обесцветить или обжечь зелёные членики.',
       ],
       notes: [
-        'My hatiora has already formed a broad dense crown with many fresh green tips. It is still growing in a clear nursery cup, so the main photograph shows the same plant habit in a tidy stable pot without the surrounding shelf clutter.',
-        'Моя хатиора уже сформировала широкую густую крону со множеством свежих зелёных кончиков. Она пока растёт в прозрачном рассадном стакане, поэтому главная фотография показывает ту же форму растения в аккуратном устойчивом горшке без окружающего беспорядка на полке.',
+        'My hatiora has already formed a broad dense crown with many fresh green tips. The young segments continue to branch actively and gradually make the crown fuller.',
+        'Моя хатиора уже сформировала широкую густую крону со множеством свежих зелёных кончиков. Молодые членики продолжают активно ветвиться и постепенно делают крону ещё пышнее.',
       ],
       origin: ['Eastern and southern Brazil', 'Восточная и южная Бразилия'],
       overview: [

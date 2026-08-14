@@ -51,6 +51,9 @@ and editors that understand `.mdc` rule files:
   target-state MVVM/DataSource/List-Item ViewModel boundaries.
 - [`read-review-contract.mdc`](./rules/read-review-contract.mdc) - start
   review and implementation work from `REVIEW.md`.
+- [`plant-card-content.mdc`](./rules/plant-card-content.mdc) - keep plant-card
+  copy focused on the plant and use exact transparent plant imagery in the
+  propagation and important blocks.
 
 ## Local Files
 
