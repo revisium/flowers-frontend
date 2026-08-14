@@ -6869,8 +6869,8 @@ const allCollectionPlants: readonly CollectionPlant[] = [
         variants: profileVariants(
           ['My Tradescantia collection', 'Моя коллекция традесканций'],
           [
-            'These plants began as small cuttings with distinctly different leaves. The gallery shows how each one can look as a mature, full potted plant.',
-            'Эти растения начинались с маленьких черенков с совершенно разными листьями. В галерее показано, как каждый из них может выглядеть взрослым пышным растением в горшке.',
+            'Tradescantias can look completely different while sharing the same lively growth and graceful cascading habit. My collection brings together green, silver, burgundy, pink and variegated foliage, each with its own distinctive pattern.',
+            'Традесканции могут выглядеть совершенно по-разному, сохраняя живой рост и изящный каскад побегов. В моей коллекции собралась зелёная, серебристая, бордовая, розовая и пёстрая листва — каждая со своим неповторимым рисунком.',
           ],
           [
             '/plant-profile/tradescantia-variants/dark-broad.webp',
@@ -6895,7 +6895,7 @@ const allCollectionPlants: readonly CollectionPlant[] = [
           ],
           [
             '/plant-profile/tradescantia-variants/variegated.webp',
-            ['Variegated trailing form', 'Вариегатная ампельная форма'],
+            ['Variegated gibasis', 'Гибазис вариегатный'],
           ],
           [
             '/plant-profile/tradescantia-variants/dark-green-striped.webp',
@@ -6909,6 +6909,10 @@ const allCollectionPlants: readonly CollectionPlant[] = [
           [
             '/plant-profile/tradescantia-variants/sillamontana.webp',
             ['T. sillamontana', 'Силламонтана'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/sillamontana-variegated.webp',
+            ['Variegated T. sillamontana', 'Силламонтана вариегатная'],
           ],
           [
             '/plant-profile/tradescantia-variants/hijau-bari.webp',
@@ -7069,8 +7073,8 @@ const allCollectionPlants: readonly CollectionPlant[] = [
         variants: profileVariants(
           ['My Callisia collection', 'Моя коллекция каллизий'],
           [
-            'These forms began as small rooted shoots. The gallery shows how their different leaf colours look in mature, full pots.',
-            'Эти формы начинались с маленьких укоренённых ростков. В галерее показано, как их разная окраска выглядит во взрослых пышных горшках.',
+            'Callisias share their miniature leaves and soft cascading growth, yet every form plays with colour in its own way. My collection ranges from calm green to luminous gold and delicate pink shades.',
+            'Каллизии объединяют миниатюрные листья и мягкие ниспадающие побеги, но каждая форма по-своему играет цветом. В моей коллекции оттенки переходят от спокойной зелени к сияющему золоту и нежным розовым тонам.',
           ],
           ['/plant-profile/callisia-variants/classic.webp', ['Classic', 'Классическая']],
           ['/plant-profile/callisia-variants/gold.webp', ['Gold', 'Голд']],
