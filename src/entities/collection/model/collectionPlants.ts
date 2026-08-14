@@ -765,10 +765,22 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ["Syngonium 'Iron Brown'", 'Сингониум Айрон Браун'],
     syngoniumCollectionProfile(
       "Syngonium podophyllum 'Iron Brown'",
-      ['smoky olive-brown colour with muted bronze undertones', 'дымчато-оливковая окраска с приглушённым бронзовым оттенком'],
-      ['My plant began as one modest dark shoot. I am gradually rooting its tops back into the pot so it can become an informal layered bush without losing its deep colour.', 'Моё растение начиналось с одного скромного тёмного побега. Я постепенно укореняю его верхушки обратно в горшок, чтобы получить свободный многоярусный куст и сохранить глубокую окраску.'],
-      ['Iron Brown is a dark-leaved arrowhead vine whose mature foliage combines olive, cocoa and bronze tones. Its restrained colour and softly quilted leaves make it quieter than bright variegated syngoniums.', 'Айрон Браун — темнолистная лиана со стреловидными листьями, в окраске которых сочетаются оливковые, шоколадные и бронзовые тона. Сдержанный цвет и мягко фактурные листья отличают её от ярких пестролистных сингониумов.'],
-      { importantImage: '/plant-profile/syngonium-iron-brown-important.webp', propagationImage: '/plant-profile/syngonium-iron-brown-propagation.webp' },
+      [
+        'smoky olive-brown colour with muted bronze undertones',
+        'дымчато-оливковая окраска с приглушённым бронзовым оттенком',
+      ],
+      [
+        'My plant began as one modest dark shoot. I am gradually rooting its tops back into the pot so it can become an informal layered bush without losing its deep colour.',
+        'Моё растение начиналось с одного скромного тёмного побега. Я постепенно укореняю его верхушки обратно в горшок, чтобы получить свободный многоярусный куст и сохранить глубокую окраску.',
+      ],
+      [
+        'Iron Brown is a dark-leaved arrowhead vine whose mature foliage combines olive, cocoa and bronze tones. Its restrained colour and softly quilted leaves make it quieter than bright variegated syngoniums.',
+        'Айрон Браун — темнолистная лиана со стреловидными листьями, в окраске которых сочетаются оливковые, шоколадные и бронзовые тона. Сдержанный цвет и мягко фактурные листья отличают её от ярких пестролистных сингониумов.',
+      ],
+      {
+        importantImage: '/plant-profile/syngonium-iron-brown-important.webp',
+        propagationImage: '/plant-profile/syngonium-iron-brown-propagation.webp',
+      },
     ),
   ),
   collectionPlant(
@@ -778,10 +790,22 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ["Syngonium 'Mottled'", 'Сингониум Мотлед'],
     syngoniumCollectionProfile(
       "Syngonium podophyllum 'Mottled'",
-      ['dense, non-repeating lime-and-green marbling', 'густой неповторяющийся лаймово-зелёный мраморный рисунок'],
-      ['The young plant already shows a different pattern on every leaf. I want to build its future crown from several cuttings while keeping a few longer, freer stems.', 'У молодого растения уже нет двух одинаковых листьев. Будущую крону я хочу собрать из нескольких черенков, сохранив пару более длинных свободных побегов.'],
-      ['Mottled is valued for arrowhead leaves covered with irregular lime speckles, strokes and green islands. Light and leaf age change the balance of the pattern, so the whole plant looks lively rather than uniform.', 'Мотлед ценят за стреловидные листья с хаотичными лаймовыми крапинами, штрихами и зелёными островками. Свет и возраст листа меняют рисунок, поэтому весь куст выглядит живым и неоднородным.'],
-      { importantImage: '/plant-profile/syngonium-mottled-important.webp', propagationImage: '/plant-profile/syngonium-mottled-propagation.webp' },
+      [
+        'dense, non-repeating lime-and-green marbling',
+        'густой неповторяющийся лаймово-зелёный мраморный рисунок',
+      ],
+      [
+        'The young plant already shows a different pattern on every leaf. I want to build its future crown from several cuttings while keeping a few longer, freer stems.',
+        'У молодого растения уже нет двух одинаковых листьев. Будущую крону я хочу собрать из нескольких черенков, сохранив пару более длинных свободных побегов.',
+      ],
+      [
+        'Mottled is valued for arrowhead leaves covered with irregular lime speckles, strokes and green islands. Light and leaf age change the balance of the pattern, so the whole plant looks lively rather than uniform.',
+        'Мотлед ценят за стреловидные листья с хаотичными лаймовыми крапинами, штрихами и зелёными островками. Свет и возраст листа меняют рисунок, поэтому весь куст выглядит живым и неоднородным.',
+      ],
+      {
+        importantImage: '/plant-profile/syngonium-mottled-important.webp',
+        propagationImage: '/plant-profile/syngonium-mottled-propagation.webp',
+      },
     ),
   ),
   collectionPlant(
@@ -791,10 +815,22 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ["Syngonium 'Lime Soda'", 'Сингониум Лайм Сода'],
     syngoniumCollectionProfile(
       "Syngonium podophyllum 'Lime Soda'",
-      ['fresh lime colour and delicate rosy veins on pale young leaves', 'свежая лаймовая окраска и нежные розоватые жилки на светлых молодых листьях'],
-      ['I am letting this light little plant gain strength before its first shaping. Later, rooted tops will return to the same pot and form an airy lime crown.', 'Я даю этому светлому малышу набраться сил до первой формировки. Позже укоренённые верхушки вернутся в тот же горшок и соберут воздушную лаймовую крону.'],
-      ['Lime Soda has luminous yellow-green foliage: young leaves can show a soft pink flush along the veins while older leaves settle into deeper green. The changing tones give the plant depth even without strong variegation.', 'У Лайм Соды светящаяся жёлто-зелёная листва: на молодых листьях вдоль жилок может появляться нежный розовый оттенок, а старые становятся глубже зелёными. Смена тонов придаёт кусту объём даже без контрастной вариегатности.'],
-      { importantImage: '/plant-profile/syngonium-lime-soda-important.webp', propagationImage: '/plant-profile/syngonium-lime-soda-propagation.webp' },
+      [
+        'fresh lime colour and delicate rosy veins on pale young leaves',
+        'свежая лаймовая окраска и нежные розоватые жилки на светлых молодых листьях',
+      ],
+      [
+        'I am letting this light little plant gain strength before its first shaping. Later, rooted tops will return to the same pot and form an airy lime crown.',
+        'Я даю этому светлому малышу набраться сил до первой формировки. Позже укоренённые верхушки вернутся в тот же горшок и соберут воздушную лаймовую крону.',
+      ],
+      [
+        'Lime Soda has luminous yellow-green foliage: young leaves can show a soft pink flush along the veins while older leaves settle into deeper green. The changing tones give the plant depth even without strong variegation.',
+        'У Лайм Соды светящаяся жёлто-зелёная листва: на молодых листьях вдоль жилок может появляться нежный розовый оттенок, а старые становятся глубже зелёными. Смена тонов придаёт кусту объём даже без контрастной вариегатности.',
+      ],
+      {
+        importantImage: '/plant-profile/syngonium-lime-soda-important.webp',
+        propagationImage: '/plant-profile/syngonium-lime-soda-propagation.webp',
+      },
     ),
   ),
   collectionPlant(
@@ -804,10 +840,22 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ['Eared syngonium', 'Сингониум Ауритум'],
     syngoniumCollectionProfile(
       'Syngonium auritum',
-      ['compound leaves formed by one large central and two smaller lateral leaflets', 'сложные листья из одной крупной центральной и двух меньших боковых пластинок'],
-      ['Each petiole carries one distinctive three-part leaf: all three separate leaflets meet at a shared junction. I will root several tops together while keeping these junctions visible in the loose crown.', 'Каждый черешок несёт один характерный тройчатый лист: три отдельные листовые пластинки сходятся в общей точке. Я укореню несколько верхушек вместе, сохранив эти соединения хорошо заметными в свободной кроне.'],
-      ['My Syngonium auritum is recognisable by its compound trifoliate foliage. A single petiole ends in three separate glossy green leaflets: one large upright central leaflet and two smaller lateral ones, each with a softer lime zone along its midrib.', 'Мой Сингониум Ауритум узнаваем по сложным тройчатым листьям. Один черешок заканчивается тремя отдельными глянцевыми зелёными пластинками: крупной вертикальной центральной и двумя меньшими боковыми, у каждой из которых вдоль жилки проходит мягкая лаймовая зона.'],
-      { importantImage: '/plant-profile/syngonium-auritum-important.webp', propagationImage: '/plant-profile/syngonium-auritum-propagation.webp' },
+      [
+        'compound leaves formed by one large central and two smaller lateral leaflets',
+        'сложные листья из одной крупной центральной и двух меньших боковых пластинок',
+      ],
+      [
+        'Each petiole carries one distinctive three-part leaf: all three separate leaflets meet at a shared junction. I will root several tops together while keeping these junctions visible in the loose crown.',
+        'Каждый черешок несёт один характерный тройчатый лист: три отдельные листовые пластинки сходятся в общей точке. Я укореню несколько верхушек вместе, сохранив эти соединения хорошо заметными в свободной кроне.',
+      ],
+      [
+        'My Syngonium auritum is recognisable by its compound trifoliate foliage. A single petiole ends in three separate glossy green leaflets: one large upright central leaflet and two smaller lateral ones, each with a softer lime zone along its midrib.',
+        'Мой Сингониум Ауритум узнаваем по сложным тройчатым листьям. Один черешок заканчивается тремя отдельными глянцевыми зелёными пластинками: крупной вертикальной центральной и двумя меньшими боковыми, у каждой из которых вдоль жилки проходит мягкая лаймовая зона.',
+      ],
+      {
+        importantImage: '/plant-profile/syngonium-auritum-important.webp',
+        propagationImage: '/plant-profile/syngonium-auritum-propagation.webp',
+      },
     ),
   ),
   collectionPlant(
@@ -817,10 +865,22 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ["Syngonium 'Pink Splash'", 'Сингониум Пинк Сплэш'],
     syngoniumCollectionProfile(
       "Syngonium podophyllum 'Pink Splash'",
-      ['scattered pink splashes and freckles over a green base', 'разбросанные розовые мазки и крапины по зелёному фону'],
-      ['The original vine is still rather loose, but its leaves already vary beautifully. I will root selected nodes together instead of forcing a perfectly round crown.', 'Исходная лиана пока довольно свободная, но листья уже красиво отличаются друг от друга. Я укореню выбранные узлы вместе, не пытаясь сделать крону идеально круглой.'],
-      ['Pink Splash produces an unpredictable pink pattern: one leaf may carry only a few freckles while the next opens with a broad blush. Good light supports the colour, but every new leaf remains a surprise.', 'Пинк Сплэш даёт непредсказуемый розовый рисунок: на одном листе бывает лишь несколько крапин, а следующий раскрывается с широким румянцем. Хороший свет поддерживает окраску, но каждый новый лист остаётся сюрпризом.'],
-      { importantImage: '/plant-profile/syngonium-pink-splash-important.webp', propagationImage: '/plant-profile/syngonium-pink-splash-propagation.webp' },
+      [
+        'scattered pink splashes and freckles over a green base',
+        'разбросанные розовые мазки и крапины по зелёному фону',
+      ],
+      [
+        'The original vine is still rather loose, but its leaves already vary beautifully. I will root selected nodes together instead of forcing a perfectly round crown.',
+        'Исходная лиана пока довольно свободная, но листья уже красиво отличаются друг от друга. Я укореню выбранные узлы вместе, не пытаясь сделать крону идеально круглой.',
+      ],
+      [
+        'Pink Splash produces an unpredictable pink pattern: one leaf may carry only a few freckles while the next opens with a broad blush. Good light supports the colour, but every new leaf remains a surprise.',
+        'Пинк Сплэш даёт непредсказуемый розовый рисунок: на одном листе бывает лишь несколько крапин, а следующий раскрывается с широким румянцем. Хороший свет поддерживает окраску, но каждый новый лист остаётся сюрпризом.',
+      ],
+      {
+        importantImage: '/plant-profile/syngonium-pink-splash-important.webp',
+        propagationImage: '/plant-profile/syngonium-pink-splash-propagation.webp',
+      },
     ),
   ),
   collectionPlant(
@@ -830,10 +890,22 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ["Syngonium 'Silver Pearl'", 'Сингониум Сильвер Перл'],
     syngoniumCollectionProfile(
       "Syngonium podophyllum 'Silver Pearl'",
-      ['soft pearl-silver surface with narrow green margins', 'мягкая жемчужно-серебристая поверхность с узкой зелёной каймой'],
-      ['This plant arrived as a few pale leaves on long petioles. A group of rooted tops should make it fuller while leaving enough space for the silver blades to remain readable.', 'Растение досталось мне с несколькими светлыми листьями на длинных черешках. Группа укоренённых верхушек сделает его пышнее, но оставит достаточно воздуха, чтобы серебристые пластины не терялись.'],
-      ['Silver Pearl is a calm, luminous cultivar with matte silvery leaves, fine green edging and greener young growth. Its beauty is in subtle texture rather than dramatic patches.', 'Сильвер Перл — спокойный светящийся сорт с матовыми серебристыми листьями, тонкой зелёной каймой и более зелёным молодым приростом. Его красота строится на тонкой фактуре, а не на резких пятнах.'],
-      { importantImage: '/plant-profile/syngonium-silver-pearl-important.webp', propagationImage: '/plant-profile/syngonium-silver-pearl-propagation.webp' },
+      [
+        'soft pearl-silver surface with narrow green margins',
+        'мягкая жемчужно-серебристая поверхность с узкой зелёной каймой',
+      ],
+      [
+        'This plant arrived as a few pale leaves on long petioles. A group of rooted tops should make it fuller while leaving enough space for the silver blades to remain readable.',
+        'Растение досталось мне с несколькими светлыми листьями на длинных черешках. Группа укоренённых верхушек сделает его пышнее, но оставит достаточно воздуха, чтобы серебристые пластины не терялись.',
+      ],
+      [
+        'Silver Pearl is a calm, luminous cultivar with matte silvery leaves, fine green edging and greener young growth. Its beauty is in subtle texture rather than dramatic patches.',
+        'Сильвер Перл — спокойный светящийся сорт с матовыми серебристыми листьями, тонкой зелёной каймой и более зелёным молодым приростом. Его красота строится на тонкой фактуре, а не на резких пятнах.',
+      ],
+      {
+        importantImage: '/plant-profile/syngonium-silver-pearl-important.webp',
+        propagationImage: '/plant-profile/syngonium-silver-pearl-propagation.webp',
+      },
     ),
   ),
   collectionPlant(
@@ -843,10 +915,22 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ["Syngonium 'White Panda'", 'Сингониум Панда белая'],
     syngoniumCollectionProfile(
       "Syngonium podophyllum 'White Panda'",
-      ['large irregular dark-green sectors over milky mint foliage', 'крупные хаотичные тёмно-зелёные секторы по молочно-мятной листве'],
-      ['The pale plant is still compact, so I am especially careful not to rush it with water. I will keep greener shoots in the future bush to support steady growth.', 'Светлое растение пока компактное, поэтому я особенно не тороплю его лишним поливом. В будущем кусте я сохраню более зелёные побеги, чтобы поддерживать стабильный рост.'],
-      ['White Panda combines very pale mint leaves with strong green sectors and speckling. Because highly pale leaves contain less chlorophyll, a balanced mix of light and greener foliage is important.', 'Панда белая сочетает очень светлые мятные листья с контрастными зелёными секторами и крапом. Поскольку в сильно осветлённых участках меньше хлорофилла, важны баланс света и наличие более зелёной листвы.'],
-      { importantImage: '/plant-profile/syngonium-white-panda-important.webp', propagationImage: '/plant-profile/syngonium-white-panda-propagation.webp' },
+      [
+        'large irregular dark-green sectors over milky mint foliage',
+        'крупные хаотичные тёмно-зелёные секторы по молочно-мятной листве',
+      ],
+      [
+        'The pale plant is still compact, so I am especially careful not to rush it with water. I will keep greener shoots in the future bush to support steady growth.',
+        'Светлое растение пока компактное, поэтому я особенно не тороплю его лишним поливом. В будущем кусте я сохраню более зелёные побеги, чтобы поддерживать стабильный рост.',
+      ],
+      [
+        'White Panda combines very pale mint leaves with strong green sectors and speckling. Because highly pale leaves contain less chlorophyll, a balanced mix of light and greener foliage is important.',
+        'Панда белая сочетает очень светлые мятные листья с контрастными зелёными секторами и крапом. Поскольку в сильно осветлённых участках меньше хлорофилла, важны баланс света и наличие более зелёной листвы.',
+      ],
+      {
+        importantImage: '/plant-profile/syngonium-white-panda-important.webp',
+        propagationImage: '/plant-profile/syngonium-white-panda-propagation.webp',
+      },
     ),
   ),
   collectionPlant(
@@ -856,10 +940,22 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ["Syngonium 'Confetti Milk'", 'Сингониум Конфетти Милк'],
     syngoniumCollectionProfile(
       "Syngonium podophyllum 'Confetti Milk'",
-      ['milky mint base scattered with fine dusty-pink confetti', 'молочно-мятный фон с мелким пыльно-розовым конфетти'],
-      ['The young leaves are already softly speckled rather than loudly variegated. I plan to preserve that delicate look in a loose bush made from several cuttings.', 'Молодые листья уже покрыты мягким крапом без слишком резкой пестроты. Я хочу сохранить эту деликатность в свободном кусте из нескольких черенков.'],
-      ['Confetti Milk has pale creamy-mint foliage dusted with fine pink marks and occasional larger splashes. Greener and paler leaves together create its characteristic milky depth.', 'У Конфетти Милк светлая кремово-мятная листва с мелкими розовыми отметинами и редкими крупными мазками. Сочетание более зелёных и более светлых листьев создаёт характерную молочную глубину.'],
-      { importantImage: '/plant-profile/syngonium-confetti-milk-important.webp', propagationImage: '/plant-profile/syngonium-confetti-milk-propagation.webp' },
+      [
+        'milky mint base scattered with fine dusty-pink confetti',
+        'молочно-мятный фон с мелким пыльно-розовым конфетти',
+      ],
+      [
+        'The young leaves are already softly speckled rather than loudly variegated. I plan to preserve that delicate look in a loose bush made from several cuttings.',
+        'Молодые листья уже покрыты мягким крапом без слишком резкой пестроты. Я хочу сохранить эту деликатность в свободном кусте из нескольких черенков.',
+      ],
+      [
+        'Confetti Milk has pale creamy-mint foliage dusted with fine pink marks and occasional larger splashes. Greener and paler leaves together create its characteristic milky depth.',
+        'У Конфетти Милк светлая кремово-мятная листва с мелкими розовыми отметинами и редкими крупными мазками. Сочетание более зелёных и более светлых листьев создаёт характерную молочную глубину.',
+      ],
+      {
+        importantImage: '/plant-profile/syngonium-confetti-milk-important.webp',
+        propagationImage: '/plant-profile/syngonium-confetti-milk-propagation.webp',
+      },
     ),
   ),
   collectionPlant(
@@ -869,10 +965,22 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ["Syngonium 'Flexid'", 'Сингониум Флексид'],
     syngoniumCollectionProfile(
       "Syngonium podophyllum 'Flexid'",
-      ['muted salmon, beige-green and olive marbling', 'приглушённая лососёвая, бежево-зелёная и оливковая мраморность'],
-      ['This plant changes noticeably from leaf to leaf: some blades are warm and pink, others remain olive. I will let that uneven rhythm guide the shape of the future bush.', 'Это растение заметно меняется от листа к листу: одни пластины тёплые и розоватые, другие остаются оливковыми. Этому неровному ритму я позволю определить форму будущего куста.'],
-      ['Flexid is a warm-toned syngonium with dusty salmon, beige and olive-green areas flowing into one another. Its subdued palette looks especially natural when leaves of different ages are kept together.', 'Флексид — сингониум тёплых тонов, в котором пыльно-лососёвые, бежевые и оливково-зелёные участки переходят друг в друга. Сдержанная палитра особенно естественно выглядит, когда в кусте остаются листья разного возраста.'],
-      { importantImage: '/plant-profile/syngonium-flexid-important.webp', propagationImage: '/plant-profile/syngonium-flexid-propagation.webp' },
+      [
+        'muted salmon, beige-green and olive marbling',
+        'приглушённая лососёвая, бежево-зелёная и оливковая мраморность',
+      ],
+      [
+        'This plant changes noticeably from leaf to leaf: some blades are warm and pink, others remain olive. I will let that uneven rhythm guide the shape of the future bush.',
+        'Это растение заметно меняется от листа к листу: одни пластины тёплые и розоватые, другие остаются оливковыми. Этому неровному ритму я позволю определить форму будущего куста.',
+      ],
+      [
+        'Flexid is a warm-toned syngonium with dusty salmon, beige and olive-green areas flowing into one another. Its subdued palette looks especially natural when leaves of different ages are kept together.',
+        'Флексид — сингониум тёплых тонов, в котором пыльно-лососёвые, бежевые и оливково-зелёные участки переходят друг в друга. Сдержанная палитра особенно естественно выглядит, когда в кусте остаются листья разного возраста.',
+      ],
+      {
+        importantImage: '/plant-profile/syngonium-flexid-important.webp',
+        propagationImage: '/plant-profile/syngonium-flexid-propagation.webp',
+      },
     ),
   ),
   collectionPlant(
@@ -882,10 +990,22 @@ export const collectionPlants: readonly CollectionPlant[] = [
     ["Syngonium 'Panda'", 'Сингониум Панда'],
     syngoniumCollectionProfile(
       "Syngonium podophyllum 'Panda'",
-      ['irregular silver-mint brush strokes over deep green', 'хаотичные серебристо-мятные мазки по глубокому зелёному фону'],
-      ['The current plant has only a few broad leaves, each marked differently. I will return rooted tops to its pot and keep the crown slightly sprawling rather than overly tidy.', 'Сейчас у растения всего несколько широких листьев, и каждый размечен по-своему. Я верну укоренённые верхушки в его горшок и сохраню крону немного раскидистой, а не чрезмерно аккуратной.'],
-      ['Panda has deep green arrowhead leaves crossed by irregular silver-mint strokes near the veins. Unlike White Panda, the green field remains dominant and gives the plant a darker, more graphic character.', 'У Панды глубокие зелёные стреловидные листья с хаотичными серебристо-мятными мазками возле жилок. В отличие от Панды белой, зелёный фон остаётся главным и придаёт растению более тёмный графичный характер.'],
-      { importantImage: '/plant-profile/syngonium-panda-important.webp', propagationImage: '/plant-profile/syngonium-panda-propagation.webp' },
+      [
+        'irregular silver-mint brush strokes over deep green',
+        'хаотичные серебристо-мятные мазки по глубокому зелёному фону',
+      ],
+      [
+        'The current plant has only a few broad leaves, each marked differently. I will return rooted tops to its pot and keep the crown slightly sprawling rather than overly tidy.',
+        'Сейчас у растения всего несколько широких листьев, и каждый размечен по-своему. Я верну укоренённые верхушки в его горшок и сохраню крону немного раскидистой, а не чрезмерно аккуратной.',
+      ],
+      [
+        'Panda has deep green arrowhead leaves crossed by irregular silver-mint strokes near the veins. Unlike White Panda, the green field remains dominant and gives the plant a darker, more graphic character.',
+        'У Панды глубокие зелёные стреловидные листья с хаотичными серебристо-мятными мазками возле жилок. В отличие от Панды белой, зелёный фон остаётся главным и придаёт растению более тёмный графичный характер.',
+      ],
+      {
+        importantImage: '/plant-profile/syngonium-panda-important.webp',
+        propagationImage: '/plant-profile/syngonium-panda-propagation.webp',
+      },
     ),
   ),
   collectionPlant(
@@ -1908,7 +2028,10 @@ export const collectionPlants: readonly CollectionPlant[] = [
         "'Boncel', often sold as Starfish, is a compact form of Dracaena angolensis with rigid cylindrical leaves arranged in a spreading fan. The older familiar botanical name is Sansevieria cylindrica 'Boncel'.",
         '«Бонсел», часто продаваемая как Старфиш, — компактная форма Dracaena angolensis с жёсткими цилиндрическими листьями, собранными в раскидистый веер. Прежнее привычное ботаническое название — Sansevieria cylindrica «Boncel».',
       ],
-      plantType: ['Evergreen rhizomatous leaf succulent', 'Вечнозелёный корневищный листовой суккулент'],
+      plantType: [
+        'Evergreen rhizomatous leaf succulent',
+        'Вечнозелёный корневищный листовой суккулент',
+      ],
       problems: [
         [
           'Soft yellow leaf bases — stop watering and inspect the rhizome for rot.',
@@ -2005,7 +2128,10 @@ export const collectionPlants: readonly CollectionPlant[] = [
         "'Moonshine' is a silver-leaved cultivar of Dracaena trifasciata with broad upright blades in muted mint, sage and pale grey-green tones. It was formerly known as Sansevieria trifasciata 'Moonshine'.",
         '«Муншайн» — серебристолистный сорт Dracaena trifasciata с широкими вертикальными листьями приглушённых мятных, шалфейных и светло-серо-зелёных оттенков. Прежнее название — Sansevieria trifasciata «Moonshine».',
       ],
-      plantType: ['Evergreen rhizomatous leaf succulent', 'Вечнозелёный корневищный листовой суккулент'],
+      plantType: [
+        'Evergreen rhizomatous leaf succulent',
+        'Вечнозелёный корневищный листовой суккулент',
+      ],
       problems: [
         [
           'Soft yellow leaf bases — stop watering and inspect the roots and rhizome for rot.',
@@ -3044,7 +3170,10 @@ export const collectionPlants: readonly CollectionPlant[] = [
         'С весны до начала осени подкармливайте раз в четыре недели сбалансированным удобрением в четвертной или половинной дозировке. Не удобряйте сухое, ослабленное или недавно пересаженное растение.',
       ],
       growth: ['Moderate', 'Умеренный'],
-      height: ['Trailing stems can reach about 50–100 cm', 'Свисающие побеги могут достигать примерно 50–100 см'],
+      height: [
+        'Trailing stems can reach about 50–100 cm',
+        'Свисающие побеги могут достигать примерно 50–100 см',
+      ],
       humidity: [
         'Average room humidity is tolerated, while 50–70% supports steadier growth. Gentle airflow is essential; routine misting is unnecessary.',
         'Растение переносит обычную комнатную влажность, а уровень 50–70% поддерживает более стабильный рост. Важно лёгкое движение воздуха; регулярные опрыскивания не нужны.',
@@ -6563,10 +6692,7 @@ export const collectionPlants: readonly CollectionPlant[] = [
           ],
           [
             '/plant-profile/tradescantia-variants/purpurea.webp',
-            [
-              "Tradescantia pallida 'Purpurea' (Purple Heart)",
-              "Традесканция бледная 'Purpurea'",
-            ],
+            ["Tradescantia pallida 'Purpurea' (Purple Heart)", "Традесканция бледная 'Purpurea'"],
           ],
           [
             '/plant-profile/tradescantia-variants/zebrina-burgundy.webp',
@@ -7245,7 +7371,10 @@ export const collectionPlants: readonly CollectionPlant[] = [
         'Hatiora salicornoides is a densely branching epiphytic cactus whose narrow glossy segments resemble tiny bottles or coral branches. The upright young growth gradually arches outward and creates a loose sculptural crown.',
         'Хатиора солеросовидная — густо ветвящийся эпифитный кактус, чьи узкие глянцевые членики напоминают маленькие бутылочки или ветви коралла. Молодые побеги растут вверх, а затем постепенно отклоняются наружу и образуют свободную скульптурную крону.',
       ],
-      plantType: ['Evergreen epiphytic or lithophytic cactus', 'Вечнозелёный эпифитный или литофитный кактус'],
+      plantType: [
+        'Evergreen epiphytic or lithophytic cactus',
+        'Вечнозелёный эпифитный или литофитный кактус',
+      ],
       problems: [
         [
           'Soft yellowing segments or a dark stem base — stop watering and inspect for rot.',
@@ -7608,7 +7737,10 @@ export const collectionPlants: readonly CollectionPlant[] = [
         'С весны до начала осени подкармливайте раз в 3–4 недели половинной дозой удобрения для сенполий или цветущих растений. Избыток азота ослабляет окраску и цветение.',
       ],
       growth: ['Fast in warmth and good light', 'Быстрый в тепле и при хорошем освещении'],
-      height: ['Rosettes 10–20 cm; stolons trail farther', 'Розетки 10–20 см; столоны свисают ниже'],
+      height: [
+        'Rosettes 10–20 cm; stolons trail farther',
+        'Розетки 10–20 см; столоны свисают ниже',
+      ],
       humidity: [
         'Aim for about 50–70% humidity with gentle airflow. Do not mist the velvety leaves: trapped droplets can leave marks or encourage rot.',
         'Поддерживайте влажность около 50–70% и лёгкое движение воздуха. Не опрыскивайте бархатистые листья: задержавшиеся капли оставляют пятна и могут вызвать гниль.',
@@ -7883,14 +8015,8 @@ export const collectionPlants: readonly CollectionPlant[] = [
               '/plant-profile/gloxinia-variants/16-garnet-flame.webp',
               ['Garnet Flame', 'Гранатовое Пламя'],
             ],
-            [
-              '/plant-profile/gloxinia-variants/17-snow-veil.webp',
-              ['Snow Veil', 'Снежная Вуаль'],
-            ],
-            [
-              '/plant-profile/gloxinia-variants/18-pink-opal.webp',
-              ['Pink Opal', 'Розовый Опал'],
-            ],
+            ['/plant-profile/gloxinia-variants/17-snow-veil.webp', ['Snow Veil', 'Снежная Вуаль']],
+            ['/plant-profile/gloxinia-variants/18-pink-opal.webp', ['Pink Opal', 'Розовый Опал']],
             [
               '/plant-profile/gloxinia-variants/19-lavender-lace.webp',
               ['Lavender Lace', 'Лавандовое Кружево'],
@@ -8344,7 +8470,10 @@ export const collectionPlants: readonly CollectionPlant[] = [
         'Весной и летом подкармливайте раз в месяц удобрением для кактусов в четвертной дозировке. В прохладе и при слабом освещении подкормки не нужны.',
       ],
       growth: ['Moderate, faster in bright light', 'Умеренный, на ярком свету более активный'],
-      height: ['Trailing stems usually 30–60 cm indoors', 'Свисающие побеги обычно 30–60 см в комнате'],
+      height: [
+        'Trailing stems usually 30–60 cm indoors',
+        'Свисающие побеги обычно 30–60 см в комнате',
+      ],
       humidity: [
         'Normal dry room air is suitable. Avoid routine misting and keep air moving gently around the crown.',
         'Подходит обычный сухой комнатный воздух. Регулярные опрыскивания не нужны; обеспечьте лёгкое движение воздуха вокруг кроны.',
@@ -8793,6 +8922,105 @@ export const collectionPlants: readonly CollectionPlant[] = [
       watering: [
         'Water thoroughly when the top 1–2 cm of the mix begins to dry. Keep it lightly and evenly moist, but never waterlogged, and do not allow the root ball to dry completely for long.',
         'Обильно поливайте, когда верхние 1–2 см смеси начинают подсыхать. Поддерживайте лёгкую равномерную влажность без заболачивания и не оставляйте ком полностью сухим надолго.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'asparagaceae',
+    'asparagus-densiflorus-sprengeri',
+    '/plants/asparagus-densiflorus-sprengeri-home-photo.webp',
+    ['Sprenger asparagus', 'Аспарагус Шпренгера'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/asparagus-densiflorus-sprengeri-important.webp',
+        propagationImage: '/plant-profile/asparagus-densiflorus-sprengeri-propagation.webp',
+      },
+      difficulty: 2,
+      facts: [
+        [
+          'Despite its airy fern-like appearance, this plant is a flowering relative of edible asparagus rather than a true fern.',
+          'Its needle-like “leaves” are cladodes: flattened green stem parts that perform photosynthesis.',
+          'Mature plants can produce small white flowers followed by round red berries.',
+        ],
+        [
+          'Несмотря на воздушный облик папоротника, это цветковый родственник съедобной спаржи, а не настоящий папоротник.',
+          'Игольчатые «листья» — это кладодии: уплощённые зелёные части стебля, выполняющие фотосинтез.',
+          'Взрослое растение может образовывать мелкие белые цветки, а затем круглые красные ягоды.',
+        ],
+      ],
+      family: ['Asparagus family (Asparagaceae)', 'Спаржевые (Asparagaceae)'],
+      feeding: [
+        'Feed every three to four weeks from spring to early autumn with a balanced foliage fertiliser at half strength. Do not feed dry roots.',
+        'С весны до начала осени подкармливайте раз в три-четыре недели половинной дозой сбалансированного удобрения для декоративно-лиственных. Не удобряйте сухие корни.',
+      ],
+      growth: ['Moderate to fast', 'Умеренный или быстрый'],
+      height: ['Shoots usually 60–150 cm indoors', 'Побеги обычно 60–150 см в комнате'],
+      humidity: [
+        'Average to moderately high room humidity is suitable. Keep away from hot radiators; prolonged dry air and drought cause cladodes to brown and shed.',
+        'Подходит обычная или умеренно повышенная комнатная влажность. Держите растение подальше от горячих батарей: длительная сухость воздуха и грунта вызывает побурение и осыпание кладодиев.',
+      ],
+      important: [
+        'Older stems may carry small recurved thorns, and the red berries are harmful if eaten. Wear gloves when untangling or pruning mature shoots and keep fruits away from children and pets.',
+        'На старых побегах могут появляться небольшие загнутые колючки, а красные ягоды вредны при проглатывании. Разбирайте и обрезайте взрослые побеги в перчатках, держите плоды подальше от детей и животных.',
+      ],
+      latinName: 'Asparagus densiflorus Sprengeri Group',
+      light: [
+        'Give bright filtered light or light partial shade with gentle morning or evening sun. Harsh midday rays can bleach and scorch the fine cladodes.',
+        'Обеспечьте яркий рассеянный свет или лёгкую полутень с мягким утренним либо вечерним солнцем. Жёсткие полуденные лучи обесцвечивают и обжигают тонкие кладодии.',
+      ],
+      notes: [
+        'The clump has a dense upright centre and several long stems that arch freely to one side. This asymmetric fountain-and-cascade shape is natural for Sprenger asparagus and will become fuller as new shoots emerge from the base.',
+        'У куста густая вертикальная середина и несколько длинных побегов, свободно изгибающихся в одну сторону. Такая асимметричная фонтанно-каскадная форма естественна для аспарагуса Шпренгера и станет пышнее по мере появления новых побегов от основания.',
+      ],
+      origin: ['Mozambique to South Africa', 'От Мозамбика до Южной Африки'],
+      overview: [
+        'Sprenger asparagus is a tuberous-rooted evergreen perennial with long arching or trailing stems clothed in clusters of narrow green cladodes. Its loose airy crown works especially well on a stand or in a hanging container.',
+        'Аспарагус Шпренгера — вечнозелёный многолетник с клубневидными запасающими корнями и длинными дуговидными или свисающими побегами, покрытыми пучками узких зелёных кладодиев. Его свободная воздушная крона особенно выразительна на подставке или в подвесном горшке.',
+      ],
+      plantType: [
+        'Tuberous-rooted evergreen perennial',
+        'Вечнозелёный многолетник с клубневидными корнями',
+      ],
+      problems: [
+        [
+          'Yellow soft growth or dark roots — reduce watering and inspect for rot.',
+          'Brown brittle cladodes and heavy shedding — check for drought, hot dry air or excess salts.',
+          'Pale stretched shoots — move gradually to brighter filtered light.',
+          'Fine webbing and pale speckling — isolate and inspect for spider mites.',
+        ],
+        [
+          'Жёлтый мягкий прирост или потемневшие корни — сократите полив и проверьте растение на гниль.',
+          'Сухие коричневые кладодии и сильное осыпание — проверьте пересушку, горячий сухой воздух и избыток солей.',
+          'Бледные вытянутые побеги — постепенно переставьте на более яркий рассеянный свет.',
+          'Тонкая паутина и светлый крап — изолируйте растение и проверьте на паутинного клеща.',
+        ],
+      ],
+      propagation: [
+        'During spring repotting, divide a mature clump so each section keeps several shoots, fine roots and some fleshy storage tubers. Plant at the original depth in a small pot, water lightly and keep in bright filtered light until growth resumes.',
+        'При весенней пересадке разделите взрослый куст так, чтобы у каждой части осталось несколько побегов, тонкие корни и часть мясистых запасающих клубней. Посадите на прежнюю глубину в небольшой горшок, слегка полейте и держите на ярком рассеянном свету до возобновления роста.',
+      ],
+      repotting: [
+        'Repot in spring when the dense roots and storage tubers crowd or distort the pot. Choose a stable container only one size larger and keep the crown at its previous level.',
+        'Пересаживайте весной, когда густые корни и запасающие клубни заполняют или деформируют горшок. Выбирайте устойчивую ёмкость лишь на размер больше и сохраняйте прежний уровень основания куста.',
+      ],
+      secondaryCare: [
+        ['Shaping and grooming', 'Формировка и уход'],
+        [
+          'Let healthy stems arch naturally and cut fully yellow, bare or damaged shoots cleanly at the base. Avoid shortening every tip into a rigid ball; removing an old stem entirely preserves the graceful habit.',
+          'Позвольте здоровым побегам изгибаться естественно, а полностью пожелтевшие, оголённые или повреждённые срезайте у основания. Не укорачивайте все концы до строгого шара: полное удаление старого побега лучше сохраняет изящный силуэт.',
+        ],
+      ],
+      soil: [
+        'Use an airy moisture-retentive mix of about 55% houseplant compost or coco, 25% fine bark and 20% perlite or pumice in a pot with drainage holes.',
+        'Используйте воздушную влагоёмкую смесь примерно из 55% грунта для комнатных растений или кокоса, 25% мелкой коры и 20% перлита либо пемзы в горшке с дренажными отверстиями.',
+      ],
+      temperature: [
+        'Keep at 16–26 °C, preferably above 10 °C in winter. Protect the fine growth and moist root ball from cold glass, draughts and frost.',
+        'Содержите при 16–26 °C, зимой желательно выше 10 °C. Защищайте нежный прирост и влажный корневой ком от холодного стекла, сквозняков и мороза.',
+      ],
+      watering: [
+        'Water thoroughly when the top 2–3 cm of mix has dried, then drain the saucer. Keep the root ball lightly and evenly moist during active growth, but never waterlogged; water less in winter.',
+        'Обильно поливайте после просыхания верхних 2–3 см грунта и сливайте воду из поддона. Во время активного роста поддерживайте лёгкую равномерную влажность без заболачивания, зимой поливайте реже.',
       ],
     }),
   ),
