@@ -118,13 +118,16 @@ derived from one source.
   from a catalog card. It renders an individual plant's localized entity data:
   title, taxonomy, photos, difficulty, practical care, and a note. Profiles can
   also opt into a reusable variants gallery for plants represented by several
-  colours or forms. The main photograph and every variant image open in the
-  same responsive lightbox; multi-image profiles provide wrapping previous and
-  next controls plus keyboard navigation, while single-image profiles retain a
-  simple enlarged view. When the main photograph depicts one of the named
-  variants, entity data links it to that variant's gallery position so the
-  lightbox uses the variant caption and does not repeat the image. The first
-  profile is the real Cissus rhombifolia record in `entities/collection`.
+  colours or forms. By default, the main photograph and every variant image open
+  in the same responsive lightbox; multi-image profiles provide wrapping
+  previous and next controls plus keyboard navigation, while single-image
+  profiles retain a simple enlarged view. A grouped overview photograph can opt
+  out of interaction and gallery counting when it illustrates the collection
+  rather than an individual plant, as in the Tradescantia profile. When the main
+  photograph depicts one of the named variants, entity data links it to that
+  variant's gallery position so the lightbox uses the variant caption and does
+  not repeat the image. The first profile is the real Cissus rhombifolia record
+  in `entities/collection`.
 - The reusable category detail modal frame and sections live in
   `ui/CategoryDetailModal`, `ui/CategoryHero`, `ui/CategoryInfoGrid`,
   `ui/CategoryCollectionSection`, `ui/InfoPanel`, and `ui/SproutIcon`.

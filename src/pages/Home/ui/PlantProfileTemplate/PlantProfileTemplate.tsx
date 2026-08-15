@@ -38,8 +38,10 @@ export const PlantProfileTemplate = ({
     variantImages[requestedMainImageVariantIndex] !== undefined
       ? requestedMainImageVariantIndex
       : null;
+  const includeMainImageInGallery =
+    plant.profileMainImageInteractive && mainImageVariantIndex === null;
   const galleryImages =
-    mainImageVariantIndex === null
+    includeMainImageInGallery
       ? [{ alt: plant.name[locale], src: plant.image }, ...variantImages]
       : variantImages;
 
@@ -66,7 +68,7 @@ export const PlantProfileTemplate = ({
           locale={locale}
           plant={plant}
           onImageOpen={(variantIndex) =>
-            setActiveImageIndex(variantIndex + (mainImageVariantIndex === null ? 1 : 0))
+            setActiveImageIndex(variantIndex + (includeMainImageInGallery ? 1 : 0))
           }
         />
         <ProfileCare locale={locale} plant={plant} />

@@ -35,6 +35,8 @@ export interface CollectionPlant {
   readonly name: Record<Locale, string>;
   readonly plantCount: number;
   readonly profile: CollectionPlantProfile;
+  readonly profileMainImageInteractive: boolean;
+  readonly showProfileImageBadge: boolean;
 }
 
 interface PlantProfileFact {
@@ -85,6 +87,13 @@ interface ProfileAssets {
   readonly variants?: PlantProfileVariants;
 }
 
+interface CollectionPlantOptions {
+  readonly countCover?: boolean;
+  readonly plantCount?: number;
+  readonly profileMainImageInteractive?: boolean;
+  readonly showProfileImageBadge?: boolean;
+}
+
 const localized = ([en, ru]: LocalizedPair): Record<Locale, string> => ({ en, ru });
 
 const careCards = (...cards: readonly CareDefinition[]): readonly PlantProfileCareCard[] =>
@@ -126,8 +135,25 @@ const collectionPlant = (
   image: string,
   name: LocalizedPair,
   profile: CollectionPlantProfile,
-  plantCount = 1 + (profile.variants?.items.length ?? 0),
-): CollectionPlant => ({ familyId, id, image, name: localized(name), plantCount, profile });
+  countOrOptions: number | CollectionPlantOptions = {},
+): CollectionPlant => {
+  const options =
+    typeof countOrOptions === 'number' ? { plantCount: countOrOptions } : countOrOptions;
+  const plantCount =
+    options.plantCount ??
+    (options.countCover === false ? 0 : 1) + (profile.variants?.items.length ?? 0);
+
+  return {
+    familyId,
+    id,
+    image,
+    name: localized(name),
+    plantCount,
+    profile,
+    profileMainImageInteractive: options.profileMainImageInteractive ?? true,
+    showProfileImageBadge: options.showProfileImageBadge ?? true,
+  };
+};
 
 const plantProfile = (
   care: readonly PlantProfileCareCard[],
@@ -6880,10 +6906,26 @@ const allCollectionPlants: readonly CollectionPlant[] = [
             '/plant-profile/tradescantia-variants/zebrina-silver.webp',
             ['Zebrina Burgundy — silver coloration', 'Зебрина Бургунди — серебристая окраска'],
           ],
-          ['/plant-profile/tradescantia-variants/green.webp', ['Green form', 'Зелёная форма']],
+          ['/plant-profile/tradescantia-variants/green.webp', ['Baby Bunny', 'Бэби Банни']],
           [
             '/plant-profile/tradescantia-variants/purpurea.webp',
             ['Pallida', 'Паллида'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/pallida-blue-sue.webp',
+            ['Pallida Blue Sue', 'Паллида Блю Сью'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/thai.webp',
+            ['Thai', 'Тайская'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/yellow-hill.webp',
+            ['Yellow Hill', 'Желтый холм'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/fluminensis.webp',
+            ['T. fluminensis', 'Приречная'],
           ],
           [
             '/plant-profile/tradescantia-variants/white-pinstripe.webp',
@@ -6891,28 +6933,28 @@ const allCollectionPlants: readonly CollectionPlant[] = [
           ],
           [
             '/plant-profile/tradescantia-variants/green-purple.webp',
-            ['Green-purple form', 'Зелёно-пурпурная форма'],
+            ['Green Rhoeo', 'Рео зеленый'],
           ],
           [
             '/plant-profile/tradescantia-variants/variegated.webp',
             ['Variegated gibasis', 'Гибазис вариегатный'],
           ],
           [
-            '/plant-profile/tradescantia-variants/dark-green-striped.webp',
-            ['Dark green striped form', 'Тёмно-зелёная полосатая форма'],
-          ],
-          [
             '/plant-profile/tradescantia-variants/white.webp',
             ['White Albiflora', 'Белая Альбифлора'],
           ],
-          ['/plant-profile/tradescantia-variants/gold.webp', ['Gold', 'Голд']],
+          ['/plant-profile/tradescantia-variants/gold.webp', ['Sitara Gold', 'Ситара Голд']],
           [
             '/plant-profile/tradescantia-variants/sillamontana.webp',
-            ['T. sillamontana', 'Силламонтана'],
+            ['T. sillamontana Velvet Hill', 'Силламонтана Вельвет хилл'],
           ],
           [
             '/plant-profile/tradescantia-variants/sillamontana-variegated.webp',
             ['Variegated T. sillamontana', 'Силламонтана вариегатная'],
+          ],
+          [
+            '/plant-profile/tradescantia-variants/navicularis.webp',
+            ['T. navicularis', 'Ладьевидная'],
           ],
           [
             '/plant-profile/tradescantia-variants/hijau-bari.webp',
@@ -6937,7 +6979,11 @@ const allCollectionPlants: readonly CollectionPlant[] = [
         ),
       },
     ),
-    17,
+    {
+      countCover: false,
+      profileMainImageInteractive: false,
+      showProfileImageBadge: false,
+    },
   ),
   collectionPlant(
     'commelinaceae',

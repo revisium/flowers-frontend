@@ -12,6 +12,9 @@ interface ProfileSummaryProps {
   readonly text: ProfileCopy;
 }
 
+const getOpenPhotoLabel = (locale: Locale, plantName: string) =>
+  locale === 'ru' ? `Открыть фотографию: ${plantName}` : `Open photo: ${plantName}`;
+
 export const ProfileSummary = ({ locale, onImageOpen, plant, text }: ProfileSummaryProps) => (
   <Grid gap="12px" gridTemplateColumns={{ base: '1fr', md: '0.64fr 1.36fr' }}>
     <Box
@@ -30,30 +33,33 @@ export const ProfileSummary = ({ locale, onImageOpen, plant, text }: ProfileSumm
         zIndex: 2,
       }}
     >
-      <Text
-        background="#526c2d"
-        borderRadius="0 0 8px 0"
-        color="#fffaf0"
-        fontSize="0.72rem"
-        fontWeight={800}
-        left={0}
-        padding="8px 12px"
-        position="absolute"
-        textTransform="uppercase"
-        top={0}
-        zIndex={1}
-      >
-        {locale === 'ru' ? 'Моё растение' : 'My plant'}
-      </Text>
+      {plant.showProfileImageBadge ? (
+        <Text
+          background="#526c2d"
+          borderRadius="0 0 8px 0"
+          color="#fffaf0"
+          fontSize="0.72rem"
+          fontWeight={800}
+          left={0}
+          padding="8px 12px"
+          position="absolute"
+          textTransform="uppercase"
+          top={0}
+          zIndex={1}
+        >
+          {locale === 'ru' ? 'Моё растение' : 'My plant'}
+        </Text>
+      ) : null}
       <Button
         aria-label={
-          locale === 'ru'
-            ? `Открыть фотографию: ${plant.name[locale]}`
-            : `Open photo: ${plant.name[locale]}`
+          plant.profileMainImageInteractive
+            ? getOpenPhotoLabel(locale, plant.name[locale])
+            : undefined
         }
         borderRadius={0}
-        cursor="zoom-in"
+        cursor={plant.profileMainImageInteractive ? 'zoom-in' : 'default'}
         display="block"
+        disabled={!plant.profileMainImageInteractive}
         height="100%"
         lineHeight={0}
         minWidth={0}
@@ -62,9 +68,14 @@ export const ProfileSummary = ({ locale, onImageOpen, plant, text }: ProfileSumm
         type="button"
         variant="plain"
         width="100%"
-        onClick={onImageOpen}
+        onClick={plant.profileMainImageInteractive ? onImageOpen : undefined}
+        _disabled={{ opacity: 1 }}
         _focusVisible={{ outline: '3px solid #718d4f', outlineOffset: '-3px' }}
-        _hover={{ '& img': { transform: 'scale(1.04)' } }}
+        _hover={
+          plant.profileMainImageInteractive
+            ? { '& img': { transform: 'scale(1.04)' } }
+            : undefined
+        }
       >
         <Image
           alt={plant.name[locale]}
