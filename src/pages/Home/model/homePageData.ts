@@ -154,6 +154,14 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     name: { en: 'Bromeliads', ru: 'Бромелиевые' },
   },
   {
+    count: { en: '1 plant', ru: '1 растение' },
+    id: 'balsaminaceae',
+    image: '/plants/categories/studio/balsaminaceae.webp',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Balsam family', ru: 'Бальзаминовые' },
+  },
+  {
     count: { en: '5 plants', ru: '5 растений' },
     id: 'amaryllidaceae',
     image: '/plants/categories/studio/amaryllidaceae.webp',
@@ -170,6 +178,14 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     id: 'piperaceae',
     image: '/plants/categories/studio/piperaceae.webp',
     name: { en: 'Pepper family', ru: 'Перцевые' },
+  },
+  {
+    count: { en: '2 plants', ru: '2 растения' },
+    id: 'asteraceae',
+    image: '/plants/categories/studio/asteraceae.webp',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Daisy family', ru: 'Астровые' },
   },
   {
     count: { en: '1 plant', ru: '1 растение' },
@@ -212,6 +228,22 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
     imageObjectPosition: 'center',
     imageScale: '1',
     name: { en: 'Mint family', ru: 'Яснотковые' },
+  },
+  {
+    count: { en: '1 plant', ru: '1 растение' },
+    id: 'aspleniaceae',
+    image: '/plants/categories/studio/aspleniaceae.webp',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Spleenwort family', ru: 'Костенцовые' },
+  },
+  {
+    count: { en: '1 plant', ru: '1 растение' },
+    id: 'polypodiaceae',
+    image: '/plants/categories/studio/polypodiaceae-family.webp',
+    imageObjectPosition: 'center',
+    imageScale: '1',
+    name: { en: 'Polypody family', ru: 'Многоножковые' },
   },
   {
     count: { en: '1 plant', ru: '1 растение' },

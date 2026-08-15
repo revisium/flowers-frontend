@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Grid, Image, Text } from '@chakra-ui/react';
 import type { CollectionPlant } from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
 
@@ -7,35 +7,87 @@ import { GrowthFacts } from '../ProfileCare/ProfileCare';
 
 interface ProfileSummaryProps {
   readonly locale: Locale;
+  readonly onImageOpen: () => void;
   readonly plant: CollectionPlant;
   readonly text: ProfileCopy;
 }
 
-export const ProfileSummary = ({ locale, plant, text }: ProfileSummaryProps) => (
+const getOpenPhotoLabel = (locale: Locale, plantName: string) =>
+  locale === 'ru' ? `Открыть фотографию: ${plantName}` : `Open photo: ${plantName}`;
+
+export const ProfileSummary = ({ locale, onImageOpen, plant, text }: ProfileSummaryProps) => (
   <Grid gap="12px" gridTemplateColumns={{ base: '1fr', md: '0.64fr 1.36fr' }}>
     <Box
       aspectRatio="3 / 4"
-      border="1px solid #e8dece"
+      border={0}
       borderRadius="10px"
       overflow="hidden"
       position="relative"
+      _after={{
+        border: '1px solid #e8dece',
+        borderRadius: 'inherit',
+        content: '""',
+        inset: 0,
+        pointerEvents: 'none',
+        position: 'absolute',
+        zIndex: 2,
+      }}
     >
-      <Text
-        background="#526c2d"
-        borderRadius="0 0 8px 0"
-        color="#fffaf0"
-        fontSize="0.72rem"
-        fontWeight={800}
-        left={0}
-        padding="8px 12px"
-        position="absolute"
-        textTransform="uppercase"
-        top={0}
-        zIndex={1}
+      {plant.showProfileImageBadge ? (
+        <Text
+          background="#526c2d"
+          borderRadius="0 0 8px 0"
+          color="#fffaf0"
+          fontSize="0.72rem"
+          fontWeight={800}
+          left={0}
+          padding="8px 12px"
+          position="absolute"
+          textTransform="uppercase"
+          top={0}
+          zIndex={1}
+        >
+          {locale === 'ru' ? 'Моё растение' : 'My plant'}
+        </Text>
+      ) : null}
+      <Button
+        aria-label={
+          plant.profileMainImageInteractive
+            ? getOpenPhotoLabel(locale, plant.name[locale])
+            : undefined
+        }
+        borderRadius={0}
+        cursor={plant.profileMainImageInteractive ? 'zoom-in' : 'default'}
+        display="block"
+        disabled={!plant.profileMainImageInteractive}
+        height="100%"
+        lineHeight={0}
+        minWidth={0}
+        overflow="hidden"
+        padding={0}
+        type="button"
+        variant="plain"
+        width="100%"
+        onClick={plant.profileMainImageInteractive ? onImageOpen : undefined}
+        _disabled={{ opacity: 1 }}
+        _focusVisible={{ outline: '3px solid #718d4f', outlineOffset: '-3px' }}
+        _hover={
+          plant.profileMainImageInteractive
+            ? { '& img': { transform: 'scale(1.04)' } }
+            : undefined
+        }
       >
-        {locale === 'ru' ? 'Моё растение' : 'My plant'}
-      </Text>
-      <Image alt="" height="100%" objectFit="cover" src={plant.image} width="100%" />
+        <Image
+          alt={plant.name[locale]}
+          display="block"
+          height="100%"
+          objectFit="cover"
+          src={plant.image}
+          transform="scale(1.02)"
+          transition="transform 180ms ease"
+          width="100%"
+        />
+      </Button>
     </Box>
     <Flex direction="column" gap="12px">
       <GrowthFacts locale={locale} plant={plant} text={text} />

@@ -1,4 +1,66 @@
 {
+  "aspleniaceae": {
+    "closingNote": {
+      "en": "Aspleniaceae combine calm rosettes, delicate divided fronds and a remarkable ability to settle on tree trunks and rocks. Their character comes from foliage and spores rather than flowers.",
+      "ru": "Костенцовые объединяют спокойные розетки, ажурные рассечённые вайи и удивительную способность селиться на стволах и камнях. Их выразительность создают листва и споры, а не цветки."
+    },
+    "description": {
+      "en": "Aspleniaceae are a worldwide family of ferns with fronds ranging from broad undivided straps to finely divided lace. Its members grow on forest soil, tree trunks and rocks, and are recognised by narrow linear sori on the underside of mature fronds.",
+      "ru": "Костенцовые — распространённое по всему миру семейство папоротников с вайями от широких цельных лент до тонко рассечённого кружева. Его представители растут на лесной почве, стволах и скалах и узнаются по узким линейным сорусам на нижней стороне зрелых вай."
+    },
+    "facts": {
+      "en": [
+        "The family is centred on the large cosmopolitan genus Asplenium.",
+        "Its narrow sori usually lie obliquely beside the veins and are covered by slim indusia while young.",
+        "Some species form nest-like rosettes that collect organic debris high in forest canopies.",
+        "Like all true ferns, Aspleniaceae reproduce by spores and never form flowers or seeds."
+      ],
+      "ru": [
+        "Основу семейства составляет крупный космополитный род Asplenium.",
+        "Узкие сорусы обычно расположены косо вдоль жилок и в молодости прикрыты тонкими индузиями.",
+        "Некоторые виды образуют гнездовидные розетки, собирающие органические остатки высоко в кронах леса.",
+        "Как и все настоящие папоротники, Костенцовые размножаются спорами и не образуют цветков и семян."
+      ]
+    },
+    "heroImage": "/plants/aspleniaceae-modal/hero.webp",
+    "heroPosition": {
+      "base": "68% top",
+      "md": "center top",
+      "lg": "center top"
+    },
+    "heroSize": {
+      "base": "cover",
+      "md": "cover",
+      "lg": "cover"
+    },
+    "latinName": "Aspleniaceae",
+    "origin": {
+      "en": "Worldwide, from humid tropical forests to temperate rocks and cliffs, with the greatest diversity in warm, moist regions.",
+      "ru": "По всему миру — от влажных тропических лесов до скал и утёсов умеренного пояса; наибольшее разнообразие сосредоточено в тёплых влажных регионах."
+    },
+    "originMapImage": "/plants/aspleniaceae-modal/origin-map.webp",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Fronds may be broad and undivided, forked or finely divided into many small segments.",
+        "Mature fronds bear narrow linear sori arranged obliquely beside the veins.",
+        "Short rhizomes often produce compact tufts or symmetrical nest-like rosettes.",
+        "Family members can be epiphytes, rock dwellers or terrestrial ferns."
+      ],
+      "ru": [
+        "Вайи бывают широкими и цельными, вильчатыми или тонко рассечёнными на множество мелких сегментов.",
+        "На зрелых вайях узкие линейные сорусы располагаются косо вдоль жилок.",
+        "Короткие корневища часто образуют компактные пучки или симметричные гнездовидные розетки.",
+        "Представители семейства могут быть эпифитами, обитателями скал или наземными папоротниками."
+      ]
+    },
+    "traitImages": [
+      "/plants/categories/studio/aspleniaceae.webp",
+      "/plant-profile/asplenium-nidus-variegata-propagation.webp",
+      "/plants/aspleniaceae-modal/hero.webp",
+      "/plant-profile/asplenium-nidus-variegata-important.webp"
+    ]
+  },
   "acanthaceae": {
     "closingNote": {
       "en": "Acanthaceae unite dramatic foliage and architectural flowers. Even without bloom, their opposite leaves, strong veins and vivid patterns give a collection a lively tropical rhythm.",
@@ -870,6 +932,62 @@
       ]
     }
   },
+  "polypodiaceae": {
+    "description": {
+      "en": "Polypody ferns are a diverse family of mostly creeping, often epiphytic ferns. Their beauty comes from varied frond shapes, textured rhizomes and sori rather than flowers.",
+      "ru": "Многоножковые — разнообразное семейство преимущественно ползучих, часто эпифитных папоротников. Их красота — в форме вай, фактурных корневищах и сорусах, а не в цветках."
+    },
+    "facts": {
+      "en": [
+        "The family includes epiphytes, rock-dwellers and terrestrial ferns.",
+        "Many species spread by creeping rhizomes covered with protective scales.",
+        "Ferns do not flower or set seeds: new generations begin from spores."
+      ],
+      "ru": [
+        "В семействе есть эпифиты, обитатели скал и наземные папоротники.",
+        "Многие виды разрастаются ползучими корневищами, покрытыми защитными чешуйками.",
+        "Папоротники не цветут и не образуют семян: новое поколение начинается со спор."
+      ]
+    },
+    "heroImage": "/plants/polypodiaceae-modal/hero-v4.webp",
+    "heroPosition": {
+      "base": "center top",
+      "md": "center top",
+      "lg": "center top"
+    },
+    "heroSize": {
+      "base": "cover",
+      "md": "cover",
+      "lg": "cover"
+    },
+    "latinName": "Polypodiaceae",
+    "origin": {
+      "en": "Distributed worldwide, especially in tropical and subtropical forests of the Americas, Africa, Asia and Oceania.",
+      "ru": "Распространены по всему миру, особенно в тропических и субтропических лесах Америки, Африки, Азии и Океании."
+    },
+    "originMapImage": "/plants/polypodiaceae-modal/origin-map.webp",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Fronds range from entire straps to deeply lobed and antler-like forms.",
+        "Many species creep on scaled rhizomes that sit on bark, rock or the substrate surface.",
+        "Round or elongated sori develop on the underside of mature fronds.",
+        "Epiphytic species anchor to trunks without parasitising their host."
+      ],
+      "ru": [
+        "Вайи бывают цельными ремневидными, глубоко рассечёнными и похожими на оленьи рога.",
+        "Многие виды ползут чешуйчатыми корневищами по коре, камням или поверхности субстрата.",
+        "На нижней стороне зрелых вай развиваются круглые или вытянутые сорусы.",
+        "Эпифитные виды закрепляются на стволах, но не паразитируют на растении-опоре."
+      ]
+    },
+    "traitImages": [
+      "/plants/categories/studio/polypodiaceae-family.webp",
+      "/plant-profile/phlebodium-aureum-davana-propagation.webp",
+      "/plant-profile/phlebodium-aureum-davana-important.webp",
+      "/plants/polypodiaceae-modal/hero-v4.webp"
+    ]
+  },
   "orchidaceae": {
     "closingNote": {
       "en": "Orchids are a symbol of elegance and nature's perfection. Their extraordinary blooms inspire collectors all over the world.",
@@ -1261,6 +1379,70 @@
       "/plants/moraceae-modal/trait-aerial-roots.webp"
     ]
   },
+  "asteraceae": {
+    "closingNote": {
+      "en": "The daisy family joins familiar flowers, medicinal herbs, weeds and remarkable succulents through one shared idea: many tiny florets working together as a single flower head.",
+      "ru": "Астровые объединяют знакомые цветы, лекарственные травы, сорняки и необычные суккуленты одной общей идеей: множество крошечных цветков работают вместе как единое соцветие."
+    },
+    "description": {
+      "en": "Asteraceae are one of the largest families of flowering plants. They range from annual herbs and meadow perennials to shrubs, trees and leaf succulents, and are recognised by composite flower heads surrounded by a protective involucre.",
+      "ru": "Астровые — одно из крупнейших семейств цветковых растений. Среди них есть однолетние травы, луговые многолетники, кустарники, деревья и листовые суккуленты; семейство узнают по соцветиям-корзинкам, окружённым защитной обёрткой."
+    },
+    "facts": {
+      "en": [
+        "What looks like one daisy flower is usually a head made from many tiny florets.",
+        "Sunflowers, chamomile, dandelions, asters, gerberas and many succulent Curio species belong to this family.",
+        "The green bracts beneath the flower head form an involucre that protects developing florets.",
+        "In many members the calyx becomes a pappus of hairs or scales that helps the fruit travel on the wind.",
+        "The family occurs on every continent except Antarctica and is especially diverse in open, seasonally dry habitats."
+      ],
+      "ru": [
+        "То, что выглядит одним цветком ромашки, обычно является корзинкой из множества крошечных цветков.",
+        "Подсолнечник, ромашка, одуванчик, астры, герберы и многие суккулентные Curio относятся к одному семейству.",
+        "Зелёные листочки под корзинкой образуют обёртку, защищающую развивающиеся цветки.",
+        "У многих представителей чашечка превращается в хохолок из волосков или чешуек, помогающий плоду разноситься ветром.",
+        "Семейство встречается на всех континентах, кроме Антарктиды, и особенно разнообразно в открытых сезонно сухих местах."
+      ]
+    },
+    "heroImage": "/plants/categories/generated/asteraceae.webp",
+    "heroPosition": {
+      "base": "calc(100% + 105px) 55px",
+      "md": "calc(100% + 35px) 30px",
+      "lg": "calc(100% - 10px) 22px"
+    },
+    "heroSize": {
+      "base": "520px auto",
+      "md": "650px auto",
+      "lg": "740px auto"
+    },
+    "latinName": "Asteraceae",
+    "origin": {
+      "en": "Cosmopolitan on every continent except Antarctica, with exceptional diversity in open temperate, subtropical and seasonally dry regions.",
+      "ru": "Распространены на всех континентах, кроме Антарктиды; особенно разнообразны в открытых умеренных, субтропических и сезонно сухих областях."
+    },
+    "originMapImage": "/plants/asteraceae-modal/origin-map.webp",
+    "plants": [],
+    "traits": {
+      "en": [
+        "A flower head combines many small florets on one shared receptacle.",
+        "Overlapping green bracts form a protective involucre beneath the head.",
+        "The dry one-seeded fruit often carries a feathery pappus for wind dispersal.",
+        "Growth forms range from soft meadow herbs to woody shrubs and water-storing succulents."
+      ],
+      "ru": [
+        "Корзинка объединяет множество мелких цветков на общем цветоложе.",
+        "Перекрывающиеся зелёные листочки образуют защитную обёртку под соцветием.",
+        "Сухой односемянный плод часто несёт пушистый хохолок для распространения ветром.",
+        "Формы роста варьируются от мягких луговых трав до древесных кустарников и запасающих воду суккулентов."
+      ]
+    },
+    "traitImages": [
+      "/plants/asteraceae-modal/feature-capitulum.webp",
+      "/plants/asteraceae-modal/feature-bracts.webp",
+      "/plants/asteraceae-modal/feature-achene.webp",
+      "/plants/asteraceae-modal/feature-diversity.webp"
+    ]
+  },
   "podocarpaceae": {
     "closingNote": {
       "en": "Podocarps carry the quiet structure of an ancient conifer lineage into the home: evergreen, patient and especially expressive when shaped as bonsai.",
@@ -1321,6 +1503,68 @@
       "/plants/podocarpaceae-modal/trait-bark.webp",
       "/plants/podocarpaceae-modal/trait-seed.webp",
       "/plants/podocarpaceae-modal/trait-new-growth.webp"
+    ]
+  },
+  "balsaminaceae": {
+    "closingNote": {
+      "en": "Balsams combine delicate flowers with remarkably energetic growth: soft stems, bright colour and seed capsules that release the next generation in an instant.",
+      "ru": "Бальзаминовые соединяют нежные цветки с удивительно энергичным ростом: мягкие стебли, яркие краски и коробочки, мгновенно выпускающие новое поколение семян."
+    },
+    "description": {
+      "en": "Balsaminaceae are mostly soft-stemmed herbs from humid forests and mountain habitats. Their irregular spurred flowers and spring-loaded seed capsules are the family's clearest signatures; the huge genus Impatiens contains nearly all of its ornamental diversity.",
+      "ru": "Бальзаминовые — преимущественно мягкостебельные травы влажных лесов и горных местообитаний. Главные признаки семейства — несимметричные цветки со шпорцем и коробочки с пружинно раскрывающимися створками; почти всё декоративное разнообразие сосредоточено в огромном роде Impatiens."
+    },
+    "facts": {
+      "en": [
+        "The family is dominated by the genus Impatiens, while the aquatic genus Hydrocera contains only a single species.",
+        "The botanical name Impatiens means ‘impatient’ and refers to capsules that burst at the slightest touch when ripe.",
+        "A nectar-filled spur guides pollinators into the asymmetric flower and helps different species specialise on different visitors.",
+        "Many balsams prefer continuously moist, humus-rich habitats, but their succulent stems still rot quickly in stagnant soil."
+      ],
+      "ru": [
+        "В семействе почти полностью доминирует род Impatiens, а водный род Hydrocera представлен всего одним видом.",
+        "Ботаническое название Impatiens означает «нетерпеливый» и связано с коробочками, которые в зрелости лопаются от лёгкого прикосновения.",
+        "Наполненный нектаром шпорец направляет опылителя внутрь несимметричного цветка и помогает видам специализироваться на разных посетителях.",
+        "Многие бальзамины растут во влажных богатых гумусом местах, но их сочные стебли быстро загнивают в застойном грунте."
+      ]
+    },
+    "heroImage": "/plants/balsaminaceae-modal/hero.webp",
+    "heroPosition": {
+      "base": "right top",
+      "md": "right top",
+      "lg": "right top"
+    },
+    "heroSize": {
+      "base": "cover",
+      "md": "cover",
+      "lg": "cover"
+    },
+    "latinName": "Balsaminaceae",
+    "origin": {
+      "en": "Distributed through tropical and subtropical regions, with exceptional diversity in tropical Africa, Madagascar, the Himalaya, South-East Asia and New Guinea; some species extend into temperate Eurasia and North America.",
+      "ru": "Распространены в тропиках и субтропиках, особенно разнообразны в тропической Африке, на Мадагаскаре, в Гималаях, Юго-Восточной Азии и Новой Гвинее; отдельные виды заходят в умеренные районы Евразии и Северной Америки."
+    },
+    "originMapImage": "/plants/balsaminaceae-modal/origin-map.webp",
+    "plants": [],
+    "traits": {
+      "en": [
+        "Juicy translucent stems branch at swollen nodes and hold plenty of water in their soft tissues.",
+        "Leaves are usually simple, pointed and sharply serrated; many New Guinea hybrids show bronze colour and red veins.",
+        "The irregular five-part flower carries a conspicuous curved nectar spur behind the petals.",
+        "A ripe elongated capsule opens explosively, its five valves curling back and throwing the seeds away from the parent."
+      ],
+      "ru": [
+        "Сочные полупрозрачные стебли ветвятся в утолщённых узлах и запасают много воды в мягких тканях.",
+        "Листья обычно простые, заострённые и острозубчатые; у многих новогвинейских гибридов заметны бронзовая окраска и красные жилки.",
+        "Несимметричный пятичленный цветок несёт за лепестками хорошо заметный изогнутый нектарный шпорец.",
+        "Зрелая вытянутая коробочка раскрывается взрывом: пять створок скручиваются и отбрасывают семена от материнского растения."
+      ]
+    },
+    "traitImages": [
+      "/plants/balsaminaceae-modal/trait-succulent-stem.webp",
+      "/plants/balsaminaceae-modal/trait-serrated-leaves.webp",
+      "/plants/balsaminaceae-modal/trait-spurred-flower.webp",
+      "/plants/balsaminaceae-modal/trait-seed-capsule.webp"
     ]
   }
 }

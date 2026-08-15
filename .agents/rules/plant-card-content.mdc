@@ -1,0 +1,24 @@
+---
+description: Content and image rules for plant cards
+globs:
+  - "src/entities/collection/model/collectionPlants.ts"
+  - "public/plants/**"
+  - "public/plant-profile/**"
+alwaysApply: false
+---
+
+# Plant Card Content
+
+- Describe the plant, its care and observations about its growth. Do not mention
+  image generation, replacement photography, the original photo, surrounding
+  clutter, temporary nursery cups or how the published image differs from the
+  owner's current setup.
+- Keep the Russian and English versions semantically aligned and fully written
+  in their respective languages.
+- Images for the `Propagation` and `Important` blocks must show the exact plant
+  or cultivars from the current card. Do not substitute generic plants or other
+  species.
+- `Propagation` and `Important` image assets must have a transparent background.
+- A family card cover must be a separate generated composition showing several
+  characteristic representatives of that family. It must not reuse the
+  owner's plant photo or present a single personal specimen as the whole family.

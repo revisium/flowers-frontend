@@ -413,17 +413,24 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
                     transform: 'translateY(-2px)',
                   }}
                 >
-                  <Image
-                    alt=""
+                  <Box
                     aspectRatio="4 / 5"
                     background="#f4ede0"
-                    decoding="async"
-                    fetchPriority={index < 5 ? 'high' : 'auto'}
-                    loading={index < 5 ? 'eager' : 'lazy'}
-                    objectFit="cover"
-                    src={plant.image}
+                    flex="0 0 auto"
+                    overflow="hidden"
                     width="100%"
-                  />
+                  >
+                    <Image
+                      alt=""
+                      decoding="async"
+                      fetchPriority={index < 5 ? 'high' : 'auto'}
+                      height="100%"
+                      loading={index < 5 ? 'eager' : 'lazy'}
+                      objectFit="cover"
+                      src={plant.image}
+                      width="100%"
+                    />
+                  </Box>
                   <Flex direction="column" gap="4px" padding="12px">
                     <Text
                       color="#314034"

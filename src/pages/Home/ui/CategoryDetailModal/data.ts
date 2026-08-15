@@ -188,7 +188,10 @@ const familyTitles: Record<CategoryId, LocalizedText> = {
   araceae: { en: 'Aroids', ru: 'Ароидные' },
   arecaceae: { en: 'Palms', ru: 'Пальмовые' },
   asparagaceae: { en: 'Asparagus family', ru: 'Спаржевые' },
+  aspleniaceae: { en: 'Spleenwort family', ru: 'Костенцовые' },
   asphodelaceae: { en: 'Asphodel family', ru: 'Асфоделовые' },
+  asteraceae: { en: 'Daisy family', ru: 'Астровые' },
+  balsaminaceae: { en: 'Balsam family', ru: 'Бальзаминовые' },
   bromeliaceae: { en: 'Bromeliads', ru: 'Бромелиевые' },
   cactaceae: { en: 'Cacti', ru: 'Кактусовые' },
   commelinaceae: { en: 'Spiderwort family', ru: 'Коммелиновые' },
@@ -201,6 +204,7 @@ const familyTitles: Record<CategoryId, LocalizedText> = {
   nephrolepidaceae: { en: 'Ferns', ru: 'Папоротники' },
   orchidaceae: { en: 'Orchids', ru: 'Орхидные' },
   piperaceae: { en: 'Pepper family', ru: 'Перцевые' },
+  polypodiaceae: { en: 'Polypody family', ru: 'Многоножковые' },
   podocarpaceae: { en: 'Podocarp family', ru: 'Подокарповые' },
   vitaceae: { en: 'Grape family', ru: 'Виноградовые' },
 };
@@ -229,10 +233,25 @@ export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryD
     familyTitles.asparagaceae,
     familySeeds.asparagaceae,
   ),
+  aspleniaceae: createFamilyDataByLocale(
+    'aspleniaceae',
+    familyTitles.aspleniaceae,
+    familySeeds.aspleniaceae,
+  ),
   asphodelaceae: createFamilyDataByLocale(
     'asphodelaceae',
     familyTitles.asphodelaceae,
     familySeeds.asphodelaceae,
+  ),
+  asteraceae: createFamilyDataByLocale(
+    'asteraceae',
+    familyTitles.asteraceae,
+    familySeeds.asteraceae,
+  ),
+  balsaminaceae: createFamilyDataByLocale(
+    'balsaminaceae',
+    familyTitles.balsaminaceae,
+    familySeeds.balsaminaceae,
   ),
   bromeliaceae: createFamilyDataByLocale(
     'bromeliaceae',
@@ -281,6 +300,11 @@ export const categoryDetailDataById: Record<CategoryId, Record<Locale, CategoryD
     'piperaceae',
     familyTitles.piperaceae,
     familySeeds.piperaceae,
+  ),
+  polypodiaceae: createFamilyDataByLocale(
+    'polypodiaceae',
+    familyTitles.polypodiaceae,
+    familySeeds.polypodiaceae,
   ),
   podocarpaceae: createFamilyDataByLocale(
     'podocarpaceae',
