@@ -6907,30 +6907,18 @@ const allCollectionPlants: readonly CollectionPlant[] = [
             ['Zebrina Burgundy — silver coloration', 'Зебрина Бургунди — серебристая окраска'],
           ],
           ['/plant-profile/tradescantia-variants/green.webp', ['Baby Bunny', 'Бэби Банни']],
-          [
-            '/plant-profile/tradescantia-variants/purpurea.webp',
-            ['Pallida', 'Паллида'],
-          ],
+          ['/plant-profile/tradescantia-variants/purpurea.webp', ['Pallida', 'Паллида']],
           [
             '/plant-profile/tradescantia-variants/pallida-blue-sue.webp',
             ['Pallida Blue Sue', 'Паллида Блю Сью'],
           ],
-          [
-            '/plant-profile/tradescantia-variants/thai.webp',
-            ['Thai', 'Тайская'],
-          ],
-          [
-            '/plant-profile/tradescantia-variants/yellow-hill.webp',
-            ['Yellow Hill', 'Желтый холм'],
-          ],
+          ['/plant-profile/tradescantia-variants/thai.webp', ['Thai', 'Тайская']],
+          ['/plant-profile/tradescantia-variants/yellow-hill.webp', ['Yellow Hill', 'Желтый холм']],
           [
             '/plant-profile/tradescantia-variants/fluminensis.webp',
             ['T. fluminensis', 'Приречная'],
           ],
-          [
-            '/plant-profile/tradescantia-variants/white-pinstripe.webp',
-            ['Elegance', 'Элеганс'],
-          ],
+          ['/plant-profile/tradescantia-variants/white-pinstripe.webp', ['Elegance', 'Элеганс']],
           [
             '/plant-profile/tradescantia-variants/green-purple.webp',
             ['Green Rhoeo', 'Рео зеленый'],
@@ -6956,18 +6944,9 @@ const allCollectionPlants: readonly CollectionPlant[] = [
             '/plant-profile/tradescantia-variants/navicularis.webp',
             ['T. navicularis', 'Ладьевидная'],
           ],
-          [
-            '/plant-profile/tradescantia-variants/hijau-bari.webp',
-            ['Hijau Bari', 'Хиджау Бари'],
-          ],
-          [
-            '/plant-profile/tradescantia-variants/purpuza.webp',
-            ['Purpuza', 'Пурпуза'],
-          ],
-          [
-            '/plant-profile/tradescantia-variants/unnamed-pink-01.webp',
-            ['Unicorn', 'Юникорн'],
-          ],
+          ['/plant-profile/tradescantia-variants/hijau-bari.webp', ['Hijau Bari', 'Хиджау Бари']],
+          ['/plant-profile/tradescantia-variants/purpuza.webp', ['Purpuza', 'Пурпуза']],
+          ['/plant-profile/tradescantia-variants/unnamed-pink-01.webp', ['Unicorn', 'Юникорн']],
           [
             '/plant-profile/tradescantia-variants/unnamed-pink-02.webp',
             ['Pink Furry', 'Пинк Фурри'],
@@ -9614,6 +9593,488 @@ const allCollectionPlants: readonly CollectionPlant[] = [
       watering: [
         'Water thoroughly when the top layer has just begun to dry, until water runs from the drainage holes. Do not let the whole root ball become bone-dry or remain constantly saturated.',
         'Обильно поливайте, когда верхний слой только начал подсыхать, пока вода не выйдет из дренажных отверстий. Не пересушивайте ком полностью и не держите его постоянно мокрым.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'marantaceae',
+    'maranta-leuconeura-erythroneura',
+    '/plants/maranta-leuconeura-erythroneura-home-photo.webp',
+    ["Red prayer plant 'Erythroneura'", 'Маранта беложильчатая Эритроневра'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/maranta-erythroneura-important.webp',
+        propagationImage: '/plant-profile/maranta-erythroneura-propagation.webp',
+      },
+      difficulty: 3,
+      facts: [
+        [
+          'The leaves fold upward in dim evening light, giving prayer plants their common name.',
+          'Red veins and lime-green feathered markings distinguish this cultivar.',
+          'New leaves emerge tightly rolled from the centre of each shoot.',
+        ],
+        [
+          'В сумерках листья поднимаются вверх, поэтому маранты называют молитвенными растениями.',
+          'Сорт отличают красные жилки и салатовый перистый рисунок.',
+          'Новые листья выходят из центра побега плотно свёрнутыми.',
+        ],
+      ],
+      family: ['Prayer plant family (Marantaceae)', 'Марантовые (Marantaceae)'],
+      feeding: [
+        'Feed every four weeks from spring to early autumn with half-strength foliage fertiliser.',
+        'С весны до начала осени подкармливайте раз в четыре недели половинной дозой удобрения для декоративно-лиственных.',
+      ],
+      growth: ['Moderate', 'Умеренный'],
+      height: ['Usually 25–40 cm', 'Обычно 25–40 см'],
+      humidity: [
+        'Aim for 55–70% humidity with gentle airflow. Keep the plant away from hot radiators and dry draughts.',
+        'Поддерживайте влажность 55–70% и лёгкое движение воздуха. Держите растение вдали от батарей и сухих сквозняков.',
+      ],
+      important: [
+        'Marantas react strongly to hard water and accumulated salts. Use soft water and flush the substrate occasionally to prevent crisp brown edges.',
+        'Маранты чувствительны к жёсткой воде и накоплению солей. Используйте мягкую воду и иногда промывайте грунт, чтобы края листьев не сохли.',
+      ],
+      latinName: 'Maranta leuconeura var. erythroneura',
+      light: [
+        'Give bright diffused light without direct midday sun. Deep shade weakens the pattern, while harsh rays bleach and scorch the leaves.',
+        'Нужен яркий рассеянный свет без прямого полуденного солнца. В глубокой тени рисунок слабеет, а жёсткие лучи обесцвечивают и обжигают листья.',
+      ],
+      notes: [
+        'The broad dark leaves of my plant carry especially vivid pink-red veins. Its naturally spreading crown looks lively even when the leaves point in different directions.',
+        'На широких тёмных листьях моей маранты особенно ярко видны розово-красные жилки. Её естественно раскидистая крона выглядит живой, даже когда листья направлены в разные стороны.',
+      ],
+      origin: ['Cultivated form of a Brazilian species', 'Культурная форма вида из Бразилии'],
+      overview: [
+        "'Erythroneura' is a compact tropical perennial with oval dark-green leaves, lime feathering and vivid red veins. Its foliage changes position through the day in response to light.",
+        '«Эритроневра» — компактный тропический многолетник с овальными тёмно-зелёными листьями, салатовым перистым рисунком и яркими красными жилками. В течение дня листва меняет положение вслед за светом.',
+      ],
+      plantType: ['Evergreen rhizomatous perennial', 'Вечнозелёный корневищный многолетник'],
+      problems: [
+        [
+          'Crisp brown edges — check humidity, water quality and fertiliser buildup.',
+          'Rolled leaves in daytime — inspect for drought, heat or spider mites.',
+          'Yellow soft leaves — let the mix breathe and inspect the roots.',
+        ],
+        [
+          'Сухие коричневые края — проверьте влажность, качество воды и накопление удобрений.',
+          'Листья свёрнуты днём — проверьте пересушку, жару и паутинного клеща.',
+          'Мягкие жёлтые листья — дайте грунту подышать и проверьте корни.',
+        ],
+      ],
+      propagation: [
+        'During a warm-season repot, divide the rhizome so every section keeps several shoots and healthy roots. Pot each division at the original depth in a small container.',
+        'При пересадке в тёплый сезон разделите корневище так, чтобы у каждой части осталось несколько побегов и здоровые корни. Посадите делёнки на прежнюю глубину в небольшие горшки.',
+      ],
+      repotting: [
+        'Repot in spring when roots fill the pot, moving up only one size and keeping the shallow rhizome at its former level.',
+        'Пересаживайте весной после заполнения горшка корнями, увеличивая ёмкость лишь на один размер и сохраняя прежний уровень корневища.',
+      ],
+      secondaryCare: [
+        ['Leaf care', 'Уход за листьями'],
+        [
+          'Rinse dust gently with lukewarm water and let the leaves dry in moving air. Remove only fully yellow or dry foliage at the base.',
+          'Аккуратно смывайте пыль тёплой водой и давайте листьям высохнуть при движении воздуха. Удаляйте у основания только полностью пожелтевшие или сухие листья.',
+        ],
+      ],
+      soil: [
+        'Use an airy moisture-retentive mix with coco or light compost, fine bark and perlite in a pot with drainage holes.',
+        'Используйте воздушную влагоёмкую смесь из кокоса или лёгкого грунта, мелкой коры и перлита в горшке с дренажными отверстиями.',
+      ],
+      temperature: [
+        'Keep at 19–27 °C and protect from cold glass, draughts and temperatures below 16 °C.',
+        'Содержите при 19–27 °C и защищайте от холодного стекла, сквозняков и температуры ниже 16 °C.',
+      ],
+      watering: [
+        'Water with soft room-temperature water when the top 1–2 cm dries. Keep the mix lightly even, never saturated or bone-dry.',
+        'Поливайте мягкой водой комнатной температуры после просыхания верхних 1–2 см. Поддерживайте лёгкую равномерную влажность без сырости и полной пересушки.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'gesneriaceae',
+    'nematanthus-tropicana',
+    '/plants/nematanthus-tropicana-home-photo.webp',
+    ["Nematanthus 'Tropicana'", 'Нематантус Тропикана'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/nematanthus-tropicana-important.webp',
+        propagationImage: '/plant-profile/nematanthus-tropicana-propagation.webp',
+      },
+      difficulty: 2,
+      facts: [
+        [
+          'The flowers are deep yellow with red-brown stripes and conspicuous red calyx lobes.',
+          'Young stems grow upright before older branches begin to trail.',
+          'Glossy, slightly fleshy leaves help the plant tolerate brief drying.',
+        ],
+        [
+          'Цветки тёмно-жёлтые, с красно-коричневыми полосами и заметными красными долями чашечки.',
+          'Молодые побеги растут вверх, а с возрастом ветви начинают свисать.',
+          'Глянцевые слегка мясистые листья помогают переносить короткую пересушку.',
+        ],
+      ],
+      family: ['Gesneriad family (Gesneriaceae)', 'Геснериевые (Gesneriaceae)'],
+      feeding: [
+        'Feed every three to four weeks during active growth with half-strength fertiliser for flowering plants.',
+        'В период активного роста подкармливайте раз в три-четыре недели половинной дозой удобрения для цветущих растений.',
+      ],
+      growth: ['Moderate', 'Умеренный'],
+      height: ['About 30–50 cm, then trailing', 'Около 30–50 см, затем побеги свисают'],
+      humidity: [
+        'Average to moderately high room humidity is suitable. Prioritise airflow over frequent misting of flowers.',
+        'Подходит обычная или умеренно высокая комнатная влажность. Движение воздуха важнее частого опрыскивания цветков.',
+      ],
+      important: [
+        "'Tropicana' is distinct from the orange pouch-flowered nematanthus already in the collection: its striped yellow corolla and red calyx are stable cultivar traits.",
+        '«Тропикана» отличается от уже имеющегося нематантуса с оранжевыми цветками-мешочками: полосатый жёлтый венчик и красная чашечка — устойчивые признаки сорта.',
+      ],
+      latinName: "Nematanthus 'Tropicana'",
+      light: [
+        'Give bright diffused light with gentle morning or evening sun. Good light supports dense growth and repeated flowering.',
+        'Обеспечьте яркий рассеянный свет с мягким утренним или вечерним солнцем. Хорошее освещение поддерживает густой рост и повторное цветение.',
+      ],
+      notes: [
+        'This mature plant forms a generous cascade around the pot and carries many red-and-yellow flowers among glossy leaves.',
+        'Это взрослое растение образует пышный каскад вокруг горшка и несёт множество красно-жёлтых цветков среди глянцевой листвы.',
+      ],
+      origin: ['Cultivated Nematanthus hybrid', 'Культурный гибрид нематантуса'],
+      overview: [
+        "Nematanthus 'Tropicana' is a trailing evergreen gesneriad with glossy opposite leaves and unusual striped flowers: yellow corollas marked red-brown emerge from red calyces.",
+        'Нематантус «Тропикана» — свисающий вечнозелёный представитель геснериевых с глянцевыми супротивными листьями и необычными полосатыми цветками: жёлтые венчики с красно-коричневым рисунком выходят из красных чашечек.',
+      ],
+      plantType: ['Evergreen epiphytic subshrub', 'Вечнозелёный эпифитный полукустарник'],
+      problems: [
+        [
+          'Leaves fall while the mix is wet — inspect for cold damage and root problems.',
+          'Long bare shoots — increase diffused light and pinch after flowering.',
+          'No buds — review light, feeding and the cooler winter rest.',
+        ],
+        [
+          'Листья опадают при влажном грунте — проверьте переохлаждение и состояние корней.',
+          'Длинные голые побеги — добавьте рассеянного света и прищипните после цветения.',
+          'Нет бутонов — проверьте освещение, подкормки и прохладную зимовку.',
+        ],
+      ],
+      propagation: [
+        'Take 6–10 cm tip cuttings, remove the lower leaves and root one or two nodes in water or a light, slightly moist mix. Plant several together for a full pot.',
+        'Возьмите верхушечные черенки длиной 6–10 см, удалите нижние листья и укорените один-два узла в воде или лёгкой слегка влажной смеси. Для пышности посадите несколько черенков вместе.',
+      ],
+      repotting: [
+        'Repot after flowering or in spring when roots fill the pot. Use a container only slightly larger because the fine roots dislike stagnant moisture.',
+        'Пересаживайте после цветения или весной, когда корни заполнят горшок. Берите ёмкость лишь немного больше: тонкие корни не любят застоя влаги.',
+      ],
+      secondaryCare: [
+        ['Pruning and flowering', 'Обрезка и цветение'],
+        [
+          'After a flowering flush, shorten long shoots above a node to encourage branching and more flowering tips.',
+          'После волны цветения укоротите длинные побеги над узлом, чтобы стимулировать ветвление и образование новых цветущих верхушек.',
+        ],
+      ],
+      soil: [
+        'Use a loose epiphytic mix of light compost, fine bark and perlite with free drainage.',
+        'Используйте рыхлую эпифитную смесь из лёгкого грунта, мелкой коры и перлита со свободным оттоком воды.',
+      ],
+      temperature: [
+        'Keep at 18–25 °C in growth. A bright winter around 15–18 °C can help initiate buds.',
+        'В период роста содержите при 18–25 °C. Светлая зимовка при 15–18 °C может помочь закладке бутонов.',
+      ],
+      watering: [
+        'Water after the top 2–3 cm dries, then drain excess completely. Reduce frequency in cool, low-light conditions.',
+        'Поливайте после просыхания верхних 2–3 см и полностью сливайте лишнюю воду. В прохладе и при слабом свете сокращайте частоту.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'araceae',
+    'philodendron-hederaceum-brasil',
+    '/plants/philodendron-hederaceum-brasil-home-photo.webp',
+    ["Heartleaf philodendron 'Brasil'", 'Филодендрон сердцелистный Бразил'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/philodendron-brasil-important.webp',
+        propagationImage: '/plant-profile/philodendron-brasil-propagation.webp',
+      },
+      difficulty: 1,
+      facts: [
+        [
+          'Every heart-shaped leaf carries a different chartreuse central stripe.',
+          'Aerial roots at the nodes help the vine climb or root into moist substrate.',
+          'Brighter filtered light keeps internodes shorter and variegation clearer.',
+        ],
+        [
+          'На каждом сердцевидном листе складывается своя салатовая центральная полоса.',
+          'Воздушные корни в узлах помогают лиане карабкаться или укореняться во влажном субстрате.',
+          'Более яркий рассеянный свет сохраняет междоузлия короткими, а вариегатность — чёткой.',
+        ],
+      ],
+      family: ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+      feeding: [
+        'Feed every three to four weeks in spring and summer with half-strength balanced foliage fertiliser.',
+        'Весной и летом подкармливайте раз в три-четыре недели половинной дозой сбалансированного удобрения.',
+      ],
+      growth: ['Fast', 'Быстрый'],
+      height: ['Trails or climbs 1–2 m indoors', 'Побеги 1–2 м в комнате'],
+      humidity: [
+        'Average room humidity is suitable. Keep the plant away from hot dry air and clean dust from the leaves.',
+        'Подходит обычная комнатная влажность. Держите растение вдали от горячего сухого воздуха и очищайте листья от пыли.',
+      ],
+      important: [
+        'The sap contains irritating calcium oxalate crystals. Wear gloves when pruning and keep the plant and cuttings away from children and pets.',
+        'Сок содержит раздражающие кристаллы оксалата кальция. При обрезке надевайте перчатки и держите растение и черенки вдали от детей и животных.',
+      ],
+      latinName: "Philodendron hederaceum 'Brasil'",
+      light: [
+        'Give bright diffused light without harsh midday sun. Low light reduces the yellow-green stripe and stretches the vine.',
+        'Нужен яркий рассеянный свет без жёсткого полуденного солнца. При нехватке света жёлто-зелёная полоса уменьшается, а побеги вытягиваются.',
+      ],
+      notes: [
+        'My plant has both climbing and trailing shoots, with broad lime flashes that make even the youngest leaves look luminous.',
+        'У моего растения есть и поднимающиеся, и свисающие побеги, а широкие лаймовые мазки делают светящимися даже самые молодые листья.',
+      ],
+      origin: [
+        'Cultivated form of a tropical American species',
+        'Культурная форма тропического американского вида',
+      ],
+      overview: [
+        "'Brasil' is a vigorous heartleaf philodendron whose dark-green leaves are painted with broad chartreuse and yellow-green bands. It can trail from a shelf or climb a support.",
+        '«Бразил» — энергичный сердцелистный филодендрон с тёмно-зелёными листьями и широкими салатовыми и жёлто-зелёными полосами. Он может свисать с полки или подниматься по опоре.',
+      ],
+      plantType: ['Evergreen tropical climber', 'Вечнозелёная тропическая лиана'],
+      problems: [
+        [
+          'Yellow soft leaves — let the mix dry and inspect the roots.',
+          'Long bare internodes — increase filtered light and prune above a node.',
+          'Loss of variegation — move gradually to a brighter position.',
+        ],
+        [
+          'Мягкие жёлтые листья — просушите грунт и проверьте корни.',
+          'Длинные голые междоузлия — добавьте рассеянного света и обрежьте над узлом.',
+          'Пестролистность исчезает — постепенно переставьте в более светлое место.',
+        ],
+      ],
+      propagation: [
+        'Cut the vine into sections with one healthy node and at least one leaf. Root the node in water or an airy moist mix, then combine several cuttings in one pot.',
+        'Разрежьте побег на части с одним здоровым узлом и хотя бы одним листом. Укорените узел в воде или воздушном влажном грунте, затем посадите несколько черенков вместе.',
+      ],
+      repotting: [
+        'Repot in spring when roots circle the pot, choosing a container only slightly larger.',
+        'Пересаживайте весной, когда корни оплетут горшок, выбирая ёмкость лишь немного больше.',
+      ],
+      secondaryCare: [
+        ['Training and pruning', 'Опора и обрезка'],
+        [
+          'Pin vines to a support for larger leaves, or trim above a node to keep a fuller trailing plant.',
+          'Закрепляйте побеги на опоре для более крупных листьев или обрезайте над узлом, чтобы свисающий куст оставался пышным.',
+        ],
+      ],
+      soil: [
+        'Use an airy aroid mix with light compost, fine bark and perlite or pumice.',
+        'Используйте воздушную ароидную смесь из лёгкого грунта, мелкой коры и перлита или пемзы.',
+      ],
+      temperature: [
+        'Keep at 18–28 °C and protect from cold draughts and temperatures below 15 °C.',
+        'Содержите при 18–28 °C, защищая от холодных сквозняков и температуры ниже 15 °C.',
+      ],
+      watering: [
+        'Water after the top 3–5 cm dries, wet the root ball fully and drain excess.',
+        'Поливайте после просыхания верхних 3–5 см, полностью промачивайте корневой ком и сливайте лишнюю воду.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'piperaceae',
+    'peperomia-scandens-variegata',
+    '/plants/peperomia-scandens-variegata-home-photo.webp',
+    ["Climbing peperomia 'Variegata'", 'Пеперомия лазящая Вариегата'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/peperomia-scandens-variegata-important.webp',
+        propagationImage: '/plant-profile/peperomia-scandens-variegata-propagation.webp',
+      },
+      difficulty: 1,
+      facts: [
+        [
+          'Small succulent heart-shaped leaves have green centres and broad cream margins.',
+          'Flexible stems trail naturally and can root from their nodes.',
+          'The thin upright spikes are typical peperomia inflorescences.',
+        ],
+        [
+          'Маленькие сочные сердцевидные листья имеют зелёную середину и широкую кремовую кайму.',
+          'Гибкие побеги естественно свисают и способны укореняться в узлах.',
+          'Тонкие вертикальные колоски — характерные соцветия пеперомий.',
+        ],
+      ],
+      family: ['Pepper family (Piperaceae)', 'Перечные (Piperaceae)'],
+      feeding: [
+        'Feed every four to six weeks in spring and summer with half-strength balanced fertiliser.',
+        'Весной и летом подкармливайте раз в четыре-шесть недель половинной дозой сбалансированного удобрения.',
+      ],
+      growth: ['Moderate', 'Умеренный'],
+      height: ['Trails 30–90 cm', 'Побеги 30–90 см'],
+      humidity: [
+        'Average room humidity is sufficient. Good airflow and a dry crown are more important than misting.',
+        'Обычной комнатной влажности достаточно. Хорошее движение воздуха и сухое основание важнее опрыскиваний.',
+      ],
+      important: [
+        'The fleshy leaves and stems store water, so overwatering is the main risk. Let a substantial part of the mix dry before watering again.',
+        'Мясистые листья и стебли запасают воду, поэтому главная опасность — переувлажнение. Давайте значительной части грунта просохнуть перед новым поливом.',
+      ],
+      latinName: "Peperomia scandens 'Variegata'",
+      light: [
+        'Give bright diffused light with gentle morning sun. Too little light weakens the cream margins; hot midday rays scorch them.',
+        'Нужен яркий рассеянный свет с мягким утренним солнцем. В тени кремовая кайма слабеет, а жаркие полуденные лучи её обжигают.',
+      ],
+      notes: [
+        'My plant has formed a wide, soft cascade of cream-edged hearts, with several flowering spikes weaving through the stems.',
+        'Моё растение образовало широкий мягкий каскад сердечек с кремовой каймой, среди которых проходят несколько цветущих колосков.',
+      ],
+      origin: [
+        'Cultivated variegated form of a tropical American species',
+        'Культурная пестролистная форма тропического американского вида',
+      ],
+      overview: [
+        "Peperomia scandens 'Variegata' is a compact trailing perennial with succulent heart-shaped leaves edged in cream. Its light foliage and relaxed habit suit shelves and hanging pots.",
+        'Пеперомия лазящая «Вариегата» — компактный свисающий многолетник с сочными сердцевидными листьями, обрамлёнными кремовой каймой. Светлая листва и свободный силуэт хорошо подходят для полок и подвесных кашпо.',
+      ],
+      plantType: ['Evergreen epiphytic perennial', 'Вечнозелёный эпифитный многолетник'],
+      problems: [
+        [
+          'Soft translucent stems — stop watering and inspect for rot.',
+          'Long sparse growth — increase filtered light and pinch the tips.',
+          'Brown crisp margins — check hot sun, drought and salt buildup.',
+        ],
+        [
+          'Стебли мягкие и полупрозрачные — прекратите полив и проверьте растение на гниль.',
+          'Длинный редкий прирост — добавьте рассеянного света и прищипните верхушки.',
+          'Сухая коричневая кайма — проверьте жаркое солнце, пересушку и накопление солей.',
+        ],
+      ],
+      propagation: [
+        'Take a stem cutting with two or three nodes, remove the lowest leaves and root one node in water or a barely moist airy mix. Combine several rooted cuttings for a full pot.',
+        'Возьмите стеблевой черенок с двумя-тремя узлами, удалите нижние листья и укорените один узел в воде или едва влажной воздушной смеси. Для пышности посадите несколько черенков вместе.',
+      ],
+      repotting: [
+        'Repot only when roots fill the pot, moving up one small size and keeping the stems above the soil line.',
+        'Пересаживайте только после заполнения горшка корнями, увеличивая ёмкость на один небольшой размер и не заглубляя стебли.',
+      ],
+      secondaryCare: [
+        ['Shaping', 'Формировка'],
+        [
+          'Pinch long tips above a node and return rooted cuttings to the pot to keep the centre dense.',
+          'Прищипывайте длинные концы над узлом и возвращайте укоренённые черенки в горшок, чтобы середина оставалась густой.',
+        ],
+      ],
+      soil: [
+        'Use a loose fast-draining mix of light compost, fine bark and generous perlite in a pot with drainage.',
+        'Используйте рыхлую быстро просыхающую смесь из лёгкого грунта, мелкой коры и большого количества перлита в горшке с дренажом.',
+      ],
+      temperature: [
+        'Keep at 18–27 °C and protect the succulent stems from cold glass and draughts.',
+        'Содержите при 18–27 °C и защищайте сочные стебли от холодного стекла и сквозняков.',
+      ],
+      watering: [
+        'Water after roughly the upper half of the mix dries. Soak evenly, drain completely and avoid a permanently damp root ball.',
+        'Поливайте после просыхания примерно верхней половины грунта. Равномерно промочите, полностью слейте воду и не держите ком постоянно влажным.',
+      ],
+    }),
+  ),
+  collectionPlant(
+    'araceae',
+    'alocasia-regal-shields',
+    '/plants/alocasia-regal-shields-home-photo.webp',
+    ["Alocasia 'Regal Shields'", 'Алоказия Регал Шилдс'],
+    simplePlantProfile({
+      assets: {
+        importantImage: '/plant-profile/alocasia-regal-shields-important.webp',
+        propagationImage: '/plant-profile/alocasia-regal-shields-propagation.webp',
+      },
+      difficulty: 3,
+      facts: [
+        [
+          "'Regal Shields' is a hybrid of Alocasia odora and Alocasia reginula.",
+          'Mature shield-shaped leaves are dark green with light-green veins and purple undersides.',
+          'The cultivar was released in 2014 and grows more vigorously than jewel Alocasias.',
+        ],
+        [
+          '«Регал Шилдс» — гибрид Alocasia odora и Alocasia reginula.',
+          'Взрослые щитовидные листья тёмно-зелёные со светло-зелёными жилками и пурпурной изнанкой.',
+          'Сорт выпущен в 2014 году и растёт энергичнее драгоценных алоказий.',
+        ],
+      ],
+      family: ['Arum family (Araceae)', 'Ароидные (Araceae)'],
+      feeding: [
+        'Feed every three to four weeks during active growth with half-strength balanced foliage fertiliser.',
+        'В период активного роста подкармливайте раз в три-четыре недели половинной дозой сбалансированного удобрения.',
+      ],
+      growth: ['Moderately vigorous', 'Умеренно быстрый'],
+      height: ['Usually 60–150 cm indoors', 'Обычно 60–150 см в комнате'],
+      humidity: [
+        'Aim for 55–75% humidity with regular airflow. Avoid standing droplets on the broad leaves.',
+        'Поддерживайте влажность 55–75% и регулярное движение воздуха. Не оставляйте капли на широких листьях.',
+      ],
+      important: [
+        'All tissues contain irritating calcium oxalate crystals. Wear gloves for division and keep the plant away from children and pets.',
+        'Все ткани содержат раздражающие кристаллы оксалата кальция. При делении надевайте перчатки и держите растение вдали от детей и животных.',
+      ],
+      latinName: "Alocasia 'Regal Shields'",
+      light: [
+        'Give bright diffused light with gentle morning sun. Harsh midday rays scorch the dark blades; deep shade weakens growth.',
+        'Нужен яркий рассеянный свет с мягким утренним солнцем. Жёсткие полуденные лучи обжигают тёмные пластины, а глубокая тень ослабляет рост.',
+      ],
+      notes: [
+        'The three leaves already show the cultivar clearly: broad dark shields with lime-green veins, held on sturdy upright petioles.',
+        'Уже по трём листьям сорт хорошо узнаваем: широкие тёмные щиты с лаймово-зелёными жилками держатся на крепких вертикальных черешках.',
+      ],
+      origin: [
+        'Cultivated hybrid created in Florida, USA',
+        'Культурный гибрид, созданный во Флориде, США',
+      ],
+      overview: [
+        "Alocasia 'Regal Shields' is a large upright hybrid combining the scale of Alocasia odora with the dark colouring of Alocasia reginula. Its broad leaves mature to deep green above and burgundy-purple beneath.",
+        'Алоказия «Регал Шилдс» — крупный вертикальный гибрид, сочетающий размер Alocasia odora с тёмной окраской Alocasia reginula. Широкие листья становятся насыщенно-зелёными сверху и бордово-пурпурными снизу.',
+      ],
+      plantType: [
+        'Evergreen rhizomatous tropical hybrid',
+        'Вечнозелёный корневищный тропический гибрид',
+      ],
+      problems: [
+        [
+          'Yellow leaves with wet soil — inspect roots and rhizome for rot.',
+          'Crisp edges or a stuck new leaf — stabilise watering and humidity.',
+          'Pale stippling or webbing — isolate and inspect for spider mites.',
+        ],
+        [
+          'Листья желтеют при мокром грунте — проверьте корни и корневище на гниль.',
+          'Сухие края или застрявший новый лист — стабилизируйте полив и влажность.',
+          'Светлый крап или паутинка — изолируйте и проверьте на паутинного клеща.',
+        ],
+      ],
+      propagation: [
+        'During a warm-season repot, separate an offset with its own roots or collect firm cormels. Sprout cormels in lightly moist sphagnum or perlite with warmth, humidity and ventilation.',
+        'При пересадке в тёплый сезон отделите детку с собственными корнями или соберите плотные клубеньки. Проращивайте их в слегка влажном сфагнуме или перлите в тепле, высокой влажности и с проветриванием.',
+      ],
+      repotting: [
+        'Repot in spring when roots fill the container, increasing the diameter by only 2–4 cm and keeping the rhizome at its former level.',
+        'Пересаживайте весной после заполнения ёмкости корнями, увеличивая диаметр лишь на 2–4 см и сохраняя прежний уровень корневища.',
+      ],
+      secondaryCare: [
+        ['Leaf care', 'Уход за листьями'],
+        [
+          'Support each blade from below and wipe gently with a soft damp cloth. Do not use leaf-shine products.',
+          'Поддерживайте пластину снизу и аккуратно протирайте мягкой влажной салфеткой. Не используйте полироли для листьев.',
+        ],
+      ],
+      soil: [
+        'Use a chunky moisture-retentive aroid mix with fine bark, coco or light compost, perlite and charcoal.',
+        'Используйте крупную влагоёмкую ароидную смесь из мелкой коры, кокоса или лёгкого грунта, перлита и древесного угля.',
+      ],
+      temperature: [
+        'Keep at 20–29 °C and protect from cold glass, draughts and temperatures below 17 °C.',
+        'Содержите при 20–29 °C и защищайте от холодного стекла, сквозняков и температуры ниже 17 °C.',
+      ],
+      watering: [
+        'Water after the top 3–5 cm dries, then drain excess completely. Reduce frequency whenever cool or low-light conditions slow growth.',
+        'Поливайте после просыхания верхних 3–5 см и полностью сливайте лишнюю воду. Сокращайте частоту, когда прохлада или слабый свет замедляют рост.',
       ],
     }),
   ),
