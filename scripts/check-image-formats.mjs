@@ -7,6 +7,7 @@ const collectionPlantsFile = fileURLToPath(
   new URL('../src/entities/collection/model/collectionPlants.ts', import.meta.url),
 );
 const unsupportedRasterExtensions = new Set(['.jpeg', '.jpg', '.png']);
+const comparePaths = (left, right) => left.localeCompare(right);
 
 const collectUnsupportedImages = async (directory) => {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -49,13 +50,13 @@ if (unsupportedImages.length > 0) {
   console.error('Raster images in public must use WebP:');
   unsupportedImages
     .map((imagePath) => relative(publicDirectory, imagePath))
-    .sort()
+    .sort(comparePaths)
     .forEach((imagePath) => console.error(`- ${imagePath}`));
 }
 
 if (missingCatalogImages.length > 0) {
   console.error('Collection home photos must have matching catalog images:');
-  missingCatalogImages.sort().forEach((imagePath) => console.error(`- ${imagePath}`));
+  missingCatalogImages.sort(comparePaths).forEach((imagePath) => console.error(`- ${imagePath}`));
 }
 
 if (unsupportedImages.length > 0 || missingCatalogImages.length > 0) {
