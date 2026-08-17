@@ -8296,11 +8296,31 @@ const allCollectionPlants: readonly CollectionPlant[] = [
               '/plant-profile/gloxinia-variants/28-midnight-amethyst.webp',
               ['Midnight Amethyst', 'Полночный Аметист'],
             ],
+            [
+              '/plant-profile/gloxinia-variants/29-amethyst-waltz.webp',
+              ['Amethyst Waltz', 'Аметистовый Вальс'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/30-lilac-mirage.webp',
+              ['Lilac Mirage', 'Сиреневый Мираж'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/31-raspberry-peony.webp',
+              ['Raspberry Peony', 'Малиновый Пион'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/32-strawberry-confetti.webp',
+              ['Strawberry Confetti', 'Земляничное Конфетти'],
+            ],
+            [
+              '/plant-profile/gloxinia-variants/33-purple-mantle.webp',
+              ['Purple Mantle', 'Пурпурная Мантия'],
+            ],
           ),
         },
       },
     ),
-    28,
+    33,
   ),
   collectionPlant(
     'asparagaceae',

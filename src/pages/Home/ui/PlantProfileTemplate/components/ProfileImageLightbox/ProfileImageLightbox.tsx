@@ -23,7 +23,7 @@ const CarouselChevron = ({ direction }: { readonly direction: 'left' | 'right' }
     borderStyle="solid"
     borderWidth="3px 0 0 3px"
     height={{ base: '10px', md: '13px' }}
-    left={direction === 'right' ? { base: '-1px', md: '-2px' } : undefined}
+    left={direction === 'left' ? { base: '1px', md: '2px' } : { base: '-1px', md: '-2px' }}
     position="relative"
     transform={direction === 'left' ? 'rotate(-45deg)' : 'rotate(135deg)'}
     width={{ base: '10px', md: '13px' }}
