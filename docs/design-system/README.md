@@ -32,9 +32,30 @@ direction is chosen.
   Care while each page keeps its own composition. The contrast field expands at
   tablet and compact-desktop widths so localized copy remains readable at
   responsive sizes and browser zoom.
+- At desktop width, the Care, About, and Blog index heroes share a 620 px
+  minimum height. Their photography, gradients, typography, and internal
+  compositions remain page-specific, while the common height keeps navigation
+  between the three editorial sections visually steady.
 - Family detail views use layered depth: a tall botanical hero continues behind
   softly translucent information panels, which overlap the image with generous
-  spacing instead of creating a hard section boundary.
+  spacing instead of creating a hard section boundary. Origin maps and trait
+  thumbnails use the same warm neutral frame, border, contained fit, and muted
+  blend treatment even when their family-specific artwork differs. The short
+  personal family note appears between the reference panels and the personal
+  collection grid.
+- Plant cards inside family dialogs use the same 4:5 catalog crop, image inset,
+  and two-line title area so source-photo proportions never change card geometry.
+- Long family, collection, and plant-profile dialogs keep their back action and
+  explicit close button in a translucent sticky top bar. Back returns to the
+  parent catalog level; close exits the dialog completely. Their scroll areas
+  retain wheel, touch, and keyboard scrolling without displaying a scrollbar.
+  All three dialog types use the same 1180 px shell and the same full-width top
+  bar, including height, horizontal padding, close control, and edge-to-edge
+  bottom rule. Plant-profile side insets do not change with the entry path.
+  Category and plant lists use locale-aware alphabetical order. The personal
+  collection dialog uses one left-aligned search field instead of a separate row of
+  family filters. Repeated category cards rely on their distinct family artwork
+  and do not repeat a decorative heading sprig.
 - Every plant profile supplies cultivar- or species-appropriate generated
   botanical imagery for both the `Propagation` and `Important` blocks. These
   assets are transparent WebP cutouts with no photographic background, room,

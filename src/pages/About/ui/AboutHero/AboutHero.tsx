@@ -25,7 +25,7 @@ export const AboutHero = ({ locale, text }: AboutHeroProps) => (
     </Flex>
     <Grid
       gridTemplateColumns={{ base: '1fr', lg: 'minmax(350px, 43%) minmax(0, 57%)' }}
-      minHeight={{ lg: '475px' }}
+      minHeight={{ lg: '620px' }}
     >
       <Flex
         alignItems="flex-start"
@@ -74,7 +74,7 @@ export const AboutHero = ({ locale, text }: AboutHeroProps) => (
         </Flex>
       </Flex>
       <Box
-        minHeight={{ base: '390px', md: '470px', lg: '475px' }}
+        minHeight={{ base: '390px', md: '470px', lg: '620px' }}
         overflow="hidden"
         position="relative"
         _before={{

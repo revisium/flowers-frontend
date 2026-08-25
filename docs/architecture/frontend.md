@@ -103,14 +103,16 @@ derived from one source.
 - `ui/HomeCategoriesSection` owns the labeled category section, responsive
   auto-fit category grid, notes callout, and category-card modal triggers.
   The notes callout links to the greenhouse story at `/about`.
-  Category cards open local category detail modals from
-  `ui/AraceaeCategoryModal/data.ts`.
+  Category cards use locale-aware alphabetical order and open local category
+  detail modals from `ui/CategoryDetailModal/data.ts`.
 - `ui/HomeCollectionOverlay` supplies the full-screen personal-plant catalog
   mounted by `AppLayout`, so it opens above any current page. It derives its
-  records and the count from `entities/collection`, supports local search
-  filtering, and has both a horizontally scrollable family list and an explicit
-  `All families` chooser so none of the available families are hidden behind the
-  initial viewport. Opening a plant profile resets the overlay scroll position to
+  records and the count from `entities/collection` and supports local plant-name
+  search without a separate family-filter row. Opening a plant profile resets
+  the overlay to the same 1180 px shell and shared sticky header used by
+  family-detail modals. The shell stays bounded to the viewport while its
+  contents scroll internally, preserving the rounded frame and sticky header.
+  Opening a profile resets that internal scroll position to
   the top so the profile begins with its title and hero on every breakpoint.
   Returning from a profile restores the catalog scroll position from which that
   plant was opened, while fully closing the overlay still resets its local state.
@@ -133,7 +135,10 @@ derived from one source.
   `ui/CategoryCollectionSection`, `ui/InfoPanel`, and `ui/SproutIcon`.
   Family heroes use a tall photographic layer that continues behind the
   responsive origin, traits, and facts panels; the panels overlap it with a
-  translucent surface and breakpoint-specific offset.
+  translucent surface and breakpoint-specific offset. Long modal content keeps
+  an explicit back action and close button in a sticky top bar. Family reference
+  artwork uses consistent neutral framing, and the personal family note bridges
+  the reference panels and the alphabetized personal-collection grid.
   Category-specific copy and image paths stay in page-local detail data and the
   adjacent `familySeeds.json` content file so each completed family reuses the
   same presentation structure with different content.

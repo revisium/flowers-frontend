@@ -255,17 +255,21 @@ const homeCategoryDefinitions: readonly HomeCategoryDefinition[] = [
   },
 ];
 
+const createHomeCategories = (locale: Locale): readonly HomeCategory[] => {
+  const collator = new Intl.Collator(locale, { sensitivity: 'base' });
+
+  return homeCategoryDefinitions
+    .map(({ count, name, ...category }) => ({
+      ...category,
+      count: count[locale],
+      name: name[locale],
+    }))
+    .sort((left, right) => collator.compare(left.name, right.name));
+};
+
 export const homeCategories: Record<Locale, readonly HomeCategory[]> = {
-  en: homeCategoryDefinitions.map(({ count, name, ...category }) => ({
-    ...category,
-    count: count.en,
-    name: name.en,
-  })),
-  ru: homeCategoryDefinitions.map(({ count, name, ...category }) => ({
-    ...category,
-    count: count.ru,
-    name: name.ru,
-  })),
+  en: createHomeCategories('en'),
+  ru: createHomeCategories('ru'),
 };
 
 const homeFamilyCount = String(getCollectionFamilyCount());

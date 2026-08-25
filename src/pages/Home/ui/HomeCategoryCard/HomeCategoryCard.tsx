@@ -88,17 +88,6 @@ export const HomeCategoryCard = ({ category, detail, onOpen }: HomeCategoryCardP
         padding={{ base: '20px 16px 18px', md: '22px 18px 20px', xl: '24px 20px 22px' }}
         textAlign="left"
       >
-        <Image
-          alt=""
-          aria-hidden="true"
-          decoding="async"
-          height={{ base: '20px', md: '22px', xl: '24px' }}
-          loading="lazy"
-          objectFit="contain"
-          opacity={0.72}
-          src="/about/botanical-heading-sprig-v2.webp"
-          width="auto"
-        />
         <Text
           as="strong"
           color="#314034"
@@ -112,7 +101,7 @@ export const HomeCategoryCard = ({ category, detail, onOpen }: HomeCategoryCardP
           fontWeight={400}
           lineClamp={2}
           lineHeight={1.08}
-          marginTop={{ base: '11px', md: '13px' }}
+          marginTop={0}
           overflowWrap="normal"
           wordBreak="normal"
         >

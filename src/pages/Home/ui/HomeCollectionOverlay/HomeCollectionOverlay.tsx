@@ -19,6 +19,7 @@ import type { Locale } from 'src/shared/config';
 import { PlantCollectionIcon } from 'src/shared/ui';
 
 import { homeCategories } from '../../model/homePageData';
+import { ModalTopBar } from '../ModalTopBar/ModalTopBar';
 import { PlantProfileTemplate } from '../PlantProfileTemplate/PlantProfileTemplate';
 
 type FamilyId = CollectionFamilyId;
@@ -39,8 +40,6 @@ interface HomeCollectionOverlayProps {
 
 const copy = {
   en: {
-    allFamilies: 'All families',
-    allPlants: 'All',
     clearSearch: 'Clear search',
     close: 'Close my plants',
     empty: 'No plants matched your search.',
@@ -49,8 +48,6 @@ const copy = {
     title: 'My plants',
   },
   ru: {
-    allFamilies: 'Все семейства',
-    allPlants: 'Все',
     clearSearch: 'Очистить поиск',
     close: 'Закрыть каталог растений',
     empty: 'По вашему запросу растений не нашлось.',
@@ -69,25 +66,20 @@ const focusableSelector =
   'button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlayProps) => {
-  const [activeFamily, setActiveFamily] = useState<FamilyId | 'all'>('all');
   const [query, setQuery] = useState('');
   const [selectedPlant, setSelectedPlant] = useState<CollectionPlant | null>(null);
-  const [showAllFamilies, setShowAllFamilies] = useState(false);
-  const overlayRef = useRef<HTMLDivElement | null>(null);
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
   const catalogScrollTopRef = useRef(0);
   const shouldRestoreCatalogScrollRef = useRef(false);
   const text = copy[locale];
-  const families = homeCategories[locale];
   const normalizedQuery = query.trim().toLocaleLowerCase(locale);
   const visiblePlants = useMemo(
     () =>
-      catalogByLocale[locale].filter((plant) => {
-        const belongsToFamily = activeFamily === 'all' || plant.categoryId === activeFamily;
-        return belongsToFamily && plant.name.toLocaleLowerCase(locale).includes(normalizedQuery);
-      }),
-    [activeFamily, locale, normalizedQuery],
+      catalogByLocale[locale].filter((plant) =>
+        plant.name.toLocaleLowerCase(locale).includes(normalizedQuery),
+      ),
+    [locale, normalizedQuery],
   );
 
   useEffect(() => {
@@ -102,9 +94,9 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
 
   useLayoutEffect(() => {
     if (selectedPlant) {
-      overlayRef.current?.scrollTo({ behavior: 'auto', top: 0 });
+      dialogRef.current?.scrollTo({ behavior: 'auto', top: 0 });
     } else if (shouldRestoreCatalogScrollRef.current) {
-      overlayRef.current?.scrollTo({
+      dialogRef.current?.scrollTo({
         behavior: 'auto',
         top: catalogScrollTopRef.current,
       });
@@ -113,7 +105,7 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
   }, [selectedPlant]);
 
   const openPlant = (plant: CollectionPlant) => {
-    catalogScrollTopRef.current = overlayRef.current?.scrollTop ?? 0;
+    catalogScrollTopRef.current = dialogRef.current?.scrollTop ?? 0;
     setSelectedPlant(plant);
   };
 
@@ -156,21 +148,15 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
     }
   };
 
-  const selectFamily = (familyId: FamilyId | 'all') => {
-    setActiveFamily(familyId);
-    setShowAllFamilies(false);
-  };
-
   return (
     <Flex
-      ref={overlayRef}
       alignItems="center"
       aria-labelledby="my-plants-title"
       aria-modal="true"
       background="rgba(38, 43, 31, 0.38)"
       inset={0}
       justifyContent="center"
-      overflowY="auto"
+      overflow="hidden"
       padding={{ base: '14px', md: '22px' }}
       position="fixed"
       role="dialog"
@@ -182,203 +168,110 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
         ref={dialogRef}
         background="linear-gradient(145deg, #fffdf7 0%, #f4eddf 100%)"
         border={{ base: 0, md: '1px solid rgba(218, 204, 178, 0.9)' }}
-        borderRadius={{ base: 0, md: '20px' }}
+        borderRadius={{ base: '16px', md: '20px' }}
         boxShadow="0 28px 90px rgba(38, 33, 23, 0.28)"
         direction="column"
         marginY="auto"
-        maxWidth="1320px"
-        padding={{ base: '18px', md: '28px' }}
+        maxHeight={{ base: 'calc(100dvh - 28px)', md: 'calc(100dvh - 44px)' }}
+        maxWidth="1180px"
+        overflowY="auto"
+        padding={0}
         position="relative"
         width="100%"
+        css={{
+          msOverflowStyle: 'none',
+          scrollbarWidth: 'none',
+          '&::-webkit-scrollbar': { display: 'none' },
+        }}
       >
-        <Flex
-          alignItems={{ base: 'stretch', lg: 'center' }}
-          direction={{ base: 'column', lg: 'row' }}
-          display={selectedPlant ? 'none' : 'flex'}
-          gap="14px"
-          justifyContent="space-between"
-          paddingRight={{ base: '56px', md: '64px' }}
-        >
-          <Flex
-            direction={{ base: 'column', md: 'row' }}
-            align={{ base: 'flex-start', md: 'center' }}
-            gap={{ base: '0', md: '12px' }}
-          >
+        {selectedPlant ? null : (
+          <ModalTopBar
+            closeButtonRef={closeButtonRef}
+            closeLabel={text.close}
+            leading={
             <Flex
-              alignItems="center"
-              as="h2"
-              color="#314034"
-              gap="8px"
-              id="my-plants-title"
-              margin={0}
-              textStyle="bold-xl"
+              align={{ base: 'flex-start', md: 'center' }}
+              direction={{ base: 'column', md: 'row' }}
+              gap={{ base: '0', md: '12px' }}
             >
-              <PlantCollectionIcon size={28} />
-              {text.title}
-            </Flex>
-            <Text color="#64705f" textStyle="medium-sm" transform="translateY(3px)">
-              {formatCollectionPlantCount(getCollectionPlantCount(), locale)}
-            </Text>
-          </Flex>
-          <Flex alignItems="center" gap="10px" width={{ base: '100%', lg: 'min(480px, 52%)' }}>
-            <Box flex="1 1 auto" position="relative">
-              <Input
-                aria-label={text.searchLabel}
-                background="rgba(255, 250, 240, 0.92)"
-                border="1px solid rgba(126, 104, 69, 0.26)"
-                borderRadius="999px"
+              <Flex
+                alignItems="center"
+                as="h2"
                 color="#314034"
-                height="46px"
-                padding="0 48px 0 18px"
-                placeholder={text.searchPlaceholder}
-                type="search"
-                value={query}
-                width="100%"
-                _focusVisible={{
-                  borderColor: '#6f9253',
-                  boxShadow: '0 0 0 3px rgba(111, 146, 83, 0.22)',
-                  outline: 'none',
-                }}
-                _placeholder={{ color: 'rgba(70, 84, 59, 0.58)' }}
-                onChange={(event) => {
-                  setQuery(event.target.value);
-                }}
-              />
-              {query ? (
-                <Button
-                  aria-label={text.clearSearch}
-                  borderRadius="999px"
-                  color="#68715d"
-                  fontSize="21px"
-                  height="30px"
-                  minWidth="30px"
-                  padding={0}
-                  position="absolute"
-                  right="8px"
-                  top="8px"
-                  type="button"
-                  variant="plain"
-                  width="30px"
-                  onClick={() => setQuery('')}
-                  _focusVisible={{
-                    boxShadow: '0 0 0 3px rgba(94, 127, 57, 0.22)',
-                    outline: 'none',
-                  }}
-                  _hover={{ background: 'rgba(218, 204, 178, 0.38)', color: '#314034' }}
-                >
-                  ×
-                </Button>
-              ) : null}
-            </Box>
-          </Flex>
-        </Flex>
+                gap="8px"
+                id="my-plants-title"
+                margin={0}
+                textStyle="bold-xl"
+              >
+                <PlantCollectionIcon size={28} />
+                {text.title}
+              </Flex>
+              <Text color="#64705f" textStyle="medium-sm" transform="translateY(3px)">
+                {formatCollectionPlantCount(getCollectionPlantCount(), locale)}
+              </Text>
+            </Flex>
+            }
+            onClose={onClose}
+          />
+        )}
 
-        <Button
-          ref={closeButtonRef}
-          aria-label={text.close}
-          border="1px solid rgba(82, 98, 70, 0.35)"
-          borderRadius="999px"
-          color="#3e513d"
-          fontSize="24px"
-          height="46px"
-          minWidth="46px"
-          padding={0}
-          position="absolute"
-          display={selectedPlant ? 'none' : 'inline-flex'}
-          right={{ base: '18px', md: '28px' }}
-          top={{ base: '18px', md: '28px' }}
-          type="button"
-          variant="plain"
-          zIndex={2}
-          onClick={onClose}
-          _focusVisible={{ boxShadow: '0 0 0 3px rgba(94, 127, 57, 0.26)', outline: 'none' }}
-          _hover={{ background: 'rgba(218, 204, 178, 0.3)' }}
+        <Box
+          display={selectedPlant ? 'none' : 'block'}
+          padding={{ base: '18px', md: '28px' }}
         >
-          ×
-        </Button>
-
-        <Flex
-          alignItems="center"
-          display={selectedPlant ? 'none' : 'flex'}
-          gap="10px"
-          marginTop="20px"
-          minWidth={0}
-        >
-          <Flex
-            gap="8px"
-            minWidth={0}
-            overflowX="auto"
-            css={{
-              msOverflowStyle: 'none',
-              scrollbarWidth: 'none',
-              '&::-webkit-scrollbar': { display: 'none' },
-            }}
-          >
-            <FamilyFilter
-              active={activeFamily === 'all'}
-              label={text.allPlants}
-              onClick={() => selectFamily('all')}
+          <Flex alignItems="center" marginRight="auto" maxWidth="640px" width="100%">
+          <Box flex="1 1 auto" position="relative">
+            <Input
+              aria-label={text.searchLabel}
+              background="rgba(255, 250, 240, 0.92)"
+              border="1px solid rgba(126, 104, 69, 0.26)"
+              borderRadius="999px"
+              color="#314034"
+              height="46px"
+              padding="0 48px 0 18px"
+              placeholder={text.searchPlaceholder}
+              type="search"
+              value={query}
+              width="100%"
+              _focusVisible={{
+                borderColor: '#6f9253',
+                boxShadow: '0 0 0 3px rgba(111, 146, 83, 0.22)',
+                outline: 'none',
+              }}
+              _placeholder={{ color: 'rgba(70, 84, 59, 0.58)' }}
+              onChange={(event) => {
+                setQuery(event.target.value);
+              }}
             />
-            {families.map((family) => (
-              <FamilyFilter
-                active={activeFamily === family.id}
-                key={family.id}
-                label={family.name}
-                onClick={() => selectFamily(family.id as FamilyId)}
-              />
-            ))}
-          </Flex>
-          <Button
-            aria-expanded={showAllFamilies}
-            background="#fffaf0"
-            border="1px solid rgba(126, 104, 69, 0.26)"
-            borderRadius="999px"
-            color="#46543b"
-            flex="0 0 auto"
-            fontWeight={720}
-            height="38px"
-            padding="0 14px"
-            type="button"
-            variant="plain"
-            onClick={() => setShowAllFamilies((isOpen) => !isOpen)}
-            _focusVisible={{ boxShadow: '0 0 0 3px rgba(94, 127, 57, 0.22)', outline: 'none' }}
-            _hover={{ background: '#f5edde' }}
-          >
-            {text.allFamilies} &or;
-          </Button>
-        </Flex>
-
-        {!selectedPlant && showAllFamilies ? (
-          <Grid
-            background="rgba(255, 250, 240, 0.7)"
-            border="1px solid rgba(218, 204, 178, 0.72)"
-            borderRadius="12px"
-            gap="8px"
-            gridTemplateColumns={{
-              base: 'repeat(2, minmax(0, 1fr))',
-              md: 'repeat(3, minmax(0, 1fr))',
-              lg: 'repeat(5, minmax(0, 1fr))',
-            }}
-            marginTop="10px"
-            padding="10px"
-          >
-            {families.map((family) => (
+            {query ? (
               <Button
-                key={family.id}
-                justifyContent="flex-start"
-                padding="8px 10px"
+                aria-label={text.clearSearch}
+                borderRadius="999px"
+                color="#68715d"
+                fontSize="21px"
+                height="30px"
+                minWidth="30px"
+                padding={0}
+                position="absolute"
+                right="8px"
+                top="8px"
                 type="button"
                 variant="plain"
-                onClick={() => selectFamily(family.id as FamilyId)}
-                _hover={{ background: 'rgba(220, 232, 200, 0.75)' }}
+                width="30px"
+                onClick={() => setQuery('')}
+                _focusVisible={{
+                  boxShadow: '0 0 0 3px rgba(94, 127, 57, 0.22)',
+                  outline: 'none',
+                }}
+                _hover={{ background: 'rgba(218, 204, 178, 0.38)', color: '#314034' }}
               >
-                {family.name}
+                ×
               </Button>
-            ))}
-          </Grid>
-        ) : null}
+            ) : null}
+          </Box>
+          </Flex>
 
-        <Box display={selectedPlant ? 'none' : 'block'} flex="0 0 auto" marginTop="20px">
+          <Box flex="0 0 auto" marginTop="20px">
           {visiblePlants.length ? (
             <Grid
               gap={{ base: '12px', md: '16px' }}
@@ -459,6 +352,7 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
               {text.empty}
             </Flex>
           )}
+          </Box>
         </Box>
         {selectedPlant ? (
           <PlantProfileTemplate
@@ -473,34 +367,9 @@ export const HomeCollectionOverlay = ({ locale, onClose }: HomeCollectionOverlay
   );
 };
 
-interface FamilyFilterProps {
-  readonly active: boolean;
-  readonly label: string;
-  readonly onClick: () => void;
-}
-
-const FamilyFilter = ({ active, label, onClick }: FamilyFilterProps) => (
-  <Button
-    aria-pressed={active}
-    background={active ? '#526246' : '#fffaf0'}
-    border="1px solid rgba(126, 104, 69, 0.26)"
-    borderRadius="999px"
-    color={active ? '#fffaf0' : '#46543b'}
-    flex="0 0 auto"
-    fontWeight={active ? 760 : 640}
-    height="38px"
-    padding="0 14px"
-    type="button"
-    variant="plain"
-    onClick={onClick}
-    _focusVisible={{ boxShadow: '0 0 0 3px rgba(94, 127, 57, 0.22)', outline: 'none' }}
-    _hover={{ background: active ? '#3e513d' : '#f5edde' }}
-  >
-    {label}
-  </Button>
-);
-
 function createCatalog(locale: Locale): readonly CatalogPlant[] {
+  const collator = new Intl.Collator(locale, { sensitivity: 'base' });
+
   return homeCategories[locale].flatMap((family) => {
     const categoryId = family.id as FamilyId;
     return collectionPlants
@@ -512,6 +381,7 @@ function createCatalog(locale: Locale): readonly CatalogPlant[] {
         image: plant.image.replace(/\.webp$/, '-catalog.webp'),
         name: plant.name[locale],
         plant,
-      }));
+      }))
+      .sort((left, right) => collator.compare(left.name, right.name));
   });
 }

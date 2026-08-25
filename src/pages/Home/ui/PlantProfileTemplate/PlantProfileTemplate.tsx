@@ -52,27 +52,29 @@ export const PlantProfileTemplate = ({
         direction="column"
         margin="0 auto"
         maxWidth="1200px"
-        padding={{ base: '16px', md: '22px 28px 28px' }}
+        padding={0}
         position="relative"
         width="100%"
       >
         <ProfileHeader locale={locale} plant={plant} onBack={onBack} onClose={onClose} />
-        <ProfileFacts locale={locale} plant={plant} text={text} />
-        <ProfileSummary
-          locale={locale}
-          plant={plant}
-          text={text}
-          onImageOpen={() => setActiveImageIndex(mainImageVariantIndex ?? 0)}
-        />
-        <ProfileVariants
-          locale={locale}
-          plant={plant}
-          onImageOpen={(variantIndex) =>
-            setActiveImageIndex(variantIndex + (includeMainImageInGallery ? 1 : 0))
-          }
-        />
-        <ProfileCare locale={locale} plant={plant} />
-        <ProfileFooter locale={locale} plant={plant} text={text} />
+        <Flex direction="column" padding={{ base: '0 16px 16px', md: '0 28px 28px' }}>
+          <ProfileFacts locale={locale} plant={plant} text={text} />
+          <ProfileSummary
+            locale={locale}
+            plant={plant}
+            text={text}
+            onImageOpen={() => setActiveImageIndex(mainImageVariantIndex ?? 0)}
+          />
+          <ProfileVariants
+            locale={locale}
+            plant={plant}
+            onImageOpen={(variantIndex) =>
+              setActiveImageIndex(variantIndex + (includeMainImageInGallery ? 1 : 0))
+            }
+          />
+          <ProfileCare locale={locale} plant={plant} />
+          <ProfileFooter locale={locale} plant={plant} text={text} />
+        </Flex>
       </Flex>
 
       {activeImageIndex === null ? null : (

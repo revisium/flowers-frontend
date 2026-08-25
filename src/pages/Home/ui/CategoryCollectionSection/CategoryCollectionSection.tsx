@@ -1,7 +1,6 @@
 import { Box, Button, Flex, Grid, Image, Text } from '@chakra-ui/react';
 
 import { type CategoryDetailData } from '../CategoryDetailModal/types';
-import { SproutIcon } from '../SproutIcon/SproutIcon';
 
 interface CategoryCollectionSectionProps {
   readonly data: CategoryDetailData;
@@ -39,7 +38,8 @@ export const CategoryCollectionSection = ({
             boxShadow="0 10px 22px rgba(76, 64, 42, 0.06)"
             display="flex"
             flexDirection="column"
-            height="auto"
+            height="100%"
+            justifyContent="flex-start"
             key={plant.name}
             minHeight={0}
             overflow="hidden"
@@ -57,15 +57,21 @@ export const CategoryCollectionSection = ({
               transform: 'translateY(-2px)',
             }}
           >
-            <Flex m="10px 10px 0" borderRadius="9px" overflow="hidden">
+            <Flex
+              aspectRatio="4 / 5"
+              background="#f4ede0"
+              borderRadius="9px"
+              flex="0 0 auto"
+              margin="10px 10px 0"
+              overflow="hidden"
+            >
               <Image
                 alt=""
-                background="#fffaf1"
                 decoding="async"
-                flexShrink={0}
+                height="100%"
                 loading="lazy"
-                objectFit="contain"
-                src={plant.image}
+                objectFit="cover"
+                src={plant.image.replace(/\.webp$/, '-catalog.webp')}
                 width="100%"
               />
             </Flex>
@@ -73,33 +79,16 @@ export const CategoryCollectionSection = ({
               color="#344334"
               fontSize="0.86rem"
               fontWeight={760}
+              lineClamp={2}
               lineHeight={1.22}
               minHeight="42px"
-              padding="10px"
+              padding="10px 10px 12px"
             >
               {plant.name}
             </Text>
           </Button>
         ))}
       </Grid>
-      <Flex
-        alignItems="center"
-        background="linear-gradient(90deg, rgba(235, 242, 218, 0.86), rgba(246, 248, 235, 0.94))"
-        borderRadius="10px"
-        color="#465247"
-        fontSize={{ base: '0.86rem', md: '0.95rem' }}
-        fontWeight={720}
-        gap="12px"
-        justifyContent="center"
-        lineHeight={1.35}
-        marginTop="18px"
-        minHeight="48px"
-        padding={{ base: '12px 14px', md: '12px 22px' }}
-        textAlign="center"
-      >
-        <SproutIcon />
-        {data.closingNote}
-      </Flex>
     </Box>
   </Box>
 );
