@@ -1,13 +1,10 @@
-import { Box, Button, Text } from '@chakra-ui/react';
-import { type RefObject } from 'react';
+import { Box, Text } from '@chakra-ui/react';
 
 import { type CategoryDetailData } from '../CategoryDetailModal/types';
 
 interface CategoryHeroProps {
-  readonly closeButtonRef: RefObject<HTMLButtonElement | null>;
   readonly data: CategoryDetailData;
   readonly titleId: string;
-  readonly onClose: () => void;
 }
 
 const getTitleFontSize = (title: string) => {
@@ -26,7 +23,7 @@ const getTitleFontSize = (title: string) => {
   return { base: '3.1rem', md: '5.25rem' };
 };
 
-export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: CategoryHeroProps) => {
+export const CategoryHero = ({ data, titleId }: CategoryHeroProps) => {
   const titleFontSize = getTitleFontSize(data.title);
 
   return (
@@ -36,38 +33,10 @@ export const CategoryHero = ({ closeButtonRef, data, onClose, titleId }: Categor
         md: 'linear-gradient(90deg, rgba(255, 253, 247, 0.98) 0%, rgba(255, 253, 247, 0.88) 34%, rgba(255, 253, 247, 0.18) 62%, rgba(255, 253, 247, 0) 78%)',
       }}
       minHeight={{ base: '430px', md: '620px', lg: '720px' }}
-      padding={{ base: '18px 18px 90px', md: '38px 48px 170px', lg: '38px 48px 220px' }}
+      padding={{ base: '34px 18px 90px', md: '58px 48px 170px', lg: '58px 48px 220px' }}
       position="relative"
       zIndex={1}
     >
-      <Button
-        ref={closeButtonRef}
-        alignItems="center"
-        background="transparent"
-        color="#75816e"
-        display="inline-flex"
-        fontSize={{ base: '0.88rem', md: '0.95rem' }}
-        fontWeight={720}
-        gap="10px"
-        marginBottom={{ base: '24px', md: '48px' }}
-        padding={0}
-        position="relative"
-        type="button"
-        variant="plain"
-        zIndex={1}
-        _focusVisible={{
-          boxShadow: '0 0 0 3px rgba(122, 143, 100, 0.28)',
-          outline: 'none',
-        }}
-        _hover={{ color: '#314034' }}
-        onClick={onClose}
-      >
-        <Box as="span" fontSize="20px" lineHeight={1} marginBottom="3px">
-          ←
-        </Box>
-        {data.backLabel}
-      </Button>
-
       <Box
         background="rgba(255, 253, 247, 0.85)"
         borderRadius="1000px"

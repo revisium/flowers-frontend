@@ -1,6 +1,8 @@
-import { Button, Flex, Text } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 import type { CollectionPlant } from 'src/entities/collection';
 import type { Locale } from 'src/shared/config';
+
+import { ModalTopBar } from '../../../ModalTopBar/ModalTopBar';
 
 interface ProfileHeaderProps {
   readonly locale: Locale;
@@ -11,38 +13,17 @@ interface ProfileHeaderProps {
 
 export const ProfileHeader = ({ locale, onBack, onClose, plant }: ProfileHeaderProps) => (
   <>
-    <Flex alignItems="center" justifyContent="space-between" marginTop="8px" width="100%">
-      <Button
-        color="#526246"
-        fontWeight={720}
-        padding={0}
-        type="button"
-        variant="plain"
-        onClick={onBack}
-      >
-        ← {locale === 'ru' ? 'Мои растения' : 'My plants'}
-      </Button>
-      <Button
-        aria-label={locale === 'ru' ? 'Закрыть карточку растения' : 'Close plant profile'}
-        border="1px solid rgba(82, 98, 70, 0.35)"
-        borderRadius="999px"
-        color="#3e513d"
-        fontSize="24px"
-        height="42px"
-        minWidth="42px"
-        padding={0}
-        type="button"
-        variant="plain"
-        onClick={onClose}
-        _hover={{ background: 'rgba(218, 204, 178, 0.3)' }}
-      >
-        ×
-      </Button>
-    </Flex>
+    <ModalTopBar
+      backLabel={locale === 'ru' ? 'Мои растения' : 'My plants'}
+      closeLabel={locale === 'ru' ? 'Закрыть карточку растения' : 'Close plant profile'}
+      onBack={onBack}
+      onClose={onClose}
+    />
     <Flex
       alignItems="center"
       direction="column"
-      marginTop={{ base: '18px', md: '8px' }}
+      marginTop={{ base: '24px', md: '30px' }}
+      paddingInline={{ base: '16px', md: '28px' }}
       textAlign="center"
     >
       <Text

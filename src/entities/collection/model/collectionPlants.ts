@@ -3320,8 +3320,8 @@ const allCollectionPlants: readonly CollectionPlant[] = [
         'Обеспечьте яркий рассеянный свет и немного мягкого утреннего или вечернего солнца. Берегите мелкие листья от жарких полуденных лучей через стекло.',
       ],
       notes: [
-        'I bought this dischidia as a small rooted starter in a clear cup. It already has several flexible shoots with fresh growth at the tips. The main photograph shows a believable moderately mature form after the plant has filled out.',
-        'Я купила эту дисхидию небольшим укоренённым растением в прозрачном стаканчике. У неё уже несколько гибких побегов со свежим приростом на концах. Главная фотография показывает реалистичную умеренно взрослую форму после разрастания.',
+        'I bought this dischidia as a small rooted starter in a clear cup. It already has several flexible shoots with fresh growth at the tips. As it grows, I want to let the shoots trail freely so the plant gradually forms a light cascade.',
+        'Я купила эту дисхидию небольшим укоренённым растением в прозрачном стаканчике. У неё уже несколько гибких побегов со свежим приростом на концах. По мере роста я хочу дать побегам свободно свисать, чтобы растение постепенно сформировало лёгкий каскад.',
       ],
       origin: ['Philippines', 'Филиппины'],
       overview: [
@@ -10142,4 +10142,7 @@ export const formatCollectionPlantCount = (count: number, locale: Locale) => {
 export const getCollectionPlantsByFamily = (familyId: CollectionFamilyId, locale: Locale) =>
   collectionPlants
     .filter((plant) => plant.familyId === familyId)
-    .map((plant) => ({ id: plant.id, image: plant.image, name: plant.name[locale] }));
+    .map((plant) => ({ id: plant.id, image: plant.image, name: plant.name[locale] }))
+    .sort((left, right) =>
+      new Intl.Collator(locale, { sensitivity: 'base' }).compare(left.name, right.name),
+    );

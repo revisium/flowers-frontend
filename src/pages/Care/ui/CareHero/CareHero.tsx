@@ -12,7 +12,7 @@ export const CareHero = ({ text }: CareHeroProps) => {
     <Flex
       as="section"
       backgroundColor="#e8e3d5"
-      minHeight={{ base: '720px', md: '680px', lg: '700px' }}
+      minHeight={{ base: '720px', md: '680px', lg: '620px' }}
       overflow="hidden"
       padding={{ base: '24px 18px', md: '34px 36px', lg: '38px 46px' }}
       position="relative"

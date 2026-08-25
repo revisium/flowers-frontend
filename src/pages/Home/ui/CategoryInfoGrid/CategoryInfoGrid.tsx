@@ -25,12 +25,25 @@ export const CategoryInfoGrid = ({ data }: CategoryInfoGridProps) => (
       <InfoPanel title={data.originTitle}>
         <Box
           alignItems="center"
+          background="rgba(247, 241, 226, 0.72)"
+          border="1px solid rgba(218, 204, 178, 0.58)"
+          borderRadius="10px"
           display="flex"
+          height={{ base: '170px', md: '190px' }}
           justifyContent="center"
           marginBottom="18px"
-          overflow="visible"
+          overflow="hidden"
+          padding={{ base: '12px', md: '16px' }}
         >
-          <Image alt="" height="auto" objectFit="contain" src={data.origin.mapImage} width="100%" />
+          <Image
+            alt=""
+            height="100%"
+            mixBlendMode="multiply"
+            objectFit="contain"
+            opacity={0.9}
+            src={data.origin.mapImage}
+            width="100%"
+          />
         </Box>
         <Text color="#5d675b" fontSize="0.9rem" lineHeight={1.55}>
           {data.origin.text}
@@ -43,11 +56,16 @@ export const CategoryInfoGrid = ({ data }: CategoryInfoGridProps) => (
         <Flex alignItems="center" gap="12px" key={trait.body}>
           <Image
             alt=""
-            borderRadius="8px"
-            height="36px"
-            objectFit="cover"
+            background="rgba(247, 241, 226, 0.82)"
+            border="1px solid rgba(218, 204, 178, 0.58)"
+            borderRadius="10px"
+            flexShrink={0}
+            height="42px"
+            mixBlendMode="multiply"
+            objectFit="contain"
+            padding="4px"
             src={trait.image}
-            width="36px"
+            width="42px"
           />
           <Text color="#465247" fontSize="0.9rem" lineHeight={1.5}>
             {trait.body}
