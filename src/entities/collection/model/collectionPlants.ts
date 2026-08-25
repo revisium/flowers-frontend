@@ -9215,7 +9215,7 @@ const allCollectionPlants: readonly CollectionPlant[] = [
     'polypodiaceae',
     'phlebodium-aureum-davana',
     '/plants/phlebodium-aureum-davana-home-photo.webp',
-    ['Phlebodium Davana', 'Плебодиум Давана'],
+    ['Phlebodium Davana', 'Флебодиум Давана'],
     simplePlantProfile({
       assets: {
         importantImage: '/plant-profile/phlebodium-aureum-davana-important.webp',
@@ -9264,7 +9264,7 @@ const allCollectionPlants: readonly CollectionPlant[] = [
       ],
       overview: [
         "Phlebodium aureum 'Davana' is an evergreen rhizomatous fern with broad frilled fronds growing from a creeping golden-scaled rhizome. It does not flower: its ornamental value comes from the sculptural foliage and the changing texture of new growth.",
-        'Плебодиум золотистый «Давана» — вечнозелёный корневищный папоротник с широкими волнистыми вайями, растущими из ползучего золотисто-чешуйчатого корневища. Он не цветёт: его декоративность создают скульптурная листва и меняющаяся фактура молодого прироста.',
+        'Флебодиум золотистый «Давана» — вечнозелёный корневищный папоротник с широкими волнистыми вайями, растущими из ползучего золотисто-чешуйчатого корневища. Он не цветёт: его декоративность создают скульптурная листва и меняющаяся фактура молодого прироста.',
       ],
       plantType: [
         'Evergreen rhizomatous epiphytic fern',
