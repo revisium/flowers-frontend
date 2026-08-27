@@ -8316,11 +8316,15 @@ const allCollectionPlants: readonly CollectionPlant[] = [
               '/plant-profile/gloxinia-variants/33-purple-mantle.webp',
               ['Purple Mantle', 'Пурпурная Мантия'],
             ],
+            [
+              '/plant-profile/gloxinia-variants/34-amethyst-moire.webp',
+              ['Amethyst Moiré', 'Аметистовый Муар'],
+            ],
           ),
         },
       },
     ),
-    33,
+    34,
   ),
   collectionPlant(
     'asparagaceae',
